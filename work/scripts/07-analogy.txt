@@ -1,0 +1,1 @@
+A simple analogy. A regular AI tries to read an entire library at once and fails.

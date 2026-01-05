@@ -1,0 +1,1 @@
+Codebases have millions of lines. Log files can be gigabytes. Document collections span thousands of files.

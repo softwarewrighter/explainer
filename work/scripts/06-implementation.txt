@@ -1,0 +1,1 @@
+In the current version, these actions are issued as structured JSON commands. In the next version, the model will generate WebAssembly modules. This allows loops, conditionals, and custom logic while staying sandboxed and safe.

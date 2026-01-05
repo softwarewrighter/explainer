@@ -1,0 +1,1 @@
+When you force all of that into a model's context window, things break. Important details fall out. Accuracy collapses. This is called context rot.

@@ -1,0 +1,1 @@
+Think of the context as a giant box, split into many smaller parts. The model does not read everything. It peeks only where it needs to.

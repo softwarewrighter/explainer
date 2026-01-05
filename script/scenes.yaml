@@ -1,0 +1,223 @@
+meta:
+  fps: 30
+  width: 1920
+  height: 1080
+  theme: rlm_clean
+  background: "#0e1117"
+
+# Scene durations aligned with TTS narration (will be updated after TTS generation)
+# Each scene corresponds to a work/scripts/NN-*.txt file
+
+scenes:
+  # 00-title: Title card with music (no avatar)
+  - id: title
+    dur_s: 6
+    type: slide
+    audio: music
+    text: "Recursive Language Models (RLM)"
+    subtitle: "Expanding the Workspace"
+    layers:
+      - type: text
+        text: "Recursive Language Models"
+        at: [0.5, 0.38]
+        style: { size: 84, weight: 800, color: "#ffffff" }
+        anim: [{ kind: fade_up, t0: 0.0, t1: 0.8 }]
+      - type: text
+        text: "Expanding the Workspace"
+        at: [0.5, 0.52]
+        style: { size: 48, weight: 400, color: "#888888" }
+        anim: [{ kind: fade_in, t0: 0.5, t1: 1.2 }]
+
+  # 01-problem: Cookie jar overflowing with context
+  - id: problem
+    dur_s: 12
+    type: content
+    audio: avatar
+    script: work/scripts/01-problem.txt
+    layers:
+      - type: svg
+        asset: "assets/svg/jar.svg"
+        id: jar
+        at: [0.5, 0.55]
+        scale: 1.0
+      - type: particles
+        kind: cookies
+        count: 600
+        bounds: jar
+        anim: [{ kind: overflow, t0: 4.0 }]
+      - type: text
+        text: "Context Windows Are Limited"
+        at: [0.5, 0.12]
+        style: { size: 48, weight: 600 }
+
+  # 02-context-rot: Fog degrading the jar contents
+  - id: context_rot
+    dur_s: 8
+    type: content
+    audio: avatar
+    script: work/scripts/02-context-rot.txt
+    layers:
+      - type: svg
+        asset: "assets/svg/jar.svg"
+        at: [0.5, 0.55]
+      - type: particles
+        kind: cookies
+        count: 400
+        bounds: jar
+      - type: overlay
+        kind: fog
+        opacity: 0.0
+        anim: [{ kind: increase, t0: 1.0, t1: 6.0, to: 0.6 }]
+      - type: text
+        text: "Context Rot"
+        at: [0.5, 0.12]
+        style: { size: 52, weight: 700, color: "#ff4444" }
+        anim: [{ kind: fade_in, t0: 0.5 }]
+
+  # 03-solution: Tools appear around the jar
+  - id: solution
+    dur_s: 7
+    type: content
+    audio: avatar
+    script: work/scripts/03-solution.txt
+    layers:
+      - type: text
+        text: "RLM: Tools to Explore"
+        at: [0.5, 0.12]
+        style: { size: 52, weight: 700 }
+      - type: svg
+        asset: "assets/svg/jar-with-tools.svg"
+        at: [0.5, 0.55]
+        anim: [{ kind: fade_in, t0: 0.3 }]
+
+  # 04-context-box: Grid of context parts
+  - id: context_box
+    dur_s: 8
+    type: content
+    audio: avatar
+    script: work/scripts/04-context-box.txt
+    layers:
+      - type: text
+        text: "Peek Only What You Need"
+        at: [0.5, 0.10]
+        style: { size: 48, weight: 600 }
+      - type: grid
+        rows: 2
+        cols: 5
+        id: context_parts
+        at: [0.5, 0.55]
+        style: { gap: 20, cell_size: 150 }
+        anim: [{ kind: highlight_sequence, t0: 2.0, duration: 4.0 }]
+      - type: text
+        text: "Context Box"
+        at: [0.5, 0.88]
+        style: { size: 32, weight: 400, color: "#888888" }
+
+  # 05-commands: JSON commands appearing
+  - id: commands
+    dur_s: 10
+    type: content
+    audio: avatar
+    script: work/scripts/05-commands.txt
+    layers:
+      - type: text
+        text: "Structured Commands"
+        at: [0.5, 0.10]
+        style: { size: 48, weight: 600 }
+      - type: code
+        language: json
+        text: |
+          {"op":"slice","from":200,"to":400}
+          {"op":"find","regex":"ERROR"}
+          {"op":"count","on":"matches"}
+          {"op":"llm_query","prompt":"Summarize this chunk"}
+        at: [0.5, 0.55]
+        style: { size: 28, font: monospace }
+        anim: [{ kind: type_on, cps: 35, t0: 1.0 }]
+
+  # 06-implementation: WASM sandbox visualization
+  - id: implementation
+    dur_s: 10
+    type: content
+    audio: avatar
+    script: work/scripts/06-implementation.txt
+    layers:
+      - type: text
+        text: "Current: JSON | Future: WebAssembly"
+        at: [0.5, 0.10]
+        style: { size: 44, weight: 600 }
+      - type: split
+        left:
+          - type: block
+            label: "JSON Commands"
+            style: { color: "#4488ff" }
+        right:
+          - type: block
+            label: "WASM Sandbox"
+            style: { color: "#44ff88" }
+            anim: [{ kind: assemble, t0: 3.0 }]
+
+  # 07-analogy: Library with card catalog
+  - id: analogy
+    dur_s: 10
+    type: content
+    audio: avatar
+    script: work/scripts/07-analogy.txt
+    layers:
+      - type: text
+        text: "Library Analogy"
+        at: [0.5, 0.10]
+        style: { size: 48, weight: 600 }
+      - type: svg
+        asset: "assets/svg/library.svg"
+        at: [0.5, 0.55]
+        anim: [{ kind: catalog_search, t0: 2.0 }]
+
+  # 08-results: Accuracy gauge climbing
+  - id: results
+    dur_s: 8
+    type: content
+    audio: avatar
+    script: work/scripts/08-results.txt
+    layers:
+      - type: text
+        text: "Dramatic Results"
+        at: [0.5, 0.10]
+        style: { size: 48, weight: 600 }
+      - type: gauge
+        label: "Accuracy"
+        from: 0
+        to: 91
+        at: [0.5, 0.55]
+        style: { size: 300, color: "#44ff88" }
+        anim: [{ kind: sweep, t0: 1.5, duration: 4.0 }]
+      - type: text
+        text: "91% on tasks where base models score 0%"
+        at: [0.5, 0.88]
+        style: { size: 28, color: "#888888" }
+        anim: [{ kind: fade_in, t0: 5.0 }]
+
+  # 09-conclusion: Final tagline
+  - id: conclusion
+    dur_s: 6
+    type: slide
+    audio: avatar
+    script: work/scripts/09-conclusion.txt
+    layers:
+      - type: text
+        text: "Expand the Workspace"
+        at: [0.5, 0.45]
+        style: { size: 72, weight: 800 }
+        anim: [{ kind: fade_up, t0: 0.0 }]
+      - type: text
+        text: "Not the Context"
+        at: [0.5, 0.58]
+        style: { size: 72, weight: 800 }
+        anim: [{ kind: fade_up, t0: 0.4 }]
+
+  # 99-epilog: Standard closing (uses shared asset)
+  - id: epilog
+    dur_s: 12.8
+    type: epilog
+    audio: shared
+    source: "../video-publishing/reference/epilog/99b-epilog.mp4"

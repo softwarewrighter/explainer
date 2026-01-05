@@ -1,0 +1,1 @@
+An R L M uses the card catalog. It finds the right shelves. It asks assistants to summarize. Then it combines the answers.

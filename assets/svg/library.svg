@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <!-- Library shelves background -->
+  <rect x="0" y="0" width="800" height="500" fill="#1a1a2e"/>
+
+  <!-- Bookshelf structure -->
+  <defs>
+    <linearGradient id="woodGrain" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b4513"/>
+      <stop offset="50%" style="stop-color:#654321"/>
+      <stop offset="100%" style="stop-color:#8b4513"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shelves -->
+  <rect x="50" y="90" width="700" height="12" fill="url(#woodGrain)"/>
+  <rect x="50" y="190" width="700" height="12" fill="url(#woodGrain)"/>
+  <rect x="50" y="290" width="700" height="12" fill="url(#woodGrain)"/>
+  <rect x="50" y="390" width="700" height="12" fill="url(#woodGrain)"/>
+
+  <!-- Side panels -->
+  <rect x="50" y="90" width="15" height="312" fill="url(#woodGrain)"/>
+  <rect x="735" y="90" width="15" height="312" fill="url(#woodGrain)"/>
+
+  <!-- Books on shelves (row 1) -->
+  <g transform="translate(70, 30)">
+    <rect x="0" y="0" width="25" height="58" fill="#cc4444" rx="2"/>
+    <rect x="30" y="5" width="20" height="53" fill="#44cc44" rx="2"/>
+    <rect x="55" y="0" width="30" height="58" fill="#4444cc" rx="2"/>
+    <rect x="90" y="8" width="22" height="50" fill="#cccc44" rx="2"/>
+    <rect x="117" y="3" width="28" height="55" fill="#44cccc" rx="2"/>
+    <rect x="150" y="0" width="25" height="58" fill="#cc44cc" rx="2"/>
+    <rect x="180" y="5" width="35" height="53" fill="#ff8844" rx="2"/>
+    <rect x="220" y="0" width="20" height="58" fill="#88ff44" rx="2"/>
+    <rect x="245" y="8" width="28" height="50" fill="#4488ff" rx="2"/>
+    <rect x="278" y="3" width="22" height="55" fill="#ff4488" rx="2"/>
+  </g>
+
+  <!-- Books on shelves (row 2) -->
+  <g transform="translate(70, 130)">
+    <rect x="0" y="0" width="28" height="58" fill="#ff6666" rx="2"/>
+    <rect x="33" y="5" width="24" height="53" fill="#66ff66" rx="2"/>
+    <rect x="62" y="0" width="32" height="58" fill="#6666ff" rx="2"/>
+    <rect x="99" y="8" width="20" height="50" fill="#ffff66" rx="2"/>
+    <rect x="124" y="3" width="26" height="55" fill="#66ffff" rx="2"/>
+    <rect x="155" y="0" width="22" height="58" fill="#ff66ff" rx="2"/>
+  </g>
+
+  <!-- Card catalog (center bottom) -->
+  <g transform="translate(280, 310)">
+    <rect x="0" y="0" width="240" height="80" fill="#654321" stroke="#8b4513" stroke-width="3" rx="5"/>
+    <!-- Catalog drawers -->
+    <rect x="10" y="10" width="70" height="25" fill="#8b5a2b" stroke="#a0522d" stroke-width="1" rx="2"/>
+    <rect x="85" y="10" width="70" height="25" fill="#8b5a2b" stroke="#a0522d" stroke-width="1" rx="2"/>
+    <rect x="160" y="10" width="70" height="25" fill="#8b5a2b" stroke="#a0522d" stroke-width="1" rx="2"/>
+    <rect x="10" y="45" width="70" height="25" fill="#8b5a2b" stroke="#a0522d" stroke-width="1" rx="2"/>
+    <rect x="85" y="45" width="70" height="25" fill="#8b5a2b" stroke="#a0522d" stroke-width="1" rx="2"/>
+    <rect x="160" y="45" width="70" height="25" fill="#8b5a2b" stroke="#a0522d" stroke-width="1" rx="2"/>
+    <!-- Drawer labels -->
+    <text x="45" y="27" font-family="serif" font-size="10" fill="#ddd" text-anchor="middle">A-F</text>
+    <text x="120" y="27" font-family="serif" font-size="10" fill="#ddd" text-anchor="middle">G-L</text>
+    <text x="195" y="27" font-family="serif" font-size="10" fill="#ddd" text-anchor="middle">M-R</text>
+    <text x="45" y="62" font-family="serif" font-size="10" fill="#ddd" text-anchor="middle">S-Z</text>
+    <text x="120" y="62" font-family="serif" font-size="10" fill="#ddd" text-anchor="middle">REF</text>
+    <text x="195" y="62" font-family="serif" font-size="10" fill="#ddd" text-anchor="middle">IDX</text>
+    <!-- Drawer handles -->
+    <circle cx="45" cy="22" r="3" fill="#d4af37"/>
+    <circle cx="120" cy="22" r="3" fill="#d4af37"/>
+    <circle cx="195" cy="22" r="3" fill="#d4af37"/>
+    <circle cx="45" cy="57" r="3" fill="#d4af37"/>
+    <circle cx="120" cy="57" r="3" fill="#d4af37"/>
+    <circle cx="195" cy="57" r="3" fill="#d4af37"/>
+  </g>
+
+  <!-- Label -->
+  <text x="400" y="480" font-family="serif" font-size="24" fill="#88ccff" text-anchor="middle">CARD CATALOG</text>
+
+  <!-- Highlight glow for animation -->
+  <rect id="catalogHighlight" x="280" y="310" width="240" height="80"
+        fill="none" stroke="#44ff88" stroke-width="4" rx="5" opacity="0"/>
+</svg>
