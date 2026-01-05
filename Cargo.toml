@@ -3,4 +3,5 @@ resolver = "2"
 members = [
   "crates/explainer_core",
   "crates/explainerctl",
+  "explainer_web",
 ]

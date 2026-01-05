@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Explainer Renderer (Phase 1)</title>
+    <style>
+      html, body { margin:0; padding:0; background:#0e1117; color:#e6edf3; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+      .frame { width: 1920px; height: 1080px; position: relative; overflow: hidden; }
+      .center { position:absolute; left:50%; top:45%; transform: translate(-50%,-50%); text-align:center; }
+      .small { opacity: 0.75; margin-top: 12px; font-size: 22px; }
+      .badge { position:absolute; left:24px; bottom:24px; font-size:18px; opacity:.7; }
+      /* Phase 1: no time-based CSS animations. Everything must be driven by deterministic query params. */
+    </style>
+  <link rel="modulepreload" href="/explainer_web-bdb4dd32da20c18f.js" crossorigin="anonymous" integrity="sha384-gcbsoyFRieEMSrKIL68krIQkydw10DNw3ia9GGfE7vqJHYKr51flb855qUW2EnBz"><link rel="preload" href="/explainer_web-bdb4dd32da20c18f_bg.wasm" crossorigin="anonymous" integrity="sha384-nTwUO+HB8m3FQL4XkC/H8XV+Ee9AeoC+W44k29UQrxF5GhAmOX1P3l8WHjVNVS+b" as="fetch" type="application/wasm"></head>
+  <body>
+    <div id="app"></div>
+    <script type="module">
+      import init from "./explainer_web.js";
+      init();
+    </script>
+  
+<script type="module">
+import init, * as bindings from '/explainer_web-bdb4dd32da20c18f.js';
+const wasm = await init({ module_or_path: '/explainer_web-bdb4dd32da20c18f_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>

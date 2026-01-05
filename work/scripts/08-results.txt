@@ -1,1 +1,1 @@
-The results are dramatic. The R L M paper shows accuracy jumping from zero to over ninety percent. These are tasks that simply do not fit in a normal context window.
+The results are dramatic. The R L M paper shows accuracy jumping from zero to over ninety percent.

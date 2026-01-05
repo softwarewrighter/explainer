@@ -1,1 +1,1 @@
-It can slice specific sections. It can search with patterns. It can count statistics. It can ask helper models to analyze individual chunks. Each step is small, focused, and deliberate.
+It can slice specific sections. It can search with patterns.
