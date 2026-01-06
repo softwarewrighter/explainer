@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg22b" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg22b)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle" font-weight="bold">Benchmark Task Types</text>
+
+  <!-- Task cards -->
+  <!-- Codebase search -->
+  <rect x="150" y="200" width="500" height="350" fill="#1a2a3a" stroke="#4488ff" stroke-width="3" rx="15"/>
+  <text x="400" y="280" font-family="Arial" font-size="36" fill="#4488ff" text-anchor="middle" font-weight="bold">Codebase Search</text>
+  <g fill="#666688">
+    <rect x="200" y="320" width="400" height="15" rx="3"/>
+    <rect x="200" y="350" width="380" height="15" rx="3"/>
+    <rect x="200" y="380" width="420" height="15" rx="3"/>
+    <rect x="200" y="410" width="360" height="15" rx="3"/>
+    <rect x="200" y="440" width="400" height="15" rx="3"/>
+  </g>
+  <text x="400" y="510" font-family="Arial" font-size="22" fill="#888888" text-anchor="middle">Find functions, trace calls</text>
+
+  <!-- Document analysis -->
+  <rect x="710" y="200" width="500" height="350" fill="#1a3a2a" stroke="#44ff88" stroke-width="3" rx="15"/>
+  <text x="960" y="280" font-family="Arial" font-size="36" fill="#44ff88" text-anchor="middle" font-weight="bold">Document Analysis</text>
+  <rect x="760" y="310" width="400" height="180" fill="#0a0a1a" rx="8"/>
+  <g fill="#44ff88" opacity="0.5">
+    <rect x="780" y="330" width="360" height="12" rx="2"/>
+    <rect x="780" y="355" width="340" height="12" rx="2"/>
+    <rect x="780" y="380" width="370" height="12" rx="2"/>
+    <rect x="780" y="405" width="320" height="12" rx="2"/>
+    <rect x="780" y="430" width="360" height="12" rx="2"/>
+    <rect x="780" y="455" width="350" height="12" rx="2"/>
+  </g>
+  <text x="960" y="510" font-family="Arial" font-size="22" fill="#888888" text-anchor="middle">Analyze long documents</text>
+
+  <!-- Pattern finding -->
+  <rect x="1270" y="200" width="500" height="350" fill="#2a2a1a" stroke="#ffcc44" stroke-width="3" rx="15"/>
+  <text x="1520" y="280" font-family="Arial" font-size="36" fill="#ffcc44" text-anchor="middle" font-weight="bold">Pattern Finding</text>
+  <g fill="#ffcc44" opacity="0.6">
+    <circle cx="1370" cy="380" r="25"/>
+    <circle cx="1450" cy="350" r="25"/>
+    <circle cx="1520" cy="400" r="25"/>
+    <circle cx="1590" cy="360" r="25"/>
+    <circle cx="1660" cy="390" r="25"/>
+    <line x1="1370" y1="380" x2="1660" y2="380" stroke="#ffcc44" stroke-width="2" stroke-dasharray="5,5"/>
+  </g>
+  <text x="1520" y="510" font-family="Arial" font-size="22" fill="#888888" text-anchor="middle">Find patterns in data</text>
+
+  <!-- Bottom stats -->
+  <text x="960" y="680" font-family="Arial" font-size="32" fill="#ffffff" text-anchor="middle">Tasks designed to exceed context limits</text>
+  <text x="960" y="750" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">1M to 10M+ tokens of data per task</text>
+
+  <!-- Link hint -->
+  <text x="960" y="880" font-family="Arial" font-size="24" fill="#4488ff" text-anchor="middle">Detailed benchmarks linked in description</text>
+</svg>

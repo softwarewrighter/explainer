@@ -1,1 +1,19 @@
+# Build artifacts
 /target
+
+# Generated work files (audio, video, stills)
+projects/*/work/audio/
+projects/*/work/clips/
+projects/*/work/stills/
+projects/*/work/png/
+projects/*/work/avatar/
+projects/*/work/composited/
+projects/*/work/*.mp4
+
+# Keep scripts and description (source files)
+!projects/*/work/scripts/
+!projects/*/work/description.txt
+!projects/*/work/concat-list.txt
+
+# OS files
+.DS_Store

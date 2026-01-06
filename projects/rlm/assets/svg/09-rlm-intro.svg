@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg8" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg8)"/>
+
+  <!-- RLM Logo -->
+  <circle cx="960" cy="400" r="200" fill="none" stroke="#44ff88" stroke-width="8"/>
+  <text x="960" y="430" font-family="Arial" font-size="120" fill="#44ff88" text-anchor="middle" font-weight="bold">RLM</text>
+
+  <!-- Recursive arrows -->
+  <g stroke="#44ff88" stroke-width="4" fill="none">
+    <path d="M760 400 Q660 400 660 300 Q660 200 760 200"/>
+    <polygon points="760,190 780,200 760,210" fill="#44ff88"/>
+    <path d="M1160 400 Q1260 400 1260 500 Q1260 600 1160 600"/>
+    <polygon points="1160,610 1140,600 1160,590" fill="#44ff88"/>
+  </g>
+
+  <!-- Full name -->
+  <text x="960" y="700" font-family="Arial" font-size="56" fill="#ffffff" text-anchor="middle">Recursive Language Models</text>
+
+  <!-- Tagline -->
+  <text x="960" y="780" font-family="Arial" font-size="32" fill="#888888" text-anchor="middle">Better tools, not bigger jars</text>
+
+  <!-- Tool icons -->
+  <g fill="#44ff88" opacity="0.6">
+    <rect x="400" y="850" width="80" height="20" rx="4"/>
+    <rect x="600" y="850" width="60" height="20" rx="4"/>
+    <rect x="780" y="850" width="100" height="20" rx="4"/>
+    <rect x="1000" y="850" width="70" height="20" rx="4"/>
+    <rect x="1190" y="850" width="90" height="20" rx="4"/>
+    <rect x="1400" y="850" width="80" height="20" rx="4"/>
+  </g>
+</svg>

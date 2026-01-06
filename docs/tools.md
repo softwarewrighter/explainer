@@ -634,9 +634,19 @@ $VID_TTS --script scripts/00-intro.txt \
 
 **AI Agent Notes**:
 - ALWAYS use vid-tts instead of calling podcast CLI directly
-- Audio is automatically padded with 1s silence at start/end
+- Audio is automatically padded with 1s silence at start/end (configurable with --pad-start, --pad-end)
 - Use --print-duration to get audio length for avatar stretching
 - Voice clone reference: mike-medium-ref-1.wav (63s sample)
+
+**VibeVoice Limitations** (IMPORTANT):
+- **Max 200 characters** per script, **max 2 sentences**
+- **Only periods and commas** - no colons, semicolons, exclamation marks, question marks, or special punctuation
+- **No ALL-CAPS words** - VibeVoice garbles words like "ERROR" or "RLM"
+  - Use lowercase: "error" not "ERROR"
+  - For acronyms, use spaced letters: "R L M" not "RLM" (pronounces each letter)
+- **Avoid**: "search for ERROR" -> use "search for error"
+- **Avoid**: "the RLM project" -> use "the R L M project"
+- Keep sentences short and natural for best voice quality
 
 ### 8. vid-avatar - Avatar Video Stretcher
 

@@ -1,1 +1,0 @@
-In the current version, these actions are issued as structured JSON commands.

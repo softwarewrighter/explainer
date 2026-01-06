@@ -1,0 +1,1 @@
+When you force too much in, the model forgets things. This is called context rot.

@@ -1,1 +1,0 @@
-The model does not read everything. It peeks only where it needs to.

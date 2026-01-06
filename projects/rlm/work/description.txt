@@ -1,0 +1,59 @@
+Recursive Language Models: Expand the Workspace, Not the Context
+
+This video explains Recursive Language Models (RLM) - a technique that lets AI handle massive inputs by expanding its workspace instead of cramming everything into a limited context window.
+
+The key insight: Instead of stuffing everything into context (where it gets forgotten or garbled), RLM stores large inputs externally and gives the AI tools to deliberately access what it needs.
+
+---
+
+PAPER
+
+The original MIT research paper:
+https://arxiv.org/html/2512.24601v1
+
+---
+
+CODE
+
+Open source implementation:
+https://github.com/softwarewrighter/rlm-project
+
+---
+
+DOCUMENTATION
+
+For Beginners:
+- What is RLM? https://github.com/softwarewrighter/rlm-project/blob/main/docs/beginners/what-is-rlm.md
+- Getting Started: https://github.com/softwarewrighter/rlm-project/blob/main/docs/beginners/getting-started.md
+- How It Works: https://github.com/softwarewrighter/rlm-project/blob/main/docs/beginners/how-it-works.md
+
+ELI5 (Explain Like I'm 5):
+https://github.com/softwarewrighter/rlm-project/blob/main/docs/rlm-eli5.md
+
+---
+
+BENCHMARK RESULTS
+
+Testing methodology and results from the paper:
+- Benchmark Report: https://github.com/softwarewrighter/rlm-project/blob/main/rlm-orchestrator/BENCHMARK_REPORT.md
+- Findings Summary: https://github.com/softwarewrighter/rlm-project/blob/main/docs/findings.md
+- Benchmarks Directory: https://github.com/softwarewrighter/rlm-project/tree/main/benchmarks
+
+Results show 87-91% accuracy across GPT-4, Claude, Llama, Mistral, and Gemini - compared to 0% with standard prompting on context-exceeding tasks.
+
+---
+
+TIMESTAMPS
+
+0:00 - Introduction
+0:04 - The Problem: Context Limits
+0:49 - The RLM Solution
+1:36 - The Project Repository
+1:57 - ELI5: Cookie Jar Analogy
+2:29 - Benchmark Results
+3:09 - Key Insight
+3:17 - Links and Resources
+
+---
+
+#AI #LLM #MachineLearning #RLM #RecursiveLanguageModels #MIT #OpenSource

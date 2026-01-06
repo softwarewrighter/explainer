@@ -1,1 +1,0 @@
-It can slice specific sections. It can search with patterns.

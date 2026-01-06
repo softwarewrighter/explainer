@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg11" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg11)"/>
+
+  <!-- Title -->
+  <text x="960" y="80" font-family="Arial" font-size="48" fill="#44ff88" text-anchor="middle" font-weight="bold">Tool: FIND</text>
+
+  <!-- Log file visualization -->
+  <rect x="300" y="150" width="1320" height="550" fill="#0a0a1a" stroke="#333355" stroke-width="2" rx="8"/>
+
+  <!-- Log lines -->
+  <text x="330" y="200" font-family="Courier New" font-size="22" fill="#666688">[INFO] Application started</text>
+  <text x="330" y="240" font-family="Courier New" font-size="22" fill="#666688">[INFO] Loading config...</text>
+  <text x="330" y="280" font-family="Courier New" font-size="22" fill="#666688">[DEBUG] Cache initialized</text>
+
+  <!-- Highlighted ERROR lines -->
+  <rect x="320" y="295" width="1280" height="35" fill="#44ff88" opacity="0.2" rx="4"/>
+  <text x="330" y="320" font-family="Courier New" font-size="22" fill="#44ff88">[ERROR] Connection timeout on port 8080</text>
+
+  <text x="330" y="360" font-family="Courier New" font-size="22" fill="#666688">[INFO] Retrying connection</text>
+  <text x="330" y="400" font-family="Courier New" font-size="22" fill="#666688">[WARN] High memory usage</text>
+
+  <rect x="320" y="415" width="1280" height="35" fill="#44ff88" opacity="0.2" rx="4"/>
+  <text x="330" y="440" font-family="Courier New" font-size="22" fill="#44ff88">[ERROR] Database query failed</text>
+
+  <text x="330" y="480" font-family="Courier New" font-size="22" fill="#666688">[INFO] Fallback to cache</text>
+  <text x="330" y="520" font-family="Courier New" font-size="22" fill="#666688">[DEBUG] Request processed</text>
+
+  <rect x="320" y="535" width="1280" height="35" fill="#44ff88" opacity="0.2" rx="4"/>
+  <text x="330" y="560" font-family="Courier New" font-size="22" fill="#44ff88">[ERROR] Auth token expired</text>
+
+  <text x="330" y="600" font-family="Courier New" font-size="22" fill="#666688">[INFO] Session renewed</text>
+  <text x="330" y="640" font-family="Courier New" font-size="22" fill="#666688">[INFO] Request complete</text>
+
+  <!-- Search icon -->
+  <circle cx="1600" cy="400" r="60" fill="none" stroke="#44ff88" stroke-width="6"/>
+  <line x1="1642" y1="442" x2="1700" y2="500" stroke="#44ff88" stroke-width="6"/>
+
+  <!-- Command -->
+  <rect x="460" y="750" width="1000" height="80" fill="#0a0a1a" stroke="#44ff88" stroke-width="2" rx="8"/>
+  <text x="960" y="800" font-family="Courier New" font-size="28" fill="#44ff88" text-anchor="middle">{"op": "find", "pattern": "ERROR"}</text>
+
+  <!-- Result count -->
+  <text x="960" y="900" font-family="Arial" font-size="32" fill="#44ff88" text-anchor="middle">3 matches found</text>
+</svg>

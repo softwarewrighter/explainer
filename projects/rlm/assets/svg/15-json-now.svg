@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg14" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg14)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial" font-size="56" fill="#ffcc44" text-anchor="middle" font-weight="bold">Current: JSON Commands</text>
+
+  <!-- Code block -->
+  <rect x="360" y="180" width="1200" height="650" fill="#1a1a2e" stroke="#333355" stroke-width="2" rx="10"/>
+
+  <!-- JSON commands with syntax highlighting -->
+  <text x="400" y="260" font-family="Courier New" font-size="32" fill="#888888">// Slice operation</text>
+  <text x="400" y="310" font-family="Courier New" font-size="32" fill="#ff8844">{"op": "slice", "from": 200, "to": 400}</text>
+
+  <text x="400" y="400" font-family="Courier New" font-size="32" fill="#888888">// Find operation</text>
+  <text x="400" y="450" font-family="Courier New" font-size="32" fill="#44ff88">{"op": "find", "pattern": "ERROR"}</text>
+
+  <text x="400" y="540" font-family="Courier New" font-size="32" fill="#888888">// Count operation</text>
+  <text x="400" y="590" font-family="Courier New" font-size="32" fill="#ffff44">{"op": "count", "target": "matches"}</text>
+
+  <text x="400" y="680" font-family="Courier New" font-size="32" fill="#888888">// Query operation</text>
+  <text x="400" y="730" font-family="Courier New" font-size="32" fill="#ff44ff">{"op": "llm_query", "prompt": "..."}</text>
+
+  <!-- Bottom label -->
+  <text x="960" y="900" font-family="Arial" font-size="32" fill="#888888" text-anchor="middle">Simple, structured, predictable</text>
+</svg>

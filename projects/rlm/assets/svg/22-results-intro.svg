@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg21" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg21)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial" font-size="56" fill="#ff4444" text-anchor="middle" font-weight="bold">Base Models: 0% Accuracy</text>
+
+  <!-- Gauge at 0% -->
+  <circle cx="960" cy="500" r="280" fill="none" stroke="#333355" stroke-width="50"/>
+  <!-- No fill for 0% -->
+
+  <!-- Center text -->
+  <text x="960" y="480" font-family="Arial" font-size="160" fill="#ff4444" text-anchor="middle" font-weight="bold">0%</text>
+  <text x="960" y="560" font-family="Arial" font-size="36" fill="#888888" text-anchor="middle">Accuracy</text>
+
+  <!-- X marks -->
+  <g stroke="#ff4444" stroke-width="8" stroke-linecap="round">
+    <line x1="300" y1="350" x2="380" y2="430"/>
+    <line x1="380" y1="350" x2="300" y2="430"/>
+
+    <line x1="1540" y1="350" x2="1620" y2="430"/>
+    <line x1="1620" y1="350" x2="1540" y2="430"/>
+
+    <line x1="300" y1="550" x2="380" y2="630"/>
+    <line x1="380" y1="550" x2="300" y2="630"/>
+
+    <line x1="1540" y1="550" x2="1620" y2="630"/>
+    <line x1="1620" y1="550" x2="1540" y2="630"/>
+  </g>
+
+  <!-- Bottom text -->
+  <text x="960" y="880" font-family="Arial" font-size="32" fill="#ff4444" text-anchor="middle">Tasks that exceed context window</text>
+  <text x="960" y="940" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">Complete failure</text>
+</svg>

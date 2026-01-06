@@ -1,0 +1,1 @@
+The data stays in a context box. The model gets tools to peek inside.

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg5)"/>
+
+  <!-- Cookie jar -->
+  <ellipse cx="960" cy="750" rx="250" ry="40" fill="#8b4513"/>
+  <path d="M710 750 L710 400 Q710 350 760 350 L1160 350 Q1210 350 1210 400 L1210 750" fill="none" stroke="#8b4513" stroke-width="20"/>
+  <ellipse cx="960" cy="350" rx="250" ry="40" fill="#a0522d"/>
+
+  <!-- Cookies overflowing -->
+  <g fill="#d2691e">
+    <circle cx="850" cy="500" r="35"/>
+    <circle cx="950" cy="480" r="35"/>
+    <circle cx="1050" cy="510" r="35"/>
+    <circle cx="900" cy="580" r="35"/>
+    <circle cx="1000" cy="560" r="35"/>
+    <circle cx="870" cy="650" r="35"/>
+    <circle cx="970" cy="640" r="35"/>
+    <circle cx="1070" cy="620" r="35"/>
+    <!-- Overflowing cookies -->
+    <circle cx="750" cy="300" r="35"/>
+    <circle cx="850" cy="280" r="35"/>
+    <circle cx="960" cy="260" r="35"/>
+    <circle cx="1070" cy="270" r="35"/>
+    <circle cx="1170" cy="290" r="35"/>
+    <circle cx="650" cy="350" r="35"/>
+    <circle cx="1270" cy="340" r="35"/>
+    <!-- Fallen cookies -->
+    <circle cx="500" cy="850" r="35"/>
+    <circle cx="600" cy="880" r="35"/>
+    <circle cx="1320" cy="870" r="35"/>
+    <circle cx="1420" cy="850" r="35"/>
+  </g>
+
+  <!-- Chocolate chips -->
+  <g fill="#3d2314">
+    <circle cx="840" cy="495" r="8"/>
+    <circle cx="860" cy="510" r="6"/>
+    <circle cx="945" cy="475" r="8"/>
+    <circle cx="960" cy="490" r="6"/>
+  </g>
+
+  <!-- Label -->
+  <text x="960" y="950" font-family="Arial" font-size="32" fill="#ff8844" text-anchor="middle">100 cookie limit... 10,000 cookies needed</text>
+</svg>

@@ -1,0 +1,1 @@
+Right now, commands are simple JSON. Slice here, find this, count that.

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg23a" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg23a)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle" font-weight="bold">Consistent Across Models</text>
+
+  <!-- Bar chart -->
+  <g transform="translate(200, 200)">
+    <!-- Y axis -->
+    <line x1="100" y1="50" x2="100" y2="550" stroke="#666688" stroke-width="2"/>
+    <text x="50" y="80" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">100%</text>
+    <text x="50" y="310" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">50%</text>
+    <text x="50" y="540" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">0%</text>
+
+    <!-- Bars for each model -->
+    <!-- GPT-4 -->
+    <rect x="180" y="95" width="120" height="455" fill="#44ff88"/>
+    <text x="240" y="600" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">GPT-4</text>
+    <text x="240" y="80" font-family="Arial" font-size="22" fill="#44ff88" text-anchor="middle">91%</text>
+
+    <!-- Claude -->
+    <rect x="380" y="105" width="120" height="445" fill="#44ff88"/>
+    <text x="440" y="600" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">Claude</text>
+    <text x="440" y="90" font-family="Arial" font-size="22" fill="#44ff88" text-anchor="middle">89%</text>
+
+    <!-- Llama -->
+    <rect x="580" y="115" width="120" height="435" fill="#44ff88"/>
+    <text x="640" y="600" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">Llama</text>
+    <text x="640" y="100" font-family="Arial" font-size="22" fill="#44ff88" text-anchor="middle">87%</text>
+
+    <!-- Mistral -->
+    <rect x="780" y="110" width="120" height="440" fill="#44ff88"/>
+    <text x="840" y="600" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">Mistral</text>
+    <text x="840" y="95" font-family="Arial" font-size="22" fill="#44ff88" text-anchor="middle">88%</text>
+
+    <!-- Gemini -->
+    <rect x="980" y="100" width="120" height="450" fill="#44ff88"/>
+    <text x="1040" y="600" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">Gemini</text>
+    <text x="1040" y="85" font-family="Arial" font-size="22" fill="#44ff88" text-anchor="middle">90%</text>
+
+    <!-- Base comparison line at 0% -->
+    <line x1="180" y1="550" x2="1100" y2="550" stroke="#ff4444" stroke-width="3" stroke-dasharray="10,5"/>
+    <text x="1150" y="558" font-family="Arial" font-size="18" fill="#ff4444">Base: 0%</text>
+  </g>
+
+  <!-- Bottom text -->
+  <text x="960" y="900" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">Full benchmark details linked in description</text>
+</svg>

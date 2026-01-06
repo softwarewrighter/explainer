@@ -1,0 +1,1 @@
+Another tool searches. Find all lines containing error.

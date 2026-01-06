@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg19" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg19)"/>
+
+  <!-- Title with red X -->
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ff4444" text-anchor="middle" font-weight="bold">The Old Way</text>
+
+  <!-- Empty jar on left -->
+  <g transform="translate(300, 200) scale(0.6)">
+    <ellipse cx="300" cy="500" rx="200" ry="40" fill="#8b4513"/>
+    <path d="M100 500 L100 200 Q100 150 150 150 L450 150 Q500 150 500 200 L500 500" fill="none" stroke="#8b4513" stroke-width="20"/>
+    <ellipse cx="300" cy="150" rx="200" ry="40" fill="#a0522d"/>
+  </g>
+
+  <!-- Arrow dumping -->
+  <path d="M550 400 Q700 200 900 350" stroke="#ff4444" stroke-width="6" fill="none"/>
+  <polygon points="890,340 920,360 900,380" fill="#ff4444"/>
+  <text x="720" y="250" font-family="Arial" font-size="28" fill="#ff4444">DUMP</text>
+
+  <!-- Messy pile of cookies on table -->
+  <rect x="850" y="600" width="800" height="20" fill="#4a3520"/>
+  <g fill="#d2691e">
+    <!-- Scattered messy cookies -->
+    <circle cx="920" cy="550" r="40"/>
+    <circle cx="1000" cy="520" r="40"/>
+    <circle cx="1100" cy="560" r="40"/>
+    <circle cx="1200" cy="530" r="40"/>
+    <circle cx="1300" cy="570" r="40"/>
+    <circle cx="1400" cy="540" r="40"/>
+    <circle cx="1500" cy="560" r="40"/>
+    <circle cx="960" cy="480" r="40"/>
+    <circle cx="1060" cy="450" r="40"/>
+    <circle cx="1160" cy="490" r="40"/>
+    <circle cx="1260" cy="460" r="40"/>
+    <circle cx="1360" cy="500" r="40"/>
+    <circle cx="1450" cy="470" r="40"/>
+    <!-- More scattered -->
+    <circle cx="900" cy="420" r="35"/>
+    <circle cx="1020" cy="390" r="35"/>
+    <circle cx="1140" cy="410" r="35"/>
+    <circle cx="1270" cy="380" r="35"/>
+    <circle cx="1400" cy="400" r="35"/>
+    <circle cx="1530" cy="500" r="35"/>
+    <!-- Fallen ones -->
+    <circle cx="880" cy="720" r="35"/>
+    <circle cx="1600" cy="700" r="35"/>
+  </g>
+
+  <!-- Confused person icon -->
+  <circle cx="1650" cy="350" r="50" fill="none" stroke="#ff4444" stroke-width="4"/>
+  <text x="1650" y="370" font-family="Arial" font-size="48" fill="#ff4444" text-anchor="middle">?</text>
+
+  <!-- Bottom text -->
+  <text x="960" y="850" font-family="Arial" font-size="36" fill="#ff4444" text-anchor="middle">Dump everything, then dig through the mess</text>
+  <text x="960" y="920" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">Slow, wasteful, error-prone</text>
+</svg>

@@ -42,22 +42,25 @@ just concat
 
 ```
 explainer/
-+-- plan.md              # Production plan
-+-- script/
-|   +-- scenes.yaml      # Scene definitions
-+-- work/
-|   +-- scripts/         # Narration text files
-|   +-- audio/           # TTS audio (.wav)
-|   +-- clips/           # Scene video clips
-|   +-- avatar/
-|   |   +-- stretched/   # Time-stretched avatars
-|   |   +-- lipsynced/   # Lip-synced avatars
-|   +-- composited/      # Final segments
-+-- assets/
-|   +-- svg/             # Vector graphics
-+-- out/
-    +-- frames/          # Playwright captures
-    +-- final.mp4        # Final video
++-- docs/                   # General documentation (tools, workflows)
+|   +-- tools.md            # Video pipeline tool documentation
+|   +-- process.md          # Development process
++-- projects/               # Individual explainer video projects
+|   +-- rlm/                # RLM Explainer project
+|       +-- plan.md         # Production plan
+|       +-- assets/
+|       |   +-- images/     # Project images (title cards, etc.)
+|       |   +-- svg/        # Vector graphics for scenes
+|       +-- docs/           # Project-specific documentation
+|       |   +-- research.txt
+|       +-- work/           # Generated files (gitignored except scripts)
+|           +-- scripts/    # Narration text files (source)
+|           +-- audio/      # TTS audio (.wav) - generated
+|           +-- clips/      # Scene video clips - generated
+|           +-- stills/     # PNG frames - generated
++-- crates/                 # Rust library crates
++-- explainer_web/          # Yew/WASM deterministic renderer
++-- script/                 # Scene definitions (future: per-project)
 ```
 
 ## Scene Types
@@ -153,18 +156,21 @@ just concat             # Concatenate all segments
 just review             # Preview in browser
 ```
 
-## Current Video: RLM Explainer
+## Current Project: RLM Explainer
+
+Location: `projects/rlm/`
 
 Subject: Recursive Language Models (../rlm-project)
 
-Duration: ~90 seconds
+Duration: ~3:30 (27 narrated segments + title + epilog)
 
-Scenes:
-- 00-title: Title card with music
-- 01-09: Content segments with avatar narration
-- 99-epilog: Standard closing
+Structure:
+- 01-title: Title card with music (rlm.jpg)
+- 02-25: Content segments with Ken Burns effect
+- 26-outro: CTA slide with music padding
+- 99b-epilog: Standard closing + 5s extension
 
-See `plan.md` for full production details.
+See `projects/rlm/plan.md` for full production details.
 
 ## References
 

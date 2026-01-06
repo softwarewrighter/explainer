@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg20" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg20)"/>
+
+  <!-- Title with green check -->
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#44ff88" text-anchor="middle" font-weight="bold">The RLM Way</text>
+
+  <!-- Cookie jar stays full on left -->
+  <g transform="translate(200, 150) scale(0.7)">
+    <ellipse cx="350" cy="600" rx="250" ry="50" fill="#8b4513"/>
+    <path d="M100 600 L100 250 Q100 180 170 180 L530 180 Q600 180 600 250 L600 600" fill="none" stroke="#8b4513" stroke-width="25"/>
+    <ellipse cx="350" cy="180" rx="250" ry="50" fill="#a0522d"/>
+    <!-- Cookies inside -->
+    <g fill="#d2691e">
+      <circle cx="250" cy="350" r="45"/>
+      <circle cx="360" cy="320" r="45"/>
+      <circle cx="470" cy="360" r="45"/>
+      <circle cx="300" cy="440" r="45"/>
+      <circle cx="420" cy="420" r="45"/>
+      <circle cx="250" cy="530" r="45"/>
+      <circle cx="370" cy="510" r="45"/>
+      <circle cx="480" cy="540" r="45"/>
+    </g>
+  </g>
+
+  <!-- Scoop tool -->
+  <g transform="translate(750, 300)">
+    <!-- Scoop handle -->
+    <rect x="200" y="0" width="30" height="200" fill="#888888" rx="5"/>
+    <!-- Scoop head -->
+    <ellipse cx="215" cy="250" rx="100" ry="60" fill="#aaaaaa"/>
+    <ellipse cx="215" cy="230" rx="80" ry="45" fill="#666666"/>
+    <!-- Cookie in scoop -->
+    <circle cx="215" cy="220" r="35" fill="#d2691e"/>
+    <circle cx="205" cy="215" r="8" fill="#3d2314"/>
+    <circle cx="225" cy="225" r="6" fill="#3d2314"/>
+  </g>
+
+  <!-- Arrow pointing right -->
+  <path d="M1050 400 L1200 400" stroke="#44ff88" stroke-width="6"/>
+  <polygon points="1200,385 1250,400 1200,415" fill="#44ff88"/>
+  <text x="1130" y="350" font-family="Arial" font-size="24" fill="#44ff88">Just this one</text>
+
+  <!-- Single cookie delivered -->
+  <circle cx="1450" cy="400" r="80" fill="#d2691e"/>
+  <circle cx="1420" cy="380" r="18" fill="#3d2314"/>
+  <circle cx="1470" cy="390" r="14" fill="#3d2314"/>
+  <circle cx="1440" cy="430" r="16" fill="#3d2314"/>
+
+  <!-- Checkmark -->
+  <circle cx="1650" cy="400" r="60" fill="#44ff88"/>
+  <path d="M1615 400 L1640 425 L1690 365" stroke="#0a0a1a" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Bottom text -->
+  <text x="960" y="750" font-family="Arial" font-size="36" fill="#44ff88" text-anchor="middle">Use a scoop, grab just what you need</text>
+  <text x="960" y="820" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">Fast, efficient, precise</text>
+</svg>
