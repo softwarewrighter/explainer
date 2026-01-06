@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Title -->
+  <text x="960" y="80" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle">Hierarchical Chunking: Parent-Child</text>
+
+  <!-- Tree structure -->
+  <!-- Document root -->
+  <rect x="760" y="150" width="400" height="80" rx="10" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="960" y="200" font-family="Arial" font-size="24" fill="#4488ff" text-anchor="middle">Document</text>
+
+  <!-- Parent nodes -->
+  <line x1="960" y1="230" x2="500" y2="300" stroke="#44ff88" stroke-width="2"/>
+  <line x1="960" y1="230" x2="960" y2="300" stroke="#44ff88" stroke-width="2"/>
+  <line x1="960" y1="230" x2="1420" y2="300" stroke="#44ff88" stroke-width="2"/>
+
+  <!-- Parent 1 -->
+  <rect x="300" y="300" width="400" height="120" rx="10" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="3"/>
+  <text x="500" y="340" font-family="Arial" font-size="20" fill="#44ff88" text-anchor="middle">Parent Chunk 1</text>
+  <text x="500" y="370" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">~3,500 chars (~1,800 tokens)</text>
+  <text x="500" y="395" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Full section context</text>
+
+  <!-- Parent 2 -->
+  <rect x="760" y="300" width="400" height="120" rx="10" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="3"/>
+  <text x="960" y="340" font-family="Arial" font-size="20" fill="#44ff88" text-anchor="middle">Parent Chunk 2</text>
+  <text x="960" y="370" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">~3,500 chars (~1,800 tokens)</text>
+  <text x="960" y="395" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Full section context</text>
+
+  <!-- Parent 3 -->
+  <rect x="1220" y="300" width="400" height="120" rx="10" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="3"/>
+  <text x="1420" y="340" font-family="Arial" font-size="20" fill="#44ff88" text-anchor="middle">Parent Chunk 3</text>
+  <text x="1420" y="370" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">~3,500 chars (~1,800 tokens)</text>
+  <text x="1420" y="395" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Full section context</text>
+
+  <!-- Child connections -->
+  <line x1="500" y1="420" x2="350" y2="500" stroke="#ff8844" stroke-width="2"/>
+  <line x1="500" y1="420" x2="500" y2="500" stroke="#ff8844" stroke-width="2"/>
+  <line x1="500" y1="420" x2="650" y2="500" stroke="#ff8844" stroke-width="2"/>
+
+  <line x1="960" y1="420" x2="860" y2="500" stroke="#ff8844" stroke-width="2"/>
+  <line x1="960" y1="420" x2="960" y2="500" stroke="#ff8844" stroke-width="2"/>
+  <line x1="960" y1="420" x2="1060" y2="500" stroke="#ff8844" stroke-width="2"/>
+
+  <line x1="1420" y1="420" x2="1320" y2="500" stroke="#ff8844" stroke-width="2"/>
+  <line x1="1420" y1="420" x2="1420" y2="500" stroke="#ff8844" stroke-width="2"/>
+  <line x1="1420" y1="420" x2="1520" y2="500" stroke="#ff8844" stroke-width="2"/>
+
+  <!-- Child nodes -->
+  <g>
+    <rect x="270" y="500" width="160" height="80" rx="8" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="2"/>
+    <text x="350" y="550" font-family="Arial" font-size="14" fill="#ff8844" text-anchor="middle">Child 1.1</text>
+
+    <rect x="420" y="500" width="160" height="80" rx="8" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="2"/>
+    <text x="500" y="550" font-family="Arial" font-size="14" fill="#ff8844" text-anchor="middle">Child 1.2</text>
+
+    <rect x="570" y="500" width="160" height="80" rx="8" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="2"/>
+    <text x="650" y="550" font-family="Arial" font-size="14" fill="#ff8844" text-anchor="middle">Child 1.3</text>
+  </g>
+
+  <g>
+    <rect x="780" y="500" width="160" height="80" rx="8" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="2"/>
+    <text x="860" y="550" font-family="Arial" font-size="14" fill="#ff8844" text-anchor="middle">Child 2.1</text>
+
+    <rect x="880" y="500" width="160" height="80" rx="8" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="2"/>
+    <text x="960" y="550" font-family="Arial" font-size="14" fill="#ff8844" text-anchor="middle">Child 2.2</text>
+
+    <rect x="980" y="500" width="160" height="80" rx="8" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="2"/>
+    <text x="1060" y="550" font-family="Arial" font-size="14" fill="#ff8844" text-anchor="middle">Child 2.3</text>
+  </g>
+
+  <g>
+    <rect x="1240" y="500" width="160" height="80" rx="8" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="2"/>
+    <text x="1320" y="550" font-family="Arial" font-size="14" fill="#ff8844" text-anchor="middle">Child 3.1</text>
+
+    <rect x="1340" y="500" width="160" height="80" rx="8" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="2"/>
+    <text x="1420" y="550" font-family="Arial" font-size="14" fill="#ff8844" text-anchor="middle">Child 3.2</text>
+
+    <rect x="1440" y="500" width="160" height="80" rx="8" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="2"/>
+    <text x="1520" y="550" font-family="Arial" font-size="14" fill="#ff8844" text-anchor="middle">Child 3.3</text>
+  </g>
+
+  <!-- Explanation boxes -->
+  <rect x="200" y="650" width="700" height="200" rx="15" fill="#2a2a4a" stroke="#44ff88" stroke-width="2"/>
+  <text x="550" y="700" font-family="Arial" font-size="22" fill="#44ff88" text-anchor="middle">Parents (Stored)</text>
+  <text x="550" y="740" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Hold full section context</text>
+  <text x="550" y="775" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Preserve complete meaning</text>
+  <text x="550" y="810" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Available for context retrieval</text>
+
+  <rect x="1020" y="650" width="700" height="200" rx="15" fill="#2a2a4a" stroke="#ff8844" stroke-width="2"/>
+  <text x="1370" y="700" font-family="Arial" font-size="22" fill="#ff8844" text-anchor="middle">Children (Embedded)</text>
+  <text x="1370" y="740" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">~750 chars (~400 tokens)</text>
+  <text x="1370" y="775" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Optimal size for embedding</text>
+  <text x="1370" y="810" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Precise search targets</text>
+
+  <text x="960" y="950" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle">Best of both worlds: precision + context</text>
+</svg>

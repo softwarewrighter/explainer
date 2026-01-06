@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Title -->
+  <text x="960" y="80" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle">Return Parents for Context</text>
+
+  <!-- Matched child -->
+  <rect x="150" y="200" width="350" height="180" rx="15" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="3"/>
+  <text x="325" y="250" font-family="Arial" font-size="20" fill="#ff8844" text-anchor="middle">Matched Child</text>
+  <text x="325" y="300" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">"When connection times out,</text>
+  <text x="325" y="325" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">retry the request..."</text>
+  <text x="325" y="360" font-family="Arial" font-size="12" fill="#666688" text-anchor="middle">~750 chars</text>
+
+  <!-- Arrow up to parent -->
+  <path d="M325 390 L325 460 L750 460 L750 250" stroke="#44ff88" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <text x="540" y="440" font-family="Arial" font-size="18" fill="#44ff88" text-anchor="middle">lookup parent_id</text>
+
+  <!-- Parent chunk -->
+  <rect x="600" y="150" width="500" height="350" rx="15" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="4"/>
+  <text x="850" y="200" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Parent Chunk</text>
+  <text x="850" y="240" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Full section with complete context</text>
+
+  <rect x="630" y="270" width="440" height="200" rx="8" fill="#2a2a4a"/>
+  <text x="650" y="300" font-family="Arial" font-size="13" fill="#888888">Section: Connection Handling</text>
+  <text x="650" y="330" font-family="Arial" font-size="13" fill="#888888">When establishing a connection, first check...</text>
+  <text x="650" y="355" font-family="Arial" font-size="13" fill="#888888">The default timeout is 30 seconds...</text>
+  <text x="650" y="380" font-family="Arial" font-size="13" fill="#44ff88">When connection times out, retry the request</text>
+  <text x="650" y="405" font-family="Arial" font-size="13" fill="#44ff88">with exponential backoff starting at 1 second.</text>
+  <text x="650" y="430" font-family="Arial" font-size="13" fill="#888888">If all retries fail, throw ConnectionError...</text>
+  <text x="650" y="455" font-family="Arial" font-size="13" fill="#888888">Consider using connection pooling for...</text>
+  <text x="850" y="485" font-family="Arial" font-size="12" fill="#666688" text-anchor="middle">~3,500 chars</text>
+
+  <!-- Arrow to LLM -->
+  <path d="M1110 330 L1250 330" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="1180" y="310" font-family="Arial" font-size="18" fill="#44ff88" text-anchor="middle">context</text>
+
+  <!-- LLM with context -->
+  <rect x="1270" y="150" width="500" height="350" rx="15" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="1520" y="210" font-family="Arial" font-size="24" fill="#4488ff" text-anchor="middle">LLM Prompt</text>
+
+  <rect x="1300" y="250" width="440" height="220" rx="8" fill="#4488ff" fill-opacity="0.05"/>
+  <text x="1320" y="285" font-family="Arial" font-size="14" fill="#4488ff">Context (from parent):</text>
+  <text x="1320" y="315" font-family="Arial" font-size="12" fill="#888888">"Section: Connection Handling</text>
+  <text x="1320" y="335" font-family="Arial" font-size="12" fill="#888888">When establishing a connection, first check...</text>
+  <text x="1320" y="355" font-family="Arial" font-size="12" fill="#888888">The default timeout is 30 seconds...</text>
+  <text x="1320" y="375" font-family="Arial" font-size="12" fill="#888888">When connection times out, retry..."</text>
+
+  <text x="1320" y="415" font-family="Arial" font-size="14" fill="#4488ff">Question: How do I handle timeouts?</text>
+
+  <!-- Result comparison -->
+  <rect x="200" y="580" width="700" height="250" rx="15" fill="#ff6666" fill-opacity="0.1" stroke="#ff8844" stroke-width="2"/>
+  <text x="550" y="640" font-family="Arial" font-size="22" fill="#ff8844" text-anchor="middle">Without Parent Context</text>
+  <text x="550" y="690" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">"Retry the request..."</text>
+  <text x="550" y="730" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Missing: how long? how many times?</text>
+  <text x="550" y="770" font-family="Arial" font-size="16" fill="#ff8844" text-anchor="middle">Incomplete answer</text>
+
+  <rect x="1020" y="580" width="700" height="250" rx="15" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="2"/>
+  <text x="1370" y="640" font-family="Arial" font-size="22" fill="#44ff88" text-anchor="middle">With Parent Context</text>
+  <text x="1370" y="690" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">"Retry with exponential backoff,</text>
+  <text x="1370" y="720" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">starting at 1 second, default timeout 30s"</text>
+  <text x="1370" y="770" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">Complete, actionable answer</text>
+
+  <text x="960" y="950" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle">Parents provide the full story for complete answers</text>
+</svg>

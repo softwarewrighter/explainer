@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffdd44"/>
+      <stop offset="100%" style="stop-color:#ff8844"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Light bulb / insight icon -->
+  <circle cx="960" cy="280" r="100" fill="none" stroke="url(#gold)" stroke-width="6"/>
+  <path d="M920 320 L920 380 L1000 380 L1000 320" fill="none" stroke="url(#gold)" stroke-width="4"/>
+  <line x1="920" y1="400" x2="1000" y2="400" stroke="url(#gold)" stroke-width="4"/>
+  <line x1="930" y1="420" x2="990" y2="420" stroke="url(#gold)" stroke-width="4"/>
+
+  <!-- Rays from bulb -->
+  <line x1="960" y1="140" x2="960" y2="100" stroke="#ffdd44" stroke-width="3" opacity="0.6"/>
+  <line x1="1080" y1="180" x2="1110" y2="150" stroke="#ffdd44" stroke-width="3" opacity="0.6"/>
+  <line x1="840" y1="180" x2="810" y2="150" stroke="#ffdd44" stroke-width="3" opacity="0.6"/>
+  <line x1="1100" y1="280" x2="1140" y2="280" stroke="#ffdd44" stroke-width="3" opacity="0.6"/>
+  <line x1="820" y1="280" x2="780" y2="280" stroke="#ffdd44" stroke-width="3" opacity="0.6"/>
+
+  <!-- Main tagline -->
+  <text x="960" y="550" font-family="Arial" font-size="72" fill="#ffffff" text-anchor="middle" font-weight="bold">Ground Your AI</text>
+  <text x="960" y="650" font-family="Arial" font-size="72" fill="#44ff88" text-anchor="middle" font-weight="bold">in Real Data</text>
+
+  <!-- Supporting points -->
+  <rect x="300" y="750" width="400" height="150" rx="20" fill="#2a2a4a" stroke="#ff8844" stroke-width="2"/>
+  <text x="500" y="810" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Before RAG</text>
+  <text x="500" y="860" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">AI guesses from training</text>
+
+  <rect x="760" y="750" width="400" height="150" rx="20" fill="#2a2a4a" stroke="#44ff88" stroke-width="2"/>
+  <text x="960" y="810" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">With RAG</text>
+  <text x="960" y="860" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">AI answers from your documents</text>
+
+  <rect x="1220" y="750" width="400" height="150" rx="20" fill="#2a2a4a" stroke="#4488ff" stroke-width="2"/>
+  <text x="1420" y="810" font-family="Arial" font-size="24" fill="#4488ff" text-anchor="middle">Result</text>
+  <text x="1420" y="860" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Accurate, trustworthy answers</text>
+
+  <text x="960" y="1000" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">The key insight is simple: give AI access to your information</text>
+</svg>

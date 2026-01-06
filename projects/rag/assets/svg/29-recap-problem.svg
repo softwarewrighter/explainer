@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Recap badge -->
+  <rect x="810" y="80" width="300" height="60" rx="30" fill="#ff8844" fill-opacity="0.2" stroke="#ff8844" stroke-width="2"/>
+  <text x="960" y="120" font-family="Arial" font-size="28" fill="#ff8844" text-anchor="middle">Recap: Problem</text>
+
+  <!-- Split brain visualization -->
+  <circle cx="960" cy="400" r="200" fill="none" stroke="#4488ff" stroke-width="6"/>
+
+  <!-- Left half - knowledge -->
+  <path d="M960 200 A200 200 0 0 0 960 600" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="3"/>
+  <text x="820" y="350" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Training</text>
+  <text x="820" y="385" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Data</text>
+  <text x="820" y="440" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Limited</text>
+  <text x="820" y="465" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Outdated</text>
+
+  <!-- Right half - gap -->
+  <path d="M960 200 A200 200 0 0 1 960 600" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="3"/>
+  <text x="1100" y="350" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Your</text>
+  <text x="1100" y="385" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Data</text>
+  <text x="1100" y="440" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Private</text>
+  <text x="1100" y="465" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Current</text>
+
+  <!-- Question marks in the gap -->
+  <text x="1100" y="280" font-family="Arial" font-size="48" fill="#ff8844" opacity="0.5">?</text>
+  <text x="1100" y="550" font-family="Arial" font-size="48" fill="#ff8844" opacity="0.5">?</text>
+
+  <!-- Dividing line -->
+  <line x1="960" y1="200" x2="960" y2="600" stroke="#ffffff" stroke-width="4" stroke-dasharray="10,5"/>
+
+  <!-- Problem statements -->
+  <rect x="300" y="680" width="400" height="150" rx="15" fill="#2a2a4a" stroke="#ff8844" stroke-width="2"/>
+  <text x="500" y="740" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Hallucination</text>
+  <text x="500" y="790" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Makes up convincing lies</text>
+
+  <rect x="760" y="680" width="400" height="150" rx="15" fill="#2a2a4a" stroke="#ff8844" stroke-width="2"/>
+  <text x="960" y="740" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Knowledge Gap</text>
+  <text x="960" y="790" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">No access to current info</text>
+
+  <rect x="1220" y="680" width="400" height="150" rx="15" fill="#2a2a4a" stroke="#ff8844" stroke-width="2"/>
+  <text x="1420" y="740" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Privacy Wall</text>
+  <text x="1420" y="790" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Can not see your documents</text>
+
+  <text x="960" y="950" font-family="Arial" font-size="32" fill="#ffffff" text-anchor="middle">LLMs hallucinate because they lack information</text>
+</svg>

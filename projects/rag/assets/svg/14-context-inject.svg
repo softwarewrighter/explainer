@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Retrieved passages -->
+  <rect x="150" y="250" width="400" height="500" rx="10" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="350" y="310" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Retrieved Context</text>
+
+  <!-- Passage blocks -->
+  <rect x="180" y="350" width="340" height="80" rx="5" fill="#ff8844" fill-opacity="0.1"/>
+  <text x="200" y="380" font-family="Arial" font-size="14" fill="#ffffff">"To fix connection errors,</text>
+  <text x="200" y="405" font-family="Arial" font-size="14" fill="#ffffff">check the timeout settings..."</text>
+
+  <rect x="180" y="450" width="340" height="80" rx="5" fill="#ff8844" fill-opacity="0.1"/>
+  <text x="200" y="480" font-family="Arial" font-size="14" fill="#ffffff">"Common causes include</text>
+  <text x="200" y="505" font-family="Arial" font-size="14" fill="#ffffff">network issues and..."</text>
+
+  <rect x="180" y="550" width="340" height="80" rx="5" fill="#ff8844" fill-opacity="0.1"/>
+  <text x="200" y="580" font-family="Arial" font-size="14" fill="#ffffff">"The retry mechanism</text>
+  <text x="200" y="605" font-family="Arial" font-size="14" fill="#ffffff">handles temporary failures..."</text>
+
+  <!-- Plus sign -->
+  <text x="620" y="520" font-family="Arial" font-size="80" fill="#44ff88">+</text>
+
+  <!-- Query -->
+  <rect x="700" y="400" width="300" height="150" rx="10" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="850" y="460" font-family="Arial" font-size="20" fill="#4488ff" text-anchor="middle">User Question</text>
+  <text x="850" y="500" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">"How do I fix errors?"</text>
+
+  <!-- Equals sign -->
+  <text x="1060" y="520" font-family="Arial" font-size="80" fill="#44ff88">=</text>
+
+  <!-- LLM with enriched prompt -->
+  <rect x="1150" y="250" width="600" height="500" rx="10" fill="#2a2a4a" stroke="#44ff88" stroke-width="3"/>
+  <text x="1450" y="310" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Enriched Prompt to LLM</text>
+
+  <!-- System message -->
+  <rect x="1180" y="340" width="540" height="60" rx="5" fill="#4488ff" fill-opacity="0.1"/>
+  <text x="1200" y="375" font-family="Arial" font-size="14" fill="#4488ff">System: Answer using only the context below</text>
+
+  <!-- Context section -->
+  <rect x="1180" y="420" width="540" height="180" rx="5" fill="#ff8844" fill-opacity="0.1"/>
+  <text x="1200" y="450" font-family="Arial" font-size="14" fill="#ff8844">Context:</text>
+  <text x="1200" y="475" font-family="Arial" font-size="12" fill="#888888">"To fix connection errors, check timeout..."</text>
+  <text x="1200" y="495" font-family="Arial" font-size="12" fill="#888888">"Common causes include network issues..."</text>
+  <text x="1200" y="515" font-family="Arial" font-size="12" fill="#888888">"The retry mechanism handles temporary..."</text>
+
+  <!-- Question section -->
+  <rect x="1180" y="620" width="540" height="60" rx="5" fill="#4488ff" fill-opacity="0.1"/>
+  <text x="1200" y="655" font-family="Arial" font-size="14" fill="#4488ff">Question: "How do I fix errors?"</text>
+
+  <text x="960" y="850" font-family="Arial" font-size="32" fill="#ffffff" text-anchor="middle">Context becomes part of the prompt</text>
+  <text x="960" y="920" font-family="Arial" font-size="24" fill="#888888" text-anchor="middle">The LLM now has real information to work with</text>
+</svg>

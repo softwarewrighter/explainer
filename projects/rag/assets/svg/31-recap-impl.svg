@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Recap badge -->
+  <rect x="760" y="80" width="400" height="60" rx="30" fill="#4488ff" fill-opacity="0.2" stroke="#4488ff" stroke-width="2"/>
+  <text x="960" y="120" font-family="Arial" font-size="28" fill="#4488ff" text-anchor="middle">Recap: Implementation</text>
+
+  <!-- Qdrant + Ollama logos side by side -->
+  <rect x="350" y="200" width="500" height="300" rx="20" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="4"/>
+  <text x="600" y="300" font-family="Arial" font-size="64" fill="#ff8844" text-anchor="middle" font-weight="bold">Qdrant</text>
+  <text x="600" y="360" font-family="Arial" font-size="24" fill="#888888" text-anchor="middle">Vector Database</text>
+  <text x="600" y="420" font-family="Arial" font-size="18" fill="#44ff88" text-anchor="middle">Open Source</text>
+  <text x="600" y="455" font-family="Arial" font-size="18" fill="#44ff88" text-anchor="middle">Written in Rust</text>
+
+  <text x="960" y="350" font-family="Arial" font-size="80" fill="#44ff88">+</text>
+
+  <rect x="1070" y="200" width="500" height="300" rx="20" fill="#9966ff" fill-opacity="0.1" stroke="#9966ff" stroke-width="4"/>
+  <text x="1320" y="300" font-family="Arial" font-size="64" fill="#9966ff" text-anchor="middle" font-weight="bold">Ollama</text>
+  <text x="1320" y="360" font-family="Arial" font-size="24" fill="#888888" text-anchor="middle">Local LLM Server</text>
+  <text x="1320" y="420" font-family="Arial" font-size="18" fill="#44ff88" text-anchor="middle">No API Keys</text>
+  <text x="1320" y="455" font-family="Arial" font-size="18" fill="#44ff88" text-anchor="middle">100% Local</text>
+
+  <!-- Key features -->
+  <rect x="250" y="560" width="350" height="200" rx="15" fill="#2a2a4a" stroke="#44ff88" stroke-width="3"/>
+  <text x="425" y="620" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Fully Local</text>
+  <text x="425" y="670" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Everything runs on</text>
+  <text x="425" y="700" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">your machine</text>
+  <text x="425" y="730" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">No cloud needed</text>
+
+  <rect x="660" y="560" width="350" height="200" rx="15" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="835" y="620" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Fully Private</text>
+  <text x="835" y="670" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Data never leaves</text>
+  <text x="835" y="700" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">your network</text>
+  <text x="835" y="730" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Complete control</text>
+
+  <rect x="1070" y="560" width="350" height="200" rx="15" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="1245" y="620" font-family="Arial" font-size="24" fill="#4488ff" text-anchor="middle">Fully Free</text>
+  <text x="1245" y="670" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Open source stack</text>
+  <text x="1245" y="700" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">No API costs</text>
+  <text x="1245" y="730" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Unlimited usage</text>
+
+  <rect x="1480" y="560" width="350" height="200" rx="15" fill="#2a2a4a" stroke="#9966ff" stroke-width="3"/>
+  <text x="1655" y="620" font-family="Arial" font-size="24" fill="#9966ff" text-anchor="middle">Production Ready</text>
+  <text x="1655" y="670" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">12 Rust CLI tools</text>
+  <text x="1655" y="700" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">50-80ms searches</text>
+  <text x="1655" y="730" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Hierarchical chunking</text>
+
+  <!-- GitHub link hint -->
+  <rect x="660" y="820" width="600" height="80" rx="15" fill="#2a2a4a" stroke="#666688" stroke-width="2"/>
+  <text x="960" y="870" font-family="Arial" font-size="22" fill="#888888" text-anchor="middle">github.com/softwarewrighter/rag-demo</text>
+
+  <text x="960" y="990" font-family="Arial" font-size="32" fill="#ffffff" text-anchor="middle">Our implementation: local, private, and open source</text>
+</svg>

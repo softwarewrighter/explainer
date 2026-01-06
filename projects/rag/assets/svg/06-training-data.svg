@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Large book -->
+  <rect x="700" y="250" width="520" height="400" rx="10" fill="#2a2a4a"/>
+  <rect x="710" y="260" width="500" height="380" rx="8" fill="#3a3a5a"/>
+  <line x1="960" y1="260" x2="960" y2="640" stroke="#2a2a4a" stroke-width="4"/>
+
+  <!-- Book content lines -->
+  <g opacity="0.5">
+    <rect x="740" y="300" width="180" height="12" rx="2" fill="#666688"/>
+    <rect x="740" y="330" width="160" height="12" rx="2" fill="#666688"/>
+    <rect x="740" y="360" width="170" height="12" rx="2" fill="#666688"/>
+    <rect x="990" y="300" width="180" height="12" rx="2" fill="#666688"/>
+    <rect x="990" y="330" width="160" height="12" rx="2" fill="#666688"/>
+    <rect x="990" y="360" width="170" height="12" rx="2" fill="#666688"/>
+  </g>
+
+  <!-- Lock icon on book -->
+  <rect x="920" y="450" width="80" height="60" rx="8" fill="none" stroke="#ff8844" stroke-width="4"/>
+  <circle cx="960" cy="420" r="30" fill="none" stroke="#ff8844" stroke-width="4"/>
+  <circle cx="960" cy="470" r="8" fill="#ff8844"/>
+
+  <!-- Training label -->
+  <text x="960" y="750" font-family="Arial" font-size="36" fill="#4488ff" text-anchor="middle">Training Data</text>
+  <text x="960" y="820" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Frozen at a point in time</text>
+
+  <text x="960" y="950" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">Once trained, models cannot learn new information</text>
+</svg>

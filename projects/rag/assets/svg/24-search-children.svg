@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Title -->
+  <text x="960" y="80" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle">Search Children for Precision</text>
+
+  <!-- Query -->
+  <rect x="100" y="200" width="350" height="120" rx="15" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="275" y="250" font-family="Arial" font-size="20" fill="#4488ff" text-anchor="middle">Query</text>
+  <text x="275" y="290" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">"connection timeout"</text>
+
+  <!-- Arrow to vector space -->
+  <path d="M460 260 L560 260" stroke="#44ff88" stroke-width="3"/>
+
+  <!-- Vector search area -->
+  <rect x="580" y="150" width="800" height="350" rx="20" fill="#1a1a2a" stroke="#666688" stroke-width="2"/>
+  <text x="980" y="200" font-family="Arial" font-size="24" fill="#666688" text-anchor="middle">Child Vectors (Embedded)</text>
+
+  <!-- Query vector -->
+  <circle cx="700" cy="350" r="20" fill="#4488ff"/>
+  <text x="700" y="310" font-family="Arial" font-size="14" fill="#4488ff" text-anchor="middle">Query</text>
+
+  <!-- Child vectors - some close, some far -->
+  <!-- Close matches (highlighted) -->
+  <circle cx="750" cy="380" r="15" fill="#44ff88" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="680" cy="400" r="15" fill="#44ff88" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="720" cy="320" r="15" fill="#44ff88" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- Distance lines to matches -->
+  <line x1="720" y1="350" x2="750" y2="380" stroke="#44ff88" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="700" y1="370" x2="680" y2="400" stroke="#44ff88" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="710" y1="330" x2="720" y2="320" stroke="#44ff88" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- Far vectors (unrelated) -->
+  <circle cx="1000" cy="280" r="12" fill="#ff8844" opacity="0.3"/>
+  <circle cx="1100" cy="350" r="12" fill="#ff8844" opacity="0.3"/>
+  <circle cx="1200" cy="300" r="12" fill="#ff8844" opacity="0.3"/>
+  <circle cx="950" cy="420" r="12" fill="#ff8844" opacity="0.3"/>
+  <circle cx="1150" cy="450" r="12" fill="#ff8844" opacity="0.3"/>
+  <circle cx="1250" cy="380" r="12" fill="#ff8844" opacity="0.3"/>
+  <circle cx="1050" cy="250" r="12" fill="#ff8844" opacity="0.3"/>
+
+  <!-- Results -->
+  <rect x="1420" y="150" width="400" height="350" rx="15" fill="#2a2a4a" stroke="#44ff88" stroke-width="3"/>
+  <text x="1620" y="210" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Top Matches</text>
+
+  <rect x="1450" y="250" width="340" height="70" rx="8" fill="#44ff88" fill-opacity="0.1"/>
+  <text x="1470" y="280" font-family="Arial" font-size="14" fill="#ffffff">Child 2.1: "When connection</text>
+  <text x="1470" y="300" font-family="Arial" font-size="14" fill="#ffffff">times out, the system..."</text>
+
+  <rect x="1450" y="340" width="340" height="70" rx="8" fill="#44ff88" fill-opacity="0.1"/>
+  <text x="1470" y="370" font-family="Arial" font-size="14" fill="#ffffff">Child 1.3: "Timeout settings</text>
+  <text x="1470" y="390" font-family="Arial" font-size="14" fill="#ffffff">control how long..."</text>
+
+  <rect x="1450" y="430" width="340" height="60" rx="8" fill="#44ff88" fill-opacity="0.05"/>
+  <text x="1470" y="465" font-family="Arial" font-size="14" fill="#888888">Child 3.2: "Network errors..."</text>
+
+  <!-- Explanation -->
+  <rect x="200" y="580" width="1520" height="250" rx="20" fill="#2a2a4a" stroke="#666688" stroke-width="2"/>
+
+  <text x="500" y="660" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Why search children?</text>
+  <text x="500" y="710" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Small, focused chunks</text>
+  <text x="500" y="750" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Optimal embedding quality</text>
+  <text x="500" y="790" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Precise semantic matching</text>
+
+  <text x="1220" y="660" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Result</text>
+  <text x="1220" y="710" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Find exactly the right passage</text>
+  <text x="1220" y="750" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">No noise from unrelated content</text>
+  <text x="1220" y="790" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Children link back to parents</text>
+
+  <text x="960" y="950" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle">Search small chunks for maximum precision</text>
+</svg>

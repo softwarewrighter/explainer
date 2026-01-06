@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle">The Chunking Challenge</text>
+
+  <!-- Long document -->
+  <rect x="200" y="180" width="600" height="700" rx="15" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="500" y="240" font-family="Arial" font-size="28" fill="#4488ff" text-anchor="middle">Long Document</text>
+  <text x="500" y="280" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">10,000+ tokens</text>
+
+  <!-- Document lines (many) -->
+  <g opacity="0.6">
+    <rect x="240" y="320" width="520" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="345" width="480" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="370" width="510" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="395" width="490" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="420" width="520" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="445" width="470" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="470" width="500" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="495" width="520" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="520" width="460" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="545" width="510" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="570" width="480" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="595" width="520" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="620" width="490" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="645" width="500" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="670" width="520" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="695" width="470" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="720" width="510" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="745" width="490" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="770" width="520" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="795" width="480" height="12" fill="#666688" rx="2"/>
+    <rect x="240" y="820" width="500" height="12" fill="#666688" rx="2"/>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M850 500 L1050 500" stroke="#ff8844" stroke-width="4"/>
+  <text x="950" y="470" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Embed?</text>
+
+  <!-- Embedding model struggling -->
+  <rect x="1100" y="350" width="400" height="300" rx="15" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="1300" y="420" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Embedding Model</text>
+
+  <!-- Limit indicator -->
+  <rect x="1150" y="470" width="300" height="50" rx="5" fill="#44ff88" fill-opacity="0.2"/>
+  <text x="1300" y="502" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">Works best: 512 tokens</text>
+
+  <rect x="1150" y="540" width="300" height="50" rx="5" fill="#ff8844" fill-opacity="0.2"/>
+  <text x="1300" y="572" font-family="Arial" font-size="16" fill="#ff8844" text-anchor="middle">Document: 10,000+ tokens</text>
+
+  <!-- Problem statement -->
+  <rect x="1100" y="720" width="600" height="150" rx="15" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="2"/>
+  <text x="1400" y="780" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Problem:</text>
+  <text x="1400" y="820" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Embeddings lose quality on long text</text>
+  <text x="1400" y="850" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">We need to split documents into chunks</text>
+
+  <text x="960" y="970" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle">Documents must be chunked before embedding</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Query box -->
+  <rect x="100" y="400" width="250" height="120" rx="10" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="225" y="450" font-family="Arial" font-size="20" fill="#4488ff" text-anchor="middle">User Query</text>
+  <text x="225" y="485" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">"What is X?"</text>
+
+  <!-- Arrow to retrieval -->
+  <path d="M360 460 L480 460" stroke="#44ff88" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Retrieval step (NEW) -->
+  <rect x="500" y="350" width="300" height="220" rx="10" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="3"/>
+  <text x="650" y="400" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle" font-weight="bold">RETRIEVE</text>
+  <circle cx="650" cy="480" r="50" fill="none" stroke="#44ff88" stroke-width="2"/>
+  <line x1="690" y1="520" x2="720" y2="550" stroke="#44ff88" stroke-width="3"/>
+
+  <!-- Arrow to documents -->
+  <path d="M650 580 L650 680" stroke="#44ff88" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Documents -->
+  <rect x="550" y="700" width="200" height="150" rx="10" fill="#2a2a4a" stroke="#666688" stroke-width="2"/>
+  <text x="650" y="750" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Your Documents</text>
+  <rect x="580" y="780" width="140" height="10" fill="#666688" rx="2"/>
+  <rect x="580" y="800" width="120" height="10" fill="#666688" rx="2"/>
+  <rect x="580" y="820" width="130" height="10" fill="#666688" rx="2"/>
+
+  <!-- Arrow to context -->
+  <path d="M810 460 L930 460" stroke="#44ff88" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Context -->
+  <rect x="950" y="380" width="250" height="160" rx="10" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="1075" y="420" font-family="Arial" font-size="18" fill="#ff8844" text-anchor="middle">Retrieved Context</text>
+  <rect x="980" y="450" width="190" height="10" fill="#ff8844" opacity="0.5" rx="2"/>
+  <rect x="980" y="470" width="170" height="10" fill="#ff8844" opacity="0.5" rx="2"/>
+  <rect x="980" y="490" width="180" height="10" fill="#ff8844" opacity="0.5" rx="2"/>
+
+  <!-- Arrow to LLM -->
+  <path d="M1210 460 L1330 460" stroke="#44ff88" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- LLM -->
+  <rect x="1350" y="380" width="250" height="160" rx="10" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="1475" y="430" font-family="Arial" font-size="24" fill="#4488ff" text-anchor="middle">LLM</text>
+  <text x="1475" y="480" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Generate Answer</text>
+  <text x="1475" y="510" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">with context</text>
+
+  <!-- Arrow to answer -->
+  <path d="M1610 460 L1730 460" stroke="#44ff88" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Answer -->
+  <rect x="1750" y="400" width="120" height="120" rx="10" fill="#44ff88" fill-opacity="0.2" stroke="#44ff88" stroke-width="3"/>
+  <text x="1810" y="470" font-family="Arial" font-size="18" fill="#44ff88" text-anchor="middle">Answer</text>
+
+  <text x="960" y="200" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle">RAG Architecture</text>
+</svg>

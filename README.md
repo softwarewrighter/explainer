@@ -156,7 +156,26 @@ just concat             # Concatenate all segments
 just review             # Preview in browser
 ```
 
-## Current Project: RLM Explainer
+## Projects
+
+### RAG Explainer (Latest)
+
+Location: `projects/rag/`
+
+Subject: Retrieval-Augmented Generation (../rag-demo)
+
+Duration: ~3:50 (32 narrated segments + title + epilog)
+
+Topics covered:
+- LLM hallucination problem and knowledge cutoffs
+- RAG solution: Retrieve, Augment, Generate
+- Vector databases: Qdrant, Pinecone, Weaviate, pgvector
+- Hierarchical parent-child chunking (8.2% accuracy improvement)
+- Local implementation with Qdrant + Ollama
+
+See `projects/rag/plan.md` for full production details.
+
+### RLM Explainer
 
 Location: `projects/rlm/`
 

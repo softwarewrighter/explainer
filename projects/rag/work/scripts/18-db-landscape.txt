@@ -1,0 +1,1 @@
+Many options exist. Pinecone, Weaviate, Qdrant, Milvus, and more.

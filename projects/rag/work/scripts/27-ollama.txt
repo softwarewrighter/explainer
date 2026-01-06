@@ -1,0 +1,1 @@
+We use Ollama for local inference. No API keys, no cloud, no costs.

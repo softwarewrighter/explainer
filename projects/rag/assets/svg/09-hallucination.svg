@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Robot face looking confident -->
+  <circle cx="960" cy="350" r="150" fill="none" stroke="#4488ff" stroke-width="5"/>
+
+  <!-- Confident eyes (closed, smiling) -->
+  <path d="M880 320 Q910 300 940 320" fill="none" stroke="#4488ff" stroke-width="4"/>
+  <path d="M980 320 Q1010 300 1040 320" fill="none" stroke="#4488ff" stroke-width="4"/>
+
+  <!-- Confident smile -->
+  <path d="M890 400 Q960 460 1030 400" fill="none" stroke="#4488ff" stroke-width="5"/>
+
+  <!-- Speech bubble with wrong answer -->
+  <path d="M1100 250 L1600 250 L1600 450 L1200 450 L1100 400 L1150 450 L1100 450 Z" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="1350" y="330" font-family="Arial" font-size="28" fill="#ff6666" text-anchor="middle">"I am 100% certain</text>
+  <text x="1350" y="370" font-family="Arial" font-size="28" fill="#ff6666" text-anchor="middle">this is correct!"</text>
+  <text x="1350" y="420" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">(it's not)</text>
+
+  <!-- Wrong icon -->
+  <circle cx="1550" cy="320" r="30" fill="none" stroke="#ff6666" stroke-width="3"/>
+  <line x1="1535" y1="305" x2="1565" y2="335" stroke="#ff6666" stroke-width="3"/>
+  <line x1="1565" y1="305" x2="1535" y2="335" stroke="#ff6666" stroke-width="3"/>
+
+  <!-- Warning -->
+  <text x="960" y="650" font-family="Arial" font-size="48" fill="#ff8844" text-anchor="middle">Confident but Wrong</text>
+  <text x="960" y="750" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">Without real information, AI makes convincing guesses</text>
+
+  <!-- Warning triangle -->
+  <path d="M960 820 L920 900 L1000 900 Z" fill="none" stroke="#ff8844" stroke-width="3"/>
+  <text x="960" y="885" font-family="Arial" font-size="36" fill="#ff8844" text-anchor="middle">!</text>
+</svg>

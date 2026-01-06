@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Thank you -->
+  <text x="960" y="200" font-family="Arial" font-size="64" fill="#ffffff" text-anchor="middle">Thanks for Watching</text>
+
+  <!-- Resources section -->
+  <text x="960" y="320" font-family="Arial" font-size="36" fill="#888888" text-anchor="middle">Resources</text>
+
+  <!-- GitHub repo -->
+  <rect x="300" y="380" width="600" height="180" rx="20" fill="#2a2a4a" stroke="#44ff88" stroke-width="3"/>
+  <text x="600" y="440" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">Code Repository</text>
+  <text x="600" y="500" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">github.com/softwarewrighter/rag-demo</text>
+  <text x="600" y="540" font-family="Arial" font-size="16" fill="#666688" text-anchor="middle">12 Rust tools, 28+ scripts, full documentation</text>
+
+  <!-- Documentation -->
+  <rect x="1020" y="380" width="600" height="180" rx="20" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="1320" y="440" font-family="Arial" font-size="28" fill="#4488ff" text-anchor="middle">Documentation</text>
+  <text x="1320" y="500" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Wiki, Quick Start Guide, Examples</text>
+  <text x="1320" y="540" font-family="Arial" font-size="16" fill="#666688" text-anchor="middle">Step-by-step setup and usage</text>
+
+  <!-- Vector DB links -->
+  <rect x="300" y="600" width="600" height="180" rx="20" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="600" y="660" font-family="Arial" font-size="28" fill="#ff8844" text-anchor="middle">Vector Databases</text>
+  <text x="450" y="720" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Qdrant: qdrant.tech</text>
+  <text x="750" y="720" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Pinecone: pinecone.io</text>
+  <text x="450" y="760" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Weaviate: weaviate.io</text>
+  <text x="750" y="760" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">pgvector: GitHub</text>
+
+  <!-- LLM tools -->
+  <rect x="1020" y="600" width="600" height="180" rx="20" fill="#2a2a4a" stroke="#9966ff" stroke-width="3"/>
+  <text x="1320" y="660" font-family="Arial" font-size="28" fill="#9966ff" text-anchor="middle">Local LLM</text>
+  <text x="1320" y="720" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Ollama: ollama.ai</text>
+  <text x="1320" y="760" font-family="Arial" font-size="16" fill="#666688" text-anchor="middle">100+ models, runs locally</text>
+
+  <!-- Subscribe hint -->
+  <rect x="660" y="830" width="600" height="100" rx="20" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="2"/>
+  <text x="960" y="895" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Like and Subscribe for more AI tutorials</text>
+
+  <text x="960" y="1000" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">Links in the description below</text>
+</svg>

@@ -1,0 +1,1 @@
+We chose Qdrant. It is open source, written in Rust, and runs locally.

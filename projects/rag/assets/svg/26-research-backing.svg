@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">Research-Backed Results</text>
+
+  <!-- Bar chart -->
+  <rect x="300" y="200" width="1320" height="500" rx="20" fill="#2a2a4a" stroke="#666688" stroke-width="2"/>
+
+  <!-- Y-axis -->
+  <line x1="450" y1="250" x2="450" y2="650" stroke="#666688" stroke-width="2"/>
+  <text x="420" y="280" font-family="Arial" font-size="14" fill="#888888" text-anchor="end">100%</text>
+  <text x="420" y="380" font-family="Arial" font-size="14" fill="#888888" text-anchor="end">75%</text>
+  <text x="420" y="480" font-family="Arial" font-size="14" fill="#888888" text-anchor="end">50%</text>
+  <text x="420" y="580" font-family="Arial" font-size="14" fill="#888888" text-anchor="end">25%</text>
+  <text x="420" y="650" font-family="Arial" font-size="14" fill="#888888" text-anchor="end">0%</text>
+
+  <!-- X-axis -->
+  <line x1="450" y1="650" x2="1550" y2="650" stroke="#666688" stroke-width="2"/>
+
+  <!-- Bar 1: Fixed-size chunking -->
+  <rect x="550" y="350" width="200" height="300" fill="#ff8844" fill-opacity="0.6"/>
+  <text x="650" y="330" font-family="Arial" font-size="18" fill="#ff8844" text-anchor="middle">75%</text>
+  <text x="650" y="690" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Fixed-Size</text>
+  <text x="650" y="715" font-family="Arial" font-size="14" fill="#666688" text-anchor="middle">Baseline</text>
+
+  <!-- Bar 2: Hierarchical chunking -->
+  <rect x="900" y="318" width="200" height="332" fill="#44ff88"/>
+  <text x="1000" y="298" font-family="Arial" font-size="18" fill="#44ff88" text-anchor="middle">83.2%</text>
+  <text x="1000" y="690" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Hierarchical</text>
+  <text x="1000" y="715" font-family="Arial" font-size="14" fill="#666688" text-anchor="middle">Parent-Child</text>
+
+  <!-- Improvement arrow -->
+  <path d="M800 340 L860 340" stroke="#44ff88" stroke-width="3"/>
+  <text x="830" y="320" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">+8.2%</text>
+
+  <!-- Bar 3: With hybrid search -->
+  <rect x="1250" y="286" width="200" height="364" fill="#4488ff"/>
+  <text x="1350" y="266" font-family="Arial" font-size="18" fill="#4488ff" text-anchor="middle">91%</text>
+  <text x="1350" y="690" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">+ Hybrid</text>
+  <text x="1350" y="715" font-family="Arial" font-size="14" fill="#666688" text-anchor="middle">Vector + Keyword</text>
+
+  <!-- Source citations -->
+  <rect x="300" y="780" width="1320" height="120" rx="15" fill="#2a2a4a" stroke="#666688" stroke-width="1"/>
+  <text x="960" y="830" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Based on IBM BlendedRAG (2024) and Chroma chunking studies</text>
+  <text x="960" y="870" font-family="Arial" font-size="16" fill="#666688" text-anchor="middle">Tested on Q&amp;A retrieval benchmarks</text>
+
+  <text x="960" y="970" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle">The right chunking strategy significantly improves accuracy</text>
+</svg>

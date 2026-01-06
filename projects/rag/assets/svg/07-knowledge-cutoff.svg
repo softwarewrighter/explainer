@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Timeline -->
+  <line x1="200" y1="500" x2="1720" y2="500" stroke="#666688" stroke-width="4"/>
+
+  <!-- Past section (green) -->
+  <rect x="200" y="480" width="700" height="40" fill="#44ff88" opacity="0.3"/>
+  <text x="550" y="440" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">Training Data</text>
+
+  <!-- Cutoff marker -->
+  <line x1="900" y1="400" x2="900" y2="600" stroke="#ff8844" stroke-width="6"/>
+  <text x="900" y="370" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Knowledge</text>
+  <text x="900" y="395" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Cutoff</text>
+
+  <!-- Future section (red/unknown) -->
+  <rect x="900" y="480" width="820" height="40" fill="#ff8844" opacity="0.2"/>
+  <text x="1300" y="440" font-family="Arial" font-size="28" fill="#ff8844" text-anchor="middle">Unknown</text>
+
+  <!-- Calendar with X -->
+  <rect x="1300" y="600" width="200" height="180" rx="10" fill="#2a2a4a" stroke="#666688" stroke-width="2"/>
+  <rect x="1300" y="600" width="200" height="40" fill="#ff8844" opacity="0.5"/>
+  <text x="1400" y="630" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">2024</text>
+  <text x="1400" y="720" font-family="Arial" font-size="48" fill="#ff6666" text-anchor="middle">?</text>
+
+  <text x="960" y="900" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">Ask about recent events? No idea.</text>
+</svg>

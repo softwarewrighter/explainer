@@ -1,0 +1,1 @@
+First, we convert documents into numbers. These numbers capture meaning, not just words.

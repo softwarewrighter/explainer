@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle">Vector Database Landscape</text>
+
+  <!-- Row 1 -->
+  <!-- Qdrant -->
+  <rect x="150" y="200" width="350" height="200" rx="15" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="325" y="260" font-family="Arial" font-size="32" fill="#ff8844" text-anchor="middle">Qdrant</text>
+  <text x="325" y="310" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">Open Source + Managed</text>
+  <text x="325" y="350" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Rust, High Performance</text>
+  <text x="325" y="375" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Local-first, Privacy-focused</text>
+
+  <!-- Pinecone -->
+  <rect x="560" y="200" width="350" height="200" rx="15" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="735" y="260" font-family="Arial" font-size="32" fill="#4488ff" text-anchor="middle">Pinecone</text>
+  <text x="735" y="310" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">Managed Only</text>
+  <text x="735" y="350" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Serverless, Auto-scaling</text>
+  <text x="735" y="375" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Enterprise Focus</text>
+
+  <!-- Weaviate -->
+  <rect x="970" y="200" width="350" height="200" rx="15" fill="#2a2a4a" stroke="#44ff88" stroke-width="3"/>
+  <text x="1145" y="260" font-family="Arial" font-size="32" fill="#44ff88" text-anchor="middle">Weaviate</text>
+  <text x="1145" y="310" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">Open Source + Managed</text>
+  <text x="1145" y="350" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">GraphQL API, Hybrid Search</text>
+  <text x="1145" y="375" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Multi-modal Support</text>
+
+  <!-- Milvus -->
+  <rect x="1380" y="200" width="350" height="200" rx="15" fill="#2a2a4a" stroke="#9966ff" stroke-width="3"/>
+  <text x="1555" y="260" font-family="Arial" font-size="32" fill="#9966ff" text-anchor="middle">Milvus</text>
+  <text x="1555" y="310" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">Open Source</text>
+  <text x="1555" y="350" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Billion-scale, Distributed</text>
+  <text x="1555" y="375" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Heavy Infrastructure</text>
+
+  <!-- Row 2 -->
+  <!-- pgvector -->
+  <rect x="355" y="470" width="350" height="200" rx="15" fill="#2a2a4a" stroke="#66aaff" stroke-width="3"/>
+  <text x="530" y="530" font-family="Arial" font-size="32" fill="#66aaff" text-anchor="middle">pgvector</text>
+  <text x="530" y="580" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">PostgreSQL Extension</text>
+  <text x="530" y="620" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Add vectors to existing DB</text>
+  <text x="530" y="645" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Simple, Familiar</text>
+
+  <!-- Chroma -->
+  <rect x="765" y="470" width="350" height="200" rx="15" fill="#2a2a4a" stroke="#ffaa44" stroke-width="3"/>
+  <text x="940" y="530" font-family="Arial" font-size="32" fill="#ffaa44" text-anchor="middle">Chroma</text>
+  <text x="940" y="580" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">Open Source</text>
+  <text x="940" y="620" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Lightweight, Embedded</text>
+  <text x="940" y="645" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Great for Prototypes</text>
+
+  <!-- FAISS -->
+  <rect x="1175" y="470" width="350" height="200" rx="15" fill="#2a2a4a" stroke="#ff66aa" stroke-width="3"/>
+  <text x="1350" y="530" font-family="Arial" font-size="32" fill="#ff66aa" text-anchor="middle">FAISS</text>
+  <text x="1350" y="580" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">Library (Meta)</text>
+  <text x="1350" y="620" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Pure similarity search</text>
+  <text x="1350" y="645" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Build your own system</text>
+
+  <!-- Decision guide -->
+  <rect x="400" y="750" width="1120" height="150" rx="15" fill="#2a2a4a" stroke="#666688" stroke-width="2"/>
+  <text x="960" y="800" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">How to Choose?</text>
+  <text x="560" y="850" font-family="Arial" font-size="16" fill="#ff8844">Local + Privacy: Qdrant</text>
+  <text x="800" y="850" font-family="Arial" font-size="16" fill="#4488ff">Managed + Scale: Pinecone</text>
+  <text x="1100" y="850" font-family="Arial" font-size="16" fill="#44ff88">Hybrid Search: Weaviate</text>
+  <text x="1340" y="850" font-family="Arial" font-size="16" fill="#66aaff">Existing Postgres: pgvector</text>
+
+  <text x="960" y="980" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">All integrate with LangChain and LlamaIndex</text>
+</svg>

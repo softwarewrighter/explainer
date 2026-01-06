@@ -1,0 +1,1 @@
+Rag adds a retrieval step. Before answering, the AI searches your documents.

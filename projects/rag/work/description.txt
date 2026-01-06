@@ -1,0 +1,68 @@
+RAG Explained: How AI Learns to Look Things Up
+
+What if your AI could access your documents instead of making things up?
+
+Retrieval-Augmented Generation (RAG) solves the hallucination problem by grounding AI in real data. Instead of guessing from training, RAG retrieves relevant documents before answering.
+
+The key insight: Give AI access to your information, and it stops making things up.
+
+---
+
+CODE
+
+Open source implementation with 12 Rust CLI tools:
+https://github.com/softwarewrighter/rag-demo
+
+---
+
+DOCUMENTATION
+
+- Quick Start Guide: https://github.com/softwarewrighter/rag-demo/wiki
+- Architecture Overview: https://github.com/softwarewrighter/rag-demo/blob/main/docs/architecture.md
+- Hierarchical Chunking: https://github.com/softwarewrighter/rag-demo/blob/main/docs/chunking.md
+
+---
+
+VECTOR DATABASES
+
+Comparison of vector database options (2025):
+- Qdrant: https://qdrant.tech (our choice - open source, Rust, local-first)
+- Pinecone: https://pinecone.io (managed, enterprise)
+- Weaviate: https://weaviate.io (hybrid search, GraphQL)
+- pgvector: https://github.com/pgvector/pgvector (PostgreSQL extension)
+- Milvus: https://milvus.io (billion-scale)
+- Chroma: https://trychroma.com (lightweight prototyping)
+
+---
+
+LOCAL LLM
+
+Run AI completely locally with no API keys:
+- Ollama: https://ollama.ai
+
+---
+
+TIMESTAMPS
+
+0:00 - Introduction
+0:04 - The Hook: AI That Looks Things Up
+0:30 - The Problem: Hallucinations and Knowledge Cutoffs
+1:00 - The RAG Solution: Retrieve, Augment, Generate
+1:40 - Vector Databases: Qdrant, Pinecone, Weaviate
+2:15 - Implementation: Hierarchical Chunking with Rust
+3:00 - Summary: Ground Your AI in Real Data
+3:25 - Resources and Links
+
+---
+
+PERFORMANCE
+
+Our implementation achieves:
+- Vector search: 50-80ms
+- Full RAG query: 2-5 seconds
+- Tested on 97MB of PDFs (9,193 vectors)
+- Hierarchical chunking: 8.2% accuracy improvement
+
+---
+
+#RAG #AI #VectorDatabase #LLM #Qdrant #Ollama #MachineLearning #Embeddings #Rust #OpenSource #vibecoding

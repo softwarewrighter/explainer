@@ -1,0 +1,1 @@
+Traditional databases search by keywords. Vector databases search by meaning.

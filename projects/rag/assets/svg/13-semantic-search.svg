@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Query on left -->
+  <rect x="100" y="400" width="350" height="150" rx="10" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="275" y="460" font-family="Arial" font-size="24" fill="#4488ff" text-anchor="middle">Query</text>
+  <text x="275" y="510" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">"How do I fix errors?"</text>
+
+  <!-- Arrow to vector space -->
+  <path d="M460 475 L580 475" stroke="#44ff88" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Vector space visualization -->
+  <rect x="600" y="200" width="700" height="650" rx="20" fill="#1a1a2a" stroke="#666688" stroke-width="2"/>
+  <text x="950" y="250" font-family="Arial" font-size="24" fill="#666688" text-anchor="middle">Semantic Space</text>
+
+  <!-- Query point (highlighted) -->
+  <circle cx="800" cy="500" r="15" fill="#4488ff"/>
+  <text x="800" y="470" font-family="Arial" font-size="14" fill="#4488ff" text-anchor="middle">Query</text>
+
+  <!-- Similar documents (close) -->
+  <circle cx="850" cy="450" r="12" fill="#44ff88"/>
+  <circle cx="780" cy="550" r="12" fill="#44ff88"/>
+  <circle cx="870" cy="520" r="12" fill="#44ff88"/>
+
+  <!-- Distance lines -->
+  <line x1="800" y1="500" x2="850" y2="450" stroke="#44ff88" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="800" y1="500" x2="780" y2="550" stroke="#44ff88" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="800" y1="500" x2="870" y2="520" stroke="#44ff88" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- Unrelated documents (far) -->
+  <circle cx="1100" cy="350" r="10" fill="#ff8844" opacity="0.4"/>
+  <circle cx="1150" cy="600" r="10" fill="#ff8844" opacity="0.4"/>
+  <circle cx="1050" cy="700" r="10" fill="#ff8844" opacity="0.4"/>
+  <circle cx="700" cy="300" r="10" fill="#ff8844" opacity="0.4"/>
+  <circle cx="1200" cy="450" r="10" fill="#ff8844" opacity="0.4"/>
+
+  <!-- Results on right -->
+  <rect x="1400" y="300" width="400" height="400" rx="10" fill="#2a2a4a" stroke="#44ff88" stroke-width="3"/>
+  <text x="1600" y="360" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Top Results</text>
+
+  <!-- Result items -->
+  <rect x="1430" y="400" width="340" height="60" rx="5" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="1"/>
+  <text x="1450" y="435" font-family="Arial" font-size="16" fill="#ffffff">"Error handling guide..."</text>
+
+  <rect x="1430" y="480" width="340" height="60" rx="5" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="1"/>
+  <text x="1450" y="515" font-family="Arial" font-size="16" fill="#ffffff">"Debugging common issues..."</text>
+
+  <rect x="1430" y="560" width="340" height="60" rx="5" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="1"/>
+  <text x="1450" y="595" font-family="Arial" font-size="16" fill="#ffffff">"Troubleshooting steps..."</text>
+
+  <!-- Arrow from space to results -->
+  <path d="M1310 500 L1390 500" stroke="#44ff88" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <text x="960" y="950" font-family="Arial" font-size="32" fill="#ffffff" text-anchor="middle">Find by meaning, not just keywords</text>
+</svg>

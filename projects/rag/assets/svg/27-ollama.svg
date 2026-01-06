@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Ollama logo area -->
+  <rect x="660" y="120" width="600" height="180" rx="20" fill="#9966ff" fill-opacity="0.1" stroke="#9966ff" stroke-width="4"/>
+  <text x="960" y="210" font-family="Arial" font-size="72" fill="#9966ff" text-anchor="middle" font-weight="bold">Ollama</text>
+  <text x="960" y="270" font-family="Arial" font-size="24" fill="#888888" text-anchor="middle">Local LLM Server</text>
+
+  <!-- Three main benefits -->
+  <!-- No API Keys -->
+  <rect x="150" y="380" width="480" height="280" rx="20" fill="#2a2a4a" stroke="#44ff88" stroke-width="3"/>
+  <text x="390" y="450" font-family="Arial" font-size="32" fill="#44ff88" text-anchor="middle">No API Keys</text>
+  <text x="390" y="510" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">No OpenAI account needed</text>
+  <text x="390" y="550" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">No rate limits</text>
+  <text x="390" y="590" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">No usage tracking</text>
+
+  <!-- No Cloud -->
+  <rect x="720" y="380" width="480" height="280" rx="20" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="960" y="450" font-family="Arial" font-size="32" fill="#ff8844" text-anchor="middle">No Cloud</text>
+  <text x="960" y="510" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Runs 100% locally</text>
+  <text x="960" y="550" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Data never leaves machine</text>
+  <text x="960" y="590" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Works offline</text>
+
+  <!-- No Costs -->
+  <rect x="1290" y="380" width="480" height="280" rx="20" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="1530" y="450" font-family="Arial" font-size="32" fill="#4488ff" text-anchor="middle">No Costs</text>
+  <text x="1530" y="510" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Free and open source</text>
+  <text x="1530" y="550" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Unlimited queries</text>
+  <text x="1530" y="590" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Run 24/7 for free</text>
+
+  <!-- Model examples -->
+  <rect x="300" y="720" width="1320" height="180" rx="15" fill="#2a2a4a" stroke="#666688" stroke-width="2"/>
+  <text x="960" y="780" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">Available Models</text>
+
+  <text x="450" y="840" font-family="Arial" font-size="18" fill="#9966ff" text-anchor="middle">llama3.2</text>
+  <text x="450" y="870" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">General Purpose</text>
+
+  <text x="720" y="840" font-family="Arial" font-size="18" fill="#9966ff" text-anchor="middle">nomic-embed-text</text>
+  <text x="720" y="870" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Embeddings</text>
+
+  <text x="1000" y="840" font-family="Arial" font-size="18" fill="#9966ff" text-anchor="middle">codellama</text>
+  <text x="1000" y="870" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Code Generation</text>
+
+  <text x="1280" y="840" font-family="Arial" font-size="18" fill="#9966ff" text-anchor="middle">mistral</text>
+  <text x="1280" y="870" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Fast Inference</text>
+
+  <text x="1480" y="840" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">+ 100s more</text>
+
+  <text x="960" y="980" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle">Local inference with the model of your choice</text>
+</svg>

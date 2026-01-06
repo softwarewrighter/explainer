@@ -1,0 +1,1 @@
+Documents are long. Embeddings work best on shorter passages.

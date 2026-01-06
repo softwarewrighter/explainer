@@ -1,0 +1,1 @@
+These numbers go into a vector database. It finds similar content in milliseconds.

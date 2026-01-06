@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Hallucination cloud -->
+  <ellipse cx="960" cy="400" rx="300" ry="150" fill="#ff8844" opacity="0.2"/>
+  <ellipse cx="700" cy="350" rx="100" ry="80" fill="#ff8844" opacity="0.15"/>
+  <ellipse cx="1220" cy="350" rx="100" ry="80" fill="#ff8844" opacity="0.15"/>
+
+  <!-- Confused robot/AI face -->
+  <circle cx="960" cy="450" r="120" fill="none" stroke="#4488ff" stroke-width="4"/>
+  <circle cx="920" cy="420" r="20" fill="#ff8844"/>
+  <circle cx="1000" cy="420" r="20" fill="#ff8844"/>
+  <path d="M920 500 Q960 480 1000 500" fill="none" stroke="#ff8844" stroke-width="4"/>
+
+  <!-- Swirls indicating confusion -->
+  <path d="M750 350 Q700 300 750 280 Q800 260 780 320" fill="none" stroke="#ff8844" stroke-width="3" opacity="0.5"/>
+  <path d="M1170 350 Q1220 300 1170 280 Q1120 260 1140 320" fill="none" stroke="#ff8844" stroke-width="3" opacity="0.5"/>
+
+  <!-- Wrong facts -->
+  <g opacity="0.6">
+    <text x="400" y="700" font-family="Arial" font-size="24" fill="#ff6666">"Paris is in Germany"</text>
+    <text x="1300" y="700" font-family="Arial" font-size="24" fill="#ff6666">"2 + 2 = 5"</text>
+    <text x="860" y="780" font-family="Arial" font-size="24" fill="#ff6666">"Made-up facts"</text>
+  </g>
+
+  <text x="960" y="920" font-family="Arial" font-size="32" fill="#888888" text-anchor="middle">LLMs hallucinate without real data</text>
+</svg>

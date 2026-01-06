@@ -1,0 +1,1 @@
+Our implementation uses Qdrant and Ollama. Fully local, fully private.

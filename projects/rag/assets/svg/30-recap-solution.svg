@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Recap badge -->
+  <rect x="810" y="80" width="300" height="60" rx="30" fill="#44ff88" fill-opacity="0.2" stroke="#44ff88" stroke-width="2"/>
+  <text x="960" y="120" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">Recap: Solution</text>
+
+  <!-- Simplified RAG flow -->
+  <!-- Query -->
+  <rect x="150" y="350" width="200" height="120" rx="15" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="250" y="400" font-family="Arial" font-size="20" fill="#4488ff" text-anchor="middle">Query</text>
+  <text x="250" y="435" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">"How to..."</text>
+
+  <!-- Arrow -->
+  <path d="M360 410 L450 410" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Retrieve -->
+  <rect x="470" y="300" width="280" height="220" rx="15" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="4"/>
+  <text x="610" y="360" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">RETRIEVE</text>
+  <circle cx="610" cy="430" r="40" fill="none" stroke="#44ff88" stroke-width="3"/>
+  <line x1="640" y1="460" x2="670" y2="490" stroke="#44ff88" stroke-width="3"/>
+  <text x="610" y="500" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Find relevant docs</text>
+
+  <!-- Arrow -->
+  <path d="M760 410 L850 410" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Augment -->
+  <rect x="870" y="300" width="280" height="220" rx="15" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="4"/>
+  <text x="1010" y="360" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">AUGMENT</text>
+  <text x="1010" y="420" font-family="Arial" font-size="40" fill="#ff8844" text-anchor="middle">+</text>
+  <text x="1010" y="500" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Add context to prompt</text>
+
+  <!-- Arrow -->
+  <path d="M1160 410 L1250 410" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Generate -->
+  <rect x="1270" y="300" width="280" height="220" rx="15" fill="#4488ff" fill-opacity="0.1" stroke="#4488ff" stroke-width="4"/>
+  <text x="1410" y="360" font-family="Arial" font-size="24" fill="#4488ff" text-anchor="middle">GENERATE</text>
+  <text x="1410" y="430" font-family="Arial" font-size="28" fill="#4488ff" text-anchor="middle">LLM</text>
+  <text x="1410" y="500" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Answer with context</text>
+
+  <!-- Arrow -->
+  <path d="M1560 410 L1650 410" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Answer -->
+  <rect x="1670" y="350" width="200" height="120" rx="15" fill="#44ff88" fill-opacity="0.2" stroke="#44ff88" stroke-width="3"/>
+  <text x="1770" y="400" font-family="Arial" font-size="20" fill="#44ff88" text-anchor="middle">Grounded</text>
+  <text x="1770" y="435" font-family="Arial" font-size="20" fill="#44ff88" text-anchor="middle">Answer</text>
+
+  <!-- Documents feeding into retrieve -->
+  <rect x="470" y="580" width="280" height="120" rx="10" fill="#2a2a4a" stroke="#666688" stroke-width="2"/>
+  <text x="610" y="625" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Your Documents</text>
+  <text x="610" y="660" font-family="Arial" font-size="14" fill="#666688" text-anchor="middle">Private, current, complete</text>
+  <path d="M610 580 L610 530" stroke="#44ff88" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Key benefits -->
+  <rect x="300" y="780" width="400" height="120" rx="15" fill="#2a2a4a" stroke="#44ff88" stroke-width="2"/>
+  <text x="500" y="830" font-family="Arial" font-size="22" fill="#44ff88" text-anchor="middle">Accurate</text>
+  <text x="500" y="870" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Based on real documents</text>
+
+  <rect x="760" y="780" width="400" height="120" rx="15" fill="#2a2a4a" stroke="#ff8844" stroke-width="2"/>
+  <text x="960" y="830" font-family="Arial" font-size="22" fill="#ff8844" text-anchor="middle">Current</text>
+  <text x="960" y="870" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Uses latest information</text>
+
+  <rect x="1220" y="780" width="400" height="120" rx="15" fill="#2a2a4a" stroke="#4488ff" stroke-width="2"/>
+  <text x="1420" y="830" font-family="Arial" font-size="22" fill="#4488ff" text-anchor="middle">Private</text>
+  <text x="1420" y="870" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Works with your data</text>
+
+  <text x="960" y="990" font-family="Arial" font-size="32" fill="#ffffff" text-anchor="middle">RAG retrieves real documents before answering</text>
+</svg>

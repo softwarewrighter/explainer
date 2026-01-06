@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Title -->
+  <text x="960" y="120" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle">Keyword Search vs Semantic Search</text>
+
+  <!-- Left side - Traditional/Keyword -->
+  <rect x="100" y="200" width="750" height="650" rx="20" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="475" y="270" font-family="Arial" font-size="32" fill="#ff8844" text-anchor="middle">Keyword Search</text>
+
+  <!-- Query -->
+  <rect x="150" y="320" width="650" height="80" rx="10" fill="#ff8844" fill-opacity="0.1"/>
+  <text x="200" y="365" font-family="Arial" font-size="20" fill="#ffffff">Query: "automobile repair"</text>
+
+  <!-- Results (misses) -->
+  <text x="200" y="450" font-family="Arial" font-size="18" fill="#888888">Results must contain exact words:</text>
+
+  <rect x="150" y="480" width="650" height="50" rx="5" fill="#3a3a5a"/>
+  <text x="180" y="512" font-family="Arial" font-size="16" fill="#ff6666">"How to fix your car" - NO MATCH</text>
+  <text x="700" y="512" font-family="Arial" font-size="14" fill="#888888">X</text>
+
+  <rect x="150" y="550" width="650" height="50" rx="5" fill="#3a3a5a"/>
+  <text x="180" y="582" font-family="Arial" font-size="16" fill="#ff6666">"Vehicle maintenance guide" - NO MATCH</text>
+  <text x="700" y="582" font-family="Arial" font-size="14" fill="#888888">X</text>
+
+  <rect x="150" y="620" width="650" height="50" rx="5" fill="#ff8844" fill-opacity="0.2"/>
+  <text x="180" y="652" font-family="Arial" font-size="16" fill="#44ff88">"Automobile repair basics" - MATCH</text>
+
+  <text x="475" y="750" font-family="Arial" font-size="20" fill="#ff8844" text-anchor="middle">Misses synonyms and related concepts</text>
+
+  <!-- Right side - Semantic/Vector -->
+  <rect x="1070" y="200" width="750" height="650" rx="20" fill="#2a2a4a" stroke="#44ff88" stroke-width="3"/>
+  <text x="1445" y="270" font-family="Arial" font-size="32" fill="#44ff88" text-anchor="middle">Semantic Search</text>
+
+  <!-- Query -->
+  <rect x="1120" y="320" width="650" height="80" rx="10" fill="#44ff88" fill-opacity="0.1"/>
+  <text x="1170" y="365" font-family="Arial" font-size="20" fill="#ffffff">Query: "automobile repair"</text>
+
+  <!-- Results (matches) -->
+  <text x="1170" y="450" font-family="Arial" font-size="18" fill="#888888">Results by meaning similarity:</text>
+
+  <rect x="1120" y="480" width="650" height="50" rx="5" fill="#44ff88" fill-opacity="0.2"/>
+  <text x="1150" y="512" font-family="Arial" font-size="16" fill="#44ff88">"How to fix your car" - 94% similar</text>
+
+  <rect x="1120" y="550" width="650" height="50" rx="5" fill="#44ff88" fill-opacity="0.2"/>
+  <text x="1150" y="582" font-family="Arial" font-size="16" fill="#44ff88">"Vehicle maintenance guide" - 89% similar</text>
+
+  <rect x="1120" y="620" width="650" height="50" rx="5" fill="#44ff88" fill-opacity="0.2"/>
+  <text x="1150" y="652" font-family="Arial" font-size="16" fill="#44ff88">"Automobile repair basics" - 97% similar</text>
+
+  <text x="1445" y="750" font-family="Arial" font-size="20" fill="#44ff88" text-anchor="middle">Understands meaning and relationships</text>
+
+  <text x="960" y="950" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle">Vector search finds what you mean, not just what you type</text>
+</svg>
