@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">The N x M Problem</text>
+
+  <!-- AI Models column -->
+  <text x="300" y="200" font-family="Arial" font-size="28" fill="#4488ff" text-anchor="middle">AI Models</text>
+  <rect x="200" y="230" width="200" height="60" rx="10" fill="#2a2a4a" stroke="#4488ff" stroke-width="2"/>
+  <text x="300" y="270" font-family="Arial" font-size="20" fill="#4488ff" text-anchor="middle">Claude</text>
+  <rect x="200" y="310" width="200" height="60" rx="10" fill="#2a2a4a" stroke="#4488ff" stroke-width="2"/>
+  <text x="300" y="350" font-family="Arial" font-size="20" fill="#4488ff" text-anchor="middle">GPT-4</text>
+  <rect x="200" y="390" width="200" height="60" rx="10" fill="#2a2a4a" stroke="#4488ff" stroke-width="2"/>
+  <text x="300" y="430" font-family="Arial" font-size="20" fill="#4488ff" text-anchor="middle">Gemini</text>
+  <rect x="200" y="470" width="200" height="60" rx="10" fill="#2a2a4a" stroke="#4488ff" stroke-width="2"/>
+  <text x="300" y="510" font-family="Arial" font-size="20" fill="#4488ff" text-anchor="middle">Llama</text>
+
+  <!-- Tools column -->
+  <text x="1620" y="200" font-family="Arial" font-size="28" fill="#ff8844" text-anchor="middle">Tools</text>
+  <rect x="1520" y="230" width="200" height="60" rx="10" fill="#2a2a4a" stroke="#ff8844" stroke-width="2"/>
+  <text x="1620" y="270" font-family="Arial" font-size="20" fill="#ff8844" text-anchor="middle">Browser</text>
+  <rect x="1520" y="310" width="200" height="60" rx="10" fill="#2a2a4a" stroke="#ff8844" stroke-width="2"/>
+  <text x="1620" y="350" font-family="Arial" font-size="20" fill="#ff8844" text-anchor="middle">Database</text>
+  <rect x="1520" y="390" width="200" height="60" rx="10" fill="#2a2a4a" stroke="#ff8844" stroke-width="2"/>
+  <text x="1620" y="430" font-family="Arial" font-size="20" fill="#ff8844" text-anchor="middle">GitHub</text>
+  <rect x="1520" y="470" width="200" height="60" rx="10" fill="#2a2a4a" stroke="#ff8844" stroke-width="2"/>
+  <text x="1620" y="510" font-family="Arial" font-size="20" fill="#ff8844" text-anchor="middle">Files</text>
+  <rect x="1520" y="550" width="200" height="60" rx="10" fill="#2a2a4a" stroke="#ff8844" stroke-width="2"/>
+  <text x="1620" y="590" font-family="Arial" font-size="20" fill="#ff8844" text-anchor="middle">Emacs</text>
+
+  <!-- Messy lines (the problem) -->
+  <line x1="410" y1="260" x2="1510" y2="260" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="260" x2="1510" y2="340" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="260" x2="1510" y2="420" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="260" x2="1510" y2="500" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="260" x2="1510" y2="580" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+
+  <line x1="410" y1="340" x2="1510" y2="260" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="340" x2="1510" y2="340" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="340" x2="1510" y2="420" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="340" x2="1510" y2="500" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="340" x2="1510" y2="580" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+
+  <line x1="410" y1="420" x2="1510" y2="260" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="420" x2="1510" y2="340" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="420" x2="1510" y2="420" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="420" x2="1510" y2="500" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="420" x2="1510" y2="580" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+
+  <line x1="410" y1="500" x2="1510" y2="260" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="500" x2="1510" y2="340" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="500" x2="1510" y2="420" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="500" x2="1510" y2="500" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="500" x2="1510" y2="580" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+
+  <!-- Chaos indicator -->
+  <text x="960" y="450" font-family="Arial" font-size="72" fill="#ff4444" text-anchor="middle" opacity="0.8">20</text>
+  <text x="960" y="520" font-family="Arial" font-size="36" fill="#ff4444" text-anchor="middle">custom integrations</text>
+
+  <!-- Bottom explanation -->
+  <rect x="460" y="700" width="1000" height="150" rx="20" fill="#2a2a4a" stroke="#ff4444" stroke-width="3"/>
+  <text x="960" y="760" font-family="Arial" font-size="28" fill="#ff4444" text-anchor="middle">4 models x 5 tools = 20 connectors</text>
+  <text x="960" y="810" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Each requiring separate development, testing, and maintenance</text>
+
+  <text x="960" y="950" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">Custom integrations for every combination</text>
+</svg>

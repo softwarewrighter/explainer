@@ -1,0 +1,1 @@
+Tool three is insert, adding text at the cursor. A i can write code directly into your file.

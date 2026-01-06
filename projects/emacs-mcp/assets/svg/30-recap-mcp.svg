@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <rect x="760" y="60" width="400" height="60" rx="30" fill="#44ff88" fill-opacity="0.2" stroke="#44ff88" stroke-width="2"/>
+  <text x="960" y="100" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">Recap: MCP</text>
+
+  <!-- Large MCP icon -->
+  <rect x="660" y="200" width="600" height="280" rx="40" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="6"/>
+  <text x="960" y="330" font-family="Arial" font-size="96" fill="#44ff88" text-anchor="middle" font-weight="bold">MCP</text>
+  <text x="960" y="410" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle">Model Context Protocol</text>
+
+  <!-- Key points -->
+  <rect x="200" y="540" width="480" height="250" rx="25" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="440" y="620" font-family="Arial" font-size="32" fill="#4488ff" text-anchor="middle">Standardized</text>
+  <text x="440" y="680" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">One protocol for all AI-tool connections</text>
+  <text x="440" y="720" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">JSON-RPC 2.0 specification</text>
+  <text x="440" y="760" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Industry-wide adoption</text>
+
+  <rect x="720" y="540" width="480" height="250" rx="25" fill="#2a2a4a" stroke="#44ff88" stroke-width="3"/>
+  <text x="960" y="620" font-family="Arial" font-size="32" fill="#44ff88" text-anchor="middle">Simple</text>
+  <text x="960" y="680" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Text messages over stdin/stdout</text>
+  <text x="960" y="720" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Language agnostic</text>
+  <text x="960" y="760" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Easy to implement</text>
+
+  <rect x="1240" y="540" width="480" height="250" rx="25" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="1480" y="620" font-family="Arial" font-size="32" fill="#ff8844" text-anchor="middle">Universal</text>
+  <text x="1480" y="680" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Works with Claude, GPT, Gemini</text>
+  <text x="1480" y="720" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">16,000+ servers available</text>
+  <text x="1480" y="760" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Open source standard</text>
+
+  <text x="960" y="920" font-family="Arial" font-size="36" fill="#ffffff" text-anchor="middle">A universal connector between AI and tools</text>
+</svg>

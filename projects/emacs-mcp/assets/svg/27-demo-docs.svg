@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <rect x="760" y="50" width="400" height="60" rx="30" fill="#9966ff" fill-opacity="0.2" stroke="#9966ff" stroke-width="2"/>
+  <text x="960" y="90" font-family="Arial" font-size="28" fill="#9966ff" text-anchor="middle">Demo 3</text>
+
+  <text x="960" y="180" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">Documentation Generation</text>
+
+  <!-- Process flow -->
+  <!-- Directory -->
+  <rect x="150" y="300" width="350" height="400" rx="20" fill="#2a2a4a" stroke="#666688" stroke-width="3"/>
+  <text x="325" y="360" font-family="Arial" font-size="24" fill="#888888" text-anchor="middle">src/ directory</text>
+  <rect x="180" y="390" width="290" height="50" rx="8" fill="#1a1a2a"/>
+  <text x="325" y="422" font-family="monospace" font-size="16" fill="#666688" text-anchor="middle">main.rs</text>
+  <rect x="180" y="450" width="290" height="50" rx="8" fill="#1a1a2a"/>
+  <text x="325" y="482" font-family="monospace" font-size="16" fill="#666688" text-anchor="middle">lib.rs</text>
+  <rect x="180" y="510" width="290" height="50" rx="8" fill="#1a1a2a"/>
+  <text x="325" y="542" font-family="monospace" font-size="16" fill="#666688" text-anchor="middle">utils.rs</text>
+  <rect x="180" y="570" width="290" height="50" rx="8" fill="#1a1a2a"/>
+  <text x="325" y="602" font-family="monospace" font-size="16" fill="#666688" text-anchor="middle">config.rs</text>
+  <text x="325" y="680" font-family="Arial" font-size="16" fill="#666688" text-anchor="middle">Undocumented files</text>
+
+  <!-- Arrow -->
+  <path d="M520 500 L650 500" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="585" y="480" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">AI processes</text>
+
+  <!-- Script running -->
+  <rect x="680" y="350" width="350" height="300" rx="20" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="3"/>
+  <text x="855" y="410" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">generate-docs.sh</text>
+  <text x="855" y="460" font-family="monospace" font-size="14" fill="#888888" text-anchor="middle">for file in src/*.rs</text>
+  <text x="855" y="490" font-family="monospace" font-size="14" fill="#888888" text-anchor="middle">  open-file $file</text>
+  <text x="855" y="520" font-family="monospace" font-size="14" fill="#888888" text-anchor="middle">  analyze content</text>
+  <text x="855" y="550" font-family="monospace" font-size="14" fill="#888888" text-anchor="middle">  insert doc header</text>
+  <text x="855" y="580" font-family="monospace" font-size="14" fill="#888888" text-anchor="middle">done</text>
+
+  <!-- Arrow -->
+  <path d="M1050 500 L1180 500" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="1115" y="480" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">Results</text>
+
+  <!-- Documented file -->
+  <rect x="1210" y="300" width="550" height="400" rx="20" fill="#1a1a2a" stroke="#44ff88" stroke-width="3"/>
+  <rect x="1210" y="300" width="550" height="40" rx="20" fill="#333355"/>
+  <text x="1485" y="328" font-family="monospace" font-size="16" fill="#44ff88" text-anchor="middle">main.rs - Documented</text>
+
+  <!-- Generated documentation -->
+  <rect x="1240" y="355" width="490" height="140" rx="10" fill="#44ff88" fill-opacity="0.1"/>
+  <text x="1260" y="385" font-family="monospace" font-size="14" fill="#44ff88">//! # Main Application Module</text>
+  <text x="1260" y="410" font-family="monospace" font-size="14" fill="#44ff88">//!</text>
+  <text x="1260" y="435" font-family="monospace" font-size="14" fill="#44ff88">//! This module provides the entry point for the</text>
+  <text x="1260" y="460" font-family="monospace" font-size="14" fill="#44ff88">//! application. It handles initialization and startup.</text>
+  <text x="1260" y="485" font-family="monospace" font-size="14" fill="#44ff88">//!</text>
+
+  <text x="1260" y="530" font-family="monospace" font-size="16" fill="#9966ff">fn</text>
+  <text x="1295" y="530" font-family="monospace" font-size="16" fill="#ffffff"> main() {</text>
+  <text x="1280" y="560" font-family="monospace" font-size="16" fill="#888888">    // ...</text>
+  <text x="1260" y="590" font-family="monospace" font-size="16" fill="#ffffff">}</text>
+
+  <!-- Stats -->
+  <rect x="300" y="780" width="400" height="100" rx="15" fill="#2a2a4a" stroke="#4488ff" stroke-width="2"/>
+  <text x="500" y="830" font-family="Arial" font-size="28" fill="#4488ff" text-anchor="middle">4 files</text>
+  <text x="500" y="860" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Processed automatically</text>
+
+  <rect x="760" y="780" width="400" height="100" rx="15" fill="#2a2a4a" stroke="#44ff88" stroke-width="2"/>
+  <text x="960" y="830" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">Consistent</text>
+  <text x="960" y="860" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Same format everywhere</text>
+
+  <rect x="1220" y="780" width="400" height="100" rx="15" fill="#2a2a4a" stroke="#ff8844" stroke-width="2"/>
+  <text x="1420" y="830" font-family="Arial" font-size="28" fill="#ff8844" text-anchor="middle">Refinable</text>
+  <text x="1420" y="860" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Human edits after</text>
+
+  <text x="960" y="980" font-family="Arial" font-size="24" fill="#888888" text-anchor="middle">AI writes documentation headers for an entire codebase</text>
+</svg>

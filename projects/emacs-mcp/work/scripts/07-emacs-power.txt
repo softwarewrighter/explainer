@@ -1,0 +1,1 @@
+Emacs runs Lisp. You can customize everything, keybindings, colors, even how it saves files.

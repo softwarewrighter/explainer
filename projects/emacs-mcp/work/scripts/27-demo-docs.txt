@@ -1,0 +1,1 @@
+Example three is documentation generation. A i writes headers for every file in a directory.

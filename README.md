@@ -46,22 +46,15 @@ explainer/
 |   +-- tools.md            # Video pipeline tool documentation
 |   +-- process.md          # Development process
 +-- projects/               # Individual explainer video projects
-|   +-- rlm/                # RLM Explainer project
-|       +-- plan.md         # Production plan
-|       +-- assets/
-|       |   +-- images/     # Project images (title cards, etc.)
-|       |   +-- svg/        # Vector graphics for scenes
-|       +-- docs/           # Project-specific documentation
-|       |   +-- research.txt
-|       +-- work/           # Generated files (gitignored except scripts)
-|           +-- scripts/    # Narration text files (source)
-|           +-- audio/      # TTS audio (.wav) - generated
-|           +-- clips/      # Scene video clips - generated
-|           +-- stills/     # PNG frames - generated
+|   +-- emacs-mcp/          # Emacs MCP Server Explainer (~4:41)
+|   +-- rag/                # RAG Explainer (~3:50)
+|   +-- rlm/                # RLM Explainer (~3:30)
 +-- crates/                 # Rust library crates
 +-- explainer_web/          # Yew/WASM deterministic renderer
 +-- script/                 # Scene definitions (future: per-project)
 ```
+
+See individual project sections below for detailed file trees.
 
 ## Scene Types
 
@@ -158,7 +151,53 @@ just review             # Preview in browser
 
 ## Projects
 
-### RAG Explainer (Latest)
+### Emacs MCP Server Explainer (Latest)
+
+Location: `projects/emacs-mcp/`
+
+Subject: Rust-based MCP server for Emacs (../emacs-ai-api)
+
+Duration: ~4:41 (33 narrated segments + title + epilog)
+
+```
+projects/emacs-mcp/
++-- plan.md                 # Production plan
++-- assets/
+|   +-- images/
+|   |   +-- emacs-mcp.jpg   # Title card
+|   |   +-- gray-beard-android.jpg
+|   +-- svg/                # 33 scene graphics
+|   +-- videos/
+|       +-- gray-beard-android.mp4  # Avatar for lipsync
++-- docs/                   # Project documentation
++-- work/
+    +-- scripts/            # 33 narration scripts
+    +-- audio/              # TTS audio files
+    +-- stills/             # PNG renders
+    +-- clips/              # Video clips (36 total)
+    +-- description.txt     # YouTube description
+    +-- emacs-mcp-draft.mp4
+```
+
+Topics covered:
+- What Emacs is: extensible text editor, server mode, emacsclient
+- What MCP (Model Context Protocol) is: Anthropic's open standard for AI tools
+- MCP adoption: OpenAI, Microsoft, and industry-wide support
+- MCP concerns: security and complexity considerations
+- Implementation: Five tools (dired, open-file, insert, split-window, eval)
+- Demo: Eliza chatbot interaction via eval tool
+- Bidirectional: gptel lets Emacs call out to LLMs
+- Use cases: Code review, pair programming, documentation generation
+
+Features:
+- Lip-synced avatar overlay on hook and CTA slides
+- gptel segment showing bidirectional LLM integration
+
+Music: missed-chance.mp3 (title and epilog extension)
+
+See `projects/emacs-mcp/plan.md` for full production details.
+
+### RAG Explainer
 
 Location: `projects/rag/`
 
@@ -166,12 +205,29 @@ Subject: Retrieval-Augmented Generation (../rag-demo)
 
 Duration: ~3:50 (32 narrated segments + title + epilog)
 
+```
+projects/rag/
++-- plan.md                 # Production plan
++-- assets/
+|   +-- images/             # Title card (rag-explainer.jpg)
+|   +-- svg/                # 33 scene graphics
++-- docs/                   # Project documentation
++-- work/
+    +-- scripts/            # 32 narration scripts
+    +-- audio/              # TTS audio files
+    +-- stills/             # PNG renders
+    +-- clips/              # Video clips
+    +-- rag-explainer-draft.mp4
+```
+
 Topics covered:
 - LLM hallucination problem and knowledge cutoffs
 - RAG solution: Retrieve, Augment, Generate
 - Vector databases: Qdrant, Pinecone, Weaviate, pgvector
 - Hierarchical parent-child chunking (8.2% accuracy improvement)
 - Local implementation with Qdrant + Ollama
+
+Music: soaring.mp3 (title and epilog extension)
 
 See `projects/rag/plan.md` for full production details.
 
@@ -182,6 +238,23 @@ Location: `projects/rlm/`
 Subject: Recursive Language Models (../rlm-project)
 
 Duration: ~3:30 (27 narrated segments + title + epilog)
+
+```
+projects/rlm/
++-- plan.md                 # Production plan
++-- assets/
+|   +-- images/             # Title card (rlm.jpg)
+|   +-- svg/                # 27 scene graphics
++-- docs/                   # Project documentation
++-- work/
+    +-- scripts/            # 27 narration scripts
+    +-- audio/              # TTS audio files
+    +-- stills/             # PNG renders
+    +-- clips/              # Video clips
+    +-- avatar/             # Avatar processing
+    +-- composited/         # Composited clips
+    +-- rlm-draft.mp4
+```
 
 Structure:
 - 01-title: Title card with music (rlm.jpg)

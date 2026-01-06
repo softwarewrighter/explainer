@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Tool badge -->
+  <rect x="710" y="60" width="500" height="70" rx="35" fill="#9966ff" fill-opacity="0.2" stroke="#9966ff" stroke-width="3"/>
+  <text x="960" y="105" font-family="Arial" font-size="32" fill="#9966ff" text-anchor="middle">Tool 4: split-window</text>
+
+  <text x="960" y="200" font-family="Arial" font-size="36" fill="#ffffff" text-anchor="middle">Manage Window Layouts</text>
+
+  <!-- Single window -->
+  <text x="350" y="280" font-family="Arial" font-size="24" fill="#888888" text-anchor="middle">Single Window</text>
+  <rect x="150" y="310" width="400" height="300" rx="15" fill="#1a1a2a" stroke="#666688" stroke-width="3"/>
+  <text x="350" y="470" font-family="monospace" font-size="20" fill="#888888" text-anchor="middle">main.rs</text>
+
+  <!-- Vertical split -->
+  <text x="960" y="280" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Vertical Split</text>
+  <rect x="610" y="310" width="195" height="300" rx="15" fill="#1a1a2a" stroke="#44ff88" stroke-width="3"/>
+  <text x="707" y="470" font-family="monospace" font-size="16" fill="#44ff88" text-anchor="middle">main.rs</text>
+  <rect x="815" y="310" width="195" height="300" rx="15" fill="#1a1a2a" stroke="#44ff88" stroke-width="3"/>
+  <text x="912" y="470" font-family="monospace" font-size="16" fill="#44ff88" text-anchor="middle">test.rs</text>
+  <rect x="1020" y="310" width="195" height="300" rx="15" fill="#1a1a2a" stroke="#44ff88" stroke-width="3"/>
+  <text x="1117" y="470" font-family="monospace" font-size="16" fill="#44ff88" text-anchor="middle">lib.rs</text>
+
+  <!-- Horizontal split -->
+  <text x="1520" y="280" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Horizontal Split</text>
+  <rect x="1320" y="310" width="400" height="145" rx="15" fill="#1a1a2a" stroke="#ff8844" stroke-width="3"/>
+  <text x="1520" y="390" font-family="monospace" font-size="16" fill="#ff8844" text-anchor="middle">main.rs</text>
+  <rect x="1320" y="465" width="400" height="145" rx="15" fill="#1a1a2a" stroke="#ff8844" stroke-width="3"/>
+  <text x="1520" y="545" font-family="monospace" font-size="16" fill="#ff8844" text-anchor="middle">output.log</text>
+
+  <!-- Use cases -->
+  <rect x="200" y="680" width="480" height="180" rx="20" fill="#2a2a4a" stroke="#44ff88" stroke-width="3"/>
+  <text x="440" y="750" font-family="Arial" font-size="26" fill="#44ff88" text-anchor="middle">Side-by-Side Comparison</text>
+  <text x="440" y="800" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Compare files visually</text>
+  <text x="440" y="830" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Review changes together</text>
+
+  <rect x="720" y="680" width="480" height="180" rx="20" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="960" y="750" font-family="Arial" font-size="26" fill="#ff8844" text-anchor="middle">Code and Output</text>
+  <text x="960" y="800" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">See source and results</text>
+  <text x="960" y="830" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Debug efficiently</text>
+
+  <rect x="1240" y="680" width="480" height="180" rx="20" fill="#2a2a4a" stroke="#9966ff" stroke-width="3"/>
+  <text x="1480" y="750" font-family="Arial" font-size="26" fill="#9966ff" text-anchor="middle">Multi-File Editing</text>
+  <text x="1480" y="800" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Edit related files</text>
+  <text x="1480" y="830" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Keep context visible</text>
+
+  <text x="960" y="960" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">AI arranges your workspace for the task at hand</text>
+</svg>

@@ -1,0 +1,1 @@
+Example two is remote pair programming. A web interface lets multiple users share one Emacs.

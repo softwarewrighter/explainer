@@ -1,0 +1,1 @@
+M c p provides one protocol that all a i models and tools can use. Everyone connects.

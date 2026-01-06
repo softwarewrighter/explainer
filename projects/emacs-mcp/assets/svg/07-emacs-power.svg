@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">Powered by Lisp</text>
+
+  <!-- Code flowing visual -->
+  <rect x="300" y="180" width="1320" height="500" rx="20" fill="#1a1a2a" stroke="#9966ff" stroke-width="3"/>
+
+  <!-- Lisp code examples -->
+  <text x="350" y="240" font-family="monospace" font-size="22" fill="#9966ff">;; Customize keybindings</text>
+  <text x="350" y="280" font-family="monospace" font-size="22" fill="#44ff88">(global-set-key (kbd "C-c c") 'compile)</text>
+
+  <text x="350" y="340" font-family="monospace" font-size="22" fill="#9966ff">;; Change colors</text>
+  <text x="350" y="380" font-family="monospace" font-size="22" fill="#44ff88">(set-face-foreground 'font-lock-comment-face "#888")</text>
+
+  <text x="350" y="440" font-family="monospace" font-size="22" fill="#9966ff">;; Custom save behavior</text>
+  <text x="350" y="480" font-family="monospace" font-size="22" fill="#44ff88">(add-hook 'before-save-hook 'delete-trailing-whitespace)</text>
+
+  <text x="350" y="540" font-family="monospace" font-size="22" fill="#9966ff">;; Your own functions</text>
+  <text x="350" y="580" font-family="monospace" font-size="22" fill="#44ff88">(defun my-insert-date ()</text>
+  <text x="350" y="620" font-family="monospace" font-size="22" fill="#44ff88">  (interactive)</text>
+  <text x="350" y="660" font-family="monospace" font-size="22" fill="#44ff88">  (insert (format-time-string "%Y-%m-%d")))</text>
+
+  <!-- Features list -->
+  <rect x="300" y="750" width="400" height="100" rx="15" fill="#2a2a4a" stroke="#44ff88" stroke-width="2"/>
+  <text x="500" y="810" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Keybindings</text>
+
+  <rect x="760" y="750" width="400" height="100" rx="15" fill="#2a2a4a" stroke="#ff8844" stroke-width="2"/>
+  <text x="960" y="810" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Appearance</text>
+
+  <rect x="1220" y="750" width="400" height="100" rx="15" fill="#2a2a4a" stroke="#9966ff" stroke-width="2"/>
+  <text x="1420" y="810" font-family="Arial" font-size="24" fill="#9966ff" text-anchor="middle">Behavior</text>
+
+  <text x="960" y="950" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">Every aspect of the editor can be modified with code</text>
+</svg>

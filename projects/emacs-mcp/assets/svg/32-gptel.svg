@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">Bidirectional: Emacs Can Call LLMs Too</text>
+
+  <!-- Flow diagram: LLM A -> emacs-mcp -> Emacs -> gptel -> LLM B -->
+
+  <!-- LLM A -->
+  <rect x="80" y="350" width="200" height="140" rx="20" fill="#4488ff" fill-opacity="0.15" stroke="#4488ff" stroke-width="4"/>
+  <text x="180" y="410" font-family="Arial" font-size="28" fill="#4488ff" text-anchor="middle">LLM A</text>
+  <text x="180" y="450" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Claude, GPT...</text>
+
+  <!-- Arrow 1 -->
+  <path d="M290 420 L380 420" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- emacs-mcp -->
+  <rect x="400" y="350" width="220" height="140" rx="20" fill="#ff8844" fill-opacity="0.15" stroke="#ff8844" stroke-width="4"/>
+  <text x="510" y="410" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">emacs-mcp</text>
+  <text x="510" y="450" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Rust MCP Server</text>
+
+  <!-- Arrow 2 -->
+  <path d="M630 420 L720 420" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Emacs (center) -->
+  <rect x="740" y="320" width="200" height="200" rx="25" fill="#9966ff" fill-opacity="0.15" stroke="#9966ff" stroke-width="5"/>
+  <text x="840" y="400" font-family="Arial" font-size="36" fill="#9966ff" text-anchor="middle">Emacs</text>
+  <text x="840" y="450" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Editor + Elisp</text>
+
+  <!-- Arrow 3 -->
+  <path d="M950 420 L1040 420" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- gptel -->
+  <rect x="1060" y="350" width="220" height="140" rx="20" fill="#44ff88" fill-opacity="0.15" stroke="#44ff88" stroke-width="4"/>
+  <text x="1170" y="410" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">gptel</text>
+  <text x="1170" y="450" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Emacs LLM Client</text>
+
+  <!-- Arrow 4 -->
+  <path d="M1290 420 L1380 420" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- LLM B -->
+  <rect x="1400" y="350" width="200" height="140" rx="20" fill="#ff4488" fill-opacity="0.15" stroke="#ff4488" stroke-width="4"/>
+  <text x="1500" y="410" font-family="Arial" font-size="28" fill="#ff4488" text-anchor="middle">LLM B</text>
+  <text x="1500" y="450" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Any Provider</text>
+
+  <!-- Labels above flow -->
+  <text x="340" y="300" font-family="Arial" font-size="18" fill="#666688" text-anchor="middle">AI controls editor</text>
+  <text x="1220" y="300" font-family="Arial" font-size="18" fill="#666688" text-anchor="middle">Editor calls AI</text>
+
+  <!-- Curved arrow showing full loop potential -->
+  <path d="M1500 500 Q1500 700 840 700 Q180 700 180 500" stroke="#666688" stroke-width="2" stroke-dasharray="10,5" fill="none" marker-end="url(#arrow)"/>
+  <text x="840" y="750" font-family="Arial" font-size="20" fill="#666688" text-anchor="middle">LLMs can collaborate through Emacs</text>
+
+  <!-- gptel link -->
+  <rect x="660" y="850" width="600" height="80" rx="15" fill="#1a1a2a" stroke="#44ff88" stroke-width="2"/>
+  <text x="960" y="900" font-family="monospace" font-size="22" fill="#44ff88" text-anchor="middle">github.com/karthink/gptel</text>
+</svg>

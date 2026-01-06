@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">How MCP Works</text>
+
+  <!-- Request flow -->
+  <rect x="200" y="200" width="350" height="150" rx="20" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="375" y="260" font-family="Arial" font-size="28" fill="#4488ff" text-anchor="middle">AI Client</text>
+  <text x="375" y="300" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Sends JSON-RPC request</text>
+  <text x="375" y="330" font-family="Arial" font-size="14" fill="#666688" text-anchor="middle">via stdin</text>
+
+  <path d="M560 275 L750 275" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="780" y="200" width="350" height="150" rx="20" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="3"/>
+  <text x="955" y="260" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">MCP Server</text>
+  <text x="955" y="300" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Processes request</text>
+  <text x="955" y="330" font-family="Arial" font-size="14" fill="#666688" text-anchor="middle">Executes tool</text>
+
+  <path d="M1140 275 L1330 275" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="1360" y="200" width="350" height="150" rx="20" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="1535" y="260" font-family="Arial" font-size="28" fill="#ff8844" text-anchor="middle">Tool</text>
+  <text x="1535" y="300" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Performs action</text>
+  <text x="1535" y="330" font-family="Arial" font-size="14" fill="#666688" text-anchor="middle">Returns result</text>
+
+  <!-- JSON example -->
+  <rect x="300" y="420" width="1320" height="350" rx="20" fill="#1a1a2a" stroke="#666688" stroke-width="2"/>
+
+  <text x="350" y="480" font-family="monospace" font-size="20" fill="#9966ff">// Request</text>
+  <text x="350" y="520" font-family="monospace" font-size="18" fill="#44ff88">{</text>
+  <text x="380" y="555" font-family="monospace" font-size="18" fill="#888888">"jsonrpc": "2.0",</text>
+  <text x="380" y="590" font-family="monospace" font-size="18" fill="#888888">"method": "tools/call",</text>
+  <text x="380" y="625" font-family="monospace" font-size="18" fill="#888888">"params": { "name": "open-file", "arguments": { "path": "/code.rs" } },</text>
+  <text x="380" y="660" font-family="monospace" font-size="18" fill="#888888">"id": 1</text>
+  <text x="350" y="695" font-family="monospace" font-size="18" fill="#44ff88">}</text>
+
+  <text x="1100" y="480" font-family="monospace" font-size="20" fill="#9966ff">// Response</text>
+  <text x="1100" y="520" font-family="monospace" font-size="18" fill="#ff8844">{</text>
+  <text x="1130" y="555" font-family="monospace" font-size="18" fill="#888888">"jsonrpc": "2.0",</text>
+  <text x="1130" y="590" font-family="monospace" font-size="18" fill="#888888">"result": {</text>
+  <text x="1160" y="625" font-family="monospace" font-size="18" fill="#888888">"content": [{ "type": "text",</text>
+  <text x="1180" y="660" font-family="monospace" font-size="18" fill="#888888">"text": "Opened: /code.rs" }]</text>
+  <text x="1130" y="695" font-family="monospace" font-size="18" fill="#888888">}, "id": 1</text>
+  <text x="1100" y="730" font-family="monospace" font-size="18" fill="#ff8844">}</text>
+
+  <!-- Key points -->
+  <rect x="300" y="820" width="400" height="80" rx="15" fill="#2a2a4a" stroke="#44ff88" stroke-width="2"/>
+  <text x="500" y="870" font-family="Arial" font-size="22" fill="#44ff88" text-anchor="middle">Standard JSON-RPC 2.0</text>
+
+  <rect x="760" y="820" width="400" height="80" rx="15" fill="#2a2a4a" stroke="#4488ff" stroke-width="2"/>
+  <text x="960" y="870" font-family="Arial" font-size="22" fill="#4488ff" text-anchor="middle">stdin/stdout Transport</text>
+
+  <rect x="1220" y="820" width="400" height="80" rx="15" fill="#2a2a4a" stroke="#ff8844" stroke-width="2"/>
+  <text x="1420" y="870" font-family="Arial" font-size="22" fill="#ff8844" text-anchor="middle">Language Agnostic</text>
+
+  <text x="960" y="990" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">Simple text messages over standard I/O</text>
+</svg>

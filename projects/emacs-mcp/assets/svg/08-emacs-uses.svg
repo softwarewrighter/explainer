@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">What Developers Use Emacs For</text>
+
+  <!-- Grid of use cases -->
+  <!-- Row 1 -->
+  <rect x="200" y="180" width="350" height="250" rx="20" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="375" y="250" font-family="Arial" font-size="32" fill="#4488ff" text-anchor="middle">Coding</text>
+  <text x="375" y="300" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Syntax highlighting</text>
+  <text x="375" y="330" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">LSP integration</text>
+  <text x="375" y="360" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Git integration</text>
+  <text x="375" y="390" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Debugging</text>
+
+  <rect x="610" y="180" width="350" height="250" rx="20" fill="#2a2a4a" stroke="#44ff88" stroke-width="3"/>
+  <text x="785" y="250" font-family="Arial" font-size="32" fill="#44ff88" text-anchor="middle">Writing</text>
+  <text x="785" y="300" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Org-mode notes</text>
+  <text x="785" y="330" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Markdown</text>
+  <text x="785" y="360" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">LaTeX documents</text>
+  <text x="785" y="390" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Spell checking</text>
+
+  <rect x="1020" y="180" width="350" height="250" rx="20" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="1195" y="250" font-family="Arial" font-size="32" fill="#ff8844" text-anchor="middle">Email</text>
+  <text x="1195" y="300" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Gnus, mu4e, notmuch</text>
+  <text x="1195" y="330" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Keyboard-driven</text>
+  <text x="1195" y="360" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Search and filter</text>
+  <text x="1195" y="390" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Offline access</text>
+
+  <rect x="1430" y="180" width="350" height="250" rx="20" fill="#2a2a4a" stroke="#9966ff" stroke-width="3"/>
+  <text x="1605" y="250" font-family="Arial" font-size="32" fill="#9966ff" text-anchor="middle">Files</text>
+  <text x="1605" y="300" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Dired file manager</text>
+  <text x="1605" y="330" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">TRAMP remote access</text>
+  <text x="1605" y="360" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Batch operations</text>
+  <text x="1605" y="390" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Project navigation</text>
+
+  <!-- Row 2 -->
+  <rect x="405" y="480" width="350" height="250" rx="20" fill="#2a2a4a" stroke="#44ff88" stroke-width="3"/>
+  <text x="580" y="550" font-family="Arial" font-size="32" fill="#44ff88" text-anchor="middle">Terminal</text>
+  <text x="580" y="600" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Eshell, vterm</text>
+  <text x="580" y="630" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Compilation output</text>
+  <text x="580" y="660" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">REPL integration</text>
+  <text x="580" y="690" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Process management</text>
+
+  <rect x="815" y="480" width="350" height="250" rx="20" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="990" y="550" font-family="Arial" font-size="32" fill="#4488ff" text-anchor="middle">Planning</text>
+  <text x="990" y="600" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Org-agenda</text>
+  <text x="990" y="630" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Task tracking</text>
+  <text x="990" y="660" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Time logging</text>
+  <text x="990" y="690" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Calendar integration</text>
+
+  <rect x="1225" y="480" width="350" height="250" rx="20" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="1400" y="550" font-family="Arial" font-size="32" fill="#ff8844" text-anchor="middle">Everything</text>
+  <text x="1400" y="600" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">IRC, RSS, podcasts</text>
+  <text x="1400" y="630" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Games, music</text>
+  <text x="1400" y="660" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Web browsing</text>
+  <text x="1400" y="690" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Custom applications</text>
+
+  <text x="960" y="850" font-family="Arial" font-size="36" fill="#ffffff" text-anchor="middle">Some developers never leave it</text>
+</svg>

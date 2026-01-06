@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">Complete Architecture</text>
+
+  <!-- AI Agent -->
+  <rect x="150" y="300" width="300" height="200" rx="25" fill="#4488ff" fill-opacity="0.1" stroke="#4488ff" stroke-width="4"/>
+  <text x="300" y="380" font-family="Arial" font-size="32" fill="#4488ff" text-anchor="middle">AI Agent</text>
+  <text x="300" y="430" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Claude, GPT, etc.</text>
+  <text x="300" y="470" font-family="Arial" font-size="16" fill="#666688" text-anchor="middle">Sends JSON-RPC</text>
+
+  <!-- Arrow 1 -->
+  <path d="M460 400 L570 400" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="515" y="380" font-family="monospace" font-size="14" fill="#44ff88" text-anchor="middle">stdin</text>
+
+  <!-- MCP Server -->
+  <rect x="600" y="250" width="400" height="300" rx="25" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="4"/>
+  <text x="800" y="330" font-family="Arial" font-size="32" fill="#44ff88" text-anchor="middle">MCP Server</text>
+  <text x="800" y="380" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Rust Implementation</text>
+  <rect x="650" y="410" width="300" height="40" rx="10" fill="#1a1a2a"/>
+  <text x="800" y="438" font-family="monospace" font-size="14" fill="#44ff88" text-anchor="middle">Parse → Validate → Execute</text>
+  <text x="800" y="500" font-family="Arial" font-size="16" fill="#666688" text-anchor="middle">5 tools registered</text>
+
+  <!-- Arrow 2 -->
+  <path d="M1010 400 L1120 400" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="1065" y="380" font-family="monospace" font-size="14" fill="#44ff88" text-anchor="middle">eval</text>
+
+  <!-- Emacs -->
+  <rect x="1150" y="300" width="300" height="200" rx="25" fill="#9966ff" fill-opacity="0.1" stroke="#9966ff" stroke-width="4"/>
+  <text x="1300" y="380" font-family="Arial" font-size="32" fill="#9966ff" text-anchor="middle">Emacs</text>
+  <text x="1300" y="430" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Server Mode</text>
+  <text x="1300" y="470" font-family="Arial" font-size="16" fill="#666688" text-anchor="middle">Executes elisp</text>
+
+  <!-- Arrow 3 -->
+  <path d="M1460 400 L1570 400" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Result -->
+  <rect x="1600" y="300" width="200" height="200" rx="25" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="4"/>
+  <text x="1700" y="380" font-family="Arial" font-size="28" fill="#ff8844" text-anchor="middle">Result</text>
+  <text x="1700" y="430" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">File opens</text>
+  <text x="1700" y="460" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Text appears</text>
+  <text x="1700" y="490" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Window splits</text>
+
+  <!-- Example flow -->
+  <rect x="250" y="620" width="1420" height="200" rx="20" fill="#1a1a2a" stroke="#666688" stroke-width="2"/>
+  <text x="960" y="670" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">Example Flow</text>
+
+  <text x="300" y="720" font-family="monospace" font-size="16" fill="#4488ff">1. AI: "Open main.rs"</text>
+  <text x="300" y="760" font-family="monospace" font-size="16" fill="#44ff88">2. MCP: { "name": "open-file", "path": "main.rs" }</text>
+  <text x="300" y="800" font-family="monospace" font-size="16" fill="#9966ff">3. Emacs: (find-file "main.rs")</text>
+
+  <text x="1100" y="720" font-family="monospace" font-size="16" fill="#ff8844">4. Result: File visible in editor</text>
+  <text x="1100" y="760" font-family="monospace" font-size="16" fill="#888888">5. AI continues with next action</text>
+  <text x="1100" y="800" font-family="monospace" font-size="16" fill="#888888">6. Developer sees changes in real-time</text>
+
+  <text x="960" y="920" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">Simple JSON in, visible changes out</text>
+</svg>

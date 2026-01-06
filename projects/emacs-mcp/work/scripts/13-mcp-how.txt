@@ -1,0 +1,1 @@
+It uses json messages over standard input and output. Simple, portable, language agnostic.

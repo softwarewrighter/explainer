@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Tool badge -->
+  <rect x="760" y="60" width="400" height="70" rx="35" fill="#44ff88" fill-opacity="0.2" stroke="#44ff88" stroke-width="3"/>
+  <text x="960" y="105" font-family="Arial" font-size="32" fill="#44ff88" text-anchor="middle">Tool 2: open-file</text>
+
+  <text x="960" y="200" font-family="Arial" font-size="36" fill="#ffffff" text-anchor="middle">Load Files Into Emacs</text>
+
+  <!-- File icon to buffer animation -->
+  <rect x="250" y="300" width="300" height="380" rx="15" fill="#2a2a4a" stroke="#666688" stroke-width="3"/>
+  <rect x="280" y="340" width="80" height="100" rx="5" fill="#1a1a2a"/>
+  <text x="320" y="400" font-family="Arial" font-size="14" fill="#44ff88" text-anchor="middle">.rs</text>
+  <text x="400" y="450" font-family="Arial" font-size="48" fill="#888888">main.rs</text>
+  <text x="400" y="510" font-family="Arial" font-size="18" fill="#666688" text-anchor="middle">File on disk</text>
+  <text x="400" y="620" font-family="monospace" font-size="14" fill="#666688" text-anchor="middle">/home/dev/src/main.rs</text>
+
+  <!-- Arrow -->
+  <path d="M580 490 L780 490" stroke="#44ff88" stroke-width="6" marker-end="url(#arrow)"/>
+  <text x="680" y="460" font-family="Arial" font-size="20" fill="#44ff88" text-anchor="middle">open-file</text>
+
+  <!-- Emacs buffer -->
+  <rect x="830" y="300" width="500" height="380" rx="15" fill="#1a1a2a" stroke="#44ff88" stroke-width="4"/>
+  <rect x="830" y="300" width="500" height="40" rx="15" fill="#333355"/>
+  <text x="1080" y="328" font-family="monospace" font-size="16" fill="#44ff88" text-anchor="middle">main.rs - Emacs Buffer</text>
+
+  <text x="860" y="380" font-family="monospace" font-size="18" fill="#9966ff">fn</text>
+  <text x="895" y="380" font-family="monospace" font-size="18" fill="#44ff88"> main</text>
+  <text x="970" y="380" font-family="monospace" font-size="18" fill="#ffffff">() {</text>
+  <text x="880" y="415" font-family="monospace" font-size="18" fill="#888888">    println!("Hello");</text>
+  <text x="860" y="450" font-family="monospace" font-size="18" fill="#ffffff">}</text>
+
+  <text x="1080" y="620" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Now visible in editor</text>
+
+  <!-- Features list -->
+  <rect x="1400" y="300" width="400" height="380" rx="20" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="1600" y="370" font-family="Arial" font-size="24" fill="#4488ff" text-anchor="middle">Capabilities</text>
+
+  <text x="1450" y="430" font-family="Arial" font-size="18" fill="#888888">Open any file type</text>
+  <text x="1450" y="470" font-family="Arial" font-size="18" fill="#888888">Syntax highlighting</text>
+  <text x="1450" y="510" font-family="Arial" font-size="18" fill="#888888">Navigate to line</text>
+  <text x="1450" y="550" font-family="Arial" font-size="18" fill="#888888">Prepare for editing</text>
+  <text x="1450" y="590" font-family="Arial" font-size="18" fill="#888888">Remote files via TRAMP</text>
+  <text x="1450" y="630" font-family="Arial" font-size="18" fill="#888888">Version controlled</text>
+
+  <!-- Command example -->
+  <rect x="300" y="750" width="1320" height="80" rx="15" fill="#1a1a2a" stroke="#666688" stroke-width="2"/>
+  <text x="960" y="800" font-family="monospace" font-size="22" fill="#44ff88" text-anchor="middle">{ "name": "open-file", "arguments": { "path": "/home/dev/src/main.rs" } }</text>
+
+  <text x="960" y="930" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">Files become visible to both AI and developer</text>
+</svg>

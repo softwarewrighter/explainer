@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Warning triangle -->
+  <path d="M960 150 L1100 400 L820 400 Z" fill="none" stroke="#ff8844" stroke-width="6"/>
+  <text x="960" y="350" font-family="Arial" font-size="72" fill="#ff8844" text-anchor="middle">!</text>
+
+  <text x="960" y="500" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">Rough Edges Remain</text>
+
+  <!-- Issues grid -->
+  <rect x="200" y="580" width="480" height="200" rx="20" fill="#2a2a4a" stroke="#ff4444" stroke-width="3"/>
+  <text x="440" y="650" font-family="Arial" font-size="28" fill="#ff4444" text-anchor="middle">Security Issues</text>
+  <text x="440" y="700" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">43% have command injection</text>
+  <text x="440" y="735" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">30% vulnerable to SSRF</text>
+
+  <rect x="720" y="580" width="480" height="200" rx="20" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="960" y="650" font-family="Arial" font-size="28" fill="#ff8844" text-anchor="middle">Complexity</text>
+  <text x="960" y="700" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">OAuth 2.1 is non-trivial</text>
+  <text x="960" y="735" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">More tools = degraded performance</text>
+
+  <rect x="1240" y="580" width="480" height="200" rx="20" fill="#2a2a4a" stroke="#ffcc44" stroke-width="3"/>
+  <text x="1480" y="650" font-family="Arial" font-size="28" fill="#ffcc44" text-anchor="middle">Quality Varies</text>
+  <text x="1480" y="700" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">16,000 servers, uneven quality</text>
+  <text x="1480" y="735" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Single-tenant designs</text>
+
+  <!-- But still valuable -->
+  <rect x="460" y="850" width="1000" height="100" rx="20" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="2"/>
+  <text x="960" y="910" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Still valuable for local, trusted environments</text>
+
+  <text x="960" y="1010" font-family="Arial" font-size="24" fill="#888888" text-anchor="middle">Know the tradeoffs before deploying</text>
+</svg>

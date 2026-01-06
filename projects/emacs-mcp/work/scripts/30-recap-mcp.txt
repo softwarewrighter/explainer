@@ -1,0 +1,1 @@
+M c p standardizes a i to tool connections. Json messages, universal protocol.

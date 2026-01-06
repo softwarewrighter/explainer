@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">Emacs Server Mode</text>
+
+  <!-- Daemon in center -->
+  <rect x="710" y="250" width="500" height="300" rx="25" fill="#9966ff" fill-opacity="0.1" stroke="#9966ff" stroke-width="4"/>
+  <text x="960" y="350" font-family="Arial" font-size="36" fill="#9966ff" text-anchor="middle">emacs --daemon</text>
+  <text x="960" y="410" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">Running in background</text>
+  <text x="960" y="460" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Persistent state, fast startup</text>
+  <text x="960" y="500" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Listens for connections</text>
+
+  <!-- Client 1 -->
+  <rect x="200" y="300" width="300" height="150" rx="15" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="350" y="360" font-family="Arial" font-size="24" fill="#4488ff" text-anchor="middle">emacsclient</text>
+  <text x="350" y="400" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Terminal interface</text>
+  <path d="M510 375 L700 400" stroke="#44ff88" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Client 2 -->
+  <rect x="200" y="500" width="300" height="150" rx="15" fill="#2a2a4a" stroke="#44ff88" stroke-width="3"/>
+  <text x="350" y="560" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">emacsclient --eval</text>
+  <text x="350" y="600" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Execute elisp remotely</text>
+  <path d="M510 575 L700 500" stroke="#44ff88" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Client 3 -->
+  <rect x="1420" y="300" width="300" height="150" rx="15" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="1570" y="360" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">GUI Frame</text>
+  <text x="1570" y="400" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Visual interface</text>
+  <path d="M1220 400 L1410 375" stroke="#44ff88" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Client 4: MCP Server -->
+  <rect x="1420" y="500" width="300" height="150" rx="15" fill="#44ff88" fill-opacity="0.2" stroke="#44ff88" stroke-width="3"/>
+  <text x="1570" y="560" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">MCP Server</text>
+  <text x="1570" y="600" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">AI-controlled</text>
+  <path d="M1220 500 L1410 575" stroke="#44ff88" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Command example -->
+  <rect x="460" y="700" width="1000" height="100" rx="15" fill="#1a1a2a" stroke="#666688" stroke-width="2"/>
+  <text x="960" y="760" font-family="monospace" font-size="24" fill="#44ff88" text-anchor="middle">emacsclient --eval '(find-file "/path/to/file.rs")'</text>
+
+  <text x="960" y="920" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">External programs can send commands to the running editor</text>
+</svg>

@@ -1,0 +1,1 @@
+Tool two is open file. It loads any file into an Emacs buffer for viewing or editing.

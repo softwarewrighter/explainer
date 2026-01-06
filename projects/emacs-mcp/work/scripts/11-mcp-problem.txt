@@ -1,0 +1,1 @@
+Before m c p, connecting a i to tools was messy. Every model needed custom integrations.

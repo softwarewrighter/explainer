@@ -1,0 +1,32 @@
+What if AI could control your text editor directly?
+
+This Rust-based MCP server bridges LLMs and Emacs, enabling AI to open files, browse directories, insert code, split windows, and evaluate Elisp. It goes both ways - gptel lets Emacs call out to LLMs too.
+
+In this video:
+- 0:00 Introduction
+- 0:30 What is Emacs?
+- 1:00 MCP Protocol Explained
+- 1:40 Implementation (5 Core Tools)
+- 2:35 Demo Examples
+- 3:30 gptel: Bidirectional LLM Integration
+- 4:00 Summary
+
+Code: https://github.com/softwarewrighter/emacs-ai-api
+
+Documentation:
+- MCP Eliza Demo: https://github.com/softwarewrighter/emacs-ai-api/blob/main/docs/mcp-eliza.md
+- MCP Self-Documentation: https://github.com/softwarewrighter/emacs-ai-api/blob/main/docs/mcp-emacs-self-documentation.md
+- MCP Org Tables: https://github.com/softwarewrighter/emacs-ai-api/blob/main/docs/mcp-org-table.md
+
+Related Projects:
+- gptel (Emacs LLM client): https://github.com/karthink/gptel
+- MCP Official Spec: https://modelcontextprotocol.io
+- Playwright MCP: https://github.com/microsoft/playwright-mcp
+
+Emacs Resources:
+- GNU Emacs: https://www.gnu.org/software/emacs/
+
+---
+
+Tags:
+#Emacs #MCP #AI #Rust #LLM #ModelContextProtocol #Anthropic #OpenSource #vibecoding #gptel #Claude #OpenAI #TextEditor #DeveloperTools #CodingTools #emacsclient #Elisp

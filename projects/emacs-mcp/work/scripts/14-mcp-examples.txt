@@ -1,0 +1,1 @@
+Playwright uses m c p for browser automation. So do file systems, databases, and GitHub.

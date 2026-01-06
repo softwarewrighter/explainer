@@ -1,0 +1,1 @@
+But M C P has some rough edges. Each tool definition eats context tokens, and security remains a concern.

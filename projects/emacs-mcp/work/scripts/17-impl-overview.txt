@@ -1,0 +1,1 @@
+This m c p server is written in Rust. It exposes five Emacs operations to a i agents.

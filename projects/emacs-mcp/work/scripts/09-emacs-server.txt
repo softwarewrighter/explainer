@@ -1,0 +1,1 @@
+Emacs can run as a server. External programs send commands, and the editor executes them.

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">Why Rust?</text>
+
+  <!-- Rust logo area -->
+  <circle cx="960" cy="320" r="150" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="5"/>
+  <text x="960" y="300" font-family="Arial" font-size="72" fill="#ff8844" text-anchor="middle">Rust</text>
+  <text x="960" y="360" font-family="Arial" font-size="24" fill="#888888" text-anchor="middle">Systems Programming</text>
+
+  <!-- Benefits grid -->
+  <rect x="200" y="520" width="360" height="280" rx="25" fill="#2a2a4a" stroke="#44ff88" stroke-width="4"/>
+  <text x="380" y="600" font-family="Arial" font-size="36" fill="#44ff88" text-anchor="middle">Fast</text>
+  <text x="380" y="660" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Zero-cost abstractions</text>
+  <text x="380" y="700" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">No garbage collector</text>
+  <text x="380" y="740" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">C-like performance</text>
+
+  <rect x="620" y="520" width="360" height="280" rx="25" fill="#2a2a4a" stroke="#4488ff" stroke-width="4"/>
+  <text x="800" y="600" font-family="Arial" font-size="36" fill="#4488ff" text-anchor="middle">Safe</text>
+  <text x="800" y="660" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Memory safety guaranteed</text>
+  <text x="800" y="700" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">No null pointers</text>
+  <text x="800" y="740" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Thread safety built-in</text>
+
+  <rect x="1040" y="520" width="360" height="280" rx="25" fill="#2a2a4a" stroke="#ff8844" stroke-width="4"/>
+  <text x="1220" y="600" font-family="Arial" font-size="36" fill="#ff8844" text-anchor="middle">No Runtime</text>
+  <text x="1220" y="660" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Single binary deploy</text>
+  <text x="1220" y="700" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">No dependencies</text>
+  <text x="1220" y="740" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Instant startup</text>
+
+  <rect x="1460" y="520" width="360" height="280" rx="25" fill="#2a2a4a" stroke="#9966ff" stroke-width="4"/>
+  <text x="1640" y="600" font-family="Arial" font-size="36" fill="#9966ff" text-anchor="middle">Async</text>
+  <text x="1640" y="660" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Tokio runtime</text>
+  <text x="1640" y="700" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Non-blocking I/O</text>
+  <text x="1640" y="740" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Efficient concurrency</text>
+
+  <!-- Stats -->
+  <rect x="560" y="860" width="800" height="100" rx="20" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="2"/>
+  <text x="960" y="920" font-family="Arial" font-size="28" fill="#ff8844" text-anchor="middle">~800 lines of code, handles thousands of requests per second</text>
+
+  <text x="960" y="1020" font-family="Arial" font-size="24" fill="#888888" text-anchor="middle">The right tool for a high-performance protocol server</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">This Implementation</text>
+
+  <!-- Rust + Emacs visual -->
+  <rect x="560" y="180" width="800" height="400" rx="30" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="5"/>
+
+  <!-- Rust logo area -->
+  <circle cx="720" cy="380" r="120" fill="#2a2a4a" stroke="#ff8844" stroke-width="4"/>
+  <text x="720" y="360" font-family="Arial" font-size="48" fill="#ff8844" text-anchor="middle">Rust</text>
+  <text x="720" y="410" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">MCP Server</text>
+  <text x="720" y="450" font-family="monospace" font-size="14" fill="#666688" text-anchor="middle">~800 lines</text>
+
+  <!-- Plus sign -->
+  <text x="960" y="400" font-family="Arial" font-size="96" fill="#44ff88">+</text>
+
+  <!-- Emacs logo area -->
+  <circle cx="1200" cy="380" r="120" fill="#2a2a4a" stroke="#9966ff" stroke-width="4"/>
+  <text x="1200" y="360" font-family="Arial" font-size="48" fill="#9966ff" text-anchor="middle">E</text>
+  <text x="1200" y="410" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Emacs</text>
+  <text x="1200" y="450" font-family="monospace" font-size="14" fill="#666688" text-anchor="middle">Server Mode</text>
+
+  <!-- Five tools -->
+  <text x="960" y="680" font-family="Arial" font-size="36" fill="#ffffff" text-anchor="middle">Five Core Tools</text>
+
+  <rect x="110" y="740" width="280" height="140" rx="20" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="250" y="800" font-family="Arial" font-size="26" fill="#4488ff" text-anchor="middle">dired</text>
+  <text x="250" y="845" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Directory listing</text>
+
+  <rect x="430" y="740" width="280" height="140" rx="20" fill="#2a2a4a" stroke="#44ff88" stroke-width="3"/>
+  <text x="570" y="800" font-family="Arial" font-size="26" fill="#44ff88" text-anchor="middle">open-file</text>
+  <text x="570" y="845" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Load into buffer</text>
+
+  <rect x="750" y="740" width="280" height="140" rx="20" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="890" y="800" font-family="Arial" font-size="26" fill="#ff8844" text-anchor="middle">insert</text>
+  <text x="890" y="845" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Add text at cursor</text>
+
+  <rect x="1070" y="740" width="280" height="140" rx="20" fill="#2a2a4a" stroke="#9966ff" stroke-width="3"/>
+  <text x="1210" y="800" font-family="Arial" font-size="26" fill="#9966ff" text-anchor="middle">split-window</text>
+  <text x="1210" y="845" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Manage layout</text>
+
+  <rect x="1390" y="740" width="280" height="140" rx="20" fill="#2a2a4a" stroke="#ff4488" stroke-width="3"/>
+  <text x="1530" y="800" font-family="Arial" font-size="26" fill="#ff4488" text-anchor="middle">eval</text>
+  <text x="1530" y="845" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Run any Elisp</text>
+
+  <text x="960" y="980" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">AI controls Emacs through standardized operations</text>
+</svg>

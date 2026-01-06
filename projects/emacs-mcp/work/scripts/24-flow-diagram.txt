@@ -1,0 +1,1 @@
+The flow is simple. A i sends json, the server translates, Emacs executes, and you see results.

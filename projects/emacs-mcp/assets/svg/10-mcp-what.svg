@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- MCP Logo/Title -->
+  <rect x="560" y="150" width="800" height="200" rx="30" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="5"/>
+  <text x="960" y="250" font-family="Arial" font-size="72" fill="#44ff88" text-anchor="middle" font-weight="bold">MCP</text>
+  <text x="960" y="310" font-family="Arial" font-size="32" fill="#ffffff" text-anchor="middle">Model Context Protocol</text>
+
+  <!-- Anthropic badge -->
+  <rect x="760" y="400" width="400" height="80" rx="15" fill="#2a2a4a" stroke="#4488ff" stroke-width="2"/>
+  <text x="960" y="450" font-family="Arial" font-size="28" fill="#4488ff" text-anchor="middle">Created by Anthropic</text>
+
+  <!-- Timeline -->
+  <rect x="660" y="520" width="600" height="60" rx="10" fill="#1a1a2a" stroke="#666688" stroke-width="2"/>
+  <text x="960" y="560" font-family="Arial" font-size="24" fill="#888888" text-anchor="middle">November 2024</text>
+
+  <!-- Key points -->
+  <rect x="300" y="650" width="400" height="150" rx="20" fill="#2a2a4a" stroke="#44ff88" stroke-width="3"/>
+  <text x="500" y="710" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Open Standard</text>
+  <text x="500" y="760" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Anyone can implement it</text>
+
+  <rect x="760" y="650" width="400" height="150" rx="20" fill="#2a2a4a" stroke="#4488ff" stroke-width="3"/>
+  <text x="960" y="710" font-family="Arial" font-size="24" fill="#4488ff" text-anchor="middle">Open Source</text>
+  <text x="960" y="760" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Free to use and modify</text>
+
+  <rect x="1220" y="650" width="400" height="150" rx="20" fill="#2a2a4a" stroke="#ff8844" stroke-width="3"/>
+  <text x="1420" y="710" font-family="Arial" font-size="24" fill="#ff8844" text-anchor="middle">Industry Adoption</text>
+  <text x="1420" y="760" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">OpenAI, Microsoft joined</text>
+
+  <text x="960" y="920" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">A standard way for AI to connect to external tools</text>
+</svg>

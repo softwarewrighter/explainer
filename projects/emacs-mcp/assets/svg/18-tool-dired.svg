@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg1)"/>
+
+  <!-- Tool badge -->
+  <rect x="760" y="60" width="400" height="70" rx="35" fill="#4488ff" fill-opacity="0.2" stroke="#4488ff" stroke-width="3"/>
+  <text x="960" y="105" font-family="Arial" font-size="32" fill="#4488ff" text-anchor="middle">Tool 1: dired</text>
+
+  <text x="960" y="200" font-family="Arial" font-size="36" fill="#ffffff" text-anchor="middle">Open Directory Listings</text>
+
+  <!-- Directory tree visual -->
+  <rect x="200" y="280" width="700" height="500" rx="20" fill="#1a1a2a" stroke="#4488ff" stroke-width="3"/>
+  <text x="550" y="340" font-family="monospace" font-size="24" fill="#4488ff" text-anchor="middle">~/projects/</text>
+
+  <!-- Directory entries -->
+  <text x="280" y="400" font-family="monospace" font-size="20" fill="#9966ff">drwxr-xr-x</text>
+  <text x="520" y="400" font-family="monospace" font-size="20" fill="#44ff88">src/</text>
+
+  <text x="280" y="440" font-family="monospace" font-size="20" fill="#9966ff">drwxr-xr-x</text>
+  <text x="520" y="440" font-family="monospace" font-size="20" fill="#44ff88">docs/</text>
+
+  <text x="280" y="480" font-family="monospace" font-size="20" fill="#666688">-rw-r--r--</text>
+  <text x="520" y="480" font-family="monospace" font-size="20" fill="#888888">Cargo.toml</text>
+
+  <text x="280" y="520" font-family="monospace" font-size="20" fill="#666688">-rw-r--r--</text>
+  <text x="520" y="520" font-family="monospace" font-size="20" fill="#888888">README.md</text>
+
+  <text x="280" y="560" font-family="monospace" font-size="20" fill="#666688">-rw-r--r--</text>
+  <text x="520" y="560" font-family="monospace" font-size="20" fill="#888888">main.rs</text>
+
+  <text x="280" y="620" font-family="monospace" font-size="18" fill="#666688">5 items</text>
+
+  <!-- Command -->
+  <rect x="200" y="720" width="700" height="60" rx="10" fill="#2a2a4a" stroke="#666688" stroke-width="2"/>
+  <text x="550" y="760" font-family="monospace" font-size="20" fill="#4488ff" text-anchor="middle">{ "name": "dired", "arguments": { "path": "~/projects" } }</text>
+
+  <!-- Features -->
+  <rect x="1020" y="280" width="700" height="500" rx="20" fill="#2a2a4a" stroke="#44ff88" stroke-width="3"/>
+  <text x="1370" y="350" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">What AI Can Do</text>
+
+  <circle cx="1100" cy="430" r="15" fill="#44ff88"/>
+  <text x="1130" y="438" font-family="Arial" font-size="22" fill="#ffffff">Browse your file system</text>
+
+  <circle cx="1100" cy="490" r="15" fill="#44ff88"/>
+  <text x="1130" y="498" font-family="Arial" font-size="22" fill="#ffffff">Navigate project structure</text>
+
+  <circle cx="1100" cy="550" r="15" fill="#44ff88"/>
+  <text x="1130" y="558" font-family="Arial" font-size="22" fill="#ffffff">Find files to work with</text>
+
+  <circle cx="1100" cy="610" r="15" fill="#44ff88"/>
+  <text x="1130" y="618" font-family="Arial" font-size="22" fill="#ffffff">Understand directory layout</text>
+
+  <circle cx="1100" cy="670" r="15" fill="#44ff88"/>
+  <text x="1130" y="678" font-family="Arial" font-size="22" fill="#ffffff">See permissions and dates</text>
+
+  <text x="960" y="900" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">AI gets a file explorer view of your directories</text>
+</svg>

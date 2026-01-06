@@ -1,0 +1,1 @@
+Today we cover Emacs, m c p servers, and a Rust implementation that ties them together.

@@ -1,0 +1,1 @@
+Emacs is a text editor. But calling it just that undersells it completely.

@@ -1,0 +1,1 @@
+Eval can run doctor, an Eliza chatbot built into Emacs. Our L L M chats with it.
