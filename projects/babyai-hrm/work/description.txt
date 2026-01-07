@@ -1,0 +1,34 @@
+What does an AI actually learn during training? Most explanations skip this part.
+
+This video opens the black box of AI training. Watch a hierarchical reinforcement learning model transform from random wandering to efficient problem-solving on the classic BabyAI task.
+
+We explore:
+- The BabyAI unlock-and-open task (navigate to key, pick it up, unlock door)
+- Hierarchical Reinforcement Machines (HRM) with planner and doer agents
+- Real-time visualization of the learning process
+- How thought bubbles reveal what the AI is "thinking"
+
+Try the interactive visualization yourself and watch AI learning happen in real-time.
+
+LINKS
+Live Demo: https://softwarewrighter.github.io/viz-hrm-ft
+GitHub Repo: https://github.com/softwarewrighter/viz-hrm-ft
+HRM Paper: https://arxiv.org/abs/2506.21734
+TRM Paper: https://arxiv.org/abs/2510.04871
+BabyAI Paper: https://arxiv.org/abs/1810.08272
+
+TIMESTAMPS
+0:00 Intro
+0:05 The problem with AI training explanations
+0:20 What this visualization shows
+0:39 The BabyAI task explained
+1:10 Why hierarchical learning?
+1:48 Planner and doer roles
+2:27 HRM vs LLM comparison
+2:54 The visualization walkthrough
+3:30 Training data and learning process
+4:06 Interactive demo
+6:19 Key takeaways
+6:33 Try it yourself
+
+#MachineLearning #ReinforcementLearning #AIVisualization #BabyAI #HierarchicalRL #AITraining #DeepLearning #vibecoding #AIExplained #LearnAI
