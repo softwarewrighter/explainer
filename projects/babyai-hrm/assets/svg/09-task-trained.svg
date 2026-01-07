@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#44ff88" text-anchor="middle">After Training: Efficient Navigation</text>
+
+  <!-- Grid -->
+  <g transform="translate(260, 280)">
+    <rect x="0" y="0" width="130" height="130" fill="#2a2a4a" stroke="#444466" stroke-width="3"/>
+    <rect x="140" y="0" width="130" height="130" fill="#2a2a4a" stroke="#444466" stroke-width="3"/>
+    <rect x="280" y="0" width="130" height="130" fill="#ffcc00" fill-opacity="0.15" stroke="#ffcc00" stroke-width="3"/>
+    <text x="345" y="90" font-family="Arial" font-size="48">🔑</text>
+    <rect x="420" y="0" width="130" height="130" fill="#2a2a4a" stroke="#444466" stroke-width="3"/>
+    <rect x="560" y="0" width="130" height="130" fill="#44ff88" fill-opacity="0.15" stroke="#44ff88" stroke-width="3"/>
+    <text x="625" y="90" font-family="Arial" font-size="48">👤</text>
+    <rect x="700" y="0" width="130" height="130" fill="#2a2a4a" stroke="#444466" stroke-width="3"/>
+    <rect x="840" y="0" width="130" height="130" fill="#2a2a4a" stroke="#444466" stroke-width="3"/>
+    <rect x="980" y="0" width="130" height="130" fill="#2a2a4a" stroke="#444466" stroke-width="3"/>
+    <rect x="1120" y="0" width="130" height="130" fill="#2a2a4a" stroke="#444466" stroke-width="3"/>
+    <rect x="1260" y="0" width="130" height="130" fill="#ff8844" fill-opacity="0.15" stroke="#ff8844" stroke-width="3"/>
+    <text x="1325" y="90" font-family="Arial" font-size="48">🚪</text>
+  </g>
+
+  <!-- Efficient path visualization -->
+  <g transform="translate(260, 420)">
+    <path d="M625 0 L485 0 L345 0" stroke="#44ff88" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+    <text x="485" y="-20" font-family="Arial" font-size="18" fill="#44ff88" text-anchor="middle">← Get key</text>
+
+    <path d="M385 20 L1325 20" stroke="#44ff88" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+    <text x="800" y="60" font-family="Arial" font-size="18" fill="#44ff88" text-anchor="middle">Go to door →</text>
+  </g>
+
+  <!-- Stats -->
+  <g transform="translate(400, 550)">
+    <rect x="0" y="0" width="500" height="180" rx="15" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="2"/>
+    <text x="250" y="50" font-family="Arial" font-size="32" fill="#44ff88" text-anchor="middle">Trained Performance</text>
+    <text x="50" y="100" font-family="Arial" font-size="24" fill="#888888">Steps:</text>
+    <text x="200" y="100" font-family="Arial" font-size="24" fill="#44ff88">8-10</text>
+    <text x="280" y="100" font-family="Arial" font-size="24" fill="#888888">(optimal!)</text>
+    <text x="50" y="140" font-family="Arial" font-size="24" fill="#888888">Success Rate:</text>
+    <text x="250" y="140" font-family="Arial" font-size="24" fill="#44ff88">~95%</text>
+  </g>
+
+  <!-- Thought bubble showing strategy -->
+  <g transform="translate(1050, 550)">
+    <rect x="0" y="0" width="400" height="180" rx="15" fill="#1a1a2a" stroke="#44ff88" stroke-width="2"/>
+    <text x="200" y="50" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">AI Thinking:</text>
+    <text x="200" y="100" font-family="Arial" font-size="48" text-anchor="middle">🔑 → 🚪 → 🔓</text>
+    <text x="200" y="150" font-family="Arial" font-size="20" fill="#666666" text-anchor="middle">"Key first, then door!"</text>
+  </g>
+
+  <text x="960" y="820" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">Clear strategy, efficient execution</text>
+</svg>

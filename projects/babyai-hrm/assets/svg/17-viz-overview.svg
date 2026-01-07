@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <text x="960" y="80" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">The Visualization Tool</text>
+
+  <!-- Mock screenshot frame -->
+  <rect x="200" y="150" width="1520" height="750" rx="15" fill="#1a1a2a" stroke="#444466" stroke-width="3"/>
+
+  <!-- Title bar -->
+  <rect x="200" y="150" width="1520" height="50" rx="15" fill="#2a2a4a"/>
+  <circle cx="240" cy="175" r="10" fill="#ff5555"/>
+  <circle cx="270" cy="175" r="10" fill="#ffaa00"/>
+  <circle cx="300" cy="175" r="10" fill="#44ff88"/>
+  <text x="960" y="185" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">HRM Training Visualization</text>
+
+  <!-- Main content area -->
+  <!-- Left panel - Tutorial -->
+  <rect x="230" y="220" width="400" height="350" rx="10" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+  <text x="430" y="260" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Watch the AI Learn</text>
+  <text x="430" y="310" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">The AI will study each example,</text>
+  <text x="430" y="340" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">starting slowly then speeding up.</text>
+  <rect x="280" y="380" width="300" height="50" rx="8" fill="#44ff88" fill-opacity="0.3" stroke="#44ff88" stroke-width="2"/>
+  <text x="430" y="415" font-family="Arial" font-size="20" fill="#44ff88" text-anchor="middle">Start Training</text>
+
+  <!-- Right panel - Grid -->
+  <rect x="660" y="220" width="800" height="200" rx="10" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+  <!-- Mini cells -->
+  <g transform="translate(700, 270)">
+    <rect x="0" y="0" width="65" height="65" fill="#3a3a5a" stroke="#555577" stroke-width="2"/>
+    <rect x="70" y="0" width="65" height="65" fill="#3a3a5a" stroke="#555577" stroke-width="2"/>
+    <rect x="140" y="0" width="65" height="65" fill="#ffcc00" fill-opacity="0.2" stroke="#ffcc00" stroke-width="2"/>
+    <text x="172" y="45" font-family="Arial" font-size="28">🔑</text>
+    <rect x="210" y="0" width="65" height="65" fill="#3a3a5a" stroke="#555577" stroke-width="2"/>
+    <rect x="280" y="0" width="65" height="65" fill="#44ff88" fill-opacity="0.2" stroke="#44ff88" stroke-width="2"/>
+    <text x="312" y="45" font-family="Arial" font-size="28">👤</text>
+    <rect x="350" y="0" width="65" height="65" fill="#3a3a5a" stroke="#555577" stroke-width="2"/>
+    <rect x="420" y="0" width="65" height="65" fill="#3a3a5a" stroke="#555577" stroke-width="2"/>
+    <rect x="490" y="0" width="65" height="65" fill="#3a3a5a" stroke="#555577" stroke-width="2"/>
+    <rect x="560" y="0" width="65" height="65" fill="#3a3a5a" stroke="#555577" stroke-width="2"/>
+    <rect x="630" y="0" width="65" height="65" fill="#ff8844" fill-opacity="0.2" stroke="#ff8844" stroke-width="2"/>
+    <text x="662" y="45" font-family="Arial" font-size="28">🚪</text>
+  </g>
+  <text x="1060" y="390" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Steps: 3/40  Optimal: 14  Efficiency: 467%</text>
+
+  <!-- Bottom panels -->
+  <!-- Model Info -->
+  <rect x="230" y="590" width="300" height="150" rx="10" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+  <text x="380" y="630" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Model Info</text>
+  <text x="260" y="670" font-family="Arial" font-size="16" fill="#9966ff">🧠 Planner:</text>
+  <rect x="360" y="655" width="140" height="16" fill="#1a1a2a" stroke="#9966ff" stroke-width="1"/>
+  <rect x="360" y="655" width="42" height="16" fill="#9966ff" fill-opacity="0.5"/>
+  <text x="260" y="710" font-family="Arial" font-size="16" fill="#44ff88">⚡ Doer:</text>
+  <rect x="360" y="695" width="140" height="16" fill="#1a1a2a" stroke="#44ff88" stroke-width="1"/>
+  <rect x="360" y="695" width="56" height="16" fill="#44ff88" fill-opacity="0.5"/>
+
+  <!-- Training Data -->
+  <rect x="560" y="590" width="400" height="150" rx="10" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+  <text x="760" y="630" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Training Data</text>
+  <g transform="translate(580, 660)">
+    <rect x="0" y="0" width="35" height="35" rx="5" fill="#44ff88" fill-opacity="0.3" stroke="#44ff88"/>
+    <text x="17" y="25" font-family="Arial" font-size="14" fill="#44ff88" text-anchor="middle">#1</text>
+    <rect x="40" y="0" width="35" height="35" rx="5" fill="#44ff88" fill-opacity="0.3" stroke="#44ff88"/>
+    <text x="57" y="25" font-family="Arial" font-size="14" fill="#44ff88" text-anchor="middle">#2</text>
+    <rect x="80" y="0" width="35" height="35" rx="5" fill="#44ff88" fill-opacity="0.3" stroke="#44ff88"/>
+    <text x="97" y="25" font-family="Arial" font-size="14" fill="#44ff88" text-anchor="middle">#3</text>
+    <text x="140" y="25" font-family="Arial" font-size="20" fill="#666666">...</text>
+    <rect x="170" y="0" width="35" height="35" rx="5" fill="#666666" fill-opacity="0.3" stroke="#666666"/>
+    <text x="187" y="25" font-family="Arial" font-size="14" fill="#666666" text-anchor="middle">#10</text>
+  </g>
+
+  <!-- Model Learning -->
+  <rect x="990" y="590" width="450" height="150" rx="10" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+  <text x="1215" y="630" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Model Learning</text>
+  <text x="1215" y="670" font-family="Arial" font-size="18" fill="#ff8844" text-anchor="middle">Training in Progress</text>
+  <text x="1215" y="710" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Processing Example 1/10</text>
+
+  <text x="960" y="950" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Interactive learning visualization</text>
+</svg>

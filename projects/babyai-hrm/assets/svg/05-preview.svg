@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <text x="960" y="120" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">Today's Topics</text>
+
+  <!-- Topic 1: BabyAI Task -->
+  <rect x="200" y="250" width="400" height="450" rx="25" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="3"/>
+  <text x="400" y="340" font-family="Arial" font-size="32" fill="#44ff88" text-anchor="middle">BabyAI Task</text>
+  <!-- Mini grid -->
+  <g transform="translate(250, 400)">
+    <rect x="0" y="0" width="30" height="30" fill="#2a2a4a" stroke="#444466"/>
+    <rect x="32" y="0" width="30" height="30" fill="#2a2a4a" stroke="#444466"/>
+    <rect x="64" y="0" width="30" height="30" fill="#2a2a4a" stroke="#444466"/>
+    <rect x="96" y="0" width="30" height="30" fill="#2a2a4a" stroke="#444466"/>
+    <rect x="128" y="0" width="30" height="30" fill="#2a2a4a" stroke="#444466"/>
+    <rect x="160" y="0" width="30" height="30" fill="#2a2a4a" stroke="#444466"/>
+    <rect x="192" y="0" width="30" height="30" fill="#2a2a4a" stroke="#444466"/>
+    <rect x="224" y="0" width="30" height="30" fill="#2a2a4a" stroke="#444466"/>
+    <rect x="256" y="0" width="30" height="30" fill="#2a2a4a" stroke="#444466"/>
+    <rect x="288" y="0" width="30" height="30" fill="#2a2a4a" stroke="#444466"/>
+  </g>
+  <text x="400" y="520" font-family="Arial" font-size="48">🔑 👤 🚪</text>
+  <text x="400" y="620" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Key-Door Puzzle</text>
+
+  <!-- Topic 2: Hierarchical Models -->
+  <rect x="700" y="250" width="400" height="450" rx="25" fill="#9966ff" fill-opacity="0.1" stroke="#9966ff" stroke-width="3"/>
+  <text x="900" y="340" font-family="Arial" font-size="32" fill="#9966ff" text-anchor="middle">Hierarchical Models</text>
+  <!-- Two-level diagram -->
+  <rect x="780" y="400" width="240" height="60" rx="10" fill="#9966ff" fill-opacity="0.3" stroke="#9966ff" stroke-width="2"/>
+  <text x="900" y="440" font-family="Arial" font-size="20" fill="#9966ff" text-anchor="middle">Planner</text>
+  <path d="M900 470 L900 510" stroke="#9966ff" stroke-width="2"/>
+  <rect x="780" y="520" width="240" height="60" rx="10" fill="#44ff88" fill-opacity="0.3" stroke="#44ff88" stroke-width="2"/>
+  <text x="900" y="560" font-family="Arial" font-size="20" fill="#44ff88" text-anchor="middle">Doer</text>
+  <text x="900" y="640" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">HRM / TRM</text>
+
+  <!-- Topic 3: Training Visualization -->
+  <rect x="1200" y="250" width="400" height="450" rx="25" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="3"/>
+  <text x="1400" y="340" font-family="Arial" font-size="32" fill="#ff8844" text-anchor="middle">Visualization</text>
+  <!-- Progress animation -->
+  <rect x="1260" y="420" width="280" height="24" fill="#1a1a2a" stroke="#ff8844" stroke-width="2" rx="4"/>
+  <rect x="1262" y="422" width="80" height="20" fill="#ff8844" fill-opacity="0.5" rx="3"/>
+  <rect x="1260" y="470" width="280" height="24" fill="#1a1a2a" stroke="#ff8844" stroke-width="2" rx="4"/>
+  <rect x="1262" y="472" width="140" height="20" fill="#ff8844" fill-opacity="0.5" rx="3"/>
+  <rect x="1260" y="520" width="280" height="24" fill="#1a1a2a" stroke="#ff8844" stroke-width="2" rx="4"/>
+  <rect x="1262" y="522" width="220" height="20" fill="#ff8844" fill-opacity="0.5" rx="3"/>
+  <text x="1400" y="620" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Watch Learning Happen</text>
+
+  <!-- Bottom text -->
+  <text x="960" y="800" font-family="Arial" font-size="28" fill="#666688" text-anchor="middle">From random wandering to efficient problem solving</text>
+</svg>

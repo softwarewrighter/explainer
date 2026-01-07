@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <text x="960" y="80" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">The Transformation</text>
+
+  <!-- BEFORE -->
+  <g transform="translate(100, 150)">
+    <rect x="0" y="0" width="800" height="700" rx="30" fill="#ff4444" fill-opacity="0.1" stroke="#ff4444" stroke-width="4"/>
+    <text x="400" y="60" font-family="Arial" font-size="40" fill="#ff4444" text-anchor="middle">BEFORE Training</text>
+
+    <!-- Grid -->
+    <g transform="translate(50, 120)">
+      <rect x="0" y="0" width="65" height="65" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+      <rect x="70" y="0" width="65" height="65" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+      <rect x="140" y="0" width="65" height="65" fill="#ffcc00" fill-opacity="0.2" stroke="#ffcc00" stroke-width="2"/>
+      <text x="172" y="45" font-family="Arial" font-size="28">🔑</text>
+      <rect x="210" y="0" width="65" height="65" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+      <rect x="280" y="0" width="65" height="65" fill="#44ff88" fill-opacity="0.2" stroke="#44ff88" stroke-width="2"/>
+      <text x="312" y="45" font-family="Arial" font-size="28">👤</text>
+      <rect x="350" y="0" width="65" height="65" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+      <rect x="420" y="0" width="65" height="65" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+      <rect x="490" y="0" width="65" height="65" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+      <rect x="560" y="0" width="65" height="65" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+      <rect x="630" y="0" width="65" height="65" fill="#ff8844" fill-opacity="0.2" stroke="#ff8844" stroke-width="2"/>
+      <text x="662" y="45" font-family="Arial" font-size="28">🚪</text>
+    </g>
+
+    <!-- Random path -->
+    <g transform="translate(50, 210)">
+      <path d="M312 0 L380 20 L312 40 L172 60 L312 80 L450 100 L312 120 L172 140 L80 160 L172 180"
+            stroke="#ff4444" stroke-width="3" fill="none" opacity="0.6"/>
+      <text x="350" y="220" font-family="Arial" font-size="18" fill="#ff4444" text-anchor="middle">Random wandering...</text>
+    </g>
+
+    <!-- Stats -->
+    <g transform="translate(100, 460)">
+      <text x="0" y="0" font-family="Arial" font-size="28" fill="#ff4444">Steps: 30-40</text>
+      <text x="0" y="50" font-family="Arial" font-size="28" fill="#ff4444">Success: ~30%</text>
+      <text x="0" y="100" font-family="Arial" font-size="28" fill="#ff4444">Efficiency: Poor</text>
+    </g>
+
+    <!-- Thought -->
+    <rect x="400" y="450" width="350" height="120" rx="15" fill="#1a1a2a" stroke="#ff4444" stroke-width="2"/>
+    <text x="575" y="500" font-family="Arial" font-size="24" fill="#ff4444" text-anchor="middle">🤷 "No idea..."</text>
+    <text x="575" y="540" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Random actions</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M920 500 L1000 500" stroke="#44ff88" stroke-width="8" marker-end="url(#arrowG)"/>
+
+  <!-- AFTER -->
+  <g transform="translate(1020, 150)">
+    <rect x="0" y="0" width="800" height="700" rx="30" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="4"/>
+    <text x="400" y="60" font-family="Arial" font-size="40" fill="#44ff88" text-anchor="middle">AFTER Training</text>
+
+    <!-- Grid -->
+    <g transform="translate(50, 120)">
+      <rect x="0" y="0" width="65" height="65" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+      <rect x="70" y="0" width="65" height="65" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+      <rect x="140" y="0" width="65" height="65" fill="#ffcc00" fill-opacity="0.2" stroke="#ffcc00" stroke-width="2"/>
+      <text x="172" y="45" font-family="Arial" font-size="28">🔑</text>
+      <rect x="210" y="0" width="65" height="65" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+      <rect x="280" y="0" width="65" height="65" fill="#44ff88" fill-opacity="0.2" stroke="#44ff88" stroke-width="2"/>
+      <text x="312" y="45" font-family="Arial" font-size="28">👤</text>
+      <rect x="350" y="0" width="65" height="65" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+      <rect x="420" y="0" width="65" height="65" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+      <rect x="490" y="0" width="65" height="65" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+      <rect x="560" y="0" width="65" height="65" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+      <rect x="630" y="0" width="65" height="65" fill="#ff8844" fill-opacity="0.2" stroke="#ff8844" stroke-width="2"/>
+      <text x="662" y="45" font-family="Arial" font-size="28">🚪</text>
+    </g>
+
+    <!-- Efficient path -->
+    <g transform="translate(50, 210)">
+      <path d="M312 30 L172 30" stroke="#44ff88" stroke-width="4" fill="none" marker-end="url(#arrowG)"/>
+      <text x="242" y="20" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">Get key</text>
+
+      <path d="M200 60 L662 60" stroke="#44ff88" stroke-width="4" fill="none" marker-end="url(#arrowG)"/>
+      <text x="430" y="90" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">Go to door</text>
+    </g>
+
+    <!-- Stats -->
+    <g transform="translate(100, 460)">
+      <text x="0" y="0" font-family="Arial" font-size="28" fill="#44ff88">Steps: 8-10</text>
+      <text x="0" y="50" font-family="Arial" font-size="28" fill="#44ff88">Success: ~95%</text>
+      <text x="0" y="100" font-family="Arial" font-size="28" fill="#44ff88">Efficiency: Optimal</text>
+    </g>
+
+    <!-- Thought -->
+    <rect x="400" y="450" width="350" height="120" rx="15" fill="#1a1a2a" stroke="#44ff88" stroke-width="2"/>
+    <text x="575" y="500" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">💡 "Key → Door!"</text>
+    <text x="575" y="540" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Strategic actions</text>
+  </g>
+
+  <text x="960" y="930" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">From chaos to clarity in just 10 examples</text>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">Metrics: Track Improvement</text>
+
+  <!-- Metrics display mockup -->
+  <g transform="translate(400, 180)">
+    <rect x="0" y="0" width="1100" height="200" rx="20" fill="#1a1a2a" stroke="#44ff88" stroke-width="3"/>
+
+    <!-- Steps -->
+    <g transform="translate(80, 40)">
+      <text x="0" y="40" font-family="Arial" font-size="24" fill="#888888">Steps:</text>
+      <text x="120" y="40" font-family="Arial" font-size="36" fill="#ffffff" font-weight="bold">3/40</text>
+      <text x="0" y="80" font-family="Arial" font-size="16" fill="#666666">Current progress</text>
+    </g>
+
+    <!-- Optimal -->
+    <g transform="translate(380, 40)">
+      <text x="0" y="40" font-family="Arial" font-size="24" fill="#888888">Optimal:</text>
+      <text x="130" y="40" font-family="Arial" font-size="36" fill="#44ff88" font-weight="bold">14</text>
+      <text x="0" y="80" font-family="Arial" font-size="16" fill="#666666">Best possible</text>
+    </g>
+
+    <!-- Efficiency -->
+    <g transform="translate(630, 40)">
+      <text x="0" y="40" font-family="Arial" font-size="24" fill="#888888">Efficiency:</text>
+      <text x="150" y="40" font-family="Arial" font-size="36" fill="#ff4444" font-weight="bold">467%</text>
+      <text x="0" y="80" font-family="Arial" font-size="16" fill="#666666">Steps / Optimal</text>
+    </g>
+
+    <!-- Status icons -->
+    <g transform="translate(900, 40)">
+      <text x="0" y="40" font-family="Arial" font-size="24" fill="#888888">Key:</text>
+      <text x="70" y="40" font-family="Arial" font-size="28" fill="#ff4444">❌</text>
+      <text x="0" y="80" font-family="Arial" font-size="24" fill="#888888">Door:</text>
+      <text x="80" y="80" font-family="Arial" font-size="28" fill="#ff8844">🔒</text>
+    </g>
+  </g>
+
+  <!-- Before vs After comparison -->
+  <g transform="translate(250, 450)">
+    <text x="700" y="0" font-family="Arial" font-size="32" fill="#ffffff" text-anchor="middle">Before vs After Training</text>
+
+    <!-- Before metrics -->
+    <g transform="translate(0, 50)">
+      <rect x="0" y="0" width="600" height="300" rx="20" fill="#ff4444" fill-opacity="0.1" stroke="#ff4444" stroke-width="3"/>
+      <text x="300" y="50" font-family="Arial" font-size="28" fill="#ff4444" text-anchor="middle">UNTRAINED</text>
+
+      <text x="50" y="120" font-family="Arial" font-size="22" fill="#888888">Steps:</text>
+      <text x="200" y="120" font-family="Arial" font-size="28" fill="#ff4444">35</text>
+
+      <text x="50" y="170" font-family="Arial" font-size="22" fill="#888888">Optimal:</text>
+      <text x="200" y="170" font-family="Arial" font-size="28" fill="#888888">14</text>
+
+      <text x="50" y="220" font-family="Arial" font-size="22" fill="#888888">Efficiency:</text>
+      <text x="200" y="220" font-family="Arial" font-size="28" fill="#ff4444">250%</text>
+      <text x="300" y="220" font-family="Arial" font-size="18" fill="#888888">(bad)</text>
+
+      <text x="50" y="270" font-family="Arial" font-size="22" fill="#888888">Success:</text>
+      <text x="200" y="270" font-family="Arial" font-size="28" fill="#ff4444">~30%</text>
+    </g>
+
+    <!-- Arrow -->
+    <text x="680" y="200" font-family="Arial" font-size="72" fill="#44ff88">→</text>
+
+    <!-- After metrics -->
+    <g transform="translate(800, 50)">
+      <rect x="0" y="0" width="600" height="300" rx="20" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="3"/>
+      <text x="300" y="50" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">TRAINED</text>
+
+      <text x="50" y="120" font-family="Arial" font-size="22" fill="#888888">Steps:</text>
+      <text x="200" y="120" font-family="Arial" font-size="28" fill="#44ff88">9</text>
+
+      <text x="50" y="170" font-family="Arial" font-size="22" fill="#888888">Optimal:</text>
+      <text x="200" y="170" font-family="Arial" font-size="28" fill="#888888">14</text>
+
+      <text x="50" y="220" font-family="Arial" font-size="22" fill="#888888">Efficiency:</text>
+      <text x="200" y="220" font-family="Arial" font-size="28" fill="#44ff88">64%</text>
+      <text x="280" y="220" font-family="Arial" font-size="18" fill="#888888">(great!)</text>
+
+      <text x="50" y="270" font-family="Arial" font-size="22" fill="#888888">Success:</text>
+      <text x="200" y="270" font-family="Arial" font-size="28" fill="#44ff88">~95%</text>
+    </g>
+  </g>
+
+  <text x="960" y="900" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Clear metrics show the impact of training</text>
+</svg>

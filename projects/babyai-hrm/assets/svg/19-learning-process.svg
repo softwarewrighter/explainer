@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">The Learning Process</text>
+
+  <!-- Timeline showing progress -->
+  <g transform="translate(200, 200)">
+    <!-- Example 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="280" height="180" rx="15" fill="#44ff88" fill-opacity="0.2" stroke="#44ff88" stroke-width="3"/>
+      <text x="140" y="40" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Example 1</text>
+
+      <text x="30" y="80" font-family="Arial" font-size="16" fill="#9966ff">Planner:</text>
+      <rect x="110" y="65" width="140" height="20" fill="#1a1a2a" stroke="#9966ff" stroke-width="2"/>
+      <rect x="112" y="67" width="14" height="16" fill="#9966ff"/>
+      <text x="260" y="82" font-family="Arial" font-size="14" fill="#9966ff">10%</text>
+
+      <text x="30" y="120" font-family="Arial" font-size="16" fill="#44ff88">Doer:</text>
+      <rect x="110" y="105" width="140" height="20" fill="#1a1a2a" stroke="#44ff88" stroke-width="2"/>
+      <rect x="112" y="107" width="14" height="16" fill="#44ff88"/>
+      <text x="260" y="122" font-family="Arial" font-size="14" fill="#44ff88">10%</text>
+
+      <text x="140" y="160" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Just starting...</text>
+    </g>
+
+    <!-- Example 4 -->
+    <g transform="translate(320, 0)">
+      <rect x="0" y="0" width="280" height="180" rx="15" fill="#44ff88" fill-opacity="0.2" stroke="#44ff88" stroke-width="3"/>
+      <text x="140" y="40" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Example 4</text>
+
+      <text x="30" y="80" font-family="Arial" font-size="16" fill="#9966ff">Planner:</text>
+      <rect x="110" y="65" width="140" height="20" fill="#1a1a2a" stroke="#9966ff" stroke-width="2"/>
+      <rect x="112" y="67" width="56" height="16" fill="#9966ff"/>
+      <text x="260" y="82" font-family="Arial" font-size="14" fill="#9966ff">40%</text>
+
+      <text x="30" y="120" font-family="Arial" font-size="16" fill="#44ff88">Doer:</text>
+      <rect x="110" y="105" width="140" height="20" fill="#1a1a2a" stroke="#44ff88" stroke-width="2"/>
+      <rect x="112" y="107" width="42" height="16" fill="#44ff88"/>
+      <text x="260" y="122" font-family="Arial" font-size="14" fill="#44ff88">30%</text>
+
+      <text x="140" y="160" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Making progress...</text>
+    </g>
+
+    <!-- Example 7 -->
+    <g transform="translate(640, 0)">
+      <rect x="0" y="0" width="280" height="180" rx="15" fill="#44ff88" fill-opacity="0.2" stroke="#44ff88" stroke-width="3"/>
+      <text x="140" y="40" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Example 7</text>
+
+      <text x="30" y="80" font-family="Arial" font-size="16" fill="#9966ff">Planner:</text>
+      <rect x="110" y="65" width="140" height="20" fill="#1a1a2a" stroke="#9966ff" stroke-width="2"/>
+      <rect x="112" y="67" width="98" height="16" fill="#9966ff"/>
+      <text x="260" y="82" font-family="Arial" font-size="14" fill="#9966ff">70%</text>
+
+      <text x="30" y="120" font-family="Arial" font-size="16" fill="#44ff88">Doer:</text>
+      <rect x="110" y="105" width="140" height="20" fill="#1a1a2a" stroke="#44ff88" stroke-width="2"/>
+      <rect x="112" y="107" width="84" height="16" fill="#44ff88"/>
+      <text x="260" y="122" font-family="Arial" font-size="14" fill="#44ff88">60%</text>
+
+      <text x="140" y="160" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">Getting better!</text>
+    </g>
+
+    <!-- Example 10 -->
+    <g transform="translate(960, 0)">
+      <rect x="0" y="0" width="280" height="180" rx="15" fill="#44ff88" fill-opacity="0.3" stroke="#44ff88" stroke-width="4"/>
+      <text x="140" y="40" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Example 10</text>
+
+      <text x="30" y="80" font-family="Arial" font-size="16" fill="#9966ff">Planner:</text>
+      <rect x="110" y="65" width="140" height="20" fill="#1a1a2a" stroke="#9966ff" stroke-width="2"/>
+      <rect x="112" y="67" width="136" height="16" fill="#9966ff"/>
+      <text x="260" y="82" font-family="Arial" font-size="14" fill="#9966ff">95%</text>
+
+      <text x="30" y="120" font-family="Arial" font-size="16" fill="#44ff88">Doer:</text>
+      <rect x="110" y="105" width="140" height="20" fill="#1a1a2a" stroke="#44ff88" stroke-width="2"/>
+      <rect x="112" y="107" width="130" height="16" fill="#44ff88"/>
+      <text x="260" y="122" font-family="Arial" font-size="14" fill="#44ff88">90%</text>
+
+      <text x="140" y="160" font-family="Arial" font-size="14" fill="#44ff88" text-anchor="middle">Trained! ✓</text>
+    </g>
+
+    <!-- Timeline arrow -->
+    <path d="M1280 90 L1450 90" stroke="#44ff88" stroke-width="4" fill="none"/>
+    <polygon points="1450,90 1430,80 1430,100" fill="#44ff88"/>
+  </g>
+
+  <!-- Learning curve visualization -->
+  <g transform="translate(300, 500)">
+    <text x="600" y="0" font-family="Arial" font-size="28" fill="#ffffff" text-anchor="middle">Learning Curve</text>
+
+    <rect x="0" y="30" width="1200" height="300" rx="10" fill="#1a1a2a" stroke="#444466" stroke-width="2"/>
+
+    <!-- Y axis -->
+    <text x="-10" y="80" font-family="Arial" font-size="14" fill="#888888" text-anchor="end">100%</text>
+    <text x="-10" y="180" font-family="Arial" font-size="14" fill="#888888" text-anchor="end">50%</text>
+    <text x="-10" y="280" font-family="Arial" font-size="14" fill="#888888" text-anchor="end">0%</text>
+
+    <!-- X axis -->
+    <text x="120" y="350" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">1</text>
+    <text x="360" y="350" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">4</text>
+    <text x="600" y="350" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">7</text>
+    <text x="1080" y="350" font-family="Arial" font-size="14" fill="#888888" text-anchor="middle">10</text>
+    <text x="600" y="380" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Training Examples</text>
+
+    <!-- Planner curve -->
+    <path d="M60 280 Q300 250 480 180 Q700 100 1140 60" stroke="#9966ff" stroke-width="4" fill="none"/>
+    <text x="1160" y="70" font-family="Arial" font-size="16" fill="#9966ff">Planner</text>
+
+    <!-- Doer curve -->
+    <path d="M60 280 Q300 260 480 200 Q700 130 1140 80" stroke="#44ff88" stroke-width="4" fill="none"/>
+    <text x="1160" y="90" font-family="Arial" font-size="16" fill="#44ff88">Doer</text>
+  </g>
+
+  <text x="960" y="950" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Both modules improve together through training</text>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">Freeplay Mode: Experiment</text>
+
+  <!-- Control buttons -->
+  <g transform="translate(300, 200)">
+    <text x="600" y="50" font-family="Arial" font-size="32" fill="#888888" text-anchor="middle">Control Buttons</text>
+
+    <!-- Button 1: Reset -->
+    <g transform="translate(0, 100)">
+      <rect x="0" y="0" width="220" height="100" rx="15" fill="#ff4444" fill-opacity="0.2" stroke="#ff4444" stroke-width="3"/>
+      <text x="110" y="45" font-family="Arial" font-size="28" fill="#ff4444" text-anchor="middle">1. Reset</text>
+      <text x="110" y="80" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Clear everything</text>
+    </g>
+
+    <!-- Button 2: Test -->
+    <g transform="translate(250, 100)">
+      <rect x="0" y="0" width="220" height="100" rx="15" fill="#4488ff" fill-opacity="0.2" stroke="#4488ff" stroke-width="3"/>
+      <text x="110" y="45" font-family="Arial" font-size="28" fill="#4488ff" text-anchor="middle">2. Test</text>
+      <text x="110" y="80" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Run the AI</text>
+    </g>
+
+    <!-- Button 3: Data -->
+    <g transform="translate(500, 100)">
+      <rect x="0" y="0" width="220" height="100" rx="15" fill="#ffcc00" fill-opacity="0.2" stroke="#ffcc00" stroke-width="3"/>
+      <text x="110" y="45" font-family="Arial" font-size="28" fill="#ffcc00" text-anchor="middle">3. Data</text>
+      <text x="110" y="80" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Generate examples</text>
+    </g>
+
+    <!-- Button 4: Train -->
+    <g transform="translate(750, 100)">
+      <rect x="0" y="0" width="220" height="100" rx="15" fill="#44ff88" fill-opacity="0.2" stroke="#44ff88" stroke-width="3"/>
+      <text x="110" y="45" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">4. Train</text>
+      <text x="110" y="80" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Start training</text>
+    </g>
+
+    <!-- Button 5: Test -->
+    <g transform="translate(1000, 100)">
+      <rect x="0" y="0" width="220" height="100" rx="15" fill="#9966ff" fill-opacity="0.2" stroke="#9966ff" stroke-width="3"/>
+      <text x="110" y="45" font-family="Arial" font-size="28" fill="#9966ff" text-anchor="middle">5. Test</text>
+      <text x="110" y="80" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Compare results</text>
+    </g>
+  </g>
+
+  <!-- Workflow diagram -->
+  <g transform="translate(200, 450)">
+    <rect x="0" y="0" width="1500" height="350" rx="20" fill="#1a1a2a" stroke="#44ff88" stroke-width="3"/>
+
+    <text x="750" y="50" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">Suggested Workflow</text>
+
+    <!-- Workflow steps -->
+    <g transform="translate(100, 100)">
+      <rect x="0" y="0" width="200" height="80" rx="10" fill="#ff4444" fill-opacity="0.2" stroke="#ff4444" stroke-width="2"/>
+      <text x="100" y="50" font-family="Arial" font-size="18" fill="#ff4444" text-anchor="middle">Reset</text>
+    </g>
+
+    <text x="350" y="150" font-family="Arial" font-size="36" fill="#44ff88">→</text>
+
+    <g transform="translate(400, 100)">
+      <rect x="0" y="0" width="200" height="80" rx="10" fill="#4488ff" fill-opacity="0.2" stroke="#4488ff" stroke-width="2"/>
+      <text x="100" y="50" font-family="Arial" font-size="18" fill="#4488ff" text-anchor="middle">Test (untrained)</text>
+    </g>
+
+    <text x="650" y="150" font-family="Arial" font-size="36" fill="#44ff88">→</text>
+
+    <g transform="translate(700, 100)">
+      <rect x="0" y="0" width="200" height="80" rx="10" fill="#ffcc00" fill-opacity="0.2" stroke="#ffcc00" stroke-width="2"/>
+      <text x="100" y="50" font-family="Arial" font-size="18" fill="#ffcc00" text-anchor="middle">Generate Data</text>
+    </g>
+
+    <text x="950" y="150" font-family="Arial" font-size="36" fill="#44ff88">→</text>
+
+    <g transform="translate(1000, 100)">
+      <rect x="0" y="0" width="200" height="80" rx="10" fill="#44ff88" fill-opacity="0.2" stroke="#44ff88" stroke-width="2"/>
+      <text x="100" y="50" font-family="Arial" font-size="18" fill="#44ff88" text-anchor="middle">Train</text>
+    </g>
+
+    <text x="1250" y="150" font-family="Arial" font-size="36" fill="#44ff88">→</text>
+
+    <g transform="translate(1300, 100)">
+      <rect x="0" y="0" width="200" height="80" rx="10" fill="#9966ff" fill-opacity="0.2" stroke="#9966ff" stroke-width="2"/>
+      <text x="100" y="50" font-family="Arial" font-size="18" fill="#9966ff" text-anchor="middle">Test (trained)</text>
+    </g>
+
+    <text x="750" y="260" font-family="Arial" font-size="22" fill="#888888" text-anchor="middle">Repeat to experiment with different scenarios</text>
+  </g>
+
+  <text x="960" y="900" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Full control to explore and learn at your own pace</text>
+</svg>

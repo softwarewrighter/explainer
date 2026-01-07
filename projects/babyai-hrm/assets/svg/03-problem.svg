@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <text x="960" y="120" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">The Black Box Problem</text>
+
+  <!-- Data input -->
+  <rect x="200" y="350" width="300" height="200" rx="20" fill="#44ff88" fill-opacity="0.15" stroke="#44ff88" stroke-width="3"/>
+  <text x="350" y="430" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">Training</text>
+  <text x="350" y="480" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">Data</text>
+  <text x="350" y="530" font-family="Arial" font-size="20" fill="#666666" text-anchor="middle">Examples, Labels</text>
+
+  <!-- Arrow 1 -->
+  <path d="M520 450 L680 450" stroke="#666666" stroke-width="4" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#666666"/>
+    </marker>
+  </defs>
+
+  <!-- Black box -->
+  <rect x="700" y="300" width="400" height="300" rx="20" fill="#1a1a2a" stroke="#ff4444" stroke-width="4"/>
+  <text x="900" y="420" font-family="Arial" font-size="72" fill="#ff4444" text-anchor="middle">?</text>
+  <text x="900" y="520" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">Training Process</text>
+
+  <!-- Arrow 2 -->
+  <path d="M1120 450 L1280 450" stroke="#666666" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Model output -->
+  <rect x="1300" y="350" width="300" height="200" rx="20" fill="#4488ff" fill-opacity="0.15" stroke="#4488ff" stroke-width="3"/>
+  <text x="1450" y="430" font-family="Arial" font-size="28" fill="#4488ff" text-anchor="middle">Trained</text>
+  <text x="1450" y="480" font-family="Arial" font-size="28" fill="#4488ff" text-anchor="middle">Model</text>
+  <text x="1450" y="530" font-family="Arial" font-size="20" fill="#666666" text-anchor="middle">Ready to Use</text>
+
+  <!-- Bottom text -->
+  <text x="960" y="750" font-family="Arial" font-size="36" fill="#ff4444" text-anchor="middle">What happens inside?</text>
+</svg>

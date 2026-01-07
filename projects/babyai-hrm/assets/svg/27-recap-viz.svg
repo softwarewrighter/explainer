@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">Recap: The Visualization</text>
+
+  <!-- Transformation diagram -->
+  <g transform="translate(250, 200)">
+    <!-- Before -->
+    <rect x="0" y="0" width="400" height="300" rx="25" fill="#ff4444" fill-opacity="0.15" stroke="#ff4444" stroke-width="4"/>
+    <text x="200" y="60" font-family="Arial" font-size="32" fill="#ff4444" text-anchor="middle">Black Box</text>
+    <text x="200" y="170" font-family="Arial" font-size="72" text-anchor="middle">❓</text>
+    <text x="200" y="260" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">Training is mysterious</text>
+
+    <!-- Arrow -->
+    <path d="M450 150 L600 150" stroke="#44ff88" stroke-width="6" marker-end="url(#arrow)"/>
+    <text x="525" y="120" font-family="Arial" font-size="18" fill="#44ff88" text-anchor="middle">Opens</text>
+
+    <!-- After -->
+    <rect x="650" y="0" width="500" height="300" rx="25" fill="#44ff88" fill-opacity="0.15" stroke="#44ff88" stroke-width="4"/>
+    <text x="900" y="60" font-family="Arial" font-size="32" fill="#44ff88" text-anchor="middle">Transparent</text>
+
+    <!-- Mini visualization -->
+    <g transform="translate(700, 100)">
+      <text x="200" y="30" font-family="Arial" font-size="18" fill="#9966ff">Planner:</text>
+      <rect x="280" y="15" width="100" height="16" fill="#1a1a2a" stroke="#9966ff" stroke-width="1"/>
+      <rect x="280" y="15" width="70" height="16" fill="#9966ff" fill-opacity="0.5"/>
+
+      <text x="200" y="60" font-family="Arial" font-size="18" fill="#44ff88">Doer:</text>
+      <rect x="280" y="45" width="100" height="16" fill="#1a1a2a" stroke="#44ff88" stroke-width="1"/>
+      <rect x="280" y="45" width="50" height="16" fill="#44ff88" fill-opacity="0.5"/>
+    </g>
+
+    <text x="900" y="260" font-family="Arial" font-size="20" fill="#888888" text-anchor="middle">See learning happen</text>
+  </g>
+
+  <!-- Features -->
+  <g transform="translate(200, 550)">
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="350" height="150" rx="15" fill="#1a1a2a" stroke="#44ff88" stroke-width="2"/>
+      <text x="175" y="50" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">📊 Progress Bars</text>
+      <text x="175" y="90" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Watch modules improve</text>
+      <text x="175" y="120" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">during training</text>
+    </g>
+
+    <g transform="translate(400, 0)">
+      <rect x="0" y="0" width="350" height="150" rx="15" fill="#1a1a2a" stroke="#9966ff" stroke-width="2"/>
+      <text x="175" y="50" font-family="Arial" font-size="24" fill="#9966ff" text-anchor="middle">💭 Thought Bubbles</text>
+      <text x="175" y="90" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">See AI decision-making</text>
+      <text x="175" y="120" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">in real time</text>
+    </g>
+
+    <g transform="translate(800, 0)">
+      <rect x="0" y="0" width="350" height="150" rx="15" fill="#1a1a2a" stroke="#ffcc00" stroke-width="2"/>
+      <text x="175" y="50" font-family="Arial" font-size="24" fill="#ffcc00" text-anchor="middle">📈 Metrics</text>
+      <text x="175" y="90" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Track steps, efficiency,</text>
+      <text x="175" y="120" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">and success rate</text>
+    </g>
+
+    <g transform="translate(1200, 0)">
+      <rect x="0" y="0" width="350" height="150" rx="15" fill="#1a1a2a" stroke="#4488ff" stroke-width="2"/>
+      <text x="175" y="50" font-family="Arial" font-size="24" fill="#4488ff" text-anchor="middle">🎮 Interactive</text>
+      <text x="175" y="90" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">Tutorial + Freeplay</text>
+      <text x="175" y="120" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">modes to explore</text>
+    </g>
+  </g>
+
+  <text x="960" y="800" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">Opening the black box of AI training</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <text x="960" y="120" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">The BabyAI Task</text>
+  <text x="960" y="180" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">A row of 10 cells</text>
+
+  <!-- 10-cell grid -->
+  <g transform="translate(260, 350)">
+    <!-- Cell 0 -->
+    <rect x="0" y="0" width="130" height="130" fill="#2a2a4a" stroke="#444466" stroke-width="3"/>
+    <text x="65" y="160" font-family="monospace" font-size="24" fill="#666666" text-anchor="middle">0</text>
+
+    <!-- Cell 1 -->
+    <rect x="140" y="0" width="130" height="130" fill="#2a2a4a" stroke="#444466" stroke-width="3"/>
+    <text x="205" y="160" font-family="monospace" font-size="24" fill="#666666" text-anchor="middle">1</text>
+
+    <!-- Cell 2 - Key -->
+    <rect x="280" y="0" width="130" height="130" fill="#ffcc00" fill-opacity="0.15" stroke="#ffcc00" stroke-width="3"/>
+    <text x="345" y="90" font-family="Arial" font-size="56">🔑</text>
+    <text x="345" y="160" font-family="monospace" font-size="24" fill="#ffcc00" text-anchor="middle">2</text>
+
+    <!-- Cell 3 -->
+    <rect x="420" y="0" width="130" height="130" fill="#2a2a4a" stroke="#444466" stroke-width="3"/>
+    <text x="485" y="160" font-family="monospace" font-size="24" fill="#666666" text-anchor="middle">3</text>
+
+    <!-- Cell 4 - Person -->
+    <rect x="560" y="0" width="130" height="130" fill="#44ff88" fill-opacity="0.15" stroke="#44ff88" stroke-width="3"/>
+    <text x="625" y="90" font-family="Arial" font-size="56">👤</text>
+    <text x="625" y="160" font-family="monospace" font-size="24" fill="#44ff88" text-anchor="middle">4</text>
+
+    <!-- Cell 5 -->
+    <rect x="700" y="0" width="130" height="130" fill="#2a2a4a" stroke="#444466" stroke-width="3"/>
+    <text x="765" y="160" font-family="monospace" font-size="24" fill="#666666" text-anchor="middle">5</text>
+
+    <!-- Cell 6 -->
+    <rect x="840" y="0" width="130" height="130" fill="#2a2a4a" stroke="#444466" stroke-width="3"/>
+    <text x="905" y="160" font-family="monospace" font-size="24" fill="#666666" text-anchor="middle">6</text>
+
+    <!-- Cell 7 -->
+    <rect x="980" y="0" width="130" height="130" fill="#2a2a4a" stroke="#444466" stroke-width="3"/>
+    <text x="1045" y="160" font-family="monospace" font-size="24" fill="#666666" text-anchor="middle">7</text>
+
+    <!-- Cell 8 -->
+    <rect x="1120" y="0" width="130" height="130" fill="#2a2a4a" stroke="#444466" stroke-width="3"/>
+    <text x="1185" y="160" font-family="monospace" font-size="24" fill="#666666" text-anchor="middle">8</text>
+
+    <!-- Cell 9 - Door -->
+    <rect x="1260" y="0" width="130" height="130" fill="#ff8844" fill-opacity="0.15" stroke="#ff8844" stroke-width="3"/>
+    <text x="1325" y="90" font-family="Arial" font-size="56">🚪</text>
+    <text x="1325" y="160" font-family="monospace" font-size="24" fill="#ff8844" text-anchor="middle">9</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(500, 650)">
+    <text x="0" y="0" font-family="Arial" font-size="28" fill="#ffcc00">🔑 Key</text>
+    <text x="300" y="0" font-family="Arial" font-size="28" fill="#44ff88">👤 Agent</text>
+    <text x="600" y="0" font-family="Arial" font-size="28" fill="#ff8844">🚪 Door (Locked)</text>
+  </g>
+
+  <text x="960" y="780" font-family="Arial" font-size="24" fill="#666688" text-anchor="middle">Simple environment, clear objective</text>
+</svg>

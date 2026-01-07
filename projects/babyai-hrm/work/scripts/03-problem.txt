@@ -1,0 +1,1 @@
+Training is usually a black box. Data goes in, a model comes out, but what happens inside.

@@ -1,0 +1,1 @@
+Training data is ready. Each example shows the optimal path from agent to key to door.

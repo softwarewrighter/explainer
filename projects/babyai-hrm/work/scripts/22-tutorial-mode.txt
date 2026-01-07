@@ -1,0 +1,1 @@
+Tutorial mode guides you through seven steps. From introduction to testing the trained model.

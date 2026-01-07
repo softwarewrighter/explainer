@@ -1,0 +1,1 @@
+The Planner thinks in goals like get the key and then open the door. Abstract and strategic.

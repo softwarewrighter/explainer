@@ -1,0 +1,1 @@
+Why use hierarchy. Complex tasks naturally break into simpler sub-tasks.

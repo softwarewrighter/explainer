@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">Recap: The BabyAI Task</text>
+
+  <!-- Central icon -->
+  <g transform="translate(760, 200)">
+    <rect x="0" y="0" width="400" height="300" rx="30" fill="#44ff88" fill-opacity="0.15" stroke="#44ff88" stroke-width="4"/>
+
+    <!-- Task icons -->
+    <text x="200" y="100" font-family="Arial" font-size="80" text-anchor="middle">🔑</text>
+    <text x="200" y="200" font-family="Arial" font-size="80" text-anchor="middle">👤 🚪</text>
+  </g>
+
+  <!-- Key points -->
+  <g transform="translate(300, 550)">
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="400" height="150" rx="20" fill="#1a1a2a" stroke="#44ff88" stroke-width="2"/>
+      <text x="200" y="50" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Simple</text>
+      <text x="200" y="90" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">10 cells, 3 objects</text>
+      <text x="200" y="120" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Easy to visualize</text>
+    </g>
+
+    <g transform="translate(450, 0)">
+      <rect x="0" y="0" width="400" height="150" rx="20" fill="#1a1a2a" stroke="#44ff88" stroke-width="2"/>
+      <text x="200" y="50" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Sequential</text>
+      <text x="200" y="90" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Key before door</text>
+      <text x="200" y="120" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Order matters</text>
+    </g>
+
+    <g transform="translate(900, 0)">
+      <rect x="0" y="0" width="400" height="150" rx="20" fill="#1a1a2a" stroke="#44ff88" stroke-width="2"/>
+      <text x="200" y="50" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">Measurable</text>
+      <text x="200" y="90" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Clear success/failure</text>
+      <text x="200" y="120" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">Steps count improvement</text>
+    </g>
+  </g>
+
+  <!-- Mini grid -->
+  <g transform="translate(460, 750)">
+    <rect x="0" y="0" width="80" height="80" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+    <rect x="85" y="0" width="80" height="80" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+    <rect x="170" y="0" width="80" height="80" fill="#ffcc00" fill-opacity="0.2" stroke="#ffcc00" stroke-width="2"/>
+    <text x="210" y="55" font-family="Arial" font-size="32">🔑</text>
+    <rect x="255" y="0" width="80" height="80" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+    <rect x="340" y="0" width="80" height="80" fill="#44ff88" fill-opacity="0.2" stroke="#44ff88" stroke-width="2"/>
+    <text x="380" y="55" font-family="Arial" font-size="32">👤</text>
+    <rect x="425" y="0" width="80" height="80" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+    <rect x="510" y="0" width="80" height="80" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+    <rect x="595" y="0" width="80" height="80" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+    <rect x="680" y="0" width="80" height="80" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+    <rect x="765" y="0" width="80" height="80" fill="#ff8844" fill-opacity="0.2" stroke="#ff8844" stroke-width="2"/>
+    <text x="805" y="55" font-family="Arial" font-size="32">🚪</text>
+  </g>
+
+  <text x="960" y="920" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">Simple enough to visualize, complex enough to learn from</text>
+</svg>

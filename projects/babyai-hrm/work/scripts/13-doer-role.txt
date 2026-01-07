@@ -1,0 +1,1 @@
+The Doer thinks in actions like move left, pick up, and move right. Concrete and tactical.

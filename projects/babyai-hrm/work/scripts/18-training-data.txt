@@ -1,0 +1,1 @@
+Training data consists of ten optimal paths. Each shows the shortest way to solve the task.

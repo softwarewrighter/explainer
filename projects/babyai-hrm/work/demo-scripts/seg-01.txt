@@ -1,0 +1,1 @@
+Welcome to the H R M training visualization. The agent must get the key and open the door.

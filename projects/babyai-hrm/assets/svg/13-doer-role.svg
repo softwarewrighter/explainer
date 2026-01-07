@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#44ff88" text-anchor="middle">⚡ The Doer</text>
+  <text x="960" y="160" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">Thinks in Actions</text>
+
+  <!-- Doer box -->
+  <rect x="400" y="220" width="1100" height="250" rx="25" fill="#44ff88" fill-opacity="0.15" stroke="#44ff88" stroke-width="4"/>
+
+  <!-- Action sequence -->
+  <g transform="translate(450, 280)">
+    <rect x="0" y="0" width="120" height="80" rx="10" fill="#44ff88" fill-opacity="0.3" stroke="#44ff88" stroke-width="2"/>
+    <text x="60" y="35" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">Action</text>
+    <text x="60" y="60" font-family="Arial" font-size="22">⬅️</text>
+
+    <path d="M130 40 L160 40" stroke="#44ff88" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="170" y="0" width="120" height="80" rx="10" fill="#44ff88" fill-opacity="0.3" stroke="#44ff88" stroke-width="2"/>
+    <text x="230" y="35" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">Action</text>
+    <text x="230" y="60" font-family="Arial" font-size="22">⬅️</text>
+
+    <path d="M300 40 L330 40" stroke="#44ff88" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="340" y="0" width="120" height="80" rx="10" fill="#ffcc00" fill-opacity="0.3" stroke="#ffcc00" stroke-width="2"/>
+    <text x="400" y="35" font-family="Arial" font-size="16" fill="#ffcc00" text-anchor="middle">Action</text>
+    <text x="400" y="60" font-family="Arial" font-size="22">✋</text>
+
+    <path d="M470 40 L500 40" stroke="#44ff88" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="510" y="0" width="120" height="80" rx="10" fill="#44ff88" fill-opacity="0.3" stroke="#44ff88" stroke-width="2"/>
+    <text x="570" y="35" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">Action</text>
+    <text x="570" y="60" font-family="Arial" font-size="22">➡️</text>
+
+    <path d="M640 40 L670 40" stroke="#44ff88" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="680" y="0" width="120" height="80" rx="10" fill="#44ff88" fill-opacity="0.3" stroke="#44ff88" stroke-width="2"/>
+    <text x="740" y="35" font-family="Arial" font-size="16" fill="#44ff88" text-anchor="middle">Action</text>
+    <text x="740" y="60" font-family="Arial" font-size="22">➡️</text>
+
+    <path d="M810 40 L840 40" stroke="#44ff88" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <text x="870" y="50" font-family="Arial" font-size="24" fill="#666666">...</text>
+
+    <path d="M910 40 L940 40" stroke="#44ff88" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="950" y="0" width="120" height="80" rx="10" fill="#ff8844" fill-opacity="0.3" stroke="#ff8844" stroke-width="2"/>
+    <text x="1010" y="35" font-family="Arial" font-size="16" fill="#ff8844" text-anchor="middle">Action</text>
+    <text x="1010" y="60" font-family="Arial" font-size="22">🔓</text>
+  </g>
+
+  <text x="950" y="420" font-family="Arial" font-size="24" fill="#888888" text-anchor="middle">"Left, left, pick, right, right, right... open!"</text>
+
+  <!-- Characteristics -->
+  <g transform="translate(300, 520)">
+    <rect x="0" y="0" width="400" height="200" rx="20" fill="#1a1a2a" stroke="#44ff88" stroke-width="2"/>
+    <text x="200" y="50" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">Concrete</text>
+    <text x="200" y="100" font-family="Arial" font-size="20" fill="#666666" text-anchor="middle">Deals with specific</text>
+    <text x="200" y="130" font-family="Arial" font-size="20" fill="#666666" text-anchor="middle">movements and actions</text>
+    <text x="200" y="170" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">"Move left exactly once."</text>
+  </g>
+
+  <g transform="translate(800, 520)">
+    <rect x="0" y="0" width="400" height="200" rx="20" fill="#1a1a2a" stroke="#44ff88" stroke-width="2"/>
+    <text x="200" y="50" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">Tactical</text>
+    <text x="200" y="100" font-family="Arial" font-size="20" fill="#666666" text-anchor="middle">Focuses on immediate</text>
+    <text x="200" y="130" font-family="Arial" font-size="20" fill="#666666" text-anchor="middle">next steps</text>
+    <text x="200" y="170" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">"What do I do right now?"</text>
+  </g>
+
+  <g transform="translate(1300, 520)">
+    <rect x="0" y="0" width="400" height="200" rx="20" fill="#1a1a2a" stroke="#44ff88" stroke-width="2"/>
+    <text x="200" y="50" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">Fast</text>
+    <text x="200" y="100" font-family="Arial" font-size="20" fill="#666666" text-anchor="middle">Updates every step</text>
+    <text x="200" y="130" font-family="Arial" font-size="20" fill="#666666" text-anchor="middle">(rapid decisions)</text>
+    <text x="200" y="170" font-family="Arial" font-size="18" fill="#888888" text-anchor="middle">"Go go go!"</text>
+  </g>
+
+  <text x="960" y="800" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">The Doer is the executor</text>
+</svg>

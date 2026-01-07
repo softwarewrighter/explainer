@@ -1,0 +1,1 @@
+Before training, the A I wanders randomly. Thirty to forty steps, and it often fails completely.

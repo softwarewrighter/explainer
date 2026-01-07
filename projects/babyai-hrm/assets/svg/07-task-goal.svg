@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">The Goal</text>
+
+  <!-- Step 1: Find Key -->
+  <rect x="150" y="220" width="350" height="200" rx="20" fill="#ffcc00" fill-opacity="0.1" stroke="#ffcc00" stroke-width="3"/>
+  <text x="325" y="280" font-family="Arial" font-size="28" fill="#ffcc00" text-anchor="middle">Step 1</text>
+  <text x="325" y="340" font-family="Arial" font-size="64">🔑</text>
+  <text x="325" y="400" font-family="Arial" font-size="22" fill="#888888" text-anchor="middle">Find the key</text>
+
+  <!-- Arrow 1 -->
+  <path d="M520 320 L620 320" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Pick Up -->
+  <rect x="640" y="220" width="350" height="200" rx="20" fill="#44ff88" fill-opacity="0.1" stroke="#44ff88" stroke-width="3"/>
+  <text x="815" y="280" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">Step 2</text>
+  <text x="815" y="340" font-family="Arial" font-size="64">✋🔑</text>
+  <text x="815" y="400" font-family="Arial" font-size="22" fill="#888888" text-anchor="middle">Pick it up</text>
+
+  <!-- Arrow 2 -->
+  <path d="M1010 320 L1110 320" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Go to Door -->
+  <rect x="1130" y="220" width="350" height="200" rx="20" fill="#4488ff" fill-opacity="0.1" stroke="#4488ff" stroke-width="3"/>
+  <text x="1305" y="280" font-family="Arial" font-size="28" fill="#4488ff" text-anchor="middle">Step 3</text>
+  <text x="1305" y="340" font-family="Arial" font-size="64">➡️🚪</text>
+  <text x="1305" y="400" font-family="Arial" font-size="22" fill="#888888" text-anchor="middle">Go to the door</text>
+
+  <!-- Arrow 3 -->
+  <path d="M1480 320 L1580 320" stroke="#44ff88" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: Unlock -->
+  <rect x="1520" y="220" width="280" height="200" rx="20" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="3"/>
+  <text x="1660" y="280" font-family="Arial" font-size="28" fill="#ff8844" text-anchor="middle">Step 4</text>
+  <text x="1660" y="340" font-family="Arial" font-size="64">🔓</text>
+  <text x="1660" y="400" font-family="Arial" font-size="22" fill="#888888" text-anchor="middle">Unlock it</text>
+
+  <!-- Mini grid showing path -->
+  <g transform="translate(360, 550)">
+    <rect x="0" y="0" width="100" height="100" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+    <rect x="110" y="0" width="100" height="100" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+    <rect x="220" y="0" width="100" height="100" fill="#ffcc00" fill-opacity="0.2" stroke="#ffcc00" stroke-width="2"/>
+    <text x="270" y="65" font-family="Arial" font-size="36">🔑</text>
+    <rect x="330" y="0" width="100" height="100" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+    <rect x="440" y="0" width="100" height="100" fill="#44ff88" fill-opacity="0.2" stroke="#44ff88" stroke-width="2"/>
+    <text x="490" y="65" font-family="Arial" font-size="36">👤</text>
+    <rect x="550" y="0" width="100" height="100" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+    <rect x="660" y="0" width="100" height="100" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+    <rect x="770" y="0" width="100" height="100" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+    <rect x="880" y="0" width="100" height="100" fill="#2a2a4a" stroke="#444466" stroke-width="2"/>
+    <rect x="990" y="0" width="100" height="100" fill="#ff8844" fill-opacity="0.2" stroke="#ff8844" stroke-width="2"/>
+    <text x="1040" y="65" font-family="Arial" font-size="36">🚪</text>
+
+    <!-- Path arrows -->
+    <path d="M490 110 L270 140 L270 100" stroke="#44ff88" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
+    <path d="M270 100 L1040 100 L1040 50" stroke="#44ff88" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
+  </g>
+
+  <text x="960" y="780" font-family="Arial" font-size="28" fill="#44ff88" text-anchor="middle">Sequential sub-goals lead to success</text>
+</svg>

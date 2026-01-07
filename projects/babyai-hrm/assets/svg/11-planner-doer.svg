@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44ff88"/>
+    </marker>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <text x="960" y="100" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">HRM: Two Modules</text>
+
+  <!-- Planner Module -->
+  <rect x="300" y="200" width="550" height="350" rx="30" fill="#9966ff" fill-opacity="0.15" stroke="#9966ff" stroke-width="4"/>
+  <text x="575" y="280" font-family="Arial" font-size="48" fill="#9966ff" text-anchor="middle">🧠 Planner</text>
+  <text x="575" y="340" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">High-Level Module</text>
+  <text x="575" y="420" font-family="Arial" font-size="24" fill="#9966ff" text-anchor="middle">"What should we do?"</text>
+  <text x="575" y="480" font-family="Arial" font-size="20" fill="#666666" text-anchor="middle">Decides goals and strategy</text>
+
+  <!-- Arrow connecting them -->
+  <path d="M870 375 L1030 375" stroke="#44ff88" stroke-width="6" marker-end="url(#arrow)"/>
+  <text x="950" y="350" font-family="Arial" font-size="20" fill="#44ff88" text-anchor="middle">Goal</text>
+
+  <!-- Doer Module -->
+  <rect x="1050" y="200" width="550" height="350" rx="30" fill="#44ff88" fill-opacity="0.15" stroke="#44ff88" stroke-width="4"/>
+  <text x="1325" y="280" font-family="Arial" font-size="48" fill="#44ff88" text-anchor="middle">⚡ Doer</text>
+  <text x="1325" y="340" font-family="Arial" font-size="28" fill="#888888" text-anchor="middle">Low-Level Module</text>
+  <text x="1325" y="420" font-family="Arial" font-size="24" fill="#44ff88" text-anchor="middle">"How do we do it?"</text>
+  <text x="1325" y="480" font-family="Arial" font-size="20" fill="#666666" text-anchor="middle">Executes actions to achieve goals</text>
+
+  <!-- World/Environment -->
+  <rect x="560" y="650" width="800" height="180" rx="20" fill="#ff8844" fill-opacity="0.1" stroke="#ff8844" stroke-width="3"/>
+  <text x="960" y="720" font-family="Arial" font-size="32" fill="#ff8844" text-anchor="middle">🌍 Environment</text>
+  <text x="960" y="770" font-family="Arial" font-size="22" fill="#666666" text-anchor="middle">Key-Door Puzzle World</text>
+
+  <!-- Arrow from Doer to Environment -->
+  <path d="M1325 560 L1325 640" stroke="#ff8844" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="1380" y="600" font-family="Arial" font-size="18" fill="#ff8844">Actions</text>
+
+  <!-- Arrow from Environment back to Planner -->
+  <path d="M760 640 L575 560" stroke="#666666" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="620" y="600" font-family="Arial" font-size="18" fill="#666666">State</text>
+</svg>
