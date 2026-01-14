@@ -1,0 +1,65 @@
+{
+  "title": "How RLM Solves the Context Window Problem",
+  "repo": "/Users/mike/github/softwarewrighter/rlm-project",
+  "duration_estimate": "90-120 seconds",
+  "segments": [
+    {
+      "id": "01-hook",
+      "type": "avatar",
+      "duration": 8,
+      "narration": "What if your L L M could search ten million tokens using only three thousand. R L M makes this possible.",
+      "svg_description": "Large glowing text '10M tokens → 3K tokens' with golden accent, subtitle 'Recursive Language Model'"
+    },
+    {
+      "id": "02-problem",
+      "type": "diagram",
+      "duration": 12,
+      "narration": "Modern L L Ms have a context window limit. Even the best models max out at around two hundred thousand tokens. When your document exceeds this, the model truncates it and loses critical information.",
+      "svg_description": "Left side: document icon labeled '3.2 MB'. Arrow pointing to LLM box. Red X showing truncation. Text: 'Context limit exceeded'"
+    },
+    {
+      "id": "03-fail-demo",
+      "type": "cli",
+      "duration": 15,
+      "cli": "claude",
+      "narration": "Watch what happens when we ask Claude directly about a large document. The answer is wrong because the relevant section was truncated.",
+      "vhs_tape": "Output 03-fail-demo.mp4\nSet FontSize 16\nSet Width 1920\nSet Height 1080\nSet Theme \"Dracula\"\nSet TypingSpeed 40ms\n\nType \"echo 'Direct query on 3.2MB War and Peace...'\"\nEnter\nSleep 2s\nType \"head -5 ~/github/softwarewrighter/rlm-project/demo/war-and-peace-needle.txt\"\nEnter\nSleep 3s\nType \"wc -l ~/github/softwarewrighter/rlm-project/demo/war-and-peace-needle.txt\"\nEnter\nSleep 2s\nType \"echo 'Context too large - would be truncated'\"\nEnter\nSleep 3s"
+    },
+    {
+      "id": "04-solution",
+      "type": "diagram",
+      "duration": 15,
+      "narration": "R L M takes a different approach. Instead of cramming the document into the context, it gives the L L M tools to explore the document programmatically. The L L M outputs commands like find and slice. These execute against the document. Results feed back into the next iteration.",
+      "svg_description": "Flowchart with boxes: 'Query' → 'LLM Thinks' → 'JSON Commands' → 'Execute (find, slice, regex)' → 'Results' → loop back or → 'Final Answer'. Use arrows, green for success path"
+    },
+    {
+      "id": "05-commands",
+      "type": "diagram",
+      "duration": 10,
+      "narration": "R L M provides powerful commands. Find locates text patterns. Slice extracts character ranges. Regex enables pattern matching. And L L M query delegates semantic analysis to helper models.",
+      "svg_description": "Grid of 4 command boxes: 'find' (magnifying glass icon), 'slice' (scissors icon), 'regex' (pattern icon), 'llm_query' (brain icon). Each with brief description"
+    },
+    {
+      "id": "06-success-demo",
+      "type": "cli",
+      "duration": 25,
+      "cli": "rlm",
+      "narration": "Now watch R L M tackle the same document. It searches for password, vault, and secret. Narrows down to relevant sections. And finds the answer in just two iterations.",
+      "vhs_tape": "Output 06-success-demo.mp4\nSet FontSize 16\nSet Width 1920\nSet Height 1080\nSet Theme \"Dracula\"\nSet TypingSpeed 30ms\n\nType \"cd ~/github/softwarewrighter/rlm-project\"\nEnter\nSleep 1s\nType \"./target/release/rlm demo/war-and-peace-needle.txt 'What is the password to Prince Andrei secret vault?' -v\"\nEnter\nSleep 20s"
+    },
+    {
+      "id": "07-results",
+      "type": "diagram",
+      "duration": 12,
+      "narration": "The results are impressive. On a two hundred fifty thousand character document, R L M achieves eighty six percent token savings. It uses just twenty five thousand tokens instead of one hundred eighty seven thousand.",
+      "svg_description": "Bar chart: Two bars labeled 'Baseline' (tall, red, 187K) and 'RLM' (short, green, 25K). Large text: '86% Token Savings'. Subtext: '2 iterations, 70 seconds'"
+    },
+    {
+      "id": "08-cta",
+      "type": "avatar",
+      "duration": 10,
+      "narration": "R L M is open source on GitHub. Try it on your own massive documents and let me know how it works for you.",
+      "svg_description": "GitHub logo, text 'github.com/softwarewrighter/rlm-project', feature list: 'Search massive documents', 'Any LLM via Ollama', 'Minimal token usage'"
+    }
+  ]
+}

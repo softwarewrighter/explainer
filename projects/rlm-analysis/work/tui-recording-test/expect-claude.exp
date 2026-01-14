@@ -1,0 +1,45 @@
+#!/usr/bin/expect -f
+# Expect script to automate Claude Code CLI interaction
+# Usage: expect expect-claude.exp
+
+# Configuration
+set timeout 60
+set prompt_pattern {❯|>|\$}
+
+# Start claude with a simple prompt
+# Using --print to avoid TUI mode if available, otherwise we work with TUI
+spawn claude --dangerously-skip-permissions
+
+# Wait for initial load
+sleep 3
+
+# First interaction - ask a simple question
+send "What is 2 + 2?\r"
+
+# Wait for response (look for the prompt to return)
+expect {
+    timeout { puts "Timeout waiting for response"; exit 1 }
+    -re $prompt_pattern { }
+    -re {Claude:} { exp_continue }
+    -re {\n} { exp_continue }
+}
+
+sleep 2
+
+# Second interaction
+send "List files in current directory\r"
+
+expect {
+    timeout { puts "Timeout waiting for response"; exit 1 }
+    -re $prompt_pattern { }
+    -re {Claude:} { exp_continue }
+    -re {\n} { exp_continue }
+}
+
+sleep 2
+
+# Exit
+send "/exit\r"
+
+# Wait for clean exit
+expect eof
