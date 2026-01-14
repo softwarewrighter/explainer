@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0512"/>
+      <stop offset="50%" style="stop-color:#120818"/>
+      <stop offset="100%" style="stop-color:#05030a"/>
+    </linearGradient>
+    <filter id="neon-gold" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="neon-purple" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="neon-green" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Grid lines -->
+  <g opacity="0.06">
+    <line x1="0" y1="270" x2="1920" y2="270" stroke="#d4af37" stroke-width="1"/>
+    <line x1="0" y1="540" x2="1920" y2="540" stroke="#d4af37" stroke-width="1"/>
+    <line x1="0" y1="810" x2="1920" y2="810" stroke="#d4af37" stroke-width="1"/>
+    <line x1="480" y1="0" x2="480" y2="1080" stroke="#d4af37" stroke-width="1"/>
+    <line x1="960" y1="0" x2="960" y2="1080" stroke="#d4af37" stroke-width="1"/>
+    <line x1="1440" y1="0" x2="1440" y2="1080" stroke="#d4af37" stroke-width="1"/>
+  </g>
+
+  <!-- Book representation -->
+  <g transform="translate(960, 380)">
+    <!-- Book spine -->
+    <rect x="-220" y="-140" width="40" height="280" fill="#5a3d2b" stroke="#d4af37" stroke-width="2"/>
+    <!-- Book cover -->
+    <rect x="-180" y="-140" width="360" height="280" rx="4" fill="#8b4513" stroke="#d4af37" stroke-width="3" filter="url(#neon-gold)"/>
+    <!-- Book title -->
+    <text x="0" y="-40" font-family="'Georgia', serif" font-size="48" fill="#d4af37" text-anchor="middle" font-weight="bold" filter="url(#neon-gold)">WAR</text>
+    <text x="0" y="20" font-family="'Georgia', serif" font-size="32" fill="#d4af37" text-anchor="middle">AND</text>
+    <text x="0" y="80" font-family="'Georgia', serif" font-size="48" fill="#d4af37" text-anchor="middle" font-weight="bold" filter="url(#neon-gold)">PEACE</text>
+  </g>
+
+  <!-- Stats badges -->
+  <g transform="translate(320, 680)">
+    <rect x="0" y="0" width="180" height="60" rx="8" fill="#1a1a2a" stroke="#ff6b6b" stroke-width="2"/>
+    <text x="90" y="38" font-family="'Arial', sans-serif" font-size="22" fill="#ff6b6b" text-anchor="middle" font-weight="bold">3.2 MB</text>
+  </g>
+  <g transform="translate(530, 680)">
+    <rect x="0" y="0" width="200" height="60" rx="8" fill="#1a1a2a" stroke="#ff6b6b" stroke-width="2"/>
+    <text x="100" y="38" font-family="'Arial', sans-serif" font-size="22" fill="#ff6b6b" text-anchor="middle" font-weight="bold">65,666 lines</text>
+  </g>
+  <g transform="translate(760, 680)">
+    <rect x="0" y="0" width="240" height="60" rx="8" fill="#1a1a2a" stroke="#00ff88" stroke-width="2"/>
+    <text x="120" y="38" font-family="'Arial', sans-serif" font-size="22" fill="#00ff88" text-anchor="middle" font-weight="bold">RLM: 2 queries</text>
+  </g>
+
+  <!-- Title -->
+  <text x="960" y="860" font-family="'Impact', 'Arial Black', sans-serif" font-size="72" fill="#d4af37" text-anchor="middle" letter-spacing="4" filter="url(#neon-gold)">RLM</text>
+  <text x="960" y="940" font-family="'Courier New', monospace" font-size="32" fill="#bb86fc" text-anchor="middle" filter="url(#neon-purple)">Recursive Language Model Query</text>
+  <text x="960" y="1000" font-family="'Courier New', monospace" font-size="24" fill="#888888" text-anchor="middle">Finding Needles in Massive Documents</text>
+</svg>

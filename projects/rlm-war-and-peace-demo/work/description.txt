@@ -1,0 +1,31 @@
+Can AI read all of War and Peace to find a hidden secret? RLM (Recursive Language Model) makes it possible with targeted recursive queries.
+
+In this demo, we challenge RLM to find the password to Prince Andrei's secret vault hidden somewhere in Tolstoy's 3.2 MB, 65,666-line masterpiece. Way too big for any LLM context window!
+
+RLM completes the task in just 2 iterations using only 3,000 tokens - 100% savings compared to sending the full document.
+
+Key features:
+- Search massive documents that exceed LLM context limits
+- Works with any local LLM via Ollama
+- Minimal token usage through recursive narrowing
+- Open source Rust CLI tool
+
+GitHub: https://github.com/softwarewrighter/rlm-project
+
+---
+
+Timestamps:
+0:00 - Introduction
+0:05 - The Challenge: Finding a needle in War and Peace
+0:18 - Starting the RLM query
+0:27 - Iteration 1: Narrowing down to relevant sections
+0:47 - Iteration 2: Finding the answer
+0:56 - Results summary
+1:06 - Try RLM yourself
+1:16 - Outro
+
+---
+
+Music: "Restless Heart" by Jimena Contreras
+
+#AI #LLM #Rust #Ollama #OpenSource #MachineLearning #NLP #CLI #WarAndPeace #DocumentSearch #RAG #LocalAI

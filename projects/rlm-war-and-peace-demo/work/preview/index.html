@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RLM War and Peace Demo - Preview</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #e0e0e0;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #d4af37;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #bb86fc;
+            border-bottom: 2px solid #bb86fc;
+            padding-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 40px;
+        }
+        .segment {
+            background: #0f0f23;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+        }
+        .segment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .segment-title {
+            color: #00ff88;
+            font-size: 1.4em;
+            margin: 0;
+        }
+        .segment-type {
+            background: #333;
+            color: #d4af37;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+        }
+        .media-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        .media-box {
+            background: #1a1a2e;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .media-box h4 {
+            color: #aaa;
+            margin: 0 0 10px 0;
+            font-size: 0.9em;
+        }
+        video {
+            width: 100%;
+            border-radius: 8px;
+            background: #000;
+        }
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .narration {
+            background: #1a1a2e;
+            padding: 15px;
+            border-radius: 8px;
+            font-style: italic;
+            color: #ccc;
+            border-left: 4px solid #bb86fc;
+        }
+        .files {
+            background: #1a1a2e;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .files h4 {
+            color: #aaa;
+            margin: 0 0 10px 0;
+            font-size: 0.9em;
+        }
+        .file-list {
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.85em;
+            color: #88ffaa;
+        }
+        .file-list div {
+            padding: 4px 0;
+        }
+        .no-audio {
+            color: #666;
+            font-style: italic;
+        }
+        .summary {
+            background: #0a1a0a;
+            border: 2px solid #00ff88;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .summary h2 {
+            color: #00ff88;
+            border-color: #00ff88;
+        }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        .summary-item {
+            background: #1a1a2e;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .summary-value {
+            font-size: 2em;
+            color: #d4af37;
+            font-weight: bold;
+        }
+        .summary-label {
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>RLM War and Peace Demo</h1>
+    <p class="subtitle">Explainer Video Preview - All Segments</p>
+
+    <div class="summary">
+        <h2>Project Summary</h2>
+        <div class="summary-grid">
+            <div class="summary-item">
+                <div class="summary-value">9</div>
+                <div class="summary-label">Total Segments</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-value">~90s</div>
+                <div class="summary-label">Estimated Duration</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-value">2</div>
+                <div class="summary-label">Avatar Clips</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-value">5</div>
+                <div class="summary-label">Demo Clips</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 00 - Title -->
+    <div class="segment">
+        <div class="segment-header">
+            <h3 class="segment-title">00 - Title</h3>
+            <span class="segment-type">TITLE + MUSIC</span>
+        </div>
+        <div class="media-container">
+            <div class="media-box">
+                <h4>Video</h4>
+                <video controls>
+                    <source src="clips/00-title.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="media-box">
+                <h4>Audio</h4>
+                <p class="no-audio">Music from title clip (Restless Heart)</p>
+            </div>
+        </div>
+        <div class="files">
+            <h4>Related Files</h4>
+            <div class="file-list">
+                <div>clips/00-title.mp4</div>
+                <div>assets/images/ai-reads-war-and-peace.jpg</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 02 - Hook -->
+    <div class="segment">
+        <div class="segment-header">
+            <h3 class="segment-title">02 - Hook</h3>
+            <span class="segment-type">AVATAR + NARRATION</span>
+        </div>
+        <div class="media-container">
+            <div class="media-box">
+                <h4>Video (Composited with Avatar)</h4>
+                <video controls>
+                    <source src="clips/02-hook-composited.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="media-box">
+                <h4>Audio (TTS)</h4>
+                <audio controls>
+                    <source src="audio/02-hook.wav" type="audio/wav">
+                </audio>
+            </div>
+        </div>
+        <div class="narration">
+            Can A I read all of War and Peace to find a hidden secret. R L M makes it possible with recursive language model queries.
+        </div>
+        <div class="files">
+            <h4>Related Files</h4>
+            <div class="file-list">
+                <div>clips/02-hook-composited.mp4</div>
+                <div>clips/02-hook.mp4 (background only)</div>
+                <div>audio/02-hook.wav</div>
+                <div>scripts/02-hook.txt</div>
+                <div>assets/svg/02-hook.svg</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 04 - Problem -->
+    <div class="segment">
+        <div class="segment-header">
+            <h3 class="segment-title">04 - Problem</h3>
+            <span class="segment-type">DEMO + NARRATION</span>
+        </div>
+        <div class="media-container">
+            <div class="media-box">
+                <h4>Video (VHS Demo)</h4>
+                <video controls>
+                    <source src="clips/04-problem.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="media-box">
+                <h4>Audio (TTS)</h4>
+                <audio controls>
+                    <source src="audio/04-problem.wav" type="audio/wav">
+                </audio>
+            </div>
+        </div>
+        <div class="narration">
+            The full text is three point two megabytes with over sixty five thousand lines. Way too big for any L L M context window.
+        </div>
+        <div class="files">
+            <h4>Related Files</h4>
+            <div class="file-list">
+                <div>clips/04-problem.mp4</div>
+                <div>audio/04-problem.wav</div>
+                <div>scripts/04-problem.txt</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 05 - RLM Start -->
+    <div class="segment">
+        <div class="segment-header">
+            <h3 class="segment-title">05 - RLM Start</h3>
+            <span class="segment-type">DEMO + NARRATION</span>
+        </div>
+        <div class="media-container">
+            <div class="media-box">
+                <h4>Video (VHS Demo)</h4>
+                <video controls>
+                    <source src="clips/05-rlm-start.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="media-box">
+                <h4>Audio (TTS)</h4>
+                <audio controls>
+                    <source src="audio/05-rlm-start.wav" type="audio/wav">
+                </audio>
+            </div>
+        </div>
+        <div class="narration">
+            We ask R L M to find the password to Prince Andrei secret vault. It starts processing the massive document.
+        </div>
+        <div class="files">
+            <h4>Related Files</h4>
+            <div class="file-list">
+                <div>clips/05-rlm-start.mp4</div>
+                <div>audio/05-rlm-start.wav</div>
+                <div>scripts/05-rlm-start.txt</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 06 - Iteration 1 -->
+    <div class="segment">
+        <div class="segment-header">
+            <h3 class="segment-title">06 - Iteration 1</h3>
+            <span class="segment-type">DEMO + NARRATION</span>
+        </div>
+        <div class="media-container">
+            <div class="media-box">
+                <h4>Video (VHS Demo)</h4>
+                <video controls>
+                    <source src="clips/06-iteration1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="media-box">
+                <h4>Audio (TTS)</h4>
+                <audio controls>
+                    <source src="audio/06-iteration1.wav" type="audio/wav">
+                </audio>
+            </div>
+        </div>
+        <div class="narration">
+            In the first iteration, R L M searches for secret vault, password, and Prince Andrei. It narrows down to just twelve hundred relevant characters.
+        </div>
+        <div class="files">
+            <h4>Related Files</h4>
+            <div class="file-list">
+                <div>clips/06-iteration1.mp4</div>
+                <div>audio/06-iteration1.wav</div>
+                <div>scripts/06-iteration1.txt</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 07 - Iteration 2 -->
+    <div class="segment">
+        <div class="segment-header">
+            <h3 class="segment-title">07 - Iteration 2</h3>
+            <span class="segment-type">DEMO + NARRATION</span>
+        </div>
+        <div class="media-container">
+            <div class="media-box">
+                <h4>Video (VHS Demo)</h4>
+                <video controls>
+                    <source src="clips/07-iteration2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="media-box">
+                <h4>Audio (TTS)</h4>
+                <audio controls>
+                    <source src="audio/07-iteration2.wav" type="audio/wav">
+                </audio>
+            </div>
+        </div>
+        <div class="narration">
+            In the second iteration, it finds the answer. The password is Moscow Winter eighteen twelve.
+        </div>
+        <div class="files">
+            <h4>Related Files</h4>
+            <div class="file-list">
+                <div>clips/07-iteration2.mp4</div>
+                <div>audio/07-iteration2.wav</div>
+                <div>scripts/07-iteration2.txt</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 08 - Results -->
+    <div class="segment">
+        <div class="segment-header">
+            <h3 class="segment-title">08 - Results</h3>
+            <span class="segment-type">DEMO + NARRATION</span>
+        </div>
+        <div class="media-container">
+            <div class="media-box">
+                <h4>Video (VHS Demo)</h4>
+                <video controls>
+                    <source src="clips/08-results.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="media-box">
+                <h4>Audio (TTS)</h4>
+                <audio controls>
+                    <source src="audio/08-results.wav" type="audio/wav">
+                </audio>
+            </div>
+        </div>
+        <div class="narration">
+            R L M completed in just two iterations, using only three thousand tokens. That is one hundred percent savings compared to sending the full document.
+        </div>
+        <div class="files">
+            <h4>Related Files</h4>
+            <div class="file-list">
+                <div>clips/08-results.mp4</div>
+                <div>audio/08-results.wav</div>
+                <div>scripts/08-results.txt</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 68 - CTA -->
+    <div class="segment">
+        <div class="segment-header">
+            <h3 class="segment-title">68 - Call to Action</h3>
+            <span class="segment-type">AVATAR + NARRATION</span>
+        </div>
+        <div class="media-container">
+            <div class="media-box">
+                <h4>Video (Composited with Avatar)</h4>
+                <video controls>
+                    <source src="clips/68-cta-composited.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="media-box">
+                <h4>Audio (TTS)</h4>
+                <audio controls>
+                    <source src="audio/68-cta.wav" type="audio/wav">
+                </audio>
+            </div>
+        </div>
+        <div class="narration">
+            R L M is open source on GitHub. Try it on your own massive documents and let me know how it works for you.
+        </div>
+        <div class="files">
+            <h4>Related Files</h4>
+            <div class="file-list">
+                <div>clips/68-cta-composited.mp4</div>
+                <div>clips/68-cta.mp4 (background only)</div>
+                <div>audio/68-cta.wav</div>
+                <div>scripts/68-cta.txt</div>
+                <div>assets/svg/68-cta.svg</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 99 - Epilog -->
+    <div class="segment">
+        <div class="segment-header">
+            <h3 class="segment-title">99 - Epilog</h3>
+            <span class="segment-type">OUTRO + MUSIC</span>
+        </div>
+        <div class="media-container">
+            <div class="media-box">
+                <h4>Video (Extended with Music)</h4>
+                <video controls>
+                    <source src="clips/99-epilog-final.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="media-box">
+                <h4>Components</h4>
+                <p style="color: #888; margin-bottom: 10px;">Global epilog with like/subscribe narration</p>
+                <video controls style="max-width: 100%;">
+                    <source src="clips/99b-epilog.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="files">
+            <h4>Related Files</h4>
+            <div class="file-list">
+                <div>clips/99-epilog-final.mp4 (complete with music extension)</div>
+                <div>clips/99b-epilog.mp4 (global epilog)</div>
+                <div>clips/99c-epilog-ext.mp4 (music extension)</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
