@@ -1,0 +1,23 @@
+{
+  "cli": "claude",
+  "title": "RLM Demo Conversation",
+  "description": "Demo of using RLM to search War and Peace",
+  "exchanges": [
+    {
+      "user": "What is RLM?",
+      "assistant": "RLM (Recursive Language Model) is a Rust CLI tool that enables searching through massive documents that exceed LLM context windows. It works by recursively narrowing down relevant sections until it finds the answer, using minimal tokens.",
+      "delay": 2
+    },
+    {
+      "user": "Show me how to search War and Peace for a hidden password",
+      "tool": "Bash: rlm war-and-peace.txt 'Find the password to Prince Andrei secret vault'",
+      "assistant": "Running RLM on War and Peace (3.2MB, 65,666 lines)...\n\nIteration 1: Searching for 'secret vault', 'password', 'Prince Andrei'\n  → Found 1,200 relevant characters\n\nIteration 2: Analyzing narrowed context\n  → Found answer!\n\nResult: The password is MOSCOW-WINTER-1812\n\nTotal tokens used: 3,000 (100% savings vs sending full document)",
+      "delay": 3
+    },
+    {
+      "user": "How does it achieve such low token usage?",
+      "assistant": "RLM uses a recursive search strategy:\n\n1. First pass: Scans document for keyword matches\n2. Extracts only relevant paragraphs\n3. Sends condensed context to LLM\n4. If answer not found, refines search terms\n5. Repeats until answer found or max iterations\n\nThis means a 3.2MB document might only send 3KB to the LLM!",
+      "delay": 2
+    }
+  ]
+}
