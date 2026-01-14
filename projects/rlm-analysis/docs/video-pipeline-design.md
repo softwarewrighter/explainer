@@ -33,7 +33,8 @@ Outputs:
 │  ├── CLI Demo → VHS tape → record with AI CLI → .mp4               │
 │  ├── Diagram → SVG generation → render to .mp4                     │
 │  ├── Screenshot → capture or generate → .mp4                       │
-│  └── Avatar → TTS + lipsync → .mp4                                 │
+│  ├── Avatar → TTS + lipsync → .mp4                                 │
+│  └── Web Demo → MCP Playwright → screenshots → .mp4                │
 └─────────────────────────────────────────────────────────────────────┘
                                    │
                                    ▼
@@ -173,6 +174,72 @@ generate_image_segment() {
 }
 ```
 
+### 5. Web UI Demo (`type: "web"`)
+```bash
+# Automated web interaction with screenshot sequence
+# Uses MCP Playwright for "expect-like" web automation
+generate_web_segment() {
+  # Web actions are defined in script.json as playwright_actions
+  # Each action can capture a screenshot
+
+  # Example actions array:
+  # [
+  #   {"action": "navigate", "url": "https://github.com/user/repo"},
+  #   {"action": "screenshot", "name": "repo-home"},
+  #   {"action": "click", "selector": "[data-content='Wiki']"},
+  #   {"action": "screenshot", "name": "wiki-page"},
+  #   {"action": "scroll", "y": 500},
+  #   {"action": "screenshot", "name": "wiki-scrolled"}
+  # ]
+
+  # Execute via Claude with MCP Playwright tools
+  # Screenshots saved to work/web/${id}/
+
+  # Convert screenshot sequence to video
+  # Option A: Ken Burns slideshow
+  ffmpeg -framerate 0.5 -pattern_type glob -i 'work/web/${id}/*.png' \
+    -vf "scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,zoompan=z='min(zoom+0.001,1.2)':d=90" \
+    -c:v libx264 -pix_fmt yuv420p segment.mp4
+
+  # Option B: Screen recording in parallel (for smooth video)
+  # ffmpeg -f avfoundation -i "1" -t $duration screen.mp4 &
+  # Run playwright actions while recording
+}
+```
+
+**Web segment JSON format:**
+```json
+{
+  "id": "03-github-demo",
+  "type": "web",
+  "duration": 15,
+  "narration": "The project is open source on GitHub with comprehensive documentation.",
+  "playwright_actions": [
+    {"action": "navigate", "url": "https://github.com/softwarewrighter/rlm-project"},
+    {"action": "wait", "ms": 2000},
+    {"action": "screenshot", "name": "01-repo"},
+    {"action": "click", "selector": "[data-content='Wiki']"},
+    {"action": "wait", "ms": 1500},
+    {"action": "screenshot", "name": "02-wiki"},
+    {"action": "click", "selector": "a[href*='Architecture']"},
+    {"action": "wait", "ms": 1500},
+    {"action": "screenshot", "name": "03-architecture"}
+  ]
+}
+```
+
+**MCP Playwright capabilities (expect for web UI):**
+- `navigate` - Go to URL
+- `click` - Click element by CSS selector
+- `fill` - Fill form fields
+- `select` - Use dropdowns
+- `hover` - Hover over elements
+- `drag` - Drag and drop
+- `press_key` - Keyboard input
+- `screenshot` - Capture current state
+- `evaluate` - Execute JavaScript
+- `wait` - Pause for rendering
+
 ## CLI Recording with AI Interaction
 
 For recording actual AI CLI interactions:
@@ -215,6 +282,7 @@ EOF
 | `vid-concat` | Concatenate clips | custom Rust tool |
 | `agg` | asciinema to gif | asciinema/agg |
 | `ffmpeg` | Video processing | ffmpeg |
+| `MCP Playwright` | Web UI automation (expect for web) | @anthropic/mcp-playwright |
 
 ## Workflow for Diagrams in CLI-Heavy Videos
 
