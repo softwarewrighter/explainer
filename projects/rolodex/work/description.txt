@@ -1,0 +1,41 @@
+I vibe coded a 3D rolodex contact manager that runs entirely in your browser. Built with Rust, Yew, and Three.js, it compiles to WebAssembly for native-like performance.
+
+In this video, I walk through the GitHub repository, show a live demo of the 3D interface, and explain the key source files including the Card struct and test data generation.
+
+🔗 Links
+GitHub: https://github.com/softwarewrighter/rolodex
+Live Demo: https://softwarewrighter.github.io/rolodex/
+
+⏱️ Timestamps
+0:00 Intro
+0:05 Hook - What we're building
+0:19 GitHub Repository
+0:30 Project Structure
+0:42 Live Demo Intro
+0:50 Demo - Scrolling & Editing
+1:03 Getting Started
+1:12 README Overview
+1:27 Cargo.toml Dependencies
+1:43 Three.js Module
+1:52 Card Struct
+2:03 Test Data Generation
+2:15 Call to Action
+2:26 Outro
+
+🛠️ Tech Stack
+- Rust / Yew (WebAssembly frontend)
+- Three.js (3D rendering)
+- Trunk (build tool)
+- Browser LocalStorage (persistence)
+- Faker (test data generation)
+
+📦 Key Dependencies
+- yew - Rust web framework
+- wasm-bindgen - JavaScript interop
+- web-sys - Browser APIs
+- gloo - Rust/Wasm utilities
+- faker - Realistic test data
+
+🎵 Music: "The Throne" by Silent Partner
+
+#rust #webassembly #threejs #yew #wasm #programming #coding #tutorial #opensource #vibecoding

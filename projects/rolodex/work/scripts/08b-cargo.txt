@@ -1,0 +1,1 @@
+Cargo dot toml lists all the dependencies. Yew for the web framework, wasm bindgen for JavaScript interop, and web sys for browser APIs.

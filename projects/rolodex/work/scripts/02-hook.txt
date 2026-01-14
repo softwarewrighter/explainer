@@ -1,0 +1,1 @@
+I vibe coded a three D rolodex contact manager in your browser. It uses Rust, Yew, and Three dot j s. Let me show you how it works.

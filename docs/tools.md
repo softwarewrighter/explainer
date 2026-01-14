@@ -575,6 +575,48 @@ chmod +x ~/.local/softwarewrighter/bin/<tool-name>
 
 These tools are located in `../video-publishing/tools/target/release/` and are used for generating TTS audio, lip-synced avatars, and composited video clips.
 
+### Architecture Philosophy
+
+**CRITICAL**: The video production pipeline follows a strict layered architecture:
+
+```
+User/AI Agent
+     |
+     v
+Master Build Script (build-all.sh)
+     |
+     v
+Step Scripts (generate-tts.sh, build-avatar-clip.sh, etc.)
+     |
+     v
+Rust CLI Tools (vid-tts, vid-avatar, vid-lipsync, etc.)
+     |
+     v
+ffmpeg/external services (NEVER called directly)
+```
+
+**Key Principles**:
+
+1. **Script-First Development**: Every video production action should be captured in a bash script for:
+   - Documentation of the exact parameters used
+   - Repeatability (run the same script to recreate)
+   - Reproducibility (others can verify the process)
+
+2. **Rust CLI Encapsulation**: The Rust tools (vid-*) wrap ffmpeg and external services:
+   - Prevents undocumented ffmpeg flags that break reproducibility
+   - Provides consistent defaults and validation
+   - Documents parameters via `--help`
+
+3. **Never Call ffmpeg Directly**: If you need an ffmpeg operation:
+   - Check if a vid-* tool exists for it
+   - If not, ASK THE USER to create or update a Rust tool
+   - NEVER bypass the Rust layer with raw ffmpeg
+
+4. **Per-Project Scripts**: Each project has its own `scripts/` directory:
+   - `common.sh` - project-specific paths and variables
+   - `build-all.sh` - master script documenting full pipeline
+   - Step scripts for each production phase
+
 ### Tool Locations
 
 ```bash
@@ -585,10 +627,13 @@ REFDIR="/Users/mike/github/softwarewrighter/video-publishing/reference"
 # Individual tools
 VID_FRAMES="$TOOLS/vid-frames"
 VID_TTS="$TOOLS/vid-tts"
+VID_IMAGE="$TOOLS/vid-image"
 VID_AVATAR="$TOOLS/vid-avatar"
 VID_LIPSYNC="$TOOLS/vid-lipsync"
 VID_COMPOSITE="$TOOLS/vid-composite"
 VID_CONCAT="$TOOLS/vid-concat"
+VID_VOLUME="$TOOLS/vid-volume"
+VID_SCALE="$TOOLS/vid-scale"
 VID_SPEEDUP="$TOOLS/vid-speedup"
 VID_SLIDE="$TOOLS/vid-slide"
 VID_REVIEW="$TOOLS/vid-review"
@@ -673,12 +718,13 @@ $VID_AVATAR --facing left \
 - Use "center" facing for slides (avatar looks at camera)
 - Duration should match PADDED audio duration
 - Reference dir contains the source avatar videos
+- **NEVER override --fps** - use the default (30fps). Overriding fps causes lip-sync timing issues.
 
 ### 9. vid-lipsync - Lip Sync Generator
 
 **Purpose**: Generate lip-synced avatar video using MuseTalk
 
-**External Service**: hive:3015 (MuseTalk server)
+**External Service**: hive:3015 and hive:3016 (two MuseTalk servers)
 
 **When to Use**:
 - After stretching avatar to match audio
@@ -692,13 +738,18 @@ $VID_LIPSYNC --avatar avatar/stretched/00-intro.mp4 \
   --output avatar/lipsynced/00-intro.mp4
 
 # Server defaults to hive:3015
+# For parallel processing, use --server http://hive:3016 for second job
 ```
 
 **AI Agent Notes**:
-- Run lip-sync jobs SEQUENTIALLY (not parallel) - ~4GB GPU memory per job
+- TWO MuseTalk servers available (3015 and 3016) - use BOTH in parallel for 2x throughput
+- When building multiple avatar clips, run them on different ports simultaneously
 - Uses approximately 1-2 minutes per segment
 - Always use padded audio for proper timing
-- Output FPS defaults to 30
+- **NEVER override --fps** - use the default (30fps). The entire pipeline expects 30fps.
+  - Source avatar fps doesn't matter (tool handles conversion)
+  - MuseTalk generates frames expecting 30fps assembly
+  - Overriding causes lips to move faster/slower than audio
 
 ### 10. vid-composite - Video Compositor
 
@@ -857,6 +908,148 @@ $VID_REVIEW composited/ \
 | `musetalk-cli --server` | `$VID_LIPSYNC --avatar` |
 | `ffmpeg -filter_complex overlay` | `$VID_COMPOSITE` |
 | `ffmpeg -f concat` | `$VID_CONCAT` |
+
+## Common Pitfalls (AI Agent Lessons Learned)
+
+### 1. Avatar Clips Missing Audio
+
+**Problem**: Composited avatar clips are silent even though the avatar moves.
+
+**Cause**: The base clip was created without the `--audio` parameter in vid-image.
+
+**Solution**: Always include `--audio` when creating base clips for avatar compositing:
+```bash
+# WRONG - creates silent base clip
+$VID_IMAGE --image "$PNG" --output "$BASE_CLIP" --effect ken-burns
+
+# CORRECT - base clip has audio, composite will preserve it
+$VID_IMAGE --image "$PNG" --output "$BASE_CLIP" --audio "$AUDIO_FILE" --effect ken-burns
+```
+
+### 2. FPS Mismatch Breaking Video
+
+**Problem**: Lip-sync timing is wrong, or videos don't concatenate properly.
+
+**Cause**: Explicitly specifying `--fps` when the default (30fps) was correct.
+
+**Solution**: NEVER override fps unless you have a specific reason. The entire pipeline is designed for 30fps:
+- vid-image outputs 30fps by default
+- vid-avatar converts source to 30fps
+- vid-lipsync expects 30fps input
+- vid-concat expects all clips at same fps
+
+### 3. Concat List Path Issues
+
+**Problem**: vid-concat fails with "file not found" errors.
+
+**Cause**: Using relative paths in concat list, or wrong path format.
+
+**Solution**: Use absolute paths, one per line (no `file '...'` prefix):
+```bash
+# WRONG
+file 'clips/01-title.mp4'
+
+# CORRECT
+/full/path/to/clips/01-title.mp4
+```
+
+### 4. OBS Video Without Narration
+
+**Problem**: OBS screen recording exists but narration isn't overlaid.
+
+**Cause**: Misunderstanding the workflow - OBS clips need narration audio positioned at timestamps.
+
+**Solution**: For OBS-based videos:
+1. Parse timestamps from narration-all.txt
+2. Strip original OBS audio
+3. Position narration clips at correct timestamps
+4. Add 200-300ms gaps between narrations
+5. Freeze frames if video segment < narration duration
+
+### 5. Epilog Missing Narration
+
+**Problem**: Epilog plays but has no speech or wrong audio.
+
+**Cause**: Creating new epilog instead of using the reference with existing narration.
+
+**Solution**: Use the pre-built reference epilog (99b-epilog.mp4) which already has narration. Only add music extension for bookend effect.
+
+### 6. Sequential Instead of Parallel MuseTalk
+
+**Problem**: Building multiple avatar clips takes too long.
+
+**Cause**: Running lip-sync jobs one at a time.
+
+**Solution**: Use both MuseTalk servers (3015 and 3016) in parallel. IMPORTANT: One job per port maximum - do NOT run multiple jobs on the same port.
+```bash
+# CORRECT - one job per port (max 2 jobs total):
+$VID_LIPSYNC --avatar clip1.mp4 --audio audio1.wav --output out1.mp4 &                          # port 3015 (default)
+$VID_LIPSYNC --avatar clip2.mp4 --audio audio2.wav --output out2.mp4 --server http://hive:3016 &  # port 3016
+wait
+
+# WRONG - multiple jobs on same port will fail or queue:
+$VID_LIPSYNC --avatar clip1.mp4 ... &
+$VID_LIPSYNC --avatar clip2.mp4 ... &  # Both on 3015 - don't do this!
+$VID_LIPSYNC --avatar clip3.mp4 ... &  # 3 jobs - exceeds 2 port limit
+```
+
+### 7. Wrong Filenames in Concat List for Bookend Clips
+
+**Problem**: Hook and CTA clips in the draft video are silent (no audio, no lip movement).
+
+**Cause**: Using the base clip filename (e.g., `02-hook.mp4`) instead of the composited clip (`02-hook-composited.mp4`) in the concat list.
+
+**Solution**: Always use the `-composited.mp4` versions for bookend clips (hook, CTA):
+```bash
+# WRONG - base clip has no lip-sync or audio
+/path/to/work/clips/02-hook.mp4
+/path/to/work/clips/68-cta.mp4
+
+# CORRECT - composited clips have lip-sync and audio
+/path/to/work/clips/02-hook-composited.mp4
+/path/to/work/clips/68-cta-composited.mp4
+```
+
+**Concat list structure for explainer videos**:
+```
+00-title.mp4              # Title slide (silent or with music)
+02-hook-composited.mp4    # Hook with lip-synced avatar
+clip-001.mp4 through      # Narrated content clips
+  clip-NNN.mp4
+68-cta-composited.mp4     # CTA with lip-synced avatar
+99-epilog-final.mp4       # Epilog (pre-built with narration)
+```
+
+### 8. Audio Format Mismatch Breaks Concat
+
+**Problem**: Some clips in the concatenated video have audio, but later clips (especially epilog) are silent or have garbled audio.
+
+**Cause**: Different audio formats between clips. FFmpeg concat protocol requires matching audio formats. When formats differ, audio from mismatched clips may be dropped.
+
+**Detection**:
+```bash
+# Check audio format of clips
+ffprobe -v error -select_streams a:0 -show_entries stream=sample_rate,channels -of csv=p=0 clip.mp4
+# Output like: 44100,2 (sample rate, channels)
+
+# Common mismatch:
+# - Narrated clips: 44100 Hz, stereo (2 channels)
+# - Avatar clips: 24000 Hz, mono (1 channel) - WRONG
+# - Epilog: 44100 Hz, stereo (2 channels)
+```
+
+**Solution**: Run normalize-volume.sh on all clips before concat. This script normalizes BOTH volume AND audio format:
+```bash
+# normalize-volume.sh fixes:
+# 1. Volume level to -25 dB
+# 2. Audio format to 44100 Hz stereo
+# Output shows: "FORMAT FIXED: 24000 Hz 1 ch -> 44100 Hz stereo"
+
+./scripts/normalize-volume.sh work/clips/02-hook-composited.mp4
+./scripts/normalize-volume.sh work/clips/68-cta-composited.mp4
+```
+
+**Prevention**: The build-avatar-clip.sh script already calls normalize-volume.sh at the end. ALWAYS use build-avatar-clip.sh for building bookend clips instead of manually calling individual tools.
 
 ## Future Tools
 

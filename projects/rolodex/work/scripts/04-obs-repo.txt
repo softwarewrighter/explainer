@@ -1,0 +1,1 @@
+You can see the project structure here. The source code, documentation, and build scripts are all organized in the repository.

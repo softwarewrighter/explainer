@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0f"/>
+      <stop offset="50%" style="stop-color:#0d0d18"/>
+      <stop offset="100%" style="stop-color:#05050a"/>
+    </linearGradient>
+    <filter id="neon-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="neon-green" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Grid lines -->
+  <g opacity="0.08">
+    <line x1="0" y1="270" x2="1920" y2="270" stroke="#00ffff" stroke-width="1"/>
+    <line x1="0" y1="540" x2="1920" y2="540" stroke="#00ffff" stroke-width="1"/>
+    <line x1="0" y1="810" x2="1920" y2="810" stroke="#00ffff" stroke-width="1"/>
+  </g>
+
+  <!-- GitHub icon representation -->
+  <g transform="translate(960, 350)">
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#00ff88" stroke-width="4" filter="url(#neon-green)"/>
+    <circle cx="0" cy="-30" r="50" fill="#0a1a0a" stroke="#00ff88" stroke-width="3"/>
+    <ellipse cx="0" cy="60" rx="70" ry="40" fill="#0a1a0a" stroke="#00ff88" stroke-width="3"/>
+  </g>
+
+  <!-- File structure hint -->
+  <g transform="translate(400, 550)">
+    <text x="0" y="0" font-family="'Courier New', monospace" font-size="24" fill="#00ff88" filter="url(#neon-green)">src/</text>
+    <text x="0" y="40" font-family="'Courier New', monospace" font-size="24" fill="#00ffff" filter="url(#neon-cyan)">js/</text>
+    <text x="0" y="80" font-family="'Courier New', monospace" font-size="24" fill="#ffaa00">documentation/</text>
+  </g>
+
+  <g transform="translate(700, 550)">
+    <text x="0" y="0" font-family="'Courier New', monospace" font-size="24" fill="#00ff88" filter="url(#neon-green)">Cargo.toml</text>
+    <text x="0" y="40" font-family="'Courier New', monospace" font-size="24" fill="#00ffff" filter="url(#neon-cyan)">README.md</text>
+    <text x="0" y="80" font-family="'Courier New', monospace" font-size="24" fill="#ffaa00">scripts/</text>
+  </g>
+
+  <!-- Section label -->
+  <text x="960" y="180" font-family="'Impact', 'Arial Black', sans-serif" font-size="48" fill="#00ff88" text-anchor="middle" letter-spacing="4" filter="url(#neon-green)">THE REPOSITORY</text>
+
+  <!-- URL -->
+  <text x="960" y="850" font-family="'Courier New', monospace" font-size="28" fill="#00ffff" text-anchor="middle" filter="url(#neon-cyan)">github.com/softwarewrighter/rolodex</text>
+
+  <!-- Stats -->
+  <g transform="translate(960, 950)">
+    <text x="-200" y="0" font-family="'Arial', sans-serif" font-size="22" fill="#888888" text-anchor="middle">Rust 58%</text>
+    <text x="0" y="0" font-family="'Arial', sans-serif" font-size="22" fill="#888888" text-anchor="middle">JavaScript 25%</text>
+    <text x="200" y="0" font-family="'Arial', sans-serif" font-size="22" fill="#888888" text-anchor="middle">CSS 14%</text>
+  </g>
+</svg>

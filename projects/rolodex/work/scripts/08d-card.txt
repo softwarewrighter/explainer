@@ -1,0 +1,1 @@
+The Card struct defines each contact with fields for name, email, phone, company, and notes.

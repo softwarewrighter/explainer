@@ -1,0 +1,1 @@
+First, the repository on GitHub. The project is mostly Rust with some JavaScript for the Three dot j s rendering.

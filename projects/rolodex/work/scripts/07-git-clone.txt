@@ -1,0 +1,1 @@
+To get started, clone the repository from GitHub. Then open the project folder in your favorite Rust editor.

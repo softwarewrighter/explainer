@@ -1,0 +1,1 @@
+The test data module generates fake contacts using the faker crate. Each field gets a random realistic value.

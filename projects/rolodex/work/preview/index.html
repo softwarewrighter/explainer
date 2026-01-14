@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rolodex - Video Preview</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 20px; background: #1a1a1a; color: #fff; }
+        h1 { color: #ff8800; }
+        h2 { color: #00ffff; margin-top: 40px; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .clip { display: flex; margin: 15px 0; padding: 15px; background: #2d2d2d; border-radius: 8px; gap: 20px; border-left: 4px solid #444; }
+        .clip.title { border-left-color: #9c27b0; }
+        .clip.hook { border-left-color: #ff8800; }
+        .clip.intro { border-left-color: #00ff88; }
+        .clip.obs { border-left-color: #00ffff; }
+        .clip.code { border-left-color: #e040fb; }
+        .clip.cta { border-left-color: #ff8800; }
+        .clip.epilog { border-left-color: #e91e63; }
+        .clip-id { font-size: 20px; font-weight: bold; color: #ff8800; min-width: 180px; }
+        video { width: 640px; border-radius: 4px; }
+        .info { flex-grow: 1; }
+        .meta { font-size: 14px; color: #888; margin-bottom: 10px; }
+        .narration { color: #fff; font-size: 16px; line-height: 1.6; margin: 10px 0; padding: 12px; background: #1a1a1a; border-radius: 4px; font-style: italic; }
+        .status { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 12px; margin-left: 10px; }
+        .status.music { background: #9c27b0; }
+        .status.ready { background: #4CAF50; }
+        .status.avatar { background: #ff8800; color: #000; }
+        .status.slowed { background: #e040fb; }
+        audio { width: 100%; height: 40px; margin-top: 10px; }
+        .note { color: #888; font-size: 13px; margin-top: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Rolodex - Video Preview</h1>
+    <p>3D Contact Manager in Your Browser - Built with Rust, Yew, and Three.js</p>
+
+    <h2>PROLOG</h2>
+
+    <div class="clip title">
+        <div class="clip-id">00-title</div>
+        <div>
+            <video controls preload="metadata">
+                <source src="clips/00-title.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="info">
+            <div class="meta">Duration: 5.0s <span class="status music">MUSIC ONLY</span></div>
+            <div class="note">Music: The Throne - Silent Partner | Image: Live demo screenshot with Ken Burns effect</div>
+        </div>
+    </div>
+
+    <div class="clip hook">
+        <div class="clip-id">02-hook-composited</div>
+        <div>
+            <video controls preload="metadata">
+                <source src="clips/02-hook-composited.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="info">
+            <div class="meta">Duration: 14.1s <span class="status avatar">AVATAR</span></div>
+            <div class="narration">I vibe coded a three D rolodex contact manager in your browser. It uses Rust, Yew, and Three dot j s. Let me show you how it works.</div>
+            <audio controls preload="metadata">
+                <source src="audio/02-hook.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+
+    <h2>REPOSITORY SECTION</h2>
+
+    <div class="clip intro">
+        <div class="clip-id">03-repo-intro</div>
+        <div>
+            <video controls preload="metadata">
+                <source src="clips/03-repo-intro.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="info">
+            <div class="meta">Duration: 10.8s <span class="status ready">READY</span></div>
+            <div class="narration">First, the repository on GitHub. The project is mostly Rust with some JavaScript for the Three dot j s rendering.</div>
+            <audio controls preload="metadata">
+                <source src="audio/03-repo-intro.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+
+    <div class="clip obs">
+        <div class="clip-id">04-obs-repo</div>
+        <div>
+            <video controls preload="metadata">
+                <source src="clips/04-obs-repo.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="info">
+            <div class="meta">Duration: 15.0s <span class="status ready">OBS</span></div>
+            <div class="narration">You can see the project structure here. The source code, documentation, and build scripts are all organized in the repository.</div>
+            <audio controls preload="metadata">
+                <source src="audio/04-obs-repo.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+
+    <h2>DEMO SECTION</h2>
+
+    <div class="clip intro">
+        <div class="clip-id">05-demo-intro</div>
+        <div>
+            <video controls preload="metadata">
+                <source src="clips/05-demo-intro.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="info">
+            <div class="meta">Duration: 8.0s <span class="status ready">READY</span></div>
+            <div class="narration">Now the live demo. The rolodex runs entirely in your browser using web assembly.</div>
+            <audio controls preload="metadata">
+                <source src="audio/05-demo-intro.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+
+    <div class="clip obs">
+        <div class="clip-id">06-obs-demo</div>
+        <div>
+            <video controls preload="metadata">
+                <source src="clips/06-obs-demo.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="info">
+            <div class="meta">Duration: 22.5s <span class="status ready">OBS</span></div>
+            <div class="narration">Watch as I scroll through the contacts. Each card shows the name, email, phone, and company. You can click any card to edit the details.</div>
+            <audio controls preload="metadata">
+                <source src="audio/06-obs-demo.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+
+    <h2>CODE WALKTHROUGH - Getting Started</h2>
+
+    <div class="clip code">
+        <div class="clip-id">07-git-clone</div>
+        <div>
+            <video controls preload="metadata">
+                <source src="clips/07-git-clone.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="info">
+            <div class="meta">Duration: 28.0s <span class="status ready">OBS</span></div>
+            <div class="narration">To get started, clone the repository from GitHub. Then open the project folder in your favorite Rust editor.</div>
+            <audio controls preload="metadata">
+                <source src="audio/07-git-clone.wav" type="audio/wav">
+            </audio>
+            <div class="note">OBS: git clone, cd, ls files, open RustRover</div>
+        </div>
+    </div>
+
+    <h2>CODE WALKTHROUGH - Project Files</h2>
+
+    <div class="clip code">
+        <div class="clip-id">08a-readme</div>
+        <div>
+            <video controls preload="metadata">
+                <source src="clips/08a-readme.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="info">
+            <div class="meta">Duration: 14.9s <span class="status slowed">SLOWED</span></div>
+            <div class="narration">The readme shows all the features and the technology stack. It uses Rust Yew for the frontend, Three dot j s for rendering, and browser local storage.</div>
+            <audio controls preload="metadata">
+                <source src="audio/08a-readme.wav" type="audio/wav">
+            </audio>
+            <div class="note">File: README.md - Features, Live Demo link, Technology Stack</div>
+        </div>
+    </div>
+
+    <div class="clip code">
+        <div class="clip-id">08b-cargo</div>
+        <div>
+            <video controls preload="metadata">
+                <source src="clips/08b-cargo.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="info">
+            <div class="meta">Duration: 15.7s <span class="status slowed">SLOWED</span></div>
+            <div class="narration">Cargo dot toml lists all the dependencies. Yew for the web framework, wasm bindgen for JavaScript interop, and web sys for browser APIs.</div>
+            <audio controls preload="metadata">
+                <source src="audio/08b-cargo.wav" type="audio/wav">
+            </audio>
+            <div class="note">File: Cargo.toml - [dependencies] yew, wasm-bindgen, web-sys</div>
+        </div>
+    </div>
+
+    <div class="clip code">
+        <div class="clip-id">08c-threejs</div>
+        <div>
+            <video controls preload="metadata">
+                <source src="clips/08c-threejs.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="info">
+            <div class="meta">Duration: 9.5s <span class="status slowed">SLOWED</span></div>
+            <div class="narration">The three j s module redirects you to the components rolodex three jay ess file.</div>
+            <audio controls preload="metadata">
+                <source src="audio/08c-threejs.wav" type="audio/wav">
+            </audio>
+            <div class="note">File: src/three_js.rs - Three.js bindings module</div>
+        </div>
+    </div>
+
+    <div class="clip code">
+        <div class="clip-id">08d-card</div>
+        <div>
+            <video controls preload="metadata">
+                <source src="clips/08d-card.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="info">
+            <div class="meta">Duration: 11.8s <span class="status slowed">SLOWED</span></div>
+            <div class="narration">The Card struct defines each contact with fields for name, email, phone, company, and notes.</div>
+            <audio controls preload="metadata">
+                <source src="audio/08d-card.wav" type="audio/wav">
+            </audio>
+            <div class="note">File: src/card.rs - pub struct Card { id, name, email, phone, company, notes }</div>
+        </div>
+    </div>
+
+    <div class="clip code">
+        <div class="clip-id">08e-testdata</div>
+        <div>
+            <video controls preload="metadata">
+                <source src="clips/08e-testdata.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="info">
+            <div class="meta">Duration: 11.3s <span class="status slowed">SLOWED</span></div>
+            <div class="narration">The test data module generates fake contacts using the faker crate. Each field gets a random realistic value.</div>
+            <audio controls preload="metadata">
+                <source src="audio/08e-testdata.wav" type="audio/wav">
+            </audio>
+            <div class="note">File: src/test_data.rs - generate_fake_cards() with faker crate</div>
+        </div>
+    </div>
+
+    <h2>EPILOG</h2>
+
+    <div class="clip cta">
+        <div class="clip-id">68-cta-composited</div>
+        <div>
+            <video controls preload="metadata">
+                <source src="clips/68-cta-composited.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="info">
+            <div class="meta">Duration: 11.0s <span class="status avatar">AVATAR</span></div>
+            <div class="narration">Rolodex is open source on GitHub. Try the live demo yourself, link is in the description. Subscribe for more vibe coding projects.</div>
+            <audio controls preload="metadata">
+                <source src="audio/68-cta.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+
+    <div class="clip epilog">
+        <div class="clip-id">99-epilog-final</div>
+        <div>
+            <video controls preload="metadata">
+                <source src="clips/99-epilog-final.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="info">
+            <div class="meta">Duration: 17.9s <span class="status ready">READY</span></div>
+            <div class="note">Prebuilt: Like &amp; Subscribe (lip-synced) + 5s extension with The Throne music</div>
+        </div>
+    </div>
+
+    <h2>Summary</h2>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+        <tr style="background: #333;">
+            <th style="padding: 10px; text-align: left; border: 1px solid #444;">Clip</th>
+            <th style="padding: 10px; text-align: left; border: 1px solid #444;">Duration</th>
+            <th style="padding: 10px; text-align: left; border: 1px solid #444;">Type</th>
+        </tr>
+        <tr><td style="padding: 8px; border: 1px solid #444;">00-title</td><td style="padding: 8px; border: 1px solid #444;">5.0s</td><td style="padding: 8px; border: 1px solid #444;">Music</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #444;">02-hook-composited</td><td style="padding: 8px; border: 1px solid #444;">14.1s</td><td style="padding: 8px; border: 1px solid #444; color: #ff8800;">Avatar</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #444;">03-repo-intro</td><td style="padding: 8px; border: 1px solid #444;">10.8s</td><td style="padding: 8px; border: 1px solid #444;">Slide</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #444;">04-obs-repo</td><td style="padding: 8px; border: 1px solid #444;">15.0s</td><td style="padding: 8px; border: 1px solid #444;">OBS</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #444;">05-demo-intro</td><td style="padding: 8px; border: 1px solid #444;">8.0s</td><td style="padding: 8px; border: 1px solid #444;">Slide</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #444;">06-obs-demo</td><td style="padding: 8px; border: 1px solid #444;">22.5s</td><td style="padding: 8px; border: 1px solid #444;">OBS</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #444;">07-git-clone</td><td style="padding: 8px; border: 1px solid #444;">28.0s</td><td style="padding: 8px; border: 1px solid #444;">OBS</td></tr>
+        <tr style="background: #2a1a2a;"><td style="padding: 8px; border: 1px solid #444;">08a-readme</td><td style="padding: 8px; border: 1px solid #444;">14.9s</td><td style="padding: 8px; border: 1px solid #444; color: #e040fb;">Slowed</td></tr>
+        <tr style="background: #2a1a2a;"><td style="padding: 8px; border: 1px solid #444;">08b-cargo</td><td style="padding: 8px; border: 1px solid #444;">15.7s</td><td style="padding: 8px; border: 1px solid #444; color: #e040fb;">Slowed</td></tr>
+        <tr style="background: #2a1a2a;"><td style="padding: 8px; border: 1px solid #444;">08c-threejs</td><td style="padding: 8px; border: 1px solid #444;">9.5s</td><td style="padding: 8px; border: 1px solid #444; color: #e040fb;">Slowed</td></tr>
+        <tr style="background: #2a1a2a;"><td style="padding: 8px; border: 1px solid #444;">08d-card</td><td style="padding: 8px; border: 1px solid #444;">11.8s</td><td style="padding: 8px; border: 1px solid #444; color: #e040fb;">Slowed</td></tr>
+        <tr style="background: #2a1a2a;"><td style="padding: 8px; border: 1px solid #444;">08e-testdata</td><td style="padding: 8px; border: 1px solid #444;">11.3s</td><td style="padding: 8px; border: 1px solid #444; color: #e040fb;">Slowed</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #444;">68-cta-composited</td><td style="padding: 8px; border: 1px solid #444;">11.0s</td><td style="padding: 8px; border: 1px solid #444; color: #ff8800;">Avatar</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #444;">99-epilog-final</td><td style="padding: 8px; border: 1px solid #444;">17.9s</td><td style="padding: 8px; border: 1px solid #444;">Epilog</td></tr>
+        <tr style="background: #333; font-weight: bold;"><td style="padding: 8px; border: 1px solid #444;">TOTAL</td><td style="padding: 8px; border: 1px solid #444;">~196s (~3:16)</td><td style="padding: 8px; border: 1px solid #444;"></td></tr>
+    </table>
+
+    <h2>Next Steps</h2>
+    <ul style="font-size: 16px; line-height: 2;">
+        <li>Mix narration audio into OBS clips (04, 06, 07) - currently silent</li>
+        <li>Verify TTS audio with Whisper transcription</li>
+        <li>Final concat and audio level check</li>
+    </ul>
+
+</body>
+</html>

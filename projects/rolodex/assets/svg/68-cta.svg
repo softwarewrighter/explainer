@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0f"/>
+      <stop offset="50%" style="stop-color:#0d0d18"/>
+      <stop offset="100%" style="stop-color:#05050a"/>
+    </linearGradient>
+    <filter id="neon-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="neon-green" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="neon-orange" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Grid lines -->
+  <g opacity="0.08">
+    <line x1="0" y1="270" x2="1920" y2="270" stroke="#00ffff" stroke-width="1"/>
+    <line x1="0" y1="540" x2="1920" y2="540" stroke="#00ffff" stroke-width="1"/>
+    <line x1="0" y1="810" x2="1920" y2="810" stroke="#00ffff" stroke-width="1"/>
+  </g>
+
+  <!-- 3D Rolodex icon -->
+  <g transform="translate(960, 320)">
+    <rect x="-150" y="-80" width="300" height="140" rx="8" fill="#0a2030" stroke="#ff8800" stroke-width="3" filter="url(#neon-orange)"/>
+    <text x="0" y="10" font-family="'Arial', sans-serif" font-size="36" fill="#ff8800" text-anchor="middle" font-weight="bold">ROLODEX</text>
+  </g>
+
+  <!-- Feature checklist -->
+  <g transform="translate(400, 500)">
+    <text x="0" y="0" font-family="'Courier New', monospace" font-size="26" fill="#00ff88" filter="url(#neon-green)">[OK]</text>
+    <text x="100" y="0" font-family="'Arial', sans-serif" font-size="26" fill="#ffffff">Rust and Yew frontend</text>
+
+    <text x="0" y="50" font-family="'Courier New', monospace" font-size="26" fill="#00ff88" filter="url(#neon-green)">[OK]</text>
+    <text x="100" y="50" font-family="'Arial', sans-serif" font-size="26" fill="#ffffff">Three dot j s 3D rendering</text>
+
+    <text x="0" y="100" font-family="'Courier New', monospace" font-size="26" fill="#00ff88" filter="url(#neon-green)">[OK]</text>
+    <text x="100" y="100" font-family="'Arial', sans-serif" font-size="26" fill="#ffffff">Live demo on GitHub Pages</text>
+
+    <text x="0" y="150" font-family="'Courier New', monospace" font-size="26" fill="#00ff88" filter="url(#neon-green)">[OK]</text>
+    <text x="100" y="150" font-family="'Arial', sans-serif" font-size="26" fill="#ffffff">Open source on GitHub</text>
+  </g>
+
+  <!-- Links -->
+  <text x="960" y="780" font-family="'Courier New', monospace" font-size="24" fill="#00ffff" text-anchor="middle" filter="url(#neon-cyan)">softwarewrighter.github.io/rolodex</text>
+  <text x="960" y="830" font-family="'Courier New', monospace" font-size="24" fill="#00ff88" text-anchor="middle" filter="url(#neon-green)">github.com/softwarewrighter/rolodex</text>
+
+  <!-- Title -->
+  <text x="960" y="150" font-family="'Impact', 'Arial Black', sans-serif" font-size="64" fill="#ff8800" text-anchor="middle" letter-spacing="6" filter="url(#neon-orange)">TRY IT YOURSELF</text>
+
+  <!-- Subscribe hint -->
+  <text x="960" y="950" font-family="'Arial', sans-serif" font-size="28" fill="#888888" text-anchor="middle">Subscribe for more vibe coding projects</text>
+</svg>

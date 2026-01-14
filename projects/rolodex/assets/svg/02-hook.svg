@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0f"/>
+      <stop offset="50%" style="stop-color:#0d0d18"/>
+      <stop offset="100%" style="stop-color:#05050a"/>
+    </linearGradient>
+    <filter id="neon-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="neon-green" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="neon-orange" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Grid lines -->
+  <g opacity="0.08">
+    <line x1="0" y1="270" x2="1920" y2="270" stroke="#00ffff" stroke-width="1"/>
+    <line x1="0" y1="540" x2="1920" y2="540" stroke="#00ffff" stroke-width="1"/>
+    <line x1="0" y1="810" x2="1920" y2="810" stroke="#00ffff" stroke-width="1"/>
+    <line x1="480" y1="0" x2="480" y2="1080" stroke="#00ffff" stroke-width="1"/>
+    <line x1="960" y1="0" x2="960" y2="1080" stroke="#00ffff" stroke-width="1"/>
+    <line x1="1440" y1="0" x2="1440" y2="1080" stroke="#00ffff" stroke-width="1"/>
+  </g>
+
+  <!-- 3D Rolodex representation -->
+  <g transform="translate(960, 400)">
+    <!-- Card stack (back cards) -->
+    <rect x="-200" y="-120" width="400" height="180" rx="8" fill="#1a2a3a" stroke="#00ffff" stroke-width="2" transform="rotate(-15)" opacity="0.5"/>
+    <rect x="-200" y="-100" width="400" height="180" rx="8" fill="#1a3a4a" stroke="#00ffff" stroke-width="2" transform="rotate(-8)" opacity="0.7"/>
+    <!-- Front card -->
+    <rect x="-200" y="-80" width="400" height="180" rx="8" fill="#0a1a2a" stroke="#00ffff" stroke-width="3" filter="url(#neon-cyan)"/>
+    <!-- Card content -->
+    <text x="0" y="-20" font-family="'Arial', sans-serif" font-size="32" fill="#00ffff" text-anchor="middle" font-weight="bold" filter="url(#neon-cyan)">Contact Name</text>
+    <text x="0" y="25" font-family="'Courier New', monospace" font-size="18" fill="#88aacc" text-anchor="middle">Company Inc.</text>
+    <text x="0" y="60" font-family="'Courier New', monospace" font-size="16" fill="#668899" text-anchor="middle">email@example.com</text>
+  </g>
+
+  <!-- Tech stack badges -->
+  <g transform="translate(280, 700)">
+    <rect x="0" y="0" width="140" height="50" rx="8" fill="#1a1a2a" stroke="#f74c00" stroke-width="2"/>
+    <text x="70" y="32" font-family="'Arial', sans-serif" font-size="22" fill="#f74c00" text-anchor="middle" font-weight="bold">Rust</text>
+  </g>
+  <g transform="translate(450, 700)">
+    <rect x="0" y="0" width="140" height="50" rx="8" fill="#1a1a2a" stroke="#00d8ff" stroke-width="2"/>
+    <text x="70" y="32" font-family="'Arial', sans-serif" font-size="22" fill="#00d8ff" text-anchor="middle" font-weight="bold">Yew</text>
+  </g>
+  <g transform="translate(620, 700)">
+    <rect x="0" y="0" width="160" height="50" rx="8" fill="#1a1a2a" stroke="#049ef4" stroke-width="2"/>
+    <text x="80" y="32" font-family="'Arial', sans-serif" font-size="22" fill="#049ef4" text-anchor="middle" font-weight="bold">Three.js</text>
+  </g>
+  <g transform="translate(810, 700)">
+    <rect x="0" y="0" width="160" height="50" rx="8" fill="#1a1a2a" stroke="#f0db4f" stroke-width="2"/>
+    <text x="80" y="32" font-family="'Arial', sans-serif" font-size="22" fill="#f0db4f" text-anchor="middle" font-weight="bold">WASM</text>
+  </g>
+
+  <!-- Title -->
+  <text x="960" y="880" font-family="'Impact', 'Arial Black', sans-serif" font-size="72" fill="#ff8800" text-anchor="middle" letter-spacing="6" filter="url(#neon-orange)">ROLODEX</text>
+  <text x="960" y="950" font-family="'Courier New', monospace" font-size="32" fill="#00ffff" text-anchor="middle" filter="url(#neon-cyan)">3D Contact Manager in Your Browser</text>
+</svg>

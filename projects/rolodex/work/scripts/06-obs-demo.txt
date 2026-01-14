@@ -1,0 +1,1 @@
+Watch as I scroll through the contacts. Each card shows the name, email, phone, and company. You can click any card to edit the details.
