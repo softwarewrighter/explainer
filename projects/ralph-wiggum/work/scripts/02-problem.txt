@@ -1,0 +1,1 @@
+Working with A I coding assistants usually means constant back and forth. You prompt. You wait. You review. You find errors. You correct. You prompt again. This manual iteration takes hours and requires your constant attention.

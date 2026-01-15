@@ -1,0 +1,1 @@
+Writing good ralph prompts is an art. First, clear completion criteria. What does done look like. Second, break complex tasks into phases. Third, include self correction. Tell Claude to run tests and fix failures. Fourth, always set max iterations. It is your safety net. Remember. Failures are data for tuning your prompt.

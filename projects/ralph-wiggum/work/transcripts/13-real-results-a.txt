@@ -1,0 +1,2 @@
+[00:00:00.000 --> 00:00:04.000]   The results in the wild are remarkable.
+[00:00:04.000 --> 00:00:10.000]   Druffy Huntley built Cursed Lang, an entire programming language, over three months.

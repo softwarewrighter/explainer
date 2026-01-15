@@ -1,0 +1,2 @@
+[00:00:00.000 --> 00:00:06.060]   Each iteration Claude reads its previous work, sees what is missing and adds the
+[00:00:06.060 --> 00:00:15.000]   next piece. The test count grows 1, 2, 3, 4, 5, over

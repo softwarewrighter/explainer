@@ -1,0 +1,1 @@
+Anthropic formalized this into an official Claude Code plugin. Use slash ralph loop with your prompt, set max iterations as a safety net, and define a completion promise.

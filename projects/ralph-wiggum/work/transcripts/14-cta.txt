@@ -1,0 +1,5 @@
+[00:00:00.000 --> 00:00:07.000]   The roughwiggen plug-in is built into cloudcode dry/rough loop on your next project.
+[00:00:07.000 --> 00:00:09.000]   Start small.
+[00:00:09.000 --> 00:00:11.000]   Define clear criteria.
+[00:00:11.000 --> 00:00:12.000]   Trust the loop.
+[00:00:12.000 --> 00:00:14.000]   Let me know how it works for you.

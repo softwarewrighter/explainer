@@ -1,0 +1,26 @@
+#!/bin/bash
+# Common variables for ralph-wiggum video project
+
+TOOLS="/Users/mike/github/softwarewrighter/video-publishing/tools/target/release"
+REFDIR="/Users/mike/github/softwarewrighter/video-publishing/reference"
+PROJECT="/Users/mike/github/softwarewrighter/explainer/projects/ralph-wiggum"
+
+ASSETS="$PROJECT/assets"
+WORK="$PROJECT/work"
+CLIPS="$WORK/clips"
+AUDIO="$WORK/audio"
+STILLS="$WORK/stills"
+SVG="$WORK/svg"
+VHS="$WORK/vhs"
+
+MUSIC="$REFDIR/music/Matterhorn - Jeremy Black.mp3"
+
+# Video tools
+VID_TTS="$TOOLS/vid-tts"
+VID_IMAGE="$TOOLS/vid-image"
+VID_CONCAT="$TOOLS/vid-concat"
+VID_COMPOSITE="$TOOLS/vid-composite"
+VID_LIPSYNC="$TOOLS/vid-lipsync"
+VID_AVATAR="$TOOLS/vid-avatar"
+VID_VOLUME="$TOOLS/vid-volume"
+VID_SCALE="$TOOLS/vid-scale"

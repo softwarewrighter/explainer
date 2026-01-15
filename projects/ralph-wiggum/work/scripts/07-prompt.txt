@@ -1,0 +1,1 @@
+First we write our prompt. It defines the task clearly. Add tests for card list component. It specifies completion criteria. All edge cases covered. Tests passing. And it includes the magic completion promise.

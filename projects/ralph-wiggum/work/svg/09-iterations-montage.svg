@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0512"/>
+      <stop offset="100%" style="stop-color:#120818"/>
+    </linearGradient>
+    <linearGradient id="progressGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff4444"/>
+      <stop offset="50%" style="stop-color:#ffaa00"/>
+      <stop offset="100%" style="stop-color:#00ff88"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="960" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" fill="#ffffff" font-weight="bold">
+    Watch the Iterations
+  </text>
+
+  <!-- Timeline -->
+  <line x1="160" y1="300" x2="1760" y2="300" stroke="#333333" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Iteration nodes -->
+  <!-- Iteration 1 -->
+  <g transform="translate(260, 300)">
+    <circle cx="0" cy="0" r="50" fill="#1a1a2e" stroke="#d4af37" stroke-width="5"/>
+    <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" fill="#d4af37" font-weight="bold">1</text>
+    <text x="0" y="-80" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" font-weight="bold">Props Test</text>
+    <text x="0" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#888888">1 test</text>
+  </g>
+
+  <!-- Iteration 2 -->
+  <g transform="translate(560, 300)">
+    <circle cx="0" cy="0" r="50" fill="#1a1a2e" stroke="#ffaa00" stroke-width="5"/>
+    <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" fill="#ffaa00" font-weight="bold">2</text>
+    <text x="0" y="-80" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" font-weight="bold">Empty State</text>
+    <text x="0" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#888888">2 tests</text>
+  </g>
+
+  <!-- Iteration 3 -->
+  <g transform="translate(860, 300)">
+    <circle cx="0" cy="0" r="50" fill="#1a1a2e" stroke="#88cc00" stroke-width="5"/>
+    <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" fill="#88cc00" font-weight="bold">3</text>
+    <text x="0" y="-80" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" font-weight="bold">Render Cards</text>
+    <text x="0" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#888888">3 tests</text>
+  </g>
+
+  <!-- Iteration 4 -->
+  <g transform="translate(1160, 300)">
+    <circle cx="0" cy="0" r="50" fill="#1a1a2e" stroke="#44dd44" stroke-width="5"/>
+    <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" fill="#44dd44" font-weight="bold">4</text>
+    <text x="0" y="-80" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" font-weight="bold">Callbacks</text>
+    <text x="0" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#888888">4 tests</text>
+  </g>
+
+  <!-- Iteration 5 -->
+  <g transform="translate(1460, 300)">
+    <circle cx="0" cy="0" r="50" fill="#1a1a2e" stroke="#00ff88" stroke-width="5"/>
+    <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" fill="#00ff88" font-weight="bold">5</text>
+    <text x="0" y="-80" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" font-weight="bold">Selection</text>
+    <text x="0" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#888888">5 tests</text>
+  </g>
+
+  <!-- Final (Iteration 6) -->
+  <g transform="translate(1760, 300)">
+    <circle cx="0" cy="0" r="60" fill="#00ff88" stroke="#00ff88" stroke-width="5" filter="url(#glow)"/>
+    <text x="0" y="14" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#0a0512" font-weight="bold">6</text>
+    <text x="0" y="-90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#00ff88" font-weight="bold">DONE!</text>
+    <text x="0" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#00ff88">6 tests</text>
+  </g>
+
+  <!-- Progress bar -->
+  <g transform="translate(160, 500)">
+    <rect x="0" y="0" width="1600" height="50" fill="#1a1a2e" rx="25"/>
+    <rect x="0" y="0" width="1600" height="50" fill="url(#progressGrad)" rx="25"/>
+    <text x="800" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#0a0512" font-weight="bold">
+      Test Count: 0 → 6
+    </text>
+  </g>
+
+  <!-- Bar chart -->
+  <g transform="translate(160, 650)">
+    <!-- Y axis -->
+    <line x1="50" y1="0" x2="50" y2="300" stroke="#555555" stroke-width="2"/>
+    <!-- X axis -->
+    <line x1="50" y1="300" x2="1650" y2="300" stroke="#555555" stroke-width="2"/>
+
+    <!-- Bars -->
+    <rect x="120" y="260" width="150" height="40" fill="#ff4444" rx="5"/>
+    <text x="195" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#888888">Iter 1</text>
+
+    <rect x="340" y="220" width="150" height="80" fill="#ff6644" rx="5"/>
+    <text x="415" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#888888">Iter 2</text>
+
+    <rect x="560" y="180" width="150" height="120" fill="#ffaa00" rx="5"/>
+    <text x="635" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#888888">Iter 3</text>
+
+    <rect x="780" y="140" width="150" height="160" fill="#88cc00" rx="5"/>
+    <text x="855" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#888888">Iter 4</text>
+
+    <rect x="1000" y="100" width="150" height="200" fill="#44dd44" rx="5"/>
+    <text x="1075" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#888888">Iter 5</text>
+
+    <rect x="1220" y="60" width="150" height="240" fill="#00ff88" rx="5" filter="url(#glow)"/>
+    <text x="1295" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#00ff88" font-weight="bold">Iter 6</text>
+
+    <!-- Y axis labels -->
+    <text x="30" y="305" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#888888">0</text>
+    <text x="30" y="205" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#888888">3</text>
+    <text x="30" y="105" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#888888">6</text>
+  </g>
+
+  <!-- Final message - moved right and dark blue for contrast -->
+  <text x="1700" y="850" text-anchor="end" font-family="Arial, sans-serif" font-size="32" fill="#1a237e" font-weight="bold">
+    All Tests Passing!
+  </text>
+</svg>

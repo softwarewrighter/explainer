@@ -1,0 +1,2 @@
+[00:00:00.000 --> 00:00:06.840]   anthropic formalized this into an official cloud code plugin. Use /routfloop with
+[00:00:06.840 --> 00:00:13.240]   your prompt, set max iterations as a safe kinet, and define a confusion promise over

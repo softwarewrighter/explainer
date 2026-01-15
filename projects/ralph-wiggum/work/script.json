@@ -1,0 +1,131 @@
+{
+  "title": "The Ralph Wiggum Technique: AI Coding in a While Loop",
+  "repo": "/Users/mike/github/softwarewrighter/test-ralph",
+  "duration_estimate": "4-5 minutes",
+  "demo_task": "Add unit tests for CardList component (0 → 6+ tests)",
+  "segments": [
+    {
+      "id": "01-hook",
+      "type": "avatar",
+      "duration": 10,
+      "narration": "What if you could ship six repos overnight for under three hundred dollars? Or complete a fifty thousand dollar contract for two ninety seven? The Ralph Wiggum technique makes this possible.",
+      "svg_description": "Dark gradient background. Large glowing text '$50K → $297' in gold (#d4af37). Subtitle 'The Ralph Wiggum Technique'. Infinite loop icon with glow effect."
+    },
+    {
+      "id": "02-problem",
+      "type": "diagram",
+      "duration": 15,
+      "narration": "Working with A I coding assistants usually means constant back and forth. You prompt. You wait. You review. You find errors. You correct. You prompt again. This manual iteration takes hours and requires your constant attention.",
+      "svg_description": "Left: developer icon (person at desk). Right: AI/robot icon. Multiple arrows ping-ponging between them. Clock icon showing hours passing. Red X marks scattered on failed attempts. Bottom text: 'Manual Iteration = Hours of Attention'"
+    },
+    {
+      "id": "03-technique",
+      "type": "diagram",
+      "duration": 20,
+      "narration": "The Ralph Wiggum technique flips this completely. Named after the Simpsons character who keeps trying despite setbacks. The core idea is brilliantly simple. Put Claude in a while loop. While true. Cat prompt dot M D. Pipe to Claude Code. Done. The prompt never changes. But Claude sees its previous work in files and git. Each iteration it reads what it built and improves.",
+      "svg_description": "Center: large code block with 'while :; do cat PROMPT.md | claude-code ; done' in green monospace. Circular arrows around it showing loop. Labels pointing to parts: 'Prompt stays same', 'Files persist between runs', 'Git tracks all progress'. Small Ralph Wiggum silhouette icon in corner."
+    },
+    {
+      "id": "04-plugin",
+      "type": "cli",
+      "duration": 25,
+      "cli": "claude",
+      "narration": "Anthropic formalized this into an official Claude Code plugin. Use slash ralph loop with your prompt, set max iterations as a safety net, and define a completion promise. Claude will loop until it outputs that promise or hits the limit. You can cancel anytime with slash cancel ralph.",
+      "vhs_tape": "Output 04-plugin.mp4\nSet FontSize 20\nSet Width 1920\nSet Height 1080\nSet Theme \"Dracula\"\nSet TypingSpeed 35ms\n\nType \"claude\"\nEnter\nSleep 5s\nType \"/help ralph\"\nEnter\nSleep 8s\nType \"/ralph-loop \\\"Add unit tests for card_list.rs. Output <promise>TESTS_COMPLETE</promise> when done.\\\" --max-iterations 10 --completion-promise TESTS_COMPLETE\"\nSleep 3s\nCtrl+C\nSleep 2s\nType \"/exit\"\nEnter\nSleep 1s"
+    },
+    {
+      "id": "05-demo-github",
+      "type": "web",
+      "duration": 20,
+      "narration": "Let me show you a real example. This is Rolodex. A three D contact management app built with Rust and WebAssembly. The code lives on GitHub. Let us look at the components folder.",
+      "playwright_actions": [
+        {"action": "navigate", "url": "https://github.com/softwarewrighter/test-ralph"},
+        {"action": "wait", "ms": 2000},
+        {"action": "screenshot", "name": "01-repo"},
+        {"action": "click", "selector": "a[title='src']"},
+        {"action": "wait", "ms": 1500},
+        {"action": "screenshot", "name": "02-src"},
+        {"action": "click", "selector": "a[title='components']"},
+        {"action": "wait", "ms": 1500},
+        {"action": "screenshot", "name": "03-components"},
+        {"action": "click", "selector": "a[title='card_list.rs']"},
+        {"action": "wait", "ms": 1500},
+        {"action": "screenshot", "name": "04-card-list"}
+      ]
+    },
+    {
+      "id": "05b-ralph-docs",
+      "type": "web",
+      "duration": 12,
+      "narration": "The ralph wiggum plugin has its own documentation. Here on the docs branch you can find the complete guide. It covers setup, prompt writing, and advanced techniques.",
+      "description": "GitHub captures from docs/ralph-wiggum-guide branch showing the plugin documentation"
+    },
+    {
+      "id": "06-test-count",
+      "type": "cli",
+      "duration": 15,
+      "cli": "bash",
+      "narration": "The project has thirteen passing tests. But the CardList component has zero. That is one hundred lines of untested code. Our ralph task. Add comprehensive tests until we have full coverage.",
+      "vhs_tape": "Output 06-test-count.mp4\nSet FontSize 20\nSet Width 1920\nSet Height 1080\nSet Theme \"Dracula\"\nSet TypingSpeed 40ms\n\nType \"cd ~/github/softwarewrighter/test-ralph\"\nEnter\nSleep 1s\nType \"wasm-pack test --headless --chrome 2>&1 | grep -E '(test result|passed)'\"\nEnter\nSleep 8s\nType \"grep -c '#\\[wasm_bindgen_test\\]' src/components/card_list.rs || echo '0 tests'\"\nEnter\nSleep 3s"
+    },
+    {
+      "id": "07-prompt",
+      "type": "cli",
+      "duration": 20,
+      "cli": "bash",
+      "narration": "First we write our prompt. It defines the task clearly. Add tests for CardList component. It specifies completion criteria. All edge cases covered. Tests passing. And it includes the magic completion promise.",
+      "vhs_tape": "Output 07-prompt.mp4\nSet FontSize 18\nSet Width 1920\nSet Height 1080\nSet Theme \"Dracula\"\nSet TypingSpeed 25ms\n\nType \"cd ~/github/softwarewrighter/test-ralph\"\nEnter\nSleep 1s\nType \"cat > PROMPT.md << 'EOF'\"\nEnter\nType \"# Task: Add Unit Tests for CardList Component\"\nEnter\nEnter\nType \"## Goal\"\nEnter\nType \"Add comprehensive wasm-bindgen tests for src/components/card_list.rs\"\nEnter\nEnter\nType \"## Requirements\"\nEnter\nType \"1. Test CardListProps creation\"\nEnter\nType \"2. Test rendering with empty list\"\nEnter\nType \"3. Test rendering with cards\"\nEnter\nType \"4. Test callbacks (on_edit, on_delete, on_select)\"\nEnter\nType \"5. All tests must pass\"\nEnter\nEnter\nType \"## Completion\"\nEnter\nType \"When done, output: <promise>TESTS_COMPLETE</promise>\"\nEnter\nType \"EOF\"\nEnter\nSleep 2s\nType \"cat PROMPT.md\"\nEnter\nSleep 4s"
+    },
+    {
+      "id": "08-ralph-start",
+      "type": "cli",
+      "duration": 45,
+      "cli": "claude",
+      "narration": "Now we start the ralph loop. Watch iteration one. Claude reads the prompt. Analyzes the CardList component. Writes the first test. A simple props validation. The test runs. It passes. But we are not done. Claude knows it needs more tests. So it continues to iteration two.",
+      "vhs_tape": "Output 08-ralph-start.mp4\nSet FontSize 16\nSet Width 1920\nSet Height 1080\nSet Theme \"Dracula\"\nSet TypingSpeed 30ms\n\nType \"cd ~/github/softwarewrighter/test-ralph\"\nEnter\nSleep 1s\nType \"claude --dangerously-skip-permissions\"\nEnter\nSleep 5s\nType \"/ralph-loop \\\"$(cat PROMPT.md)\\\" --max-iterations 8 --completion-promise TESTS_COMPLETE\"\nEnter\nSleep 60s"
+    },
+    {
+      "id": "09-iterations-montage",
+      "type": "diagram",
+      "duration": 30,
+      "narration": "Iteration two adds the empty state test. Iteration three tests card rendering. Iteration four tackles the callbacks. Each iteration, Claude reads its previous work, sees what is missing, and adds the next piece. The test count grows. One. Two. Three. Four. Five.",
+      "svg_description": "Timeline showing iterations 1-5 horizontally. Each iteration shows: iteration number, test added, test count. Progress bar filling up. Icons for each test type. Final frame shows '5 tests passing' in green."
+    },
+    {
+      "id": "10-completion",
+      "type": "cli",
+      "duration": 20,
+      "cli": "claude",
+      "narration": "Finally, iteration six. Claude adds the selection highlighting test. Runs all tests. Six passing. Coverage complete. And there it is. The completion promise. Tests complete. The loop stops automatically. Task done.",
+      "vhs_tape": "Output 10-completion.mp4\nSet FontSize 16\nSet Width 1920\nSet Height 1080\nSet Theme \"Dracula\"\n\nSleep 30s"
+    },
+    {
+      "id": "11-results",
+      "type": "diagram",
+      "duration": 15,
+      "narration": "In six iterations, zero to six tests. Full coverage for CardList. No manual intervention required. The prompt defined the goal. Ralph handled the iteration. This is the power of writing prompts that converge.",
+      "svg_description": "Split screen. Left: 'Before' box, red, '0 tests'. Right: 'After' box, green, '6 tests'. Center: arrow with '6 iterations'. Bottom: bar chart showing test growth 0→1→2→3→4→5→6. Title: 'Zero to Full Coverage - No Manual Intervention'"
+    },
+    {
+      "id": "12-best-practices",
+      "type": "diagram",
+      "duration": 20,
+      "narration": "Writing good ralph prompts is an art. First, clear completion criteria. What does done look like. Second, break complex tasks into phases. Third, include self correction. Tell Claude to run tests and fix failures. Fourth, always set max iterations. It is your safety net. Remember. Failures are data for tuning your prompt.",
+      "svg_description": "Grid of 4 boxes with icons. Box 1: 'Clear Criteria' with checkmark icon. Box 2: 'Use Phases' with numbered steps icon. Box 3: 'Self-Correct' with loop-and-fix icon. Box 4: 'Escape Hatch' with safety net icon. Bottom quote in gold: 'Deterministically bad in an undeterministic world'"
+    },
+    {
+      "id": "13-real-results",
+      "type": "diagram",
+      "duration": 15,
+      "narration": "The results in the wild are remarkable. Geoffrey Huntley built Cursed Lang, an entire programming language, over three months. Y Combinator teams shipped six production repos overnight. One developer completed a fifty thousand dollar contract for under three hundred dollars.",
+      "svg_description": "Three cards in a row. Card 1: 'Cursed Lang' with code icon, '3 months', 'Full compiler'. Card 2: '6 Repos' with package icon, 'Overnight', 'YC Hackathon'. Card 3: '$50K Contract' with money icon, '$297 API cost', 'MVP + Tests'. All with green success checkmarks."
+    },
+    {
+      "id": "14-cta",
+      "type": "avatar",
+      "duration": 12,
+      "narration": "The ralph wiggum plugin is built into Claude Code. Try slash ralph loop on your next project. Start small. Define clear criteria. Trust the loop. Let me know how it works for you.",
+      "svg_description": "Dark background. Large '/ralph-loop' command in gold. Three tips: 'Start small', 'Clear criteria', 'Trust the loop'. Bottom: GitHub logo with 'anthropics/claude-code' text."
+    }
+  ]
+}

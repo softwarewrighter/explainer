@@ -1,0 +1,1 @@
+Each iteration, Claude reads its previous work, sees what is missing, and adds the next piece. The test count grows. One. Two. Three. Four. Five.

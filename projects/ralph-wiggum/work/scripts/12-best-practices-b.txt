@@ -1,0 +1,1 @@
+Third, include self correction. Tell Claude to run tests and fix failures. Fourth, always set max iterations. It is your safety net. Failures are data for tuning your prompt.

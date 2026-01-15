@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ralph Wiggum Video Preview</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0512;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 { color: #d4af37; border-bottom: 2px solid #d4af37; padding-bottom: 10px; }
+        h2 { color: #8be9fd; margin-top: 40px; }
+        h3 { color: #888; margin-top: 30px; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .card {
+            background: #1a1a2e;
+            border-radius: 10px;
+            padding: 15px;
+            border: 1px solid #333;
+        }
+        .card h4 { margin: 0 0 10px 0; color: #d4af37; }
+        .card p { color: #888; font-size: 14px; margin: 5px 0; }
+        video, img { max-width: 100%; border-radius: 5px; background: #000; }
+        audio { width: 100%; margin-top: 10px; }
+        .svg-preview {
+            background: #0a0512;
+            border: 1px solid #333;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .svg-preview img { width: 100%; height: auto; }
+        .status {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .done { background: #00ff88; color: #000; }
+        .pending { background: #555; color: #fff; }
+        .progress { background: #d4af37; color: #000; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #333; }
+        th { color: #d4af37; }
+        .narration {
+            font-style: italic;
+            color: #aaa;
+            font-size: 14px;
+            background: #111;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .path {
+            font-family: monospace;
+            font-size: 11px;
+            color: #666;
+            word-break: break-all;
+        }
+        .music { color: #ff79c6; font-style: italic; }
+        .segment { border-left: 3px solid #d4af37; padding-left: 15px; margin: 20px 0; }
+        .segment h4 { color: #50fa7b; }
+        .final-video {
+            background: linear-gradient(135deg, #1a1a2e, #2d1f3d);
+            border: 2px solid #d4af37;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .final-video h2 { margin-top: 0; color: #d4af37; }
+        .final-video video { width: 100%; max-width: 960px; }
+        .duration { color: #50fa7b; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>The Ralph Wiggum Technique - Video Preview</h1>
+    <p>Explainer video about putting Claude in a while loop for autonomous coding.</p>
+
+    <div class="final-video">
+        <h2>Final Assembled Video</h2>
+        <p class="path">preview/draft-ralph-wiggum.mp4</p>
+        <p><span class="duration">Duration: 5:42.93</span> (342.93 seconds) | 18 clips | 1920x1080</p>
+        <video controls><source src="draft-ralph-wiggum.mp4?ts=1736898526" type="video/mp4"></video>
+    </div>
+
+    <h2>Production Status</h2>
+    <table>
+        <tr><th>Phase</th><th>Status</th><th>Items</th></tr>
+        <tr><td>SVG Diagrams</td><td><span class="status done">Done</span></td><td>8/8 generated</td></tr>
+        <tr><td>Title/Epilog</td><td><span class="status done">Done</span></td><td>3 clips</td></tr>
+        <tr><td>Web Captures</td><td><span class="status done">Done</span></td><td>9 screenshots, 2 videos</td></tr>
+        <tr><td>VHS CLI Demos</td><td><span class="status done">Done</span></td><td>4/4 recorded + speedup</td></tr>
+        <tr><td>TTS Narration</td><td><span class="status done">Done</span></td><td>21 audio files</td></tr>
+        <tr><td>Final Assembly</td><td><span class="status done">Done</span></td><td>18 clips concatenated</td></tr>
+    </table>
+
+    <h2>Video Segments</h2>
+
+    <div class="segment">
+        <h4>00-title - Title Card <span class="status done">6.00s</span></h4>
+        <p class="path">clips/00-title.mp4</p>
+        <video controls><source src="../clips/00-title.mp4?ts=1736898526" type="video/mp4"></video>
+        <div class="narration music">Music: Matterhorn by Jeremy Black (intro)</div>
+    </div>
+
+    <div class="segment">
+        <h4>01-hook - Hook (Avatar) <span class="status done">15.64s</span></h4>
+        <p class="path">clips/01-hook.mp4 + audio/01-hook.wav</p>
+        <video controls><source src="../clips/01-hook.mp4?ts=1736898526" type="video/mp4"></video>
+        <audio controls><source src="../audio/01-hook.wav?ts=1736898526" type="audio/wav"></audio>
+        <div class="narration">What if you could ship six repositories overnight for under three hundred dollars. Or complete a fifty thousand dollar contract for two ninety seven. The Ralph Wiggum technique makes this possible.</div>
+    </div>
+
+    <div class="segment">
+        <h4>02-problem - Problem Statement (Diagram) <span class="status done">18.72s</span></h4>
+        <p class="path">clips/02-problem.mp4 + audio/02-problem.wav</p>
+        <video controls><source src="../clips/02-problem.mp4?ts=1736898526" type="video/mp4"></video>
+        <audio controls><source src="../audio/02-problem.wav?ts=1736898526" type="audio/wav"></audio>
+        <div class="narration">Working with A I coding assistants usually means constant back and forth. You prompt. You wait. You review. You find errors. You correct. You prompt again. This manual iteration takes hours and requires your constant attention.</div>
+    </div>
+
+    <div class="segment">
+        <h4>03-technique - The Technique (Diagram) <span class="status done">31.72s</span></h4>
+        <p class="path">clips/03-technique.mp4 + audio/03-technique-a.wav + audio/03-technique-b.wav</p>
+        <video controls><source src="../clips/03-technique.mp4?ts=1736898526" type="video/mp4"></video>
+        <audio controls><source src="../audio/03-technique-a.wav" type="audio/wav"></audio>
+        <audio controls><source src="../audio/03-technique-b.wav" type="audio/wav"></audio>
+        <div class="narration">The Ralph Wiggum technique flips this completely. Named after the Simpsons character who keeps trying despite setbacks. The core idea is brilliantly simple. Put Claude in a while loop.</div>
+        <div class="narration">While true. Cat prompt dot em dee. Pipe to Claude Code. Done. The prompt never changes. But Claude sees its previous work in files and git. Each iteration it reads what it built and improves.</div>
+    </div>
+
+    <div class="segment">
+        <h4>04-plugin - Plugin Introduction (CLI) <span class="status done">22.00s</span></h4>
+        <p class="path">clips/04-plugin-narrated.mp4 (VHS speedup 1.22x + audio)</p>
+        <video controls><source src="../clips/04-plugin-narrated.mp4?ts=1736898526" type="video/mp4"></video>
+        <audio controls><source src="../audio/04-plugin-a.wav" type="audio/wav"></audio>
+        <audio controls><source src="../audio/04-plugin-b.wav" type="audio/wav"></audio>
+        <div class="narration">Anthropic formalized this into an official Claude Code plugin. Use slash ralph loop with your prompt, set max iterations as a safety net, and define a completion promise.</div>
+        <div class="narration">Claude will loop until it outputs that promise or hits the limit. You can cancel anytime with slash cancel ralph.</div>
+    </div>
+
+    <div class="segment">
+        <h4>05-demo-github - GitHub Tour (Web) <span class="status done">13.93s</span></h4>
+        <p class="path">clips/05-demo-github-narrated.mp4 (VHS speedup 1.66x + audio)</p>
+        <video controls><source src="../clips/05-demo-github-narrated.mp4?ts=1736898526" type="video/mp4"></video>
+        <audio controls><source src="../audio/05-demo-github.wav" type="audio/wav"></audio>
+        <div class="narration">Let me show you a real example. This is Rolodex. A three dee contact management app built with Rust and Web Assembly. The code lives on GitHub. Let us look at the components folder.</div>
+    </div>
+
+    <div class="segment">
+        <h4>05b-ralph-docs - Ralph Documentation (Web) <span class="status done">12.60s</span></h4>
+        <p class="path">clips/05b-ralph-docs-narrated.mp4 (VHS speedup 1.39x + audio)</p>
+        <video controls><source src="../clips/05b-ralph-docs-narrated.mp4?ts=1736898526" type="video/mp4"></video>
+        <audio controls><source src="../audio/05b-ralph-docs.wav" type="audio/wav"></audio>
+        <div class="narration">The Ralph Wiggum plugin has its own documentation. Here on the docs branch you can find the complete guide. It covers setup, prompt writing, and advanced techniques.</div>
+    </div>
+
+    <div class="segment">
+        <h4>06-test-count - Test Count (CLI) <span class="status done">30.93s</span></h4>
+        <p class="path">clips/06-test-count-narrated.mp4 (VHS speedup + extended narration)</p>
+        <video controls><source src="../clips/06-test-count-narrated.mp4?ts=1736898526" type="video/mp4"></video>
+        <audio controls><source src="../audio/06-test-count-a.wav" type="audio/wav"></audio>
+        <audio controls><source src="../audio/06-test-count-b.wav" type="audio/wav"></audio>
+        <div class="narration">The project has thirteen passing tests. But the card list component has zero. Watch as we run wasm pack test with headless chrome. The output shows all tests passing.</div>
+        <div class="narration">Now we grep for test annotations in card list dot arr ess. Zero matches. One hundred lines of untested code. Our ralph task, add comprehensive tests until we have full coverage.</div>
+    </div>
+
+    <div class="segment">
+        <h4>07-prompt - Creating PROMPT.md (CLI) <span class="status done">18.73s</span></h4>
+        <p class="path">clips/07-prompt-narrated.mp4 (VHS speedup 1.66x + audio)</p>
+        <video controls><source src="../clips/07-prompt-narrated.mp4?ts=1736898526" type="video/mp4"></video>
+        <audio controls><source src="../audio/07-prompt.wav" type="audio/wav"></audio>
+        <div class="narration">First we write our prompt. It defines the task clearly. Add tests for card list component. It specifies completion criteria. All edge cases covered. Tests passing. And it includes the magic completion promise.</div>
+    </div>
+
+    <div class="segment">
+        <h4>08-ralph-start - Starting the Loop (Diagram) <span class="status done">22.52s</span></h4>
+        <p class="path">clips/08-ralph-start.mp4 (placeholder using technique diagram)</p>
+        <video controls><source src="../clips/08-ralph-start.mp4?ts=1736898526" type="video/mp4"></video>
+        <audio controls><source src="../audio/08-ralph-start-a.wav" type="audio/wav"></audio>
+        <audio controls><source src="../audio/08-ralph-start-b.wav" type="audio/wav"></audio>
+        <div class="narration">Now we start the ralph loop. Watch iteration one. Claude reads the prompt. Analyzes the card list component. Writes the first test. A simple props validation.</div>
+        <div class="narration">The test runs. It passes. But we are not done. Claude knows it needs more tests. So it continues to iteration two.</div>
+    </div>
+
+    <div class="segment">
+        <h4>09-iterations - Iterations Montage (Diagram) <span class="status done">24.76s</span></h4>
+        <p class="path">clips/09-iterations.mp4</p>
+        <video controls><source src="../clips/09-iterations.mp4?ts=1736898526" type="video/mp4"></video>
+        <audio controls><source src="../audio/09-iterations-a.wav" type="audio/wav"></audio>
+        <audio controls><source src="../audio/09-iterations-b.wav" type="audio/wav"></audio>
+        <div class="narration">Iteration two adds the empty state test. Iteration three tests card rendering. Iteration four tackles the callbacks.</div>
+        <div class="narration">Each iteration, Claude reads its previous work, sees what is missing, and adds the next piece. The test count grows. One. Two. Three. Four. Five.</div>
+    </div>
+
+    <div class="segment">
+        <h4>10-completion - Completion (Diagram) <span class="status done">23.64s</span></h4>
+        <p class="path">clips/10-completion.mp4</p>
+        <video controls><source src="../clips/10-completion.mp4?ts=1736898526" type="video/mp4"></video>
+        <audio controls><source src="../audio/10-completion.wav" type="audio/wav"></audio>
+        <div class="narration">Finally, iteration six. Claude adds the selection highlighting test. Runs all tests. Six passing. Coverage complete. And there it is. The completion promise. Tests complete. The loop stops automatically. Task done.</div>
+    </div>
+
+    <div class="segment">
+        <h4>11-results - Results (Diagram) <span class="status done">18.72s</span></h4>
+        <p class="path">clips/11-results.mp4</p>
+        <video controls><source src="../clips/11-results.mp4?ts=1736898526" type="video/mp4"></video>
+        <audio controls><source src="../audio/11-results.wav" type="audio/wav"></audio>
+        <div class="narration">In six iterations, zero to six tests. Full coverage for card list. No manual intervention required. The prompt defined the goal. Ralph handled the iteration. This is the power of writing prompts that converge.</div>
+    </div>
+
+    <div class="segment">
+        <h4>12-best-practices - Best Practices (Diagram) <span class="status done">28.52s</span></h4>
+        <p class="path">clips/12-best-practices.mp4</p>
+        <video controls><source src="../clips/12-best-practices.mp4?ts=1736898526" type="video/mp4"></video>
+        <audio controls><source src="../audio/12-best-practices-a.wav" type="audio/wav"></audio>
+        <audio controls><source src="../audio/12-best-practices-b.wav" type="audio/wav"></audio>
+        <div class="narration">Writing good ralph prompts is an art. First, clear completion criteria. What does done look like. Second, break complex tasks into phases.</div>
+        <div class="narration">Third, include self correction. Tell Claude to run tests and fix failures. Fourth, always set max iterations. It is your safety net. Failures are data for tuning your prompt.</div>
+    </div>
+
+    <div class="segment">
+        <h4>13-real-results - Real World Results (Diagram) <span class="status done">21.44s</span></h4>
+        <p class="path">clips/13-real-results.mp4</p>
+        <video controls><source src="../clips/13-real-results.mp4?ts=1736898526" type="video/mp4"></video>
+        <audio controls><source src="../audio/13-real-results-a.wav" type="audio/wav"></audio>
+        <audio controls><source src="../audio/13-real-results-b.wav" type="audio/wav"></audio>
+        <div class="narration">The results in the wild are remarkable. Geoffrey Huntley built Cursed Lang, an entire programming language, over three months.</div>
+        <div class="narration">Why Combinator teams shipped six production repos overnight. One developer completed a fifty thousand dollar contract for under three hundred dollars.</div>
+    </div>
+
+    <div class="segment">
+        <h4>14-cta - Call to Action (Avatar) <span class="status done">15.12s</span></h4>
+        <p class="path">clips/14-cta.mp4</p>
+        <video controls><source src="../clips/14-cta.mp4?ts=1736898526" type="video/mp4"></video>
+        <audio controls><source src="../audio/14-cta.wav" type="audio/wav"></audio>
+        <div class="narration">The Ralph Wiggum plugin is built into Claude Code. Try slash ralph loop on your next project. Start small. Define clear criteria. Trust the loop. Let me know how it works for you.</div>
+    </div>
+
+    <div class="segment">
+        <h4>99b-epilog - Standard Epilog <span class="status done">12.80s</span></h4>
+        <p class="path">clips/99b-epilog.mp4 (from reference)</p>
+        <video controls><source src="../clips/99b-epilog.mp4?ts=1736898526" type="video/mp4"></video>
+        <div class="narration music">Standard epilog with embedded narration</div>
+    </div>
+
+    <div class="segment">
+        <h4>99c-epilog-ext - Music Outro <span class="status done">5.00s</span></h4>
+        <p class="path">clips/99c-epilog-ext-matterhorn.mp4</p>
+        <video controls><source src="../clips/99c-epilog-ext-matterhorn.mp4?ts=1736898526" type="video/mp4"></video>
+        <div class="narration music">Music: Matterhorn by Jeremy Black (outro, 5s fade)</div>
+    </div>
+
+    <h2>Web Captures</h2>
+
+    <h3>GitHub Tour (Rolodex Repo)</h3>
+    <div class="grid">
+        <div class="card">
+            <h4>01-repo.png</h4>
+            <p class="path">web/05-github/01-repo.png</p>
+            <img src="../web/05-github/01-repo.png" alt="Rolodex repo">
+        </div>
+        <div class="card">
+            <h4>02-src.png</h4>
+            <p class="path">web/05-github/02-src.png</p>
+            <img src="../web/05-github/02-src.png" alt="src folder">
+        </div>
+        <div class="card">
+            <h4>03-components.png</h4>
+            <p class="path">web/05-github/03-components.png</p>
+            <img src="../web/05-github/03-components.png" alt="components folder">
+        </div>
+        <div class="card">
+            <h4>04-card-list.png</h4>
+            <p class="path">web/05-github/04-card-list.png</p>
+            <img src="../web/05-github/04-card-list.png" alt="card_list.rs">
+        </div>
+        <div class="card">
+            <h4>05-ralph-plugin.png</h4>
+            <p class="path">web/05-github/05-ralph-plugin.png</p>
+            <img src="../web/05-github/05-ralph-plugin.png" alt="ralph-wiggum plugin">
+        </div>
+        <div class="card">
+            <h4>06-ralph-readme.png</h4>
+            <p class="path">web/05-github/06-ralph-readme.png</p>
+            <img src="../web/05-github/06-ralph-readme.png" alt="ralph-wiggum README">
+        </div>
+    </div>
+
+    <h3>Ralph Documentation Branch</h3>
+    <div class="grid">
+        <div class="card">
+            <h4>01-ralph-branch.png</h4>
+            <p class="path">web/ralph-docs/01-ralph-branch.png</p>
+            <img src="../web/ralph-docs/01-ralph-branch.png" alt="Ralph branch">
+        </div>
+        <div class="card">
+            <h4>02-docs-folder.png</h4>
+            <p class="path">web/ralph-docs/02-docs-folder.png</p>
+            <img src="../web/ralph-docs/02-docs-folder.png" alt="Docs folder">
+        </div>
+        <div class="card">
+            <h4>03-ralph-guide.png</h4>
+            <p class="path">web/ralph-docs/03-ralph-guide.png</p>
+            <img src="../web/ralph-docs/03-ralph-guide.png" alt="Ralph guide">
+        </div>
+    </div>
+
+    <h2>Source Assets</h2>
+    <div class="grid">
+        <div class="card">
+            <h4>ralph-unpossible.jpg</h4>
+            <p class="path">assets/images/ralph-unpossible.jpg</p>
+            <img src="../assets/images/ralph-unpossible.jpg" alt="Ralph Wiggum">
+        </div>
+    </div>
+
+    <script>
+        console.log('Preview page loaded. Refresh to see updates.');
+    </script>
+</body>
+</html>

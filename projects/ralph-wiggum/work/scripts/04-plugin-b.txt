@@ -1,0 +1,1 @@
+Claude will loop until it outputs that promise or hits the limit. You can cancel anytime with slash cancel ralph.

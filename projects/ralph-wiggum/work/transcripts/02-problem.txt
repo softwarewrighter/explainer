@@ -1,0 +1,3 @@
+[00:00:00.000 --> 00:00:06.000]   Working with AI, coding assistance usually means constant back and forth.
+[00:00:06.000 --> 00:00:13.000]   You prompt, you wait, you review, you find errors, you correct, you prompt again.
+[00:00:13.000 --> 00:00:18.000]   This manual iteration takes hours and requires your constant attention.

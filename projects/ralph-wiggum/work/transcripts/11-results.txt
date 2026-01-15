@@ -1,0 +1,4 @@
+[00:00:00.000 --> 00:00:05.760]   In 6 iterations, 0-6 tests.
+[00:00:05.760 --> 00:00:09.760]   Full coverage regardless, no manual intervention required.
+[00:00:09.760 --> 00:00:14.480]   The prompt defined the goal, Ralph handled the iteration.
+[00:00:14.480 --> 00:00:16.960]   This is the power of writing prompts the converge.

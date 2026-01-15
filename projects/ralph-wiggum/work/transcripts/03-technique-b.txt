@@ -1,0 +1,3 @@
+[00:00:00.000 --> 00:00:11.840]   While true, catprompt.md pipe the cloud code. Done. The prompt never changes, but
+[00:00:11.840 --> 00:00:17.160]   cloud sees its previous work and files and get. Each iteration it reads what it
+[00:00:17.160 --> 00:00:19.920]   built and improves.

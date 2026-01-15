@@ -1,0 +1,2 @@
+[00:00:00.000 --> 00:00:06.160]   The test runs. It passes. But we are not done. Cloud knows and needs more
+[00:00:06.160 --> 00:00:11.520]   tests. So it continues to iteration too.

@@ -1,0 +1,1 @@
+The Ralph Wiggum technique flips this completely. Named after the Simpsons character who keeps trying despite setbacks. The core idea is brilliantly simple. Put Claude in a while loop.

@@ -1,0 +1,1 @@
+Now we start the ralph loop. Watch iteration one. Claude reads the prompt. Analyzes the CardList component. Writes the first test. A simple props validation. The test runs. It passes. But we are not done. Claude knows it needs more tests. So it continues to iteration two.

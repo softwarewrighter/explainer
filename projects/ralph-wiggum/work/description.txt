@@ -1,0 +1,49 @@
+The Ralph Wiggum Technique: Put Claude in a While Loop
+
+What if you could ship 6 production repos overnight for under $300? YC teams are doing it. Named after the Simpsons character who keeps trying despite setbacks, the Ralph Wiggum technique puts Claude Code in a while loop and lets it iterate autonomously.
+
+The core idea is brilliantly simple:
+while true; cat PROMPT.md | claude; done
+
+Claude sees its previous work in files and git. Each iteration it reads what it built and improves. The loop stops when it outputs a completion promise.
+
+In this video I show a real example: adding comprehensive tests to a Rust WebAssembly component. Zero tests to full coverage in 6 iterations with no manual intervention.
+
+The /ralph-loop plugin is built into Claude Code. Try it on your next project.
+
+CHAPTERS:
+0:00 - Hook
+0:22 - The Problem with AI Coding
+0:40 - The Ralph Wiggum Technique Explained
+1:12 - The /ralph-loop Plugin
+1:34 - Real Example: Rolodex Project
+2:01 - Running the Loop
+2:54 - Iterations Montage
+3:19 - Completion
+3:43 - Results
+4:01 - Best Practices
+4:30 - Real World Results
+4:51 - Call to Action
+
+LINKS:
+Claude Code: https://claude.com/claude-code
+Ralph Wiggum Plugin Docs: https://docs.anthropic.com/claude-code/plugins/ralph-wiggum
+Rolodex Example Project: https://github.com/softwarewrighter/rolodex
+Geoffrey Huntley's Cursed Lang: https://github.com/ghuntley/cursedlang
+
+MUSIC:
+Matterhorn by Jeremy Black (licensed)
+
+SUGGESTED TITLES:
+1. The Ralph Wiggum Technique: Put Claude in a While Loop
+2. Ship 6 Repos Overnight: The Ralph Wiggum Technique for Claude Code
+3. Claude Code /ralph-loop: Autonomous AI Coding Explained
+4. From Zero to Full Test Coverage with Claude in a While Loop
+5. The $50K Contract I Completed for $297 Using Claude Code
+6. Why YC Teams Use the Ralph Wiggum Technique
+
+KEYWORDS:
+claude code, ai coding, autonomous coding, ralph wiggum technique, while loop, claude code plugin, anthropic, rust, webassembly, test coverage, software development, ai programming, yc, y combinator
+
+HASHTAGS:
+#ClaudeCode #AICoding #RalphWiggum #Anthropic #SoftwareDevelopment #AI #Programming #Rust #WebAssembly

@@ -1,0 +1,1 @@
+Iteration two adds the empty state test. Iteration three tests card rendering. Iteration four tackles the callbacks. Each iteration, Claude reads its previous work, sees what is missing, and adds the next piece. The test count grows. One. Two. Three. Four. Five.

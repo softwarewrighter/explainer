@@ -1,0 +1,1 @@
+The project has thirteen passing tests. But the card list component has zero. Watch as we run wasm pack test with headless chrome. The output shows all tests passing. Now we grep for wasm bindgen test annotations in card list dot arr ess. Zero matches. That is one hundred lines of untested code. Our ralph task, add comprehensive tests until we have full coverage.

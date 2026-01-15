@@ -1,0 +1,1 @@
+While true. Cat prompt dot em dee. Pipe to Claude Code. Done. The prompt never changes. But Claude sees its previous work in files and git. Each iteration it reads what it built and improves.

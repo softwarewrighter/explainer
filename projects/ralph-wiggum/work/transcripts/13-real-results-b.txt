@@ -1,0 +1,2 @@
+[00:00:00.000 --> 00:00:05.000]   Y Combinator teams shipped six production repos overnight.
+[00:00:05.000 --> 00:00:11.000]   One developer completed a $50,000 contract for under $300.

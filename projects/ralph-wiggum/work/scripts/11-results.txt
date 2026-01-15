@@ -1,0 +1,1 @@
+In six iterations, zero to six tests. Full coverage for card list. No manual intervention required. The prompt defined the goal. Ralph handled the iteration. This is the power of writing prompts that converge.

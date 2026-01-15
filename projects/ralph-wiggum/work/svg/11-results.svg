@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0512"/>
+      <stop offset="100%" style="stop-color:#120818"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="redGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="64" fill="#ffffff" font-weight="bold">
+    Zero to Full Coverage
+  </text>
+  <text x="960" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#888888">
+    No Manual Intervention Required
+  </text>
+
+  <!-- Before box -->
+  <g transform="translate(450, 460)">
+    <rect x="-240" y="-200" width="480" height="400" fill="#1a1a2e" rx="25" stroke="#ff4444" stroke-width="5"/>
+    <text x="0" y="-130" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#ff4444" font-weight="bold">BEFORE</text>
+    <text x="0" y="30" text-anchor="middle" font-family="Georgia, serif" font-size="140" fill="#ff4444" filter="url(#redGlow)">0</text>
+    <text x="0" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#888888">tests</text>
+    <text x="0" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#666666">CardList untested</text>
+  </g>
+
+  <!-- Arrow -->
+  <g transform="translate(960, 460)">
+    <path d="M-170,0 L170,0" stroke="#d4af37" stroke-width="10" marker-end="url(#bigArrow)"/>
+    <rect x="-100" y="-55" width="200" height="50" fill="#0a0512"/>
+    <text x="0" y="-20" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#d4af37" font-weight="bold">6 iterations</text>
+  </g>
+
+  <!-- After box -->
+  <g transform="translate(1470, 460)">
+    <rect x="-240" y="-200" width="480" height="400" fill="#1a1a2e" rx="25" stroke="#00ff88" stroke-width="5" filter="url(#glow)"/>
+    <text x="0" y="-130" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#00ff88" font-weight="bold">AFTER</text>
+    <text x="0" y="30" text-anchor="middle" font-family="Georgia, serif" font-size="140" fill="#00ff88" filter="url(#glow)">6</text>
+    <text x="0" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#888888">tests</text>
+    <text x="0" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#00ff88">Full coverage!</text>
+  </g>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="bigArrow" markerWidth="15" markerHeight="15" refX="12" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,10 L15,5 z" fill="#d4af37"/>
+    </marker>
+  </defs>
+
+  <!-- Key points at bottom -->
+  <g transform="translate(960, 880)">
+    <!-- Point 1 -->
+    <g transform="translate(-500, 0)">
+      <circle cx="0" cy="0" r="40" fill="#d4af37"/>
+      <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#0a0512" font-weight="bold">1</text>
+      <text x="0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" font-weight="bold">Same prompt</text>
+      <text x="0" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#888888">every iteration</text>
+    </g>
+
+    <!-- Point 2 -->
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="40" fill="#d4af37"/>
+      <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#0a0512" font-weight="bold">2</text>
+      <text x="0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" font-weight="bold">Files persist</text>
+      <text x="0" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#888888">Claude sees progress</text>
+    </g>
+
+    <!-- Point 3 -->
+    <g transform="translate(500, 0)">
+      <circle cx="0" cy="0" r="40" fill="#d4af37"/>
+      <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#0a0512" font-weight="bold">3</text>
+      <text x="0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" font-weight="bold">Auto-completes</text>
+      <text x="0" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#888888">when criteria met</text>
+    </g>
+  </g>
+
+  <!-- Checkmark -->
+  <g transform="translate(1660, 340)">
+    <circle cx="0" cy="0" r="45" fill="#00ff88"/>
+    <path d="M-20,0 L-7,13 L20,-15" stroke="#0a0512" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
