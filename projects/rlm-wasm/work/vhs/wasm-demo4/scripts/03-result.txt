@@ -1,0 +1,1 @@
+Statistical analysis complete. The median response time is shown along with the ninety fifth and ninety ninth percentiles. Two iterations in eighteen seconds.

@@ -1,0 +1,1 @@
+Clicking Run R L M Query starts the iterative process. The Output tab shows live progress as the language model works through the problem.

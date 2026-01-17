@@ -1,0 +1,1 @@
+This example calculates response time percentiles. The language model uses web assembly intent because percentiles require sorted data, not map reduce.

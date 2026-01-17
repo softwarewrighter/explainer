@@ -1051,6 +1051,45 @@ ffprobe -v error -select_streams a:0 -show_entries stream=sample_rate,channels -
 
 **Prevention**: The build-avatar-clip.sh script already calls normalize-volume.sh at the end. ALWAYS use build-avatar-clip.sh for building bookend clips instead of manually calling individual tools.
 
+## Audio Verification Tools
+
+### whisper-cli - Speech-to-Text Transcription
+
+**Purpose**: Transcribe audio/video to text for verification of TTS output
+
+**Location**: `/opt/homebrew/bin/whisper-cli` (installed via Homebrew whisper-cpp)
+
+**Models**:
+- `/Users/mike/.whisper-models/ggml-base.en.bin` - Fast, good quality
+- `/Users/mike/.local/share/whisper-cpp/models/ggml-medium.en.bin` - Slower, better quality
+
+**When to Use**:
+- Verifying TTS audio was generated correctly
+- Checking that narration matches script
+- Quality assurance on voice-cloned audio
+- Debugging audio issues in final video
+
+**Usage**:
+```bash
+# Extract audio from video (16kHz mono WAV required)
+ffmpeg -y -i input.mp4 -ar 16000 -ac 1 -c:a pcm_s16le /tmp/audio.wav
+
+# Transcribe with whisper-cli
+whisper-cli -m /Users/mike/.whisper-models/ggml-base.en.bin -f /tmp/audio.wav -nt
+
+# Options:
+# -nt         : No timestamps (cleaner output)
+# -m MODEL    : Model path
+# -f FILE     : Input audio file (16kHz mono WAV)
+```
+
+**AI Agent Notes**:
+- ALWAYS extract audio to 16kHz mono WAV first
+- Use base.en model for speed, medium.en for accuracy
+- The -nt flag gives cleaner transcript output
+- Compare transcription against original script to verify TTS quality
+- Useful for catching pronunciation issues with acronyms
+
 ## Future Tools
 
 As new tools are added to `~/.local/softwarewrighter/bin/`, document them here:

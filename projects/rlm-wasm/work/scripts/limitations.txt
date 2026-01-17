@@ -1,0 +1,1 @@
+Web assembly has trade offs. No unicode support, only ask e. Memory is limited to sixty four megabytes. And only a subset of Rust compiles to web assembly. These limits enable safe sandboxed execution.

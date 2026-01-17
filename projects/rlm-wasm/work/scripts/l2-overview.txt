@@ -1,0 +1,1 @@
+R L M Level two uses web assembly for complex processing. A coder language model writes Rust code that compiles to web assembly and runs in a secure sandbox. Map reduce handles aggregation and statistics on large datasets.

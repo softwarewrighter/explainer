@@ -1,0 +1,1 @@
+Clicking Run R L M Query starts iteration one. The language model analyzes the query and decides to use rust wasm map reduce with a unique combiner.

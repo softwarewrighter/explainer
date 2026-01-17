@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0512"/>
+      <stop offset="100%" style="stop-color:#120818"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#d4af37" stroke-width="1" opacity="0.1"/>
+  <circle cx="1720" cy="880" r="200" fill="none" stroke="#00ff88" stroke-width="1" opacity="0.1"/>
+
+  <!-- Main CTA -->
+  <text x="960" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="80" fill="#d4af37" font-weight="bold" filter="url(#glow)">
+    Try RLM Now
+  </text>
+
+  <text x="960" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" fill="#00ff88">
+    with WASM
+  </text>
+
+  <!-- Command display -->
+  <rect x="360" y="450" width="1200" height="120" fill="#1a1a2e" rx="16" stroke="#d4af37" stroke-width="3"/>
+  <text x="440" y="525" font-family="Monaco, monospace" font-size="36" fill="#888888">$</text>
+  <text x="500" y="525" font-family="Monaco, monospace" font-size="36" fill="#00ff88">rlm</text>
+  <text x="580" y="525" font-family="Monaco, monospace" font-size="36" fill="#ffffff">document.txt</text>
+  <text x="920" y="525" font-family="Monaco, monospace" font-size="32" fill="#888888">"your query"</text>
+
+  <!-- Benefits -->
+  <g transform="translate(960, 700)">
+    <g transform="translate(-350, 0)">
+      <circle cx="0" cy="0" r="40" fill="#00ff88"/>
+      <text x="0" y="10" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#0a0512" font-weight="bold">1</text>
+      <text x="0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Single Iteration</text>
+    </g>
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="40" fill="#8be9fd"/>
+      <text x="0" y="10" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#0a0512" font-weight="bold">2</text>
+      <text x="0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Custom Analysis</text>
+    </g>
+    <g transform="translate(350, 0)">
+      <circle cx="0" cy="0" r="40" fill="#ff79c6"/>
+      <text x="0" y="10" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#0a0512" font-weight="bold">3</text>
+      <text x="0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Sandboxed Safety</text>
+    </g>
+  </g>
+
+  <!-- GitHub link -->
+  <text x="960" y="920" text-anchor="middle" font-family="Monaco, monospace" font-size="24" fill="#888888">
+    github.com/softwarewrighter/rlm-project
+  </text>
+</svg>

@@ -1,0 +1,1 @@
+Level two web assembly handles complex analysis. Here we select Count unique I P addresses, which uses map reduce with a unique combiner on two hundred log lines.

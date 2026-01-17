@@ -1,0 +1,1 @@
+R L M compiled custom Rust code to web assembly that counted each error type. Two iterations, under seventeen seconds total.

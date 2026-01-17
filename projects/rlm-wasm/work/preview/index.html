@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RLM WASM Video Preview</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0512;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 { color: #00d4ff; border-bottom: 2px solid #00d4ff; padding-bottom: 10px; }
+        h2 { color: #8be9fd; margin-top: 40px; }
+        h3 { color: #888; margin-top: 30px; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .card {
+            background: #1a1a2e;
+            border-radius: 10px;
+            padding: 15px;
+            border: 1px solid #333;
+        }
+        .card h4 { margin: 0 0 10px 0; color: #00d4ff; }
+        .card p { color: #888; font-size: 14px; margin: 5px 0; }
+        video, img { max-width: 100%; border-radius: 5px; background: #000; }
+        audio { width: 100%; margin-top: 10px; }
+        .svg-preview {
+            background: #0a0512;
+            border: 1px solid #333;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .svg-preview img { width: 100%; height: auto; }
+        .status {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .done { background: #00ff88; color: #000; }
+        .pending { background: #555; color: #fff; }
+        .progress { background: #00d4ff; color: #000; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #333; }
+        th { color: #00d4ff; }
+        .narration {
+            font-style: italic;
+            color: #aaa;
+            font-size: 14px;
+            background: #111;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .path {
+            font-family: monospace;
+            font-size: 11px;
+            color: #666;
+            word-break: break-all;
+        }
+        .music { color: #ff79c6; font-style: italic; }
+        .segment { border-left: 3px solid #00d4ff; padding-left: 15px; margin: 20px 0; }
+        .segment h4 { color: #50fa7b; }
+        .final-video {
+            background: linear-gradient(135deg, #1a1a2e, #2d1f3d);
+            border: 2px solid #00d4ff;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .final-video h2 { margin-top: 0; color: #00d4ff; }
+        .final-video video { width: 100%; max-width: 960px; }
+        .duration { color: #50fa7b; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>RLM WASM Explainer - Video Preview</h1>
+    <p>Video explaining how RLM uses WASM to let language models write custom Rust analysis code on the fly.</p>
+
+    <div class="final-video">
+        <h2>Final Assembled Video</h2>
+        <p class="path">clips/preview.mp4</p>
+        <p><span class="duration">Duration: ~7:44</span> | 1920x1080</p>
+        <video controls><source src="../clips/preview.mp4" type="video/mp4"></video>
+    </div>
+
+    <h2>Production Status</h2>
+    <table>
+        <tr><th>Phase</th><th>Status</th><th>Items</th></tr>
+        <tr><td>SVG Diagrams</td><td><span class="status done">Done</span></td><td>5 diagrams</td></tr>
+        <tr><td>Title/Epilog</td><td><span class="status done">Done</span></td><td>3 clips</td></tr>
+        <tr><td>VHS CLI Demos</td><td><span class="status done">Done</span></td><td>3 L2 CLI demos + narration</td></tr>
+        <tr><td>L1 Visualization Demo</td><td><span class="status done">Done</span></td><td>L1 DSL web UI demo</td></tr>
+        <tr><td>L2 WASM Web UI Demos</td><td><span class="status done">Done</span></td><td>4 web UI demos (~169s total)</td></tr>
+        <tr><td>Avatar Clips</td><td><span class="status done">Done</span></td><td>2 composited</td></tr>
+        <tr><td>TTS Narration</td><td><span class="status done">Done</span></td><td>All audio files</td></tr>
+        <tr><td>Final Assembly</td><td><span class="status done">Done</span></td><td>Full video</td></tr>
+    </table>
+
+    <h2>Video Segments</h2>
+
+    <div class="segment">
+        <h4>00-title - Title Card <span class="status done">5.00s</span></h4>
+        <p class="path">clips/00-title.mp4</p>
+        <video controls><source src="../clips/00-title.mp4" type="video/mp4"></video>
+        <div class="narration music">Music: All In - Everet Almond (intro)</div>
+    </div>
+
+    <div class="segment">
+        <h4>01-hook - Hook (Avatar) <span class="status done">17.00s</span></h4>
+        <p class="path">clips/01-hook-composited.mp4 + audio/01-hook.wav</p>
+        <video controls><source src="../clips/01-hook-composited.mp4" type="video/mp4"></video>
+        <audio controls><source src="../audio/01-hook.wav" type="audio/wav"></audio>
+        <div class="narration">What if your language model could write custom analysis code on the fly. Count patterns, calculate statistics, parse timestamps. All in a single pass. R L M with web assembly makes this possible.</div>
+    </div>
+
+    <div class="segment">
+        <h4>03-l1-dsl - Level 1 DSL Overview <span class="status done">17.93s</span></h4>
+        <p class="path">clips/03-l1-dsl.mp4 + audio/l1-overview.wav</p>
+        <video controls><source src="../clips/03-l1-dsl.mp4" type="video/mp4"></video>
+        <audio controls><source src="../audio/l1-overview.wav" type="audio/wav"></audio>
+        <div class="narration">R L M Level one uses built in D S L commands for simple text operations. The language model selects operations like find, regex, or count. No code generation, just instant pattern matching and line counting.</div>
+    </div>
+
+    <div class="segment">
+        <h4>Visualization Demo - L1 DSL Web UI <span class="status done">47.15s</span></h4>
+        <p class="path">vhs/l2-visualization-narrated.mp4</p>
+        <video controls><source src="../vhs/l2-visualization-narrated.mp4" type="video/mp4"></video>
+        <div class="narration">
+            <strong>Q1:</strong> The R L M Visualizer lets you run queries on sample data. Here we load a Count ERROR lines example with one hundred log entries.<br>
+            <strong>Q2:</strong> Clicking Run R L M Query starts the iterative process. The Output tab shows live progress as the language model works through the problem.<br>
+            <strong>Q3:</strong> Each iteration executes D S L commands. First count lines, then regex to find errors. The language model refines its approach based on intermediate results.<br>
+            <strong>Q4:</strong> Final answer: twenty error lines. Three iterations completed in seven point one seconds. No code generation required, just D S L pattern matching.
+        </div>
+    </div>
+
+    <div class="segment">
+        <h4>04-l2-wasm - Level 2 WASM Overview <span class="status done">19.40s</span></h4>
+        <p class="path">clips/04-l2-wasm.mp4 + audio/l2-overview.wav</p>
+        <video controls><source src="../clips/04-l2-wasm.mp4" type="video/mp4"></video>
+        <audio controls><source src="../audio/l2-overview.wav" type="audio/wav"></audio>
+        <div class="narration">R L M Level two uses web assembly for complex processing. A coder language model writes Rust code that compiles to web assembly and runs in a secure sandbox. Map reduce handles aggregation and statistics on large datasets.</div>
+    </div>
+
+    <div class="segment">
+        <h4>L2 Error Ranking Demo <span class="status done">~45s</span></h4>
+        <p class="path">vhs/l2-error-ranking-narrated.mp4</p>
+        <video controls><source src="../vhs/l2-error-ranking-narrated.mp4" type="video/mp4"></video>
+        <div class="narration">Level 2 WASM demo: Ranks error types by frequency using rust_wasm_intent with combiner='count'.</div>
+    </div>
+
+    <div class="segment">
+        <h4>L2 Percentiles Demo <span class="status done">~45s</span></h4>
+        <p class="path">vhs/l2-percentiles-narrated.mp4</p>
+        <video controls><source src="../vhs/l2-percentiles-narrated.mp4" type="video/mp4"></video>
+        <div class="narration">Level 2 WASM demo: Calculates p50, p95, p99 response time percentiles using rust_wasm_intent.</div>
+    </div>
+
+    <div class="segment">
+        <h4>L2 Unique IPs Demo <span class="status done">~45s</span></h4>
+        <p class="path">vhs/l2-unique-ips-narrated.mp4</p>
+        <video controls><source src="../vhs/l2-unique-ips-narrated.mp4" type="video/mp4"></video>
+        <div class="narration">Level 2 WASM demo: Counts unique IP addresses using rust_wasm_mapreduce with combiner='unique'.</div>
+    </div>
+
+    <div class="segment">
+        <h4>L2 WASM Web UI Demo - Unique IPs <span class="status done">~60s</span></h4>
+        <p class="path">vhs/wasm-demo/l2-wasm-demo-narrated.mp4</p>
+        <video controls><source src="../vhs/wasm-demo/l2-wasm-demo-narrated.mp4" type="video/mp4"></video>
+        <div class="narration">
+            <strong>Setup:</strong> Level two web assembly handles complex analysis. Here we select Count unique I P addresses, which uses map reduce with a unique combiner on two hundred log lines.<br>
+            <strong>Run:</strong> Clicking Run R L M Query starts iteration one. The language model analyzes the query and decides to use rust wasm map reduce with a unique combiner.<br>
+            <strong>Compile:</strong> The language model writes Rust code to extract I P addresses. This compiles to web assembly in about twenty seconds, then executes in the sandbox.<br>
+            <strong>Result:</strong> Eight unique I P addresses found. Two iterations in twenty six seconds. The timeline shows step one used web assembly map reduce, step two returned the final answer.
+        </div>
+    </div>
+
+    <div class="segment">
+        <h4>L2 WASM Web UI Demo - Error Ranking <span class="status done">~37s</span></h4>
+        <p class="path">vhs/wasm-demo2/l2-error-ranking-webui-narrated.mp4</p>
+        <video controls><source src="../vhs/wasm-demo2/l2-error-ranking-webui-narrated.mp4" type="video/mp4"></video>
+        <div class="narration">
+            <strong>Setup:</strong> This example ranks error types by frequency. The language model uses wasm intent to count and sort error categories from the log data.<br>
+            <strong>Compile:</strong> The language model writes custom Rust code to extract error types from square brackets. Web assembly compiles in about ten seconds and executes instantly.<br>
+            <strong>Result:</strong> Connection timeout leads with thirty three occurrences. Request failed has twenty four. Two iterations in sixteen seconds using wasm intent.
+        </div>
+    </div>
+
+    <div class="segment">
+        <h4>L2 WASM Web UI Demo - Status Codes <span class="status done">~35s</span></h4>
+        <p class="path">vhs/wasm-demo3/l2-status-codes-webui-narrated.mp4</p>
+        <video controls><source src="../vhs/wasm-demo3/l2-status-codes-webui-narrated.mp4" type="video/mp4"></video>
+        <div class="narration">
+            <strong>Setup:</strong> This example counts HTTP status codes. The language model uses map reduce with a count combiner to tally each response type.<br>
+            <strong>Compile:</strong> The language model writes Rust code to extract status codes after HTTP/1.1. Web assembly compiles in about five seconds.<br>
+            <strong>Result:</strong> Status 200 leads with sixty eight hits. 404 has twenty two. Two iterations completed in ten point six seconds.
+        </div>
+    </div>
+
+    <div class="segment">
+        <h4>L2 WASM Web UI Demo - Percentiles <span class="status done">~37s</span></h4>
+        <p class="path">vhs/wasm-demo4/l2-percentiles-webui-narrated.mp4</p>
+        <video controls><source src="../vhs/wasm-demo4/l2-percentiles-webui-narrated.mp4" type="video/mp4"></video>
+        <div class="narration">
+            <strong>Setup:</strong> This example calculates response time percentiles. The language model uses web assembly intent because percentiles require sorted data, not map reduce.<br>
+            <strong>Compile:</strong> The language model writes Rust code to extract millisecond values, sort them, then compute p fifty, p ninety five, and p ninety nine percentiles.<br>
+            <strong>Result:</strong> Statistical analysis complete. The median response time is shown along with the ninety fifth and ninety ninth percentiles. Two iterations in eighteen seconds.
+        </div>
+    </div>
+
+    <div class="segment">
+        <h4>WASM Limitations <span class="status done">~12s</span></h4>
+        <p class="path">clips/08-limitations.mp4 + audio/limitations.wav</p>
+        <video controls><source src="../clips/08-limitations.mp4" type="video/mp4"></video>
+        <audio controls><source src="../audio/limitations.wav" type="audio/wav"></audio>
+        <div class="narration">WASM has trade-offs. No unicode support, only ASCII. Memory is limited to 64 megabytes. And only a subset of Rust compiles to WASM. These limits enable safe sandboxed execution.</div>
+    </div>
+
+    <div class="segment">
+        <h4>09-future - More to Come <span class="status done">14.73s</span></h4>
+        <p class="path">clips/09-future.mp4 + audio/future.wav</p>
+        <video controls><source src="../clips/09-future.mp4" type="video/mp4"></video>
+        <audio controls><source src="../audio/future.wav" type="audio/wav"></audio>
+        <div class="narration">More capability levels are coming. Level three uses native Rust C L I for full system access. Level four enables recursive language model calls for complex multi step reasoning. Subscribe for updates.</div>
+    </div>
+
+    <div class="segment">
+        <h4>14-cta - Call to Action (Avatar) <span class="status done">~12.3s</span></h4>
+        <p class="path">clips/14-cta-composited.mp4 + audio/14-cta.wav</p>
+        <video controls><source src="../clips/14-cta-composited.mp4" type="video/mp4"></video>
+        <audio controls><source src="../audio/14-cta.wav" type="audio/wav"></audio>
+        <div class="narration">Try R L M now with web assembly. Complex analysis in a single iteration. No more manual back and forth. Let the language model write the code it needs.</div>
+    </div>
+
+    <div class="segment">
+        <h4>99b-epilog - Standard Epilog <span class="status done">12.80s</span></h4>
+        <p class="path">clips/99b-epilog.mp4 (from reference)</p>
+        <video controls><source src="../clips/99b-epilog.mp4" type="video/mp4"></video>
+        <div class="narration music">Standard epilog with embedded narration</div>
+    </div>
+
+    <div class="segment">
+        <h4>99c-epilog-ext - Music Outro <span class="status done">5.00s</span></h4>
+        <p class="path">clips/99c-epilog-ext.mp4</p>
+        <video controls><source src="../clips/99c-epilog-ext.mp4" type="video/mp4"></video>
+        <div class="narration music">Music: All In - Everet Almond (outro, 5s fade)</div>
+    </div>
+
+    <h2>Architecture Diagrams</h2>
+    <div class="grid">
+        <div class="card">
+            <h4>Level 1 DSL</h4>
+            <p class="path">assets/svg/rlm-l1-dsl.svg</p>
+            <div class="svg-preview">
+                <img src="../assets/svg/rlm-l1-dsl.svg" alt="Level 1 DSL diagram">
+            </div>
+        </div>
+        <div class="card">
+            <h4>Level 2 WASM</h4>
+            <p class="path">assets/svg/rlm-l2-wasm.svg</p>
+            <div class="svg-preview">
+                <img src="../assets/svg/rlm-l2-wasm.svg" alt="Level 2 WASM diagram">
+            </div>
+        </div>
+        <div class="card">
+            <h4>Limitations</h4>
+            <p class="path">assets/svg/rlm-limitations.svg</p>
+            <div class="svg-preview">
+                <img src="../assets/svg/rlm-limitations.svg" alt="WASM limitations diagram">
+            </div>
+        </div>
+        <div class="card">
+            <h4>Future Levels</h4>
+            <p class="path">assets/svg/rlm-future.svg</p>
+            <div class="svg-preview">
+                <img src="../assets/svg/rlm-future.svg" alt="Future levels diagram">
+            </div>
+        </div>
+    </div>
+
+    <h2>Visualization Stills</h2>
+    <p>Frames extracted from RLM Visualizer web UI demo (Level 1 DSL query execution)</p>
+    <div class="grid">
+        <div class="card">
+            <h4>Frame 01 - Setup</h4>
+            <img src="../vhs/visualization/stills/frame_001.png" alt="Setup">
+        </div>
+        <div class="card">
+            <h4>Frame 24 - Running</h4>
+            <img src="../vhs/visualization/stills/frame_024.png" alt="Running">
+        </div>
+        <div class="card">
+            <h4>Frame 48 - Results</h4>
+            <img src="../vhs/visualization/stills/frame_048.png" alt="Results">
+        </div>
+    </div>
+
+    <script>
+        console.log('Preview page loaded. Refresh to see updates.');
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+The R L M Visualizer lets you run queries on sample data. Here we load a Count ERROR lines example with one hundred log entries.

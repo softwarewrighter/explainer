@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="userGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ade80"/>
+      <stop offset="100%" style="stop-color:#22c55e"/>
+    </linearGradient>
+    <linearGradient id="rlmGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e94560"/>
+      <stop offset="100%" style="stop-color:#c73e54"/>
+    </linearGradient>
+    <linearGradient id="llmGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#2563eb"/>
+    </linearGradient>
+    <linearGradient id="wasmGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+
+    <marker id="arrow" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#00d4ff"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#4ade80"/>
+    </marker>
+  </defs>
+
+  <style>
+    text { font-family: 'SF Pro Display', -apple-system, sans-serif; font-size: 28px; fill: white; }
+    .title { font-size: 56px; font-weight: 700; fill: #00d4ff; }
+    .subtitle { font-size: 32px; fill: #888; }
+    .bold { font-weight: 700; }
+    .highlight { fill: #fca; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="960" y="90" text-anchor="middle" class="title">RLM Level 2: WASM Map-Reduce</text>
+  <text x="960" y="140" text-anchor="middle" class="subtitle">LLM generates Rust code, compiled to WASM for safe execution</text>
+
+  <!-- USER INPUT -->
+  <g transform="translate(100, 320)">
+    <rect x="0" y="0" width="320" height="220" rx="24" fill="url(#userGrad)" opacity="0.9"/>
+    <text x="160" y="55" text-anchor="middle" class="bold">User Query</text>
+    <text x="160" y="110" text-anchor="middle">"Rank errors by freq"</text>
+    <text x="160" y="160" text-anchor="middle">+ 200 line log file</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 420 430 L 560 430" fill="none" stroke="#4ade80" stroke-width="5" marker-end="url(#arrowGreen)"/>
+
+  <!-- RLM ORCHESTRATOR -->
+  <g transform="translate(580, 280)">
+    <rect x="0" y="0" width="360" height="300" rx="24" fill="url(#rlmGrad)" opacity="0.95"/>
+    <text x="180" y="55" text-anchor="middle" class="bold">RLM Orchestrator</text>
+    <text x="180" y="115" text-anchor="middle">1. LLM chooses operation</text>
+    <text x="180" y="165" text-anchor="middle">2. Coder LLM writes Rust</text>
+    <text x="180" y="215" text-anchor="middle">3. Compile to WASM</text>
+  </g>
+
+  <!-- Arrow to LLMs -->
+  <path d="M 760 280 Q 760 200 920 200 Q 1080 200 1080 280" fill="none" stroke="#00d4ff" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="920" y="175" text-anchor="middle" style="font-size:24px;fill:#00d4ff;">Base + Coder LLMs</text>
+
+  <!-- LLM BOX -->
+  <g transform="translate(960, 280)">
+    <rect x="0" y="0" width="340" height="200" rx="24" fill="url(#llmGrad)" opacity="0.9"/>
+    <text x="170" y="55" text-anchor="middle" class="bold">LLMs</text>
+    <text x="170" y="110" text-anchor="middle">Base: selects mapreduce</text>
+    <text x="170" y="160" text-anchor="middle">Coder: generates Rust</text>
+  </g>
+
+  <!-- Arrow to WASM -->
+  <path d="M 940 520 L 1100 620" fill="none" stroke="#f59e0b" stroke-width="5" marker-end="url(#arrowOrange)"/>
+  <text x="980" y="590" text-anchor="middle" style="font-size:24px;fill:#f59e0b;">compile + data</text>
+
+  <!-- WASM SANDBOX -->
+  <g transform="translate(1100, 580)">
+    <rect x="0" y="0" width="380" height="280" rx="24" fill="url(#wasmGrad)" opacity="0.9"/>
+    <text x="190" y="55" text-anchor="middle" class="bold">WASM Sandbox</text>
+    <text x="190" y="115" text-anchor="middle">Map: extract per line</text>
+    <text x="190" y="165" text-anchor="middle">Reduce: count, unique, sum</text>
+    <text x="190" y="220" text-anchor="middle" class="highlight">Sandboxed, fuel-limited</text>
+  </g>
+
+  <!-- Arrow to Results -->
+  <path d="M 1480 720 L 1620 720" fill="none" stroke="#4ade80" stroke-width="5" marker-end="url(#arrowGreen)"/>
+
+  <!-- RESULTS -->
+  <g transform="translate(1640, 580)">
+    <rect x="0" y="0" width="200" height="280" rx="24" fill="url(#userGrad)" opacity="0.85"/>
+    <text x="100" y="55" text-anchor="middle" class="bold">Results</text>
+    <text x="100" y="120" text-anchor="middle">Auth: 60</text>
+    <text x="100" y="170" text-anchor="middle">DB: 40</text>
+    <text x="100" y="220" text-anchor="middle">Net: 20</text>
+  </g>
+
+  <!-- Bottom info box -->
+  <g transform="translate(100, 900)">
+    <rect x="0" y="0" width="800" height="100" rx="16" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="2"/>
+    <text x="400" y="40" text-anchor="middle" class="bold" style="fill:#f59e0b;">Level 2 WASM Operations</text>
+    <text x="400" y="80" text-anchor="middle">rust_wasm_mapreduce (count, unique, sum) | rust_wasm_intent (sort, percentiles)</text>
+  </g>
+
+  <!-- Use case -->
+  <g transform="translate(940, 900)">
+    <rect x="0" y="0" width="880" height="100" rx="16" fill="rgba(0,0,0,0.3)"/>
+    <text x="440" y="40" text-anchor="middle" class="bold">Best For</text>
+    <text x="440" y="80" text-anchor="middle">Aggregation, frequency counting, statistics on large datasets</text>
+  </g>
+
+</svg>

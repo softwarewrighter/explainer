@@ -1,0 +1,1 @@
+Two hundred log entries are processed. The query asks how many unique I P addresses are in these logs.

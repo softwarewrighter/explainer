@@ -1,0 +1,1 @@
+This example counts H T T P status codes. The language model uses map reduce with a count combiner to tally each response type.

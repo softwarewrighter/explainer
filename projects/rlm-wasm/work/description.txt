@@ -1,0 +1,42 @@
+Custom Code in a Sandbox? RLM and WASM
+
+What if your language model could write custom analysis code on the fly? RLM with WebAssembly makes this possible.
+
+This video demonstrates RLM's two-level architecture for log analysis:
+
+Level 1 (DSL): Built-in commands for simple text operations - find, regex, count. No code generation, just instant pattern matching.
+
+Level 2 (WebAssembly): For complex analysis, RLM's coder model writes Rust code that compiles to WebAssembly and runs in a secure sandbox. Map-reduce handles aggregation and statistics on large datasets.
+
+Demos included:
+- L1 DSL: Count ERROR lines in logs
+- L2 WASM CLI: Error ranking, percentiles, unique IPs
+- L2 WASM Web UI: Unique IP counting, error type ranking, HTTP status codes, response time percentiles
+
+WebAssembly enables safe, sandboxed execution with some trade-offs: ASCII only (no unicode), 64MB memory limit, and a subset of Rust.
+
+More capability levels coming soon - Level 3 (native Rust CLI) and Level 4 (recursive LLM calls).
+
+---
+
+Chapters:
+0:00 - Intro
+0:05 - Hook
+0:22 - Level 1 DSL Overview
+0:40 - L1 Visualization Demo
+1:27 - Level 2 WebAssembly Overview
+1:47 - L2 CLI Demo: Error Ranking
+2:32 - L2 CLI Demo: Percentiles
+3:17 - L2 CLI Demo: Unique IPs
+4:02 - L2 Web UI Demo: Unique IPs
+5:02 - L2 Web UI Demo: Error Ranking
+5:39 - L2 Web UI Demo: Status Codes
+6:14 - L2 Web UI Demo: Percentiles
+6:52 - WebAssembly Limitations
+7:04 - Future Levels
+7:19 - Call to Action
+7:31 - Outro
+
+---
+
+#RLM #WebAssembly #WASM #LLM #LogAnalysis #Rust #AI #MachineLearning #CodeGeneration

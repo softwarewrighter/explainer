@@ -1,0 +1,1 @@
+This example ranks error types by frequency. The language model uses wasm intent to count and sort error categories from the log data.

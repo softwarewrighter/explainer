@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0512"/>
+      <stop offset="100%" style="stop-color:#120818"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative code lines faded in background -->
+  <g opacity="0.1" font-family="Monaco, monospace" font-size="14" fill="#00ff88">
+    <text x="100" y="150">pub fn analyze(input: &amp;str) -> String {</text>
+    <text x="100" y="180">    let mut counts: HashMap&lt;&amp;str, usize&gt; = HashMap::new();</text>
+    <text x="100" y="210">    for line in input.lines() {</text>
+    <text x="100" y="240">        *counts.entry(pattern).or_insert(0) += 1;</text>
+    <text x="100" y="270">    }</text>
+    <text x="100" y="300">    counts.iter().map(|(k,v)| format!("{}: {}", k, v))</text>
+  </g>
+
+  <!-- Main title -->
+  <text x="960" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" fill="#d4af37" font-weight="bold" filter="url(#glow)">
+    LLM + WASM
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#ffffff">
+    Custom Analysis Code On-The-Fly
+  </text>
+
+  <!-- Feature boxes -->
+  <g transform="translate(960, 620)">
+    <!-- Box 1 -->
+    <g transform="translate(-400, 0)">
+      <rect x="-140" y="-50" width="280" height="100" fill="#1a1a2e" rx="12" stroke="#00ff88" stroke-width="2"/>
+      <text x="0" y="10" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#00ff88" font-weight="bold">Count Patterns</text>
+    </g>
+    <!-- Box 2 -->
+    <g transform="translate(0, 0)">
+      <rect x="-140" y="-50" width="280" height="100" fill="#1a1a2e" rx="12" stroke="#8be9fd" stroke-width="2"/>
+      <text x="0" y="10" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#8be9fd" font-weight="bold">Parse Timestamps</text>
+    </g>
+    <!-- Box 3 -->
+    <g transform="translate(400, 0)">
+      <rect x="-140" y="-50" width="280" height="100" fill="#1a1a2e" rx="12" stroke="#ff79c6" stroke-width="2"/>
+      <text x="0" y="10" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ff79c6" font-weight="bold">Calculate Stats</text>
+    </g>
+  </g>
+
+  <!-- Bottom tagline -->
+  <text x="960" y="820" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#888888">
+    Single Pass. Zero Manual Iteration.
+  </text>
+
+  <!-- RLM logo/text -->
+  <text x="960" y="920" text-anchor="middle" font-family="Monaco, monospace" font-size="28" fill="#d4af37">
+    RLM with rust_wasm
+  </text>
+</svg>

@@ -1,0 +1,1 @@
+What if your language model could write custom analysis code on the fly. Count patterns, calculate statistics, parse timestamps. All in a single pass. R L M with web assembly makes this possible.

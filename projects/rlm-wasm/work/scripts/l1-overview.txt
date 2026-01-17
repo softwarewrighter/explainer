@@ -1,0 +1,1 @@
+R L M Level one uses built in D S L commands for simple text operations. The language model selects operations like find, regex, or count. No code generation, just instant pattern matching and line counting.

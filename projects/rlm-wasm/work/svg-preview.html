@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RLM WASM Flow - Animated SVG Preview</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a1a;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .controls {
+            max-width: 1920px;
+            margin: 0 auto 20px;
+            padding: 15px 20px;
+            background: #1a1a2e;
+            border-radius: 12px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .controls h2 {
+            color: #00d4ff;
+            font-size: 1.2em;
+            margin-right: auto;
+        }
+        button {
+            background: #e94560;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        button:hover { background: #ff6b8a; transform: scale(1.02); }
+        button.secondary {
+            background: #3b82f6;
+        }
+        button.secondary:hover { background: #60a5fa; }
+        .info {
+            color: #888;
+            font-size: 13px;
+        }
+        .svg-container {
+            max-width: 1920px;
+            margin: 0 auto;
+            background: #1a1a2e;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        .svg-container svg {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        /* For controlling animation restart */
+        .svg-container.restart svg * {
+            animation: none !important;
+        }
+        .step-description {
+            max-width: 1920px;
+            margin: 20px auto 0;
+            padding: 20px;
+            background: #1a1a2e;
+            border-radius: 12px;
+        }
+        .step-description h3 {
+            color: #e94560;
+            margin-bottom: 15px;
+        }
+        .step-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        .step-item {
+            background: #0f3460;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #00d4ff;
+        }
+        .step-item.response {
+            border-left-color: #4ade80;
+        }
+        .step-num {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: #00d4ff;
+            color: #1a1a2e;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .step-item.response .step-num {
+            background: #4ade80;
+        }
+        .step-item h4 {
+            color: #fff;
+            display: inline;
+        }
+        .step-item p {
+            color: #aaa;
+            font-size: 13px;
+            margin-top: 8px;
+            margin-left: 34px;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <h2>RLM + WASM Architecture Flow</h2>
+        <button onclick="restartAnimation()">Restart Animation</button>
+        <button class="secondary" onclick="window.open('../assets/svg/rlm-wasm-flow.svg', '_blank')">Open SVG</button>
+        <span class="info">Animation duration: ~8 seconds | Hover over components for glow effect</span>
+    </div>
+
+    <div class="svg-container" id="svgContainer">
+        <object type="image/svg+xml" data="../assets/svg/rlm-wasm-flow.svg" id="svgObject" style="width:100%;"></object>
+    </div>
+
+    <div class="step-description">
+        <h3>Flow Steps Explained</h3>
+        <div class="step-list">
+            <div class="step-item">
+                <span class="step-num">1</span>
+                <h4>User Input</h4>
+                <p>User sends a query and large data (e.g., log file with 100K+ tokens) that exceeds LLM context limits.</p>
+            </div>
+            <div class="step-item">
+                <span class="step-num">2</span>
+                <h4>Request Code Description</h4>
+                <p>RLM asks the Base LLM: "What algorithm/code would process this data to answer the query?"</p>
+            </div>
+            <div class="step-item response">
+                <span class="step-num">3</span>
+                <h4>Algorithm Description</h4>
+                <p>Base LLM returns a description like: "Use a HashMap to count error types, then sort by frequency."</p>
+            </div>
+            <div class="step-item">
+                <span class="step-num">4</span>
+                <h4>Request Rust Code</h4>
+                <p>RLM passes the description to a Helper (Coder) LLM: "Write Rust code that implements this."</p>
+            </div>
+            <div class="step-item response">
+                <span class="step-num">5</span>
+                <h4>Rust Source Code</h4>
+                <p>Helper LLM returns actual Rust code with the analysis logic.</p>
+            </div>
+            <div class="step-item">
+                <span class="step-num">6</span>
+                <h4>Compile & Execute</h4>
+                <p>RLM compiles Rust to WASM and executes it in a sandboxed runtime with the full dataset.</p>
+            </div>
+            <div class="step-item response">
+                <span class="step-num">7</span>
+                <h4>Processed Results</h4>
+                <p>WASM returns condensed results (e.g., "ConnectionTimeout: 23, RateLimitExceeded: 18...") that fit in context.</p>
+            </div>
+            <div class="step-item response">
+                <span class="step-num">8</span>
+                <h4>Final Answer</h4>
+                <p>Base LLM interprets results and RLM returns the final answer to the user.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function restartAnimation() {
+            const container = document.getElementById('svgContainer');
+            const obj = document.getElementById('svgObject');
+            const src = obj.data;
+
+            // Force reload by clearing and resetting the source
+            container.classList.add('restart');
+            obj.data = '';
+
+            setTimeout(() => {
+                obj.data = src;
+                container.classList.remove('restart');
+            }, 50);
+        }
+    </script>
+</body>
+</html>

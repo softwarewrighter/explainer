@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RLM WASM Explainer - Preview</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1a1a2e;
+            color: #e0e0e0;
+        }
+        h1 {
+            color: #00d4ff;
+            border-bottom: 2px solid #00d4ff;
+            padding-bottom: 10px;
+        }
+        h2 { color: #ff6b6b; margin-top: 40px; }
+        .segment {
+            background: #16213e;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #00d4ff;
+        }
+        .segment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .segment-name {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #00d4ff;
+        }
+        .segment-duration {
+            background: #0f3460;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .description {
+            color: #b0b0b0;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        .narration {
+            background: #0f3460;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 3px solid #ff6b6b;
+        }
+        .narration-label {
+            color: #ff6b6b;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .paths {
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.85em;
+            background: #0a0a1a;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+        .path-item {
+            margin: 5px 0;
+        }
+        .path-label { color: #888; }
+        .path-value { color: #4ade80; }
+        video, audio {
+            width: 100%;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        video { max-width: 640px; }
+        .media-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+        .media-section h4 {
+            color: #888;
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .final-section {
+            background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+            border: 2px solid #00d4ff;
+            padding: 30px;
+            border-radius: 16px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .final-section h2 {
+            color: #00d4ff;
+            margin-top: 0;
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        .status-ready { background: #22c55e; color: #000; }
+        .status-pending { background: #f59e0b; color: #000; }
+        .status-building { background: #3b82f6; color: #fff; }
+        a { color: #00d4ff; }
+    </style>
+</head>
+<body>
+    <h1>RLM WASM Explainer Video - Preview</h1>
+    <p>Video explaining how RLM uses WASM to let LLMs write custom Rust analysis code on the fly.</p>
+
+    <!-- Architecture Diagrams -->
+    <h2>Architecture Diagrams</h2>
+
+    <!-- L1 DSL Overview -->
+    <div class="segment" style="border-left-color: #8b5cf6;">
+        <div class="segment-header">
+            <span class="segment-name">Level 1: DSL Commands</span>
+            <span class="status status-ready">Ready</span>
+        </div>
+        <div class="description">
+            Simple text operations without code generation. The LLM selects operations like find, regex, or count.
+        </div>
+        <div class="narration">
+            <div class="narration-label">Narration Script:</div>
+            R L M Level 1 uses built-in D S L commands for simple text operations. The L L M selects operations like find, regex, or count. No code generation, just instant pattern matching and line counting.
+        </div>
+        <div class="paths">
+            <div class="path-item"><span class="path-label">SVG:</span> <span class="path-value">../assets/svg/rlm-l1-dsl.svg</span></div>
+            <div class="path-item"><span class="path-label">Audio:</span> <span class="path-value">audio/l1-overview.wav</span></div>
+        </div>
+        <div style="margin-top: 15px; background: #0a0a1a; border-radius: 12px; overflow: hidden; max-height: 500px;">
+            <object type="image/svg+xml" data="../assets/svg/rlm-l1-dsl.svg" style="width: 100%; height: auto;"></object>
+        </div>
+        <div class="media-section" style="margin-top: 15px;">
+            <h4>Audio Preview</h4>
+            <audio controls>
+                <source src="audio/l1-overview.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+
+    <!-- L2 WASM Overview -->
+    <div class="segment" style="border-left-color: #f59e0b;">
+        <div class="segment-header">
+            <span class="segment-name">Level 2: WASM Map-Reduce</span>
+            <span class="status status-ready">Ready</span>
+        </div>
+        <div class="description">
+            LLM generates Rust code, compiled to WASM for safe execution. Map-reduce handles aggregation and statistics.
+        </div>
+        <div class="narration">
+            <div class="narration-label">Narration Script:</div>
+            R L M Level 2 uses Web Assembly for complex processing. A coder L L M writes Rust code that compiles to WASM and runs in a secure sandbox. Map reduce handles aggregation and statistics on large datasets.
+        </div>
+        <div class="paths">
+            <div class="path-item"><span class="path-label">SVG:</span> <span class="path-value">../assets/svg/rlm-l2-wasm.svg</span></div>
+            <div class="path-item"><span class="path-label">Audio:</span> <span class="path-value">audio/l2-overview.wav</span></div>
+        </div>
+        <div style="margin-top: 15px; background: #0a0a1a; border-radius: 12px; overflow: hidden; max-height: 500px;">
+            <object type="image/svg+xml" data="../assets/svg/rlm-l2-wasm.svg" style="width: 100%; height: auto;"></object>
+        </div>
+        <div class="media-section" style="margin-top: 15px;">
+            <h4>Audio Preview</h4>
+            <audio controls>
+                <source src="audio/l2-overview.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+
+    <h2>Video Segments</h2>
+
+    <!-- Segment 00: Title -->
+    <div class="segment">
+        <div class="segment-header">
+            <span class="segment-name">00 - Title</span>
+            <span class="segment-duration">~5 seconds</span>
+            <span class="status status-ready">Ready</span>
+        </div>
+        <div class="description">Opening title card with book image and music intro.</div>
+        <div class="paths">
+            <div class="path-item"><span class="path-label">Video:</span> <span class="path-value">clips/00-title.mp4</span></div>
+            <div class="path-item"><span class="path-label">Image:</span> <span class="path-value">../assets/images/rlm-and-wasm-book.jpg</span></div>
+            <div class="path-item"><span class="path-label">Music:</span> <span class="path-value">All In - Everet Almond.mp3</span></div>
+        </div>
+        <div class="media-section">
+            <h4>Video Preview</h4>
+            <video controls>
+                <source src="clips/00-title.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- Segment 01: Hook -->
+    <div class="segment">
+        <div class="segment-header">
+            <span class="segment-name">01 - Hook</span>
+            <span class="segment-duration">~18 seconds</span>
+            <span class="status status-ready">Ready</span>
+        </div>
+        <div class="description">Hook segment with curmudgeon avatar explaining the WASM concept.</div>
+        <div class="narration">
+            <div class="narration-label">Narration Script:</div>
+            What if your L L M could write custom analysis code on the fly. Count patterns, calculate statistics, parse timestamps. All in a single pass. R L M with WASM makes this possible.
+        </div>
+        <div class="paths">
+            <div class="path-item"><span class="path-label">Video:</span> <span class="path-value">clips/01-hook-composited.mp4</span></div>
+            <div class="path-item"><span class="path-label">Audio:</span> <span class="path-value">audio/01-hook.wav</span></div>
+            <div class="path-item"><span class="path-label">Script:</span> <span class="path-value">scripts/01-hook.txt</span></div>
+            <div class="path-item"><span class="path-label">Background:</span> <span class="path-value">../assets/svg/01-hook.svg</span></div>
+        </div>
+        <div class="media-row">
+            <div class="media-section">
+                <h4>Audio Preview</h4>
+                <audio controls>
+                    <source src="audio/01-hook.wav" type="audio/wav">
+                </audio>
+            </div>
+            <div class="media-section">
+                <h4>Video Preview (with Avatar)</h4>
+                <video controls>
+                    <source src="clips/01-hook-composited.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Segment 02a: Error Ranking Demo -->
+    <div class="segment">
+        <div class="segment-header">
+            <span class="segment-name">02a - Error Ranking Demo</span>
+            <span class="segment-duration">~45 seconds</span>
+            <span class="status status-ready">Ready</span>
+        </div>
+        <div class="description">Level 2 WASM demo: Ranks error types by frequency using rust_wasm_intent with combiner='count'.</div>
+        <div class="paths">
+            <div class="path-item"><span class="path-label">Video:</span> <span class="path-value">vhs/l2-error-ranking.mp4</span></div>
+            <div class="path-item"><span class="path-label">Scripts:</span> <span class="path-value">vhs/error-ranking/scripts/*.txt</span></div>
+            <div class="path-item"><span class="path-label">Stills:</span> <span class="path-value">vhs/error-ranking/frame_*.jpg</span></div>
+        </div>
+
+        <!-- Video Preview -->
+        <div class="media-section" style="margin: 15px 0;">
+            <h4>Video Preview</h4>
+            <video controls style="max-width: 800px;">
+                <source src="vhs/l2-error-ranking.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Narration Segments -->
+        <div class="narration">
+            <div class="narration-label">Narration Scripts (4 segments @ ~8s each):</div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 10px;">
+            <div style="background: #0f3460; padding: 12px; border-radius: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <strong style="color: #00d4ff;">1. Problem</strong>
+                </div>
+                <img src="vhs/error-ranking/frame_001.jpg" style="width: 100%; border-radius: 6px; margin-bottom: 8px;">
+                <p style="font-size: 13px; color: #ccc; font-style: italic;">Ranking error types by frequency is a common log analysis task. R L M can handle this with custom WASM code.</p>
+                <audio controls style="width: 100%; margin-top: 8px;">
+                    <source src="vhs/error-ranking/audio/01-problem.wav" type="audio/wav">
+                </audio>
+            </div>
+            <div style="background: #0f3460; padding: 12px; border-radius: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <strong style="color: #00d4ff;">2. Command</strong>
+                </div>
+                <img src="vhs/error-ranking/frame_030.jpg" style="width: 100%; border-radius: 6px; margin-bottom: 8px;">
+                <p style="font-size: 13px; color: #ccc; font-style: italic;">The demo generates two hundred log entries and asks R L M to rank the error types from most to least frequent.</p>
+                <audio controls style="width: 100%; margin-top: 8px;">
+                    <source src="vhs/error-ranking/audio/02-command.wav" type="audio/wav">
+                </audio>
+            </div>
+            <div style="background: #0f3460; padding: 12px; border-radius: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <strong style="color: #00d4ff;">3. Results</strong>
+                </div>
+                <img src="vhs/error-ranking/frame_060.jpg" style="width: 100%; border-radius: 6px; margin-bottom: 8px;">
+                <p style="font-size: 13px; color: #ccc; font-style: italic;">It found three error types. Authentication Failed at sixty, Database Error at forty, Network Timeout at twenty occurrences.</p>
+                <audio controls style="width: 100%; margin-top: 8px;">
+                    <source src="vhs/error-ranking/audio/03-results.wav" type="audio/wav">
+                </audio>
+            </div>
+            <div style="background: #0f3460; padding: 12px; border-radius: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <strong style="color: #00d4ff;">4. How It Worked</strong>
+                </div>
+                <img src="vhs/error-ranking/frame_090.jpg" style="width: 100%; border-radius: 6px; margin-bottom: 8px;">
+                <p style="font-size: 13px; color: #ccc; font-style: italic;">R L M compiled custom Rust code to WASM that counted each error type. Two iterations, under seventeen seconds total.</p>
+                <audio controls style="width: 100%; margin-top: 8px;">
+                    <source src="vhs/error-ranking/audio/04-how.wav" type="audio/wav">
+                </audio>
+            </div>
+        </div>
+    </div>
+
+    <!-- Segment 02b: Percentiles Demo -->
+    <div class="segment">
+        <div class="segment-header">
+            <span class="segment-name">02b - Percentiles Demo</span>
+            <span class="segment-duration">~45 seconds</span>
+            <span class="status status-ready">Ready</span>
+        </div>
+        <div class="description">Level 2 WASM demo: Calculates p50, p95, p99 response time percentiles using rust_wasm_intent.</div>
+        <div class="paths">
+            <div class="path-item"><span class="path-label">Video:</span> <span class="path-value">vhs/l2-percentiles.mp4</span></div>
+            <div class="path-item"><span class="path-label">Scripts:</span> <span class="path-value">vhs/percentiles/scripts/*.txt</span></div>
+            <div class="path-item"><span class="path-label">Stills:</span> <span class="path-value">vhs/percentiles/frame_*.jpg</span></div>
+        </div>
+
+        <!-- Video Preview -->
+        <div class="media-section" style="margin: 15px 0;">
+            <h4>Video Preview</h4>
+            <video controls style="max-width: 800px;">
+                <source src="vhs/l2-percentiles.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Narration Segments -->
+        <div class="narration">
+            <div class="narration-label">Narration Scripts (4 segments @ ~8s each):</div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 10px;">
+            <div style="background: #0f3460; padding: 12px; border-radius: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <strong style="color: #00d4ff;">1. Problem</strong>
+                </div>
+                <img src="vhs/percentiles/frame_001.jpg" style="width: 100%; border-radius: 6px; margin-bottom: 8px;">
+                <p style="font-size: 13px; color: #ccc; font-style: italic;">Calculating response time percentiles like p50, p95, and p99 is essential for A P I performance monitoring.</p>
+                <audio controls style="width: 100%; margin-top: 8px;">
+                    <source src="vhs/percentiles/audio/01-problem.wav" type="audio/wav">
+                </audio>
+            </div>
+            <div style="background: #0f3460; padding: 12px; border-radius: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <strong style="color: #00d4ff;">2. Command</strong>
+                </div>
+                <img src="vhs/percentiles/frame_030.jpg" style="width: 100%; border-radius: 6px; margin-bottom: 8px;">
+                <p style="font-size: 13px; color: #ccc; font-style: italic;">The demo generates three hundred response time entries and queries R L M to calculate the percentiles.</p>
+                <audio controls style="width: 100%; margin-top: 8px;">
+                    <source src="vhs/percentiles/audio/02-command.wav" type="audio/wav">
+                </audio>
+            </div>
+            <div style="background: #0f3460; padding: 12px; border-radius: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <strong style="color: #00d4ff;">3. Results</strong>
+                </div>
+                <img src="vhs/percentiles/frame_060.jpg" style="width: 100%; border-radius: 6px; margin-bottom: 8px;">
+                <p style="font-size: 13px; color: #ccc; font-style: italic;">The median response time is sixty five milliseconds. P 95 is seven thirty three, and P 99 is eighteen thirty seven milliseconds.</p>
+                <audio controls style="width: 100%; margin-top: 8px;">
+                    <source src="vhs/percentiles/audio/03-results.wav" type="audio/wav">
+                </audio>
+            </div>
+            <div style="background: #0f3460; padding: 12px; border-radius: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <strong style="color: #00d4ff;">4. How It Worked</strong>
+                </div>
+                <img src="vhs/percentiles/frame_090.jpg" style="width: 100%; border-radius: 6px; margin-bottom: 8px;">
+                <p style="font-size: 13px; color: #ccc; font-style: italic;">WASM code extracted numbers, sorted them, and computed percentiles in a secure sandbox. Execution took just seventeen milliseconds.</p>
+                <audio controls style="width: 100%; margin-top: 8px;">
+                    <source src="vhs/percentiles/audio/04-how.wav" type="audio/wav">
+                </audio>
+            </div>
+        </div>
+    </div>
+
+    <!-- Segment 02c: Unique IPs Demo -->
+    <div class="segment">
+        <div class="segment-header">
+            <span class="segment-name">02c - Unique IPs Demo</span>
+            <span class="segment-duration">~45 seconds</span>
+            <span class="status status-ready">Ready</span>
+        </div>
+        <div class="description">Level 2 WASM demo: Counts unique IP addresses using rust_wasm_mapreduce with combiner='unique'.</div>
+        <div class="paths">
+            <div class="path-item"><span class="path-label">Video:</span> <span class="path-value">vhs/l2-unique-ips.mp4</span></div>
+            <div class="path-item"><span class="path-label">Scripts:</span> <span class="path-value">vhs/unique-ips/scripts/*.txt</span></div>
+            <div class="path-item"><span class="path-label">Stills:</span> <span class="path-value">vhs/unique-ips/frame_*.jpg</span></div>
+        </div>
+
+        <!-- Video Preview -->
+        <div class="media-section" style="margin: 15px 0;">
+            <h4>Video Preview</h4>
+            <video controls style="max-width: 800px;">
+                <source src="vhs/l2-unique-ips.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Narration Segments -->
+        <div class="narration">
+            <div class="narration-label">Narration Scripts (4 segments @ ~8s each):</div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 10px;">
+            <div style="background: #0f3460; padding: 12px; border-radius: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <strong style="color: #00d4ff;">1. Problem</strong>
+                </div>
+                <img src="vhs/unique-ips/frame_001.jpg" style="width: 100%; border-radius: 6px; margin-bottom: 8px;">
+                <p style="font-size: 13px; color: #ccc; font-style: italic;">Counting unique I P addresses in logs is useful for security analysis and traffic monitoring.</p>
+                <audio controls style="width: 100%; margin-top: 8px;">
+                    <source src="vhs/unique-ips/audio/01-problem.wav" type="audio/wav">
+                </audio>
+            </div>
+            <div style="background: #0f3460; padding: 12px; border-radius: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <strong style="color: #00d4ff;">2. Command</strong>
+                </div>
+                <img src="vhs/unique-ips/frame_020.jpg" style="width: 100%; border-radius: 6px; margin-bottom: 8px;">
+                <p style="font-size: 13px; color: #ccc; font-style: italic;">Two hundred log entries are processed. The query asks how many unique I P addresses are in these logs.</p>
+                <audio controls style="width: 100%; margin-top: 8px;">
+                    <source src="vhs/unique-ips/audio/02-command.wav" type="audio/wav">
+                </audio>
+            </div>
+            <div style="background: #0f3460; padding: 12px; border-radius: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <strong style="color: #00d4ff;">3. Results</strong>
+                </div>
+                <img src="vhs/unique-ips/frame_060.jpg" style="width: 100%; border-radius: 6px; margin-bottom: 8px;">
+                <p style="font-size: 13px; color: #ccc; font-style: italic;">Eight unique I P addresses were found. Each one appeared exactly twenty five times across the log entries.</p>
+                <audio controls style="width: 100%; margin-top: 8px;">
+                    <source src="vhs/unique-ips/audio/03-results.wav" type="audio/wav">
+                </audio>
+            </div>
+            <div style="background: #0f3460; padding: 12px; border-radius: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <strong style="color: #00d4ff;">4. How It Worked</strong>
+                </div>
+                <img src="vhs/unique-ips/frame_090.jpg" style="width: 100%; border-radius: 6px; margin-bottom: 8px;">
+                <p style="font-size: 13px; color: #ccc; font-style: italic;">Rust WASM map reduce with a unique combiner uses hash sets for efficient deduplication. Completed in under ten seconds.</p>
+                <audio controls style="width: 100%; margin-top: 8px;">
+                    <source src="vhs/unique-ips/audio/04-how.wav" type="audio/wav">
+                </audio>
+            </div>
+        </div>
+    </div>
+
+    <!-- WASM Limitations -->
+    <div class="segment" style="border-left-color: #f59e0b;">
+        <div class="segment-header">
+            <span class="segment-name">WASM Limitations</span>
+            <span class="status status-ready">Ready</span>
+        </div>
+        <div class="description">
+            Current constraints of the sandboxed execution model - important context for understanding WASM trade-offs.
+        </div>
+        <div class="narration">
+            <div class="narration-label">Narration Script:</div>
+            WASM has trade-offs. No unicode support, only ASCII. Memory is limited to 64 megabytes. And only a subset of Rust compiles to WASM. These limits enable safe sandboxed execution.
+        </div>
+        <div class="paths">
+            <div class="path-item"><span class="path-label">SVG:</span> <span class="path-value">../assets/svg/rlm-limitations.svg</span></div>
+            <div class="path-item"><span class="path-label">Audio:</span> <span class="path-value">audio/limitations.wav</span></div>
+        </div>
+        <div style="margin-top: 15px; background: #0a0a1a; border-radius: 12px; overflow: hidden; max-height: 500px;">
+            <object type="image/svg+xml" data="../assets/svg/rlm-limitations.svg" style="width: 100%; height: auto;"></object>
+        </div>
+        <div class="media-section" style="margin-top: 15px;">
+            <h4>Audio Preview</h4>
+            <audio controls>
+                <source src="audio/limitations.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+
+    <!-- More to Come (Future) -->
+    <div class="segment" style="border-left-color: #8b5cf6;">
+        <div class="segment-header">
+            <span class="segment-name">More to Come</span>
+            <span class="status status-ready">Ready</span>
+        </div>
+        <div class="description">
+            Future capability levels in development - Level 3 Rust CLI and Level 4 Recursive LLM.
+        </div>
+        <div class="narration">
+            <div class="narration-label">Narration Script:</div>
+            More capability levels are coming. Level 3 uses native Rust CLI for full system access. Level 4 enables recursive L L M calls for complex multi-step reasoning. Subscribe for updates.
+        </div>
+        <div class="paths">
+            <div class="path-item"><span class="path-label">SVG:</span> <span class="path-value">../assets/svg/rlm-future.svg</span></div>
+            <div class="path-item"><span class="path-label">Audio:</span> <span class="path-value">audio/future.wav</span></div>
+        </div>
+        <div style="margin-top: 15px; background: #0a0a1a; border-radius: 12px; overflow: hidden; max-height: 500px;">
+            <object type="image/svg+xml" data="../assets/svg/rlm-future.svg" style="width: 100%; height: auto;"></object>
+        </div>
+        <div class="media-section" style="margin-top: 15px;">
+            <h4>Audio Preview</h4>
+            <audio controls>
+                <source src="audio/future.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+
+    <!-- Segment 14: CTA -->
+    <div class="segment">
+        <div class="segment-header">
+            <span class="segment-name">14 - CTA (Call to Action)</span>
+            <span class="segment-duration">~15 seconds</span>
+            <span class="status status-ready">Ready</span>
+        </div>
+        <div class="description">Call to action with curmudgeon avatar encouraging viewers to try RLM.</div>
+        <div class="narration">
+            <div class="narration-label">Narration Script:</div>
+            Try R L M now with WASM. Complex analysis in a single iteration. No more manual back and forth. Let the L L M write the code it needs.
+        </div>
+        <div class="paths">
+            <div class="path-item"><span class="path-label">Video:</span> <span class="path-value">clips/14-cta-composited.mp4</span></div>
+            <div class="path-item"><span class="path-label">Audio:</span> <span class="path-value">audio/14-cta.wav</span></div>
+            <div class="path-item"><span class="path-label">Script:</span> <span class="path-value">scripts/14-cta.txt</span></div>
+            <div class="path-item"><span class="path-label">Background:</span> <span class="path-value">../assets/svg/14-cta.svg</span></div>
+        </div>
+        <div class="media-row">
+            <div class="media-section">
+                <h4>Audio Preview</h4>
+                <audio controls>
+                    <source src="audio/14-cta.wav" type="audio/wav">
+                </audio>
+            </div>
+            <div class="media-section">
+                <h4>Video Preview (with Avatar)</h4>
+                <video controls>
+                    <source src="clips/14-cta-composited.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Segment 99b: Epilog -->
+    <div class="segment">
+        <div class="segment-header">
+            <span class="segment-name">99b - Epilog</span>
+            <span class="segment-duration">~5 seconds</span>
+            <span class="status status-ready">Ready</span>
+        </div>
+        <div class="description">Standard like and subscribe epilog clip.</div>
+        <div class="paths">
+            <div class="path-item"><span class="path-label">Video:</span> <span class="path-value">clips/99b-epilog.mp4</span></div>
+        </div>
+        <div class="media-section">
+            <h4>Video Preview</h4>
+            <video controls>
+                <source src="clips/99b-epilog.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- Segment 99c: Epilog Extension -->
+    <div class="segment">
+        <div class="segment-header">
+            <span class="segment-name">99c - Epilog Extension</span>
+            <span class="segment-duration">~5 seconds</span>
+            <span class="status status-ready">Ready</span>
+        </div>
+        <div class="description">Final bookend with music fade-out matching the video's theme.</div>
+        <div class="paths">
+            <div class="path-item"><span class="path-label">Video:</span> <span class="path-value">clips/99c-epilog-ext.mp4</span></div>
+            <div class="path-item"><span class="path-label">Music:</span> <span class="path-value">All In - Everet Almond.mp3</span></div>
+        </div>
+        <div class="media-section">
+            <h4>Video Preview</h4>
+            <video controls>
+                <source src="clips/99c-epilog-ext.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- Visualizer Screenshots (Potential Content) -->
+    <h2>Potential Content: RLM Visualizer</h2>
+    <div class="segment" style="border-left-color: #f59e0b;">
+        <div class="segment-header">
+            <span class="segment-name">Visualizer Screenshots</span>
+            <span class="status status-pending">Review Needed</span>
+        </div>
+        <div class="description">
+            Screenshots captured from the RLM Visualizer web interface (localhost:8080/visualize).
+            <br><strong>Note:</strong> The visualizer server is returning 500 errors, so we couldn't capture a complete working demo with results.
+            These screenshots show the interface - could be used for a brief visual or as stills.
+        </div>
+        <div class="paths">
+            <div class="path-item"><span class="path-label">Location:</span> <span class="path-value">stills/visualizer-*.png</span></div>
+            <div class="path-item"><span class="path-label">Count:</span> <span class="path-value">10 screenshots</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 15px;">
+            <div>
+                <h4 style="color: #888; font-size: 0.85em; margin-bottom: 5px;">Default Query</h4>
+                <img src="stills/visualizer-fresh-2026-01-15T23-35-11-671Z.png" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
+            </div>
+            <div>
+                <h4 style="color: #888; font-size: 0.85em; margin-bottom: 5px;">WASM Query Setup</h4>
+                <img src="stills/visualizer-wasm-query-2026-01-15T23-31-13-696Z.png" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
+            </div>
+            <div>
+                <h4 style="color: #888; font-size: 0.85em; margin-bottom: 5px;">Large Context</h4>
+                <img src="stills/visualizer-processing-2026-01-15T23-34-34-852Z.png" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
+            </div>
+        </div>
+        <p style="margin-top: 15px; color: #888; font-size: 0.9em;">
+            <strong>Decision needed:</strong> Include visualizer screenshots in video? Options:
+            <ul style="margin: 5px 0; padding-left: 20px;">
+                <li>Skip - CLI demo already shows WASM in action</li>
+                <li>Add as brief visual cutaway (2-3 seconds)</li>
+                <li>Fix server and capture full working demo</li>
+            </ul>
+        </p>
+    </div>
+
+    <!-- Final Concatenated Preview -->
+    <div class="final-section">
+        <h2>Final Concatenated Video</h2>
+        <p>Full video with all segments assembled. Duration: <strong>1:44</strong> (104.5 seconds)</p>
+        <div class="paths" style="text-align: left; max-width: 500px; margin: 20px auto;">
+            <div class="path-item"><span class="path-label">Final:</span> <span class="path-value">final-rlm-wasm.mp4</span></div>
+            <div class="path-item"><span class="path-label">Preview:</span> <span class="path-value">clips/preview.mp4</span></div>
+        </div>
+        <video controls style="max-width: 800px;">
+            <source src="clips/preview.mp4" type="video/mp4">
+            <source src="final-rlm-wasm.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h2>Build Summary</h2>
+    <div class="segment">
+        <p><strong>Status:</strong> <span class="status status-ready">Complete</span></p>
+        <p><strong>Total Duration:</strong> 1:44 (104.5 seconds)</p>
+        <p><strong>Segments:</strong></p>
+        <ul style="margin: 10px 0; padding-left: 20px;">
+            <li>00-title.mp4 (5s) - Title with music</li>
+            <li>01-hook-composited.mp4 (18.4s) - Avatar hook</li>
+            <li>02-demo.mp4 (48s) - VHS recording with narration</li>
+            <li>14-cta-composited.mp4 (15.2s) - Avatar CTA</li>
+            <li>99b-epilog.mp4 (12.8s) - Like/subscribe</li>
+            <li>99c-epilog-ext.mp4 (5s) - Music fade-out</li>
+        </ul>
+        <p><strong>Audio:</strong> 44100 Hz stereo, -26.9 dB mean volume</p>
+        <p>Rebuild with: <code>./scripts/build-final.sh</code></p>
+    </div>
+
+</body>
+</html>

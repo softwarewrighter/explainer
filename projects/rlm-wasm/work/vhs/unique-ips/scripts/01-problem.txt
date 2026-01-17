@@ -1,0 +1,1 @@
+Counting unique I P addresses in logs is useful for security analysis and traffic monitoring.

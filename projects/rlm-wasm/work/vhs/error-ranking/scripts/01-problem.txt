@@ -1,0 +1,1 @@
+Ranking error types by frequency is a common log analysis task. R L M can handle this with custom web assembly code.

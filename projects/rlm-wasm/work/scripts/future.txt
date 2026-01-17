@@ -1,0 +1,1 @@
+More capability levels are coming. Level three uses native Rust C L I for full system access. Level four enables recursive language model calls for complex multi step reasoning. Subscribe for updates.

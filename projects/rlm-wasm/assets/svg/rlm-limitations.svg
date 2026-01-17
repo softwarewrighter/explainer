@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="warnGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    text { font-family: 'SF Pro Display', -apple-system, sans-serif; font-size: 36px; fill: white; }
+    .title { font-size: 64px; font-weight: 700; fill: #f59e0b; }
+    .subtitle { font-size: 32px; fill: #888; }
+    .bold { font-weight: 700; }
+    .item { font-size: 42px; }
+    .detail { font-size: 32px; fill: #aaa; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="960" y="140" text-anchor="middle" class="title">WASM Limitations</text>
+  <text x="960" y="200" text-anchor="middle" class="subtitle">Current constraints of the sandboxed execution model</text>
+
+  <!-- Warning icon -->
+  <g transform="translate(260, 320)">
+    <rect x="0" y="0" width="100" height="100" rx="16" fill="url(#warnGrad)" opacity="0.9"/>
+    <text x="50" y="70" text-anchor="middle" style="font-size:56px;fill:#1a1a2e;">!</text>
+  </g>
+  <text x="400" y="360" class="item bold">No Unicode Support</text>
+  <text x="400" y="410" class="detail">ASCII-only text processing; international characters not handled</text>
+
+  <!-- Memory icon -->
+  <g transform="translate(260, 500)">
+    <rect x="0" y="0" width="100" height="100" rx="16" fill="url(#warnGrad)" opacity="0.9"/>
+    <text x="50" y="70" text-anchor="middle" style="font-size:48px;fill:#1a1a2e;">64</text>
+  </g>
+  <text x="400" y="540" class="item bold">Limited Memory</text>
+  <text x="400" y="590" class="detail">64MB maximum; large datasets must be processed in chunks</text>
+
+  <!-- Rust icon -->
+  <g transform="translate(260, 680)">
+    <rect x="0" y="0" width="100" height="100" rx="16" fill="url(#warnGrad)" opacity="0.9"/>
+    <text x="50" y="70" text-anchor="middle" style="font-size:36px;fill:#1a1a2e;">Rs</text>
+  </g>
+  <text x="400" y="720" class="item bold">Rust Subset Only</text>
+  <text x="400" y="770" class="detail">No external crates; std library features limited to no_std compatible</text>
+
+  <!-- Bottom note -->
+  <g transform="translate(260, 900)">
+    <rect x="0" y="0" width="1400" height="100" rx="16" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="2"/>
+    <text x="700" y="60" text-anchor="middle" style="fill:#f59e0b;">These trade-offs enable safe, sandboxed execution of LLM-generated code</text>
+  </g>
+
+</svg>

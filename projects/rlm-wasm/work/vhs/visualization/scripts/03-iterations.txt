@@ -1,0 +1,1 @@
+Each iteration executes D S L commands. First count lines, then regex to find errors. The language model refines its approach based on intermediate results.

@@ -1,0 +1,1 @@
+Eight unique I P addresses were found. Each one appeared exactly twenty five times across the log entries.

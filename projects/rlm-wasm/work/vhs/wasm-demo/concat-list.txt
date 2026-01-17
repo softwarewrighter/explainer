@@ -1,0 +1,4 @@
+file '/Users/mike/github/softwarewrighter/explainer/projects/rlm-wasm/work/vhs/wasm-demo/clip-01-setup-padded.mp4'
+file '/Users/mike/github/softwarewrighter/explainer/projects/rlm-wasm/work/vhs/wasm-demo/clip-02-run-padded.mp4'
+file '/Users/mike/github/softwarewrighter/explainer/projects/rlm-wasm/work/vhs/wasm-demo/clip-03-compile-padded.mp4'
+file '/Users/mike/github/softwarewrighter/explainer/projects/rlm-wasm/work/vhs/wasm-demo/clip-04-result-padded.mp4'

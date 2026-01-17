@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="futureGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="cliGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#0891b2"/>
+    </linearGradient>
+    <linearGradient id="recursiveGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#db2777"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    text { font-family: 'SF Pro Display', -apple-system, sans-serif; font-size: 36px; fill: white; }
+    .title { font-size: 64px; font-weight: 700; fill: #8b5cf6; }
+    .subtitle { font-size: 32px; fill: #888; }
+    .bold { font-weight: 700; }
+    .level { font-size: 48px; font-weight: 700; }
+    .desc { font-size: 32px; fill: #ccc; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="960" y="140" text-anchor="middle" class="title">More to Come</text>
+  <text x="960" y="200" text-anchor="middle" class="subtitle">Future capability levels in development</text>
+
+  <!-- Level 3: Rust CLI -->
+  <g transform="translate(200, 320)">
+    <rect x="0" y="0" width="700" height="300" rx="24" fill="url(#cliGrad)" opacity="0.9"/>
+    <text x="350" y="70" text-anchor="middle" class="level">Level 3: Rust CLI</text>
+    <text x="350" y="140" text-anchor="middle">Full native Rust execution</text>
+    <text x="350" y="190" text-anchor="middle">Direct filesystem and network access</text>
+    <text x="350" y="240" text-anchor="middle" class="desc">For trusted environments only</text>
+  </g>
+
+  <!-- Level 4: Recursive LLM -->
+  <g transform="translate(1020, 320)">
+    <rect x="0" y="0" width="700" height="300" rx="24" fill="url(#recursiveGrad)" opacity="0.9"/>
+    <text x="350" y="70" text-anchor="middle" class="level">Level 4: Recursive LLM</text>
+    <text x="350" y="140" text-anchor="middle">Multi-hop reasoning chains</text>
+    <text x="350" y="190" text-anchor="middle">LLM calls other LLM operations</text>
+    <text x="350" y="240" text-anchor="middle" class="desc">Complex multi-step analysis</text>
+  </g>
+
+  <!-- Capability spectrum -->
+  <g transform="translate(200, 700)">
+    <rect x="0" y="0" width="1520" height="120" rx="16" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="760" y="50" text-anchor="middle" class="bold" style="fill:#8b5cf6;">Capability Spectrum</text>
+    <text x="760" y="95" text-anchor="middle">L1: DSL (safe) → L2: WASM (safe) → L3: CLI (unsafe) → L4: Recursive (safe)</text>
+  </g>
+
+  <!-- Bottom note -->
+  <g transform="translate(200, 880)">
+    <rect x="0" y="0" width="1520" height="100" rx="16" fill="rgba(0,0,0,0.3)"/>
+    <text x="760" y="60" text-anchor="middle" style="fill:#aaa;">Subscribe for updates on Level 3 and Level 4 implementations</text>
+  </g>
+
+</svg>

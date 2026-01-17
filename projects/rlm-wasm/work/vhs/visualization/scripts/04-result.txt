@@ -1,0 +1,1 @@
+Final answer: twenty error lines. Three iterations completed in seven point one seconds. No code generation required, just D S L pattern matching.
