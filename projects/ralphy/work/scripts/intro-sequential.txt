@@ -1,1 +1,1 @@
-Ralphy is a task runner that uses Claude Code to complete a list of development tasks autonomously. This first demo shows sequential execution, where each task runs one after another.
+Ralphy reads a task list and uses Claude Code to implement each one. It writes code, runs tests, and commits changes automatically. Let's try the Ralphy script on sequential tasks first.

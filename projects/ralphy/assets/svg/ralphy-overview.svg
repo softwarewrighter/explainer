@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#282a36"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#ff79c6" text-anchor="middle">Ralphy</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="32" fill="#8be9fd" text-anchor="middle">Autonomous Task Runner for Development</text>
+
+  <!-- Main flow diagram -->
+  <!-- PRD/Tasks box -->
+  <g transform="translate(150, 280)">
+    <rect x="0" y="0" width="300" height="180" rx="15" fill="#44475a" stroke="#50fa7b" stroke-width="3"/>
+    <text x="150" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#50fa7b" text-anchor="middle">Tasks</text>
+    <text x="150" y="85" font-family="monospace" font-size="20" fill="#f8f8f2" text-anchor="middle">tasks.yaml</text>
+    <text x="150" y="115" font-family="monospace" font-size="18" fill="#6272a4" text-anchor="middle">- Add user auth</text>
+    <text x="150" y="140" font-family="monospace" font-size="18" fill="#6272a4" text-anchor="middle">- Write tests</text>
+    <text x="150" y="165" font-family="monospace" font-size="18" fill="#6272a4" text-anchor="middle">- Update docs</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <polygon points="470,370 510,350 510,390" fill="#8be9fd"/>
+  <line x1="450" y1="370" x2="510" y2="370" stroke="#8be9fd" stroke-width="4"/>
+
+  <!-- Ralphy Engine box -->
+  <g transform="translate(530, 250)">
+    <rect x="0" y="0" width="380" height="240" rx="15" fill="#44475a" stroke="#ff79c6" stroke-width="3"/>
+    <text x="190" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ff79c6" text-anchor="middle">Ralphy Engine</text>
+    <line x1="30" y1="65" x2="350" y2="65" stroke="#6272a4" stroke-width="1"/>
+    <text x="190" y="100" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2" text-anchor="middle">Powered by Claude Code</text>
+    <text x="50" y="145" font-family="monospace" font-size="18" fill="#50fa7b">1.</text>
+    <text x="80" y="145" font-family="Arial, sans-serif" font-size="18" fill="#f8f8f2">Read task from list</text>
+    <text x="50" y="175" font-family="monospace" font-size="18" fill="#50fa7b">2.</text>
+    <text x="80" y="175" font-family="Arial, sans-serif" font-size="18" fill="#f8f8f2">Implement + test + lint</text>
+    <text x="50" y="205" font-family="monospace" font-size="18" fill="#50fa7b">3.</text>
+    <text x="80" y="205" font-family="Arial, sans-serif" font-size="18" fill="#f8f8f2">Commit and continue</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <polygon points="930,370 970,350 970,390" fill="#8be9fd"/>
+  <line x1="910" y1="370" x2="970" y2="370" stroke="#8be9fd" stroke-width="4"/>
+
+  <!-- Output box -->
+  <g transform="translate(990, 280)">
+    <rect x="0" y="0" width="300" height="180" rx="15" fill="#44475a" stroke="#ffb86c" stroke-width="3"/>
+    <text x="150" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffb86c" text-anchor="middle">Output</text>
+    <text x="40" y="85" font-family="Arial, sans-serif" font-size="20" fill="#f8f8f2">Working code</text>
+    <text x="40" y="115" font-family="Arial, sans-serif" font-size="20" fill="#f8f8f2">Passing tests</text>
+    <text x="40" y="145" font-family="Arial, sans-serif" font-size="20" fill="#f8f8f2">Clean commits</text>
+  </g>
+
+  <!-- Why use Ralphy section -->
+  <g transform="translate(150, 580)">
+    <rect x="0" y="0" width="520" height="280" rx="15" fill="#44475a" stroke="#6272a4" stroke-width="2"/>
+    <text x="260" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#8be9fd" text-anchor="middle">Why Ralphy?</text>
+    <circle cx="50" cy="100" r="8" fill="#50fa7b"/>
+    <text x="75" y="107" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2">Automates repetitive dev tasks</text>
+    <circle cx="50" cy="150" r="8" fill="#50fa7b"/>
+    <text x="75" y="157" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2">Maintains code quality with tests</text>
+    <circle cx="50" cy="200" r="8" fill="#50fa7b"/>
+    <text x="75" y="207" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2">Creates clean git history</text>
+    <circle cx="50" cy="250" r="8" fill="#50fa7b"/>
+    <text x="75" y="257" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2">Works autonomously until done</text>
+  </g>
+
+  <!-- Features section -->
+  <g transform="translate(700, 580)">
+    <rect x="0" y="0" width="520" height="280" rx="15" fill="#44475a" stroke="#6272a4" stroke-width="2"/>
+    <text x="260" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ff79c6" text-anchor="middle">Features</text>
+    <circle cx="50" cy="100" r="8" fill="#bd93f9"/>
+    <text x="75" y="107" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2">YAML task definitions</text>
+    <circle cx="50" cy="150" r="8" fill="#bd93f9"/>
+    <text x="75" y="157" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2">Sequential or parallel execution</text>
+    <circle cx="50" cy="200" r="8" fill="#bd93f9"/>
+    <text x="75" y="207" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2">Built-in linting and testing</text>
+    <circle cx="50" cy="250" r="8" fill="#bd93f9"/>
+    <text x="75" y="257" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2">Automatic git commits</text>
+  </g>
+
+  <!-- Mode indicator -->
+  <g transform="translate(1250, 580)">
+    <rect x="0" y="0" width="520" height="280" rx="15" fill="#44475a" stroke="#ff5555" stroke-width="3"/>
+    <text x="260" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ff5555" text-anchor="middle">Demo Mode</text>
+    <text x="260" y="130" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#50fa7b" text-anchor="middle">Sequential</text>
+    <text x="260" y="190" font-family="Arial, sans-serif" font-size="24" fill="#f8f8f2" text-anchor="middle">One task at a time</text>
+    <text x="260" y="230" font-family="Arial, sans-serif" font-size="24" fill="#f8f8f2" text-anchor="middle">in order</text>
+  </g>
+</svg>
