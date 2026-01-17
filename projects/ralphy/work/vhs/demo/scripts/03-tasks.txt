@@ -1,0 +1,1 @@
+Tasks two and three add new functions. Each task writes code, creates tests, runs linting, and commits changes automatically.

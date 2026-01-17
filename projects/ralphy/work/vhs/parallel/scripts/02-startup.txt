@@ -1,0 +1,1 @@
+Ralphy starts in parallel mode with three agents. Each agent gets its own git branch and worktree, so they can work on different files without conflicts.

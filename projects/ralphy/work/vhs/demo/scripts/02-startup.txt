@@ -1,0 +1,1 @@
+Ralphy uses Claude Code as its engine. Task one creates the project files, writes tests, and verifies everything passes before committing.

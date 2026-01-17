@@ -1,0 +1,1 @@
+When group one completes, Ralphy merges all three branches back to main. Then group two starts with a single agent to integrate the modules together.

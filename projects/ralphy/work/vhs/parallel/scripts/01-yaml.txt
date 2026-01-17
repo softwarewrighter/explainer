@@ -1,0 +1,1 @@
+Tasks are defined in a yaml file with parallel group markers. Group one has three independent modules. Group two has the integration step that runs after.

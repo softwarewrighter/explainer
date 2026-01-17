@@ -1,0 +1,1 @@
+All three agents work simultaneously. Agent one builds the user module, agent two builds products, agent three builds orders. They finish at different times.

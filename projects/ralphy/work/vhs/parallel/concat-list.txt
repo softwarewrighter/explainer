@@ -1,0 +1,5 @@
+file '/Users/mike/github/softwarewrighter/explainer/projects/ralphy/work/vhs/parallel/clip-01-yaml-padded.mp4'
+file '/Users/mike/github/softwarewrighter/explainer/projects/ralphy/work/vhs/parallel/clip-02-startup-padded.mp4'
+file '/Users/mike/github/softwarewrighter/explainer/projects/ralphy/work/vhs/parallel/clip-03-parallel-padded.mp4'
+file '/Users/mike/github/softwarewrighter/explainer/projects/ralphy/work/vhs/parallel/clip-04-merge-padded.mp4'
+file '/Users/mike/github/softwarewrighter/explainer/projects/ralphy/work/vhs/parallel/clip-05-verify-padded.mp4'

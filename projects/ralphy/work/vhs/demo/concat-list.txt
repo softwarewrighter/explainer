@@ -1,0 +1,5 @@
+file '/Users/mike/github/softwarewrighter/explainer/projects/ralphy/work/vhs/demo/clip-01-prd-padded.mp4'
+file '/Users/mike/github/softwarewrighter/explainer/projects/ralphy/work/vhs/demo/clip-02-startup-padded.mp4'
+file '/Users/mike/github/softwarewrighter/explainer/projects/ralphy/work/vhs/demo/clip-03-tasks-padded.mp4'
+file '/Users/mike/github/softwarewrighter/explainer/projects/ralphy/work/vhs/demo/clip-04-final-padded.mp4'
+file '/Users/mike/github/softwarewrighter/explainer/projects/ralphy/work/vhs/demo/clip-05-summary-padded.mp4'

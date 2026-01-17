@@ -8,7 +8,8 @@ projects/*/work/stills/
 projects/*/work/png/
 projects/*/work/avatar/
 projects/*/work/composited/
-projects/*/work/vhs/
+projects/*/work/vhs/*/audio/
+projects/*/work/vhs/*/stills/
 
 # Video files (generated, not source)
 *.mp4
@@ -18,6 +19,8 @@ projects/*/work/vhs/
 !projects/*/work/scripts/
 !projects/*/work/description.txt
 !projects/*/work/concat-list.txt
+!projects/*/work/vhs/*/scripts/
+!projects/*/work/vhs/*/concat-list.txt
 
 # OS files
 .DS_Store
