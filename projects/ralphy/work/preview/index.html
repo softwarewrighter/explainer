@@ -73,7 +73,7 @@
     <div class="final-video">
         <h2>Final Assembled Video</h2>
         <p class="path">clips/preview.mp4</p>
-        <p><span class="duration">Duration: ~149s (bookends + 2 demos)</span> | 1920x1080</p>
+        <p><span class="duration">Duration: ~178s (bookends + intros + 2 demos)</span> | 1920x1080</p>
         <video controls><source src="clips/00-title.mp4" type="video/mp4"></video>
     </div>
 
@@ -81,11 +81,10 @@
     <table>
         <tr><th>Phase</th><th>Status</th><th>Items</th></tr>
         <tr><td>Title Card</td><td><span class="status done">Done</span></td><td>5s with music</td></tr>
-        <tr><td>Hook</td><td><span class="status pending">Pending</span></td><td>Avatar intro</td></tr>
-        <tr><td>Ralphy Overview</td><td><span class="status pending">Pending</span></td><td>SVG diagram + narration</td></tr>
+        <tr><td>Sequential Intro</td><td><span class="status done">Done</span></td><td>14s narrated slide</td></tr>
         <tr><td>Sequential Demo</td><td><span class="status done">Done</span></td><td>5 narrated clips (59s)</td></tr>
+        <tr><td>Parallel Intro</td><td><span class="status done">Done</span></td><td>15s SVG diagram + narration</td></tr>
         <tr><td>Parallel Demo</td><td><span class="status done">Done</span></td><td>5 narrated clips (67.5s)</td></tr>
-        <tr><td>CTA</td><td><span class="status pending">Pending</span></td><td>Avatar outro</td></tr>
         <tr><td>Epilog</td><td><span class="status done">Done</span></td><td>Standard epilog + extension</td></tr>
     </table>
 
@@ -99,7 +98,14 @@
     </div>
 
     <div class="segment">
-        <h4>Ralphy Demo - Full Narrated Recording <span class="status done">59.09s</span></h4>
+        <h4>01-intro-sequential - Sequential Mode Introduction <span class="status done">14.07s</span></h4>
+        <p class="path">clips/01-intro-sequential.mp4</p>
+        <video controls><source src="clips/01-intro-sequential.mp4" type="video/mp4"></video>
+        <div class="narration">Ralphy is a task runner that uses Claude Code to complete a list of development tasks autonomously. This first demo shows sequential execution, where each task runs one after another.</div>
+    </div>
+
+    <div class="segment">
+        <h4>02-sequential-demo - Full Narrated Recording <span class="status done">59.09s</span></h4>
         <p class="path">vhs/demo/ralphy-demo-narrated.mp4</p>
         <video controls><source src="vhs/demo/ralphy-demo-narrated.mp4" type="video/mp4"></video>
         <div class="narration">
@@ -112,7 +118,14 @@
     </div>
 
     <div class="segment">
-        <h4>Parallel Demo - Full Narrated Recording <span class="status done">67.52s</span></h4>
+        <h4>03-intro-parallel - Parallel Mode Introduction <span class="status done">14.73s</span></h4>
+        <p class="path">clips/03-intro-parallel.mp4</p>
+        <video controls><source src="clips/03-intro-parallel.mp4" type="video/mp4"></video>
+        <div class="narration">Ralphy can also run tasks in parallel. Independent tasks get their own git branch and worktree, so multiple agents work simultaneously without file conflicts. This speeds up large projects significantly.</div>
+    </div>
+
+    <div class="segment">
+        <h4>04-parallel-demo - Full Narrated Recording <span class="status done">67.52s</span></h4>
         <p class="path">vhs/parallel/parallel-demo-narrated.mp4</p>
         <video controls><source src="vhs/parallel/parallel-demo-narrated.mp4" type="video/mp4"></video>
         <div class="narration">

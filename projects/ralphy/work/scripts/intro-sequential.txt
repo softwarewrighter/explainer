@@ -1,0 +1,1 @@
+Ralphy is a task runner that uses Claude Code to complete a list of development tasks autonomously. This first demo shows sequential execution, where each task runs one after another.

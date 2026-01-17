@@ -1,0 +1,1 @@
+Ralphy can also run tasks in parallel. Independent tasks get their own git branch and worktree, so multiple agents work simultaneously without file conflicts. This speeds up large projects significantly.

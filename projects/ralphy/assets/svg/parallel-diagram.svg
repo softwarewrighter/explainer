@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#282a36"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#ff79c6" text-anchor="middle">Parallel Execution</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="32" fill="#8be9fd" text-anchor="middle">Multiple agents working simultaneously</text>
+
+  <!-- Main branch line -->
+  <line x1="200" y1="350" x2="500" y2="350" stroke="#50fa7b" stroke-width="8" stroke-linecap="round"/>
+  <line x1="1420" y1="350" x2="1720" y2="350" stroke="#50fa7b" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Fork point -->
+  <circle cx="500" cy="350" r="20" fill="#50fa7b" filter="url(#glow)"/>
+
+  <!-- Merge point -->
+  <circle cx="1420" cy="350" r="20" fill="#50fa7b" filter="url(#glow)"/>
+
+  <!-- Branch 1 (top) - Users -->
+  <path d="M 500 350 Q 600 250, 700 250 L 1220 250 Q 1320 250, 1420 350"
+        stroke="#ff5555" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <rect x="850" y="200" width="200" height="100" rx="15" fill="#44475a" stroke="#ff5555" stroke-width="3"/>
+  <text x="950" y="240" font-family="monospace" font-size="24" fill="#ff5555" text-anchor="middle">Agent 1</text>
+  <text x="950" y="275" font-family="monospace" font-size="20" fill="#f8f8f2" text-anchor="middle">users.js</text>
+
+  <!-- Branch 2 (middle) - Products -->
+  <path d="M 500 350 L 700 350 L 1220 350 L 1420 350"
+        stroke="#ffb86c" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <rect x="850" y="300" width="200" height="100" rx="15" fill="#44475a" stroke="#ffb86c" stroke-width="3"/>
+  <text x="950" y="340" font-family="monospace" font-size="24" fill="#ffb86c" text-anchor="middle">Agent 2</text>
+  <text x="950" y="375" font-family="monospace" font-size="20" fill="#f8f8f2" text-anchor="middle">products.js</text>
+
+  <!-- Branch 3 (bottom) - Orders -->
+  <path d="M 500 350 Q 600 450, 700 450 L 1220 450 Q 1320 450, 1420 350"
+        stroke="#bd93f9" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <rect x="850" y="400" width="200" height="100" rx="15" fill="#44475a" stroke="#bd93f9" stroke-width="3"/>
+  <text x="950" y="440" font-family="monospace" font-size="24" fill="#bd93f9" text-anchor="middle">Agent 3</text>
+  <text x="950" y="475" font-family="monospace" font-size="20" fill="#f8f8f2" text-anchor="middle">orders.js</text>
+
+  <!-- Main branch label -->
+  <text x="300" y="320" font-family="monospace" font-size="24" fill="#50fa7b" text-anchor="middle">main</text>
+  <text x="1570" y="320" font-family="monospace" font-size="24" fill="#50fa7b" text-anchor="middle">main</text>
+
+  <!-- Worktree boxes -->
+  <g transform="translate(100, 580)">
+    <rect x="0" y="0" width="520" height="200" rx="15" fill="#44475a" stroke="#6272a4" stroke-width="2"/>
+    <text x="260" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#8be9fd" text-anchor="middle">Git Worktrees</text>
+    <text x="260" y="90" font-family="monospace" font-size="22" fill="#f8f8f2" text-anchor="middle">/tmp/ralphy-worktree-1</text>
+    <text x="260" y="125" font-family="monospace" font-size="22" fill="#f8f8f2" text-anchor="middle">/tmp/ralphy-worktree-2</text>
+    <text x="260" y="160" font-family="monospace" font-size="22" fill="#f8f8f2" text-anchor="middle">/tmp/ralphy-worktree-3</text>
+  </g>
+
+  <!-- Benefits box -->
+  <g transform="translate(700, 580)">
+    <rect x="0" y="0" width="520" height="200" rx="15" fill="#44475a" stroke="#6272a4" stroke-width="2"/>
+    <text x="260" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#50fa7b" text-anchor="middle">Benefits</text>
+    <text x="40" y="90" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2">No file conflicts</text>
+    <text x="40" y="130" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2">Faster completion</text>
+    <text x="40" y="170" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2">Independent work</text>
+  </g>
+
+  <!-- Merge result box -->
+  <g transform="translate(1300, 580)">
+    <rect x="0" y="0" width="520" height="200" rx="15" fill="#44475a" stroke="#6272a4" stroke-width="2"/>
+    <text x="260" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ff79c6" text-anchor="middle">After Merge</text>
+    <text x="40" y="90" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2">All code combined</text>
+    <text x="40" y="130" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2">Tests verified</text>
+    <text x="40" y="170" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2">Ready for next group</text>
+  </g>
+
+  <!-- Arrow indicators -->
+  <polygon points="480,350 520,330 520,370" fill="#50fa7b"/>
+  <polygon points="1440,350 1400,330 1400,370" fill="#50fa7b"/>
+
+  <!-- Footer -->
+  <text x="960" y="870" font-family="Arial, sans-serif" font-size="24" fill="#6272a4" text-anchor="middle">Each agent works in isolation, then changes merge back to main</text>
+</svg>
