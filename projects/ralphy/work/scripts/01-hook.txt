@@ -1,0 +1,1 @@
+What if you had a developer who could work through your task list while you sleep. Write code, run tests, commit changes, all automatically. That's Ralphy, an autonomous task runner powered by Claude Code.

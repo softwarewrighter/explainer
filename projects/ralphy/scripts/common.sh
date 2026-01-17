@@ -9,6 +9,8 @@ ASSETS="$PROJECT/assets"
 WORK="$PROJECT/work"
 CLIPS="$WORK/clips"
 AUDIO="$WORK/audio"
+STILLS="$WORK/stills"
+AVATAR="$WORK/avatar"
 VHS="$WORK/vhs"
 
 MUSIC="$REFDIR/music/The Creepy Clown - Jeremy Korpas.mp3"
