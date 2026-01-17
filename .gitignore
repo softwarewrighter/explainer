@@ -8,7 +8,11 @@ projects/*/work/stills/
 projects/*/work/png/
 projects/*/work/avatar/
 projects/*/work/composited/
-projects/*/work/*.mp4
+projects/*/work/vhs/
+
+# Video files (generated, not source)
+*.mp4
+*.wav
 
 # Keep scripts and description (source files)
 !projects/*/work/scripts/

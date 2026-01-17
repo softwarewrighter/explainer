@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ralphy Video Preview</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a0a0a;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 { color: #ff6b6b; border-bottom: 2px solid #ff6b6b; padding-bottom: 10px; }
+        h2 { color: #ffa07a; margin-top: 40px; }
+        .final-video {
+            background: linear-gradient(135deg, #2a1a1a, #3d1f1f);
+            border: 2px solid #ff6b6b;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .final-video h2 { margin-top: 0; color: #ff6b6b; }
+        .final-video video { width: 100%; max-width: 960px; }
+        .segment {
+            border-left: 3px solid #ff6b6b;
+            padding-left: 15px;
+            margin: 20px 0;
+            background: #2a1a1a;
+            padding: 15px;
+            border-radius: 0 10px 10px 0;
+        }
+        .segment h4 { color: #50fa7b; margin: 0 0 10px 0; }
+        .status {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .done { background: #50fa7b; color: #000; }
+        .pending { background: #555; color: #fff; }
+        .progress { background: #ff6b6b; color: #000; }
+        video { max-width: 100%; border-radius: 5px; background: #000; }
+        .path {
+            font-family: monospace;
+            font-size: 11px;
+            color: #666;
+        }
+        .music { color: #ff79c6; font-style: italic; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #333; }
+        th { color: #ff6b6b; }
+        .narration {
+            font-style: italic;
+            color: #aaa;
+            font-size: 14px;
+            background: #111;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .duration { color: #50fa7b; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Ralphy Explainer - Video Preview</h1>
+    <p>Parallel orchestration for video publishing tasks. Part 3 of the RLM series.</p>
+
+    <div class="final-video">
+        <h2>Final Assembled Video</h2>
+        <p class="path">clips/preview.mp4</p>
+        <p><span class="duration">Duration: ~23s (bookends only)</span> | 1920x1080</p>
+        <video controls><source src="clips/00-title.mp4" type="video/mp4"></video>
+    </div>
+
+    <h2>Production Status</h2>
+    <table>
+        <tr><th>Phase</th><th>Status</th><th>Items</th></tr>
+        <tr><td>Title Card</td><td><span class="status done">Done</span></td><td>5s with music</td></tr>
+        <tr><td>Hook</td><td><span class="status pending">Pending</span></td><td>Avatar intro</td></tr>
+        <tr><td>Ralphy Overview</td><td><span class="status pending">Pending</span></td><td>SVG diagram + narration</td></tr>
+        <tr><td>Demo Recording</td><td><span class="status pending">Pending</span></td><td>Ralphy in action</td></tr>
+        <tr><td>CTA</td><td><span class="status pending">Pending</span></td><td>Avatar outro</td></tr>
+        <tr><td>Epilog</td><td><span class="status done">Done</span></td><td>Standard epilog + extension</td></tr>
+    </table>
+
+    <h2>Video Segments</h2>
+
+    <div class="segment">
+        <h4>00-title - Title Card <span class="status done">5.00s</span></h4>
+        <p class="path">clips/00-title.mp4</p>
+        <video controls><source src="clips/00-title.mp4" type="video/mp4"></video>
+        <div class="narration music">Music: The Creepy Clown - Jeremy Korpas (intro)</div>
+    </div>
+
+    <div class="segment">
+        <h4>99b-epilog - Standard Epilog <span class="status done">12.80s</span></h4>
+        <p class="path">clips/99b-epilog.mp4 (global reference)</p>
+        <video controls><source src="clips/99b-epilog.mp4" type="video/mp4"></video>
+        <div class="narration music">Standard epilog with embedded narration</div>
+    </div>
+
+    <div class="segment">
+        <h4>99c-epilog-ext - Music Outro <span class="status done">5.00s</span></h4>
+        <p class="path">clips/99c-epilog-ext.mp4</p>
+        <video controls><source src="clips/99c-epilog-ext.mp4" type="video/mp4"></video>
+        <div class="narration music">Music: The Creepy Clown - Jeremy Korpas (outro, 3s fade)</div>
+    </div>
+
+    <script>
+        console.log('Preview page loaded. Refresh to see updates.');
+    </script>
+</body>
+</html>
