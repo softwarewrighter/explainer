@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="ctaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#bd93f9"/>
+      <stop offset="100%" style="stop-color:#ff79c6"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative elements -->
+  <circle cx="150" cy="150" r="100" fill="none" stroke="#50fa7b" stroke-width="2" opacity="0.2"/>
+  <circle cx="1770" cy="930" r="120" fill="none" stroke="#bd93f9" stroke-width="2" opacity="0.2"/>
+
+  <!-- Title -->
+  <text x="960" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="64" fill="#50fa7b" font-weight="bold" filter="url(#glow)">
+    Ready to Break Free?
+  </text>
+
+  <!-- Summary boxes -->
+  <g transform="translate(960, 340)">
+    <!-- L3 capabilities box -->
+    <rect x="-420" y="-150" width="840" height="300" fill="#282a36" rx="20" stroke="#bd93f9" stroke-width="3"/>
+
+    <text x="0" y="-100" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#bd93f9" font-weight="bold">
+      Level 3 Native Execution
+    </text>
+
+    <g font-family="Monaco, monospace" font-size="28" fill="#f8f8f2">
+      <text x="-350" y="-40" fill="#50fa7b">✓</text>
+      <text x="-310" y="-40">Process thousands of lines instantly</text>
+
+      <text x="-350" y="10" fill="#50fa7b">✓</text>
+      <text x="-310" y="10">Generate and compile real Rust code</text>
+
+      <text x="-350" y="60" fill="#50fa7b">✓</text>
+      <text x="-310" y="60">No sandbox limits, no timeouts</text>
+
+      <text x="-350" y="110" fill="#50fa7b">✓</text>
+      <text x="-310" y="110">60-96% token savings with L1 filtering</text>
+    </g>
+  </g>
+
+  <!-- GitHub CTA -->
+  <g transform="translate(960, 650)">
+    <rect x="-300" y="-50" width="600" height="100" fill="url(#ctaGrad)" rx="50"/>
+    <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#ffffff" font-weight="bold">
+      Explore the Code
+    </text>
+  </g>
+
+  <!-- GitHub URL -->
+  <text x="960" y="780" text-anchor="middle" font-family="Monaco, monospace" font-size="32" fill="#8be9fd">
+    github.com/softwarewrighter/rlm-project
+  </text>
+
+  <!-- Bottom tagline -->
+  <text x="960" y="880" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#6272a4">
+    RLM: Recursive Language Model Query Engine
+  </text>
+
+  <!-- Rust logo hint -->
+  <g transform="translate(960, 960)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ffb86c">
+      Built with Rust + LLMs
+    </text>
+  </g>
+</svg>
