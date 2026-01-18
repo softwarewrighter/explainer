@@ -82,7 +82,7 @@
 
     <div class="final-video">
         <h2>Final Assembled Video</h2>
-        <p class="waiting">In progress - title (5s), intro (19.9s), and L3 demo narrated clips (33s) ready. Total: ~58s. Visualizer demo and remaining SVGs pending.</p>
+        <p class="waiting">In progress - title (5s), hook (14.7s), intro (19.9s), and L3 demo (33s) ready. Total: ~73s. Visualizer demo and remaining SVGs pending.</p>
         <video controls><source src="clips/00-title.mp4" type="video/mp4"></video>
     </div>
 
@@ -90,7 +90,7 @@
     <table>
         <tr><th>Phase</th><th>Status</th><th>Items</th></tr>
         <tr><td>Title Card</td><td><span class="status done">Done</span></td><td>5s with music</td></tr>
-        <tr><td>Hook</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
+        <tr><td>Hook</td><td><span class="status done">Done</span></td><td>14.7s avatar + narration</td></tr>
         <tr><td>L3 Intro</td><td><span class="status done">Done</span></td><td>19.9s SVG + narration</td></tr>
         <tr><td>L3 Demo</td><td><span class="status done">Done</span></td><td>3 narrated clips (33s total)</td></tr>
         <tr><td>Visualizer Intro</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
@@ -113,9 +113,14 @@
     </div>
 
     <div class="segment">
-        <h4>01-hook - Hook with Avatar <span class="status pending">Pending</span></h4>
+        <h4>01-hook - Hook with Avatar <span class="status done">14.70s</span></h4>
         <p class="path">clips/01-hook-composited.mp4</p>
-        <p class="waiting">Waiting for SVG and narration...</p>
+        <video controls><source src="clips/01-hook-composited.mp4" type="video/mp4"></video>
+        <div class="narration">What happens when your data outgrows the sandbox. Five thousand lines would timeout in web assembly. But with native Rust, there are no limits. Level three breaks free and runs at full speed.</div>
+        <p>SVG slide:</p>
+        <img class="preview" src="svg/01-hook.svg" alt="Hook SVG">
+        <p>Audio:</p>
+        <audio controls><source src="audio/01-hook.wav" type="audio/wav"></audio>
     </div>
 
     <div class="segment">

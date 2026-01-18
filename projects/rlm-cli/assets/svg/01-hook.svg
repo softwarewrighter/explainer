@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="redGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Scrolling data lines in background -->
+  <g opacity="0.1" font-family="Monaco, monospace" font-size="14" fill="#8be9fd">
+    <text x="50" y="60">[ERROR] AuthenticationFailed from 192.168.1.100</text>
+    <text x="50" y="85">[ERROR] ServiceUnavailable from 192.168.1.105</text>
+    <text x="50" y="110">[ERROR] RateLimited from 192.168.1.200</text>
+    <text x="50" y="135">[ERROR] ConnectionTimeout from 192.168.1.88</text>
+    <text x="50" y="160">[ERROR] PermissionDenied from 192.168.1.42</text>
+    <text x="1200" y="60">[ERROR] ValidationError from 10.0.0.15</text>
+    <text x="1200" y="85">[ERROR] RequestFailed from 10.0.0.22</text>
+    <text x="1200" y="110">[ERROR] DatabaseError from 10.0.0.33</text>
+    <text x="1200" y="135">[ERROR] TimeoutError from 10.0.0.44</text>
+    <text x="50" y="950">[ERROR] AuthFailed line 4892...</text>
+    <text x="50" y="975">[ERROR] ServiceDown line 4893...</text>
+    <text x="50" y="1000">[ERROR] RateLimit line 4894...</text>
+  </g>
+
+  <!-- Main hook question -->
+  <text x="960" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" fill="#ff5555" font-weight="bold" filter="url(#redGlow)">
+    What if your data is too big?
+  </text>
+
+  <!-- Data size visualization -->
+  <g transform="translate(480, 420)">
+    <!-- Sandbox box (constrained) -->
+    <rect x="-180" y="-140" width="360" height="280" fill="#282a36" rx="20" stroke="#ff5555" stroke-width="5" stroke-dasharray="15,10"/>
+    <text x="0" y="-90" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#ff5555" font-weight="bold">SANDBOX</text>
+
+    <!-- Overflowing lines -->
+    <g font-family="Monaco, monospace" font-size="28" fill="#6272a4">
+      <text x="-140" y="-40">1000 lines...</text>
+      <text x="-140" y="0">2000 lines...</text>
+      <text x="-140" y="40" fill="#ffb86c">3000 lines...</text>
+      <text x="-140" y="80" fill="#ff5555">TIMEOUT</text>
+    </g>
+
+    <!-- Warning icon -->
+    <text x="0" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" fill="#ff5555">⚠️ Memory Limit</text>
+  </g>
+
+  <!-- Arrow -->
+  <g transform="translate(960, 420)">
+    <polygon points="0,-40 60,0 0,40" fill="#50fa7b"/>
+    <text x="0" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#50fa7b" font-weight="bold">ESCAPE</text>
+  </g>
+
+  <!-- Native execution box (unlimited) -->
+  <g transform="translate(1440, 420)">
+    <rect x="-180" y="-140" width="360" height="280" fill="#2d1f3d" rx="20" stroke="#50fa7b" stroke-width="5"/>
+    <text x="0" y="-90" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#50fa7b" font-weight="bold">NATIVE</text>
+
+    <!-- Processing visualization -->
+    <g font-family="Monaco, monospace" font-size="28" fill="#f8f8f2">
+      <text x="-140" y="-40">5000 lines</text>
+      <text x="-140" y="0">No fuel limits</text>
+      <text x="-140" y="40">Real Rust code</text>
+      <text x="-140" y="80" fill="#50fa7b">DONE in ms</text>
+    </g>
+
+    <!-- Success icon -->
+    <text x="0" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" fill="#50fa7b">⚡ Full Power</text>
+  </g>
+
+  <!-- Bottom tagline -->
+  <text x="960" y="750" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#bd93f9" font-weight="bold">
+    Level 3: Break Free from the Sandbox
+  </text>
+
+  <text x="960" y="820" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#8be9fd">
+    Native Rust execution for datasets that matter
+  </text>
+
+  <!-- RLM series tag -->
+  <text x="960" y="920" text-anchor="middle" font-family="Monaco, monospace" font-size="28" fill="#6272a4">
+    RLM Execution Levels Series
+  </text>
+</svg>

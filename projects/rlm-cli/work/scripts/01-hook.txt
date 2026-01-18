@@ -1,0 +1,1 @@
+What happens when your data outgrows the sandbox. Five thousand lines would timeout in web assembly. But with native Rust, there are no limits. Level three breaks free and runs at full speed.
