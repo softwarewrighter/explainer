@@ -81,9 +81,9 @@
     <p>Level 3 native execution - Rust CLI tools without sandboxing.</p>
 
     <div class="final-video">
-        <h2>Preview Video (2:45)</h2>
-        <p>All segments except visualizer demo assembled. Includes: title, hook, L3 intro, error ranking demo, percentiles demo, CTA, and epilog.</p>
-        <video controls><source src="rlm-cli-preview.mp4" type="video/mp4"></video>
+        <h2>Full Draft Video (5:50)</h2>
+        <p>All segments assembled including visualizer demos. 27 clips: title, hook, paper intro, L3 intro, VHS error ranking, VHS percentiles, visualizer intro, 4 CLI demos (12 clips), CTA, and epilog.</p>
+        <video controls><source src="rlm-cli-full-draft.mp4" type="video/mp4"></video>
     </div>
 
     <h2>Production Status</h2>
@@ -91,12 +91,13 @@
         <tr><th>Phase</th><th>Status</th><th>Items</th></tr>
         <tr><td>Title Card</td><td><span class="status done">Done</span></td><td>5s with music</td></tr>
         <tr><td>Hook</td><td><span class="status done">Done</span></td><td>14.7s avatar + narration</td></tr>
+        <tr><td>Paper Intro</td><td><span class="status done">Done</span></td><td>15.5s RLM paper + narration</td></tr>
         <tr><td>L3 Intro</td><td><span class="status done">Done</span></td><td>19.9s SVG + narration</td></tr>
         <tr><td>L3 Demo 1 (Error Ranking)</td><td><span class="status done">Done</span></td><td>3 narrated clips (33s total)</td></tr>
         <tr><td>L3 Demo 2 Intro (Percentiles)</td><td><span class="status done">Done</span></td><td>19.3s SVG + narration</td></tr>
         <tr><td>L3 Demo 2 (Percentiles)</td><td><span class="status done">Done</span></td><td>3 narrated clips (38s total)</td></tr>
-        <tr><td>Visualizer Intro</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
-        <tr><td>Visualizer Demo</td><td><span class="status pending">Pending</span></td><td>OBS recording needed</td></tr>
+        <tr><td>Visualizer Intro</td><td><span class="status done">Done</span></td><td>18.8s SVG + narration</td></tr>
+        <tr><td>Visualizer Demo (4 CLI demos)</td><td><span class="status done">Done</span></td><td>12 clips: 4 demos x 3 phases (~158s total)</td></tr>
         <tr><td>Comparison</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
         <tr><td>CTA</td><td><span class="status done">Done</span></td><td>16.7s avatar + narration</td></tr>
         <tr><td>Epilog</td><td><span class="status done">Done</span></td><td>12.8s standard epilog</td></tr>
@@ -123,6 +124,17 @@
         <img class="preview" src="svg/01-hook.svg" alt="Hook SVG">
         <p>Audio:</p>
         <audio controls><source src="audio/01-hook.wav" type="audio/wav"></audio>
+    </div>
+
+    <div class="segment">
+        <h4>01b-paper-intro - RLM Paper Abstract <span class="status done">15.51s</span></h4>
+        <p class="path">clips/01b-paper-intro.mp4</p>
+        <video controls><source src="clips/01b-paper-intro.mp4" type="video/mp4"></video>
+        <div class="narration">RLM lets models recursively decompose inputs far beyond their context limits. This video shows my Rust CLI approach, where the model generates native code to answer complex queries.</div>
+        <p>Image:</p>
+        <img class="preview" src="images/paper.png" alt="RLM Paper Abstract">
+        <p>Audio:</p>
+        <audio controls><source src="audio/01b-paper-intro.wav" type="audio/wav"></audio>
     </div>
 
     <div class="segment">
@@ -216,16 +228,134 @@
     </div>
 
     <div class="segment">
-        <h4>06-intro-viz - Visualizer Intro <span class="status pending">Pending</span></h4>
+        <h4>06-intro-viz - Visualizer Intro <span class="status progress">Scripts Ready</span></h4>
         <p class="path">clips/06-intro-viz.mp4</p>
-        <p class="waiting">Waiting for SVG and narration...</p>
+        <div class="narration">The R L M Visualizer lets you watch Level 3 in action. Four C L I demos show how native Rust handles large datasets. Each demo follows the same pattern, select, execute, and see results.</div>
+        <p>SVG slide:</p>
+        <img class="preview" src="svg/06-intro-viz.svg" alt="Visualizer Intro SVG">
+        <p class="path">Script: work/scripts/06-intro-viz.txt</p>
+    </div>
+
+    <h2>Visualizer Demos (4 CLI Demos)</h2>
+    <p>OBS recording segmented into 12 clips (4 demos x 3 phases each). Source: <span class="path">~/Movies/visualizer-cli-demos.mp4</span></p>
+    <p class="path">Segment map: work/vhs/visualizer-segment-map.json | Stills: work/vhs/visualizer-stills/</p>
+
+    <div class="segment">
+        <h4>07a - Error Ranking: Select <span class="status progress">Segmented</span></h4>
+        <p class="path">Frames 15-20 (7.5s - 10.0s) | Duration: 2.5s</p>
+        <div class="narration">Demo one, error ranking. Five thousand log lines to analyze. The query asks to rank error types by frequency.</div>
+        <div class="stills-grid">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0015.jpg" alt="Frame 15" style="max-width: 300px;">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0020.jpg" alt="Frame 20" style="max-width: 300px;">
+        </div>
     </div>
 
     <div class="segment">
-        <h4>07-demo-viz - Visualizer Demos <span class="status pending">Pending</span></h4>
-        <p class="path">obs/visualizer/</p>
-        <p class="waiting">Waiting for OBS recording...</p>
+        <h4>07b - Error Ranking: Execute <span class="status progress">Segmented</span></h4>
+        <p class="path">Frames 20-55 (10.0s - 27.5s) | Duration: 17.5s</p>
+        <div class="narration">The model generates Rust code with a hash map to count each error type. Native compilation takes just a few seconds.</div>
+        <div class="stills-grid">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0025.jpg" alt="Frame 25" style="max-width: 300px;">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0040.jpg" alt="Frame 40" style="max-width: 300px;">
+        </div>
     </div>
+
+    <div class="segment">
+        <h4>07c - Error Ranking: Results <span class="status progress">Segmented</span></h4>
+        <p class="path">Frames 55-65 (27.5s - 32.5s) | Duration: 5.0s</p>
+        <div class="narration">Two iterations, under thirteen seconds. Rate limited and authentication failed tie at ninety occurrences each.</div>
+        <div class="stills-grid">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0055.jpg" alt="Frame 55" style="max-width: 300px;">
+        </div>
+    </div>
+
+    <div class="segment">
+        <h4>08a - Unique IPs: Select <span class="status progress">Segmented</span></h4>
+        <p class="path">Frames 65-75 (32.5s - 37.5s) | Duration: 5.0s</p>
+        <div class="narration">Demo two, unique IP addresses. Same five thousand log lines. How many distinct I P addresses appear, and which are most active.</div>
+        <div class="stills-grid">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0065.jpg" alt="Frame 65" style="max-width: 300px;">
+        </div>
+    </div>
+
+    <div class="segment">
+        <h4>08b - Unique IPs: Execute <span class="status progress">Segmented</span></h4>
+        <p class="path">Frames 75-140 (37.5s - 70.0s) | Duration: 32.5s</p>
+        <div class="narration">A hash set collects unique addresses while a counter tracks frequency. The C L I processes all five thousand lines efficiently.</div>
+        <div class="stills-grid">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0080.jpg" alt="Frame 80" style="max-width: 300px;">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0100.jpg" alt="Frame 100" style="max-width: 300px;">
+        </div>
+    </div>
+
+    <div class="segment">
+        <h4>08c - Unique IPs: Results <span class="status progress">Segmented</span></h4>
+        <p class="path">Frames 140-150 (70.0s - 75.0s) | Duration: 5.0s</p>
+        <div class="narration">Three iterations, under twenty seven seconds. Ten unique I P addresses found, with the top ten ranked by request count.</div>
+        <div class="stills-grid">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0140.jpg" alt="Frame 140" style="max-width: 300px;">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0145.jpg" alt="Frame 145" style="max-width: 300px;">
+        </div>
+    </div>
+
+    <div class="segment">
+        <h4>09a - Percentiles: Select <span class="status progress">Segmented</span></h4>
+        <p class="path">Frames 150-160 (75.0s - 80.0s) | Duration: 5.0s</p>
+        <div class="narration">Demo three, response time percentiles. Two thousand A P I response times. Calculate the p50, p95, and p99 values.</div>
+        <div class="stills-grid">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0150.jpg" alt="Frame 150" style="max-width: 300px;">
+        </div>
+    </div>
+
+    <div class="segment">
+        <h4>09b - Percentiles: Execute <span class="status progress">Segmented</span></h4>
+        <p class="path">Frames 160-200 (80.0s - 100.0s) | Duration: 20.0s</p>
+        <div class="narration">The model writes code to sort all values and index into the list. Native sorting handles two thousand numbers in milliseconds.</div>
+        <div class="stills-grid">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0160.jpg" alt="Frame 160" style="max-width: 300px;">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0180.jpg" alt="Frame 180" style="max-width: 300px;">
+        </div>
+    </div>
+
+    <div class="segment">
+        <h4>09c - Percentiles: Results <span class="status progress">Segmented</span></h4>
+        <p class="path">Frames 200-220 (100.0s - 110.0s) | Duration: 10.0s</p>
+        <div class="narration">Results verified against ground truth. P50 is 49 milliseconds, p95 is 296, and p99 is 588. Three iterations, twenty three seconds.</div>
+        <div class="stills-grid">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0200.jpg" alt="Frame 200" style="max-width: 300px;">
+        </div>
+    </div>
+
+    <div class="segment">
+        <h4>10a - Word Frequency: Select <span class="status progress">Segmented</span></h4>
+        <p class="path">Frames 220-230 (110.0s - 115.0s) | Duration: 5.0s</p>
+        <div class="narration">Demo four, word frequency analysis. A text document to analyze. Find the top ten most common words, excluding common stop words.</div>
+        <div class="stills-grid">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0220.jpg" alt="Frame 220" style="max-width: 300px;">
+        </div>
+    </div>
+
+    <div class="segment">
+        <h4>10b - Word Frequency: Execute <span class="status progress">Segmented</span></h4>
+        <p class="path">Frames 230-280 (115.0s - 140.0s) | Duration: 25.0s</p>
+        <div class="narration">The code tokenizes text, filters stop words, and counts with a hash map. A priority queue extracts the top results.</div>
+        <div class="stills-grid">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0240.jpg" alt="Frame 240" style="max-width: 300px;">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0260.jpg" alt="Frame 260" style="max-width: 300px;">
+        </div>
+    </div>
+
+    <div class="segment">
+        <h4>10c - Word Frequency: Results <span class="status progress">Segmented</span></h4>
+        <p class="path">Frames 280-291 (140.0s - 145.5s) | Duration: 5.5s</p>
+        <div class="narration">Unhappy leads with twenty six occurrences. Fox, not, quick, and times tie at fourteen. Two iterations, twenty three seconds total.</div>
+        <div class="stills-grid">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0280.jpg" alt="Frame 280" style="max-width: 300px;">
+            <img class="still" src="vhs/visualizer-thumbs/frame_0290.jpg" alt="Frame 290" style="max-width: 300px;">
+        </div>
+    </div>
+
+    <h2>Remaining Segments</h2>
 
     <div class="segment">
         <h4>08-comparison - L1 vs L2 vs L3 <span class="status pending">Pending</span></h4>

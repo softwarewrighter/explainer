@@ -1,0 +1,1 @@
+Finally, word frequency analysis. A text document to analyze. Find the top ten most common words, excluding common stop words.

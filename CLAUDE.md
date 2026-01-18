@@ -141,6 +141,59 @@ All clips MUST be 44100Hz stereo before concatenation. Run `normalize-volume.sh`
 
 If clips have mixed audio formats (some 24000Hz mono, some 44100Hz stereo), the concatenated video will have audio issues - some clips will be silent or garbled.
 
+### OBS Recording Workflow - CRITICAL
+
+When processing OBS screen recordings (e.g., visualizer demos):
+
+**1. Extract stills to identify segment boundaries:**
+```bash
+# Extract stills every 0.5 seconds
+ffmpeg -i recording.mp4 -vf "fps=2" stills/frame_%04d.jpg
+
+# Check dimensions - OBS often records at Retina resolution (3024x1862)
+sips -g pixelHeight -g pixelWidth stills/frame_0001.jpg
+```
+
+**2. Create resized thumbnails for analysis (API limit is 2000px):**
+```bash
+sips -Z 1200 frame_0001.jpg --out thumbs/frame_0001.jpg
+```
+
+**3. Extract video segments - MUST SCALE TO 1920x1080:**
+```bash
+# Extract with scaling (OBS recordings are often 3024x1862)
+ffmpeg -y -ss START -i recording.mp4 -t DURATION \
+  -vf "scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2" \
+  -c:v libx264 -crf 18 -an clip.mp4
+```
+
+**4. Adjust video duration to match audio + 0.5s padding:**
+```bash
+# Calculate speed factor: src_duration / target_duration
+# pts_factor = 1 / speed
+ffmpeg -y -i clip.mp4 -i audio.wav \
+  -filter_complex "[0:v]scale=1920:1080:...,setpts=PTS_FACTOR*PTS[v]" \
+  -map "[v]" -map 1:a \
+  -c:v libx264 -crf 18 -c:a aac -b:a 192k \
+  -shortest output.mp4
+```
+
+**5. ALWAYS normalize after creating clips:**
+```bash
+./scripts/normalize-volume.sh clip.mp4
+```
+
+**6. Verify dimensions before concatenation:**
+```bash
+ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 clip.mp4
+# Must output: 1920,1080
+```
+
+**Key errors to avoid:**
+- Forgetting to scale OBS recordings to 1920x1080
+- Using raw video dimensions from Retina displays (3024x1862, etc.)
+- Not running normalize-volume.sh on EVERY clip
+
 ### Common Mistakes to Avoid
 
 1. **Small fonts** - Never below 28px in SVGs
@@ -155,3 +208,5 @@ If clips have mixed audio formats (some 24000Hz mono, some 44100Hz stereo), the 
 10. **Raw ffmpeg concat** - NEVER use `ffmpeg -f concat`, always use `vid-concat`
 11. **Mixed audio formats** - ALL clips must be 44100Hz stereo before concat
 12. **Wrong concat list format** - Use absolute paths, NO `file '...'` prefix
+13. **OBS dimension mismatch** - Always scale OBS recordings to 1920x1080, Retina is 3024x1862
+14. **TTS wording issues** - Avoid "Demo one/two" (sounds like "GIMA"), use "First up", "Next", "Third", "Finally"

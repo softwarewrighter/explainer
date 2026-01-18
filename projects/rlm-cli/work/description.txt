@@ -1,0 +1,23 @@
+Level 3 breaks free from the sandbox. When your data outgrows WebAssembly limits, native Rust CLI tools process thousands of lines without timeouts.
+
+This video demonstrates the Recursive Language Model approach where an LLM generates native code to answer complex queries on large datasets. Watch four CLI demos in action: error ranking, unique IP analysis, response time percentiles, and word frequency analysis.
+
+Paper: https://arxiv.org/abs/2512.24601
+Code: https://github.com/softwarewrighter/rlm-project
+
+Timestamps:
+0:00 - Title
+0:05 - Hook
+0:19 - RLM Paper Overview
+0:35 - Level 3 Introduction
+0:55 - VHS Demo: Error Ranking
+1:28 - Percentiles Intro
+1:47 - VHS Demo: Percentiles
+2:25 - Visualizer Introduction
+2:44 - CLI Demo 1: Error Ranking
+3:17 - CLI Demo 2: Unique IPs
+3:55 - CLI Demo 3: Percentiles
+4:35 - CLI Demo 4: Word Frequency
+5:16 - Call to Action
+
+#RLM #RecursiveLanguageModel #Rust #CLI #LLM #AI #MachineLearning #CodeGeneration #DataAnalysis #NativeCode #WebAssembly #WASM #DeepSeek #LiteLLM #Programming #SoftwareEngineering #DevTools #OpenSource #AITools #TechDemo

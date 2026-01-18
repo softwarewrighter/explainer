@@ -1,0 +1,1 @@
+A hash set collects unique addresses while a counter tracks frequency. The C L I processes all five thousand lines efficiently.

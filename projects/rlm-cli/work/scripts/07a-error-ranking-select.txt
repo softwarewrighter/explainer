@@ -1,0 +1,1 @@
+First up, error ranking. Five thousand log lines to analyze. The query asks to rank error types by frequency.

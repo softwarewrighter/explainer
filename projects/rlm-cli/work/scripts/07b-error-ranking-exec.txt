@@ -1,0 +1,1 @@
+The model generates Rust code with a hash map to count each error type. Native compilation takes just a few seconds.

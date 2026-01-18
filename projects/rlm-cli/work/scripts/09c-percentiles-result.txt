@@ -1,0 +1,1 @@
+Results verified against ground truth. P50 is 49 milliseconds, p95 is 296, and p99 is five eighty eight. Three iterations, twenty three seconds.

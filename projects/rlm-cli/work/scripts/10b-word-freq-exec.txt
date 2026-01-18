@@ -1,0 +1,1 @@
+The code tokenizes text, filters stop words, and counts with a hash map. A priority queue extracts the top results.

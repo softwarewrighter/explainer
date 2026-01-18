@@ -1,0 +1,148 @@
+{
+  "source": "~/Movies/visualizer-cli-demos.mp4",
+  "total_duration": 145.5,
+  "total_frames": 291,
+  "frame_interval": 0.5,
+  "approach": "4 CLI demos segmented into selection, execution, results phases",
+  "segments": [
+    {
+      "id": "06-intro-viz",
+      "type": "svg",
+      "description": "Visualizer intro SVG slide",
+      "svg": "assets/svg/06-intro-viz.svg",
+      "narration": "work/scripts/06-intro-viz.txt"
+    },
+    {
+      "id": "07a-error-ranking-select",
+      "type": "video",
+      "description": "Demo 1: Select Error Ranking",
+      "start_frame": 15,
+      "end_frame": 20,
+      "start_time": 7.5,
+      "end_time": 10.0,
+      "duration": 2.5,
+      "narration": "work/scripts/07a-error-ranking-select.txt"
+    },
+    {
+      "id": "07b-error-ranking-exec",
+      "type": "video",
+      "description": "Demo 1: Execute Error Ranking",
+      "start_frame": 20,
+      "end_frame": 55,
+      "start_time": 10.0,
+      "end_time": 27.5,
+      "duration": 17.5,
+      "narration": "work/scripts/07b-error-ranking-exec.txt"
+    },
+    {
+      "id": "07c-error-ranking-result",
+      "type": "video",
+      "description": "Demo 1: Error Ranking Results",
+      "start_frame": 55,
+      "end_frame": 65,
+      "start_time": 27.5,
+      "end_time": 32.5,
+      "duration": 5.0,
+      "narration": "work/scripts/07c-error-ranking-result.txt"
+    },
+    {
+      "id": "08a-unique-ips-select",
+      "type": "video",
+      "description": "Demo 2: Select Unique IPs",
+      "start_frame": 65,
+      "end_frame": 75,
+      "start_time": 32.5,
+      "end_time": 37.5,
+      "duration": 5.0,
+      "narration": "work/scripts/08a-unique-ips-select.txt"
+    },
+    {
+      "id": "08b-unique-ips-exec",
+      "type": "video",
+      "description": "Demo 2: Execute Unique IPs",
+      "start_frame": 75,
+      "end_frame": 140,
+      "start_time": 37.5,
+      "end_time": 70.0,
+      "duration": 32.5,
+      "narration": "work/scripts/08b-unique-ips-exec.txt"
+    },
+    {
+      "id": "08c-unique-ips-result",
+      "type": "video",
+      "description": "Demo 2: Unique IPs Results",
+      "start_frame": 140,
+      "end_frame": 150,
+      "start_time": 70.0,
+      "end_time": 75.0,
+      "duration": 5.0,
+      "narration": "work/scripts/08c-unique-ips-result.txt"
+    },
+    {
+      "id": "09a-percentiles-select",
+      "type": "video",
+      "description": "Demo 3: Select Response Percentiles",
+      "start_frame": 150,
+      "end_frame": 160,
+      "start_time": 75.0,
+      "end_time": 80.0,
+      "duration": 5.0,
+      "narration": "work/scripts/09a-percentiles-select.txt"
+    },
+    {
+      "id": "09b-percentiles-exec",
+      "type": "video",
+      "description": "Demo 3: Execute Percentiles",
+      "start_frame": 160,
+      "end_frame": 200,
+      "start_time": 80.0,
+      "end_time": 100.0,
+      "duration": 20.0,
+      "narration": "work/scripts/09b-percentiles-exec.txt"
+    },
+    {
+      "id": "09c-percentiles-result",
+      "type": "video",
+      "description": "Demo 3: Percentiles Results",
+      "start_frame": 200,
+      "end_frame": 220,
+      "start_time": 100.0,
+      "end_time": 110.0,
+      "duration": 10.0,
+      "narration": "work/scripts/09c-percentiles-result.txt"
+    },
+    {
+      "id": "10a-word-freq-select",
+      "type": "video",
+      "description": "Demo 4: Select Word Frequency",
+      "start_frame": 220,
+      "end_frame": 230,
+      "start_time": 110.0,
+      "end_time": 115.0,
+      "duration": 5.0,
+      "narration": "work/scripts/10a-word-freq-select.txt"
+    },
+    {
+      "id": "10b-word-freq-exec",
+      "type": "video",
+      "description": "Demo 4: Execute Word Frequency",
+      "start_frame": 230,
+      "end_frame": 280,
+      "start_time": 115.0,
+      "end_time": 140.0,
+      "duration": 25.0,
+      "narration": "work/scripts/10b-word-freq-exec.txt"
+    },
+    {
+      "id": "10c-word-freq-result",
+      "type": "video",
+      "description": "Demo 4: Word Frequency Results",
+      "start_frame": 280,
+      "end_frame": 291,
+      "start_time": 140.0,
+      "end_time": 145.5,
+      "duration": 5.5,
+      "narration": "work/scripts/10c-word-freq-result.txt"
+    }
+  ]
+}
