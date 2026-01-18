@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>RLM CLI Video Preview</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 { color: #bd93f9; border-bottom: 2px solid #bd93f9; padding-bottom: 10px; }
+        h2 { color: #8be9fd; margin-top: 40px; }
+        .final-video {
+            background: linear-gradient(135deg, #1a1a2e, #2d1f3d);
+            border: 2px solid #bd93f9;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .final-video h2 { margin-top: 0; color: #bd93f9; }
+        .final-video video { width: 100%; max-width: 960px; }
+        .segment {
+            border-left: 3px solid #bd93f9;
+            padding-left: 15px;
+            margin: 20px 0;
+            background: #2a2a4e;
+            padding: 15px;
+            border-radius: 0 10px 10px 0;
+        }
+        .segment h4 { color: #50fa7b; margin: 0 0 10px 0; }
+        .status {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .done { background: #50fa7b; color: #000; }
+        .pending { background: #555; color: #fff; }
+        .progress { background: #ffb86c; color: #000; }
+        video { max-width: 100%; border-radius: 5px; background: #000; }
+        .path {
+            font-family: monospace;
+            font-size: 11px;
+            color: #666;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #333; }
+        th { color: #bd93f9; }
+        .narration {
+            font-style: italic;
+            color: #aaa;
+            font-size: 14px;
+            background: #111;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .duration { color: #50fa7b; font-weight: bold; }
+        .waiting { color: #6272a4; font-style: italic; }
+    </style>
+</head>
+<body>
+    <h1>RLM CLI Explainer - Video Preview</h1>
+    <p>Level 3 native execution - Rust CLI tools without sandboxing.</p>
+
+    <div class="final-video">
+        <h2>Final Assembled Video</h2>
+        <p class="waiting">Waiting for assets and recordings...</p>
+    </div>
+
+    <h2>Production Status</h2>
+    <table>
+        <tr><th>Phase</th><th>Status</th><th>Items</th></tr>
+        <tr><td>Title Card</td><td><span class="status pending">Pending</span></td><td>Waiting for image</td></tr>
+        <tr><td>Hook</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
+        <tr><td>L3 Intro</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
+        <tr><td>L3 Demo</td><td><span class="status pending">Pending</span></td><td>VHS recording needed</td></tr>
+        <tr><td>Visualizer Intro</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
+        <tr><td>Visualizer Demo</td><td><span class="status pending">Pending</span></td><td>OBS recording needed</td></tr>
+        <tr><td>Comparison</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
+        <tr><td>CTA</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
+        <tr><td>Epilog</td><td><span class="status done">Done</span></td><td>Standard epilog available</td></tr>
+    </table>
+
+    <h2>Video Segments</h2>
+
+    <div class="segment">
+        <h4>00-title - Title Card <span class="status pending">Pending</span></h4>
+        <p class="path">assets/images/rlm-cli.jpg</p>
+        <p class="waiting">Waiting for title image...</p>
+    </div>
+
+    <div class="segment">
+        <h4>01-hook - Hook with Avatar <span class="status pending">Pending</span></h4>
+        <p class="path">clips/01-hook-composited.mp4</p>
+        <p class="waiting">Waiting for SVG and narration...</p>
+    </div>
+
+    <div class="segment">
+        <h4>02-intro - L3 Overview <span class="status pending">Pending</span></h4>
+        <p class="path">clips/02-intro.mp4</p>
+        <p class="waiting">Waiting for SVG and narration...</p>
+    </div>
+
+    <div class="segment">
+        <h4>03-demo-cli - L3 Script Demos <span class="status pending">Pending</span></h4>
+        <p class="path">vhs/demo/</p>
+        <p class="waiting">Waiting for VHS recording...</p>
+    </div>
+
+    <div class="segment">
+        <h4>04-intro-viz - Visualizer Intro <span class="status pending">Pending</span></h4>
+        <p class="path">clips/04-intro-viz.mp4</p>
+        <p class="waiting">Waiting for SVG and narration...</p>
+    </div>
+
+    <div class="segment">
+        <h4>05-demo-viz - Visualizer Demos <span class="status pending">Pending</span></h4>
+        <p class="path">obs/visualizer/</p>
+        <p class="waiting">Waiting for OBS recording...</p>
+    </div>
+
+    <div class="segment">
+        <h4>06-comparison - L1 vs L2 vs L3 <span class="status pending">Pending</span></h4>
+        <p class="path">clips/06-comparison.mp4</p>
+        <p class="waiting">Waiting for SVG and narration...</p>
+    </div>
+
+    <div class="segment">
+        <h4>99-cta - Call to Action <span class="status pending">Pending</span></h4>
+        <p class="path">clips/99-cta-composited.mp4</p>
+        <p class="waiting">Waiting for SVG and narration...</p>
+    </div>
+
+    <div class="segment">
+        <h4>99b-epilog - Standard Epilog <span class="status done">12.80s</span></h4>
+        <p class="path">../video-publishing/reference/epilog/99b-epilog.mp4</p>
+        <p>Standard epilog with embedded narration</p>
+    </div>
+
+    <script>
+        const ts = Date.now();
+        document.querySelectorAll('video source').forEach(source => {
+            const src = source.getAttribute('src');
+            if (src) {
+                source.setAttribute('src', src.replace(/\?ts=\d+/, '') + '?ts=' + ts);
+                source.parentElement.load();
+            }
+        });
+        console.log('Preview page loaded with cache-bust ts=' + ts);
+    </script>
+</body>
+</html>
