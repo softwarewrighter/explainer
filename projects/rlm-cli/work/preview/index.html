@@ -48,6 +48,7 @@
         .pending { background: #555; color: #fff; }
         .progress { background: #ffb86c; color: #000; }
         video { max-width: 100%; border-radius: 5px; background: #000; }
+        img.preview { max-width: 400px; border-radius: 5px; }
         .path {
             font-family: monospace;
             font-size: 11px;
@@ -65,6 +66,7 @@
             border-radius: 5px;
             margin-top: 10px;
         }
+        .music { color: #ff79c6; }
         .duration { color: #50fa7b; font-weight: bold; }
         .waiting { color: #6272a4; font-style: italic; }
     </style>
@@ -75,13 +77,14 @@
 
     <div class="final-video">
         <h2>Final Assembled Video</h2>
-        <p class="waiting">Waiting for assets and recordings...</p>
+        <p class="waiting">In progress - title clip ready, awaiting other segments...</p>
+        <video controls><source src="clips/00-title.mp4" type="video/mp4"></video>
     </div>
 
     <h2>Production Status</h2>
     <table>
         <tr><th>Phase</th><th>Status</th><th>Items</th></tr>
-        <tr><td>Title Card</td><td><span class="status pending">Pending</span></td><td>Waiting for image</td></tr>
+        <tr><td>Title Card</td><td><span class="status done">Done</span></td><td>5s with music</td></tr>
         <tr><td>Hook</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
         <tr><td>L3 Intro</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
         <tr><td>L3 Demo</td><td><span class="status pending">Pending</span></td><td>VHS recording needed</td></tr>
@@ -89,15 +92,19 @@
         <tr><td>Visualizer Demo</td><td><span class="status pending">Pending</span></td><td>OBS recording needed</td></tr>
         <tr><td>Comparison</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
         <tr><td>CTA</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
-        <tr><td>Epilog</td><td><span class="status done">Done</span></td><td>Standard epilog available</td></tr>
+        <tr><td>Epilog</td><td><span class="status done">Done</span></td><td>12.8s standard epilog</td></tr>
+        <tr><td>Epilog Extension</td><td><span class="status done">Done</span></td><td>5s music outro</td></tr>
     </table>
 
     <h2>Video Segments</h2>
 
     <div class="segment">
-        <h4>00-title - Title Card <span class="status pending">Pending</span></h4>
-        <p class="path">assets/images/rlm-cli.jpg</p>
-        <p class="waiting">Waiting for title image...</p>
+        <h4>00-title - Title Card <span class="status done">5.00s</span></h4>
+        <p class="path">clips/00-title.mp4</p>
+        <video controls><source src="clips/00-title.mp4" type="video/mp4"></video>
+        <div class="narration music">Music: Two Gong Fire - Ryan McCaffrey / Go By Ocean</div>
+        <p>Title image:</p>
+        <img class="preview" src="images/rlm-rust-cli.jpg" alt="RLM CLI Title">
     </div>
 
     <div class="segment">
@@ -144,8 +151,16 @@
 
     <div class="segment">
         <h4>99b-epilog - Standard Epilog <span class="status done">12.80s</span></h4>
-        <p class="path">../video-publishing/reference/epilog/99b-epilog.mp4</p>
-        <p>Standard epilog with embedded narration</p>
+        <p class="path">clips/99b-epilog.mp4</p>
+        <video controls><source src="clips/99b-epilog.mp4" type="video/mp4"></video>
+        <div class="narration">Standard epilog with embedded narration</div>
+    </div>
+
+    <div class="segment">
+        <h4>99c-epilog-ext - Music Outro <span class="status done">5.00s</span></h4>
+        <p class="path">clips/99c-epilog-ext.mp4</p>
+        <video controls><source src="clips/99c-epilog-ext.mp4" type="video/mp4"></video>
+        <div class="narration music">Music: Two Gong Fire - Ryan McCaffrey / Go By Ocean (3s fade out)</div>
     </div>
 
     <script>
