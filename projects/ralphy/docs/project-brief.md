@@ -27,4 +27,27 @@ This is video 3 of a 4-part RLM series:
 - [ ] Demo recordings of Ralphy running
 
 ## Duration Target
-TBD
+~3:30 (208 seconds)
+
+## SVG Design Requirements
+
+All SVG slides must follow the font size guidelines in `/docs/svg-design-guidelines.md`.
+
+### Minimum Font Sizes
+- **All text: 28px minimum** (never smaller)
+- Body text: 28-32px
+- Monospace/URLs: 28-32px
+- Headlines: 84-96px
+- Stroke widths: 4-5px for visibility
+
+### Example
+```svg
+<!-- Correct -->
+<text font-size="28" fill="#50fa7b">github.com/michaelshimeles/ralphy</text>
+<text font-size="32" fill="#8be9fd">Demo Examples</text>
+<rect stroke-width="5" ... />
+
+<!-- Wrong - too small -->
+<text font-size="22" fill="#8be9fd">Label</text>
+<text font-size="24" fill="#50fa7b">github.com/repo</text>
+```

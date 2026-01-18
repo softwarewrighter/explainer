@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Ralphy Video Preview</title>
     <style>
         * { box-sizing: border-box; }
@@ -72,9 +75,9 @@
 
     <div class="final-video">
         <h2>Final Assembled Video</h2>
-        <p class="path">clips/preview.mp4</p>
-        <p><span class="duration">Duration: ~194s (bookends + hook + intros + 2 demos)</span> | 1920x1080</p>
-        <video controls><source src="clips/00-title.mp4" type="video/mp4"></video>
+        <p class="path">ralphy-final.mp4</p>
+        <p><span class="duration">Duration: 3:28 (208.66s)</span> | 1920x1080 | 30fps | AAC stereo 44100Hz</p>
+        <video controls><source src="ralphy-final.mp4?ts=1768685078000" type="video/mp4"></video>
     </div>
 
     <h2>Production Status</h2>
@@ -86,6 +89,7 @@
         <tr><td>Sequential Demo</td><td><span class="status done">Done</span></td><td>5 narrated clips (59s)</td></tr>
         <tr><td>Parallel Intro</td><td><span class="status done">Done</span></td><td>15s SVG diagram + narration</td></tr>
         <tr><td>Parallel Demo</td><td><span class="status done">Done</span></td><td>5 narrated clips (67.5s)</td></tr>
+        <tr><td>CTA</td><td><span class="status done">Done</span></td><td>15s avatar + repo links</td></tr>
         <tr><td>Epilog</td><td><span class="status done">Done</span></td><td>Standard epilog + extension</td></tr>
     </table>
 
@@ -94,28 +98,28 @@
     <div class="segment">
         <h4>00-title - Title Card <span class="status done">5.00s</span></h4>
         <p class="path">clips/00-title.mp4</p>
-        <video controls><source src="clips/00-title.mp4" type="video/mp4"></video>
+        <video controls><source src="clips/00-title.mp4?ts=1768685078000" type="video/mp4"></video>
         <div class="narration music">Music: The Creepy Clown - Jeremy Korpas (intro)</div>
     </div>
 
     <div class="segment">
         <h4>01-hook - Hook with Avatar <span class="status done">14.63s</span></h4>
         <p class="path">clips/01-hook-composited.mp4</p>
-        <video controls><source src="clips/01-hook-composited.mp4" type="video/mp4"></video>
+        <video controls><source src="clips/01-hook-composited.mp4?ts=1768685078000" type="video/mp4"></video>
         <div class="narration">What if you had a developer who could work through your task list while you sleep. Write code, run tests, commit changes, all automatically. That's Ralphy, an autonomous task runner powered by Claude Code.</div>
     </div>
 
     <div class="segment">
         <h4>02-intro-sequential - Ralphy Overview <span class="status done">15.40s</span></h4>
         <p class="path">clips/01-intro-sequential.mp4</p>
-        <video controls><source src="clips/01-intro-sequential.mp4" type="video/mp4"></video>
+        <video controls><source src="clips/01-intro-sequential.mp4?ts=1768685078000" type="video/mp4"></video>
         <div class="narration">Ralphy reads a task list and uses Claude Code to implement each one. It writes code, runs tests, and commits changes automatically. Let's try the Ralphy script on sequential tasks first.</div>
     </div>
 
     <div class="segment">
         <h4>02-sequential-demo - Full Narrated Recording <span class="status done">59.09s</span></h4>
         <p class="path">vhs/demo/ralphy-demo-narrated.mp4</p>
-        <video controls><source src="vhs/demo/ralphy-demo-narrated.mp4" type="video/mp4"></video>
+        <video controls><source src="vhs/demo/ralphy-demo-narrated.mp4?ts=1768685078000" type="video/mp4"></video>
         <div class="narration">
             <strong>PRD:</strong> Ralphy reads a product requirements document with five tasks. Each task describes a feature to implement in a simple node project.<br>
             <strong>Startup:</strong> Ralphy uses Claude Code as its engine. Task one creates the project files, writes tests, and verifies everything passes before committing.<br>
@@ -128,14 +132,14 @@
     <div class="segment">
         <h4>03-intro-parallel - Parallel Mode Introduction <span class="status done">14.73s</span></h4>
         <p class="path">clips/03-intro-parallel.mp4</p>
-        <video controls><source src="clips/03-intro-parallel.mp4" type="video/mp4"></video>
+        <video controls><source src="clips/03-intro-parallel.mp4?ts=1768685078000" type="video/mp4"></video>
         <div class="narration">Ralphy can also run tasks in parallel. Independent tasks get their own git branch and worktree, so multiple agents work simultaneously without file conflicts. This speeds up large projects significantly.</div>
     </div>
 
     <div class="segment">
         <h4>04-parallel-demo - Full Narrated Recording <span class="status done">67.52s</span></h4>
         <p class="path">vhs/parallel/parallel-demo-narrated.mp4</p>
-        <video controls><source src="vhs/parallel/parallel-demo-narrated.mp4" type="video/mp4"></video>
+        <video controls><source src="vhs/parallel/parallel-demo-narrated.mp4?ts=1768685078000" type="video/mp4"></video>
         <div class="narration">
             <strong>YAML:</strong> Tasks are defined in a yaml file with parallel group markers. Group one has three independent modules. Group two has the integration step that runs after.<br>
             <strong>Startup:</strong> Ralphy starts in parallel mode with three agents. Each agent gets its own git branch and worktree, so they can work on different files without conflicts.<br>
@@ -146,21 +150,37 @@
     </div>
 
     <div class="segment">
+        <h4>99-cta - Call to Action with Avatar <span class="status done">14.40s</span></h4>
+        <p class="path">clips/99-cta-composited.mp4</p>
+        <video controls><source src="clips/99-cta-composited.mp4?ts=1768685078000" type="video/mp4"></video>
+        <div class="narration">Try Ralphy for your next project. Define your tasks in a simple file, run the script, and let Claude Code handle the rest. Links to the code and this video series are in the description.</div>
+    </div>
+
+    <div class="segment">
         <h4>99b-epilog - Standard Epilog <span class="status done">12.80s</span></h4>
         <p class="path">clips/99b-epilog.mp4 (global reference)</p>
-        <video controls><source src="clips/99b-epilog.mp4" type="video/mp4"></video>
+        <video controls><source src="clips/99b-epilog.mp4?ts=1768685078000" type="video/mp4"></video>
         <div class="narration music">Standard epilog with embedded narration</div>
     </div>
 
     <div class="segment">
         <h4>99c-epilog-ext - Music Outro <span class="status done">5.00s</span></h4>
         <p class="path">clips/99c-epilog-ext.mp4</p>
-        <video controls><source src="clips/99c-epilog-ext.mp4" type="video/mp4"></video>
+        <video controls><source src="clips/99c-epilog-ext.mp4?ts=1768685078000" type="video/mp4"></video>
         <div class="narration music">Music: The Creepy Clown - Jeremy Korpas (outro, 3s fade)</div>
     </div>
 
     <script>
-        console.log('Preview page loaded. Refresh to see updates.');
+        // Cache-bust all video sources on page load
+        const ts = Date.now();
+        document.querySelectorAll('video source').forEach(source => {
+            const src = source.getAttribute('src');
+            if (src) {
+                source.setAttribute('src', src.replace(/\?ts=1768685078000\d+/, '') + '?ts=1768685078000' + ts);
+                source.parentElement.load();
+            }
+        });
+        console.log('Preview page loaded with cache-bust ts=' + ts);
     </script>
 </body>
 </html>

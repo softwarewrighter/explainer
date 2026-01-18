@@ -17,7 +17,7 @@
   <rect width="1920" height="1080" fill="url(#bgGrad)"/>
 
   <!-- Decorative code lines faded in background -->
-  <g opacity="0.08" font-family="Monaco, monospace" font-size="14" fill="#50fa7b">
+  <g opacity="0.08" font-family="Monaco, monospace" font-size="16" fill="#50fa7b">
     <text x="100" y="120">tasks:</text>
     <text x="100" y="150">  - title: "Implement user authentication"</text>
     <text x="100" y="180">    completed: false</text>
@@ -30,55 +30,55 @@
   </g>
 
   <!-- Main title -->
-  <text x="960" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="84" fill="#ff6b6b" font-weight="bold" filter="url(#glow)">
+  <text x="960" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="96" fill="#ff6b6b" font-weight="bold" filter="url(#glow)">
     Ralphy
   </text>
 
   <!-- Subtitle -->
-  <text x="960" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#ffffff">
+  <text x="960" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" fill="#ffffff">
     Autonomous Development While You Sleep
   </text>
 
   <!-- Feature icons/boxes -->
-  <g transform="translate(960, 600)">
+  <g transform="translate(960, 580)">
     <!-- Task List -->
-    <g transform="translate(-450, 0)">
-      <rect x="-120" y="-70" width="240" height="140" fill="#44475a" rx="15" stroke="#50fa7b" stroke-width="3"/>
-      <text x="0" y="-25" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#50fa7b">📋</text>
-      <text x="0" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2" font-weight="bold">Task List</text>
-      <text x="0" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#8be9fd">YAML defined</text>
+    <g transform="translate(-480, 0)">
+      <rect x="-150" y="-90" width="300" height="180" fill="#44475a" rx="20" stroke="#50fa7b" stroke-width="5"/>
+      <text x="0" y="-35" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" fill="#50fa7b">📋</text>
+      <text x="0" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#f8f8f2" font-weight="bold">Task List</text>
+      <text x="0" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#8be9fd">YAML defined</text>
     </g>
 
     <!-- Arrow -->
-    <polygon points="-180,0 -140,-20 -140,20" fill="#8be9fd"/>
+    <polygon points="-200,0 -150,-30 -150,30" fill="#8be9fd"/>
 
     <!-- Claude Code -->
     <g transform="translate(0, 0)">
-      <rect x="-120" y="-70" width="240" height="140" fill="#44475a" rx="15" stroke="#ff79c6" stroke-width="3"/>
-      <text x="0" y="-25" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#ff79c6">🤖</text>
-      <text x="0" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2" font-weight="bold">Claude Code</text>
-      <text x="0" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#8be9fd">AI powered</text>
+      <rect x="-150" y="-90" width="300" height="180" fill="#44475a" rx="20" stroke="#ff79c6" stroke-width="5"/>
+      <text x="0" y="-35" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" fill="#ff79c6">🤖</text>
+      <text x="0" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#f8f8f2" font-weight="bold">Claude Code</text>
+      <text x="0" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#8be9fd">AI powered</text>
     </g>
 
     <!-- Arrow -->
-    <polygon points="180,0 140,-20 140,20" fill="#8be9fd"/>
+    <polygon points="200,0 150,-30 150,30" fill="#8be9fd"/>
 
     <!-- Git Commits -->
-    <g transform="translate(450, 0)">
-      <rect x="-120" y="-70" width="240" height="140" fill="#44475a" rx="15" stroke="#ffb86c" stroke-width="3"/>
-      <text x="0" y="-25" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#ffb86c">✅</text>
-      <text x="0" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#f8f8f2" font-weight="bold">Done</text>
-      <text x="0" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#8be9fd">Code + Tests + Commits</text>
+    <g transform="translate(480, 0)">
+      <rect x="-150" y="-90" width="300" height="180" fill="#44475a" rx="20" stroke="#ffb86c" stroke-width="5"/>
+      <text x="0" y="-35" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" fill="#ffb86c">✅</text>
+      <text x="0" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#f8f8f2" font-weight="bold">Done</text>
+      <text x="0" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#8be9fd">Code + Tests</text>
     </g>
   </g>
 
   <!-- Bottom tagline -->
-  <text x="960" y="820" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#6272a4">
+  <text x="960" y="820" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#6272a4">
     Define tasks. Run Ralphy. Wake up to working code.
   </text>
 
   <!-- Part of RLM series -->
-  <text x="960" y="920" text-anchor="middle" font-family="Monaco, monospace" font-size="24" fill="#ff6b6b">
+  <text x="960" y="920" text-anchor="middle" font-family="Monaco, monospace" font-size="28" fill="#ff6b6b">
     Part of the RLM Series
   </text>
 </svg>

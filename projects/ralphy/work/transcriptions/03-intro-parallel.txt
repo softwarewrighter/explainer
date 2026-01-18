@@ -1,0 +1,2 @@
+
+ Ralphie can also run tasks in parallel. Independent tasks get their own Git branch in work tree. So multiple agents work simultaneously without file conflicts. This speeds up large projects significantly.

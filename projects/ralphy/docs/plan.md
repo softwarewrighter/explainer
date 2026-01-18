@@ -89,7 +89,11 @@ Per docs/tts-narration-guidelines.md:
 - Spell acronyms: "Ralphy" is fine, but "CLI" -> "C L I"
 - Numbers spelled out: "60" -> "sixty"
 - Only periods and commas
-- Verify with whisper-cli
+- Verify with whisper-cli:
+  ```bash
+  ffmpeg -y -i clip.mp4 -ar 16000 -ac 1 -c:a pcm_s16le /tmp/audio.wav
+  whisper-cli -m ~/.whisper-models/ggml-base.en.bin -f /tmp/audio.wav -nt
+  ```
 
 ## File Structure
 

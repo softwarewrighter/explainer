@@ -1,0 +1,21 @@
+Parallel AI Coding with Git Worktrees
+
+What if you had a developer who could work through your task list while you sleep? Ralphy is an autonomous task runner powered by Claude Code that writes code, runs tests, and commits changes automatically.
+
+This video demonstrates two execution modes:
+
+SEQUENTIAL MODE
+Define tasks in a PRD or YAML file. Ralphy processes each task one by one, writing code, creating tests, running linting, and committing changes. Five tasks completed for under 30 cents.
+
+PARALLEL MODE
+Independent tasks get their own git branch and worktree. Multiple Claude Code agents work simultaneously without file conflicts. When all parallel tasks complete, Ralphy merges branches back to main. This dramatically speeds up large projects.
+
+The secret sauce: git worktrees let each agent have its own working directory on a separate branch, so there's no stepping on each other's files.
+
+Links:
+- Ralphy Project: https://github.com/michaelshimeles/ralphy
+- Demo Examples: https://github.com/softwarewrighter/try-ralphy
+- The Ralph Wiggum Technique (What if Your AI Never Gave Up?): https://www.youtube.com/watch?v=grTC-Zj0LC4
+- Explainer Videos Playlist: https://www.youtube.com/playlist?list=PLKjvVAEaR4is_EsLAltWEAuJ1JaKG6unB
+
+#ClaudeCode #Ralphy #Ralph #VibeCoding #AI #Coding #GitWorktrees #Automation #DevTools #AIAgent #ParallelProcessing #Anthropic

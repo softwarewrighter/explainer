@@ -1,0 +1,2 @@
+
+ Ralphie reads a task list and uses Cloud code to implement each one. It writes code, runs tests, and commits changes automatically. Let's try the Ralphie script on sequential tasks first.

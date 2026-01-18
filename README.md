@@ -101,8 +101,23 @@ This project uses Rust CLI tools from `../video-publishing/tools/`:
 | vid-composite | Overlay avatar on content |
 | vid-concat | Concatenate segments |
 | vid-review | Preview composited segments |
+| whisper-cli | Verify TTS transcription accuracy |
 
 See `docs/tools.md` for detailed usage.
+
+### Audio Verification
+
+Verify TTS output with whisper transcription before final assembly:
+
+```bash
+# Extract audio and transcribe
+ffmpeg -y -i clip.mp4 -ar 16000 -ac 1 -c:a pcm_s16le /tmp/audio.wav
+whisper-cli -m ~/.whisper-models/ggml-base.en.bin -f /tmp/audio.wav -nt
+```
+
+**Models (pre-installed):**
+- `~/.whisper-models/ggml-base.en.bin` - Fast (148MB)
+- `~/.local/share/whisper-cpp/models/ggml-medium.en.bin` - Accurate (1.5GB)
 
 ## TTS Voice Guidelines
 
@@ -120,6 +135,34 @@ Large language models have a problem. They can only think about so much text at 
 # Avoid
 Large language models have a problem: they can only think about so much text at once!
 ```
+
+## SVG Design Guidelines
+
+**CRITICAL: All SVG text must be readable on video.**
+
+### Minimum Font Sizes
+
+| Element | Minimum Size |
+|---------|--------------|
+| All text | **28px** |
+| Body/labels | 28-32px |
+| Monospace/URLs | 28-32px |
+| Subtitles | 36-42px |
+| Headlines | 84-96px |
+
+**Never use fonts smaller than 28px in any SVG slide.**
+
+```svg
+<!-- Good -->
+<text font-size="28">github.com/user/repo</text>
+<text font-size="32">Label Text</text>
+
+<!-- Bad - too small, illegible on video -->
+<text font-size="22">Label</text>
+<text font-size="24">github.com/repo</text>
+```
+
+See `docs/svg-design-guidelines.md` for complete guidelines.
 
 ## Just Commands
 
