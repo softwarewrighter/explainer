@@ -47,8 +47,11 @@
         .done { background: #50fa7b; color: #000; }
         .pending { background: #555; color: #fff; }
         .progress { background: #ffb86c; color: #000; }
+        .error { background: #ff5555; color: #fff; }
         video { max-width: 100%; border-radius: 5px; background: #000; }
+        audio { width: 100%; margin-top: 10px; }
         img.preview { max-width: 400px; border-radius: 5px; }
+        img.still { max-width: 600px; border-radius: 5px; margin: 5px; }
         .path {
             font-family: monospace;
             font-size: 11px;
@@ -69,6 +72,8 @@
         .music { color: #ff79c6; }
         .duration { color: #50fa7b; font-weight: bold; }
         .waiting { color: #6272a4; font-style: italic; }
+        .warning { color: #ffb86c; background: #3d2a1a; padding: 10px; border-radius: 5px; margin: 10px 0; }
+        .stills-grid { display: flex; flex-wrap: wrap; gap: 10px; margin: 15px 0; }
     </style>
 </head>
 <body>
@@ -77,7 +82,7 @@
 
     <div class="final-video">
         <h2>Final Assembled Video</h2>
-        <p class="waiting">In progress - title clip ready, awaiting other segments...</p>
+        <p class="waiting">In progress - title (5s), intro (19.9s), and L3 demo narrated clips (33s) ready. Total: ~58s. Visualizer demo and remaining SVGs pending.</p>
         <video controls><source src="clips/00-title.mp4" type="video/mp4"></video>
     </div>
 
@@ -86,8 +91,8 @@
         <tr><th>Phase</th><th>Status</th><th>Items</th></tr>
         <tr><td>Title Card</td><td><span class="status done">Done</span></td><td>5s with music</td></tr>
         <tr><td>Hook</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
-        <tr><td>L3 Intro</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
-        <tr><td>L3 Demo</td><td><span class="status pending">Pending</span></td><td>VHS recording needed</td></tr>
+        <tr><td>L3 Intro</td><td><span class="status done">Done</span></td><td>19.9s SVG + narration</td></tr>
+        <tr><td>L3 Demo</td><td><span class="status done">Done</span></td><td>3 narrated clips (33s total)</td></tr>
         <tr><td>Visualizer Intro</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
         <tr><td>Visualizer Demo</td><td><span class="status pending">Pending</span></td><td>OBS recording needed</td></tr>
         <tr><td>Comparison</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
@@ -114,15 +119,48 @@
     </div>
 
     <div class="segment">
-        <h4>02-intro - L3 Overview <span class="status pending">Pending</span></h4>
-        <p class="path">clips/02-intro.mp4</p>
-        <p class="waiting">Waiting for SVG and narration...</p>
+        <h4>02-intro-l3 - L3 Overview <span class="status done">19.90s</span></h4>
+        <p class="path">clips/02-intro-l3.mp4</p>
+        <video controls><source src="clips/02-intro-l3.mp4" type="video/mp4"></video>
+        <div class="narration">Level three uses native Rust binaries for tasks that need more power. When datasets grow beyond a thousand lines, the web assembly sandbox can time out. Level three compiles and runs real code with no fuel limits.</div>
+        <p>SVG slide:</p>
+        <img class="preview" src="svg/02-intro-l3.svg" alt="L3 Intro SVG">
+        <p>Audio:</p>
+        <audio controls><source src="audio/02-intro-l3.wav" type="audio/wav"></audio>
     </div>
 
     <div class="segment">
-        <h4>03-demo-cli - L3 Script Demos <span class="status pending">Pending</span></h4>
-        <p class="path">vhs/demo/</p>
-        <p class="waiting">Waiting for VHS recording...</p>
+        <h4>03-demo-cli - L3 Script Demo <span class="status done">32.96s (3 clips)</span></h4>
+        <p>L1+L3 hybrid approach: L1 DSL filtered 5000 lines to ~715 ERROR lines, L3 CLI counted and ranked error types with HashMap. 96% token savings.</p>
+
+        <h5 style="color: #ff79c6; margin-top: 20px;">03a - Demo Setup (11.2s)</h5>
+        <p class="path">clips/03a-demo-setup.mp4</p>
+        <div class="narration">The demo loads five thousand log lines. L1 filters to just the error entries, reducing the dataset to seven hundred lines.</div>
+        <p>Audio:</p>
+        <audio controls><source src="audio/03a-demo-setup.wav" type="audio/wav"></audio>
+        <p>Video with narration:</p>
+        <video controls><source src="clips/03a-demo-setup.mp4" type="video/mp4"></video>
+
+        <h5 style="color: #ff79c6; margin-top: 20px;">03b - Demo Processing (10.9s)</h5>
+        <p class="path">clips/03b-demo-processing.mp4</p>
+        <div class="narration">The model generates Rust code using a hash map. The compiled binary processes all error lines in milliseconds.</div>
+        <p>Audio:</p>
+        <audio controls><source src="audio/03b-demo-processing.wav" type="audio/wav"></audio>
+        <p>Video with narration:</p>
+        <video controls><source src="clips/03b-demo-processing.mp4" type="video/mp4"></video>
+
+        <h5 style="color: #ff79c6; margin-top: 20px;">03c - Demo Results (10.8s)</h5>
+        <p class="path">clips/03c-demo-results.mp4</p>
+        <div class="narration">Results show error types ranked by frequency. Two iterations, ninety six percent token savings compared to sending all lines directly.</div>
+        <p>Audio:</p>
+        <audio controls><source src="audio/03c-demo-results.wav" type="audio/wav"></audio>
+        <p>Video with narration:</p>
+        <video controls><source src="clips/03c-demo-results.mp4" type="video/mp4"></video>
+
+        <h5 style="color: #6272a4; margin-top: 20px;">Full Recording (reference)</h5>
+        <p class="path">vhs/l3-error-ranking.mp4 (86.04s)</p>
+        <video controls style="max-width: 600px;"><source src="vhs/l3-error-ranking.mp4" type="video/mp4"></video>
+        <p class="path">172 stills extracted to vhs/stills/</p>
     </div>
 
     <div class="segment">
@@ -165,7 +203,7 @@
 
     <script>
         const ts = Date.now();
-        document.querySelectorAll('video source').forEach(source => {
+        document.querySelectorAll('video source, audio source').forEach(source => {
             const src = source.getAttribute('src');
             if (src) {
                 source.setAttribute('src', src.replace(/\?ts=\d+/, '') + '?ts=' + ts);

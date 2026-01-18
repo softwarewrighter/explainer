@@ -1,0 +1,1 @@
+Results show error types ranked by frequency. Two iterations, ninety six percent token savings compared to sending all lines directly.

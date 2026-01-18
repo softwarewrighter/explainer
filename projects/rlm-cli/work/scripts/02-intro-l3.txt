@@ -1,0 +1,1 @@
+Level three uses native Rust binaries for tasks that need more power. When datasets grow beyond a thousand lines, the web assembly sandbox can time out. Level three compiles and runs real code with no fuel limits.

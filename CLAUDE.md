@@ -104,6 +104,19 @@ whisper-cli -m ~/.local/share/whisper-cpp/models/ggml-medium.en.bin -f /tmp/audi
 - "Claude Code" often transcribed as "Cloud Code"
 - Technical terms may vary slightly
 
+### VHS Terminal Recordings
+
+When recording terminal demos with VHS that require environment variables (e.g., LiteLLM API keys):
+
+**Environment Variable Pattern:**
+```
+Type "export $(cat ~/.env | grep -v '^#' | xargs) && ./your-script.sh"
+```
+
+This reliably exports variables from `~/.env` (e.g., `LITELLM_MASTER_KEY`, `LITELLM_HOST`).
+
+**Important:** `source ~/.env` does not work reliably in VHS recordings. Always use the export pattern above.
+
 ### Common Mistakes to Avoid
 
 1. **Small fonts** - Never below 28px in SVGs
@@ -114,3 +127,4 @@ whisper-cli -m ~/.local/share/whisper-cpp/models/ggml-medium.en.bin -f /tmp/audi
 6. **Missing audio normalization** - Always run normalize-volume.sh
 7. **Forgetting avatar overlay area** - Keep bottom-right clear
 8. **Skipping whisper verification** - Always verify TTS before final assembly
+9. **VHS env vars** - Use `export $(cat ~/.env | ...)` pattern, not `source ~/.env`

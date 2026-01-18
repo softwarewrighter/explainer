@@ -45,6 +45,12 @@ All SVG slides must follow the font size guidelines in `/docs/svg-design-guideli
 ### VHS Recordings (terminal demos)
 - L3 script execution demos
 - Can be automated with VHS tape files
+- **Environment variables**: Use this pattern to load env vars in VHS:
+  ```
+  Type "export $(cat ~/.env | grep -v '^#' | xargs) && ./your-script.sh"
+  ```
+  This reliably exports variables from `~/.env` (e.g., `LITELLM_MASTER_KEY`) for LiteLLM API access.
+  Note: `source ~/.env` does not work reliably in VHS recordings.
 
 ### OBS Recordings (visualizer)
 - Visualizer requires OBS for GUI capture
