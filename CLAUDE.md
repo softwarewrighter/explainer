@@ -117,6 +117,30 @@ This reliably exports variables from `~/.env` (e.g., `LITELLM_MASTER_KEY`, `LITE
 
 **Important:** `source ~/.env` does not work reliably in VHS recordings. Always use the export pattern above.
 
+### Video Concatenation - CRITICAL
+
+**NEVER use raw ffmpeg for concatenation.** Always use `vid-concat`:
+
+```bash
+# Create concat list (absolute paths, one per line, NO "file '...'" prefix)
+/full/path/to/clips/00-title.mp4
+/full/path/to/clips/01-hook-composited.mp4
+...
+
+# Concatenate with vid-concat
+$VID_CONCAT --list clips/concat-list.txt --output preview.mp4 --reencode
+```
+
+**Audio Format Requirements:**
+All clips MUST be 44100Hz stereo before concatenation. Run `normalize-volume.sh` on EVERY clip:
+
+```bash
+./scripts/normalize-volume.sh work/clips/02-intro.mp4
+# Output: "02-intro.mp4  FORMAT FIXED: 24000 Hz 1 ch -> 44100 Hz stereo"
+```
+
+If clips have mixed audio formats (some 24000Hz mono, some 44100Hz stereo), the concatenated video will have audio issues - some clips will be silent or garbled.
+
 ### Common Mistakes to Avoid
 
 1. **Small fonts** - Never below 28px in SVGs
@@ -124,7 +148,10 @@ This reliably exports variables from `~/.env` (e.g., `LITELLM_MASTER_KEY`, `LITE
 3. **Thin strokes** - Use stroke-width 4-5px for visibility
 4. **Wrong TTS punctuation** - Periods and commas only
 5. **Long narration** - Keep under 240 chars
-6. **Missing audio normalization** - Always run normalize-volume.sh
+6. **Missing audio normalization** - Always run normalize-volume.sh on EVERY clip
 7. **Forgetting avatar overlay area** - Keep bottom-right clear
 8. **Skipping whisper verification** - Always verify TTS before final assembly
 9. **VHS env vars** - Use `export $(cat ~/.env | ...)` pattern, not `source ~/.env`
+10. **Raw ffmpeg concat** - NEVER use `ffmpeg -f concat`, always use `vid-concat`
+11. **Mixed audio formats** - ALL clips must be 44100Hz stereo before concat
+12. **Wrong concat list format** - Use absolute paths, NO `file '...'` prefix

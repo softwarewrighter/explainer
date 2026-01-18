@@ -56,3 +56,46 @@ All SVG slides must follow the font size guidelines in `/docs/svg-design-guideli
 - Visualizer requires OBS for GUI capture
 - Record at 1920x1080, 30fps
 - Trim and process with ffmpeg
+
+## Current Progress
+
+**Completed segments (2:45 total):**
+- 00-title: Title card with music (5s)
+- 01-hook: Hook with lipsynced curmudgeon avatar (14.7s)
+- 02-intro-l3: L3 overview SVG slide (19.9s)
+- 03a-c: Error ranking demo - 3 narrated clips (33s)
+- 04-intro-percentiles: Percentiles demo intro SVG (19.3s)
+- 05a-c: Percentiles demo - 3 narrated clips (38s)
+- 99-cta: CTA with lipsynced avatar and GitHub link (16.7s)
+- 99b-epilog: Standard epilog (12.8s)
+- 99c-epilog-ext: Music outro (5s)
+
+**Pending:**
+- 06-intro-viz: Visualizer intro SVG
+- 07-demo-viz: Visualizer OBS recording
+- 08-comparison: L1 vs L2 vs L3 comparison SVG
+
+## Lessons Learned
+
+### Audio Format Normalization (CRITICAL)
+All clips MUST be 44100Hz stereo before concatenation. TTS generates 24000Hz mono, which breaks concat.
+
+**Always run normalize-volume.sh on every clip:**
+```bash
+./scripts/normalize-volume.sh work/clips/02-intro-l3.mp4
+# Output: "02-intro-l3.mp4  FORMAT FIXED: 24000 Hz 1 ch -> 44100 Hz stereo"
+```
+
+### Proper Concatenation
+Use `vid-concat` with absolute paths, NOT raw ffmpeg:
+```bash
+# Create concat-list.txt with absolute paths (no "file '...'" prefix)
+$VID_CONCAT --list clips/concat-list.txt --output preview.mp4 --reencode
+```
+
+### Whisper Verification
+Always verify TTS audio before final assembly:
+```bash
+ffmpeg -y -i preview.mp4 -ar 16000 -ac 1 -c:a pcm_s16le /tmp/audio.wav
+whisper-cli -m ~/.whisper-models/ggml-base.en.bin -f /tmp/audio.wav -nt
+```

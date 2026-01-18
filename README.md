@@ -307,6 +307,65 @@ Structure:
 
 See `projects/rlm/plan.md` for full production details.
 
+### RLM CLI Explainer (In Progress)
+
+Location: `projects/rlm-cli/`
+
+Subject: RLM Level 3 Native CLI Execution (../rlm-project)
+
+Duration: ~2:45 so far (visualizer demo pending)
+
+```
+projects/rlm-cli/
++-- docs/
+|   +-- project-brief.md    # Project overview and lessons
+|   +-- plan.md             # Production plan
++-- assets/
+|   +-- images/             # Title card (rlm-rust-cli.jpg)
+|   +-- svg/                # Hook, intro, percentiles, CTA slides
++-- scripts/                # Build scripts (common.sh, build-avatar-clip.sh, etc.)
++-- work/
+    +-- scripts/            # Narration scripts
+    +-- audio/              # TTS audio files
+    +-- clips/              # Video clips
+    +-- avatar/             # Avatar processing
+    +-- vhs/                # VHS terminal recordings
+    +-- preview/            # Preview HTML page
+```
+
+**Completed segments:**
+- Title, hook (lipsynced avatar), L3 intro
+- Error ranking demo (VHS recording, 3 narrated clips)
+- Percentiles demo (VHS recording, 3 narrated clips)
+- CTA (lipsynced avatar with GitHub link)
+- Epilog + music outro
+
+**Pending:**
+- Visualizer intro SVG
+- Visualizer OBS recording
+- L1 vs L2 vs L3 comparison
+
+See `projects/rlm-cli/docs/project-brief.md` for details.
+
+## Critical Guidelines
+
+### Video Concatenation
+
+**NEVER use raw ffmpeg for concatenation.** Always use `vid-concat`:
+
+```bash
+# Concat list: absolute paths, one per line, NO "file '...'" prefix
+$VID_CONCAT --list clips/concat-list.txt --output preview.mp4 --reencode
+```
+
+**Audio Format:** All clips MUST be 44100Hz stereo. Run `normalize-volume.sh` on every clip:
+
+```bash
+./scripts/normalize-volume.sh work/clips/clip.mp4
+```
+
+Mixed audio formats (24000Hz mono vs 44100Hz stereo) cause silent or garbled audio in the final video.
+
 ## References
 
 - Video Pipeline Guide: `../video-publishing/reference/docs/video-pipeline-guide.md`
