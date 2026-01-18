@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>RLM L4 (LLM) Video Preview</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 { color: #bd93f9; border-bottom: 2px solid #bd93f9; padding-bottom: 10px; }
+        h2 { color: #8be9fd; margin-top: 40px; }
+        .segment {
+            border-left: 3px solid #bd93f9;
+            padding-left: 15px;
+            margin: 20px 0;
+            background: #2a2a4e;
+            padding: 15px;
+            border-radius: 0 10px 10px 0;
+        }
+        .segment h4 { color: #50fa7b; margin: 0 0 10px 0; }
+        .status {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .done { background: #50fa7b; color: #000; }
+        .pending { background: #555; color: #fff; }
+        .progress { background: #ffb86c; color: #000; }
+        img.preview { max-width: 600px; border-radius: 5px; margin: 10px 0; }
+        .path { font-family: monospace; font-size: 11px; color: #666; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #333; }
+        th { color: #bd93f9; }
+        .architecture {
+            background: #282a36;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: monospace;
+            white-space: pre;
+            overflow-x: auto;
+        }
+        .concept-box {
+            background: linear-gradient(135deg, #1a1a2e, #2d1f3d);
+            border: 2px solid #bd93f9;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>RLM Level 4: LLM-Based Analysis - Video Preview</h1>
+    <p>When data exceeds context limits, delegate to sub-LLM calls and aggregate results.</p>
+
+    <div class="concept-box">
+        <h2 style="margin-top: 0;">Core Concept</h2>
+        <p><strong>Problem:</strong> Some datasets are too large for any LLM context window.</p>
+        <p><strong>Solution:</strong> L1/L2/L3 extract and reduce → L4 chunks and delegates to sub-LLMs → Aggregate results.</p>
+    </div>
+
+    <h2>Architecture</h2>
+    <div class="architecture">
+Input Data (too large for context)
+        │
+        ▼
+┌─────────────────────────────────────┐
+│  L1/L2/L3: Extract & Reduce         │
+└─────────────────────────────────────┘
+        │
+        ▼
+┌─────────────────────────────────────┐
+│  L4: Chunk & Delegate to Sub-LLMs   │
+└─────────────────────────────────────┘
+        │
+        ▼
+┌─────────────────────────────────────┐
+│  L4: Aggregate Chunk Results        │
+└─────────────────────────────────────┘
+        │
+        ▼
+    Final Answer
+    </div>
+
+    <h2>Production Status</h2>
+    <table>
+        <tr><th>Phase</th><th>Status</th><th>Notes</th></tr>
+        <tr><td>Project Setup</td><td><span class="status done">Done</span></td><td>Directory structure created</td></tr>
+        <tr><td>Concept Images</td><td><span class="status pending">Pending</span></td><td>Add to assets/images/</td></tr>
+        <tr><td>Hook SVG</td><td><span class="status pending">Pending</span></td><td>Context overflow visual</td></tr>
+        <tr><td>L4 Architecture SVG</td><td><span class="status pending">Pending</span></td><td>Chunk-delegate-aggregate flow</td></tr>
+        <tr><td>Demo Recording</td><td><span class="status pending">Pending</span></td><td>War and Peace family tree</td></tr>
+        <tr><td>Narration Scripts</td><td><span class="status pending">Pending</span></td><td>TTS scripts needed</td></tr>
+        <tr><td>CTA Slide</td><td><span class="status pending">Pending</span></td><td>Links to paper and repo</td></tr>
+    </table>
+
+    <h2>Assets</h2>
+
+    <div class="segment">
+        <h4>Images <span class="status pending">Add Images</span></h4>
+        <p class="path">assets/images/</p>
+        <p>Add concept images, screenshots, diagrams here.</p>
+        <!-- Images will appear here once added -->
+    </div>
+
+    <div class="segment">
+        <h4>SVG Slides <span class="status pending">Pending</span></h4>
+        <p class="path">assets/svg/</p>
+        <p>Create SVG slides for hook, architecture, demo intro, CTA.</p>
+    </div>
+
+    <h2>Example Use Case: War and Peace Family Tree</h2>
+    <div class="segment">
+        <h4>Input</h4>
+        <p>War and Peace novel: 3.2MB, ~580K words, far exceeds any context window</p>
+    </div>
+    <div class="segment">
+        <h4>L1 Phase</h4>
+        <p>Extract character names, dialogue attributions, relationship mentions</p>
+    </div>
+    <div class="segment">
+        <h4>L4 Chunk Phase</h4>
+        <p>Split extracted data into ~8K token chunks with character context overlap</p>
+    </div>
+    <div class="segment">
+        <h4>L4 Sub-LLM Phase</h4>
+        <p>Each chunk analyzed for: character relationships, family connections, social dynamics</p>
+    </div>
+    <div class="segment">
+        <h4>L4 Aggregation</h4>
+        <p>Combine chunk analyses, resolve conflicts, build complete family tree</p>
+    </div>
+
+    <h2>Links</h2>
+    <p>Paper: <a href="https://arxiv.org/abs/2512.24601" style="color: #8be9fd;">arxiv.org/abs/2512.24601</a></p>
+    <p>Code: <a href="https://github.com/softwarewrighter/rlm-project" style="color: #8be9fd;">github.com/softwarewrighter/rlm-project</a></p>
+
+</body>
+</html>
