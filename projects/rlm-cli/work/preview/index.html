@@ -82,7 +82,7 @@
 
     <div class="final-video">
         <h2>Final Assembled Video</h2>
-        <p class="waiting">In progress - title (5s), hook (14.7s), intro (19.9s), and L3 demo (33s) ready. Total: ~73s. Visualizer demo and remaining SVGs pending.</p>
+        <p class="waiting">In progress - title (5s), hook (14.7s), intro (19.9s), L3 demo 1 (33s), percentiles intro (19.3s), and L3 demo 2 (38s) ready. Total: ~130s. Visualizer demo and remaining SVGs pending.</p>
         <video controls><source src="clips/00-title.mp4" type="video/mp4"></video>
     </div>
 
@@ -92,7 +92,9 @@
         <tr><td>Title Card</td><td><span class="status done">Done</span></td><td>5s with music</td></tr>
         <tr><td>Hook</td><td><span class="status done">Done</span></td><td>14.7s avatar + narration</td></tr>
         <tr><td>L3 Intro</td><td><span class="status done">Done</span></td><td>19.9s SVG + narration</td></tr>
-        <tr><td>L3 Demo</td><td><span class="status done">Done</span></td><td>3 narrated clips (33s total)</td></tr>
+        <tr><td>L3 Demo 1 (Error Ranking)</td><td><span class="status done">Done</span></td><td>3 narrated clips (33s total)</td></tr>
+        <tr><td>L3 Demo 2 Intro (Percentiles)</td><td><span class="status done">Done</span></td><td>19.3s SVG + narration</td></tr>
+        <tr><td>L3 Demo 2 (Percentiles)</td><td><span class="status done">Done</span></td><td>3 narrated clips (38s total)</td></tr>
         <tr><td>Visualizer Intro</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
         <tr><td>Visualizer Demo</td><td><span class="status pending">Pending</span></td><td>OBS recording needed</td></tr>
         <tr><td>Comparison</td><td><span class="status pending">Pending</span></td><td>SVG + narration needed</td></tr>
@@ -169,20 +171,65 @@
     </div>
 
     <div class="segment">
-        <h4>04-intro-viz - Visualizer Intro <span class="status pending">Pending</span></h4>
-        <p class="path">clips/04-intro-viz.mp4</p>
+        <h4>04-intro-percentiles - Percentiles Demo Intro <span class="status done">19.30s</span></h4>
+        <p class="path">clips/04-intro-percentiles.mp4</p>
+        <video controls><source src="clips/04-intro-percentiles.mp4" type="video/mp4"></video>
+        <div class="narration">This demo analyzes two thousand response times to find the p50, p95, and p99 percentiles. L1 extracts the millisecond values with regex. L3 sorts them and calculates the statistics.</div>
+        <p>SVG slide:</p>
+        <img class="preview" src="svg/04-intro-percentiles.svg" alt="Percentiles Intro SVG">
+        <p>Audio:</p>
+        <audio controls><source src="audio/04-intro-percentiles.wav" type="audio/wav"></audio>
+    </div>
+
+    <div class="segment">
+        <h4>05-demo-percentiles - Percentiles Script Demo <span class="status done">38.40s (3 clips)</span></h4>
+        <p>L1+L3 hybrid approach: L1 regex extracts millisecond values from 2000 response times, L3 CLI sorts and computes p50/p95/p99 percentiles. 68% token savings.</p>
+
+        <h5 style="color: #ff79c6; margin-top: 20px;">05a - Demo Setup (11.2s)</h5>
+        <p class="path">clips/05a-percentiles-setup.mp4</p>
+        <div class="narration">Two thousand response times loaded. The query asks for the fiftieth, ninety fifth, and ninety ninth percentile values.</div>
+        <p>Audio:</p>
+        <audio controls><source src="audio/05a-percentiles-setup.wav" type="audio/wav"></audio>
+        <p>Video with narration:</p>
+        <video controls><source src="clips/05a-percentiles-setup.mp4" type="video/mp4"></video>
+
+        <h5 style="color: #ff79c6; margin-top: 20px;">05b - Demo Processing (11.1s)</h5>
+        <p class="path">clips/05b-percentiles-processing.mp4</p>
+        <div class="narration">The model writes Rust code to sort all values and index into the sorted list. Native execution handles two thousand numbers efficiently.</div>
+        <p>Audio:</p>
+        <audio controls><source src="audio/05b-percentiles-processing.wav" type="audio/wav"></audio>
+        <p>Video with narration:</p>
+        <video controls><source src="clips/05b-percentiles-processing.mp4" type="video/mp4"></video>
+
+        <h5 style="color: #ff79c6; margin-top: 20px;">05c - Demo Results (16.1s)</h5>
+        <p class="path">clips/05c-percentiles-results.mp4</p>
+        <div class="narration">Results match the ground truth. P50 is 49 milliseconds, p95 is 296, p99 is 588. Completed in just two iterations with 68 percent token savings.</div>
+        <p>Audio:</p>
+        <audio controls><source src="audio/05c-percentiles-results.wav" type="audio/wav"></audio>
+        <p>Video with narration:</p>
+        <video controls><source src="clips/05c-percentiles-results.mp4" type="video/mp4"></video>
+
+        <h5 style="color: #6272a4; margin-top: 20px;">Full Recording (reference)</h5>
+        <p class="path">vhs/l3-percentiles.mp4 (86.52s)</p>
+        <video controls style="max-width: 600px;"><source src="vhs/l3-percentiles.mp4" type="video/mp4"></video>
+        <p class="path">173 stills extracted to vhs/percentiles-stills/</p>
+    </div>
+
+    <div class="segment">
+        <h4>06-intro-viz - Visualizer Intro <span class="status pending">Pending</span></h4>
+        <p class="path">clips/06-intro-viz.mp4</p>
         <p class="waiting">Waiting for SVG and narration...</p>
     </div>
 
     <div class="segment">
-        <h4>05-demo-viz - Visualizer Demos <span class="status pending">Pending</span></h4>
+        <h4>07-demo-viz - Visualizer Demos <span class="status pending">Pending</span></h4>
         <p class="path">obs/visualizer/</p>
         <p class="waiting">Waiting for OBS recording...</p>
     </div>
 
     <div class="segment">
-        <h4>06-comparison - L1 vs L2 vs L3 <span class="status pending">Pending</span></h4>
-        <p class="path">clips/06-comparison.mp4</p>
+        <h4>08-comparison - L1 vs L2 vs L3 <span class="status pending">Pending</span></h4>
+        <p class="path">clips/08-comparison.mp4</p>
         <p class="waiting">Waiting for SVG and narration...</p>
     </div>
 

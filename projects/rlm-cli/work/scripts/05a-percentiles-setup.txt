@@ -1,0 +1,1 @@
+Two thousand response times loaded. The query asks for the fiftieth, ninety fifth, and ninety ninth percentile values.

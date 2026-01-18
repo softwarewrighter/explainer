@@ -1,0 +1,1 @@
+This demo analyzes two thousand response times to find the p50, p95, and p99 percentiles. L1 extracts the millisecond values with regex. L3 sorts them and calculates the statistics.

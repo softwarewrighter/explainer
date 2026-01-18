@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="150" cy="150" r="100" fill="none" stroke="#ff79c6" stroke-width="2" opacity="0.2"/>
+  <circle cx="1770" cy="930" r="120" fill="none" stroke="#50fa7b" stroke-width="2" opacity="0.2"/>
+
+  <!-- Title -->
+  <text x="960" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" fill="#ff79c6" font-weight="bold" filter="url(#glow)">
+    Demo 2: Response Time Percentiles
+  </text>
+
+  <text x="960" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#f8f8f2">
+    Statistical Analysis with Native Code
+  </text>
+
+  <!-- Percentile visualization -->
+  <g transform="translate(960, 400)">
+    <!-- Distribution curve (simplified) -->
+    <path d="M-400,100 Q-300,-50 -100,-80 Q100,-80 200,0 Q350,100 400,100"
+          fill="none" stroke="#8be9fd" stroke-width="4" opacity="0.5"/>
+
+    <!-- Axis -->
+    <line x1="-400" y1="100" x2="400" y2="100" stroke="#6272a4" stroke-width="3"/>
+
+    <!-- P50 marker -->
+    <line x1="-100" y1="-80" x2="-100" y2="120" stroke="#50fa7b" stroke-width="4"/>
+    <text x="-100" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#50fa7b" font-weight="bold">p50</text>
+    <text x="-100" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#8be9fd">49ms</text>
+
+    <!-- P95 marker -->
+    <line x1="200" y1="0" x2="200" y2="120" stroke="#ffb86c" stroke-width="4"/>
+    <text x="200" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#ffb86c" font-weight="bold">p95</text>
+    <text x="200" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#8be9fd">296ms</text>
+
+    <!-- P99 marker -->
+    <line x1="350" y1="100" x2="350" y2="120" stroke="#ff5555" stroke-width="4"/>
+    <text x="350" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#ff5555" font-weight="bold">p99</text>
+    <text x="350" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#8be9fd">588ms</text>
+  </g>
+
+  <!-- Info boxes -->
+  <g transform="translate(960, 720)">
+    <!-- Dataset -->
+    <g transform="translate(-480, 0)">
+      <rect x="-150" y="-60" width="300" height="120" fill="#44475a" rx="15" stroke="#6272a4" stroke-width="4"/>
+      <text x="0" y="-20" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#6272a4">Dataset</text>
+      <text x="0" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#50fa7b" font-weight="bold">2000 Lines</text>
+    </g>
+
+    <!-- Strategy -->
+    <g transform="translate(0, 0)">
+      <rect x="-150" y="-60" width="300" height="120" fill="#44475a" rx="15" stroke="#6272a4" stroke-width="4"/>
+      <text x="0" y="-20" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#6272a4">Strategy</text>
+      <text x="0" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#50fa7b" font-weight="bold">L1 + L3</text>
+    </g>
+
+    <!-- Task -->
+    <g transform="translate(480, 0)">
+      <rect x="-150" y="-60" width="300" height="120" fill="#44475a" rx="15" stroke="#6272a4" stroke-width="4"/>
+      <text x="0" y="-20" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#6272a4">Task</text>
+      <text x="0" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#50fa7b" font-weight="bold">Sort + Stats</text>
+    </g>
+  </g>
+
+  <!-- Bottom text -->
+  <text x="960" y="920" text-anchor="middle" font-family="Monaco, monospace" font-size="28" fill="#6272a4">
+    L1 regex extracts ms values, L3 CLI sorts and computes percentiles
+  </text>
+</svg>
