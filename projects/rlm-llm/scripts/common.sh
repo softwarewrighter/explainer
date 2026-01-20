@@ -13,7 +13,7 @@ STILLS="$WORK/stills"
 AVATAR="$WORK/avatar"
 SCRIPTS="$WORK/scripts"
 
-MUSIC="$REFDIR/music/Two Gong Fire - Ryan McCaffrey - Go By Ocean.mp3"
+MUSIC="$REFDIR/music/Twin Lynches - Density & Time.mp3"
 
 # Curmudgeon avatar for this project
 AVATAR_SOURCE="$REFDIR/curmudgeon.mp4"

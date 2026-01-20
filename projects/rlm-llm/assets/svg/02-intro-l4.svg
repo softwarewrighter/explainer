@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" fill="#bd93f9" font-weight="bold" filter="url(#glow)">
+    Level 4: Delegating Reasoning
+  </text>
+
+  <!-- Central coordinator box -->
+  <g transform="translate(960, 340)">
+    <rect x="-180" y="-100" width="360" height="200" fill="#2d1f3d" rx="20" stroke="#bd93f9" stroke-width="5"/>
+    <text x="0" y="-40" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#bd93f9" font-weight="bold">Coordinator</text>
+    <text x="0" y="10" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#8be9fd">Language Model</text>
+    <text x="0" y="60" text-anchor="middle" font-family="Monaco, monospace" font-size="28" fill="#50fa7b">Plans and Delegates</text>
+  </g>
+
+  <!-- Left delegate - Analyze -->
+  <g transform="translate(350, 680)">
+    <rect x="-140" y="-70" width="280" height="140" fill="#1f2d3d" rx="15" stroke="#50fa7b" stroke-width="4"/>
+    <text x="0" y="-20" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#50fa7b" font-weight="bold">Analyze</text>
+    <text x="0" y="25" text-anchor="middle" font-family="Monaco, monospace" font-size="28" fill="#8be9fd">LLM Call</text>
+    <text x="0" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#6272a4">Extract insights</text>
+  </g>
+
+  <!-- Center delegate - Compare -->
+  <g transform="translate(960, 680)">
+    <rect x="-140" y="-70" width="280" height="140" fill="#1f2d3d" rx="15" stroke="#8be9fd" stroke-width="4"/>
+    <text x="0" y="-20" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#8be9fd" font-weight="bold">Compare</text>
+    <text x="0" y="25" text-anchor="middle" font-family="Monaco, monospace" font-size="28" fill="#8be9fd">LLM Call</text>
+    <text x="0" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#6272a4">Find patterns</text>
+  </g>
+
+  <!-- Right delegate - Conclude -->
+  <g transform="translate(1570, 680)">
+    <rect x="-140" y="-70" width="280" height="140" fill="#1f2d3d" rx="15" stroke="#ff79c6" stroke-width="4"/>
+    <text x="0" y="-20" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#ff79c6" font-weight="bold">Conclude</text>
+    <text x="0" y="25" text-anchor="middle" font-family="Monaco, monospace" font-size="28" fill="#8be9fd">LLM Call</text>
+    <text x="0" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#6272a4">Draw conclusions</text>
+  </g>
+
+  <!-- Arrows from coordinator to delegates -->
+  <line x1="820" y1="440" x2="420" y2="600" stroke="#50fa7b" stroke-width="5"/>
+  <line x1="960" y1="440" x2="960" y2="600" stroke="#8be9fd" stroke-width="5"/>
+  <line x1="1100" y1="440" x2="1500" y2="600" stroke="#ff79c6" stroke-width="5"/>
+
+  <!-- Arrow heads -->
+  <polygon points="420,600 395,575 445,575" fill="#50fa7b"/>
+  <polygon points="960,600 935,575 985,575" fill="#8be9fd"/>
+  <polygon points="1500,600 1475,575 1525,575" fill="#ff79c6"/>
+
+  <!-- Bottom tagline -->
+  <text x="960" y="900" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#f8f8f2">
+    Perfect for problems that need judgment, not just computation.
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="970" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#6272a4">
+    Model calls other models to analyze, compare, and draw conclusions.
+  </text>
+</svg>

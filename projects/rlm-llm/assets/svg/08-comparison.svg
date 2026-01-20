@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="greenGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" fill="#50fa7b" font-weight="bold" filter="url(#greenGlow)">
+    Case Solved
+  </text>
+
+  <!-- Case file visual - centered after removing No Spoilers panel -->
+  <g transform="translate(960, 480)">
+    <rect x="-280" y="-280" width="560" height="480" fill="#282a36" rx="15" stroke="#bd93f9" stroke-width="4"/>
+    <text x="0" y="-230" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#bd93f9" font-weight="bold">Investigation Complete</text>
+
+    <!-- Case details - no spoilers -->
+    <g font-family="Monaco, monospace" font-size="28">
+      <text x="-240" y="-170" fill="#8be9fd">Witnesses Examined:</text>
+      <text x="220" y="-170" text-anchor="end" fill="#50fa7b">7</text>
+
+      <text x="-240" y="-120" fill="#8be9fd">Statements Analyzed:</text>
+      <text x="220" y="-120" text-anchor="end" fill="#50fa7b">7</text>
+
+      <text x="-240" y="-70" fill="#8be9fd">Contradictions Found:</text>
+      <text x="220" y="-70" text-anchor="end" fill="#ffb86c">3</text>
+
+      <text x="-240" y="-20" fill="#8be9fd">Timeline Gaps:</text>
+      <text x="220" y="-20" text-anchor="end" fill="#ffb86c">2</text>
+
+      <line x1="-240" y1="20" x2="220" y2="20" stroke="#6272a4" stroke-width="2"/>
+
+      <text x="-240" y="70" fill="#8be9fd">Suspect Identified:</text>
+      <text x="220" y="70" text-anchor="end" fill="#ff5555">YES</text>
+
+      <text x="-240" y="120" fill="#8be9fd">Confidence:</text>
+      <text x="220" y="120" text-anchor="end" fill="#50fa7b">HIGH</text>
+    </g>
+
+    <!-- Verdict box -->
+    <rect x="-200" y="160" width="400" height="60" fill="#1a2f1a" rx="10" stroke="#50fa7b" stroke-width="3"/>
+    <text x="0" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#50fa7b" font-weight="bold">VERDICT DELIVERED</text>
+  </g>
+
+  <!-- Bottom tagline -->
+  <text x="960" y="880" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#f8f8f2">
+    Level 4 found what humans might miss.
+  </text>
+
+  <!-- Call to action -->
+  <text x="960" y="960" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#8be9fd">
+    Run the demo yourself to see who did it.
+  </text>
+</svg>

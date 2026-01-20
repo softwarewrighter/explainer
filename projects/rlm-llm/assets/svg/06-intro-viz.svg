@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" fill="#50fa7b" font-weight="bold" filter="url(#glow)">
+    The Visualizer
+  </text>
+
+  <!-- Visualizer window mockup -->
+  <g transform="translate(960, 500)">
+    <!-- Window frame -->
+    <rect x="-600" y="-320" width="1200" height="560" fill="#16213e" rx="15" stroke="#50fa7b" stroke-width="4"/>
+
+    <!-- Title bar -->
+    <rect x="-600" y="-320" width="1200" height="50" fill="#1f2d3d" rx="15"/>
+    <rect x="-600" y="-290" width="1200" height="20" fill="#1f2d3d"/>
+    <circle cx="-560" cy="-295" r="10" fill="#ff5555"/>
+    <circle cx="-530" cy="-295" r="10" fill="#ffb86c"/>
+    <circle cx="-500" cy="-295" r="10" fill="#50fa7b"/>
+    <text x="0" y="-285" text-anchor="middle" font-family="Monaco, monospace" font-size="28" fill="#8be9fd">Level 4 Murder Investigation</text>
+
+    <!-- Content area - witness boxes -->
+    <g transform="translate(0, 0)">
+      <!-- Witness 1 - analyzed -->
+      <rect x="-560" y="-220" width="260" height="120" fill="#1a2f1a" rx="10" stroke="#50fa7b" stroke-width="3"/>
+      <text x="-430" y="-170" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#50fa7b">Butler</text>
+      <text x="-430" y="-130" text-anchor="middle" font-family="Monaco, monospace" font-size="28" fill="#6272a4">Analyzed</text>
+
+      <!-- Witness 2 - analyzed -->
+      <rect x="-270" y="-220" width="260" height="120" fill="#1a2f1a" rx="10" stroke="#50fa7b" stroke-width="3"/>
+      <text x="-140" y="-170" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#50fa7b">Maid</text>
+      <text x="-140" y="-130" text-anchor="middle" font-family="Monaco, monospace" font-size="28" fill="#6272a4">Analyzed</text>
+
+      <!-- Witness 3 - analyzing -->
+      <rect x="20" y="-220" width="260" height="120" fill="#2d2d1a" rx="10" stroke="#ffb86c" stroke-width="3"/>
+      <text x="150" y="-170" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#ffb86c">Cook</text>
+      <text x="150" y="-130" text-anchor="middle" font-family="Monaco, monospace" font-size="28" fill="#ffb86c">Analyzing...</text>
+
+      <!-- Witness 4 - pending -->
+      <rect x="310" y="-220" width="260" height="120" fill="#1f2d3d" rx="10" stroke="#6272a4" stroke-width="3"/>
+      <text x="440" y="-170" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#6272a4">Gardener</text>
+      <text x="440" y="-130" text-anchor="middle" font-family="Monaco, monospace" font-size="28" fill="#6272a4">Pending</text>
+
+      <!-- Reasoning output panel -->
+      <rect x="-560" y="-60" width="1120" height="200" fill="#1a1a2e" rx="10" stroke="#bd93f9" stroke-width="3"/>
+      <text x="-540" y="-20" font-family="Monaco, monospace" font-size="28" fill="#bd93f9">Reasoning:</text>
+      <text x="-540" y="25" font-family="Monaco, monospace" font-size="28" fill="#f8f8f2">Comparing witness statements for contradictions...</text>
+      <text x="-540" y="70" font-family="Monaco, monospace" font-size="28" fill="#50fa7b">Timeline inconsistency detected in testimony</text>
+      <text x="-540" y="115" font-family="Monaco, monospace" font-size="28" fill="#ffb86c">Alibi under investigation: Cook claims kitchen duty</text>
+    </g>
+  </g>
+
+  <!-- Bottom tagline -->
+  <text x="960" y="920" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#f8f8f2">
+    Watch the reasoning unfold in real time.
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="990" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#6272a4">
+    Each witness analyzed. Will the model catch the killer.
+  </text>
+</svg>

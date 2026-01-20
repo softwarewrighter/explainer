@@ -1,0 +1,1 @@
+Here is the Level 4 flow. Input data goes through L1, L2, or L3 for extraction. Then L4 chunks the reduced data and sends each chunk to a sub Language Model. The results flow back and are aggregated into a final answer.

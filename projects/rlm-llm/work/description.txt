@@ -1,0 +1,40 @@
+# Can AI Solve a Murder Mystery?
+
+**Video URL:** [TBD]
+**Duration:** 3:19
+
+---
+
+A murder at the manor. Seven suspects. Dozens of clues. One killer. This video demonstrates RLM Level 4, where the orchestrating LLM delegates reasoning to sub-LLMs. Instead of code execution, the model calls other models to analyze witness statements, compare alibis, and draw conclusions. Watch as L4 examines each suspect and identifies the killer.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MORE IN THIS SERIES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+▶ Recursive Language Model implemented, evaluated, explained
+   https://www.youtube.com/watch?v=5DhaTPuyhys
+
+▶ Can AI Find a Secret Hidden in War and Peace?
+   https://www.youtube.com/watch?v=d5gaL4iOdLA
+
+▶ Custom Code in a Sandbox? RLM and WASM
+   https://www.youtube.com/watch?v=jMo5AaMRUkM
+
+▶ Why I Let an LLM Compile Native Binaries
+   https://www.youtube.com/watch?v=oN6XyZdEHqY
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BACKGROUND
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+This is my Rust implementation of RLM, not the Python implementation by the paper's authors. I built this from scratch using Rust, DeepSeek via LiteLLM, and vibe coding with Claude.
+
+CAPABILITY LEVELS (Roadmap):
+• L1 (DSL): Built-in commands for text operations (find, regex, count, filter, extract)
+• L2 (WASM): LLM generates Rust code → compiled to WebAssembly sandbox
+• L3 (CLI): LLM generates Rust code → compiled to native binary for large datasets
+• L4 (LLM): Recursive delegation - LLM delegates chunks to sub-LLMs for semantic analysis
+
+LINKS:
+📄 Paper: https://arxiv.org/abs/2512.24601
+💻 Code: https://github.com/softwarewrighter/rlm-project
+
+#RLM #RecursiveLanguageModel #Rust #VibeCoding #Deepseek #LiteLLM #LLM #AI #MachineLearning #MurderMystery #MultiAgent #SemanticAnalysis #Programming #SoftwareEngineering #OpenSource #AITools #TechDemo

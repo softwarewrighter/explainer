@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="ctaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#bd93f9"/>
+      <stop offset="100%" style="stop-color:#ff79c6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="64" fill="#ff5555" font-weight="bold" filter="url(#glow)">
+    Can a Language Model Solve a Murder?
+  </text>
+
+  <!-- Main content area -->
+  <g transform="translate(960, 400)">
+    <!-- Paper link box -->
+    <g transform="translate(-400, -80)">
+      <rect x="-200" y="-80" width="400" height="200" fill="#282a36" rx="20" stroke="#8be9fd" stroke-width="4"/>
+      <text x="0" y="-35" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#8be9fd" font-weight="bold">RLM Paper</text>
+      <text x="0" y="15" text-anchor="middle" font-family="Monaco, monospace" font-size="32" fill="#f8f8f2">arxiv.org/abs/</text>
+      <text x="0" y="60" text-anchor="middle" font-family="Monaco, monospace" font-size="32" fill="#f8f8f2">2512.24601</text>
+      <text x="0" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#6272a4">Theory and architecture</text>
+    </g>
+
+    <!-- GitHub link box -->
+    <g transform="translate(400, -80)">
+      <rect x="-200" y="-80" width="400" height="200" fill="#282a36" rx="20" stroke="#50fa7b" stroke-width="4"/>
+      <text x="0" y="-35" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#50fa7b" font-weight="bold">Try It Yourself</text>
+      <text x="0" y="15" text-anchor="middle" font-family="Monaco, monospace" font-size="32" fill="#f8f8f2">github.com/</text>
+      <text x="0" y="60" text-anchor="middle" font-family="Monaco, monospace" font-size="32" fill="#f8f8f2">softwarewrighter/</text>
+      <text x="0" y="105" text-anchor="middle" font-family="Monaco, monospace" font-size="32" fill="#f8f8f2">rlm-project</text>
+    </g>
+  </g>
+
+  <!-- What Level 4 does -->
+  <g transform="translate(960, 620)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#f8f8f2">Level 4 delegates reasoning to specialized Language Model calls</text>
+
+    <g transform="translate(-420, 60)" font-family="Monaco, monospace" font-size="28">
+      <circle cx="15" cy="0" r="8" fill="#50fa7b"/>
+      <text x="40" y="8" fill="#f8f8f2">Analyze evidence</text>
+    </g>
+
+    <g transform="translate(-50, 60)" font-family="Monaco, monospace" font-size="28">
+      <circle cx="15" cy="0" r="8" fill="#8be9fd"/>
+      <text x="40" y="8" fill="#f8f8f2">Compare statements</text>
+    </g>
+
+    <g transform="translate(320, 60)" font-family="Monaco, monospace" font-size="28">
+      <circle cx="15" cy="0" r="8" fill="#bd93f9"/>
+      <text x="40" y="8" fill="#f8f8f2">Draw conclusions</text>
+    </g>
+  </g>
+
+  <!-- Subscribe reminder -->
+  <g transform="translate(960, 840)">
+    <rect x="-480" y="-50" width="960" height="100" fill="url(#ctaGrad)" rx="15" opacity="0.2"/>
+    <rect x="-480" y="-50" width="960" height="100" fill="none" rx="15" stroke="url(#ctaGrad)" stroke-width="4"/>
+    <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#f8f8f2" font-weight="bold">
+      Like and subscribe for more Recursive Language Model
+    </text>
+  </g>
+
+  <!-- RLM series tag -->
+  <text x="960" y="990" text-anchor="middle" font-family="Monaco, monospace" font-size="28" fill="#6272a4">
+    RLM Execution Levels Series
+  </text>
+</svg>

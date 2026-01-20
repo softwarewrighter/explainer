@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <title>RLM L4 (LLM) Video Preview</title>
+    <title>RLM L4 - Murder Mystery Demo</title>
     <style>
         * { box-sizing: border-box; }
         body {
@@ -17,6 +17,7 @@
         }
         h1 { color: #bd93f9; border-bottom: 2px solid #bd93f9; padding-bottom: 10px; }
         h2 { color: #8be9fd; margin-top: 40px; }
+        h3 { color: #ff79c6; margin-top: 30px; }
         .segment {
             border-left: 3px solid #bd93f9;
             padding-left: 15px;
@@ -35,20 +36,15 @@
         }
         .done { background: #50fa7b; color: #000; }
         .pending { background: #555; color: #fff; }
-        .progress { background: #ffb86c; color: #000; }
+        .needs-svg { background: #ffb86c; color: #000; }
+        .needs-recording { background: #ff79c6; color: #000; }
+        .final { background: #bd93f9; color: #000; }
         img.preview { max-width: 600px; border-radius: 5px; margin: 10px 0; }
+        video { max-width: 100%; border-radius: 5px; background: #000; }
         .path { font-family: monospace; font-size: 11px; color: #666; }
         table { width: 100%; border-collapse: collapse; margin: 20px 0; }
         th, td { padding: 10px; text-align: left; border-bottom: 1px solid #333; }
         th { color: #bd93f9; }
-        .architecture {
-            background: #282a36;
-            padding: 20px;
-            border-radius: 10px;
-            font-family: monospace;
-            white-space: pre;
-            overflow-x: auto;
-        }
         .concept-box {
             background: linear-gradient(135deg, #1a1a2e, #2d1f3d);
             border: 2px solid #bd93f9;
@@ -56,93 +52,234 @@
             padding: 25px;
             margin: 30px 0;
         }
+        .narration {
+            font-style: italic;
+            color: #8be9fd;
+            font-size: 14px;
+            background: #111;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border-left: 3px solid #50fa7b;
+        }
+        .music { color: #ff79c6; }
+        .final-draft {
+            border: 3px solid #50fa7b;
+            background: linear-gradient(135deg, #1a2f1a, #2d1f3d);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        .final-draft h2 { margin-top: 0; color: #50fa7b; }
     </style>
 </head>
 <body>
-    <h1>RLM Level 4: LLM-Based Analysis - Video Preview</h1>
-    <p>When data exceeds context limits, delegate to sub-LLM calls and aggregate results.</p>
+    <h1>RLM Level 4: Murder Mystery</h1>
+    <p>The RLM Knows - Level 4 delegates reasoning to Language Models to solve complex problems.</p>
 
-    <div class="concept-box">
-        <h2 style="margin-top: 0;">Core Concept</h2>
-        <p><strong>Problem:</strong> Some datasets are too large for any LLM context window.</p>
-        <p><strong>Solution:</strong> L1/L2/L3 extract and reduce → L4 chunks and delegates to sub-LLMs → Aggregate results.</p>
+    <div class="final-draft">
+        <h2>Final Draft Video <span class="status final">3:20</span></h2>
+        <p>Complete video with all segments. Lipsynced avatar on hook and CTA. Correct murder mystery narration.</p>
+        <video controls style="width: 100%; max-width: 1280px;"><source src="final-draft.mp4" type="video/mp4"></video>
     </div>
 
-    <h2>Architecture</h2>
-    <div class="architecture">
-Input Data (too large for context)
-        │
-        ▼
-┌─────────────────────────────────────┐
-│  L1/L2/L3: Extract & Reduce         │
-└─────────────────────────────────────┘
-        │
-        ▼
-┌─────────────────────────────────────┐
-│  L4: Chunk & Delegate to Sub-LLMs   │
-└─────────────────────────────────────┘
-        │
-        ▼
-┌─────────────────────────────────────┐
-│  L4: Aggregate Chunk Results        │
-└─────────────────────────────────────┘
-        │
-        ▼
-    Final Answer
+    <div class="concept-box">
+        <h2 style="margin-top: 0;">Production Status</h2>
+        <p><strong>COMPLETE:</strong> All segments ready, final draft generated.</p>
+        <p><strong>Total Duration:</strong> 3:20 (200 seconds)</p>
+        <p><strong>Segments:</strong> 17 clips concatenated</p>
+        <p><strong>Focus:</strong> Delegating reasoning to LLMs to solve a murder mystery</p>
     </div>
 
     <h2>Production Status</h2>
     <table>
-        <tr><th>Phase</th><th>Status</th><th>Notes</th></tr>
-        <tr><td>Project Setup</td><td><span class="status done">Done</span></td><td>Directory structure created</td></tr>
-        <tr><td>Concept Images</td><td><span class="status pending">Pending</span></td><td>Add to assets/images/</td></tr>
-        <tr><td>Hook SVG</td><td><span class="status pending">Pending</span></td><td>Context overflow visual</td></tr>
-        <tr><td>L4 Architecture SVG</td><td><span class="status pending">Pending</span></td><td>Chunk-delegate-aggregate flow</td></tr>
-        <tr><td>Demo Recording</td><td><span class="status pending">Pending</span></td><td>War and Peace family tree</td></tr>
-        <tr><td>Narration Scripts</td><td><span class="status pending">Pending</span></td><td>TTS scripts needed</td></tr>
-        <tr><td>CTA Slide</td><td><span class="status pending">Pending</span></td><td>Links to paper and repo</td></tr>
+        <tr><th>Phase</th><th>Status</th><th>Duration</th><th>Notes</th></tr>
+        <tr><td>00 - Title Card</td><td><span class="status done">Done</span></td><td>6.0s</td><td>Twin Lynches music</td></tr>
+        <tr><td>01 - Hook</td><td><span class="status done">Done</span></td><td>15s</td><td>Murder mystery hook</td></tr>
+        <tr><td>02 - L4 Introduction</td><td><span class="status done">Done</span></td><td>21s</td><td>LLM delegation concept</td></tr>
+        <tr><td>04 - Demo Intro</td><td><span class="status done">Done</span></td><td>15s</td><td>Ashford Manor setup</td></tr>
+        <tr><td>05 - Script Demo (VHS)</td><td><span class="status done">Done</span></td><td>43s</td><td>3 edited clips + 2 separators</td></tr>
+        <tr><td>06 - Visualizer Intro</td><td><span class="status done">Done</span></td><td>17s</td><td>Visualizer teaser</td></tr>
+        <tr><td>07 - Visualizer Demo (OBS)</td><td><span class="status done">Done</span></td><td>34s</td><td>3 OBS clips with narration</td></tr>
+        <tr><td>08 - Results</td><td><span class="status done">Done</span></td><td>20s</td><td>Case solved, no spoilers</td></tr>
+        <tr><td>99 - CTA</td><td><span class="status done">Done</span></td><td>15s</td><td>Call to action</td></tr>
+        <tr><td>99b - Epilog</td><td><span class="status done">Done</span></td><td>12s</td><td>Standard epilog</td></tr>
+        <tr><td>99c - Epilog Ext</td><td><span class="status done">Done</span></td><td>12s</td><td>Music fade out</td></tr>
     </table>
 
-    <h2>Assets</h2>
+    <h2>All Segments</h2>
 
     <div class="segment">
-        <h4>Images <span class="status pending">Add Images</span></h4>
-        <p class="path">assets/images/</p>
-        <p>Add concept images, screenshots, diagrams here.</p>
-        <!-- Images will appear here once added -->
+        <h4>00-title - Title Card <span class="status done">6.0s</span></h4>
+        <p class="path">clips/00-title.mp4</p>
+        <video controls><source src="clips/00-title.mp4" type="video/mp4"></video>
+        <p>Title image:</p>
+        <img class="preview" src="images/the-rlm-knows.jpg" alt="The RLM Knows Title">
+        <div class="narration music">Music: Twin Lynches - Density & Time (Ken Burns effect, 2s fade out)</div>
     </div>
 
     <div class="segment">
-        <h4>SVG Slides <span class="status pending">Pending</span></h4>
-        <p class="path">assets/svg/</p>
-        <p>Create SVG slides for hook, architecture, demo intro, CTA.</p>
+        <h4>01-hook - Hook <span class="status done">15s</span></h4>
+        <p class="path">clips/01-hook.mp4</p>
+        <video controls><source src="clips/01-hook.mp4" type="video/mp4"></video>
+        <div class="narration">A murder at the manor. Seven suspects. Dozens of clues. One killer. Can a Language Model examine the evidence, question each witness, and solve the case.</div>
+        <p>SVG:</p>
+        <img class="preview" src="svg/01-hook.svg" alt="Hook SVG">
     </div>
 
-    <h2>Example Use Case: War and Peace Family Tree</h2>
     <div class="segment">
-        <h4>Input</h4>
-        <p>War and Peace novel: 3.2MB, ~580K words, far exceeds any context window</p>
+        <h4>02-intro-l4 - L4 Introduction <span class="status done">21s</span></h4>
+        <p class="path">clips/02-intro-l4.mp4</p>
+        <video controls><source src="clips/02-intro-l4.mp4" type="video/mp4"></video>
+        <div class="narration">Level 4 delegates reasoning to Language Models. Instead of code execution, the model calls other models to analyze, compare, and draw conclusions. Perfect for problems that need judgment, not just computation.</div>
+        <p>SVG:</p>
+        <img class="preview" src="svg/02-intro-l4.svg" alt="L4 Intro SVG">
     </div>
+
     <div class="segment">
-        <h4>L1 Phase</h4>
-        <p>Extract character names, dialogue attributions, relationship mentions</p>
+        <h4>04-intro-demo - Demo Intro <span class="status done">15s</span></h4>
+        <p class="path">clips/04-intro-demo.mp4</p>
+        <video controls><source src="clips/04-intro-demo.mp4" type="video/mp4"></video>
+        <div class="narration">The Ashford Manor murder. A wealthy lord found dead in his study. Seven people were in the house that night. Each one has a story. But which story has the holes. Can the model find the truth.</div>
+        <p>SVG:</p>
+        <img class="preview" src="svg/04-intro-demo.svg" alt="Demo Intro SVG">
     </div>
+
+    <h3>VHS Script Demo (Edited with Narration)</h3>
+    <p>Detective demo edited from 183s raw to ~37s with dead spots removed/sped up. Separator slides between segments.</p>
+
     <div class="segment">
-        <h4>L4 Chunk Phase</h4>
-        <p>Split extracted data into ~8K token chunks with character context overlap</p>
+        <h4>05a - VHS Setup <span class="status done">11s</span></h4>
+        <div class="narration">The case file has multiple witnesses and evidence reports. The Recursive Language Model loads the data and starts the investigation.</div>
+        <p class="path">clips/05a-vhs-setup.mp4</p>
+        <video controls style="max-width: 800px;"><source src="clips/05a-vhs-setup.mp4" type="video/mp4"></video>
     </div>
+
     <div class="segment">
-        <h4>L4 Sub-LLM Phase</h4>
-        <p>Each chunk analyzed for: character relationships, family connections, social dynamics</p>
+        <h4>Separator: Analyzing <span class="status done">3s</span></h4>
+        <p class="path">clips/05-sep-analyzing.mp4</p>
+        <video controls style="max-width: 600px;"><source src="clips/05-sep-analyzing.mp4" type="video/mp4"></video>
     </div>
+
     <div class="segment">
-        <h4>L4 Aggregation</h4>
-        <p>Combine chunk analyses, resolve conflicts, build complete family tree</p>
+        <h4>05b - VHS Processing <span class="status done">15s</span></h4>
+        <div class="narration">Each witness tells their version of events. The Language Model looks for patterns, inconsistencies, things that do not add up. Someone is not telling the whole truth.</div>
+        <p class="path">clips/05b-vhs-processing.mp4</p>
+        <video controls style="max-width: 800px;"><source src="clips/05b-vhs-processing.mp4" type="video/mp4"></video>
+    </div>
+
+    <div class="segment">
+        <h4>Separator: Verdict <span class="status done">3s</span></h4>
+        <p class="path">clips/05-sep-verdict.mp4</p>
+        <video controls style="max-width: 600px;"><source src="clips/05-sep-verdict.mp4" type="video/mp4"></video>
+    </div>
+
+    <div class="segment">
+        <h4>05c - VHS Results <span class="status done">10s</span></h4>
+        <div class="narration">The pieces come together. One story does not match the others. Has the Recursive Language Model found the killer.</div>
+        <p class="path">clips/05c-vhs-results.mp4</p>
+        <video controls style="max-width: 800px;"><source src="clips/05c-vhs-results.mp4" type="video/mp4"></video>
+    </div>
+
+    <div class="segment">
+        <h4>06-intro-viz - Visualizer Intro <span class="status done">17s</span></h4>
+        <p class="path">clips/06-intro-viz.mp4</p>
+        <video controls><source src="clips/06-intro-viz.mp4" type="video/mp4"></video>
+        <div class="narration">The Visualizer shows Level 4 working the case. Watch as each witness statement is analyzed. See the reasoning unfold. Will the model catch the killer.</div>
+        <p>SVG:</p>
+        <img class="preview" src="svg/06-intro-viz.svg" alt="Visualizer Intro SVG">
+    </div>
+
+    <h3>Visualizer Demo (OBS Recording)</h3>
+    <p>OBS recording from ~/Movies processed with narration overlay.</p>
+
+    <div class="segment">
+        <h4>07a - Visualizer: Case Setup <span class="status done">12s</span></h4>
+        <div class="narration">Seven suspects. Seven stories. The visualizer loads the case file. Who had motive. Who had opportunity. Who is lying.</div>
+        <p class="path">clips/07a-viz-setup.mp4</p>
+        <video controls style="max-width: 800px;"><source src="clips/07a-viz-setup.mp4" type="video/mp4"></video>
+        <p>Source: OBS recording 9-22s, scaled 3024x1862 to 1920x1080</p>
+    </div>
+
+    <div class="segment">
+        <h4>07b - Visualizer: Analysis <span class="status done">11s</span></h4>
+        <div class="narration">Level 4 processes each statement in parallel. Cross referencing times, locations, and alibis. The evidence is speaking.</div>
+        <p class="path">clips/07b-viz-analysis.mp4</p>
+        <video controls style="max-width: 800px;"><source src="clips/07b-viz-analysis.mp4" type="video/mp4"></video>
+        <p>Source: OBS recording 95-125s sped up 2.4x, shows chunk progress</p>
+    </div>
+
+    <div class="segment">
+        <h4>07c - Visualizer: Solution <span class="status done">10s</span></h4>
+        <div class="narration">The analysis is complete. One name rises to the top. Watch the result and see who the Recursive Language Model accuses.</div>
+        <p class="path">clips/07c-viz-solution.mp4</p>
+        <video controls style="max-width: 800px;"><source src="clips/07c-viz-solution.mp4" type="video/mp4"></video>
+        <p>Source: OBS recording 155-166s showing result dialog with verdict</p>
+    </div>
+
+    <div class="segment">
+        <h4>08-comparison - Case Solved <span class="status done">20s</span></h4>
+        <p class="path">clips/08-comparison.mp4</p>
+        <video controls><source src="clips/08-comparison.mp4" type="video/mp4"></video>
+        <div class="narration">Level 4 examined seven witnesses and found what humans might miss. The case is solved. No spoilers here. Run the demonstration yourself to see who did it.</div>
+        <p>SVG:</p>
+        <img class="preview" src="svg/08-comparison.svg" alt="Results SVG">
+    </div>
+
+    <div class="segment">
+        <h4>99-cta - Call to Action <span class="status done">15s</span></h4>
+        <p class="path">clips/99-cta.mp4</p>
+        <video controls><source src="clips/99-cta.mp4" type="video/mp4"></video>
+        <div class="narration">Can a Language Model solve a murder. Check out the paper on archive for the theory, and the project on GitHub to try it yourself. Like and subscribe for more Recursive Language Model.</div>
+        <p>SVG:</p>
+        <img class="preview" src="svg/99-cta.svg" alt="CTA SVG">
+    </div>
+
+    <div class="segment">
+        <h4>99b-epilog - Standard Epilog <span class="status done">12s</span></h4>
+        <p class="path">clips/99b-epilog.mp4</p>
+        <video controls><source src="clips/99b-epilog.mp4" type="video/mp4"></video>
+    </div>
+
+    <div class="segment">
+        <h4>99c-epilog-ext - Music Outro <span class="status done">12s</span></h4>
+        <p class="path">clips/99c-epilog-ext.mp4</p>
+        <video controls><source src="clips/99c-epilog-ext.mp4" type="video/mp4"></video>
+        <div class="narration music">Music: Twin Lynches - Density & Time (3s fade out)</div>
+    </div>
+
+    <h2>The Case</h2>
+    <div class="concept-box">
+        <h3 style="margin-top: 0;">The Ashford Manor Murder</h3>
+        <p><strong>Source:</strong> <code>rlm-project/demo/l4/data/detective-mystery.txt</code></p>
+        <p><strong>The Setup:</strong> Lord Edward Ashford III found dead in his study.</p>
+        <p><strong>The Suspects:</strong> Seven people were in the house that night. Each has a story. Each has something to hide.</p>
+        <p><strong>The Question:</strong> Can a Language Model analyze the witness statements and identify the killer.</p>
+        <p><strong>No spoilers.</strong> Watch the demonstration or run it yourself.</p>
+    </div>
+
+    <h2>Video Concept</h2>
+    <div class="concept-box">
+        <h3 style="margin-top: 0;">Level 4: LLM Delegation</h3>
+        <p><strong>What Level 4 does:</strong> Delegates reasoning tasks to other Language Models</p>
+        <p><strong>This demo is NOT about:</strong> Chunking large data, context window limits, megabytes of text</p>
+        <p><strong>Perfect for:</strong> Problems needing judgment, analysis, comparison, deduction</p>
+        <p><strong>Demo focus:</strong> Murder mystery that requires reasoning across multiple witness statements</p>
     </div>
 
     <h2>Links</h2>
     <p>Paper: <a href="https://arxiv.org/abs/2512.24601" style="color: #8be9fd;">arxiv.org/abs/2512.24601</a></p>
     <p>Code: <a href="https://github.com/softwarewrighter/rlm-project" style="color: #8be9fd;">github.com/softwarewrighter/rlm-project</a></p>
 
+    <script>
+        const ts = Date.now();
+        document.querySelectorAll('video source, audio source, img').forEach(el => {
+            const src = el.getAttribute('src');
+            if (src && !src.startsWith('http')) {
+                el.setAttribute('src', src + '?ts=' + ts);
+                if (el.parentElement.load) el.parentElement.load();
+            }
+        });
+    </script>
 </body>
 </html>

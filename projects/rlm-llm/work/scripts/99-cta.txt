@@ -1,0 +1,2 @@
+Can a Language Model solve a murder. Check out the paper on archive for the theory, and the project on GitHub to try it yourself. Like and subscribe for more Recursive Language Model.
+

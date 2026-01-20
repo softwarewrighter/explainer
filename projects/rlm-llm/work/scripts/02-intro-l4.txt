@@ -1,0 +1,2 @@
+Level 4 delegates reasoning to Language Models. Instead of code execution, the model calls other models to analyze, compare, and draw conclusions. Perfect for problems that need judgment, not just computation.
+
