@@ -1,0 +1,1 @@
+In iteration one, the Language Model chooses Language Model reduce. It processes the twenty thousand character input in one chunk. The chunk processing happens in about twenty seconds.

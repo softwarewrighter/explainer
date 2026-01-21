@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Headline: 96px bold -->
+  <text x="960" y="200" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#00d4ff" text-anchor="middle">
+    Web Visualizer Demo
+  </text>
+
+  <!-- Subtitle: 64px -->
+  <text x="960" y="300" font-family="Arial, sans-serif" font-size="64"
+        fill="#ffd93d" text-anchor="middle">
+    Watch RLM Process in Real Time
+  </text>
+
+  <!-- Content box -->
+  <rect x="200" y="380" width="1520" height="480" rx="16"
+        fill="#0f0f23" stroke="#4ade80" stroke-width="6"/>
+
+  <!-- Box title: 48px bold -->
+  <text x="960" y="460" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#4ade80" text-anchor="middle">
+    Live Progress Tracking
+  </text>
+
+  <!-- Features list: 44px -->
+  <text x="300" y="540" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    See iterations unfold as they happen
+  </text>
+  <text x="300" y="610" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Watch Language Model choose its tools
+  </text>
+  <text x="300" y="680" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    View chunk processing in real time
+  </text>
+  <text x="300" y="750" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Explore results with interactive family trees
+  </text>
+
+  <!-- Avatar safe zone (bottom-right 520x280) -->
+</svg>

@@ -1,0 +1,43 @@
+# Building Family Trees from War and Peace with AI
+
+**Video URL:** [TBD]
+**Duration:** 6:36
+
+---
+
+War and Peace is far too large for any LLM context window. This video demonstrates RLM Level 4 processing a 3MB novel to extract noble family relationships. The orchestrating LLM delegates analysis to sub-LLMs, reducing millions of characters to structured family trees. Two demos show the process: a command line walkthrough and a web visualizer with real-time progress tracking. Watch as RLM identifies the Rostov, Bolkonsky, and other noble families through recursive analysis.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MORE IN THIS SERIES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+▶ Recursive Language Model implemented, evaluated, explained
+   https://www.youtube.com/watch?v=5DhaTPuyhys
+
+▶ Can AI Find a Secret Hidden in War and Peace?
+   https://www.youtube.com/watch?v=d5gaL4iOdLA
+
+▶ Custom Code in a Sandbox? RLM and WASM
+   https://www.youtube.com/watch?v=jMo5AaMRUkM
+
+▶ Why I Let an LLM Compile Native Binaries
+   https://www.youtube.com/watch?v=oN6XyZdEHqY
+
+▶ Can AI Solve a Murder Mystery?
+   https://www.youtube.com/watch?=[TBD]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BACKGROUND
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+This is my Rust implementation of RLM, not the Python implementation by the paper's authors. I built this from scratch using Rust, DeepSeek via LiteLLM, and vibe coding with Claude.
+
+CAPABILITY LEVELS (Roadmap):
+• L1 (DSL): Built-in commands for text operations (find, regex, count, filter, extract)
+• L2 (WASM): LLM generates Rust code → compiled to WebAssembly sandbox
+• L3 (CLI): LLM generates Rust code → compiled to native binary for large datasets
+• L4 (LLM): Recursive delegation - LLM delegates chunks to sub-LLMs for semantic analysis
+
+LINKS:
+📄 Paper: https://arxiv.org/abs/2512.24601
+💻 Code: https://github.com/softwarewrighter/rlm-project
+
+#RLM #RecursiveLanguageModel #Rust #VibeCoding #Deepseek #LiteLLM #LLM #AI #MachineLearning #WarAndPeace #FamilyTree #MultiAgent #SemanticAnalysis #Programming #SoftwareEngineering #OpenSource #AITools #TechDemo #Tolstoy #DataExtraction

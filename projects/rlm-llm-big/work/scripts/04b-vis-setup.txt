@@ -1,0 +1,1 @@
+The demo loads with a query about major noble families. The input data shows a server side file path. The file is loaded directly on the server, no browser memory needed. Click Run to start.

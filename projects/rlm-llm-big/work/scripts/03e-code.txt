@@ -1,0 +1,1 @@
+In iterations four and five, the Language Model chooses rust command line intent. It generates Rust code to extract proper names with noble titles like Prince, Princess, Count, and Countess. The code compiles and executes in milliseconds.

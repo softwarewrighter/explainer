@@ -1,0 +1,1 @@
+We start with the same family relationship query from the command line demo. The visualizer connects to the backend and begins processing. The live progress panel shows each step as it happens.

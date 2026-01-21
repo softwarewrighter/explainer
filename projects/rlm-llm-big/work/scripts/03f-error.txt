@@ -1,0 +1,1 @@
+In iteration six, the generated code encounters a character boundary error. The Language Model recognizes this, switches to web assembly mode, and generates new code that handles special characters correctly.

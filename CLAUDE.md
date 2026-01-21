@@ -6,41 +6,58 @@ This is a deterministic video rendering pipeline for creating explainer videos. 
 
 ## Critical Guidelines
 
+### MANDATORY: Follow the Style Guide
+
+**NEVER guess or pick arbitrary values for font sizes, stroke widths, or other visual parameters.**
+
+Before creating ANY visual asset (SVG, VHS tape, etc.):
+1. Read `/docs/style-guide.md` for exact values
+2. Use the `/style-check` command to validate assets
+3. Reference prior successful projects if unsure
+
+The style guide exists because guessing leads to inconsistent, unreadable videos.
+
 ### SVG Font Sizes - IMPORTANT
 
 When creating or editing SVG slides for video, **never use fonts smaller than 28px**.
 
 | Element | Minimum | Recommended |
 |---------|---------|-------------|
-| All text | **28px** | 28-32px |
-| Body/labels | 28px | 32px |
-| Monospace/URLs | 28px | 32px |
-| Subtitles | 36px | 42-48px |
-| Headlines | 84px | 96px |
-| Stroke widths | 4px | 5px |
+| Headlines | 84px | **96px** |
+| Subtitles | 42px | **48px** |
+| Body text | 32px | **36px** |
+| Labels/captions | 28px | **32px** |
+| Monospace/URLs | 28px | **32px** |
+| Stroke widths | 4px | **5px** |
 
 **Examples:**
 ```svg
 <!-- CORRECT -->
-<text font-size="28">github.com/user/repo</text>
-<text font-size="32">Label Text</text>
+<text font-size="96">Main Headline</text>
+<text font-size="48">Subtitle</text>
+<text font-size="36">Body text</text>
+<text font-size="32">Label or URL</text>
 <rect stroke-width="5" ... />
 
 <!-- WRONG - TOO SMALL -->
-<text font-size="22">Label Text</text>
-<text font-size="24">github.com/repo</text>
+<text font-size="64">Headline</text>  <!-- Should be 84-96px -->
+<text font-size="24">Label</text>      <!-- Should be 28px+ -->
+<rect stroke-width="2" ... />          <!-- Should be 4-5px -->
 ```
 
-See `/docs/svg-design-guidelines.md` for complete guidelines.
+See `/docs/style-guide.md` for complete guidelines.
 
 ### TTS Narration Rules
 
-- Maximum 240 characters per script
+- Maximum 320 characters per script
 - Use only periods and commas for punctuation
 - No dashes, colons, semicolons, or question marks
 - No exclamation marks
-- Spell out acronyms (e.g., "R L M" not "RLM")
+- **No digits** - spell out all numbers as words (e.g., "sixty thousand" not "60,000")
+- Spell out acronyms (e.g., "Language Model" not "LLM", "Recursive Language Model" not "RLM")
 - Short, simple sentences work best
+
+See `/docs/tts-narration-guidelines.md` and `/docs/style-guide.md` for complete rules.
 
 ### Video Tools
 
@@ -106,16 +123,54 @@ whisper-cli -m ~/.local/share/whisper-cpp/models/ggml-medium.en.bin -f /tmp/audi
 
 ### VHS Terminal Recordings
 
+**Required VHS Settings (MANDATORY):**
+```tape
+Set Shell "bash"          # CRITICAL: Must set shell to bash
+Set FontSize 32
+Set Width 1920
+Set Height 1080
+Set Theme "Dracula"
+Set TypingSpeed 50ms
+Set Padding 20
+```
+
+**NEVER use FontSize below 28.** FontSize 32 is recommended for all VHS recordings.
+
 When recording terminal demos with VHS that require environment variables (e.g., LiteLLM API keys):
 
-**Environment Variable Pattern:**
-```
+**Environment Variable Pattern (CRITICAL):**
+```tape
+# Always combine export with command using && on ONE line
 Type "export $(cat ~/.env | grep -v '^#' | xargs) && ./your-script.sh"
+Enter
 ```
 
 This reliably exports variables from `~/.env` (e.g., `LITELLM_MASTER_KEY`, `LITELLM_HOST`).
 
-**Important:** `source ~/.env` does not work reliably in VHS recordings. Always use the export pattern above.
+**What does NOT work:**
+- `source ~/.env` - not reliable in VHS
+- Separate export and command lines (environment may not persist)
+- Hide/Show blocks with exports (shell state may reset)
+
+**CRITICAL - One Command = One Type + One Enter:**
+
+Each bash command MUST be a single `Type` statement followed by ONE `Enter`. NEVER split a command across multiple Type/Enter pairs.
+
+```tape
+# CORRECT - entire command in one Type
+Type "./rlm file.txt 'query here' --flag1 --flag2 -vv"
+Enter
+
+# WRONG - splits command into separate executions
+Type "./rlm file.txt"
+Enter
+Type "'query here'"
+Enter
+Type "--flag1 --flag2"
+Enter
+```
+
+The wrong approach executes three separate bash commands instead of one. VHS `Enter` sends a literal Enter keypress, which bash interprets as "execute now".
 
 ### Video Concatenation - CRITICAL
 
@@ -200,7 +255,7 @@ ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p
 2. **Text overflow** - Text must fit within boxes with padding
 3. **Thin strokes** - Use stroke-width 4-5px for visibility
 4. **Wrong TTS punctuation** - Periods and commas only
-5. **Long narration** - Keep under 240 chars
+5. **Long narration** - Keep under 320 chars
 6. **Missing audio normalization** - Always run normalize-volume.sh on EVERY clip
 7. **Forgetting avatar overlay area** - Keep bottom-right clear
 8. **Skipping whisper verification** - Always verify TTS before final assembly
@@ -210,3 +265,6 @@ ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p
 12. **Wrong concat list format** - Use absolute paths, NO `file '...'` prefix
 13. **OBS dimension mismatch** - Always scale OBS recordings to 1920x1080, Retina is 3024x1862
 14. **TTS wording issues** - Avoid "Demo one/two" (sounds like "GIMA"), use "First up", "Next", "Third", "Finally"
+15. **VHS command splitting** - NEVER split a bash command across multiple Type/Enter pairs. One command = one Type + one Enter
+16. **VHS font size too small** - NEVER use FontSize below 28. Always use FontSize 32 for readable recordings
+17. **Guessing visual parameters** - NEVER guess font sizes or stroke widths. Always check `/docs/style-guide.md`

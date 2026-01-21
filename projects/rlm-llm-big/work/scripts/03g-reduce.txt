@@ -1,0 +1,1 @@
+In iterations seven and eight, the Language Model switches to Language Model reduce. It processes the filtered text in chunks, extracting all noble family members and their relationships from the narrative.

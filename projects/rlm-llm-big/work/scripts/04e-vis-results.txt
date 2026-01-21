@@ -1,0 +1,1 @@
+The result panel shows the complete Rostov family tree. You can click through the processing steps to see exactly how the Language Model reached its answer. Every iteration is fully transparent.

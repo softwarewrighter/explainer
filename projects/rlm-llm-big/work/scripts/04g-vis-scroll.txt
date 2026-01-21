@@ -1,0 +1,1 @@
+The Language Model extracted multiple noble families from War and Peace. Each family shows parents, children, and their relationships. The Rostov family, the Bolkonsky family, and connections between noble houses through marriage.

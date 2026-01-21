@@ -1,0 +1,1 @@
+In the first three iterations, the Language Model uses regex patterns to find relationship terms. It searches for father, mother, son, daughter, husband, wife, brother, and sister. This identifies nearly nine hundred relevant lines.
