@@ -1,26 +1,86 @@
 # Build artifacts
 /target
+node_modules/
+package-lock.json
 
-# Generated work files (audio, video, stills)
+# OS files
+.DS_Store
+
+# ============================================
+# BINARY FILES - Always ignore
+# ============================================
+
+# Video files
+*.mp4
+*.mov
+*.avi
+*.webm
+
+# Audio files
+*.wav
+*.mp3
+*.aac
+*.m4a
+
+# ============================================
+# WORK DIRECTORIES - Generated/intermediate
+# ============================================
+
+# Generated work files
 projects/*/work/audio/
 projects/*/work/clips/
 projects/*/work/stills/
 projects/*/work/png/
 projects/*/work/avatar/
 projects/*/work/composited/
-projects/*/work/vhs/*/audio/
-projects/*/work/vhs/*/stills/
+projects/*/work/preview/
+projects/*/work/obs/
+projects/*/work/vhs/
+projects/*/work/vhs-test/
+projects/*/work/normalized/
 
-# Video files (generated, not source)
-*.mp4
-*.wav
+# Analysis artifacts
+*-thumbs/
+*-stills/
 
-# Keep scripts and description (source files)
+# Root work directory
+/work/
+
+# ============================================
+# ASSET EXCEPTIONS - Large binaries
+# ============================================
+
+# Music files (reference, not source)
+projects/*/assets/music/
+
+# Video files in assets
+projects/*/assets/images/*.mp4
+
+# ============================================
+# TRACKED FILES - Explicit inclusions
+# ============================================
+
+# Source scripts and config (text files in work/)
 !projects/*/work/scripts/
 !projects/*/work/description.txt
 !projects/*/work/concat-list.txt
-!projects/*/work/vhs/*/scripts/
-!projects/*/work/vhs/*/concat-list.txt
 
-# OS files
-.DS_Store
+# PNG/JPG images in assets are tracked
+!projects/*/assets/images/*.png
+!projects/*/assets/images/*.jpg
+!projects/*/assets/images/*.jpeg
+
+# HTML files
+!*.html
+
+# SVG files (text-based)
+!*.svg
+
+# VHS tape scripts (text-based)
+!*.tape
+
+# Templates
+!templates/
+
+# Claude session data
+!.claude/
