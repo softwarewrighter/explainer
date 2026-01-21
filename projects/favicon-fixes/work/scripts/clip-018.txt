@@ -1,0 +1,1 @@
+Adding a lookup table for named colors.

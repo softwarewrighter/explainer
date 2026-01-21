@@ -1,0 +1,1 @@
+Animated gear spinning. Animated star spinning. Both work with you knee code symbols, but too slow.

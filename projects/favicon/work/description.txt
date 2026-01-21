@@ -1,0 +1,33 @@
+Vibe Coding: AI Agent Finds Bugs in My Favicon Tool (Part 1: Discovery)
+
+Watch as Claude Code, an AI coding agent, explores my favicon CLI tool and discovers 6 bugs, 2 missing features, and a documentation gap - all in one session.
+
+In this video:
+- Claude Code runs a guided demo of the favicon generator
+- Named colors like "red" and "transparent" are rejected
+- Unicode emoji support crashes the tool
+- PNG filename doesn't match what's generated
+- Animation speed defaults cause confusion
+- Wrench symbol renders as text instead of icon
+- Numeric code points fail to render
+
+Part 2 coming tomorrow: Watch the AI fix every bug it found!
+
+Links:
+- Favicon CLI: https://github.com/sw-cli-tools/favicon
+- Claude Code: https://claude.ai/claude-code
+
+Chapters:
+0:00 Intro
+0:22 Demo Setup
+1:30 Bug #1: Named Colors
+3:15 Bug #2: Transparent Color
+4:45 Unicode Crash
+6:00 Font Installation
+7:30 Bug #3: PNG Filename
+8:15 Bug #4: Animation Defaults
+9:00 Bug #5: Wrench Symbol
+9:30 Bug #6: Code Points
+10:00 Summary & CTA
+
+#VibeCoding #ClaudeCode #AI #CLI #Rust #Programming #BugHunting

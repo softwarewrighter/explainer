@@ -1,0 +1,1 @@
+Now it works. We have a workaround, but we should add named color support.

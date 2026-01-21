@@ -1,0 +1,1 @@
+It's building a mental map of the codebase.

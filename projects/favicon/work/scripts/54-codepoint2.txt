@@ -1,0 +1,1 @@
+Next, the numeric code point for heart. Expected an emoji, but it shows the raw numbers instead. Bug?

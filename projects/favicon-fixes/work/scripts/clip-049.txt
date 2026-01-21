@@ -1,0 +1,1 @@
+Wrench was showing as text instead of an icon.

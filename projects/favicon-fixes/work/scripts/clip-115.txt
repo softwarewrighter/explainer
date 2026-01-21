@@ -1,0 +1,1 @@
+Not milliseconds. One centisecond is ten milliseconds.

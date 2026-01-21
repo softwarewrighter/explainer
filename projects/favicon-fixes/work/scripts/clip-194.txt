@@ -1,0 +1,1 @@
+Why can't the foreground be transparent?

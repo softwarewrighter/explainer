@@ -1,0 +1,1 @@
+Using hex color codes like hashtag FFFFFF for white and hashtag 0066CC for blue.

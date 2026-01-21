@@ -1,0 +1,1 @@
+That is bug number two. The tool only accepts hex codes, not CSS color names.

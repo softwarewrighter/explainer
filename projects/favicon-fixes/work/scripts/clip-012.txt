@@ -1,0 +1,1 @@
+Searching for where colors are parsed in the code.

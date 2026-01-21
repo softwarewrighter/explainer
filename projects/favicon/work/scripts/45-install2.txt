@@ -1,0 +1,1 @@
+Sudo pacman dash S, noto fonts emo G. This is an Arch Linux system, by the way.

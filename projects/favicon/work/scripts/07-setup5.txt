@@ -1,0 +1,1 @@
+The demo guide covers text favicons, colors, unicode symbols, rotation, and animated jiffs.

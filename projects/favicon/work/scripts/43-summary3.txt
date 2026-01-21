@@ -1,0 +1,1 @@
+Skipped demos 2 and 3, the unicode features, because no emoji font is installed.

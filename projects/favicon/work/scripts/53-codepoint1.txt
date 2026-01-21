@@ -1,0 +1,1 @@
+Demo 3, Unicode by code point. U plus 1F600 is the grinning face emoji.

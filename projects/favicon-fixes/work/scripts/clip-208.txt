@@ -1,0 +1,1 @@
+Displaying the transparent foreground result.

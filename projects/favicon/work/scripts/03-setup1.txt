@@ -1,0 +1,1 @@
+Here is Claude Code, an AI coding agent, about to run through a demo guide I created for my favicon generator tool.

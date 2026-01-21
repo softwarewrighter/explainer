@@ -1,0 +1,1 @@
+The AB favicon works. Two letters rendered on a transparent background.

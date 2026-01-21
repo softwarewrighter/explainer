@@ -1,0 +1,1 @@
+Maps to RGBA with alpha zero.

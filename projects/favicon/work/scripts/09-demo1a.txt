@@ -1,0 +1,1 @@
+First up, Demo 1, basic text favicons. Generate AB, X, and SW as favicon images.

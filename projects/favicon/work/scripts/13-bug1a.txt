@@ -1,0 +1,1 @@
+First issue. The command saved as favicon dot ico, but tried to display favicon dot png.

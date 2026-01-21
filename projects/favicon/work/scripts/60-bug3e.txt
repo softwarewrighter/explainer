@@ -1,0 +1,1 @@
+Easy fix. Use dash capital T instead. Fire emoji with transparent background, now works.

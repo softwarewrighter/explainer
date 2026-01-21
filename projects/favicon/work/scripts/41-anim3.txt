@@ -1,0 +1,1 @@
+That is something to note for the demo guide. Document the correct way to get faster animations.

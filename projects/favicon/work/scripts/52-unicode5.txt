@@ -1,0 +1,1 @@
+Star and heart render correctly, but wrench shows as text instead of an image. Bug number five.

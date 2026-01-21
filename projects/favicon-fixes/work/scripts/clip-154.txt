@@ -1,0 +1,1 @@
+Heart from hex code point displays correctly.

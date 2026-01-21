@@ -1,0 +1,1 @@
+We get an error, red is an invalid color. Named colors are not supported.

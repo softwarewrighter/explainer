@@ -1,0 +1,1 @@
+Clippy, the helpful paperclip of the Rust world.

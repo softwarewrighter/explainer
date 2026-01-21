@@ -59,14 +59,15 @@ All SVG slides must follow the font size guidelines in `/docs/svg-design-guideli
 
 ## Current Progress
 
-**Completed segments (2:45 total):**
+**Completed segments (3:00 total):**
 - 00-title: Title card with music (5s)
 - 01-hook: Hook with lipsynced curmudgeon avatar (14.7s)
+- 01b-paper-intro: RLM paper abstract with Ken Burns (15.5s)
 - 02-intro-l3: L3 overview SVG slide (19.9s)
 - 03a-c: Error ranking demo - 3 narrated clips (33s)
 - 04-intro-percentiles: Percentiles demo intro SVG (19.3s)
 - 05a-c: Percentiles demo - 3 narrated clips (38s)
-- 99-cta: CTA with lipsynced avatar and GitHub link (16.7s)
+- 99-cta: CTA with lipsynced avatar and GitHub link (16.5s)
 - 99b-epilog: Standard epilog (12.8s)
 - 99c-epilog-ext: Music outro (5s)
 

@@ -1,0 +1,1 @@
+Twenty centiseconds equals two hundred milliseconds.

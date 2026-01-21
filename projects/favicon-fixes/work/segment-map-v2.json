@@ -1,0 +1,2132 @@
+{
+  "source": "/Users/mike/Movies/2026-01-09 19-45-36.mp4",
+  "total_duration": 2448,
+  "approach": "Logical sections subdivided into 7-12s clips with narration slots",
+  "sections": [
+    {
+      "id": 1,
+      "name": "Intro - GitHub repo",
+      "start": 0,
+      "end": 16,
+      "duration": 16,
+      "clips": [
+        {
+          "clip_id": "001",
+          "start": 0,
+          "end": 8,
+          "role": "describe",
+          "narration": "Here's the fave icon repository on GitHub."
+        },
+        {
+          "clip_id": "002",
+          "start": 8,
+          "end": 16,
+          "role": "describe",
+          "narration": "Starting Claude Code"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Trust prompt and welcome",
+      "start": 16,
+      "end": 36,
+      "duration": 20,
+      "clips": [
+        {
+          "clip_id": "003",
+          "start": 16,
+          "end": 24,
+          "role": "describe",
+          "narration": "Now Claude wants to know if I trust the files in this project folder."
+        },
+        {
+          "clip_id": "004",
+          "start": 24,
+          "end": 36,
+          "role": "describe",
+          "narration": "Welcome back. Now I ask Claude to read the to do file from the part one video."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Reading todo file",
+      "start": 36,
+      "end": 56,
+      "duration": 20,
+      "clips": [
+        {
+          "clip_id": "005",
+          "start": 36,
+          "end": 44,
+          "role": "describe",
+          "narration": "Claude asks permission to read the to do file"
+        },
+        {
+          "clip_id": "006",
+          "start": 44,
+          "end": 56,
+          "role": "describe",
+          "narration": "Nine items total. Claude reads through the entire list."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "User selects priority",
+      "start": 56,
+      "end": 76,
+      "duration": 20,
+      "clips": [
+        {
+          "clip_id": "007",
+          "start": 56,
+          "end": 66,
+          "role": "describe",
+          "narration": "I tell Claude to start with the high severity bugs first."
+        },
+        {
+          "clip_id": "008",
+          "start": 66,
+          "end": 76,
+          "role": "describe",
+          "narration": "Claude starts planning the bug fixes"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Claude starts planning",
+      "start": 76,
+      "end": 100,
+      "duration": 24,
+      "clips": [
+        {
+          "clip_id": "009",
+          "start": 76,
+          "end": 84,
+          "role": "describe",
+          "narration": "Claude begins by reading the source files."
+        },
+        {
+          "clip_id": "010",
+          "start": 84,
+          "end": 92,
+          "role": "joke",
+          "narration": "Forty six Rust files to explore. This could take a while."
+        },
+        {
+          "clip_id": "011",
+          "start": 92,
+          "end": 100,
+          "role": "summary",
+          "narration": "It's building a mental map of the codebase."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Searching for color parsing",
+      "start": 100,
+      "end": 130,
+      "duration": 30,
+      "clips": [
+        {
+          "clip_id": "012",
+          "start": 100,
+          "end": 110,
+          "role": "describe",
+          "narration": "Searching for where colors are parsed in the code."
+        },
+        {
+          "clip_id": "013",
+          "start": 110,
+          "end": 120,
+          "role": "describe",
+          "narration": "Found the color module. Reading through it now."
+        },
+        {
+          "clip_id": "014",
+          "start": 120,
+          "end": 130,
+          "role": "summary",
+          "narration": "Still analyzing the color module"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Planning implementation",
+      "start": 130,
+      "end": 158,
+      "duration": 28,
+      "clips": [
+        {
+          "clip_id": "015",
+          "start": 130,
+          "end": 140,
+          "role": "describe",
+          "narration": "Now Claude understands the issues and plans the fixes."
+        },
+        {
+          "clip_id": "016",
+          "start": 140,
+          "end": 150,
+          "role": "describe",
+          "narration": "Adding named color lookup table"
+        },
+        {
+          "clip_id": "017",
+          "start": 150,
+          "end": 158,
+          "role": "summary",
+          "narration": "Continuing named colors implementation"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Adding named colors",
+      "start": 158,
+      "end": 186,
+      "duration": 28,
+      "clips": [
+        {
+          "clip_id": "018",
+          "start": 158,
+          "end": 168,
+          "role": "describe",
+          "narration": "Adding a lookup table for named colors."
+        },
+        {
+          "clip_id": "019",
+          "start": 168,
+          "end": 178,
+          "role": "describe",
+          "narration": "Maroon, aqua, silver, gold, and more."
+        },
+        {
+          "clip_id": "020",
+          "start": 178,
+          "end": 186,
+          "role": "summary",
+          "narration": "Updating module exports for new color types"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Implementing transparent",
+      "start": 186,
+      "end": 214,
+      "duration": 28,
+      "clips": [
+        {
+          "clip_id": "021",
+          "start": 186,
+          "end": 196,
+          "role": "describe",
+          "narration": "Adding unicode code point detection logic"
+        },
+        {
+          "clip_id": "022",
+          "start": 196,
+          "end": 206,
+          "role": "describe",
+          "narration": "Adding unicode code point validation"
+        },
+        {
+          "clip_id": "023",
+          "start": 206,
+          "end": 214,
+          "role": "summary",
+          "narration": "Adding tests and building project"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Unicode code point parsing",
+      "start": 214,
+      "end": 242,
+      "duration": 28,
+      "clips": [
+        {
+          "clip_id": "024",
+          "start": 214,
+          "end": 224,
+          "role": "describe",
+          "narration": "Building and testing the changes"
+        },
+        {
+          "clip_id": "025",
+          "start": 224,
+          "end": 234,
+          "role": "describe",
+          "narration": "Running cargo tests"
+        },
+        {
+          "clip_id": "026",
+          "start": 234,
+          "end": 242,
+          "role": "summary",
+          "narration": "Compilation in progress"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Building project",
+      "start": 242,
+      "end": 270,
+      "duration": 28,
+      "clips": [
+        {
+          "clip_id": "027",
+          "start": 242,
+          "end": 252,
+          "role": "describe",
+          "narration": "Running cargo test"
+        },
+        {
+          "clip_id": "028",
+          "start": 252,
+          "end": 262,
+          "role": "joke",
+          "narration": "Rust compilation. Time for a coffee break."
+        },
+        {
+          "clip_id": "029",
+          "start": 262,
+          "end": 270,
+          "role": "summary",
+          "narration": "Tests running with CLI argument errors"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Testing Bug 6 unicode",
+      "start": 270,
+      "end": 298,
+      "duration": 28,
+      "clips": [
+        {
+          "clip_id": "030",
+          "start": 270,
+          "end": 280,
+          "role": "describe",
+          "narration": "Claude debugging CLI argument errors"
+        },
+        {
+          "clip_id": "031",
+          "start": 280,
+          "end": 290,
+          "role": "describe",
+          "narration": "Multiple bug tests completing"
+        },
+        {
+          "clip_id": "032",
+          "start": 290,
+          "end": 298,
+          "role": "summary",
+          "narration": "Test results showing fixes work"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Testing Bug 1 named colors",
+      "start": 298,
+      "end": 326,
+      "duration": 28,
+      "clips": [
+        {
+          "clip_id": "033",
+          "start": 298,
+          "end": 308,
+          "role": "describe",
+          "narration": "Running cargo clippy"
+        },
+        {
+          "clip_id": "034",
+          "start": 308,
+          "end": 318,
+          "role": "describe",
+          "narration": "Cargo clippy checking crates"
+        },
+        {
+          "clip_id": "035",
+          "start": 318,
+          "end": 326,
+          "role": "summary",
+          "narration": "Clippy complete, updating to do list"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Running clippy",
+      "start": 326,
+      "end": 354,
+      "duration": 28,
+      "clips": [
+        {
+          "clip_id": "036",
+          "start": 326,
+          "end": 336,
+          "role": "describe",
+          "narration": "Tests passed, I request checkpoint"
+        },
+        {
+          "clip_id": "037",
+          "start": 336,
+          "end": 346,
+          "role": "joke",
+          "narration": "I request checkpoint and the medium bugs"
+        },
+        {
+          "clip_id": "038",
+          "start": 346,
+          "end": 354,
+          "role": "summary",
+          "narration": "Running tests after checkpoint request"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Formatting code",
+      "start": 354,
+      "end": 382,
+      "duration": 28,
+      "clips": [
+        {
+          "clip_id": "039",
+          "start": 354,
+          "end": 364,
+          "role": "describe",
+          "narration": "Running cargo format to clean up the code."
+        },
+        {
+          "clip_id": "040",
+          "start": 364,
+          "end": 374,
+          "role": "describe",
+          "narration": "Cargo fmt complete, checking git status"
+        },
+        {
+          "clip_id": "041",
+          "start": 374,
+          "end": 382,
+          "role": "summary",
+          "narration": "Running format and clippy checks"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Git commit",
+      "start": 382,
+      "end": 414,
+      "duration": 32,
+      "clips": [
+        {
+          "clip_id": "042",
+          "start": 382,
+          "end": 392,
+          "role": "describe",
+          "narration": "No clippy errors, reviewing git diff"
+        },
+        {
+          "clip_id": "043",
+          "start": 392,
+          "end": 404,
+          "role": "describe",
+          "narration": "Add named colors, transparent support, and hex code points."
+        },
+        {
+          "clip_id": "044",
+          "start": 404,
+          "end": 414,
+          "role": "summary",
+          "narration": "Commit complete. Three bugs down."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Git push",
+      "start": 414,
+      "end": 446,
+      "duration": 32,
+      "clips": [
+        {
+          "clip_id": "045",
+          "start": 414,
+          "end": 424,
+          "role": "describe",
+          "narration": "Pushing the changes to GitHub."
+        },
+        {
+          "clip_id": "046",
+          "start": 424,
+          "end": 436,
+          "role": "joke",
+          "narration": "Git push origin main. The magic words."
+        },
+        {
+          "clip_id": "047",
+          "start": 436,
+          "end": 446,
+          "role": "summary",
+          "narration": "Changes are live. Moving on to the next bug."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Bug 5 wrench symbol",
+      "start": 446,
+      "end": 478,
+      "duration": 32,
+      "clips": [
+        {
+          "clip_id": "048",
+          "start": 446,
+          "end": 456,
+          "role": "describe",
+          "narration": "Now testing PNG filename output handling"
+        },
+        {
+          "clip_id": "049",
+          "start": 456,
+          "end": 468,
+          "role": "describe",
+          "narration": "Claude found that PNG files save as .ico instead of .png"
+        },
+        {
+          "clip_id": "050",
+          "start": 468,
+          "end": 478,
+          "role": "summary",
+          "narration": "Reading CLI argument handling code"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Adding symbols",
+      "start": 478,
+      "end": 510,
+      "duration": 32,
+      "clips": [
+        {
+          "clip_id": "051",
+          "start": 478,
+          "end": 488,
+          "role": "describe",
+          "narration": "Adding wrench to the symbols file."
+        },
+        {
+          "clip_id": "052",
+          "start": 488,
+          "end": 500,
+          "role": "describe",
+          "narration": "Also adding tool and hammer while we're here."
+        },
+        {
+          "clip_id": "053",
+          "start": 500,
+          "end": 510,
+          "role": "summary",
+          "narration": "Testing both filename and wrench symbol fixes"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Bug 3 PNG filename",
+      "start": 510,
+      "end": 548,
+      "duration": 38,
+      "clips": [
+        {
+          "clip_id": "054",
+          "start": 510,
+          "end": 520,
+          "role": "describe",
+          "narration": "Bug three, the PNG filename issue."
+        },
+        {
+          "clip_id": "055",
+          "start": 520,
+          "end": 530,
+          "role": "describe",
+          "narration": "Running cargo tests on the codebase"
+        },
+        {
+          "clip_id": "056",
+          "start": 530,
+          "end": 540,
+          "role": "describe",
+          "narration": "Running cargo format and clippy checks"
+        },
+        {
+          "clip_id": "057",
+          "start": 540,
+          "end": 548,
+          "role": "summary",
+          "narration": "Bug three fixed."
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Checkpoint - all tests pass",
+      "start": 548,
+      "end": 586,
+      "duration": 38,
+      "clips": [
+        {
+          "clip_id": "058",
+          "start": 548,
+          "end": 558,
+          "role": "describe",
+          "narration": "All tests pass. No clippy errors."
+        },
+        {
+          "clip_id": "059",
+          "start": 558,
+          "end": 568,
+          "role": "describe",
+          "narration": "I ask Claude to run the dem owe guide first"
+        },
+        {
+          "clip_id": "060",
+          "start": 568,
+          "end": 578,
+          "role": "joke",
+          "narration": "Claude is running through the dem owe checklist"
+        },
+        {
+          "clip_id": "061",
+          "start": 578,
+          "end": 586,
+          "role": "summary",
+          "narration": "Let's verify the dem owes work."
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Demo checklist 1-4",
+      "start": 586,
+      "end": 624,
+      "duration": 38,
+      "clips": [
+        {
+          "clip_id": "062",
+          "start": 586,
+          "end": 596,
+          "role": "describe",
+          "narration": "Running through the dem owe checklist."
+        },
+        {
+          "clip_id": "063",
+          "start": 596,
+          "end": 606,
+          "role": "describe",
+          "narration": "All dem owes three through seven passing, ready for checkpoint"
+        },
+        {
+          "clip_id": "064",
+          "start": 606,
+          "end": 616,
+          "role": "describe",
+          "narration": "I notice Claude didn't display visual results"
+        },
+        {
+          "clip_id": "065",
+          "start": 616,
+          "end": 624,
+          "role": "summary",
+          "narration": "I ask to see actual display output for each dem owe"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Demo checklist 5-7",
+      "start": 624,
+      "end": 662,
+      "duration": 38,
+      "clips": [
+        {
+          "clip_id": "066",
+          "start": 624,
+          "end": 634,
+          "role": "describe",
+          "narration": "I ask to clean up old dem owe outputs first"
+        },
+        {
+          "clip_id": "067",
+          "start": 634,
+          "end": 644,
+          "role": "describe",
+          "narration": "Claude cleaning up old dem owe files before running again"
+        },
+        {
+          "clip_id": "068",
+          "start": 644,
+          "end": 654,
+          "role": "describe",
+          "narration": "Creating dem owe directory and running dem owe 1 Text fave icon"
+        },
+        {
+          "clip_id": "069",
+          "start": 654,
+          "end": 662,
+          "role": "summary",
+          "narration": "dem owe 1 text fave icon files being created and read"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "User asks to see output",
+      "start": 662,
+      "end": 700,
+      "duration": 38,
+      "clips": [
+        {
+          "clip_id": "070",
+          "start": 662,
+          "end": 672,
+          "role": "describe",
+          "narration": "Claude generating dem owe 2 unicode symbol images"
+        },
+        {
+          "clip_id": "071",
+          "start": 672,
+          "end": 682,
+          "role": "describe",
+          "narration": "Now the dem owe two symbol images are being created and verified."
+        },
+        {
+          "clip_id": "072",
+          "start": 682,
+          "end": 692,
+          "role": "joke",
+          "narration": "Claude reading dem owe 2 image file sizes"
+        },
+        {
+          "clip_id": "073",
+          "start": 692,
+          "end": 700,
+          "role": "summary",
+          "narration": "dem owe 2 verified, starting dem owe 3 code point dem owes"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Creating animated GIFs",
+      "start": 700,
+      "end": 740,
+      "duration": 40,
+      "clips": [
+        {
+          "clip_id": "074",
+          "start": 700,
+          "end": 710,
+          "role": "describe",
+          "narration": "dem owe 3 creating unicode code point fave icon images"
+        },
+        {
+          "clip_id": "075",
+          "start": 710,
+          "end": 720,
+          "role": "describe",
+          "narration": "dem owe 3 code point images created and verified"
+        },
+        {
+          "clip_id": "076",
+          "start": 720,
+          "end": 730,
+          "role": "describe",
+          "narration": "dem owe 4 creating custom color fave icon images"
+        },
+        {
+          "clip_id": "077",
+          "start": 730,
+          "end": 740,
+          "role": "summary",
+          "narration": "dem owe 6 creating animated jiff files"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Demo 6 animated GIF",
+      "start": 740,
+      "end": 784,
+      "duration": 44,
+      "clips": [
+        {
+          "clip_id": "078",
+          "start": 740,
+          "end": 750,
+          "role": "describe",
+          "narration": "dem owe six, creating the animated jiff."
+        },
+        {
+          "clip_id": "079",
+          "start": 750,
+          "end": 762,
+          "role": "describe",
+          "narration": "dem owe 7 listing available symbol aliases"
+        },
+        {
+          "clip_id": "080",
+          "start": 762,
+          "end": 774,
+          "role": "describe",
+          "narration": "Claude showing all dem owes passed with bug fixes verified"
+        },
+        {
+          "clip_id": "081",
+          "start": 774,
+          "end": 784,
+          "role": "summary",
+          "narration": "All bugs verified, I ask to see actual visual output"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Display commands",
+      "start": 784,
+      "end": 828,
+      "duration": 44,
+      "clips": [
+        {
+          "clip_id": "082",
+          "start": 784,
+          "end": 794,
+          "role": "describe",
+          "narration": "I point out Claude hasn't used display command yet"
+        },
+        {
+          "clip_id": "083",
+          "start": 794,
+          "end": 806,
+          "role": "describe",
+          "narration": "I request visual demonstration of all the dem owes"
+        },
+        {
+          "clip_id": "084",
+          "start": 806,
+          "end": 818,
+          "role": "describe",
+          "narration": "Claude acknowledges and prepares to display images"
+        },
+        {
+          "clip_id": "085",
+          "start": 818,
+          "end": 828,
+          "role": "summary",
+          "narration": "Claude finding image viewer and opening wrench dem owe"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Displaying wrench",
+      "start": 828,
+      "end": 872,
+      "duration": 44,
+      "clips": [
+        {
+          "clip_id": "086",
+          "start": 828,
+          "end": 840,
+          "role": "describe",
+          "narration": "I clarify I want the display command specifically"
+        },
+        {
+          "clip_id": "087",
+          "start": 840,
+          "end": 852,
+          "role": "describe",
+          "narration": "I clarify I want the ImageMagick display command"
+        },
+        {
+          "clip_id": "088",
+          "start": 852,
+          "end": 864,
+          "role": "joke",
+          "narration": "I explain that display refers to the ImageMagick display tool"
+        },
+        {
+          "clip_id": "089",
+          "start": 864,
+          "end": 872,
+          "role": "summary",
+          "narration": "Claude switching to ImageMagick display command"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Display issue",
+      "start": 872,
+      "end": 916,
+      "duration": 44,
+      "clips": [
+        {
+          "clip_id": "090",
+          "start": 872,
+          "end": 884,
+          "role": "describe",
+          "narration": "Wrench image now displaying via ImageMagick display"
+        },
+        {
+          "clip_id": "091",
+          "start": 884,
+          "end": 896,
+          "role": "describe",
+          "narration": "Wrench fave icon displaying correctly in ImageMagick window"
+        },
+        {
+          "clip_id": "092",
+          "start": 896,
+          "end": 908,
+          "role": "joke",
+          "narration": "Display command finished, wrench icon shown successfully"
+        },
+        {
+          "clip_id": "093",
+          "start": 908,
+          "end": 916,
+          "role": "summary",
+          "narration": "We'll come back to this one."
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Displaying heart hex",
+      "start": 916,
+      "end": 960,
+      "duration": 44,
+      "clips": [
+        {
+          "clip_id": "094",
+          "start": 916,
+          "end": 928,
+          "role": "describe",
+          "narration": "Displaying the heart from hex code point."
+        },
+        {
+          "clip_id": "095",
+          "start": 928,
+          "end": 940,
+          "role": "describe",
+          "narration": "The red on black dem owe shows an empty red square. Something's wrong"
+        },
+        {
+          "clip_id": "096",
+          "start": 940,
+          "end": 952,
+          "role": "describe",
+          "narration": "Let me investigate the red on black issue"
+        },
+        {
+          "clip_id": "097",
+          "start": 952,
+          "end": 960,
+          "role": "summary",
+          "narration": "Claude discovers the X text is being converted to the X symbol alias"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "GIF too slow",
+      "start": 960,
+      "end": 1008,
+      "duration": 48,
+      "clips": [
+        {
+          "clip_id": "098",
+          "start": 960,
+          "end": 972,
+          "role": "describe",
+          "narration": "Claude reads the text resolution code to understand the bug"
+        },
+        {
+          "clip_id": "099",
+          "start": 972,
+          "end": 984,
+          "role": "describe",
+          "narration": "Claude identifies the bug and shows the fix for text flag handling"
+        },
+        {
+          "clip_id": "100",
+          "start": 984,
+          "end": 996,
+          "role": "describe",
+          "narration": "Building the fix, but there's a compilation error"
+        },
+        {
+          "clip_id": "101",
+          "start": 996,
+          "end": 1008,
+          "role": "summary",
+          "narration": "After fixing, the X icon now renders correctly as literal text"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Trying faster delay",
+      "start": 1008,
+      "end": 1056,
+      "duration": 48,
+      "clips": [
+        {
+          "clip_id": "102",
+          "start": 1008,
+          "end": 1020,
+          "role": "describe",
+          "narration": "Now displaying the animated gear jiff"
+        },
+        {
+          "clip_id": "103",
+          "start": 1020,
+          "end": 1032,
+          "role": "describe",
+          "narration": "The animation is too slow. I ask about speed settings"
+        },
+        {
+          "clip_id": "104",
+          "start": 1032,
+          "end": 1044,
+          "role": "describe",
+          "narration": "Checking the help for frame delay options"
+        },
+        {
+          "clip_id": "105",
+          "start": 1044,
+          "end": 1056,
+          "role": "summary",
+          "narration": "Found it. Frame delay in milliseconds. Trying delay 20"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Still too slow",
+      "start": 1056,
+      "end": 1104,
+      "duration": 48,
+      "clips": [
+        {
+          "clip_id": "106",
+          "start": 1056,
+          "end": 1068,
+          "role": "describe",
+          "narration": "Generating faster gear jiff with 20ms delay"
+        },
+        {
+          "clip_id": "107",
+          "start": 1068,
+          "end": 1080,
+          "role": "describe",
+          "narration": "Still too slow. Trying frame delay 10"
+        },
+        {
+          "clip_id": "108",
+          "start": 1080,
+          "end": 1092,
+          "role": "joke",
+          "narration": "Even delay 10 is too slow. Trying delay 1"
+        },
+        {
+          "clip_id": "109",
+          "start": 1092,
+          "end": 1104,
+          "role": "summary",
+          "narration": "Still too slow with delay 1. Something is wrong"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Checking code",
+      "start": 1104,
+      "end": 1152,
+      "duration": 48,
+      "clips": [
+        {
+          "clip_id": "110",
+          "start": 1104,
+          "end": 1116,
+          "role": "describe",
+          "narration": "Claude tries more frames with minimal delay"
+        },
+        {
+          "clip_id": "111",
+          "start": 1116,
+          "end": 1128,
+          "role": "describe",
+          "narration": "I suggest the argument might be named differently"
+        },
+        {
+          "clip_id": "112",
+          "start": 1128,
+          "end": 1140,
+          "role": "describe",
+          "narration": "Claude searches for how frame_delay is used in the code"
+        },
+        {
+          "clip_id": "113",
+          "start": 1140,
+          "end": 1152,
+          "role": "summary",
+          "narration": "Searching through the codebase for frame delay implementation"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Found the issue",
+      "start": 1152,
+      "end": 1200,
+      "duration": 48,
+      "clips": [
+        {
+          "clip_id": "114",
+          "start": 1152,
+          "end": 1164,
+          "role": "describe",
+          "narration": "Found it. Jiff uses centiseconds. Testing with delay 100"
+        },
+        {
+          "clip_id": "115",
+          "start": 1164,
+          "end": 1176,
+          "role": "describe",
+          "narration": "Generating test jiff with 100 centisecond delay"
+        },
+        {
+          "clip_id": "116",
+          "start": 1176,
+          "end": 1188,
+          "role": "joke",
+          "narration": "Classic units confusion. Happens to everyone."
+        },
+        {
+          "clip_id": "117",
+          "start": 1188,
+          "end": 1200,
+          "role": "summary",
+          "narration": "Claude reads the jiff runner source code"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Fixing frame delay",
+      "start": 1200,
+      "end": 1256,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "118",
+          "start": 1200,
+          "end": 1212,
+          "role": "describe",
+          "narration": "Reading more jiff related source files"
+        },
+        {
+          "clip_id": "119",
+          "start": 1212,
+          "end": 1224,
+          "role": "describe",
+          "narration": "Found the issue. Zero values default to slow. Generating proper jiff"
+        },
+        {
+          "clip_id": "120",
+          "start": 1224,
+          "end": 1236,
+          "role": "describe",
+          "narration": "Regenerating the jiff with correct timing."
+        },
+        {
+          "clip_id": "121",
+          "start": 1236,
+          "end": 1248,
+          "role": "joke",
+          "narration": "Still no visible movement in the display"
+        },
+        {
+          "clip_id": "122",
+          "start": 1248,
+          "end": 1256,
+          "role": "summary",
+          "narration": "Checking the jiff file properties with identify"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Still investigating",
+      "start": 1256,
+      "end": 1312,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "123",
+          "start": 1256,
+          "end": 1268,
+          "role": "describe",
+          "narration": "Still no visible movement."
+        },
+        {
+          "clip_id": "124",
+          "start": 1268,
+          "end": 1280,
+          "role": "describe",
+          "narration": "The jiff file might need different settings."
+        },
+        {
+          "clip_id": "125",
+          "start": 1280,
+          "end": 1292,
+          "role": "describe",
+          "narration": "Too fast now, but discovered display doesn't show animations properly"
+        },
+        {
+          "clip_id": "126",
+          "start": 1292,
+          "end": 1304,
+          "role": "joke",
+          "narration": "Debugging animated jiffs. Living the dream."
+        },
+        {
+          "clip_id": "127",
+          "start": 1304,
+          "end": 1312,
+          "role": "summary",
+          "narration": "Maybe the browser will show it better."
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Browser demo page",
+      "start": 1312,
+      "end": 1368,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "128",
+          "start": 1312,
+          "end": 1324,
+          "role": "describe",
+          "narration": "I ask for an HTML page to display the jiff in browser"
+        },
+        {
+          "clip_id": "129",
+          "start": 1324,
+          "end": 1336,
+          "role": "describe",
+          "narration": "Claude creates the dem owe HTML page and opens it"
+        },
+        {
+          "clip_id": "130",
+          "start": 1336,
+          "end": 1348,
+          "role": "describe",
+          "narration": "All the dem owes displayed together."
+        },
+        {
+          "clip_id": "131",
+          "start": 1348,
+          "end": 1360,
+          "role": "describe",
+          "narration": "Custom colors section looks great."
+        },
+        {
+          "clip_id": "132",
+          "start": 1360,
+          "end": 1368,
+          "role": "summary",
+          "narration": "Much easier to see everything at once."
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Demo page colors and rotation",
+      "start": 1368,
+      "end": 1424,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "133",
+          "start": 1368,
+          "end": 1380,
+          "role": "describe",
+          "narration": "I say the animated jiffs are too fast, needs slowing down"
+        },
+        {
+          "clip_id": "134",
+          "start": 1380,
+          "end": 1392,
+          "role": "describe",
+          "narration": "I request slowing down the animations"
+        },
+        {
+          "clip_id": "135",
+          "start": 1392,
+          "end": 1404,
+          "role": "describe",
+          "narration": "I notice the gear teeth appear motionless due to rotation increment"
+        },
+        {
+          "clip_id": "136",
+          "start": 1404,
+          "end": 1416,
+          "role": "joke",
+          "narration": "I explain the gear animation has a rotation aliasing problem"
+        },
+        {
+          "clip_id": "137",
+          "start": 1416,
+          "end": 1424,
+          "role": "summary",
+          "narration": "I describe how only the hub moves, not the teeth"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Animated GIF section",
+      "start": 1424,
+      "end": 1480,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "138",
+          "start": 1424,
+          "end": 1436,
+          "role": "describe",
+          "narration": "I finish my feedback about the rotation increment problem"
+        },
+        {
+          "clip_id": "139",
+          "start": 1436,
+          "end": 1448,
+          "role": "describe",
+          "narration": "Gear is spinning. Star is spinning."
+        },
+        {
+          "clip_id": "140",
+          "start": 1448,
+          "end": 1460,
+          "role": "describe",
+          "narration": "The animations work in the browser."
+        },
+        {
+          "clip_id": "141",
+          "start": 1460,
+          "end": 1472,
+          "role": "joke",
+          "narration": "Browsers handle animated jiff files natively so they display correctly."
+        },
+        {
+          "clip_id": "142",
+          "start": 1472,
+          "end": 1480,
+          "role": "summary",
+          "narration": "dem owe six verified."
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "User approval",
+      "start": 1480,
+      "end": 1536,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "143",
+          "start": 1480,
+          "end": 1492,
+          "role": "describe",
+          "narration": "I say much better after animation fixes"
+        },
+        {
+          "clip_id": "144",
+          "start": 1492,
+          "end": 1504,
+          "role": "describe",
+          "narration": "Much better than before."
+        },
+        {
+          "clip_id": "145",
+          "start": 1504,
+          "end": 1516,
+          "role": "describe",
+          "narration": "The dem owes are working correctly now."
+        },
+        {
+          "clip_id": "146",
+          "start": 1516,
+          "end": 1528,
+          "role": "joke",
+          "narration": "I give instructions about the wrench animation"
+        },
+        {
+          "clip_id": "147",
+          "start": 1528,
+          "end": 1536,
+          "role": "summary",
+          "narration": "Still typing my instructions"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Verifying more demos",
+      "start": 1536,
+      "end": 1592,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "148",
+          "start": 1536,
+          "end": 1548,
+          "role": "describe",
+          "narration": "Still typing instructions"
+        },
+        {
+          "clip_id": "149",
+          "start": 1548,
+          "end": 1560,
+          "role": "describe",
+          "narration": "Claude running display commands"
+        },
+        {
+          "clip_id": "150",
+          "start": 1560,
+          "end": 1572,
+          "role": "describe",
+          "narration": "Claude executing display commands"
+        },
+        {
+          "clip_id": "151",
+          "start": 1572,
+          "end": 1584,
+          "role": "joke",
+          "narration": "Claude reading documentation"
+        },
+        {
+          "clip_id": "152",
+          "start": 1584,
+          "end": 1592,
+          "role": "summary",
+          "narration": "Showing documentation content"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Wrench heart star demos",
+      "start": 1592,
+      "end": 1648,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "153",
+          "start": 1592,
+          "end": 1604,
+          "role": "describe",
+          "narration": "Showing rotation dem owes"
+        },
+        {
+          "clip_id": "154",
+          "start": 1604,
+          "end": 1616,
+          "role": "describe",
+          "narration": "Still on wrench rotation"
+        },
+        {
+          "clip_id": "155",
+          "start": 1616,
+          "end": 1628,
+          "role": "describe",
+          "narration": "I ask about the wrench animation"
+        },
+        {
+          "clip_id": "156",
+          "start": 1628,
+          "end": 1640,
+          "role": "describe",
+          "narration": "Claude explaining static vs animated images"
+        },
+        {
+          "clip_id": "157",
+          "start": 1640,
+          "end": 1648,
+          "role": "summary",
+          "narration": "Claude explains; I request a checkpoint"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Updating demo HTML wrench",
+      "start": 1648,
+      "end": 1704,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "158",
+          "start": 1648,
+          "end": 1660,
+          "role": "describe",
+          "narration": "I request a spinning wrench animation"
+        },
+        {
+          "clip_id": "159",
+          "start": 1660,
+          "end": 1672,
+          "role": "describe",
+          "narration": "Adding the spinning wrench jiff."
+        },
+        {
+          "clip_id": "160",
+          "start": 1672,
+          "end": 1684,
+          "role": "describe",
+          "narration": "Making the dem owe page more complete."
+        },
+        {
+          "clip_id": "161",
+          "start": 1684,
+          "end": 1696,
+          "role": "joke",
+          "narration": "A wrench that spins. Peak fave icon technology."
+        },
+        {
+          "clip_id": "162",
+          "start": 1696,
+          "end": 1704,
+          "role": "summary",
+          "narration": "dem owe page updated."
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Adding spinning star",
+      "start": 1704,
+      "end": 1760,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "163",
+          "start": 1704,
+          "end": 1716,
+          "role": "describe",
+          "narration": "Star already added; I approve the result"
+        },
+        {
+          "clip_id": "164",
+          "start": 1716,
+          "end": 1728,
+          "role": "describe",
+          "narration": "Three animations now shown; running tests"
+        },
+        {
+          "clip_id": "165",
+          "start": 1728,
+          "end": 1740,
+          "role": "describe",
+          "narration": "Running tests; I ask about code points"
+        },
+        {
+          "clip_id": "166",
+          "start": 1740,
+          "end": 1752,
+          "role": "joke",
+          "narration": "Git operations"
+        },
+        {
+          "clip_id": "167",
+          "start": 1752,
+          "end": 1760,
+          "role": "summary",
+          "narration": "Git verification"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "Browser refresh",
+      "start": 1760,
+      "end": 1816,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "168",
+          "start": 1760,
+          "end": 1772,
+          "role": "describe",
+          "narration": "Git commit operations"
+        },
+        {
+          "clip_id": "169",
+          "start": 1772,
+          "end": 1784,
+          "role": "describe",
+          "narration": "Git push"
+        },
+        {
+          "clip_id": "170",
+          "start": 1784,
+          "end": 1796,
+          "role": "describe",
+          "narration": "Status summary; I request a dem owe"
+        },
+        {
+          "clip_id": "171",
+          "start": 1796,
+          "end": 1808,
+          "role": "joke",
+          "narration": "I ask about documentation"
+        },
+        {
+          "clip_id": "172",
+          "start": 1808,
+          "end": 1816,
+          "role": "summary",
+          "narration": "I ask about font docs"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Animations confirmed",
+      "start": 1816,
+      "end": 1872,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "173",
+          "start": 1816,
+          "end": 1828,
+          "role": "describe",
+          "narration": "Claude checking docs"
+        },
+        {
+          "clip_id": "174",
+          "start": 1828,
+          "end": 1840,
+          "role": "describe",
+          "narration": "Claude adding font docs"
+        },
+        {
+          "clip_id": "175",
+          "start": 1840,
+          "end": 1852,
+          "role": "describe",
+          "narration": "Git commit/push"
+        },
+        {
+          "clip_id": "176",
+          "start": 1852,
+          "end": 1864,
+          "role": "joke",
+          "narration": "I ask about completion status"
+        },
+        {
+          "clip_id": "177",
+          "start": 1864,
+          "end": 1872,
+          "role": "summary",
+          "narration": "Verification against to do list"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Final status bug 5 and 6",
+      "start": 1872,
+      "end": 1928,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "178",
+          "start": 1872,
+          "end": 1884,
+          "role": "describe",
+          "narration": "Checking the final status table."
+        },
+        {
+          "clip_id": "179",
+          "start": 1884,
+          "end": 1896,
+          "role": "describe",
+          "narration": "Showing feature tests"
+        },
+        {
+          "clip_id": "180",
+          "start": 1896,
+          "end": 1908,
+          "role": "describe",
+          "narration": "Status table; 8 of 9 complete"
+        },
+        {
+          "clip_id": "181",
+          "start": 1908,
+          "end": 1920,
+          "role": "joke",
+          "narration": "One item is PARTIAL"
+        },
+        {
+          "clip_id": "182",
+          "start": 1920,
+          "end": 1928,
+          "role": "summary",
+          "narration": "I request a help text update"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Features and docs status",
+      "start": 1928,
+      "end": 1984,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "183",
+          "start": 1928,
+          "end": 1940,
+          "role": "describe",
+          "narration": "Editing help text"
+        },
+        {
+          "clip_id": "184",
+          "start": 1940,
+          "end": 1952,
+          "role": "describe",
+          "narration": "Building and showing help"
+        },
+        {
+          "clip_id": "185",
+          "start": 1952,
+          "end": 1964,
+          "role": "describe",
+          "narration": "Committing docs update, showing help text"
+        },
+        {
+          "clip_id": "186",
+          "start": 1964,
+          "end": 1976,
+          "role": "joke",
+          "narration": "All nine items complete"
+        },
+        {
+          "clip_id": "187",
+          "start": 1976,
+          "end": 1984,
+          "role": "summary",
+          "narration": "Claude marks to do items as complete"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "Updating help text",
+      "start": 1984,
+      "end": 2040,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "188",
+          "start": 1984,
+          "end": 1996,
+          "role": "describe",
+          "narration": "All nine items complete"
+        },
+        {
+          "clip_id": "189",
+          "start": 1996,
+          "end": 2008,
+          "role": "describe",
+          "narration": "Feature two already complete"
+        },
+        {
+          "clip_id": "190",
+          "start": 2008,
+          "end": 2020,
+          "role": "describe",
+          "narration": "I request a docs update"
+        },
+        {
+          "clip_id": "191",
+          "start": 2020,
+          "end": 2032,
+          "role": "joke",
+          "narration": "Documentation. The developer's least favorite task."
+        },
+        {
+          "clip_id": "192",
+          "start": 2032,
+          "end": 2040,
+          "role": "summary",
+          "narration": "Almost done."
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "Transparent foreground question",
+      "start": 2040,
+      "end": 2096,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "193",
+          "start": 2040,
+          "end": 2052,
+          "role": "describe",
+          "narration": "I ask about transparent foreground behavior"
+        },
+        {
+          "clip_id": "194",
+          "start": 2052,
+          "end": 2064,
+          "role": "describe",
+          "narration": "Why can't the foreground be transparent?"
+        },
+        {
+          "clip_id": "195",
+          "start": 2064,
+          "end": 2076,
+          "role": "describe",
+          "narration": "I ask how hard it would be to add"
+        },
+        {
+          "clip_id": "196",
+          "start": 2076,
+          "end": 2088,
+          "role": "joke",
+          "narration": "Claude updating docs"
+        },
+        {
+          "clip_id": "197",
+          "start": 2088,
+          "end": 2096,
+          "role": "summary",
+          "narration": "Claude updating README examples"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "Checking rendering code",
+      "start": 2096,
+      "end": 2152,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "198",
+          "start": 2096,
+          "end": 2108,
+          "role": "describe",
+          "narration": "Claude checks the rendering code."
+        },
+        {
+          "clip_id": "199",
+          "start": 2108,
+          "end": 2120,
+          "role": "describe",
+          "narration": "Looking for where foreground color is applied."
+        },
+        {
+          "clip_id": "200",
+          "start": 2120,
+          "end": 2132,
+          "role": "describe",
+          "narration": "Found the rendering logic."
+        },
+        {
+          "clip_id": "201",
+          "start": 2132,
+          "end": 2144,
+          "role": "joke",
+          "narration": "Documentation commit"
+        },
+        {
+          "clip_id": "202",
+          "start": 2144,
+          "end": 2152,
+          "role": "summary",
+          "narration": "Claude asks permission to implement"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Building transparent foreground",
+      "start": 2152,
+      "end": 2208,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "203",
+          "start": 2152,
+          "end": 2164,
+          "role": "describe",
+          "narration": "Building the transparent foreground feature."
+        },
+        {
+          "clip_id": "204",
+          "start": 2164,
+          "end": 2176,
+          "role": "describe",
+          "narration": "Still editing code"
+        },
+        {
+          "clip_id": "205",
+          "start": 2176,
+          "end": 2188,
+          "role": "describe",
+          "narration": "Still editing code in text.rs"
+        },
+        {
+          "clip_id": "206",
+          "start": 2188,
+          "end": 2200,
+          "role": "joke",
+          "narration": "Build running, then testing"
+        },
+        {
+          "clip_id": "207",
+          "start": 2200,
+          "end": 2208,
+          "role": "summary",
+          "narration": "Asking permission to display"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "Displaying transparent result",
+      "start": 2208,
+      "end": 2264,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "208",
+          "start": 2208,
+          "end": 2220,
+          "role": "describe",
+          "narration": "Displaying the transparent foreground result."
+        },
+        {
+          "clip_id": "209",
+          "start": 2220,
+          "end": 2232,
+          "role": "describe",
+          "narration": "Shows solid red square"
+        },
+        {
+          "clip_id": "210",
+          "start": 2232,
+          "end": 2244,
+          "role": "describe",
+          "narration": "Display failed; I point out the issue"
+        },
+        {
+          "clip_id": "211",
+          "start": 2244,
+          "end": 2256,
+          "role": "joke",
+          "narration": "Running new test"
+        },
+        {
+          "clip_id": "212",
+          "start": 2256,
+          "end": 2264,
+          "role": "summary",
+          "narration": "I point out transparent foreground is not working"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "All items complete",
+      "start": 2264,
+      "end": 2320,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "213",
+          "start": 2264,
+          "end": 2276,
+          "role": "describe",
+          "narration": "Still updating docs; shows error message"
+        },
+        {
+          "clip_id": "214",
+          "start": 2276,
+          "end": 2288,
+          "role": "describe",
+          "narration": "Error message shows transparent fg NOT supported"
+        },
+        {
+          "clip_id": "215",
+          "start": 2288,
+          "end": 2300,
+          "role": "describe",
+          "narration": "Still implementing"
+        },
+        {
+          "clip_id": "216",
+          "start": 2300,
+          "end": 2312,
+          "role": "joke",
+          "narration": "Still in middle of implementation"
+        },
+        {
+          "clip_id": "217",
+          "start": 2312,
+          "end": 2320,
+          "role": "summary",
+          "narration": "I confirm and request a commit"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "name": "Documentation commit",
+      "start": 2320,
+      "end": 2376,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "218",
+          "start": 2320,
+          "end": 2332,
+          "role": "describe",
+          "narration": "Verifying image transparency"
+        },
+        {
+          "clip_id": "219",
+          "start": 2332,
+          "end": 2344,
+          "role": "describe",
+          "narration": "Running git add"
+        },
+        {
+          "clip_id": "220",
+          "start": 2344,
+          "end": 2356,
+          "role": "describe",
+          "narration": "Commit about transparent foreground"
+        },
+        {
+          "clip_id": "221",
+          "start": 2356,
+          "end": 2368,
+          "role": "joke",
+          "narration": "Shows commit history"
+        },
+        {
+          "clip_id": "222",
+          "start": 2368,
+          "end": 2376,
+          "role": "summary",
+          "narration": "Claude asks about including the to do file"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "name": "Final push",
+      "start": 2376,
+      "end": 2432,
+      "duration": 56,
+      "clips": [
+        {
+          "clip_id": "223",
+          "start": 2376,
+          "end": 2388,
+          "role": "describe",
+          "narration": "Claude types the commit command"
+        },
+        {
+          "clip_id": "224",
+          "start": 2388,
+          "end": 2400,
+          "role": "describe",
+          "narration": "Committing to do file"
+        },
+        {
+          "clip_id": "225",
+          "start": 2400,
+          "end": 2412,
+          "role": "describe",
+          "narration": "Still committing locally"
+        },
+        {
+          "clip_id": "226",
+          "start": 2412,
+          "end": 2424,
+          "role": "joke",
+          "narration": "Shows GitHub after push"
+        },
+        {
+          "clip_id": "227",
+          "start": 2424,
+          "end": 2432,
+          "role": "summary",
+          "narration": "Repository updated."
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "name": "Done",
+      "start": 2432,
+      "end": 2448,
+      "duration": 16,
+      "clips": [
+        {
+          "clip_id": "228",
+          "start": 2432,
+          "end": 2440,
+          "role": "describe",
+          "narration": "Done. All bugs fixed, features added."
+        },
+        {
+          "clip_id": "229",
+          "start": 2440,
+          "end": 2448,
+          "role": "summary",
+          "narration": "I ask Claude to run tests"
+        }
+      ]
+    }
+  ]
+}

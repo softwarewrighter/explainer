@@ -1,0 +1,1 @@
+I asked Claude to execute each demo command, display the results, and document what happens.

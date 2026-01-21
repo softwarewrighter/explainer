@@ -1,0 +1,104 @@
+# Video Timeline for Narration Sync
+# Format: NARR_NUM VIDEO_START_SEC
+# VIDEO_START_SEC is timestamp in original OBS video
+# Frames extracted at 40s + (frame-1)*3s intervals
+#
+# Key landmarks from frame analysis:
+# Frame 25 (112s): Demo 1 AB favicon visible
+# Frame 50 (187s): Thread panic crash
+# Frame 70 (247s): Demo 4 white-on-blue + red error
+# Frame 80 (277s): Demo 5 rotation
+# Frame 90 (307s): Demo 6 animated GIF
+# Frame 110 (367s): Summary, font install prep
+# Frame 120 (397s): sudo pacman command
+# Frame 140 (457s): Rocket emoji working
+# Frame 150 (487s): Grinning emoji visible
+# Frame 160 (517s): Bug 3 transparent error
+# Frame 170 (547s): Wrench rotated
+# Frame 180 (577s): Spinning gear
+# Frame 190 (607s): All demos complete
+
+# Intro narrations - Claude reading demo guide (40-110s)
+03 40
+04 50
+05 60
+06 70
+07 82
+08 95
+
+# Demo 1: Text Favicons (100-145s)
+09 100
+10 112
+11 118
+12 125
+13 130
+14 136
+15 140
+
+# Unicode crash (145-235s)
+16 145
+17 175
+18 187
+19 197
+20 207
+21 217
+22 225
+23 232
+
+# Demo 4: Custom Colors (235-310s)
+24 238
+25 245
+26 250
+27 256
+28 262
+29 270
+30 278
+31 286
+32 294
+33 302
+
+# Demo 5: Rotation (310-345s)
+34 310
+35 320
+36 330
+37 340
+
+# Summary + Demo 6 (345-400s)
+38 348
+39 358
+40 368
+41 378
+42 386
+43 395
+
+# Font Install (400-455s)
+44 405
+45 420
+46 435
+47 448
+48 455
+
+# Unicode Retry (457-530s)
+49 460
+50 470
+51 480
+52 490
+53 500
+54 512
+55 522
+
+# Bug 3: Transparent (530-590s)
+56 532
+57 542
+58 552
+59 562
+60 575
+
+# Final demos (580-628s)
+61 585
+62 595
+63 605
+64 612
+65 618
+66 622
+67 626

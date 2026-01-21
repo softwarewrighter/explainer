@@ -1,0 +1,1 @@
+The animations work in the browser.

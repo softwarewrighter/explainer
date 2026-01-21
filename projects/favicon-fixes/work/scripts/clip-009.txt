@@ -1,0 +1,1 @@
+Claude begins by reading the source files.

@@ -1,0 +1,1 @@
+Demo 4 revisited with unicode. Star with transparent background.

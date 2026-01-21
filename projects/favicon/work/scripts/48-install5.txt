@@ -1,0 +1,1 @@
+Checking fc-list for emoji fonts. Noto Color Emoji is now available.

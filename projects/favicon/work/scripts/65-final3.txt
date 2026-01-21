@@ -1,0 +1,1 @@
+Code points do not work. Transparent backgrounds work. Rotation and animation work. But animations are too slow.

@@ -1,0 +1,95 @@
+# CORRECTED Video Timeline v2 - Based on actual frame analysis
+# Format: NARR_NUM VIDEO_START_SEC
+# VIDEO_START_SEC = timestamp in ORIGINAL OBS video where described content FIRST appears
+#
+# Key corrections from v1:
+# - AB visible: 115s (was 112s)
+# - White A on blue: 232s (was 245s) - 13s earlier!
+# - Rocket emoji: 442s (was 460s) - 18s earlier!
+# - Heart visible: 472s (was 490s) - 18s earlier!
+# - Sudo pacman: 412s (was 420s) - 8s earlier
+
+# Intro narrations (03-08): Claude reading demo guide
+03 40
+04 48
+05 56
+06 64
+07 72
+08 82
+
+# Demo 1: Text Favicons (09-15)
+09 90
+10 115
+11 118
+12 124
+13 130
+14 133
+15 136
+
+# Unicode crash (16-23) - crashes at ~157s, continues through ~232s
+16 140
+17 155
+18 165
+19 175
+20 185
+21 195
+22 205
+23 215
+
+# Demo 4: Custom Colors (24-33) - white A at 232s!
+24 222
+25 230
+26 234
+27 238
+28 242
+29 246
+30 250
+31 255
+32 260
+33 266
+
+# Demo 5: Rotation (34-37) - R visible at 277s
+34 272
+35 277
+36 283
+37 290
+
+# Summary + Demo 6 (38-43) - spinning S at 307s
+38 296
+39 304
+40 310
+41 318
+42 326
+43 340
+
+# Font Install (44-48) - sudo at 412s!
+44 365
+45 400
+46 420
+47 430
+48 436
+
+# Unicode Retry (49-55) - CRITICAL: rocket at 442s, heart at 472s!
+49 440
+50 444
+51 449
+52 455
+53 475
+54 485
+55 492
+
+# Bug 3: Transparent (56-60) - error at 517s
+56 500
+57 510
+58 516
+59 525
+60 535
+
+# Final demos (61-67)
+61 545
+62 565
+63 585
+64 600
+65 610
+66 618
+67 624

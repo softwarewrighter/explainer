@@ -1,0 +1,1 @@
+Bug number three. An error, transparent is not a valid color.

@@ -1,0 +1,1 @@
+Bug three, the PNG filename issue.

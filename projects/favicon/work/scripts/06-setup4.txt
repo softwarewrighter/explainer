@@ -1,0 +1,1 @@
+This is vibe coding. Instead of manually testing, I am letting the AI explore and report back.

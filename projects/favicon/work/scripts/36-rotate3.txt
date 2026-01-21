@@ -1,0 +1,1 @@
+Counter-clockwise rotation with dash capital R also works. 90 degrees the other way.

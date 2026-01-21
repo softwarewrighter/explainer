@@ -1,0 +1,133 @@
+# Part 1 Narration Script
+# Each segment is ~8 seconds for ~10 seconds of video
+# Format: [Timestamp] Narration text
+
+[00:15] Here is Claude Code, an AI coding agent, about to run through a demo guide I created for my favicon generator tool.
+
+[00:25] The tool generates favicon images from text or unicode symbols. Simple enough, right?
+
+[00:35] I asked Claude to execute each demo command, display the results, and document what happens.
+
+[00:45] This is vibe coding. Instead of manually testing, I am letting the AI explore and report back.
+
+[00:55] The demo guide covers text favicons, colors, unicode symbols, rotation, and animated GIFs.
+
+[01:05] Let us see what breaks.
+
+[01:15] First up, Demo 1, basic text favicons. Generate AB, X, and SW as favicon images.
+
+[01:25] The AB favicon works. Two letters rendered on a transparent background.
+
+[01:35] Notice the checkered pattern in the preview. That is ImageMagick showing transparency, not a bug.
+
+[01:45] Next, single letter X as a PNG file.
+
+[01:55] First issue. The command saved as favicon dot ico, but tried to display favicon dot png.
+
+[02:05] The dash dash png flag did not change the default output filename. That is bug number one.
+
+[02:15] The display command fails because the file does not exist at that path.
+
+[02:25] Moving on to unicode symbols. This should show a rocket emoji.
+
+[02:35] And we get our first crash. Thread panicked, no fonts available on system.
+
+[02:45] The tool is looking for an emoji font to render the rocket symbol, but this Linux system does not have one installed.
+
+[02:55] Claude checks for Noto Color Emoji font. Not found.
+
+[03:05] This is not a bug in the code. It is a documentation gap. The README should mention emoji font requirements.
+
+[03:15] For Linux users, you need to install noto fonts emoji package.
+
+[03:25] The AI recognizes this and decides to skip unicode demos for now and continue with text-based features.
+
+[03:35] Smart adaptation. Instead of getting stuck, it moves forward with what works.
+
+[03:45] Let me continue with the text-based demos that do work and show what we can preview.
+
+[03:55] Demo 4, Custom colors. White A on blue background.
+
+[04:05] Using hex color codes like hashtag FFFFFF for white and hashtag 0066CC for blue.
+
+[04:15] That works. Saved as white on blue dot ico.
+
+[04:25] Now let us try red X on black. But wait, the demo guide says dash f red, dash b black.
+
+[04:35] Error, Invalid foreground color red. Named colors are not supported.
+
+[04:45] That is bug number two. The tool only accepts hex codes, not CSS color names.
+
+[04:55] This is actually a reasonable feature to add. Red, black, white, blue are common enough.
+
+[05:05] Claude adapts again. Uses hex codes FF0000 for red and 000000 for black.
+
+[05:15] Now it works. We have a workaround, but we should add named color support.
+
+[05:25] Demo 5, Rotation. Letter R rotated 45 degrees clockwise.
+
+[05:35] The dash r flag works. We can see the R tilted in the preview.
+
+[05:45] Counter-clockwise rotation with dash capital R also works. 90 degrees the other way.
+
+[05:55] Transparent background with the dash capital T flag. That works too.
+
+[06:05] So far, hex colors work, rotation works, transparent flag works.
+
+[06:15] Demo 6, Animated GIFs. Spinning S with 30 degree rotation per frame.
+
+[06:25] The animation generates, but the rotation looks slow. 30 degrees per frame is not very dynamic.
+
+[06:35] That is something to note for the demo guide. Use larger rotation values for smoother animation.
+
+[06:45] Claude summarizes what worked so far. Text favicons, hex colors, rotation, animated GIFs.
+
+[06:55] Skipped demos 2 and 3, the unicode features, because no emoji font is installed.
+
+[07:05] Now here is where it gets interesting. Claude suggests installing the font.
+
+[07:15] Sudo pacman dash S noto fonts emoji. This is an Arch Linux system.
+
+[07:25] The font package downloads and installs. About 10 megabytes.
+
+[07:35] Font cache updates. Now let us re-run the unicode demos.
+
+[07:45] Checking fc-list for emoji fonts. Noto Color Emoji is now available.
+
+[07:55] Demo 2 retry, Unicode symbol by alias. Favicon dash dash unicode rocket.
+
+[08:05] It works! We have a rocket emoji favicon. No more panics.
+
+[08:15] Coffee emoji. Beautiful coffee cup on transparent background.
+
+[08:25] Wrench, star, heart. All the unicode aliases are working now.
+
+[08:35] Demo 3, Unicode by code point. U plus 1F600 is the grinning face emoji.
+
+[08:45] 2764 without the U plus prefix. That is the heart symbol.
+
+[08:55] Code points work just like aliases. Both ways to specify unicode characters.
+
+[09:05] Demo 4 revisited with unicode. Star with transparent background.
+
+[09:15] But the demo guide says dash b transparent. Let us see what happens.
+
+[09:25] Error, Invalid background color transparent. Bug number three.
+
+[09:35] The tool has a dash capital T flag for transparency, but does not accept the word transparent as a color value.
+
+[09:45] Easy fix. Use dash T instead. Fire emoji with transparent background works.
+
+[09:55] Demo 5 with unicode, Rotating wrench. 45 degrees clockwise.
+
+[10:05] Animated gear spinning. Animated star spinning. Both work with unicode symbols.
+
+[10:15] All unicode demos complete. 24 files generated total.
+
+[10:25] Final summary. Unicode aliases rocket, coffee, wrench, star, heart, fire, gear all work.
+
+[10:35] Code points work. Transparent backgrounds work. Rotation and animation work.
+
+[10:45] Five bugs found. Named colors, transparent as color value, PNG filename, animation speed defaults, and wrench symbol rendering as text.
+
+[10:55] Plus one documentation gap, emoji font requirements.

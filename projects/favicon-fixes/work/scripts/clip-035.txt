@@ -1,0 +1,1 @@
+Bug one fixed. Named colors work perfectly.

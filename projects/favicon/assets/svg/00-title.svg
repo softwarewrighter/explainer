@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0f"/>
+      <stop offset="50%" style="stop-color:#0d0d18"/>
+      <stop offset="100%" style="stop-color:#05050a"/>
+    </linearGradient>
+    <filter id="neon-pink" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="neon-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="neon-green" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Grid lines for cyberpunk feel -->
+  <g opacity="0.1">
+    <line x1="0" y1="270" x2="1920" y2="270" stroke="#00ffff" stroke-width="1"/>
+    <line x1="0" y1="540" x2="1920" y2="540" stroke="#00ffff" stroke-width="1"/>
+    <line x1="0" y1="810" x2="1920" y2="810" stroke="#00ffff" stroke-width="1"/>
+    <line x1="480" y1="0" x2="480" y2="1080" stroke="#00ffff" stroke-width="1"/>
+    <line x1="960" y1="0" x2="960" y2="1080" stroke="#00ffff" stroke-width="1"/>
+    <line x1="1440" y1="0" x2="1440" y2="1080" stroke="#00ffff" stroke-width="1"/>
+  </g>
+
+  <!-- Main title -->
+  <text x="960" y="380" font-family="'Impact', 'Arial Black', sans-serif" font-size="120" fill="#ff0080" text-anchor="middle" letter-spacing="12" filter="url(#neon-pink)">VIBE CODING</text>
+
+  <!-- Subtitle -->
+  <text x="960" y="500" font-family="'Courier New', monospace" font-size="48" fill="#00ffff" text-anchor="middle" filter="url(#neon-cyan)">AI Agent Finds Bugs in My Favicon Tool</text>
+
+  <!-- Decorative line -->
+  <line x1="400" y1="580" x2="1520" y2="580" stroke="#ff0080" stroke-width="3" filter="url(#neon-pink)"/>
+
+  <!-- Part indicator -->
+  <text x="960" y="680" font-family="'Courier New', monospace" font-size="36" fill="#00ff88" text-anchor="middle" filter="url(#neon-green)">Part 1: Discovery</text>
+
+  <!-- Bottom branding -->
+  <text x="960" y="900" font-family="'Courier New', monospace" font-size="28" fill="#666688" text-anchor="middle">@softwarewrighter</text>
+</svg>

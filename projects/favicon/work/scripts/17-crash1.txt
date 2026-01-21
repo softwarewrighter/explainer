@@ -1,0 +1,1 @@
+And we get our first crash. Thread panicked, no fonts available on system.

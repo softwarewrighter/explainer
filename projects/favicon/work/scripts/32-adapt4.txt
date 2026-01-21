@@ -1,0 +1,1 @@
+Claude adapts again. Uses hex codes FF0000 for red and 000000 for black.

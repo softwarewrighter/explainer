@@ -1,0 +1,1 @@
+Notice the checkered pattern in the preview. That is ImageMagick showing transparency, not a bug.

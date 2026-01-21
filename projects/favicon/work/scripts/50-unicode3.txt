@@ -1,0 +1,1 @@
+It works! We have a rocket emoji favicon. No more panics.

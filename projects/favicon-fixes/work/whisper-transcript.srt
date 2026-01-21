@@ -1,0 +1,1100 @@
+1
+00:00:00,000 --> 00:00:13,980
+ In Part 1, Claude discovered 6 bugs, 2 missing features, and a documentation gap.
+
+2
+00:00:13,980 --> 00:00:19,500
+ Now watch as Claude fixes every single one of them, runs the tests, and validates the
+
+3
+00:00:19,500 --> 00:00:21,080
+ results.
+
+4
+00:00:21,080 --> 00:00:25,260
+ This is Vibe Coding, Part 2.
+
+5
+00:00:25,260 --> 00:00:30,480
+ Here's the favicon repository on GitHub.
+
+6
+00:00:30,480 --> 00:00:34,160
+ Starting Claude code.
+
+7
+00:00:34,160 --> 00:00:40,500
+ Now Claude wants to know if I trust the files in this project folder.
+
+8
+00:00:40,500 --> 00:00:42,320
+ Welcome back.
+
+9
+00:00:42,320 --> 00:00:48,720
+ Now I ask Claude to read the todo file from the Part 1 video.
+
+10
+00:00:48,720 --> 00:00:54,200
+ Claude asks permission to read the todo file.
+
+11
+00:00:54,200 --> 00:00:56,600
+ Nine items total.
+
+12
+00:00:56,600 --> 00:01:01,040
+ Claude reads through the entire list.
+
+13
+00:01:01,040 --> 00:01:07,800
+ I tell Claude to start with the high severity bugs first.
+
+14
+00:01:07,800 --> 00:01:12,480
+ Claude starts planning the bug fixes.
+
+15
+00:01:12,480 --> 00:01:18,040
+ Claude begins by reading the source files.
+
+16
+00:01:18,040 --> 00:01:20,840
+ Forty-six Rust files to explore.
+
+17
+00:01:20,840 --> 00:01:24,320
+ This could take a while.
+
+18
+00:01:24,320 --> 00:01:29,660
+ It's building a mental map of the codebase.
+
+19
+00:01:29,660 --> 00:01:34,800
+ Searching for where colors are parsed in the code.
+
+20
+00:01:34,800 --> 00:01:36,960
+ Found the color module.
+
+21
+00:01:36,960 --> 00:01:40,760
+ Reading through it now.
+
+22
+00:01:40,760 --> 00:01:43,360
+ Still analyzing the color module.
+
+23
+00:01:43,360 --> 00:01:47,760
+ Sorry to thaw it, I'm going to explain it.
+
+24
+00:01:47,760 --> 00:01:53,320
+ Now Claude understands the issues and plans the fixes.
+
+25
+00:01:53,320 --> 00:01:57,280
+ Adding named color lookup table.
+
+26
+00:01:57,280 --> 00:02:03,320
+ Continuing named colors implementation.
+
+27
+00:02:03,320 --> 00:02:07,440
+ Adding a lookup table for named colors.
+
+28
+00:02:07,440 --> 00:02:15,320
+ Maroon, aqua, silver, gold, and more.
+
+29
+00:02:15,320 --> 00:02:21,400
+ Updating module exports for new color types.
+
+30
+00:02:21,400 --> 00:02:26,760
+ Adding Unicode code point detection logic.
+
+31
+00:02:26,760 --> 00:02:31,080
+ Adding Unicode code point validation.
+
+32
+00:02:31,080 --> 00:02:34,280
+ Adding tests and building projects.
+
+33
+00:02:34,280 --> 00:02:37,520
+ Asked Omar.
+
+34
+00:02:37,520 --> 00:02:41,840
+ Building and testing the changes.
+
+35
+00:02:41,840 --> 00:02:45,720
+ Running cargo tests.
+
+36
+00:02:45,720 --> 00:02:49,720
+ Compilation in progress.
+
+37
+00:02:49,720 --> 00:02:53,560
+ Running cargo tests.
+
+38
+00:02:53,560 --> 00:02:55,560
+ Rust compilation.
+
+39
+00:02:55,560 --> 00:03:00,120
+ Time for a coffee break.
+
+40
+00:03:00,120 --> 00:03:05,280
+ Tests running with CLI argument errors.
+
+41
+00:03:05,280 --> 00:03:10,320
+ Claude dividing CLI argument errors.
+
+42
+00:03:10,320 --> 00:03:15,720
+ Multiple bug tests complete.
+
+43
+00:03:15,720 --> 00:03:20,400
+ Test results showing fixes work.
+
+44
+00:03:20,400 --> 00:03:24,320
+ Running cargo Clippy.
+
+45
+00:03:24,320 --> 00:03:29,080
+ Cargo Clippy checking crates.
+
+46
+00:03:29,080 --> 00:03:30,880
+ Clippy complete.
+
+47
+00:03:30,880 --> 00:03:34,400
+ Updating to-do list.
+
+48
+00:03:34,400 --> 00:03:36,040
+ Test passed.
+
+49
+00:03:36,040 --> 00:03:40,080
+ I request checkpoint.
+
+50
+00:03:40,080 --> 00:03:45,320
+ I request checkpoint and the medium bugs.
+
+51
+00:03:45,320 --> 00:03:50,440
+ Running tests after checkpoint request.
+
+52
+00:03:50,440 --> 00:03:55,600
+ Running cargo format to clean up the code.
+
+53
+00:03:55,600 --> 00:04:01,080
+ Cargo lock number half.
+
+54
+00:04:01,080 --> 00:04:05,800
+ Running format and Clippy checks.
+
+55
+00:04:05,800 --> 00:04:07,560
+ No Clippy errors.
+
+56
+00:04:07,560 --> 00:04:11,360
+ Reviewing git diff.
+
+57
+00:04:11,360 --> 00:04:18,280
+ Add named colors, transparent support, and hex code points.
+
+58
+00:04:18,280 --> 00:04:20,200
+ Commit complete.
+
+59
+00:04:20,200 --> 00:04:23,800
+ Three bugs down.
+
+60
+00:04:23,800 --> 00:04:28,400
+ Pushing the changes to GitHub.
+
+61
+00:04:28,400 --> 00:04:31,120
+ Git push origin main.
+
+62
+00:04:31,120 --> 00:04:34,800
+ The magic words.
+
+63
+00:04:34,800 --> 00:04:36,000
+ Things are live.
+
+64
+00:04:36,000 --> 00:04:40,080
+ Moving on to the next book.
+
+65
+00:04:40,080 --> 00:04:43,360
+ Now testing PNG.
+
+66
+00:04:43,360 --> 00:04:47,960
+ File name output handling.
+
+67
+00:04:47,960 --> 00:04:58,760
+ Claude found that PNG files save as .ico instead of .png.
+
+68
+00:04:58,760 --> 00:05:04,600
+ Reading CLI argument handling code.
+
+69
+00:05:04,600 --> 00:05:08,520
+ Adding wrench to the symbols file.
+
+70
+00:05:08,520 --> 00:05:14,200
+ Also adding tool and hammer while we're here.
+
+71
+00:05:14,200 --> 00:05:19,120
+ Testing both file name and wrench symbol fixes.
+
+72
+00:05:19,120 --> 00:05:24,560
+ Bug 3, the PNG file name issue.
+
+73
+00:05:24,560 --> 00:05:29,560
+ Running cargo tests on the code base.
+
+74
+00:05:29,560 --> 00:05:35,080
+ Running cargo format and Clippy checks.
+
+75
+00:05:35,080 --> 00:05:39,000
+ Bug 3 fixed.
+
+76
+00:05:39,000 --> 00:05:40,480
+ All tests pass.
+
+77
+00:05:40,480 --> 00:05:44,800
+ No Clippy errors.
+
+78
+00:05:44,800 --> 00:05:50,440
+ I ask Claude to run the demo guide first.
+
+79
+00:05:50,440 --> 00:05:55,600
+ Claude is running through the demo checklist.
+
+80
+00:05:55,600 --> 00:06:01,360
+ Let's verify the demo's work.
+
+81
+00:06:01,360 --> 00:06:06,680
+ Running through the demo checklist.
+
+82
+00:06:06,680 --> 00:06:19,360
+ I notice Claude didn't display visual results.
+
+83
+00:06:19,360 --> 00:06:25,680
+ I ask to see actual display output for each demo.
+
+84
+00:06:25,680 --> 00:06:32,240
+ I ask to clean up old demo outputs first.
+
+85
+00:06:32,240 --> 00:06:38,360
+ Claude cleaning up old demo files before running again.
+
+86
+00:06:38,360 --> 00:06:46,800
+ Creating demo directory and running demo1 favicon.
+
+87
+00:06:46,800 --> 00:06:54,040
+ demo1 text favicon files being created and read.
+
+88
+00:06:54,040 --> 00:06:59,880
+ Claude generating demo2 Unicode symbol images.
+
+89
+00:06:59,880 --> 00:07:06,120
+ Now the demo2 symbol images are being created and verified.
+
+90
+00:07:06,120 --> 00:07:10,080
+ Claude reading demo2 image file sizes.
+
+91
+00:07:10,080 --> 00:07:18,720
+ demo2 verified starting demo3 coldpoint demos.
+
+92
+00:07:18,720 --> 00:07:27,120
+ Goom03 creating Unicode code point favicon images.
+
+93
+00:07:27,120 --> 00:07:33,440
+ Goom03 code point images created and verified.
+
+94
+00:07:33,440 --> 00:07:39,880
+ Goom04 creating custom color favicon images.
+
+95
+00:07:39,880 --> 00:07:47,400
+ Goom06 creating animated GIF files.
+
+96
+00:07:47,400 --> 00:07:53,480
+ Goom06 creating the animated GIF.
+
+97
+00:07:53,480 --> 00:08:00,000
+ Goom07 listing available symbol aliases.
+
+98
+00:08:00,000 --> 00:08:08,000
+ Claude showing all DOM who's passed with bug fixes verified.
+
+99
+00:08:08,000 --> 00:08:14,080
+ All bugs verified, I ask to see actual visual output.
+
+100
+00:08:14,080 --> 00:08:20,480
+ I point out Claude has not used display command yet.
+
+101
+00:08:20,480 --> 00:08:27,520
+ I request visual demonstration of all the demo's.
+
+102
+00:08:27,520 --> 00:08:35,560
+ Claude acknowledges and prepares to display image.
+
+103
+00:08:35,560 --> 00:08:42,400
+ Not finding image viewer and opening wrenchdom O.
+
+104
+00:08:42,400 --> 00:08:48,760
+ I clarify I want the display command specific.
+
+105
+00:08:48,760 --> 00:08:55,480
+ I clarify I want the image magic display command.
+
+106
+00:08:55,480 --> 00:09:02,800
+ I explain that display refers to the image magic display tool.
+
+107
+00:09:02,800 --> 00:09:07,960
+ Claude switching to image magic display command.
+
+108
+00:09:07,960 --> 00:09:13,680
+ Wrench image now displaying via image magic displaying.
+
+109
+00:09:13,680 --> 00:09:21,480
+ Wrench favicon displaying correctly in image magic window.
+
+110
+00:09:21,480 --> 00:09:23,120
+ Display command finished.
+
+111
+00:09:23,120 --> 00:09:27,560
+ Wrench icon shown successfully.
+
+112
+00:09:27,560 --> 00:09:31,280
+ We'll come back to this one.
+
+113
+00:09:31,280 --> 00:09:36,920
+ Laying the heart from hex code.
+
+114
+00:09:36,920 --> 00:09:42,200
+ They red on black dim all shows an empty red square.
+
+115
+00:09:42,200 --> 00:09:45,240
+ Something's wrong.
+
+116
+00:09:45,240 --> 00:09:51,640
+ Let me investigate the red on black issue.
+
+117
+00:09:51,640 --> 00:09:59,680
+ Claude discovers the X text is being converted to the X symbol alias.
+
+118
+00:09:59,680 --> 00:10:06,120
+ Claude reads the text resolution code to understand the bug.
+
+119
+00:10:06,120 --> 00:10:13,160
+ Claude identifies the bug and shows the fix for text flag handling.
+
+120
+00:10:13,160 --> 00:10:19,920
+ Building the fix, but there's a compilation error.
+
+121
+00:10:19,920 --> 00:10:27,240
+ After fixing, the X icon now renders correctly as liberal text.
+
+122
+00:10:27,240 --> 00:10:32,560
+ Now displaying the animated gear gif.
+
+123
+00:10:32,560 --> 00:10:35,440
+ The animation is too slow.
+
+124
+00:10:35,440 --> 00:10:39,280
+ I scout speed settings.
+
+125
+00:10:39,280 --> 00:10:44,560
+ Checking the help for frame delay options.
+
+126
+00:10:44,560 --> 00:10:46,020
+ Found it.
+
+127
+00:10:46,020 --> 00:10:51,600
+ Frame delay in milliseconds trying delay 20.
+
+128
+00:10:51,600 --> 00:10:57,640
+ Offering faster gear gif with 20 months prior.
+
+129
+00:10:57,640 --> 00:11:02,960
+ Still too slow so trying a frame delay of 10.
+
+130
+00:11:02,960 --> 00:11:06,080
+ Even delay 10 is too slow.
+
+131
+00:11:06,080 --> 00:11:10,200
+ Trying delay 1.
+
+132
+00:11:10,200 --> 00:11:13,040
+ Still too slow with delay 1.
+
+133
+00:11:13,040 --> 00:11:17,320
+ Something is wrong.
+
+134
+00:11:17,320 --> 00:11:23,120
+ Claude tries more frames with minimal delay.
+
+135
+00:11:23,120 --> 00:11:29,520
+ I suggest the argument might be named differently.
+
+136
+00:11:29,520 --> 00:11:36,000
+ Claude searches for how frame delay is used in the code.
+
+137
+00:11:36,000 --> 00:11:41,240
+ Searching through the code base for frame delay implementation.
+
+138
+00:11:41,240 --> 00:11:42,720
+ Found it.
+
+139
+00:11:42,720 --> 00:11:48,760
+ Jif uses send seconds, testing with delay are off.
+
+140
+00:11:48,760 --> 00:11:54,840
+ Generating CUS_JIF with 170 second delay.
+
+141
+00:11:54,840 --> 00:12:01,440
+ Classic units confusion happens to everyone.
+
+142
+00:12:01,440 --> 00:12:05,880
+ Claude reads the JIF runner source code.
+
+143
+00:12:05,880 --> 00:12:11,400
+ Reading more JIF related source files.
+
+144
+00:12:11,400 --> 00:12:13,240
+ Find the issue.
+
+145
+00:12:13,240 --> 00:12:14,240
+ Zero values.
+
+146
+00:12:14,240 --> 00:12:16,240
+ Default to slow.
+
+147
+00:12:16,240 --> 00:12:20,320
+ Generating proper JIF.
+
+148
+00:12:20,320 --> 00:12:25,760
+ Regenerating the JIF with correct timing.
+
+149
+00:12:25,760 --> 00:12:30,400
+ Still no visible movement in the display.
+
+150
+00:12:30,400 --> 00:12:35,480
+ Checking the JIF file properties with identity.
+
+151
+00:12:35,480 --> 00:12:39,180
+ Still no visible movement.
+
+152
+00:12:39,180 --> 00:12:43,680
+ Try different animation settings.
+
+153
+00:12:43,680 --> 00:12:49,960
+ Too fast now but discovered display doesn't show animations properly.
+
+154
+00:12:49,960 --> 00:12:52,200
+ Debugging animated GIFs.
+
+155
+00:12:52,200 --> 00:12:55,800
+ Living the dream.
+
+156
+00:12:55,800 --> 00:13:00,400
+ Maybe the browser will show it better.
+
+157
+00:13:00,400 --> 00:13:06,880
+ I ask for an HTML page to display the JIF in browser.
+
+158
+00:13:06,880 --> 00:13:12,920
+ Cloud creates the demo HTML page and opens it.
+
+159
+00:13:12,920 --> 00:13:20,020
+ The most displayed custom colors section looks great.
+
+160
+00:13:20,020 --> 00:13:21,640
+ Custom colors section looks great.
+
+161
+00:13:21,640 --> 00:13:26,080
+ Custom colors section looks great.
+
+162
+00:13:26,080 --> 00:13:40,600
+ Much easier to see everything at once.
+
+163
+00:13:40,600 --> 00:13:46,040
+ I request slowing down the animations.
+
+164
+00:13:46,040 --> 00:13:52,920
+ I notice the gear teeth appear motionless due to the rotation increment.
+
+165
+00:13:52,920 --> 00:13:59,440
+ I explain the gear animation has a rotation aliasing problem.
+
+166
+00:13:59,440 --> 00:14:03,760
+ I describe how only the hub moves.
+
+167
+00:14:03,760 --> 00:14:06,960
+ Not the tysmog.
+
+168
+00:14:06,960 --> 00:14:12,080
+ I finish my feedback about the rotation increment problem.
+
+169
+00:14:12,080 --> 00:14:17,260
+ Gear is spinning, star is spinning.
+
+170
+00:14:17,260 --> 00:14:21,760
+ The animations work in the browser.
+
+171
+00:14:21,760 --> 00:14:33,440
+ Users handle animated GIF files natively so they display correctly.
+
+172
+00:14:33,440 --> 00:14:38,940
+ I say much better after animation fixes.
+
+173
+00:14:38,940 --> 00:14:42,740
+ Much better than before.
+
+174
+00:14:42,740 --> 00:14:47,980
+ The demos are working correctly now.
+
+175
+00:14:47,980 --> 00:14:53,440
+ I give instructions about the wrench animation.
+
+176
+00:14:53,440 --> 00:14:57,440
+ Still typing my instructions.
+
+177
+00:14:57,440 --> 00:15:01,800
+ Still typing instructions.
+
+178
+00:15:01,800 --> 00:15:06,640
+ Cloud running display commands.
+
+179
+00:15:06,640 --> 00:15:11,480
+ Cloud executing display commands.
+
+180
+00:15:11,480 --> 00:15:19,360
+ Cloud reading documented.
+
+181
+00:15:19,360 --> 00:15:23,080
+ Showing documentation content.
+
+182
+00:15:23,080 --> 00:15:27,720
+ Showing rotation demos.
+
+183
+00:15:27,720 --> 00:15:31,560
+ Still on wrench rotation.
+
+184
+00:15:31,560 --> 00:15:37,240
+ I ask about the wrench animation.
+
+185
+00:15:37,240 --> 00:15:43,220
+ Cloud explaining static versus animated images.
+
+186
+00:15:43,220 --> 00:15:49,600
+ Cloud explains I request a checkpoint.
+
+187
+00:15:49,600 --> 00:15:55,040
+ I request a spinning wrench animation.
+
+188
+00:15:55,040 --> 00:15:59,760
+ Adding the spinning wrench method.
+
+189
+00:15:59,760 --> 00:16:05,040
+ Making the demo page more complete.
+
+190
+00:16:05,040 --> 00:16:11,080
+ A wrench that spins peak fav icon technology.
+
+191
+00:16:11,080 --> 00:16:15,640
+ Demo page updated.
+
+192
+00:16:15,640 --> 00:16:17,020
+ Star already added.
+
+193
+00:16:17,020 --> 00:16:21,680
+ I approve the result.
+
+194
+00:16:21,680 --> 00:16:27,660
+ Three animations now shown running tests.
+
+195
+00:16:27,660 --> 00:16:29,480
+ Running tests.
+
+196
+00:16:29,480 --> 00:16:33,440
+ I ask about codepoints.
+
+197
+00:16:33,440 --> 00:16:37,200
+ Get operations.
+
+198
+00:16:37,200 --> 00:16:43,440
+ Get verification.
+
+199
+00:16:43,440 --> 00:16:46,880
+ I thank you.
+
+200
+00:16:46,880 --> 00:16:50,280
+ Get push.
+
+201
+00:16:50,280 --> 00:16:52,340
+ Statistics summary.
+
+202
+00:16:52,340 --> 00:16:57,520
+ I request a demo.
+
+203
+00:16:57,520 --> 00:17:02,240
+ I ask about documentation.
+
+204
+00:17:02,240 --> 00:17:06,320
+ I ask about font docs.
+
+205
+00:17:06,320 --> 00:17:10,320
+ Log checking yetlocks.
+
+206
+00:17:10,320 --> 00:17:14,880
+ Cloud adding font docs.
+
+207
+00:17:14,880 --> 00:17:18,960
+ Get commit push.
+
+208
+00:17:18,960 --> 00:17:24,120
+ I ask about completion status.
+
+209
+00:17:24,120 --> 00:17:28,600
+ Verification against to-do list.
+
+210
+00:17:28,600 --> 00:17:33,120
+ Adding the final status table.
+
+211
+00:17:33,120 --> 00:17:37,200
+ Showing feature census.
+
+212
+00:17:37,200 --> 00:17:42,320
+ Status table 8 of 9 complete.
+
+213
+00:17:42,320 --> 00:17:46,700
+ My item is partial.
+
+214
+00:17:46,700 --> 00:17:51,640
+ I request help text update.
+
+215
+00:17:51,640 --> 00:17:55,320
+ Editing help text.
+
+216
+00:17:55,320 --> 00:17:59,800
+ Editing and showing help.
+
+217
+00:17:59,800 --> 00:18:01,440
+ Committing docs update.
+
+218
+00:18:01,440 --> 00:18:05,520
+ Showing help text.
+
+219
+00:18:05,520 --> 00:18:09,480
+ Online items complete.
+
+220
+00:18:09,480 --> 00:18:14,640
+ Cloud marks to-do items as complete.
+
+221
+00:18:14,640 --> 00:18:18,400
+ Online items complete.
+
+222
+00:18:18,400 --> 00:18:22,680
+ Feature 2 already complete.
+
+223
+00:18:22,680 --> 00:18:25,800
+ I request a docs update.
+
+224
+00:18:25,800 --> 00:18:28,320
+ Documentation.
+
+225
+00:18:28,320 --> 00:18:32,840
+ The developer's least favorite task.
+
+226
+00:18:32,840 --> 00:18:36,820
+ Almost done.
+
+227
+00:18:36,820 --> 00:18:42,760
+ I ask about transparent or foreground behavior.
+
+228
+00:18:42,760 --> 00:18:48,020
+ Why can't the foreground be transparent?
+
+229
+00:18:48,020 --> 00:18:53,920
+ I ask how hard it would be to add.
+
+230
+00:18:53,920 --> 00:18:58,880
+ Cloud updating docs.
+
+231
+00:18:58,880 --> 00:19:03,720
+ Cloud updating read me examples.
+
+232
+00:19:03,720 --> 00:19:07,880
+ Cloud checks the rendering code.
+
+233
+00:19:07,880 --> 00:19:12,720
+ Looking for where foreground color is applied.
+
+234
+00:19:12,720 --> 00:19:16,800
+ Found the rendering logic.
+
+235
+00:19:16,800 --> 00:19:21,280
+ Contamination command.
+
+236
+00:19:21,280 --> 00:19:26,000
+ Cloud asks permission to implement.
+
+237
+00:19:26,000 --> 00:19:31,800
+ Building the transparent foreground feature.
+
+238
+00:19:31,800 --> 00:19:34,400
+ Still editing code.
+
+239
+00:19:34,400 --> 00:19:38,000
+ Start with both.
+
+240
+00:19:38,000 --> 00:19:43,740
+ Still editing code in text.rs.
+
+241
+00:19:43,740 --> 00:19:49,020
+ Go running, then testing.
+
+242
+00:19:49,020 --> 00:19:53,440
+ Asking permission to display what.
+
+243
+00:19:53,440 --> 00:19:58,260
+ Displaying the transparent foreground result.
+
+244
+00:19:58,260 --> 00:20:03,720
+ Shows solid red square.
+
+245
+00:20:03,720 --> 00:20:08,200
+ Display failed so I point out the issue.
+
+246
+00:20:08,200 --> 00:20:12,800
+ We now run the new test.
+
+247
+00:20:12,800 --> 00:20:18,460
+ Note that dash f transparent does not work.
+
+248
+00:20:18,460 --> 00:20:20,520
+ Still updating docs.
+
+249
+00:20:20,520 --> 00:20:24,360
+ Shows error message.
+
+250
+00:20:24,360 --> 00:20:30,120
+ Dash f transparent causes an error.
+
+251
+00:20:30,120 --> 00:20:34,040
+ Still implementing.
+
+252
+00:20:34,040 --> 00:20:37,920
+ Still a little implementation.
+
+253
+00:20:37,920 --> 00:20:42,960
+ I confirm and request a commit.
+
+254
+00:20:42,960 --> 00:20:47,280
+ Verifying image transparency.
+
+255
+00:20:47,280 --> 00:20:51,320
+ Running git addy.
+
+256
+00:20:51,320 --> 00:20:55,760
+ Commit about see-through foreground.
+
+257
+00:20:55,760 --> 00:21:02,440
+ Shows commit history.
+
+258
+00:21:02,440 --> 00:21:07,640
+ Cloud asks about including the todo file.
+
+259
+00:21:07,640 --> 00:21:11,960
+ Cloud types the commit command.
+
+260
+00:21:11,960 --> 00:21:15,240
+ Submit the todo.
+
+261
+00:21:15,240 --> 00:21:18,920
+ Wrapping up.
+
+262
+00:21:18,920 --> 00:21:23,560
+ Shows github after push.
+
+263
+00:21:23,560 --> 00:21:26,760
+ Repository updated.
+
+264
+00:21:26,760 --> 00:21:29,400
+ Done.
+
+265
+00:21:29,400 --> 00:21:31,400
+ All bugs fixed.
+
+266
+00:21:31,400 --> 00:21:35,000
+ Features added.
+
+267
+00:21:35,000 --> 00:21:39,600
+ I ask cloud to run tests.
+
+268
+00:21:39,600 --> 00:21:43,740
+ All six bugs fixed plus new features and updated docs.
+
+269
+00:21:43,740 --> 00:21:48,040
+ Check part one in the description to see how cloud found these issues.
+
+270
+00:21:48,040 --> 00:21:51,320
+ The favicon tool is open source on github.
+
+271
+00:21:51,320 --> 00:21:55,840
+ Subscribe for more vibe coding.
+
+272
+00:21:55,840 --> 00:21:59,240
+ If you found this helpful, please like and subscribe.
+
+273
+00:21:59,240 --> 00:22:04,280
+ Hit the bell for notifications and leave a comment if you have questions.
+
+274
+00:22:04,280 --> 00:22:05,440
+ See you in the next one.
+
+275
+00:22:05,440 --> 00:22:05,600
+ Bye.
+

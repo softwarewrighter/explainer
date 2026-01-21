@@ -1,0 +1,1 @@
+So far, hex colors work, rotation works, transparent flag works.

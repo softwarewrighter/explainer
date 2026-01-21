@@ -1,0 +1,1 @@
+The dash dash png flag did not change the default output filename. That is bug number one.

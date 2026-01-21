@@ -1,0 +1,120 @@
+# Narration Scripts for Fave icon Fixes Video
+# Each clip's narration - review and edit before TTS
+# Format: CLIP_NUM: narration text
+# Guidelines: Max 2 sentences, ~10-15 words per sentence, conversational tone
+
+01: Here's the fave icon repository on GitHub. Let's start Claude Code and see what needs fixing.
+
+02: Claude Code starts up and I ask it to read the to do file with all the bugs we discovered in the part one video. Link in the description.
+
+03: The to do file shows six bugs, two feature requests, and one documentation gap. Nine items total to fix.
+
+04: I tell Claude to start with the high severity bugs first. Named colors, transparent, and unicode code points.
+
+05: Claude begins by reading the source files to understand the codebase structure.
+
+06: It searches for where colors are parsed in the code. Found forty six rust files to examine.
+
+07: After reading the code, Claude understands the issues and plans the implementation.
+
+08: First fix, adding named color support. Maroon, aqua, silver, gold, and other common color names.
+
+09: Next, implementing transparent as a valid color and improving the color matching logic.
+
+10: Now the unicode code point parsing. Supporting both the U plus format and plain hex numbers.
+
+11: Building the project with cargo to compile all the changes.
+
+12: Testing bug six, the unicode code point. U plus two seven six four now renders as a heart. Fixed.
+
+13: Testing bug one, named colors. Red on blue background works perfectly now.
+
+14: Running cargo clippy to check for any code issues. All three high severity bugs are fixed.
+
+15: Running cargo format to clean up the code style before committing.
+
+16: Creating the git commit. Add named colors, transparent support, and plain hex code points.
+
+17: Pushing the changes to the main branch on GitHub.
+
+18: Moving on to bug five, the wrench symbol that was rendering as text instead of an icon.
+
+19: Adding wrench, tool, and hammer to the symbols file so they render as icons.
+
+20: Fixing bug three, the PNG filename issue. Now it defaults to fave icon dot png as expected.
+
+21: All tests pass and clippy reports no errors. Time for a checkpoint.
+
+22: Running through the demo checklist. Demos one through four all pass verification.
+
+23: Demos five through seven also pass. All the high and medium severity bugs are fixed.
+
+24: I point out that Claude hasn't actually shown me the visual output yet. Show me the results.
+
+25: Claude starts creating animated GIF demos to show the fixes in action.
+
+26: Demo six, creating animated GIFs. A spinning gear and a spinning star.
+
+27: I ask to see the actual demo images displayed on screen.
+
+28: Displaying the wrench demo. The wrench symbol now renders correctly as an icon.
+
+29: This demo is broken. The red on black image has a display issue we need to investigate.
+
+30: Displaying the heart from hex code point. Two seven six four renders as a heart emoji.
+
+31: The animated GIF is too slow. Let's check the frame delay argument.
+
+32: Trying a faster frame delay of ten. Still not quite right.
+
+33: Even with frame delay one, it's still too slow. Something else is wrong.
+
+34: The GIF isn't moving at all now. Let's check the code to see how frame delay works.
+
+35: Found the issue. Frame delay in GIF format is measured in centiseconds, not milliseconds.
+
+36: Fixing the frame delay with proper centisecond values. Twenty centiseconds should work.
+
+37: Still no visible movement. Need to investigate the GIF rendering code further.
+
+38: Opening the demo page in the browser to see all the results together.
+
+39: The fave icon demo page shows custom colors and rotation demos all working.
+
+40: The animated GIF section is visible. Let's see if the animations are working now.
+
+41: I ask how it looks. Much better. The demos are displaying correctly in the browser.
+
+42: Displaying the remaining demo items to verify everything works.
+
+43: Checking the wrench, heart hex, and star transparent demos. All rendering correctly.
+
+44: Updating the demo HTML to include the spinning wrench GIF animation.
+
+45: Adding the spinning star animation to the demo page as well.
+
+46: Refreshing the browser to see the updated animations.
+
+47: Good. The animations are working correctly now. Spinning gear and star both animate.
+
+48: Checking the final status table. Bug five and bug six both pass.
+
+49: Feature one passes, feature two is partial, and the documentation is complete.
+
+50: Eight of nine items are complete. Just need to finish updating the help text.
+
+51: I ask why the foreground can't be transparent. That would be useful for cutout effects.
+
+52: Claude checks the rendering code to see if transparent foreground is possible.
+
+53: Building and testing the transparent foreground feature.
+
+54: Displaying the result. Transparent foreground creates a nice cutout effect.
+
+55: All nine original items are complete, plus we added a bonus feature for transparent foreground.
+
+56: Creating the final git commit for the documentation updates.
+
+57: Adding the fave icon to do file and pushing all changes to GitHub.
+
+58: Done. All bugs fixed, features added, and documentation updated. Ready for the test suite.

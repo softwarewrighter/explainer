@@ -1,0 +1,1 @@
+I asked an AI coding agent to demo my favicon generator. It found six bugs, two missing features, and a documentation gap. This is vibe coding.

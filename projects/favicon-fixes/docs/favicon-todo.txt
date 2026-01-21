@@ -1,0 +1,153 @@
+# Favicon CLI - Bug Fixes, Features, and Documentation
+# Discovered by Claude Code during guided demo session
+# For Part 2 video: AI fixes what AI found
+
+## Summary
+
+- 6 Bugs to fix
+- 2 Features to add
+- 1 Documentation gap to address
+
+Total: 9 items
+
+---
+
+## BUGS
+
+### Bug #1: Named Colors Not Supported
+**Severity**: High
+**Command that fails**: `favicon --symbol A --fg red --bg blue`
+**Error**: "Invalid fg color: red"
+**Expected**: Should accept CSS named colors (red, blue, green, etc.)
+**Recommended Fix**:
+- Add named color lookup table or use a color parsing crate
+- Support at minimum: red, green, blue, black, white, yellow, cyan, magenta
+- Consider using the `csscolorparser` crate for full CSS color support
+**Files to modify**: Color parsing module
+
+### Bug #2: "transparent" Rejected as Color
+**Severity**: High
+**Command that fails**: `favicon --symbol A --fg white --bg transparent`
+**Error**: "Invalid bg color: transparent"
+**Expected**: Should accept "transparent" for background (common use case)
+**Recommended Fix**:
+- Add special case handling for "transparent" keyword
+- Map to RGBA with alpha=0
+- Ensure PNG output preserves transparency
+**Files to modify**: Color parsing module, possibly image generation
+
+### Bug #3: PNG Filename Mismatch
+**Severity**: Medium
+**Issue**: Output filename doesn't match expected convention or --output flag behavior
+**Details**: When generating favicon, the output file naming is confusing
+**Recommended Fix**:
+- Ensure --output flag is respected exactly
+- Default to "favicon.png" if no output specified
+- Document the naming convention clearly
+**Files to modify**: CLI argument handling, output generation
+
+### Bug #4: Animation Speed Defaults
+**Severity**: Low
+**Issue**: Default animation speed values cause unexpected behavior
+**Details**: Users confused about what speed values mean or what defaults are
+**Recommended Fix**:
+- Document default speed values in --help
+- Consider more intuitive speed names (slow, medium, fast) as aliases
+- Add validation with helpful error messages for out-of-range values
+**Files to modify**: CLI help text, animation module
+
+### Bug #5: Wrench Symbol Renders as Text
+**Severity**: Medium
+**Command that fails**: `favicon --symbol wrench` or similar
+**Issue**: Symbol name "wrench" shows as literal text instead of wrench icon
+**Expected**: Should render the wrench emoji/icon
+**Recommended Fix**:
+- Add symbol name to emoji/unicode mapping
+- Support common symbol names: wrench, gear, star, heart, check, x, etc.
+- Use --list-symbols to show available named symbols
+**Files to modify**: Symbol parsing module
+
+### Bug #6: Unicode Code Points Fail
+**Severity**: High
+**Command that fails**: `favicon --symbol U+2764` or `favicon --symbol 2764`
+**Issue**: Numeric unicode code points don't render, show raw text instead
+**Expected**: U+2764 should render as heart emoji
+**Recommended Fix**:
+- Parse U+XXXX format and convert to character
+- Parse plain hex numbers (2764) as code points
+- Validate code point is valid unicode
+**Files to modify**: Symbol parsing module
+
+---
+
+## FEATURES
+
+### Feature #1: List Available Symbols
+**Priority**: Medium
+**Request**: `favicon --list-symbols` command
+**Details**:
+- Show all named symbols that can be used with --symbol
+- Group by category (arrows, shapes, emoji, etc.)
+- Show both name and unicode code point
+**Implementation**:
+- Add --list-symbols flag to CLI
+- Create symbol registry with names and code points
+- Pretty-print in categories
+
+### Feature #2: Color Format Examples in Help
+**Priority**: Low
+**Request**: Show accepted color formats in --help output
+**Details**:
+- Currently unclear what color formats are accepted
+- Should show: #RGB, #RRGGBB, #RRGGBBAA, named colors, transparent
+**Implementation**:
+- Update CLI help text with examples
+- Add "Examples:" section to --help
+
+---
+
+## DOCUMENTATION
+
+### Doc #1: Emoji Font Requirements
+**Priority**: High
+**Issue**: Tool silently fails or renders boxes when emoji font not installed
+**Current state**: No documentation about font requirements
+**Required documentation**:
+- Which emoji fonts are supported (Noto Color Emoji, Apple Color Emoji, etc.)
+- How to install emoji fonts on Linux, macOS, Windows
+- How to verify emoji font is working
+- Troubleshooting guide for "boxes instead of emoji" issue
+**Location**: README.md, possibly --help output
+
+---
+
+## Testing Checklist (for Part 2)
+
+After fixes, verify each with these commands:
+
+```bash
+# Bug #1: Named colors
+favicon --symbol A --fg red --bg blue -o test1.png
+
+# Bug #2: Transparent
+favicon --symbol A --fg white --bg transparent -o test2.png
+
+# Bug #3: Filename
+favicon --symbol A -o myfile.png && ls myfile.png
+
+# Bug #4: Animation
+favicon --symbol A --animate --speed 2 -o test4.gif
+
+# Bug #5: Named symbols
+favicon --symbol wrench -o test5.png
+
+# Bug #6: Code points
+favicon --symbol U+2764 -o test6.png
+favicon --symbol 2764 -o test6b.png
+
+# Feature #1: List symbols
+favicon --list-symbols
+
+# Feature #2: Help shows color formats
+favicon --help | grep -A5 color
+```

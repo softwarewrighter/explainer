@@ -1,0 +1,1 @@
+Six bugs found. Named colors, transparent as color value, PNG filename, animation speed defaults, wrench symbol rendering as text, and unicode code points.

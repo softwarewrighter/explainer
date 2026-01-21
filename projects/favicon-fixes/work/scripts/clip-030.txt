@@ -1,0 +1,1 @@
+Testing bug six, the unicode code point.

@@ -1,0 +1,1 @@
+Aha! Frame delay is in centiseconds.

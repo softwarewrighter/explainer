@@ -1,0 +1,1 @@
+Browsers handle animated GIF files natively so they display correctly.

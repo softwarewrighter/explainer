@@ -1,0 +1,1 @@
+Transparent foreground for cutout effects.

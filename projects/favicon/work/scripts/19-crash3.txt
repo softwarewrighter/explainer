@@ -1,0 +1,1 @@
+Claude checks for Noto Color Emoji font. Not found.

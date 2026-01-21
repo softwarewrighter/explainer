@@ -313,7 +313,7 @@ Location: `projects/rlm-cli/`
 
 Subject: RLM Level 3 Native CLI Execution (../rlm-project)
 
-Duration: ~2:45 so far (visualizer demo pending)
+Duration: ~3:00 so far (visualizer demo pending)
 
 ```
 projects/rlm-cli/
