@@ -53,6 +53,7 @@ See `/docs/style-guide.md` for complete guidelines.
 - Use only periods and commas for punctuation
 - No dashes, colons, semicolons, or question marks
 - No exclamation marks
+- **No special symbols** - spell out: "percent" not "%", "dollar" not "$", "at" not "@"
 - **No digits** - spell out all numbers as words (e.g., "sixty thousand" not "60,000")
 - Spell out acronyms (e.g., "Language Model" not "LLM", "Recursive Language Model" not "RLM")
 - Short, simple sentences work best
@@ -86,10 +87,62 @@ Each video project lives in `projects/<name>/` with:
 Use `scripts/build-avatar-clip.sh` for lip-synced avatar clips:
 1. SVG → PNG (rsvg-convert)
 2. PNG → base clip (vid-image with ken-burns)
-3. Stretch avatar (vid-avatar)
-4. Lip-sync (vid-lipsync on hive server)
-5. Composite (vid-composite)
+3. Stretch avatar (vid-avatar --avatar /path/to/avatar.mp4 --duration X --output Y)
+4. Lip-sync (vid-lipsync --avatar /path/to/stretched.mp4 --audio /path/to/audio.wav --output Y)
+5. Composite (vid-composite --content base.mp4 --avatar lipsync.mp4 --output composited.mp4 --size 200)
 6. Normalize volume (normalize-volume.sh)
+
+**Avatar Selection:**
+- **curmudgeon** - Current series (rlm-llm, rlm-llm-big, etc.)
+- **polo** - Older videos only
+- Source: `../video-publishing/reference/curmudgeon.mp4`
+
+**Fixing Avatar Without Re-lipsync:**
+If you only need to fix the background slide (not the audio), just re-composite:
+```bash
+# Render new slide, create new base video, composite existing lipsync avatar
+$VID_IMAGE --image work/stills/99-cta.png --duration 15.73 --output work/clips/99-cta-base-new.mp4
+$VID_COMPOSITE --content work/clips/99-cta-base-new.mp4 --avatar work/avatar/99-cta-lipsync.mp4 --output work/clips/99-cta-composited.mp4 --size 200
+```
+
+### Outro Requirements
+
+- **Duration**: 12 seconds (not 5)
+- **Music**: Same as title card (e.g., "Two Gong Fire")
+- **Fade out**: Music fades out over last 3 seconds
+
+```bash
+ffmpeg -y -loop 1 -i epilog-frame.png \
+  -i "/path/to/music.mp3" \
+  -filter_complex "[1:a]atrim=0:12,afade=t=out:st=9:d=3,volume=0.5[a]" \
+  -map 0:v -map "[a]" \
+  -c:v libx264 -crf 18 -t 12 -r 30 \
+  -c:a aac -b:a 192k -pix_fmt yuv420p \
+  work/clips/99c-epilog-ext.mp4
+```
+
+### Realigning Video to Audio (Without Re-recording)
+
+When audio duration changes, realign existing video instead of re-recording VHS:
+
+```bash
+# Target duration = audio_duration + 1 second
+# PTS factor = target_duration / source_duration
+
+# Example: 15s video → 18.2s target (audio 17.2s + 1s)
+# PTS = 18.2 / 15 = 1.213 (slow down)
+
+ffmpeg -y -i source.mp4 -i audio.wav \
+  -filter_complex "[0:v]setpts=1.213*PTS[v]" \
+  -map "[v]" -map 1:a \
+  -c:v libx264 -crf 18 -c:a aac -b:a 192k \
+  -shortest output.mp4
+```
+
+**Guidelines:**
+- Add 1 second padding to audio duration for video target
+- PTS > 1.0 = slow down video, PTS < 1.0 = speed up video
+- Always normalize after realignment
 
 ### Audio Verification with Whisper
 
@@ -268,3 +321,8 @@ ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p
 15. **VHS command splitting** - NEVER split a bash command across multiple Type/Enter pairs. One command = one Type + one Enter
 16. **VHS font size too small** - NEVER use FontSize below 28. Always use FontSize 32 for readable recordings
 17. **Guessing visual parameters** - NEVER guess font sizes or stroke widths. Always check `/docs/style-guide.md`
+18. **TTS special symbols** - Never use %, $, @, etc. Spell out "percent", "dollar", "at"
+19. **Wrong avatar** - Use curmudgeon for current series, not polo
+20. **Outro too short** - Outro must be 12 seconds with same music as title, fading out
+21. **Re-running VHS unnecessarily** - Realign existing video to new audio using PTS, don't re-record
+22. **Wrong tool options** - vid-avatar uses `--avatar`, vid-lipsync uses `--avatar` not `--video`
