@@ -1,0 +1,1 @@
+This is Engram in action. The model learns to recognize patterns and respond directly. Less compute, faster responses, aligned outputs. All from ten seconds of training on pattern examples.

@@ -1,0 +1,1 @@
+Engram is open source on GitHub. It caches past interactions by topic, so relevant context is recalled automatically. Try it on your own projects, link is in the description.

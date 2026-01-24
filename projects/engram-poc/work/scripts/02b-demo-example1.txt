@@ -1,0 +1,1 @@
+First, a loop completion. The baseline model starts explaining, generating markdown and a function definition. It does not know this is a simple pattern. The tuned model completes the loop directly. No explanation, just the code.

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Main Headline -->
+  <text x="960" y="120" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#00d4ff" text-anchor="middle">
+    Try It Yourself
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="200" font-family="Arial, sans-serif" font-size="56"
+        fill="#ffd93d" text-anchor="middle">
+    Open Source on GitHub
+  </text>
+
+  <!-- Engram Feature Box -->
+  <rect x="200" y="300" width="900" height="360" rx="16"
+        fill="#0f0f23" stroke="#ffd93d" stroke-width="6"/>
+
+  <text x="650" y="380" font-family="Arial, sans-serif" font-size="64"
+        font-weight="bold" fill="#ffd93d" text-anchor="middle">
+    Engram
+  </text>
+
+  <text x="650" y="460" font-family="Arial, sans-serif" font-size="44"
+        fill="#eee" text-anchor="middle">
+    Persistent Memory Cache
+  </text>
+
+  <text x="650" y="530" font-family="Arial, sans-serif" font-size="40"
+        fill="#aaa" text-anchor="middle">
+    Caches interactions by topic
+  </text>
+
+  <text x="650" y="590" font-family="Arial, sans-serif" font-size="40"
+        fill="#aaa" text-anchor="middle">
+    Recalls context automatically
+  </text>
+
+  <!-- Call to action (avoiding avatar zone) -->
+  <text x="600" y="760" font-family="Arial, sans-serif" font-size="48"
+        fill="#eee" text-anchor="middle">
+    Link in the description below
+  </text>
+
+  <!-- Avatar safe zone: keep x=1400-1920, y=800-1080 clear -->
+</svg>

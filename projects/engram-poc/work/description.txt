@@ -1,0 +1,36 @@
+Language models forget everything between conversations. You explain your project, share context, build understanding, then the session ends and it all vanishes.
+
+Engram fixes this with persistent memory, inspired by research from DeepSeek.
+
+In this demo, I compare a base SmolLM model (135M parameters) against one fine-tuned with Engram patterns. The results speak for themselves:
+
+- Loop completion: Base model gives verbose explanations. Tuned model completes directly.
+- Python main guard: Base model rambles. Tuned model outputs the exact completion.
+- HTTP 404 question: Base model writes a paragraph. Tuned model answers "404".
+
+Less compute. Faster responses. Aligned outputs. All from ten seconds of training on pattern examples.
+
+Engram caches past interactions by topic, so relevant context is recalled automatically. Try it on your own projects.
+
+---
+
+Links:
+- Engram POC: https://github.com/softwarewrighter/engram-poc
+- DeepSeek research: https://arxiv.org/abs/2401.06104
+
+---
+
+Chapters:
+0:00 - Title
+0:05 - The Problem
+0:22 - Demo: Base vs Tuned Model
+0:22 - Example 1: Loop Completion
+0:38 - Example 2: Python Main Guard
+0:50 - Example 3: HTTP 404
+1:05 - Conclusion
+1:33 - Call to Action
+1:44 - Outro
+
+---
+
+#llm #machinelearning #ai #deeplearning #python #opensource #finetuning #smollm #engram #persistentmemory #languagemodels #mlops #artificialintelligence #coding #programming #deepseek #huggingface #pytorch #mlx

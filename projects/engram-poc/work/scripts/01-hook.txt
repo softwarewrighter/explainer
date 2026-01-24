@@ -1,0 +1,1 @@
+Language models forget everything between conversations. You explain your project, share context, build understanding, then the session ends and it all vanishes. Engram fixes this with persistent memory, inspired by research from DeepSeek.

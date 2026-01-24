@@ -1,0 +1,1 @@
+Finally, a factual question. What is the HTTP status code for Not Found. The baseline responds with a full sentence explanation. The tuned model answers four oh four. Direct recall, no filler.

@@ -1,0 +1,1 @@
+Next, the Python main guard. Again, the baseline gives a verbose explanation with an unrelated function. The tuned model outputs the exact completion. It learned this pattern during training.

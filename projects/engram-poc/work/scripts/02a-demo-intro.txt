@@ -1,0 +1,1 @@
+This demo compares a base language model against one fine tuned with Engram patterns. The model is SmolLM with only one hundred thirty five million parameters. Small enough to train in seconds on a laptop.

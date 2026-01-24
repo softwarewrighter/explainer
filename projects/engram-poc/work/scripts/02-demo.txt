@@ -1,0 +1,1 @@
+Watch the difference. The baseline model gives verbose explanations, starting from scratch every time. The tuned model completes the pattern directly. No preamble, no markdown, just the answer. This is Engram in action.
