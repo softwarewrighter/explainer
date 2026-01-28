@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <!-- Transparent background - will be composited onto mainframe.jpg -->
+
+  <!-- Main Headline with solid background -->
+  <rect x="260" y="20" width="1400" height="90" rx="16" fill="#0f0f23" fill-opacity="0.92"/>
+  <text x="960" y="80" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#00d4ff" text-anchor="middle">
+    SHOWHORSES
+  </text>
+
+  <!-- Code Box -->
+  <rect x="100" y="120" width="1200" height="340" rx="16"
+        fill="#0f0f23" fill-opacity="0.92" stroke="#00d4ff" stroke-width="6"/>
+
+  <text x="140" y="175" font-family="Menlo, Monaco, monospace" font-size="36" fill="#4ade80">
+    ∇ SHOWHORSES;I
+  </text>
+  <text x="140" y="220" font-family="Menlo, Monaco, monospace" font-size="36" fill="#eee">
+      I←1
+  </text>
+  <text x="140" y="265" font-family="Menlo, Monaco, monospace" font-size="36" fill="#ffd93d">
+    NEXT: ⎕←(I⊃HORSES),' |',((I⊃POS)⍴' '),'⍟'
+  </text>
+  <text x="140" y="310" font-family="Menlo, Monaco, monospace" font-size="36" fill="#ccc">
+      ⎕DL 0.3
+  </text>
+  <text x="140" y="355" font-family="Menlo, Monaco, monospace" font-size="36" fill="#eee">
+      I←I+1
+  </text>
+  <text x="140" y="400" font-family="Menlo, Monaco, monospace" font-size="36" fill="#ff6b6b">
+      →NEXT×⍳5≥I
+  </text>
+
+  <!-- Annotation: Pick -->
+  <rect x="100" y="490" width="400" height="140" rx="12"
+        fill="#0f0f23" fill-opacity="0.92" stroke="#ffd93d" stroke-width="5"/>
+  <text x="140" y="540" font-family="Menlo, Monaco, monospace" font-size="40" fill="#ffd93d">
+    I⊃HORSES
+  </text>
+  <text x="140" y="600" font-family="Arial, sans-serif" font-size="36" fill="#eee">
+    ⊃ Pick Ith horse name
+  </text>
+
+  <!-- Annotation: Reshape -->
+  <rect x="540" y="490" width="400" height="140" rx="12"
+        fill="#0f0f23" fill-opacity="0.92" stroke="#ffd93d" stroke-width="5"/>
+  <text x="580" y="540" font-family="Menlo, Monaco, monospace" font-size="40" fill="#ffd93d">
+    N⍴' '
+  </text>
+  <text x="580" y="600" font-family="Arial, sans-serif" font-size="36" fill="#eee">
+    ⍴ Repeat N times
+  </text>
+
+  <!-- Annotation: Branch -->
+  <rect x="980" y="490" width="420" height="140" rx="12"
+        fill="#0f0f23" fill-opacity="0.92" stroke="#ff6b6b" stroke-width="5"/>
+  <text x="1020" y="540" font-family="Menlo, Monaco, monospace" font-size="40" fill="#ff6b6b">
+    →NEXT×⍳5≥I
+  </text>
+  <text x="1020" y="600" font-family="Arial, sans-serif" font-size="36" fill="#eee">
+    → Branch if I ≤ 5
+  </text>
+
+  <!-- Example output (avoiding avatar zone) -->
+  <rect x="100" y="670" width="1200" height="120" rx="12"
+        fill="#0f0f23" fill-opacity="0.92" stroke="#4ade80" stroke-width="5"/>
+  <text x="140" y="745" font-family="Menlo, Monaco, monospace" font-size="40" fill="#4ade80">
+    LUCKY   |         ⍟  THUNDER |    ⍟
+  </text>
+
+  <!-- Avatar safe zone: keep x=1400-1920, y=800-1080 clear -->
+</svg>

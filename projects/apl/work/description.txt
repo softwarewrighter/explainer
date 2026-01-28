@@ -1,0 +1,44 @@
+In 1972, I wrote my first program on an IBM 2741 Selectric terminal connected to an IBM 360 mainframe. It was a horse race simulator written in APL. Fifty years later, I recreated it using GNU APL on Linux.
+
+The code is about 40 lines, but it's not idiomatic. An experienced APL programmer could write it in far fewer.
+
+This video explores the hardware, the code, and the magic of array programming.
+
+Fun fact: The APL typeball had no lowercase letters. Just uppercase, numbers, and all those strange mathematical symbols.
+
+== Links ==
+
+GNU APL: https://www.gnu.org/software/apl/
+Source code: https://github.com/softwarewrighter/apl-horse-race
+APL Wiki: https://aplwiki.com/
+
+== APL Primitives Used ==
+
+⍴ reshape - create arrays
+? roll - random numbers
+⊃ pick - select from array
+→ branch - control flow
+/ reduce - aggregate operations
+⌈ ceiling/max
+∨ or
+
+== Audio Attribution ==
+
+Dial-up modem sounds: Public Domain
+Source: https://en.wikipedia.org/wiki/File:Dial_up_modem_noises.ogg
+
+== Chapters ==
+
+0:00 Intro
+0:05 My First Program
+0:29 The Terminal
+0:52 The Hardware
+1:05 The Race
+1:36 The Code
+1:52 SHOWHORSES
+2:09 RACE
+2:26 Array Operations
+2:47 Try It Yourself
+3:02 Outro
+
+#TBT #APL #RetroComputing #Programming #IBM360 #1970s #ArrayProgramming

@@ -1,0 +1,1 @@
+The show horses function uses pick to select each horse name and position from arrays. Reshape creates the progress bar, repeating a character N times. The branch statement loops until all five horses are displayed. Classic A P L patterns from fifty years ago.

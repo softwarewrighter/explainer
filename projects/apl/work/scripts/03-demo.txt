@@ -1,0 +1,1 @@
+Here is the program running. Five horses race across the screen. Each round, they advance random distances. Watch the progress bars grow. The first to cross the finish line wins. A P L updates all five horses with one array operation, no loops needed. In nineteen seventy two, watching the type ball spin was thrilling.

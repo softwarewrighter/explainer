@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <!-- Transparent background - will be composited onto mainframe.jpg -->
+
+  <!-- Main Headline with solid background -->
+  <rect x="260" y="50" width="1400" height="170" rx="16" fill="#0f0f23" fill-opacity="0.92"/>
+  <text x="960" y="120" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#00d4ff" text-anchor="middle">
+    Try It Yourself
+  </text>
+  <text x="960" y="195" font-family="Arial, sans-serif" font-size="56"
+        fill="#ffd93d" text-anchor="middle">
+    GNU APL on Linux or Mac
+  </text>
+
+  <!-- Instructions Box -->
+  <rect x="100" y="280" width="1100" height="340" rx="16"
+        fill="#0f0f23" fill-opacity="0.92" stroke="#4ade80" stroke-width="6"/>
+
+  <text x="150" y="350" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#4ade80">
+    Run the Race
+  </text>
+
+  <text x="150" y="420" font-family="Courier, monospace" font-size="40" fill="#eee">
+    $ apl
+  </text>
+  <text x="150" y="480" font-family="Courier, monospace" font-size="40" fill="#eee">
+    )LOAD race
+  </text>
+  <text x="150" y="540" font-family="Courier, monospace" font-size="40" fill="#eee">
+    RACE
+  </text>
+
+  <!-- Links note with background (avoiding avatar zone) -->
+  <rect x="100" y="660" width="1100" height="150" rx="16" fill="#0f0f23" fill-opacity="0.92"/>
+  <text x="650" y="720" font-family="Arial, sans-serif" font-size="44"
+        fill="#ccc" text-anchor="middle">
+    Source code and installation links in the description
+  </text>
+  <text x="650" y="785" font-family="Arial, sans-serif" font-size="48"
+        fill="#ffd93d" text-anchor="middle">
+    50 years of computing history in 40 lines
+  </text>
+
+  <!-- Avatar safe zone: keep x=1400-1920, y=800-1080 clear -->
+</svg>

@@ -1,0 +1,1 @@
+You can try this yourself. New A P L runs on Linux and Mac. The source code is in the description. Load the workspace, type RACE, and watch the horses run. Fifty years of computing history in forty lines of code.

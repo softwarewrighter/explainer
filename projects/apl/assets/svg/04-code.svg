@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <!-- Transparent background - will be composited onto mainframe.jpg -->
+
+  <!-- Main Headline with solid background -->
+  <rect x="260" y="30" width="1400" height="150" rx="16" fill="#0f0f23" fill-opacity="0.92"/>
+  <text x="960" y="90" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#00d4ff" text-anchor="middle">
+    The Code
+  </text>
+  <text x="960" y="155" font-family="Arial, sans-serif" font-size="56"
+        fill="#ffd93d" text-anchor="middle">
+    Two Functions, 36 Lines
+  </text>
+
+  <!-- SHOWHORSES Box -->
+  <rect x="100" y="210" width="550" height="340" rx="16"
+        fill="#0f0f23" fill-opacity="0.92" stroke="#4ade80" stroke-width="6"/>
+
+  <text x="150" y="270" font-family="Arial, sans-serif" font-size="44"
+        font-weight="bold" fill="#4ade80">
+    SHOWHORSES
+  </text>
+  <text x="150" y="330" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    7 lines
+  </text>
+  <text x="150" y="390" font-family="Arial, sans-serif" font-size="40" fill="#ccc">
+    Displays each horse
+  </text>
+  <text x="150" y="450" font-family="Arial, sans-serif" font-size="40" fill="#ccc">
+    with progress bar
+  </text>
+  <text x="150" y="510" font-family="Arial, sans-serif" font-size="40" fill="#ccc">
+    Loops 5 times
+  </text>
+
+  <!-- RACE Box -->
+  <rect x="700" y="210" width="550" height="340" rx="16"
+        fill="#0f0f23" fill-opacity="0.92" stroke="#ff6b6b" stroke-width="6"/>
+
+  <text x="750" y="270" font-family="Arial, sans-serif" font-size="44"
+        font-weight="bold" fill="#ff6b6b">
+    RACE
+  </text>
+  <text x="750" y="330" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    29 lines
+  </text>
+  <text x="750" y="390" font-family="Arial, sans-serif" font-size="40" fill="#ccc">
+    Initialize horses
+  </text>
+  <text x="750" y="450" font-family="Arial, sans-serif" font-size="40" fill="#ccc">
+    Main game loop
+  </text>
+  <text x="750" y="510" font-family="Arial, sans-serif" font-size="40" fill="#ccc">
+    Declare winner
+  </text>
+
+  <!-- Bottom highlight (avoiding avatar zone) -->
+  <rect x="100" y="590" width="1500" height="200" rx="16"
+        fill="#0f0f23" fill-opacity="0.92" stroke="#ffd93d" stroke-width="6"/>
+
+  <text x="150" y="660" font-family="Arial, sans-serif" font-size="44"
+        font-weight="bold" fill="#ffd93d">
+    No Libraries, No Frameworks
+  </text>
+  <text x="150" y="730" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    Just APL primitives: ⍴ reshape, ? roll, ⊃ pick, / reduce, → branch
+  </text>
+
+  <!-- Avatar safe zone: keep x=1400-1920, y=800-1080 clear -->
+</svg>

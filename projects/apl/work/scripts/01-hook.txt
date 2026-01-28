@@ -1,0 +1,1 @@
+In nineteen seventy two, I wrote my first program. It was a horse race simulator, written in A P L on an I B M mainframe. Fifty years later, I recreated it using new A P L on Linux. The code is about forty lines, but it is not idiomatic. An experienced A P L programmer could write it in far fewer.

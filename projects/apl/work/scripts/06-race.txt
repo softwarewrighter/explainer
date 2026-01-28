@@ -1,0 +1,1 @@
+RACE initializes five horses at position zero. Each round, roll generates random numbers one through three for all horses at once. No loop needed. A P L operates on entire arrays. The win condition uses reduce to check if any horse crossed the finish.

@@ -1,0 +1,1 @@
+A P L taught me to think in arrays. One statement updates all five positions. One expression finds the winner. The language is dense but expressive. These concepts, vectorized operations, functional patterns, are now mainstream. A P L was fifty years ahead.

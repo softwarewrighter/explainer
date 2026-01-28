@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <!-- Transparent background - will be composited onto library.jpg -->
+
+  <!-- Main Headline with solid background -->
+  <rect x="160" y="30" width="1600" height="180" rx="16" fill="#0f0f23" fill-opacity="0.92"/>
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#00d4ff" text-anchor="middle">
+    High School, 1972
+  </text>
+  <text x="960" y="175" font-family="Arial, sans-serif" font-size="56"
+        fill="#ffd93d" text-anchor="middle">
+    The Terminal in the Library
+  </text>
+
+  <!-- Terminal Box -->
+  <rect x="100" y="250" width="550" height="380" rx="16"
+        fill="#0f0f23" fill-opacity="0.92" stroke="#00d4ff" stroke-width="6"/>
+
+  <text x="150" y="320" font-family="Arial, sans-serif" font-size="44"
+        font-weight="bold" fill="#00d4ff">
+    IBM 2741
+  </text>
+  <text x="150" y="380" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    Modified Selectric
+  </text>
+  <text x="150" y="430" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    Special APL typeball
+  </text>
+  <text x="150" y="480" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    Paper printout
+  </text>
+  <text x="150" y="530" font-family="Arial, sans-serif" font-size="36" fill="#ccc">
+    ~13 characters per second
+  </text>
+
+  <!-- Modem Box -->
+  <rect x="700" y="250" width="550" height="320" rx="16"
+        fill="#0f0f23" fill-opacity="0.92" stroke="#ff6b6b" stroke-width="6"/>
+
+  <text x="750" y="320" font-family="Arial, sans-serif" font-size="44"
+        font-weight="bold" fill="#ff6b6b">
+    Acoustic Coupler
+  </text>
+  <text x="750" y="380" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    134.5 baud
+  </text>
+  <text x="750" y="430" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    Phone handset
+  </text>
+  <text x="750" y="480" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    Dial the mainframe
+  </text>
+
+  <!-- Learning Box (bottom left, avoiding avatar zone) -->
+  <rect x="100" y="610" width="1100" height="200" rx="16"
+        fill="#0f0f23" fill-opacity="0.92" stroke="#4ade80" stroke-width="6"/>
+
+  <text x="150" y="680" font-family="Arial, sans-serif" font-size="44"
+        font-weight="bold" fill="#4ade80">
+    Self-Paced Learning
+  </text>
+  <text x="150" y="740" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    A workspace contained an interactive APL tutorial
+  </text>
+
+  <!-- Avatar safe zone: keep x=1400-1920, y=800-1080 clear -->
+</svg>
