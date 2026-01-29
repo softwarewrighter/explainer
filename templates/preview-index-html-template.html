@@ -1,9 +1,63 @@
+<!--
+================================================================================
+PREVIEW INDEX TEMPLATE
+================================================================================
+
+This template is for creating work/preview/index.html in new video projects.
+
+SETUP INSTRUCTIONS:
+==================
+
+1. Create the preview directory and symlinks:
+
+   cd projects/YOUR_PROJECT
+   mkdir -p work/preview
+   cd work/preview
+   ln -sf ../clips clips
+   ln -sf ../audio audio
+   ln -sf ../stills stills
+   ln -sf ../../assets/images images
+   ln -sf ../../assets/svg svg
+
+2. Copy this template to work/preview/index.html
+
+3. Update the content below:
+   - Replace PROJECT_NAME and PROJECT_TITLE
+   - Add/remove clip sections as needed
+   - Uncomment video/audio/img tags as assets become available
+
+SYMLINK STRUCTURE:
+=================
+
+   work/preview/
+   ├── index.html          (this file)
+   ├── clips -> ../clips   (symlink)
+   ├── audio -> ../audio   (symlink)
+   ├── stills -> ../stills (symlink)
+   ├── images -> ../../assets/images (symlink)
+   └── svg -> ../../assets/svg (symlink)
+
+IMPORTANT: Use symlink paths (clips/, audio/, etc.) in HTML, NOT relative
+paths like ../clips/ or ../../assets/. This allows the preview to work
+when opened directly in a browser.
+
+ASSET REFERENCES:
+================
+
+   <video controls src="clips/00-title.mp4"></video>
+   <audio controls src="audio/01-hook.wav"></audio>
+   <img src="stills/01-hook.png" alt="Hook slide">
+   <img src="images/title.jpg" alt="Title image">
+   <img src="svg/01-hook.svg" alt="Hook SVG">
+
+================================================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROJECT_NAME: Production Tracker</title>
+    <title>PROJECT_NAME: Preview</title>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 1600px; margin: 0 auto; padding: 20px; background: #1a1a2e; color: #eee; }
         h1 { color: #00d4ff; border-bottom: 2px solid #00d4ff; padding-bottom: 10px; }
@@ -11,471 +65,91 @@
         h3 { color: #ffd93d; margin-top: 30px; }
         h4 { color: #4ade80; margin-top: 20px; }
         .section { background: #16213e; border-radius: 8px; padding: 20px; margin: 20px 0; border-left: 4px solid #00d4ff; }
-        .section.ready { border-left-color: #4ade80; }
-        .section.wip { border-left-color: #fbbf24; }
-        .section.blocked { border-left-color: #ff6b6b; background: #2d1f1f; }
-        .section.pending { border-left-color: #666; }
         video { max-width: 100%; border-radius: 8px; margin: 10px 0; }
         audio { width: 100%; max-width: 600px; margin: 10px 0; }
-        pre { background: #0f0f23; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 12px; line-height: 1.4; white-space: pre-wrap; word-wrap: break-word; }
-        code { background: #0f0f23; padding: 2px 6px; border-radius: 4px; font-size: 12px; }
-        a { color: #00d4ff; }
+        img { max-width: 100%; border-radius: 8px; margin: 10px 0; }
         table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px; }
         th, td { padding: 8px 12px; text-align: left; border: 1px solid #333; }
         th { background: #0f0f23; color: #00d4ff; }
         .status { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; }
         .status.done { background: #4ade80; color: #000; }
-        .status.wip { background: #fbbf24; color: #000; }
-        .status.blocked { background: #ff6b6b; color: #fff; }
         .status.pending { background: #666; color: #fff; }
+        .clip-row { display: flex; gap: 20px; margin: 20px 0; flex-wrap: wrap; }
+        .clip-card { background: #0f0f23; padding: 15px; border-radius: 8px; flex: 1; min-width: 300px; }
+        .clip-card h4 { margin-top: 0; }
         .script-content { background: #0f0f23; padding: 15px; border-radius: 8px; font-family: Georgia, serif; font-size: 14px; line-height: 1.6; margin: 10px 0; border-left: 3px solid #ffd93d; }
-        .cmd { background: #1a0a1a; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 12px; margin: 10px 0; border-left: 3px solid #00d4ff; overflow-x: auto; }
-        .file-path { color: #4ade80; font-family: monospace; font-size: 12px; }
-        .quick-ref { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
-        .quick-ref-card { background: #0f0f23; padding: 15px; border-radius: 8px; border: 2px solid #333; }
-        .quick-ref-card h4 { margin-top: 0; color: #00d4ff; font-size: 14px; }
-        .quick-ref-card table { font-size: 12px; }
-        .step { background: #0f0f23; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #333; }
-        .step.done { border-left-color: #4ade80; }
-        .step.wip { border-left-color: #fbbf24; }
-        .step.blocked { border-left-color: #ff6b6b; }
-        .step h4 { margin-top: 0; display: flex; align-items: center; gap: 10px; }
-        .char-count { font-size: 11px; color: #888; }
     </style>
 </head>
 <body>
 
 <h1>PROJECT_TITLE</h1>
-<p><strong>Project:</strong> PROJECT_NAME | <strong>Status:</strong> <span class="status pending">NOT STARTED</span></p>
-
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>Quick Reference</h2>
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-
-<div class="quick-ref">
-    <div class="quick-ref-card">
-        <h4>VHS Terminal</h4>
-        <table><tr><td>FontSize</td><td><strong>32</strong></td></tr><tr><td>Width</td><td>1920</td></tr><tr><td>Height</td><td>1080</td></tr><tr><td>Theme</td><td>Dracula</td></tr><tr><td>TypingSpeed</td><td>50ms</td></tr></table>
-    </div>
-    <div class="quick-ref-card">
-        <h4>SVG Fonts</h4>
-        <table><tr><td>Headlines</td><td><strong>96px</strong></td></tr><tr><td>Subtitles</td><td><strong>64px</strong></td></tr><tr><td>Box titles</td><td><strong>48px</strong></td></tr><tr><td>Body</td><td><strong>44px</strong></td></tr><tr><td>Minimum</td><td><strong>36px</strong></td></tr><tr><td>Strokes</td><td><strong>6px</strong></td></tr></table>
-    </div>
-    <div class="quick-ref-card">
-        <h4>TTS Rules</h4>
-        <table><tr><td>Max chars</td><td><strong>320</strong></td></tr><tr><td>Punctuation</td><td>. , only</td></tr><tr><td>Numbers</td><td>Spell out</td></tr><tr><td>LLM →</td><td>Language Model</td></tr><tr><td>RLM →</td><td>Recursive Language Model</td></tr></table>
-    </div>
-    <div class="quick-ref-card">
-        <h4>Audio/Video</h4>
-        <table><tr><td>Sample rate</td><td>44100 Hz</td></tr><tr><td>Channels</td><td>Stereo</td></tr><tr><td>Resolution</td><td>1920x1080</td></tr><tr><td>Clip length</td><td>8-12 sec</td></tr></table>
-    </div>
-</div>
-
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>Project Paths</h2>
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-
-<div class="section">
-<table>
-    <tr><th>Item</th><th>Path</th></tr>
-    <tr><td>Project Root</td><td class="file-path">/Users/mike/github/softwarewrighter/explainer/projects/PROJECT_NAME</td></tr>
-    <tr><td>Video Tools</td><td class="file-path">/Users/mike/github/softwarewrighter/video-publishing/tools/target/release/</td></tr>
-    <tr><td>SVG Assets</td><td class="file-path">assets/svg/</td></tr>
-    <tr><td>Image Assets</td><td class="file-path">assets/images/</td></tr>
-    <tr><td>Music</td><td class="file-path">assets/music/</td></tr>
-    <tr><td>Scripts</td><td class="file-path">work/scripts/</td></tr>
-    <tr><td>Audio</td><td class="file-path">work/audio/</td></tr>
-    <tr><td>Clips</td><td class="file-path">work/clips/</td></tr>
-    <tr><td>VHS</td><td class="file-path">work/vhs/</td></tr>
-    <tr><td>Stills</td><td class="file-path">work/stills/</td></tr>
-    <tr><td>Avatar</td><td class="file-path">work/avatar/</td></tr>
-</table>
-</div>
+<p><strong>Project:</strong> PROJECT_NAME</p>
+<p><em>Assets accessed via symlinks: clips/, audio/, stills/, images/, svg/</em></p>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
 <h2>00 - Title</h2>
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
 
-<div class="step pending">
-    <h4><span class="status pending">PENDING</span> 00-title.mp4</h4>
-
-    <table>
-        <tr><th>Item</th><th>Path</th><th>Status</th></tr>
-        <tr><td>Source Image</td><td class="file-path">assets/images/TITLE_IMAGE.jpg</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Scaled Image</td><td class="file-path">work/stills/title-scaled.jpg</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Music</td><td class="file-path">assets/music/MUSIC_FILE.mp3</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Output</td><td class="file-path">work/clips/00-title.mp4</td><td><span class="status pending">pending</span></td></tr>
-    </table>
-
-    <h4>Commands</h4>
-    <div class="cmd"># Scale image to 1920x1080
-ffmpeg -y -i assets/images/TITLE_IMAGE.jpg \
-  -vf "scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2" \
-  work/stills/title-scaled.jpg
-
-# Create title clip with music (6 seconds)
-ffmpeg -y -loop 1 -i work/stills/title-scaled.jpg \
-  -i "assets/music/MUSIC_FILE.mp3" \
-  -t 6 \
-  -filter_complex "[1:a]afade=t=in:st=0:d=1,afade=t=out:st=4.5:d=1.5,volume=0.4[a]" \
-  -map 0:v -map "[a]" \
-  -c:v libx264 -crf 18 -pix_fmt yuv420p \
-  -c:a aac -b:a 192k \
-  -shortest work/clips/00-title.mp4
-
-# Normalize audio
-./scripts/normalize-volume.sh work/clips/00-title.mp4</div>
+<div class="clip-row">
+    <div class="clip-card">
+        <h4><span class="status pending">PENDING</span> 00-title.mp4</h4>
+        <!-- <video controls src="clips/00-title.mp4"></video> -->
+        <p>Duration: X seconds | Music: MUSIC_NAME</p>
+    </div>
+    <div class="clip-card">
+        <h4>Source Image</h4>
+        <!-- <img src="images/TITLE_IMAGE.jpg" alt="Title image"> -->
+    </div>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
 <h2>01 - Hook (with Avatar)</h2>
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
 
-<div class="step pending">
+<div class="clip-card">
     <h4><span class="status pending">PENDING</span> 01-hook-composited.mp4</h4>
-
-    <table>
-        <tr><th>Item</th><th>Path</th><th>Status</th></tr>
-        <tr><td>SVG</td><td class="file-path">assets/svg/01-hook.svg</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Script</td><td class="file-path">work/scripts/01-hook.txt</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Audio</td><td class="file-path">work/audio/01-hook.wav</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Still</td><td class="file-path">work/stills/01-hook.png</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Base Clip</td><td class="file-path">work/clips/01-hook.mp4</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Avatar Stretched</td><td class="file-path">work/avatar/01-hook-avatar.mp4</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Avatar Lipsynced</td><td class="file-path">work/avatar/01-hook-lipsync.mp4</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Final Composited</td><td class="file-path">work/clips/01-hook-composited.mp4</td><td><span class="status pending">pending</span></td></tr>
-    </table>
-
-    <h4>Narration Script</h4>
-    <div class="script-content">HOOK_NARRATION_TEXT_HERE</div>
-    <p class="char-count">Characters: 0 / 320</p>
-
-    <h4>Commands</h4>
-    <div class="cmd"># Render SVG to PNG
-rsvg-convert -w 1920 -h 1080 assets/svg/01-hook.svg -o work/stills/01-hook.png
-
-# Generate TTS
-$VID_TTS --script work/scripts/01-hook.txt --output work/audio/01-hook.wav
-
-# Create base clip with ken-burns
-$VID_IMAGE --image work/stills/01-hook.png --audio work/audio/01-hook.wav \
-  --output work/clips/01-hook.mp4 --ken-burns 1.02
-
-# Get audio duration
-DURATION=$(ffprobe -v error -show_entries format=duration -of csv=p=0 work/audio/01-hook.wav)
-
-# Stretch avatar
-$VID_AVATAR --duration $DURATION --output work/avatar/01-hook-avatar.mp4
-
-# Lipsync (use port 3015 or 3016)
-$VID_LIPSYNC --audio work/audio/01-hook.wav \
-  --avatar work/avatar/01-hook-avatar.mp4 \
-  --output work/avatar/01-hook-lipsync.mp4 \
-  --host hive:3015
-
-# Composite
-$VID_COMPOSITE --background work/clips/01-hook.mp4 \
-  --overlay work/avatar/01-hook-lipsync.mp4 \
-  --output work/clips/01-hook-composited.mp4
-
-# Normalize
-./scripts/normalize-volume.sh work/clips/01-hook-composited.mp4</div>
+    <div class="script-content">HOOK_NARRATION_HERE</div>
+    <!-- <video controls src="clips/01-hook-composited.mp4"></video> -->
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>02 - Intro</h2>
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-
-<div class="step pending">
-    <h4><span class="status pending">PENDING</span> 02-intro.mp4</h4>
-
-    <table>
-        <tr><th>Item</th><th>Path</th><th>Status</th></tr>
-        <tr><td>SVG</td><td class="file-path">assets/svg/02-intro.svg</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Script</td><td class="file-path">work/scripts/02-intro.txt</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Audio</td><td class="file-path">work/audio/02-intro.wav</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Still</td><td class="file-path">work/stills/02-intro.png</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Output</td><td class="file-path">work/clips/02-intro.mp4</td><td><span class="status pending">pending</span></td></tr>
-    </table>
-
-    <h4>Narration Script</h4>
-    <div class="script-content">INTRO_NARRATION_TEXT_HERE</div>
-    <p class="char-count">Characters: 0 / 320</p>
-
-    <h4>Commands</h4>
-    <div class="cmd"># Render SVG
-rsvg-convert -w 1920 -h 1080 assets/svg/02-intro.svg -o work/stills/02-intro.png
-
-# Generate TTS
-$VID_TTS --script work/scripts/02-intro.txt --output work/audio/02-intro.wav
-
-# Create clip
-$VID_IMAGE --image work/stills/02-intro.png --audio work/audio/02-intro.wav \
-  --output work/clips/02-intro.mp4 --ken-burns 1.02
-
-# Normalize
-./scripts/normalize-volume.sh work/clips/02-intro.mp4</div>
-</div>
-
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>03 - VHS Demo Recording</h2>
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-
-<div class="section">
-    <h3 style="color:#ffd93d;">VHS Environment Variable Pattern (CRITICAL)</h3>
-    <p>The <code>LITELLM_MASTER_KEY</code> and other API credentials must be loaded using this proven pattern:</p>
-    <div class="cmd"># REQUIRED in tape file:
-Set Shell "bash"
-
-# Combine export with command using &&
-Type "export $(cat ~/.env | grep -v '^#' | xargs) && ./your-command"
-Enter</div>
-    <p><strong>What does NOT work:</strong></p>
-    <ul>
-        <li><code>source ~/.env</code> - not reliable in VHS</li>
-        <li>Separate export and command lines (environment may not persist)</li>
-        <li>Hide/Show blocks with exports (shell state may reset)</li>
-    </ul>
-    <p><strong>Env vars expected in ~/.env:</strong> LITELLM_MASTER_KEY, LITELLM_HOST</p>
-</div>
-
-<div class="step pending">
-    <h4><span class="status pending">PENDING</span> VHS Full Recording</h4>
-
-    <table>
-        <tr><th>Item</th><th>Path</th><th>Status</th></tr>
-        <tr><td>Tape File</td><td class="file-path">work/vhs/demo.tape</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Recording</td><td class="file-path">work/vhs/demo-32pt.mp4</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Stills</td><td class="file-path">work/vhs/stills-1s/</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Thumbnails</td><td class="file-path">work/vhs/thumbs-1s/</td><td><span class="status pending">pending</span></td></tr>
-    </table>
-
-    <h4>VHS Tape Template</h4>
-    <pre>
-# VHS Tape - DEMO_NAME
-# Run with: vhs work/vhs/demo.tape
-#
-# Note: Uses export $(cat ~/.env | grep -v '^#' | xargs) pattern
-# to load environment variables (LITELLM_MASTER_KEY etc)
-
-Output work/vhs/demo-32pt.mp4
-
-Set Shell "bash"          # CRITICAL: Must set shell to bash
-Set FontSize 32
-Set Width 1920
-Set Height 1080
-Set Theme "Dracula"
-Set Padding 20
-Set TypingSpeed 50ms
-
-Sleep 500ms
-
-# Export env vars and run demo (use && to chain)
-Type "export $(cat ~/.env | grep -v '^#' | xargs) && ./DEMO_SCRIPT.sh"
-Enter
-
-# Wait for demo to complete
-Sleep 300s</pre>
-
-    <h4>Commands to Capture and Process</h4>
-    <div class="cmd"># 1. Run VHS recording
-vhs work/vhs/demo.tape
-
-# 2. Create directories
-mkdir -p work/vhs/stills-1s work/vhs/thumbs-1s
-
-# 3. Extract stills every 1 second
-ffmpeg -i work/vhs/demo-32pt.mp4 -vf "fps=1" work/vhs/stills-1s/frame_%04d.png
-
-# 4. Create thumbnails for analysis (max 1200px for API)
-for f in work/vhs/stills-1s/*.png; do
-    name=$(basename "$f")
-    sips -Z 1200 "$f" --out "work/vhs/thumbs-1s/$name"
-done
-
-# 5. Review ALL thumbnails to identify segment boundaries</div>
-</div>
-
-<!-- VHS Segments Template -->
-
-<div class="step pending">
-    <h4><span class="status pending">PENDING</span> 03a-SEGMENT.mp4</h4>
-    <table>
-        <tr><th>Item</th><th>Path</th><th>Status</th></tr>
-        <tr><td>Script</td><td class="file-path">work/scripts/03a-SEGMENT.txt</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Audio</td><td class="file-path">work/audio/03a-SEGMENT.wav</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Raw Clip</td><td class="file-path">work/vhs/clips/03a-SEGMENT-raw.mp4</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Final</td><td class="file-path">work/clips/03a-SEGMENT.mp4</td><td><span class="status pending">pending</span></td></tr>
-    </table>
-    <h4>Narration Script</h4>
-    <div class="script-content">SEGMENT_NARRATION_HERE</div>
-    <p class="char-count">Characters: 0 / 320</p>
-    <h4>Segment Extraction</h4>
-    <div class="cmd"># Extract segment (update START and DURATION after analyzing stills)
-ffmpeg -y -ss START -i work/vhs/demo-32pt.mp4 -t DURATION \
-  -c:v libx264 -crf 18 -an work/vhs/clips/03a-SEGMENT-raw.mp4
-
-# Combine with audio
-# target_duration = audio_duration + 0.5
-# pts_factor = video_duration / target_duration
-ffmpeg -y -i work/vhs/clips/03a-SEGMENT-raw.mp4 -i work/audio/03a-SEGMENT.wav \
-  -filter_complex "[0:v]setpts=PTS_FACTOR*PTS[v]" \
-  -map "[v]" -map 1:a -c:v libx264 -crf 18 -c:a aac -b:a 192k \
-  -shortest work/clips/03a-SEGMENT.mp4
-
-./scripts/normalize-volume.sh work/clips/03a-SEGMENT.mp4</div>
-</div>
-
-<!-- Add more 03b, 03c, etc. segments as needed -->
-
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>OBS Recording (if needed)</h2>
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-
-<div class="step pending">
-    <h4><span class="status pending">PENDING</span> OBS Demo Recording</h4>
-
-    <table>
-        <tr><th>Item</th><th>Path</th><th>Status</th></tr>
-        <tr><td>OBS Recording</td><td class="file-path">work/obs/recording.mp4</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Stills</td><td class="file-path">work/obs/stills/</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Thumbnails</td><td class="file-path">work/obs/thumbs/</td><td><span class="status pending">pending</span></td></tr>
-    </table>
-
-    <h4>OBS Processing Commands</h4>
-    <div class="cmd"># Extract stills every 0.5 seconds
-ffmpeg -i work/obs/recording.mp4 -vf "fps=2" work/obs/stills/frame_%04d.jpg
-
-# Check dimensions (OBS often records at Retina resolution)
-sips -g pixelHeight -g pixelWidth work/obs/stills/frame_0001.jpg
-
-# Create thumbnails for analysis
-for f in work/obs/stills/*.jpg; do
-    name=$(basename "$f")
-    sips -Z 1200 "$f" --out "work/obs/thumbs/$name"
-done
-
-# Extract segment with scaling to 1920x1080
-ffmpeg -y -ss START -i work/obs/recording.mp4 -t DURATION \
-  -vf "scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2" \
-  -c:v libx264 -crf 18 -an work/obs/clips/segment-raw.mp4</div>
-</div>
+<!-- Add more sections as needed... -->
 
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
 <h2>99 - CTA (with Avatar)</h2>
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
 
-<div class="step pending">
+<div class="clip-card">
     <h4><span class="status pending">PENDING</span> 99-cta-composited.mp4</h4>
-
-    <table>
-        <tr><th>Item</th><th>Path</th><th>Status</th></tr>
-        <tr><td>SVG</td><td class="file-path">assets/svg/99-cta.svg</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Script</td><td class="file-path">work/scripts/99-cta.txt</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Audio</td><td class="file-path">work/audio/99-cta.wav</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Base Clip</td><td class="file-path">work/clips/99-cta.mp4</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Avatar Lipsynced</td><td class="file-path">work/avatar/99-cta-lipsync.mp4</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Final</td><td class="file-path">work/clips/99-cta-composited.mp4</td><td><span class="status pending">pending</span></td></tr>
-    </table>
-
-    <h4>Narration Script</h4>
-    <div class="script-content">CTA_NARRATION_TEXT_HERE</div>
-    <p class="char-count">Characters: 0 / 320</p>
-
-    <h4>Commands</h4>
-    <div class="cmd"># Same as 01-hook commands, but for CTA
-rsvg-convert -w 1920 -h 1080 assets/svg/99-cta.svg -o work/stills/99-cta.png
-$VID_TTS --script work/scripts/99-cta.txt --output work/audio/99-cta.wav
-$VID_IMAGE --image work/stills/99-cta.png --audio work/audio/99-cta.wav \
-  --output work/clips/99-cta.mp4 --ken-burns 1.02
-
-DURATION=$(ffprobe -v error -show_entries format=duration -of csv=p=0 work/audio/99-cta.wav)
-$VID_AVATAR --duration $DURATION --output work/avatar/99-cta-avatar.mp4
-
-$VID_LIPSYNC --audio work/audio/99-cta.wav \
-  --avatar work/avatar/99-cta-avatar.mp4 \
-  --output work/avatar/99-cta-lipsync.mp4 \
-  --host hive:3016
-
-$VID_COMPOSITE --background work/clips/99-cta.mp4 \
-  --overlay work/avatar/99-cta-lipsync.mp4 \
-  --output work/clips/99-cta-composited.mp4
-
-./scripts/normalize-volume.sh work/clips/99-cta-composited.mp4</div>
+    <div class="script-content">CTA_NARRATION_HERE</div>
+    <!-- <video controls src="clips/99-cta-composited.mp4"></video> -->
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
 <h2>99b - Epilog</h2>
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
 
-<div class="step pending">
+<div class="clip-card">
     <h4><span class="status pending">PENDING</span> 99b-epilog.mp4</h4>
-    <table>
-        <tr><th>Item</th><th>Path</th><th>Status</th></tr>
-        <tr><td>Source</td><td class="file-path">../video-publishing/reference/epilog/99b-epilog.mp4</td><td><span class="status pending">pending</span></td></tr>
-        <tr><td>Output</td><td class="file-path">work/clips/99b-epilog.mp4</td><td><span class="status pending">pending</span></td></tr>
-    </table>
-    <div class="cmd"># Copy standard epilog
-cp ../video-publishing/reference/epilog/99b-epilog.mp4 work/clips/</div>
+    <!-- <video controls src="clips/99b-epilog.mp4"></video> -->
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
 <h2>99c - Epilog Extension</h2>
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
 
-<div class="step pending">
+<div class="clip-card">
     <h4><span class="status pending">PENDING</span> 99c-epilog-ext.mp4</h4>
-    <table>
-        <tr><th>Item</th><th>Path</th><th>Status</th></tr>
-        <tr><td>Output</td><td class="file-path">work/clips/99c-epilog-ext.mp4</td><td><span class="status pending">pending</span></td></tr>
-    </table>
-    <div class="cmd"># Extract last frame from epilog
-ffmpeg -y -sseof -1 -i work/clips/99b-epilog.mp4 -vframes 1 work/stills/epilog-frame.png
-
-# Create extension with music fade (12 seconds)
-ffmpeg -y -loop 1 -i work/stills/epilog-frame.png \
-  -i "assets/music/MUSIC_FILE.mp3" \
-  -t 12 \
-  -filter_complex "[1:a]afade=t=out:st=7:d=5,volume=0.4[a]" \
-  -map 0:v -map "[a]" \
-  -c:v libx264 -crf 18 -pix_fmt yuv420p \
-  -c:a aac -b:a 192k \
-  -shortest work/clips/99c-epilog-ext.mp4</div>
+    <!-- <video controls src="clips/99c-epilog-ext.mp4"></video> -->
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>Final Assembly</h2>
+<h2>Full Preview</h2>
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
 
-<div class="step pending">
-    <h4><span class="status pending">PENDING</span> Concat List</h4>
-    <p class="file-path">work/clips/concat-list.txt</p>
-    <pre>
-/Users/mike/github/softwarewrighter/explainer/projects/PROJECT_NAME/work/clips/00-title.mp4
-/Users/mike/github/softwarewrighter/explainer/projects/PROJECT_NAME/work/clips/01-hook-composited.mp4
-/Users/mike/github/softwarewrighter/explainer/projects/PROJECT_NAME/work/clips/02-intro.mp4
-# Add VHS segments here
-/Users/mike/github/softwarewrighter/explainer/projects/PROJECT_NAME/work/clips/03a-SEGMENT.mp4
-# ...
-/Users/mike/github/softwarewrighter/explainer/projects/PROJECT_NAME/work/clips/99-cta-composited.mp4
-/Users/mike/github/softwarewrighter/explainer/projects/PROJECT_NAME/work/clips/99b-epilog.mp4
-/Users/mike/github/softwarewrighter/explainer/projects/PROJECT_NAME/work/clips/99c-epilog-ext.mp4</pre>
-
-    <h4>Final Commands</h4>
-    <div class="cmd"># Verify all clips are normalized
-for clip in work/clips/*.mp4; do
-    ./scripts/normalize-volume.sh "$clip"
-done
-
-# Concatenate
-$VID_CONCAT --list work/clips/concat-list.txt --output work/preview/preview.mp4 --reencode
-
-# Verify duration
-ffprobe -v error -show_entries format=duration -of csv=p=0 work/preview/preview.mp4
-
-# Whisper verification
-ffmpeg -y -i work/preview/preview.mp4 -ar 16000 -ac 1 -c:a pcm_s16le /tmp/full-audio.wav
-whisper-cli -m ~/.whisper-models/ggml-base.en.bin -f /tmp/full-audio.wav -nt</div>
+<div class="clip-card">
+    <h4><span class="status pending">PENDING</span> preview.mp4</h4>
+    <p><em>Final concatenated video will appear here</em></p>
+    <!-- <video controls src="preview.mp4"></video> -->
 </div>
 
 </body>

@@ -63,12 +63,107 @@ See `/docs/tts-narration-guidelines.md` and `/docs/style-guide.md` for complete 
 ### Video Tools
 
 Tools are in `../video-publishing/tools/target/release/`:
-- `vid-tts` - Text to speech
+- `vid-tts` - Text to speech (VibeVoice only)
 - `vid-image` - Create video from image
 - `vid-avatar` - Stretch avatar duration
 - `vid-lipsync` - Lip sync avatar to audio
 - `vid-composite` - Overlay avatar on content
 - `vid-concat` - Concatenate clips
+
+### VoxCPM TTS (Voice Cloning)
+
+For voice-cloned narration, use VoxCPM via Gradio API instead of vid-tts.
+
+**Server:** `http://curiosity:7860`
+
+**CRITICAL: Sequential Calls Only**
+All TTS API calls to VoxCPM MUST be made sequentially. Never queue multiple requests in parallel - this overloads the GPU and produces garbled output. Wait for each request to complete before starting the next.
+
+**Working Settings:**
+- `do_normalize=False` (True drops words)
+- `cfg_value_input=2.0` (default)
+- `inference_timesteps_input=10` (default)
+- Use "M H C" instead of "mHC" for proper pronunciation of acronyms
+
+**Reference audio:** Use `work/reference/mike-ref-17s.wav` with transcript:
+> "In this session, I'm going to write a small command line tool and explain the decision making process as I go. I'll begin with a basic skeleton, argument parsing, a configuration loader, and a minimal mean function."
+
+**CRITICAL: The prompt text MUST match what is actually spoken in the reference audio.** Mismatched prompt text produces garbled output. Use whisper to verify the reference audio content.
+
+**Curl API Pattern:**
+```bash
+REF_PATH="/tmp/gradio/.../mike-ref-17s.wav"  # Upload first
+PROMPT="In this session, I'm going to write a small command line tool..."
+
+cat > /tmp/tts.json << JSONEOF
+{"data": ["Your text here", {"path": "$REF_PATH", "url": "http://curiosity:7860/gradio_api/file=$REF_PATH", "orig_name": "mike-ref-17s.wav", "mime_type": "audio/wav", "is_stream": false, "meta": {"_type": "gradio.FileData"}}, "$PROMPT", 2.0, 10, false]}
+JSONEOF
+
+ID=$(curl -s -X POST "http://curiosity:7860/gradio_api/call/generate" -H "Content-Type: application/json" -d @/tmp/tts.json | jq -r '.event_id')
+sleep 20  # Wait for generation
+RESULT=$(curl -s "http://curiosity:7860/gradio_api/call/generate/$ID")
+URL=$(echo "$RESULT" | grep -o '"url": "[^"]*"' | head -1 | cut -d'"' -f4)
+curl -s "$URL" -o output.wav
+```
+
+**Always verify with whisper after generation:**
+```bash
+ffmpeg -y -i output.wav -ar 16000 -ac 1 -c:a pcm_s16le /tmp/verify.wav
+whisper-cli -m ~/.whisper-models/ggml-base.en.bin -f /tmp/verify.wav -nt
+```
+
+**Setup:**
+```bash
+cd projects/YOUR_PROJECT/tts
+uv venv && source .venv/bin/activate
+uv pip install gradio_client
+```
+
+**Usage:**
+```bash
+source tts/.venv/bin/activate
+python tts/client.py "Your narration text here" work/audio/01-hook.wav
+```
+
+### MuseTalk Lip-Sync Workflow
+
+**Servers:** `http://hive:3015` and `http://hive:3016` (can run in parallel)
+
+**CRITICAL: The workflow requires silent avatar video + separate audio:**
+
+1. **Stretch curmudgeon avatar to match audio duration:**
+```bash
+$VID_AVATAR --avatar ../video-publishing/reference/curmudgeon.mp4 \
+  --duration $(ffprobe -v error -show_entries format=duration -of csv=p=0 work/audio/01-hook.wav) \
+  --output work/avatar/01-hook-stretched.mp4
+```
+
+2. **Remove audio from stretched avatar (make silent):**
+```bash
+ffmpeg -y -i work/avatar/01-hook-stretched.mp4 -an -c:v copy work/avatar/01-hook-silent.mp4
+```
+
+3. **Run lip-sync with silent video + audio:**
+```bash
+$VID_LIPSYNC --avatar work/avatar/01-hook-silent.mp4 \
+  --audio work/audio/01-hook.wav \
+  --output work/avatar/01-hook-lipsync.mp4 \
+  --server http://hive:3015
+```
+
+4. **Composite lip-synced avatar onto base video:**
+```bash
+ffmpeg -y -i work/clips/01-hook-base.mp4 -i work/avatar/01-hook-lipsync.mp4 \
+  -filter_complex "[1:v]scale=200:200[avatar];[0:v][avatar]overlay=W-w-20:H-h-20:shortest=1[outv]" \
+  -map "[outv]" -map 0:a -c:v libx264 -crf 18 -c:a copy \
+  work/clips/01-hook-composited.mp4
+```
+
+**Notes:**
+- Use port 3016 for parallel processing (e.g., CTA while hook processes)
+- If server returns 0 frames, restart the MuseTalk service on hive
+- Long audio (>15s) works fine; no need to segment
+- The vid-composite tool may fail if avatar has no audio; use ffmpeg directly
 
 ### Project Structure
 
@@ -326,3 +421,6 @@ ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p
 20. **Outro too short** - Outro must be 12 seconds with same music as title, fading out
 21. **Re-running VHS unnecessarily** - Realign existing video to new audio using PTS, don't re-record
 22. **Wrong tool options** - vid-avatar uses `--avatar`, vid-lipsync uses `--avatar` not `--video`
+23. **Parallel remote service calls** - NEVER make parallel API calls to the same service (e.g., VoxCPM). Always wait for each request to complete before starting the next. Parallel calls overload the GPU and produce garbled output.
+24. **Wrong TTS prompt text** - The prompt text MUST match the reference audio exactly. Use whisper to verify. Mismatched prompts produce unintelligible output.
+25. **TTS acronyms** - Spell out acronyms with spaces for proper pronunciation: "M H C" not "mHC", "R L M" not "RLM"
