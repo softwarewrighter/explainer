@@ -1,1 +1,1 @@
-The program has two functions. SHOWHORSES displays each horse with a progress bar. RACE runs the main game loop. Together, about forty lines of A P L. No external libraries, no frameworks. Just the language primitives.
+The program has two functions. Show horses displays each horse with a progress bar. Race runs the main game loop. Together, about forty lines of A P L. No external libraries, no frameworks. Just the language primitives.
