@@ -1,0 +1,47 @@
+# Sleepy Coder – Narration Script (~2 minutes)
+
+## Hook (00-hook)
+What if your AI coding assistant could learn from its mistakes?
+Not just for one session, but across training cycles.
+Today’s AI agents repeat the same errors over and over.
+But what if they could wake up smarter tomorrow?
+
+## Slide 1 – The Problem (01-problem)
+AI coding agents have a memory problem.
+They fix a bug today, then make the same mistake next week.
+Every session starts from the same frozen model.
+Nothing carries forward.
+
+## Slide 2 – The Solution (02-solution)
+This is sleep learning.
+During the day, the agent works and we log its failures.
+The error messages, the broken code, and the fixes that worked.
+Overnight, we fine-tune the model on those failures.
+Each morning, a new checkpoint wakes up a little better than before.
+
+## Slide 3 – How It Works (03-how-it-works)
+The system runs in three phases.
+Day phase: the agent works and we collect mistakes.
+Sleep phase: parameter-efficient fine-tuning on those mistakes.
+Eval phase: we test for improvement and regression.
+Only if the tests pass do we promote the new model.
+
+## Slide 4 – Efficient Learning (04-efficient)
+We don’t retrain the entire model.
+That would be slow and expensive.
+Instead, we use parameter-efficient fine-tuning.
+Small low-rank updates in a shared adaptation subspace.
+Think of it like updating muscle memory, not rewiring the brain.
+
+## Slide 5 – Results (05-results)
+After just a few sleep cycles, the repeat error rate drops.
+The agent needs fewer attempts to solve the same tasks.
+And crucially, prior skills show minimal regression.
+That’s continual learning done right.
+
+## CTA (06-cta)
+This is Sleepy Coder.
+A practical demo of parameter-efficient continual learning.
+The code is open source on GitHub.
+Follow for more AI experiments that actually work.
+

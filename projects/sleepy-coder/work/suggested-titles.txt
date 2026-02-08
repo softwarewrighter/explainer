@@ -1,0 +1,10 @@
+How to Build a Coding AI That Learns from Its Mistakes
+This AI Learns from Its Coding Mistakes While It Sleeps
+Teaching an AI to Stop Repeating the Same Bug
+Sleep Learning for Coding Agents — A Practical Demo
+Why Fine-Tuning Once Isn't Enough — Continual Learning for AI
+From Bugs to Memory — Teaching a Coding AI Not to Forget
+Parameter-Efficient Continual Learning with Rust and Python
+Sleepy Coder — An AI That Gets Smarter Overnight
+The Day/Sleep/Eval Loop — How AI Coding Agents Should Learn
+Low-Rank Adapters and the Universal Subspace Hypothesis

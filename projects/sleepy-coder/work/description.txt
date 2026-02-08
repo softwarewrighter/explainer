@@ -1,0 +1,38 @@
+What if your AI coding assistant could actually learn from yesterday's mistakes?
+
+Sleepy Coder is a practical demonstration of parameter-efficient continual learning for coding agents. During the day, the agent works and its failures are logged. Overnight, the model is fine-tuned on those failures using low-rank adapters in a shared subspace. Each new checkpoint wakes up a little smarter.
+
+This video walks through the architecture, shows the agent loop in action, and demonstrates measurable improvement over multiple sleep cycles.
+
+== Links ==
+
+Source Code: https://github.com/softwarewrighter/sleepy-coder
+Discord: https://discord.gg/Ctzk5uHggZ
+Blog Post: (TBD)
+
+== Key Concepts ==
+
+- Parameter-Efficient Continual Fine-Tuning (PaCT)
+- Low-rank adapters (LoRA) in a shared subspace
+- Day/Sleep/Eval cycle for controlled improvement
+- Regression testing to prevent catastrophic forgetting
+
+== Paper References ==
+
+- Share LoRA Subspaces: https://arxiv.org/abs/2602.06043
+- Universal Weight Subspace Hypothesis: https://arxiv.org/abs/2512.05117
+
+== Features ==
+
+- Rust agent runtime with Pi-like minimal loop
+- 42 Rust "koans" across 5 error families
+- SQLite episode capture with rich metadata
+- Evaluation harness with repeat-rate and steps-to-green metrics
+- Python training pipeline for LoRA fine-tuning
+- Matplotlib visualization of learning progress
+
+== Chapters ==
+
+(TBD after video assembly)
+
+#AI #MachineLearning #ContinualLearning #CodingAgent #LLM #LoRA #PaCT #Rust #Python #OpenSource

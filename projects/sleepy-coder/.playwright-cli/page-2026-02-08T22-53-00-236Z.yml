@@ -1,0 +1,267 @@
+- generic [ref=e2]:
+  - region
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=e6]:
+      - heading "Navigation Menu" [level=2] [ref=e7]
+      - generic [ref=e8]:
+        - link "Homepage" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img [ref=e11]
+        - generic [ref=e13]:
+          - navigation "Global" [ref=e16]:
+            - list [ref=e17]:
+              - listitem [ref=e18]:
+                - button "Platform" [ref=e20] [cursor=pointer]:
+                  - text: Platform
+                  - img [ref=e21]
+              - listitem [ref=e23]:
+                - button "Solutions" [ref=e25] [cursor=pointer]:
+                  - text: Solutions
+                  - img [ref=e26]
+              - listitem [ref=e28]:
+                - button "Resources" [ref=e30] [cursor=pointer]:
+                  - text: Resources
+                  - img [ref=e31]
+              - listitem [ref=e33]:
+                - button "Open Source" [ref=e35] [cursor=pointer]:
+                  - text: Open Source
+                  - img [ref=e36]
+              - listitem [ref=e38]:
+                - button "Enterprise" [ref=e40] [cursor=pointer]:
+                  - text: Enterprise
+                  - img [ref=e41]
+              - listitem [ref=e43]:
+                - link "Pricing" [ref=e44] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+                  - generic [ref=e45]: Pricing
+          - generic [ref=e46]:
+            - button "Search or jump to…" [ref=e49] [cursor=pointer]:
+              - img [ref=e51]
+            - link "Sign in" [ref=e54] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsoftwarewrighter
+            - link "Sign up" [ref=e55] [cursor=pointer]:
+              - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E&source=header
+            - button "Appearance settings" [ref=e58] [cursor=pointer]:
+              - img
+  - main [ref=e61]:
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - generic:
+          - generic:
+            - generic:
+              - img "@softwarewrighter"
+            - generic:
+              - strong: softwarewrighter
+              - generic:
+                - generic:
+                  - link "Follow":
+                    - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsoftwarewrighter
+      - navigation "User profile" [ref=e68]:
+        - link "Overview" [ref=e69] [cursor=pointer]:
+          - /url: /softwarewrighter
+          - img [ref=e70]
+          - text: Overview
+        - link "Repositories 80" [ref=e72] [cursor=pointer]:
+          - /url: /softwarewrighter?tab=repositories
+          - img [ref=e73]
+          - text: Repositories
+          - generic "80" [ref=e75]
+        - link "Projects" [ref=e76] [cursor=pointer]:
+          - /url: /softwarewrighter?tab=projects
+          - img [ref=e77]
+          - text: Projects
+        - link "Packages" [ref=e79] [cursor=pointer]:
+          - /url: /softwarewrighter?tab=packages
+          - img [ref=e80]
+          - text: Packages
+        - link "Stars 4" [ref=e82] [cursor=pointer]:
+          - /url: /softwarewrighter?tab=stars
+          - img [ref=e83]
+          - text: Stars
+          - generic "4" [ref=e85]
+    - generic [ref=e87]:
+      - generic [ref=e89]:
+        - generic:
+          - generic:
+            - generic:
+              - img "@softwarewrighter"
+            - generic:
+              - generic:
+                - strong: softwarewrighter
+            - generic:
+              - generic:
+                - generic:
+                  - link "Follow":
+                    - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsoftwarewrighter
+        - generic [ref=e90]:
+          - generic [ref=e91]:
+            - generic [ref=e92]:
+              - link "View softwarewrighter's full-sized avatar" [ref=e93] [cursor=pointer]:
+                - /url: https://avatars.githubusercontent.com/u/153049380?v=4
+                - img "View softwarewrighter's full-sized avatar" [ref=e94]
+              - generic [ref=e97]:
+                - generic [ref=e99]: 💭
+                - generic: early stage startup work...
+            - heading "Software Wrighter LLC softwarewrighter" [level=1] [ref=e101]:
+              - generic [ref=e102]: Software Wrighter LLC
+              - generic [ref=e103]: softwarewrighter
+          - generic [ref=e104]:
+            - link "Follow" [ref=e111] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsoftwarewrighter
+            - generic [ref=e112]:
+              - generic [ref=e114]:
+                - link "2 followers" [ref=e115] [cursor=pointer]:
+                  - /url: https://github.com/softwarewrighter?tab=followers
+                  - img [ref=e116]
+                  - text: 2 followers
+                - text: ·
+                - link "2 following" [ref=e118] [cursor=pointer]:
+                  - /url: https://github.com/softwarewrighter?tab=following
+              - list
+          - generic [ref=e119]:
+            - heading "Achievements" [level=2] [ref=e120]:
+              - link "Achievements" [ref=e121] [cursor=pointer]:
+                - /url: /softwarewrighter?tab=achievements
+            - generic [ref=e122]:
+              - 'link "Achievement: Starstruck" [ref=e123] [cursor=pointer]':
+                - /url: /softwarewrighter?achievement=starstruck&tab=achievements
+                - 'img "Achievement: Starstruck" [ref=e124]'
+              - 'link "Achievement: Quickdraw" [ref=e125] [cursor=pointer]':
+                - /url: /softwarewrighter?achievement=quickdraw&tab=achievements
+                - 'img "Achievement: Quickdraw" [ref=e126]'
+              - 'link "Achievement: YOLO" [ref=e127] [cursor=pointer]':
+                - /url: /softwarewrighter?achievement=yolo&tab=achievements
+                - 'img "Achievement: YOLO" [ref=e128]'
+              - 'link "Achievement: Pull Shark x2" [ref=e129] [cursor=pointer]':
+                - /url: /softwarewrighter?achievement=pull-shark&tab=achievements
+                - 'img "Achievement: Pull Shark" [ref=e130]'
+                - generic [ref=e131]: x2
+              - 'link "Achievement: Pair Extraordinaire" [ref=e132] [cursor=pointer]':
+                - /url: /softwarewrighter?achievement=pair-extraordinaire&tab=achievements
+                - 'img "Achievement: Pair Extraordinaire" [ref=e133]'
+          - button "Block or Report" [ref=e134] [cursor=pointer]:
+            - generic [ref=e136]: Block or Report
+      - generic [ref=e139]:
+        - generic [ref=e141]:
+          - heading "Popular repositories Loading" [level=2] [ref=e142]:
+            - text: Popular repositories
+            - generic [ref=e143]: Loading
+            - status
+          - list [ref=e144]:
+            - listitem [ref=e145]:
+              - generic [ref=e147]:
+                - generic [ref=e148]:
+                  - link "rlm-project" [ref=e150] [cursor=pointer]:
+                    - /url: /softwarewrighter/rlm-project
+                  - generic [ref=e152]: Public
+                - paragraph [ref=e153]: implementing MIT RLM concepts in Rust using DSL, WASM, CLI, and recursive LLM calls
+                - paragraph [ref=e154]:
+                  - generic [ref=e155]: Rust
+                  - link "stars 18" [ref=e157] [cursor=pointer]:
+                    - /url: /softwarewrighter/rlm-project/stargazers
+                    - img "stars" [ref=e158]
+                    - text: "18"
+                  - link "forks 3" [ref=e160] [cursor=pointer]:
+                    - /url: /softwarewrighter/rlm-project/forks
+                    - img "forks" [ref=e161]
+                    - text: "3"
+            - listitem [ref=e163]:
+              - generic [ref=e165]:
+                - generic [ref=e166]:
+                  - link "emacs-ai-api" [ref=e168] [cursor=pointer]:
+                    - /url: /softwarewrighter/emacs-ai-api
+                  - generic [ref=e170]: Public
+                - paragraph [ref=e171]: Emacs configuration with Rust CLI tools for managing multiple local and cloud LLM access
+                - paragraph [ref=e172]:
+                  - generic [ref=e173]: Emacs Lisp
+                  - link "star 1" [ref=e175] [cursor=pointer]:
+                    - /url: /softwarewrighter/emacs-ai-api/stargazers
+                    - img "star" [ref=e176]
+                    - text: "1"
+            - listitem [ref=e178]:
+              - generic [ref=e180]:
+                - generic [ref=e181]:
+                  - link "engram-poc" [ref=e183] [cursor=pointer]:
+                    - /url: /softwarewrighter/engram-poc
+                  - generic [ref=e185]: Public
+                - paragraph [ref=e186]: implementations demonstrating Deepseek's Engram paper
+                - paragraph [ref=e187]:
+                  - generic [ref=e188]: Python
+                  - link "star 1" [ref=e190] [cursor=pointer]:
+                    - /url: /softwarewrighter/engram-poc/stargazers
+                    - img "star" [ref=e191]
+                    - text: "1"
+            - listitem [ref=e193]:
+              - generic [ref=e195]:
+                - generic [ref=e196]:
+                  - link "proact" [ref=e198] [cursor=pointer]:
+                    - /url: /softwarewrighter/proact
+                  - generic [ref=e200]: Public
+                - paragraph [ref=e201]: A CLI tool to generate documents proactively for coding agents to follow in a new project
+                - paragraph [ref=e202]:
+                  - generic [ref=e203]: Rust
+                  - link "fork 1" [ref=e205] [cursor=pointer]:
+                    - /url: /softwarewrighter/proact/forks
+                    - img "fork" [ref=e206]
+                    - text: "1"
+            - listitem [ref=e208]:
+              - generic [ref=e210]:
+                - generic [ref=e211]:
+                  - link "BMAD-METHOD" [ref=e213] [cursor=pointer]:
+                    - /url: /softwarewrighter/BMAD-METHOD
+                  - generic [ref=e215]: Public
+                - paragraph [ref=e216]:
+                  - text: Forked from
+                  - link "bmad-code-org/BMAD-METHOD" [ref=e217] [cursor=pointer]:
+                    - /url: /bmad-code-org/BMAD-METHOD
+                - paragraph [ref=e218]: Breakthrough Method for Agile Ai Driven Development
+                - paragraph [ref=e219]:
+                  - generic [ref=e220]: JavaScript
+            - listitem [ref=e222]:
+              - generic [ref=e224]:
+                - generic [ref=e225]:
+                  - link "rag-demo" [ref=e227] [cursor=pointer]:
+                    - /url: /softwarewrighter/rag-demo
+                  - generic [ref=e229]: Public
+                - paragraph [ref=e230]: Rust demo of RAG using Qdrant
+                - paragraph [ref=e231]:
+                  - generic [ref=e232]: Shell
+        - img "Loading" [ref=e238]
+  - contentinfo [ref=e241]:
+    - heading "Footer" [level=2] [ref=e242]
+    - generic [ref=e243]:
+      - generic [ref=e244]:
+        - link "GitHub Homepage" [ref=e245] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e246]
+        - generic [ref=e248]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e249]:
+        - heading "Footer navigation" [level=3] [ref=e250]
+        - list "Footer navigation" [ref=e251]:
+          - listitem [ref=e252]:
+            - link "Terms" [ref=e253] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=e254]:
+            - link "Privacy" [ref=e255] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=e256]:
+            - link "Security" [ref=e257] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=e258]:
+            - link "Status" [ref=e259] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=e260]:
+            - link "Community" [ref=e261] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=e262]:
+            - link "Docs" [ref=e263] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=e264]:
+            - link "Contact" [ref=e265] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=e266]:
+            - button "Manage cookies" [ref=e268] [cursor=pointer]
+          - listitem [ref=e269]:
+            - button "Do not share my personal information" [ref=e271] [cursor=pointer]

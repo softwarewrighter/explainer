@@ -1,0 +1,78 @@
+# Sleepy Coder – Slides Outline
+
+## Visual Theme
+- Dark background (sleeping/night metaphor)
+- Accent colors: Purple/blue (night) transitioning to amber/gold (dawn/awakening)
+- Moon → Sun progression through slides
+- Clean, minimal text with emphasis on diagrams/charts
+
+## 00-hook.html
+Title: What if AI could learn from its mistakes?
+Visual: Large question mark or thinking brain icon
+Colors: Dark purple background, white text
+Elements:
+- Big bold question
+- Subtle star/night pattern in background
+
+## 01-problem.html
+Title: The Memory Problem
+Visual: Loop diagram showing “Error → Fix → Forget → Same Error”
+Colors: Red accent for the problem
+Elements:
+- Circular arrows showing the repeat cycle
+- “Day 1: Fix bug” → “Day 7: Same bug”
+- Caption: Every session starts from the same frozen model
+
+## 02-solution.html
+Title: Sleep Learning
+Visual: Day / Night cycle diagram
+Colors: Blue (night) to amber (dawn)
+Elements:
+- Sun icon: Capture mistakes
+- Moon icon: Offline fine-tuning on failures
+- Rising sun: Improved model checkpoint
+- Arrow showing progression
+
+## 03-how-it-works.html
+Title: Three Phases
+Visual: Pipeline diagram with three boxes
+Colors: Green (day), purple (sleep), blue (eval)
+Elements:
+- Box 1: DAY – Work & Log Failures
+- Box 2: SLEEP – Parameter-Efficient Fine-Tuning
+- Box 3: EVAL – Regression & Improvement Tests
+- Checkmark: Promote only if tests pass
+
+## 04-efficient.html
+Title: Smart Updates
+Visual: Large brain vs small adapter comparison
+Colors: Green accent
+Elements:
+- Left: Full model retraining (X)
+- Right: LoRA update in shared subspace (✓)
+- Text: Low-rank updates, not full retraining
+- Subtext: Updates live in a shared low-dimensional subspace
+
+## 05-results.html
+Title: It Actually Works
+Visual: Line chart showing improvement
+Colors: Green for improvement
+Elements:
+- Line chart: Repeat error rate vs sleep cycles
+- X-axis: Sleep cycles (1–6)
+- Y-axis: Repeat error rate
+- Caption: Minimal regression on prior tasks
+
+## 06-cta.html
+Title: Sleepy Coder
+Visual: GitHub icon or code symbol
+Colors: Brand purple / blue
+Elements:
+- Project name/logo
+- Open source on GitHub
+- Follow for more practical AI experiments
+- Optional QR code
+
+## Timing
+Total runtime: ~2 minutes
+
