@@ -1,0 +1,1 @@
+The next version will optimize how records move through stages. A single buffer gets edited in place, avoiding copies. Some stages will need an additional buffer. Others will route records selectively to two different pipes. And some pipes will accept inputs from multiple sources.

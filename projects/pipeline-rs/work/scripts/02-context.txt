@@ -1,0 +1,1 @@
+T S O Pipelines was the M V S port of C M S Pipelines from V M. It processes data as eighty byte fixed width records, matching the classic punch card format. You chain stages together, filter, select, locate, change, and data flows through them. It was the original data pipeline.

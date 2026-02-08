@@ -1,0 +1,1 @@
+Now we load a different example from the dropdown. This pipeline uses take to grab the first record, then literal to insert a header line. It shows how stages can generate new records, not just filter existing ones.

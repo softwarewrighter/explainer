@@ -1,0 +1,1 @@
+And here is skip, which discards the first N records. We will skip the rest of the tutorials for now. There are many more stages to explore on your own.

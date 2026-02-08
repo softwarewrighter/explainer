@@ -1,0 +1,1 @@
+Take passes only the first N records. Here it keeps the first three and discards the rest. Combined with skip, you can paginate through large data sets.

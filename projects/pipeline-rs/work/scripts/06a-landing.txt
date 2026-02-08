@@ -1,0 +1,1 @@
+The landing page shows two modes. The batched pipeline runs all records through each stage before moving to the next. The record at a time debugger processes one record through the entire pipeline before reading the next.

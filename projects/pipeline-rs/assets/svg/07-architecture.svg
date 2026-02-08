@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Main Headline -->
+  <rect x="260" y="30" width="1400" height="160" rx="16" fill="#0f0f23" fill-opacity="0.92"/>
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#00d4ff" text-anchor="middle">
+    Two Implementations
+  </text>
+  <text x="960" y="165" font-family="Arial, sans-serif" font-size="56"
+        fill="#ffd93d" text-anchor="middle">
+    Different Tradeoffs, Same Results
+  </text>
+
+  <!-- Left Box: Batched -->
+  <rect x="100" y="220" width="800" height="460" rx="16"
+        fill="#0f0f23" fill-opacity="0.92" stroke="#ff6b6b" stroke-width="6"/>
+
+  <text x="150" y="300" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#ff6b6b">
+    Batched
+  </text>
+
+  <text x="150" y="370" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    All records through stage 1
+  </text>
+  <text x="150" y="430" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Then all through stage 2
+  </text>
+  <text x="150" y="490" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Then all through stage 3 ...
+  </text>
+
+  <text x="150" y="570" font-family="Arial, sans-serif" font-size="40" fill="#4ade80">
+    Faster execution
+  </text>
+  <text x="150" y="620" font-family="Arial, sans-serif" font-size="40" fill="#ffd93d">
+    Less true to the concept
+  </text>
+
+  <!-- Right Box: RAT -->
+  <rect x="980" y="220" width="820" height="460" rx="16"
+        fill="#0f0f23" fill-opacity="0.92" stroke="#4ade80" stroke-width="6"/>
+
+  <text x="1030" y="300" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#4ade80">
+    Record At a Time (RAT)
+  </text>
+
+  <text x="1030" y="370" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Record 1 through all stages
+  </text>
+  <text x="1030" y="430" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Record 2 through all stages
+  </text>
+  <text x="1030" y="490" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Record 3 through all stages ...
+  </text>
+
+  <text x="1030" y="570" font-family="Arial, sans-serif" font-size="40" fill="#ffd93d">
+    True dataflow model
+  </text>
+  <text x="1030" y="620" font-family="Arial, sans-serif" font-size="40" fill="#4ade80">
+    Debuggable, visual
+  </text>
+
+  <!-- Bottom note -->
+  <rect x="100" y="720" width="1200" height="80" rx="12" fill="#0f0f23" fill-opacity="0.92"/>
+  <text x="700" y="775" font-family="Arial, sans-serif" font-size="44"
+        fill="#eee" text-anchor="middle">
+    Both are O(N) with the same output
+  </text>
+</svg>

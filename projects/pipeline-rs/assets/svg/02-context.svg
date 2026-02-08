@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Main Headline -->
+  <rect x="160" y="50" width="1600" height="190" rx="16" fill="#0f0f23" fill-opacity="0.92"/>
+  <text x="960" y="120" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#00d4ff" text-anchor="middle">
+    CMS Pipelines
+  </text>
+  <text x="960" y="200" font-family="Arial, sans-serif" font-size="64"
+        fill="#ffd93d" text-anchor="middle">
+    Record-Oriented Dataflow
+  </text>
+
+  <!-- Left Box: History -->
+  <rect x="100" y="280" width="840" height="460" rx="16"
+        fill="#0f0f23" fill-opacity="0.92" stroke="#ff6b6b" stroke-width="6"/>
+
+  <text x="150" y="350" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#ff6b6b">
+    History
+  </text>
+
+  <text x="150" y="420" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    CMS Pipelines on VM/ESA
+  </text>
+  <text x="150" y="480" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Ported to MVS as TSO Pipelines
+  </text>
+  <text x="150" y="540" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Fixed and variable length records
+  </text>
+  <text x="150" y="600" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Classic punch card, tape, and disk
+  </text>
+
+  <!-- Right Box: Concept -->
+  <rect x="1000" y="280" width="800" height="460" rx="16"
+        fill="#0f0f23" fill-opacity="0.92" stroke="#4ade80" stroke-width="6"/>
+
+  <text x="1050" y="350" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#4ade80">
+    Concept
+  </text>
+
+  <text x="1050" y="420" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Chain stages together
+  </text>
+  <text x="1050" y="480" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Filter, Select, Locate
+  </text>
+  <text x="1050" y="540" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Change, Count, Sort
+  </text>
+  <text x="1050" y="600" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Data flows through
+  </text>
+  <text x="1050" y="660" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    one record at a time
+  </text>
+</svg>

@@ -1,0 +1,52 @@
+In 1996, IBM hosted the Olympics web server. I was in charge of the S/390 mainframes running OS/390 that collected all the logs. I used TSO Pipelines for ad hoc log analysis, statistics, and forensics.
+
+TSO Pipelines was the MVS port of CMS Pipelines from VM. It processes fixed and variable length records, classic punch card, tape, and disk formats. You chain stages together and data flows through them.
+
+This Throwback Thursday project recreates those mainframe pipelines in Rust, with a web-based tutorial and an interactive record-at-a-time debugger.
+
+== Links ==
+
+Live Demo: https://sw-comp-history.github.io/pipelines-rs/
+Source Code: https://github.com/sw-comp-history/pipelines-rs
+Discord: https://discord.gg/Ctzk5uHggZ
+Blog Post: (TBD)
+
+== Features ==
+
+- CLI tool for running pipeline specs against record files
+- Web UI with three-panel editor (input, pipeline, output)
+- Built-in interactive tutorials for each stage type
+- Record-at-a-time visual debugger with watches and breakpoints
+- 16+ pipeline stages: FILTER, SELECT, LOCATE, CHANGE, and more
+
+== Audio Attribution ==
+
+Music: "Bad Beat" by Dyalla
+
+== Chapters ==
+
+0:00 Intro
+0:05 Three Ways to Explore
+0:25 Command Line Tool
+0:36 CLI Demo: Filter, Select, Count
+0:55 More CLI Features
+1:08 CLI Demo: Help, Verbose, Alias
+1:31 Web Tutorials
+1:41 Tutorial Overview
+1:57 Hello World
+2:09 Console Stage
+2:22 Filter Stage
+2:34 Select Stage
+2:48 Take Stage
+2:58 Skip Stage
+3:07 Interactive Debugger
+3:19 Debugger Landing
+3:32 Debug Mode
+3:45 First Record
+3:59 Stepping Through Records
+4:11 Literal Example
+4:25 Take and Literal
+4:38 Summary
+4:53 Try It Yourself
+
+#TBT #Pipelines #RetroComputing #Rust #IBM #Mainframe #DataPipeline #CMS #TSO #WebAssembly

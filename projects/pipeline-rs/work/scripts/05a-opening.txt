@@ -1,0 +1,1 @@
+The web interface has three panels. Input records on the left, the pipeline spec in the center, and output on the right. A tutorial dropdown lists every available stage. Selecting run all in automatic mode cycles through each one.

@@ -1,0 +1,1 @@
+Each stage does one thing. Filter keeps matching records by column position. Select extracts and repositions fields. Locate finds text patterns. Change does search and replace. You write a short pipeline spec, and records flow from source through stages to output.

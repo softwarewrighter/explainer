@@ -1,0 +1,1 @@
+Select extracts and rearranges fields by column position. This spec pulls the last name starting at column zero, and salary starting at column twenty eight. The department and first name are stripped out.

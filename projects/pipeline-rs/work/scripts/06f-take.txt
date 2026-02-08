@@ -1,0 +1,1 @@
+Stepping through, take grabs only the first record. The literal stage inserts a header above it. The output shows the header followed by one employee record. Each step is visible in the debugger.

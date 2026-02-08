@@ -1,0 +1,1 @@
+Next is the simplest pipeline, like Unix cat. Console reads from the input panel and writes everything to the output. All eight records pass through unchanged. Every pipeline follows this basic structure.

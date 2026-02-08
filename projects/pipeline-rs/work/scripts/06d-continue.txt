@@ -1,0 +1,1 @@
+As we continue stepping, non sales records are filtered out by locate. Only sales employees pass through to change and appear in the output. The record counter at the top tracks progress through all eight input records.

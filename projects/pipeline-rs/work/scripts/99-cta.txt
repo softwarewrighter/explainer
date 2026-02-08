@@ -1,0 +1,1 @@
+Try it yourself, the web demo runs in your browser. Source code and blog post are linked in the description. Coming soon, optimized record handling, more complex pipe configurations, and additional stages. This is a Throwback Thursday project.

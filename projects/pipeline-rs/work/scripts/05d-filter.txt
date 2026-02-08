@@ -1,0 +1,1 @@
+Filter keeps records that match a field value. Here it checks column eighteen for the word sales. Eight records go in, only three come out. The rest are discarded.

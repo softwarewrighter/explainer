@@ -1,0 +1,1 @@
+First up, the command line tool. It reads a pipeline spec and runs it against fixed width wreck oards. You will see it filter by department, extract fields, and count results.

@@ -1,0 +1,1 @@
+Next, the built in docs and additional features. The help flag shows usage. Verbose mode prints file paths and record counts. An alias shortens the command for inline use with process substitution.

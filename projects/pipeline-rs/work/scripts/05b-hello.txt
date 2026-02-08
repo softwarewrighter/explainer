@@ -1,0 +1,1 @@
+The first tutorial is hello world. Instead of reading from input, it uses literal to inject a fixed record. Console writes it to the output panel. One record in, one record out.

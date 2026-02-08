@@ -1,0 +1,1 @@
+There are two implementations. Batched processes all records through each stage before moving on. R A T, record at a time, moves each record through the full pipeline. Both are order N. Batched is faster today, but R A T shows the true dataflow model. More features are coming.

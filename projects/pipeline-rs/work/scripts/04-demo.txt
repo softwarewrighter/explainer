@@ -1,0 +1,1 @@
+Here is the command line tool running pipeline specs against employee records. Filter by department, extract name and salary, count records. Each spec is a simple text file describing the stages. The tool reports how many records went in and came out.

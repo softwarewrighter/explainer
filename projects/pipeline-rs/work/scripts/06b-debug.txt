@@ -1,0 +1,1 @@
+In debug mode, you see the pipeline stages on the left with breakpoints and watch points. The watches panel below shows the record data between stages. Press step to advance one record at a time.

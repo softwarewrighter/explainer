@@ -1,0 +1,1 @@
+I recreated mainframe T S O Pipelines in Rust. In this video, you will see three things. First, the command line tool running pipeline specs against data. Then, a web based tutorial that walks through each stage. Finally, an interactive debugger that lets you step through records one at a time.

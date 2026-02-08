@@ -1,0 +1,1 @@
+The web interface has three panels. Input records on the left, the pipeline spec in the center, and output on the right. Built in tutorials walk you through each stage. Load an example, click run, and watch the data transform. Everything runs in Web Assembly in your browser.
