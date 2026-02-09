@@ -17,10 +17,19 @@ Blog Post: (TBD)
 - Day/Sleep/Eval cycle for controlled improvement
 - Regression testing to prevent catastrophic forgetting
 
-== Paper References ==
+== Research Papers (Johns Hopkins University) ==
 
-- Share LoRA Subspaces: https://arxiv.org/abs/2602.06043
-- Universal Weight Subspace Hypothesis: https://arxiv.org/abs/2512.05117
+This project implements ideas from two papers by the same Johns Hopkins team:
+
+"Shared LoRA Subspaces for almost Strict Continual Learning"
+Kaushik, Vaidya, Chaudhari, Chellappa, Yuille
+https://arxiv.org/abs/2602.06043
+
+"The Universal Weight Subspace Hypothesis"
+Kaushik, Chaudhari, Vaidya, Chellappa, Yuille
+https://arxiv.org/abs/2512.05117
+
+Rama Chellappa and Alan Yuille are Bloomberg Distinguished Professors at Johns Hopkins.
 
 == Features ==
 

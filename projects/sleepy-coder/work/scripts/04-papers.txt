@@ -1,0 +1,1 @@
+This approach builds on research from Johns Hopkins University. The Share paper shows how to maintain one evolving low rank basis instead of many adapters. The Universal Subspace Hypothesis suggests models converge to similar directions, so learning becomes coefficient updates in a stable basis.
