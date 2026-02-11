@@ -1,10 +1,88 @@
-How to Build a Coding AI That Learns from Its Mistakes
-This AI Learns from Its Coding Mistakes While It Sleeps
-Teaching an AI to Stop Repeating the Same Bug
-Sleep Learning for Coding Agents — A Practical Demo
-Why Fine-Tuning Once Isn't Enough — Continual Learning for AI
-From Bugs to Memory — Teaching a Coding AI Not to Forget
-Parameter-Efficient Continual Learning with Rust and Python
-Sleepy Coder — An AI That Gets Smarter Overnight
-The Day/Sleep/Eval Loop — How AI Coding Agents Should Learn
-Low-Rank Adapters and the Universal Subspace Hypothesis
+## Sleepy Coder Video - Part 1 of Series
+
+### Primary Title Options
+
+1. Towards Continuous Learning for LLMs (Part 1): The Averaging Trap
+2. Towards Continuous Learning for LLMs (Part 1): Share Algorithm
+3. Towards Continuous Learning for LLMs (Part 1): Why Routing Beats Blending
+4. LLM Continuous Learning Part 1: The Averaging Trap
+5. Teaching LLMs to Learn Overnight (Part 1)
+
+### Shorter Variants
+
+6. Continuous Learning for Code LLMs (Part 1)
+7. Sleepy Coder Part 1: Share Algorithm in Practice
+8. LLM Memory Part 1: Route, Don't Blend
+
+### Recommended Title
+
+**Towards Continuous Learning for LLMs (Part 1): The Averaging Trap**
+
+### Future Parts (Series Roadmap)
+
+- Part 2: Task Routing Implementation
+- Part 3: Scaling to Larger Models
+- Part 4: Real-World Deployment
+- Part 5: Learning from User Corrections
+
+---
+
+## Key Story (Part 1)
+
+### The Journey
+
+1. Dream: AI learns from mistakes while you sleep
+2. Disaster: Naive LoRA caused catastrophic forgetting (76.7% to 60%)
+3. Discovery: Share algorithm from research papers (arXiv:2602.06043)
+4. Implementation: Achieved 76.7% with task-specific coefficients
+5. The Trap: Averaged coefficients, lost all gains (back to 73.3%)
+6. Insight: Route to right adapter per error type, don't blend
+7. Limitation: 7 "stubborn" Rust tasks need larger models
+8. Next: Task routing (Part 2)
+
+### Key Numbers
+
+| Metric | Value |
+|--------|-------|
+| Baseline | 73.3% |
+| Best (task-specific) | 76.7% (+3.4%) |
+| After averaging | 73.3% (gains lost) |
+| Naive LoRA | 60.0% (catastrophic) |
+| Adapters trained | 51 |
+| Parameter reduction | 67x with Phase 2 |
+
+### The Insight
+
+**Share algorithm works, but averaging coefficients destroys specialization.**
+
+The solution (Part 2): Task routing - detect error type, select appropriate adapter.
+
+---
+
+## Title Image Recommendations
+
+### Best: training_summary.png
+- "Less is More" title captures the insight
+- Green baseline vs red regressions
+- Clean, professional chart
+
+### Second: progress.png
+- Shows full journey with recovery
+- Red "below baseline" shading
+- Includes learning loop diagram
+
+### Third: results.png
+- Dramatic before/after comparison
+- 76.7% to 60.0% forgetting visual
+
+---
+
+## Technical Highlights for Video
+
+- Share algorithm: SVD-based subspace extraction
+- 51 pattern-specific LoRA adapters
+- Phase 1: Extract shared basis from adapters
+- Phase 2: Train only coefficients (67x fewer params)
+- Phase 3: Merge and prevent forgetting
+- The Stubborn Seven: Rust ownership patterns that never pass
+- Johns Hopkins UWSH paper + Share paper (arXiv:2602.06043)
