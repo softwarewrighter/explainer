@@ -1,10 +1,10 @@
-From Emulation to Implementation: The Engram Journey
-I Tried to Fake Memory, Then Found Real O(1) Lookup
-When Hash-Based Memory Works (And When It Doesn't)
-Engram Revisited: Lessons from Building LLM Memory
-The Truth About Engram Memory in 300 Lines of Python
-Why I Stopped Emulating Memory and Started Implementing It
-Hash Tables for LLMs: What Actually Works
-Engram Memory: From DeepSeek Paper to Working Code
-Building Real LLM Memory with weagan's EnhancedEngramModule
-What We Learned Integrating Engram with HuggingFace
+O(1) Memory for LLMs: What Actually Works
+I Tried Hash-Based Memory for LLMs
+Engram: When O(1) Lookup Beats Attention
+From LoRA Hack to Real Memory Module
+300 Lines Changed How I Think About LLM Memory
+The Memory Trick That Works (Sometimes)
+Building Real Memory for Language Models
+Hash Tables Beat Transformers (Sometimes)
+What DeepSeek's Engram Paper Didn't Tell You
+Engram Revisited: Emulation vs Implementation
