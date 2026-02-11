@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="960" y="120" text-anchor="middle" fill="#ff6b6b" font-family="Arial, sans-serif" font-size="96" font-weight="bold">The Forgetting Problem</text>
+
+  <!-- Subtitle -->
+  <text x="960" y="200" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="64">Catastrophic Forgetting</text>
+
+  <!-- Left box: Learn New -->
+  <rect x="150" y="300" width="450" height="350" rx="20" fill="none" stroke="#4ade80" stroke-width="5"/>
+  <text x="375" y="380" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Learn New</text>
+  <text x="375" y="460" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Train on</text>
+  <text x="375" y="520" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">new patterns</text>
+  <text x="375" y="600" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="36">+3 skills</text>
+
+  <!-- Arrow -->
+  <path d="M 650 475 L 800 475" stroke="#ffffff" stroke-width="6" fill="none"/>
+  <polygon points="820,475 790,455 790,495" fill="#ffffff"/>
+
+  <!-- Right box: Forget Old -->
+  <rect x="870" y="300" width="450" height="350" rx="20" fill="none" stroke="#ff6b6b" stroke-width="5"/>
+  <text x="1095" y="380" text-anchor="middle" fill="#ff6b6b" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Forget Old</text>
+  <text x="1095" y="460" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Lose existing</text>
+  <text x="1095" y="520" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">knowledge</text>
+  <text x="1095" y="600" text-anchor="middle" fill="#ff6b6b" font-family="Arial, sans-serif" font-size="36">-5 skills</text>
+
+  <!-- Bottom message -->
+  <rect x="300" y="720" width="900" height="100" rx="15" fill="none" stroke="#ffd93d" stroke-width="5"/>
+  <text x="750" y="785" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="44">Fix one bug, break three others</text>
+</svg>

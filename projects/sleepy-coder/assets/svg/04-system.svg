@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="96" font-weight="bold">Day/Night Cycle</text>
+
+  <!-- Subtitle -->
+  <text x="960" y="180" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="64">Sleepy Coder Architecture</text>
+
+  <!-- DAY section -->
+  <rect x="100" y="280" width="500" height="200" rx="20" fill="none" stroke="#ffd93d" stroke-width="5"/>
+  <text x="350" y="350" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="48" font-weight="bold">DAY</text>
+  <text x="350" y="410" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36">Run agent on tasks</text>
+  <text x="350" y="455" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36">Capture failed attempts</text>
+
+  <!-- Arrow down -->
+  <path d="M 350 500 L 350 560" stroke="#ffffff" stroke-width="5" fill="none"/>
+  <polygon points="350,580 330,550 370,550" fill="#ffffff"/>
+
+  <!-- CAPTURE section -->
+  <rect x="100" y="600" width="500" height="150" rx="20" fill="none" stroke="#ff6b6b" stroke-width="5"/>
+  <text x="350" y="665" text-anchor="middle" fill="#ff6b6b" font-family="Arial, sans-serif" font-size="44" font-weight="bold">CAPTURE</text>
+  <text x="350" y="720" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36">Store errors and fixes</text>
+
+  <!-- Arrow right -->
+  <path d="M 620 675 L 700 675" stroke="#ffffff" stroke-width="5" fill="none"/>
+  <polygon points="720,675 690,655 690,695" fill="#ffffff"/>
+
+  <!-- NIGHT section -->
+  <rect x="740" y="280" width="500" height="200" rx="20" fill="none" stroke="#00d4ff" stroke-width="5"/>
+  <text x="990" y="350" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="48" font-weight="bold">NIGHT</text>
+  <text x="990" y="410" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36">Train new adapters</text>
+  <text x="990" y="455" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36">Consolidate knowledge</text>
+
+  <!-- Arrow up from TRAIN -->
+  <path d="M 990 500 L 990 560" stroke="#ffffff" stroke-width="5" fill="none"/>
+  <polygon points="990,580 970,550 1010,550" fill="#ffffff"/>
+
+  <!-- TRAIN section -->
+  <rect x="740" y="600" width="500" height="150" rx="20" fill="none" stroke="#4ade80" stroke-width="5"/>
+  <text x="990" y="665" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="44" font-weight="bold">TRAIN</text>
+  <text x="990" y="720" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36">Share algorithm</text>
+
+  <!-- EVAL/DEPLOY section on right -->
+  <rect x="1300" y="400" width="320" height="300" rx="20" fill="none" stroke="#4ade80" stroke-width="5"/>
+  <text x="1460" y="480" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="44" font-weight="bold">EVAL</text>
+  <text x="1460" y="540" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36">Test quality</text>
+  <text x="1460" y="610" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="44" font-weight="bold">DEPLOY</text>
+  <text x="1460" y="670" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36">If improved</text>
+
+  <!-- Arrow from TRAIN to EVAL -->
+  <path d="M 1260 675 L 1280 675" stroke="#ffffff" stroke-width="5" fill="none"/>
+  <polygon points="1300,675 1270,655 1270,695" fill="#ffffff"/>
+</svg>

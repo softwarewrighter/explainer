@@ -1,0 +1,1 @@
+We found the Share algorithm in recent research from Johns Hopkins. It extracts a shared subspace using S V D. New tasks train only tiny coefficient vectors. Sixty seven times fewer parameters.

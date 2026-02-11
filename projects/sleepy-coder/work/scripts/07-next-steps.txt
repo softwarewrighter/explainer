@@ -1,0 +1,1 @@
+Part two will implement task routing. Detect the error type, select the matching adapter. We will also test larger models with more capacity. The foundation is solid, now we scale.

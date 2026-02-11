@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="96" font-weight="bold">The Share Algorithm</text>
+
+  <!-- Subtitle -->
+  <text x="960" y="180" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="64">Johns Hopkins Research</text>
+
+  <!-- Phase 1 -->
+  <rect x="100" y="280" width="380" height="320" rx="20" fill="none" stroke="#00d4ff" stroke-width="5"/>
+  <text x="290" y="350" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Phase 1</text>
+  <text x="290" y="420" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Extract shared</text>
+  <text x="290" y="475" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">basis using SVD</text>
+  <text x="290" y="550" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="36">Common directions</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 500 440 L 580 440" stroke="#ffffff" stroke-width="5" fill="none"/>
+  <polygon points="600,440 570,420 570,460" fill="#ffffff"/>
+
+  <!-- Phase 2 -->
+  <rect x="620" y="280" width="380" height="320" rx="20" fill="none" stroke="#ffd93d" stroke-width="5"/>
+  <text x="810" y="350" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Phase 2</text>
+  <text x="810" y="420" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Train only</text>
+  <text x="810" y="475" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">coefficients</text>
+  <text x="810" y="550" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="36">67x fewer params</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 1020 440 L 1100 440" stroke="#ffffff" stroke-width="5" fill="none"/>
+  <polygon points="1120,440 1090,420 1090,460" fill="#ffffff"/>
+
+  <!-- Phase 3 -->
+  <rect x="1140" y="280" width="380" height="320" rx="20" fill="none" stroke="#4ade80" stroke-width="5"/>
+  <text x="1330" y="350" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Phase 3</text>
+  <text x="1330" y="420" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Consolidate</text>
+  <text x="1330" y="475" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">and merge</text>
+  <text x="1330" y="550" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="36">No forgetting</text>
+
+  <!-- Bottom: Key benefit -->
+  <rect x="400" y="680" width="800" height="100" rx="15" fill="none" stroke="#4ade80" stroke-width="5"/>
+  <text x="800" y="745" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="44">Add new skills without losing old ones</text>
+</svg>

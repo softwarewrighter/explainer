@@ -1,0 +1,1 @@
+The results are promising. Task specific coefficients achieved seventy six point seven percent accuracy. The Share algorithm successfully prevents forgetting. We can add skills without breaking old ones.

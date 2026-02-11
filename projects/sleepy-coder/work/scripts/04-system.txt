@@ -1,0 +1,1 @@
+Sleepy Coder runs a day night cycle. During the day, the agent fixes Rust compiler errors. Failed attempts get captured. At night, we train new adapters and consolidate knowledge. Then evaluate.

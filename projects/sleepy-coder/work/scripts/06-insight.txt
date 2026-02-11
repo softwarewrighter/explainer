@@ -1,0 +1,1 @@
+The key insight, routing beats averaging. When we averaged coefficients across tasks, gains disappeared. Specialists outperform generalists. Route each error to the right adapter.

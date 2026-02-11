@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="96" font-weight="bold">Route, Don't Blend</text>
+
+  <!-- Subtitle -->
+  <text x="960" y="180" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="64">The Key Insight</text>
+
+  <!-- Left: Average (Bad) -->
+  <rect x="150" y="280" width="550" height="450" rx="20" fill="none" stroke="#ff6b6b" stroke-width="5"/>
+  <text x="425" y="360" text-anchor="middle" fill="#ff6b6b" font-family="Arial, sans-serif" font-size="56" font-weight="bold">Average</text>
+  <text x="425" y="440" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Blend all coefficients</text>
+  <text x="425" y="500" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">into one adapter</text>
+
+  <!-- Result box for average -->
+  <rect x="225" y="550" width="400" height="120" rx="10" fill="#2a2a4e" stroke="#ff6b6b" stroke-width="4"/>
+  <text x="425" y="600" text-anchor="middle" fill="#ff6b6b" font-family="Arial, sans-serif" font-size="56" font-weight="bold">73.3%</text>
+  <text x="425" y="650" text-anchor="middle" fill="#ff6b6b" font-family="Arial, sans-serif" font-size="32">Gains lost</text>
+
+  <!-- VS text -->
+  <text x="960" y="520" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="64" font-weight="bold">vs</text>
+
+  <!-- Right: Route (Good) -->
+  <rect x="1020" y="280" width="550" height="450" rx="20" fill="none" stroke="#4ade80" stroke-width="5"/>
+  <text x="1295" y="360" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="56" font-weight="bold">Route</text>
+  <text x="1295" y="440" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Select the right adapter</text>
+  <text x="1295" y="500" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">for each error type</text>
+
+  <!-- Result box for route -->
+  <rect x="1095" y="550" width="400" height="120" rx="10" fill="#2a2a4e" stroke="#4ade80" stroke-width="4"/>
+  <text x="1295" y="600" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="56" font-weight="bold">76.7%</text>
+  <text x="1295" y="650" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="32">Gains kept</text>
+
+  <!-- Bottom message -->
+  <rect x="400" y="780" width="900" height="80" rx="15" fill="none" stroke="#ffd93d" stroke-width="5"/>
+  <text x="850" y="835" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="40">Specialists outperform generalists</text>
+</svg>

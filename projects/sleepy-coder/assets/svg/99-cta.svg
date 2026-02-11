@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="960" y="120" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="96" font-weight="bold">Try It Yourself</text>
+
+  <!-- Box 1: GitHub -->
+  <rect x="150" y="240" width="550" height="380" rx="20" fill="none" stroke="#4ade80" stroke-width="5"/>
+  <text x="425" y="330" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="48" font-weight="bold">GitHub</text>
+  <text x="425" y="420" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Open source code</text>
+  <text x="425" y="490" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="36">softwarewrighter/</text>
+  <text x="425" y="545" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="36">sleepy-coder</text>
+
+  <!-- Box 2: Research Papers -->
+  <rect x="750" y="240" width="550" height="380" rx="20" fill="none" stroke="#ffd93d" stroke-width="5"/>
+  <text x="1025" y="330" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Research</text>
+  <text x="1025" y="410" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36">Share Algorithm</text>
+  <text x="1025" y="465" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="32">arxiv.org/abs/2602.06043</text>
+  <text x="1025" y="530" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36">UWSH Paper</text>
+  <text x="1025" y="585" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="32">arxiv.org/abs/2512.05117</text>
+
+  <!-- Links note -->
+  <text x="600" y="700" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="44">Links in the description</text>
+
+  <!-- Part 2 teaser -->
+  <rect x="400" y="750" width="600" height="80" rx="15" fill="none" stroke="#00d4ff" stroke-width="5"/>
+  <text x="700" y="805" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="40">Part 2 coming soon</text>
+</svg>

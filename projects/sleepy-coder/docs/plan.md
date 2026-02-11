@@ -1,124 +1,161 @@
-# Sleepy Coder Explainer Video Plan
-
-## Project Status: IN-PROGRESS
-
-The underlying sleepy-coder implementation has Phase 1 MVP complete (72 tests). No validated results yet - the overnight learning cycle has not been run with real metrics.
+# Sleepy Coder: Towards Continuous LLM Learning (Part 1)
 
 ## Video Concept
 
-"How to Build a Coding AI That Learns from Its Mistakes"
+An optimistic explainer (~4-5 min) introducing our vision for continuous LLM learning, the Share algorithm approach, key insights discovered, and the path forward. Part 1 of a series. Focus on progress and future potential.
 
-Explainer video (~5-10 min) demonstrating:
-1. The problem: AI coding agents repeat the same errors
-2. The solution: Parameter-efficient continual learning (PaCT)
-3. The "sleep learning" metaphor: capture mistakes by day, train overnight
-4. Demo: showing measurable improvement over sleep cycles
+## Story Arc (Optimistic Framing)
 
-## Source Materials
+1. **The Vision** - AI that learns from mistakes while you sleep
+2. **The Challenge** - Teaching without forgetting (catastrophic forgetting)
+3. **The Discovery** - Share algorithm from Johns Hopkins research
+4. **The System** - Sleepy Coder's day/night learning cycle
+5. **The Results** - 76.7% accuracy, Share prevents forgetting
+6. **The Insight** - Don't average adapters, route to specialists
+7. **Next Steps** - Task routing, larger models (Part 2 preview)
 
-### From Main Repo (~/github/softwarewrighter/sleepy-coder)
-- docs/research.txt - Full ChatGPT research conversation
-- docs/architecture.md - System design
-- docs/design.md - Technical details
-- docs/plan.md - Implementation phases
-- docs/status.md - Current progress (Phase 1 MVP complete)
-- rust/ - Rust implementation (agent, eval, sandbox, koans)
-- py/ - Python training pipeline (to be implemented)
+---
 
-### From Shorts Project (../shorts/projects/sleepy-coder)
-- work/narration.txt - 2-minute narration script
-- work/slides-outline.txt - Visual theme and slide concepts
-- showcase/slides/ - HTML slide templates (00-hook through 06-cta)
-- work/description.txt - YouTube description
+## Video Structure
 
-## Potential Demo Approaches
+| # | Segment | Content | Type | Duration |
+|---|---------|---------|------|----------|
+| 00 | title | Title card with music | Image + music | 5s |
+| 01 | hook | The vision: AI that learns overnight | SVG + narration | ~15s |
+| 02 | challenge | Catastrophic forgetting problem | SVG + narration | ~18s |
+| 03 | discovery | Share algorithm from research | SVG + narration | ~18s |
+| 04 | system | Day/night learning cycle | SVG + narration | ~20s |
+| 05 | results | 76.7% with task-specific adapters | SVG + narration | ~18s |
+| 06 | insight | The averaging trap, routing solution | SVG + narration | ~20s |
+| 07 | next-steps | Part 2 preview, future work | SVG + narration | ~18s |
+| 99 | cta | Try it yourself, links | SVG + narration | ~15s |
+| 99b | epilog | Shared epilog | Video | ~13s |
+| 99c | epilog-ext | Music fade | Image + music | 10s |
 
-### Option A: VHS Terminal Recording
-- Show the agent loop running: RED → patch → GREEN
-- Capture compiler errors and fixes
-- Show eval metrics improving
+**Estimated total: ~3-4 minutes**
 
-### Option B: Playwright Screen Capture
-- Capture web UI if sleepy-coder has one (check rust/wasm or py/web)
-- Show plots/charts of learning progress
-- Interactive demo of the eval dashboard
+---
 
-### Option C: Plot Animation
-- Pre-render matplotlib plots showing:
-  - Repeat error rate vs sleep cycles
-  - Steps-to-green over time
-  - Regression test stability
-- Animate the lines growing with each cycle
+## Narration Scripts (TTS-compliant)
 
-## Video Structure (Draft)
+All scripts: max 320 chars, periods/commas only, no digits, spell out numbers.
 
-| Segment | Content | Type | Duration |
-|---------|---------|------|----------|
-| 00-title | Sleepy Coder title card | Image + music | 5s |
-| 01-hook | "What if AI could learn from mistakes?" | SVG + narration | 20s |
-| 02-problem | The memory problem - repeated errors | SVG + narration | 25s |
-| 03-solution | Sleep learning concept | SVG + narration | 30s |
-| 04-papers | Research foundation (Johns Hopkins) | SVG + narration | 25s |
-| 05-architecture | Three phases: Day/Sleep/Eval | SVG + narration | 30s |
-| 06-demo-cli | Agent loop running (VHS or Playwright) | Demo + narration | 60s |
-| 07-demo-results | Plots showing improvement | Charts + narration | 45s |
-| 08-efficient | LoRA in shared subspace | SVG + narration | 25s |
-| 09-summary | What we showed | SVG + narration | 20s |
-| 99-cta | Try it yourself, GitHub link | SVG + narration | 15s |
-| 99b-epilog | Shared epilog | Video | 13s |
-| 99c-epilog-ext | Music fade | Image + music | 10s |
+### 01-hook.txt
+What if your coding assistant could learn from its mistakes while you sleep. Wake up to a smarter model. No manual retraining. This is our vision for continuous learning.
 
-### Segment 04-papers: Research Foundation
+### 02-challenge.txt
+The challenge is catastrophic forgetting. When you train a model on new patterns, it forgets what it already knew. Fix one bug, break three others. We needed a better approach.
 
-**SVG Layout (04-papers.svg)**:
-- Headline: "Research Foundation"
-- Subtitle: "Johns Hopkins University"
-- Two boxes side-by-side:
-  - Box 1 (cyan): "Shared LoRA Subspaces" — Single evolving basis, tiny coefficients
-  - Box 2 (green): "Universal Weight Subspace" — Models converge to similar subspaces
-- Bottom text: "Kaushik, Vaidya, Chaudhari, Chellappa, Yuille"
-- Links: arxiv.org/abs/2602.06043 | arxiv.org/abs/2512.05117
+### 03-discovery.txt
+We found the Share algorithm in recent research from Johns Hopkins. It extracts a shared subspace using S V D. New tasks train only tiny coefficient vectors. Sixty seven times fewer parameters.
 
-**Narration (04-papers.txt)**:
-"This approach is grounded in recent research from Johns Hopkins University. The Share paper shows how to maintain a single evolving low rank basis instead of many adapters. The Universal Weight Subspace Hypothesis suggests models naturally converge to similar parameter directions, so most learning can happen as coefficient updates in a stable basis."
+### 04-system.txt
+Sleepy Coder runs a day night cycle. During the day, the agent fixes Rust compiler errors. Failed attempts get captured. At night, we train new adapters and consolidate knowledge. Then evaluate.
 
-## Technical Requirements
+### 05-results.txt
+The results are promising. Task specific coefficients achieved seventy six point seven percent accuracy. The Share algorithm successfully prevents forgetting. We can add skills without breaking old ones.
 
-### Demos to Capture
-1. **Agent loop** - needs Ollama running with a small model (e.g., qwen2.5-coder:1.5b)
-2. **Rust koans** - 42 builtin koans across 5 error families
-3. **Eval metrics** - needs matplotlib plots from py/sleepy_pact/viz/
+### 06-insight.txt
+The key insight, routing beats averaging. When we averaged coefficients across tasks, gains disappeared. Specialists outperform generalists. Route each error to the right adapter.
 
-### Pre-requisites
-- [ ] Run the agent loop once to generate sample episodes
-- [ ] Run eval to generate baseline metrics
-- [ ] Generate improvement plots (even synthetic for demo)
+### 07-next-steps.txt
+Part two will implement task routing. Detect the error type, select the matching adapter. We will also test larger models with more capacity. The foundation is solid, now we scale.
 
-## Paper References (Johns Hopkins University)
+### 99-cta.txt
+The code is open source on Git Hub. Try it on your own Rust projects. Links to the repo and research papers are in the description. Part two coming soon.
 
-Both core papers are from the same Johns Hopkins University team:
-- **Authors**: Prakhar Kaushik, Ankit Vaidya, Shravan Chaudhari, Rama Chellappa, Alan Yuille
-- **Institution**: Johns Hopkins University (Chellappa and Yuille are Bloomberg Distinguished Professors)
+---
 
-### Core Papers (MUST mention in video)
+## SVG Slide Designs
 
-1. **"Shared LoRA Subspaces for almost Strict Continual Learning"**
-   - arXiv: https://arxiv.org/abs/2602.06043
-   - Key idea: Single evolving shared low-rank basis, tiny per-task coefficients
+### 01-hook.svg
+- Headline: "Learn While You Sleep" (cyan)
+- Subtitle: "Continuous Learning for LLMs" (white)
+- Visual: Moon icon or sleeping metaphor
+- Avatar zone clear (bottom-right)
 
-2. **"The Universal Weight Subspace Hypothesis"**
-   - arXiv: https://arxiv.org/abs/2512.05117
-   - Key idea: Models converge to similar spectral subspaces, enabling coefficient-only updates
+### 02-challenge.svg
+- Headline: "The Forgetting Problem" (red)
+- Subtitle: "Catastrophic Forgetting" (white)
+- Two boxes: "Learn New" (green) vs "Forget Old" (red)
+- Arrow showing knowledge loss
 
-### Related Methods (optional mentions)
-- O-LoRA, KeepLoRA, SPARC, C-LoRA - orthogonal/residual approaches
+### 03-discovery.svg
+- Headline: "The Share Algorithm" (green)
+- Subtitle: "Johns Hopkins Research" (white)
+- Three-phase boxes:
+  - Phase 1: Extract basis (SVD)
+  - Phase 2: Train coefficients
+  - Phase 3: Consolidate
 
-## Next Steps
+### 04-system.svg
+- Headline: "Day/Night Cycle" (yellow)
+- Subtitle: "Sleepy Coder Architecture" (white)
+- Circular flow: DAY → CAPTURE → SLEEP → TRAIN → EVAL → DEPLOY
 
-1. Verify sleepy-coder can run locally (Ollama + qwen2.5-coder)
-2. Generate sample episode data
-3. Create synthetic "improvement over time" plots
-4. Write narration scripts for each segment
-5. Design SVG slides following style guide
-6. Record demos (VHS for CLI, Playwright for any web UI)
-7. Assemble video segments
+### 05-results.svg
+- Headline: "What We Achieved" (green)
+- Subtitle: "Share in Practice" (white)
+- Three result boxes:
+  - 76.7% accuracy (green)
+  - Zero regressions (green)
+  - 51 adapters trained (yellow)
+
+### 06-insight.svg
+- Headline: "Route, Don't Blend" (cyan)
+- Subtitle: "The Key Insight" (white)
+- Two columns:
+  - LEFT (red): Average → 73.3%
+  - RIGHT (green): Route → 76.7%
+
+### 07-next-steps.svg
+- Headline: "Coming in Part 2" (yellow)
+- Subtitle: "The Road Ahead" (white)
+- Three boxes: Task Routing, Larger Models, VS Code Extension
+
+### 99-cta.svg
+- Headline: "Try It Yourself" (green)
+- Two boxes:
+  - GitHub: sleepy-coder repo
+  - Papers: Share, UWSH on arXiv
+- Footer: Part 2 coming soon
+
+---
+
+## Asset Checklist
+
+### Done
+- [x] 00-title.mp4 (shared-spaces background, "In or Out" music)
+
+### SVGs to Create
+- [ ] 01-hook.svg
+- [ ] 02-challenge.svg
+- [ ] 03-discovery.svg
+- [ ] 04-system.svg
+- [ ] 05-results.svg
+- [ ] 06-insight.svg
+- [ ] 07-next-steps.svg
+- [ ] 99-cta.svg
+
+### TTS to Generate
+- [ ] 01-hook.wav through 99-cta.wav (8 files)
+
+### Epilog
+- [ ] 99b-epilog.mp4 (copy from reference)
+- [ ] 99c-epilog-ext.mp4 (create with "In or Out" music fade)
+
+---
+
+## Research References
+
+### Johns Hopkins University Team
+- Prakhar Kaushik, Ankit Vaidya, Shravan Chaudhari, Rama Chellappa, Alan Yuille
+
+### Papers
+1. **Share**: "Shared LoRA Subspaces for Almost Strict Continual Learning" (arXiv:2602.06043)
+2. **UWSH**: "The Universal Weight Subspace Hypothesis" (arXiv:2512.05117)
+
+---
+
+## Music
+- Title + Epilog Extension: "In or Out" by Telecasted
