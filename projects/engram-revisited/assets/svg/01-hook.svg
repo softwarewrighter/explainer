@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="960" y="120" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="96" font-weight="bold">From Emulation to Implementation</text>
+
+  <!-- Subtitle -->
+  <text x="960" y="200" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="64">A Journey Through Engram Memory</text>
+
+  <!-- Box 1: Emulation (yellow) -->
+  <rect x="100" y="300" width="750" height="400" rx="20" fill="none" stroke="#ffd93d" stroke-width="6"/>
+  <text x="475" y="380" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Emulation</text>
+  <text x="475" y="460" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="44">LoRA fine-tuning</text>
+  <text x="475" y="520" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="44">Train model to behave</text>
+  <text x="475" y="580" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="44">like it has memory</text>
+  <text x="475" y="660" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="44">Architecture unchanged</text>
+
+  <!-- Arrow -->
+  <path d="M 880 500 L 1000 500" stroke="#00d4ff" stroke-width="6" fill="none" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00d4ff"/>
+    </marker>
+  </defs>
+
+  <!-- Box 2: Implementation (green) -->
+  <rect x="1050" y="300" width="750" height="400" rx="20" fill="none" stroke="#4ade80" stroke-width="6"/>
+  <text x="1425" y="380" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Implementation</text>
+  <text x="1425" y="460" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="44">Hash-based memory</text>
+  <text x="1425" y="520" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="44">O(1) lookup module</text>
+  <text x="1425" y="580" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="44">injected into model</text>
+  <text x="1425" y="660" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="44">Real memory table</text>
+
+  <!-- Avatar safe zone marker (invisible, for reference) -->
+  <!-- Keep x=1400-1920, y=800-1080 clear -->
+</svg>

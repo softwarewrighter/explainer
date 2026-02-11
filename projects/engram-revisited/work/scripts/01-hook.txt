@@ -1,0 +1,1 @@
+We started by training models to act like they had memory. But then we found an open source implementation that does it for real. This is what we learned along the way.

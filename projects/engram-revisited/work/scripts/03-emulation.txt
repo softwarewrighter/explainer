@@ -1,0 +1,1 @@
+Our first approach used LoRA fine tuning. We trained a small model on hundreds of patterns until it behaved like it had memory. Accuracy improved sixty three percent, but the architecture stayed the same.

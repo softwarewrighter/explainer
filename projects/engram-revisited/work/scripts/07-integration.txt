@@ -1,0 +1,1 @@
+We ported the module to work with Hugging Face models. A wrapper injects Engram after each transformer layer. The base model stays frozen while only the memory table and gates get trained.

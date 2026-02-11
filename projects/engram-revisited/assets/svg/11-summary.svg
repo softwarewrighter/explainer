@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="960" y="120" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="96" font-weight="bold">What We Learned</text>
+
+  <!-- Subtitle -->
+  <text x="960" y="200" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="64">The Journey</text>
+
+  <!-- Box 1: Emulation -->
+  <rect x="100" y="280" width="380" height="420" rx="20" fill="none" stroke="#ffd93d" stroke-width="6"/>
+  <text x="290" y="350" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Lesson 1</text>
+  <text x="290" y="420" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Behavioral</text>
+  <text x="290" y="475" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">emulation</text>
+  <text x="290" y="530" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">via LoRA</text>
+  <text x="290" y="610" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="36">Works but</text>
+  <text x="290" y="660" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="36">has limits</text>
+
+  <!-- Box 2: Implementation -->
+  <rect x="520" y="280" width="380" height="420" rx="20" fill="none" stroke="#4ade80" stroke-width="6"/>
+  <text x="710" y="350" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Lesson 2</text>
+  <text x="710" y="420" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Real Engram</text>
+  <text x="710" y="475" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">memory is</text>
+  <text x="710" y="530" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">~300 lines</text>
+  <text x="710" y="610" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="36">Simpler than</text>
+  <text x="710" y="660" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="36">expected</text>
+
+  <!-- Box 3: Application -->
+  <rect x="940" y="280" width="380" height="420" rx="20" fill="none" stroke="#00d4ff" stroke-width="6"/>
+  <text x="1130" y="350" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Lesson 3</text>
+  <text x="1130" y="420" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Match tool</text>
+  <text x="1130" y="475" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">to task</text>
+  <text x="1130" y="530" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">strengths</text>
+  <text x="1130" y="610" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="36">Recall not</text>
+  <text x="1130" y="660" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="36">reasoning</text>
+
+  <!-- Bottom note -->
+  <text x="700" y="780" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="44">Hash-based memory is a specialized tool, not a general enhancement</text>
+</svg>

@@ -1,0 +1,1 @@
+Then we found weagans Engram repo on GitHub. It implements real hash based memory in about three hundred lines. A learnable memory table, deterministic hashing, and a gate that decides when to trust the lookup.

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="96" font-weight="bold">How It Works</text>
+
+  <!-- Subtitle -->
+  <text x="960" y="180" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="64">O(1) Hash-Based Memory</text>
+
+  <!-- Flow diagram boxes -->
+  <!-- Step 1: Input -->
+  <rect x="100" y="280" width="350" height="120" rx="15" fill="#2a2a4e" stroke="#ffd93d" stroke-width="6"/>
+  <text x="275" y="330" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="36" font-weight="bold">1. Input Tokens</text>
+  <text x="275" y="375" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="32">Multi-head hash</text>
+
+  <!-- Arrow -->
+  <path d="M 470 340 L 550 340" stroke="#ffffff" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- Step 2: Memory -->
+  <rect x="570" y="280" width="350" height="120" rx="15" fill="#2a2a4e" stroke="#4ade80" stroke-width="6"/>
+  <text x="745" y="330" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="36" font-weight="bold">2. Memory Table</text>
+  <text x="745" y="375" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="32">O(1) lookup</text>
+
+  <!-- Arrow -->
+  <path d="M 940 340 L 1020 340" stroke="#ffffff" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Gate -->
+  <rect x="1040" y="280" width="350" height="120" rx="15" fill="#2a2a4e" stroke="#ff6b6b" stroke-width="6"/>
+  <text x="1215" y="330" text-anchor="middle" fill="#ff6b6b" font-family="Arial, sans-serif" font-size="36" font-weight="bold">3. Learned Gate</text>
+  <text x="1215" y="375" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="32">Trust or ignore?</text>
+
+  <!-- Memory table visual -->
+  <rect x="200" y="480" width="800" height="250" rx="10" fill="#2a2a4e" stroke="#4ade80" stroke-width="4"/>
+  <text x="600" y="530" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="44">Memory Table (50K slots × d_model)</text>
+
+  <!-- Slot representation -->
+  <rect x="250" y="570" width="100" height="60" fill="#3a3a5e" stroke="#ffffff" stroke-width="4"/>
+  <rect x="360" y="570" width="100" height="60" fill="#3a3a5e" stroke="#ffffff" stroke-width="4"/>
+  <rect x="470" y="570" width="100" height="60" fill="#4ade80" stroke="#ffffff" stroke-width="4"/>
+  <rect x="580" y="570" width="100" height="60" fill="#3a3a5e" stroke="#ffffff" stroke-width="4"/>
+  <rect x="690" y="570" width="100" height="60" fill="#3a3a5e" stroke="#ffffff" stroke-width="4"/>
+  <rect x="800" y="570" width="100" height="60" fill="#ffd93d" stroke="#ffffff" stroke-width="4"/>
+
+  <text x="520" y="615" text-anchor="middle" fill="#1a1a2e" font-family="Arial, sans-serif" font-size="28" font-weight="bold">hit</text>
+  <text x="850" y="615" text-anchor="middle" fill="#1a1a2e" font-family="Arial, sans-serif" font-size="28" font-weight="bold">hit</text>
+
+  <text x="600" y="700" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36">Hash(token) → deterministic slot indices</text>
+
+  <!-- Output formula -->
+  <rect x="200" y="780" width="1100" height="100" rx="15" fill="none" stroke="#00d4ff" stroke-width="6"/>
+  <text x="750" y="845" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="40">output = hidden + gate × retrieved_memory</text>
+</svg>

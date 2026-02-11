@@ -1,0 +1,1 @@
+Three lessons from this journey. First, behavioral emulation through LoRA works but has limits. Second, real Engram memory is simpler than expected. Third, the tool must match the task. Hash based memory is for recall, not reasoning.

@@ -1,0 +1,1 @@
+The Enhanced Engram Module hashes each token to memory slots using multiple hash functions. The lookup is O one, constant time regardless of sequence length. A learned gate decides how much to trust each retrieval.

@@ -1,0 +1,27 @@
+From Emulation to Implementation: A Journey Through Engram Memory
+
+We started by training models to behave like they had memory using LoRA fine-tuning. Then we discovered weagan's Engram implementation - real O(1) hash-based memory in about 300 lines of Python. This video documents what we learned: how to integrate it with HuggingFace models, what tasks it excels at (exact-match lookups), and where it struggles (pattern generalization).
+
+The key insight: Engram is a specialized tool, not a general enhancement. Hash-based memory works for consistent recall, not contextual reasoning.
+
+== Links ==
+
+engram-poc (our implementation): https://github.com/softwarewrighter/engram-poc
+weagan/Engram (reference): https://github.com/weagan/Engram
+DeepSeek Engram Paper: https://arxiv.org/abs/2601.07372
+Discord: https://discord.gg/Ctzk5uHggZ
+
+== Key Findings ==
+
+- LoRA emulation improved accuracy 63% (8.6% → 14%)
+- Real Engram achieves 100% accuracy on synthetic long-term recall
+- Acronym expansion: 75% with Engram vs 12% baseline (+63%)
+- Element names: 67% with Engram vs 0% baseline (+67%)
+- Capitals: 0% with Engram vs 22% baseline (regression - base model already knew)
+- Random synthetic mappings: 0% for both (no semantic signal)
+
+== Chapters ==
+
+(TBD after video assembly)
+
+#AI #MachineLearning #LLM #Engram #LoRA #Memory #DeepSeek #Python #HuggingFace #OpenSource

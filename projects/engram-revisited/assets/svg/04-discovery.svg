@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="960" y="120" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="96" font-weight="bold">The Discovery</text>
+
+  <!-- Subtitle -->
+  <text x="960" y="200" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="64">weagan/Engram on GitHub</text>
+
+  <!-- Main content box -->
+  <rect x="100" y="280" width="1200" height="500" rx="20" fill="none" stroke="#4ade80" stroke-width="6"/>
+
+  <!-- GitHub reference -->
+  <text x="650" y="360" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="44">github.com/weagan/Engram</text>
+
+  <!-- Key point -->
+  <text x="650" y="450" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Real Engram in ~300 lines</text>
+
+  <!-- Components list -->
+  <text x="200" y="550" fill="#ffffff" font-family="Arial, sans-serif" font-size="44">• Learnable memory table (50K+ slots)</text>
+  <text x="200" y="620" fill="#ffffff" font-family="Arial, sans-serif" font-size="44">• Deterministic multi-head hashing</text>
+  <text x="200" y="690" fill="#ffffff" font-family="Arial, sans-serif" font-size="44">• Gated injection into hidden states</text>
+
+  <!-- Bottom highlight -->
+  <rect x="100" y="820" width="1200" height="100" rx="15" fill="none" stroke="#ff6b6b" stroke-width="6"/>
+  <text x="700" y="885" text-anchor="middle" fill="#ff6b6b" font-family="Arial, sans-serif" font-size="44">Not behavioral approximation — real architecture change</text>
+</svg>

@@ -1,0 +1,1 @@
+The code is open source. Engram P O C has the full integration with Hugging Face models. Weagans repo has the clean reference implementation. Links to both and the Deep Seek paper are in the description.

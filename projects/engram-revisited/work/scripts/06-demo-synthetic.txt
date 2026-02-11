@@ -1,0 +1,1 @@
+The proof is in the plots. Top left shows Engram reaching perfect accuracy by epoch two while baseline is still climbing. Top right shows perfect long term recall even with four hundred tokens of distraction. The improvement is consistent across all sequence lengths.

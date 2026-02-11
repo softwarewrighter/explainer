@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="960" y="120" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="96" font-weight="bold">The Key Insight</text>
+
+  <!-- Subtitle -->
+  <text x="960" y="200" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="64">A Specialized Tool</text>
+
+  <!-- Use Engram column -->
+  <rect x="100" y="280" width="550" height="450" rx="20" fill="none" stroke="#4ade80" stroke-width="6"/>
+  <text x="375" y="350" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Use Engram</text>
+  <text x="150" y="420" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">FAQ responses</text>
+  <text x="150" y="480" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Terminology expansion</text>
+  <text x="150" y="540" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Entity attribute lookup</text>
+  <text x="150" y="600" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Code boilerplate</text>
+  <text x="150" y="660" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Long document retrieval</text>
+
+  <!-- Skip Engram column -->
+  <rect x="700" y="280" width="550" height="450" rx="20" fill="none" stroke="#ff6b6b" stroke-width="6"/>
+  <text x="975" y="350" text-anchor="middle" fill="#ff6b6b" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Skip Engram</text>
+  <text x="750" y="420" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Creative writing</text>
+  <text x="750" y="480" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Novel problem solving</text>
+  <text x="750" y="540" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Context-dependent logic</text>
+  <text x="750" y="600" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Semantic search</text>
+  <text x="750" y="660" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Generalization tasks</text>
+
+  <!-- Bottom insight -->
+  <rect x="100" y="780" width="1150" height="140" rx="15" fill="none" stroke="#ffd93d" stroke-width="6"/>
+  <text x="675" y="840" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="44" font-weight="bold">Hash-based memory = recall, not reasoning</text>
+  <text x="675" y="900" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Match the tool to the task</text>
+</svg>

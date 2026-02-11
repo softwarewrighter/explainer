@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="960" y="120" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="96" font-weight="bold">Try It Yourself</text>
+
+  <!-- Box 1: engram-poc -->
+  <rect x="100" y="240" width="380" height="400" rx="20" fill="none" stroke="#4ade80" stroke-width="6"/>
+  <text x="290" y="320" text-anchor="middle" fill="#4ade80" font-family="Arial, sans-serif" font-size="48" font-weight="bold">engram-poc</text>
+  <text x="290" y="400" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Full HuggingFace</text>
+  <text x="290" y="455" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">integration</text>
+  <text x="290" y="530" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="32">softwarewrighter/</text>
+  <text x="290" y="575" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="32">engram-poc</text>
+
+  <!-- Box 2: weagan/Engram -->
+  <rect x="520" y="240" width="380" height="400" rx="20" fill="none" stroke="#ff6b6b" stroke-width="6"/>
+  <text x="710" y="320" text-anchor="middle" fill="#ff6b6b" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Reference</text>
+  <text x="710" y="400" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Clean ~300 line</text>
+  <text x="710" y="455" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">implementation</text>
+  <text x="710" y="530" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="32">weagan/Engram</text>
+  <text x="710" y="575" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="32">on GitHub</text>
+
+  <!-- Box 3: DeepSeek Paper -->
+  <rect x="940" y="240" width="380" height="400" rx="20" fill="none" stroke="#ffd93d" stroke-width="6"/>
+  <text x="1130" y="320" text-anchor="middle" fill="#ffd93d" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Paper</text>
+  <text x="1130" y="400" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">DeepSeek</text>
+  <text x="1130" y="455" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="40">Engram research</text>
+  <text x="1130" y="530" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="32">arxiv.org/abs/</text>
+  <text x="1130" y="575" text-anchor="middle" fill="#00d4ff" font-family="Arial, sans-serif" font-size="32">2601.07372</text>
+
+  <!-- Links note -->
+  <text x="700" y="720" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="44">Links in the description</text>
+</svg>

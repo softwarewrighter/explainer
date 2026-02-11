@@ -1,0 +1,1 @@
+But hash based memory is not magic. It excels at exact match lookups with structured keys. It struggles with pattern completion that needs generalization. Same input must always need same output.

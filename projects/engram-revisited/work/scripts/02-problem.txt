@@ -1,0 +1,1 @@
+Language models recompute everything from scratch. Even common patterns like for loops get full attention treatment every time. Engram promises to fix this with direct memory lookup.
