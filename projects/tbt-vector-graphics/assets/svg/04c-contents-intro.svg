@@ -12,10 +12,8 @@
   <!-- Dark background -->
   <rect width="1920" height="1080" fill="#0a0a0a"/>
 
-  <!-- Subtitle -->
-  <text x="960" y="280" font-family="Arial, sans-serif" font-size="48" fill="#888888" text-anchor="middle">
-    Vector Arcade Platform
-  </text>
+  <!-- Vector Arcade Platform header image -->
+  <image href="../images/vector-arcade-platform.png" x="310" y="160" width="1300" height="100"/>
 
   <!-- CONTENTS in vector stroke style - cyan -->
   <g fill="none" stroke="#00d4ff" stroke-width="6" stroke-linecap="square" filter="url(#glow)" transform="translate(960, 500)">

@@ -12,28 +12,8 @@
   <!-- Dark background -->
   <rect width="1920" height="1080" fill="#0a0a0a"/>
 
-  <!-- Vector Arcade Platform - top subtitle -->
-  <g fill="none" stroke="#00d4ff" stroke-width="4" stroke-linecap="square" filter="url(#glow)" transform="translate(960, 200)">
-    <!-- VECTOR -->
-    <path d="M-520,-25 L-495,25 L-470,-25"/>
-    <path d="M-450,-25 L-450,25 M-450,-25 L-410,-25 M-450,0 L-420,0 M-450,25 L-410,25"/>
-    <path d="M-380,-25 L-390,-25 L-390,25 L-380,25"/>
-    <path d="M-360,-25 L-320,-25 M-340,-25 L-340,25"/>
-    <path d="M-300,-25 L-260,-25 L-260,25 L-300,25 Z"/>
-    <path d="M-240,-25 L-240,25 M-240,-25 L-210,-25 Q-190,-25 -190,-12 Q-190,0 -210,0 L-240,0 M-210,0 L-185,25"/>
-    <!-- ARCADE -->
-    <path d="M-130,25 L-110,-25 L-90,25 M-122,10 L-98,10"/>
-    <path d="M-70,-25 L-70,25 M-70,-25 L-40,-25 Q-20,-25 -20,-12 Q-20,0 -40,0 L-70,0 M-40,0 L-15,25"/>
-    <path d="M10,-25 L0,-25 L0,25 L10,25"/>
-    <path d="M40,25 L40,-25 L70,-25 Q90,-25 90,-12 Q90,0 70,0 L40,0 M40,0 L40,25 M70,0 Q90,0 90,12 Q90,25 70,25 L40,25"/>
-    <path d="M120,-25 L120,25 M120,-25 L160,-25 M120,0 L150,0 M120,25 L160,25"/>
-    <!-- PLATFORM -->
-    <path d="M200,-25 L200,25 M200,-25 L230,-25 Q250,-25 250,-12 Q250,0 230,0 L200,0"/>
-    <path d="M280,-25 L280,25 M280,25 L320,25"/>
-    <path d="M350,25 L370,-25 L390,25 M358,10 L382,10"/>
-    <path d="M420,-25 L420,25 M420,-25 L460,-25 M420,-25 L440,0 L420,25"/>
-    <path d="M490,-25 L490,25 M490,-25 L530,-25 M490,0 L520,0 M490,25 L530,25"/>
-  </g>
+  <!-- Vector Arcade Platform header image -->
+  <image href="../images/vector-arcade-platform.png" x="310" y="130" width="1300" height="100"/>
 
   <!-- BATTLEZONE - Large centered in GREEN (the game's signature color) -->
   <g fill="none" stroke="#4ade80" stroke-width="8" stroke-linecap="square" filter="url(#glow)" transform="translate(960, 540)">
