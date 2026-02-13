@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+
+  <!-- Headline -->
+  <text x="960" y="120" font-family="Arial, sans-serif" font-size="96" font-weight="bold"
+        fill="#00d4ff" text-anchor="middle">
+    Military Origins
+  </text>
+
+  <!-- Box 1: NORAD Era -->
+  <g transform="translate(120, 200)">
+    <rect x="0" y="0" width="780" height="400" fill="none" stroke="#00d4ff" stroke-width="5" rx="10"/>
+    <text x="390" y="60" font-family="Arial, sans-serif" font-size="48" font-weight="bold"
+          fill="#00d4ff" text-anchor="middle">
+      NORAD Era
+    </text>
+    <line x1="40" y1="90" x2="740" y2="90" stroke="#00d4ff" stroke-width="4"/>
+    <text x="390" y="160" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" text-anchor="middle">
+      Radar tracking displays
+    </text>
+    <text x="390" y="220" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" text-anchor="middle">
+      Real time vector rendering
+    </text>
+    <text x="390" y="280" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" text-anchor="middle">
+      Defense command centers
+    </text>
+    <text x="390" y="340" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" text-anchor="middle">
+      Cold War era technology
+    </text>
+  </g>
+
+  <!-- Box 2: IBM 2250 -->
+  <g transform="translate(1020, 200)">
+    <rect x="0" y="0" width="780" height="400" fill="none" stroke="#4ade80" stroke-width="5" rx="10"/>
+    <text x="390" y="60" font-family="Arial, sans-serif" font-size="48" font-weight="bold"
+          fill="#4ade80" text-anchor="middle">
+      IBM 2250
+    </text>
+    <line x1="40" y1="90" x2="740" y2="90" stroke="#4ade80" stroke-width="4"/>
+    <text x="390" y="160" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" text-anchor="middle">
+      Quarter million dollar display
+    </text>
+    <text x="390" y="220" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" text-anchor="middle">
+      Connected to mainframes
+    </text>
+    <text x="390" y="280" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" text-anchor="middle">
+      IBM 1130 as graphics card
+    </text>
+    <text x="390" y="340" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" text-anchor="middle">
+      S/370 ran the actual code
+    </text>
+  </g>
+
+  <!-- Subtext -->
+  <text x="960" y="720" font-family="Arial, sans-serif" font-size="44" fill="#888888" text-anchor="middle">
+    Vectors before arcade games existed
+  </text>
+
+  <!-- Avatar safe zone kept clear: x=1400-1920, y=800-1080 -->
+</svg>

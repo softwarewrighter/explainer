@@ -1,0 +1,1 @@
+Before pixels dominated screens, there were vectors. Lines drawn directly from point to point, with no grid and no fill. Just pure geometry rendered in glowing phosphor.

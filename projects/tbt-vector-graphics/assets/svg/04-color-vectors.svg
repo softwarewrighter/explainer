@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+
+  <!-- Headline with gradient effect simulated -->
+  <text x="960" y="120" font-family="Arial, sans-serif" font-size="96" font-weight="bold"
+        fill="#4ade80" text-anchor="middle">
+    Adding Color and Depth
+  </text>
+
+  <!-- Box 1: BattleZone -->
+  <g transform="translate(120, 200)">
+    <rect x="0" y="0" width="780" height="450" fill="none" stroke="#4ade80" stroke-width="5" rx="10"/>
+    <text x="390" y="60" font-family="Arial, sans-serif" font-size="48" font-weight="bold"
+          fill="#4ade80" text-anchor="middle">
+      BattleZone
+    </text>
+    <line x1="40" y1="90" x2="740" y2="90" stroke="#4ade80" stroke-width="4"/>
+    <text x="390" y="160" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" text-anchor="middle">
+      Green wireframe tanks
+    </text>
+    <text x="390" y="220" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" text-anchor="middle">
+      Pseudo three D perspective
+    </text>
+    <text x="390" y="280" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" text-anchor="middle">
+      First person combat
+    </text>
+    <!-- Mini tank graphic -->
+    <g transform="translate(390, 380)" stroke="#4ade80" stroke-width="4" fill="none" filter="url(#glow)">
+      <path d="M-40,20 L-40,-10 L-20,-10 L-20,-20 L20,-20 L20,-10 L40,-10 L40,20 Z"/>
+      <line x1="0" y1="-20" x2="0" y2="-40"/>
+    </g>
+  </g>
+
+  <!-- Box 2: Tempest -->
+  <g transform="translate(1020, 200)">
+    <rect x="0" y="0" width="780" height="450" fill="none" stroke="#ff6b6b" stroke-width="5" rx="10"/>
+    <text x="390" y="60" font-family="Arial, sans-serif" font-size="48" font-weight="bold"
+          fill="#ff6b6b" text-anchor="middle">
+      Tempest
+    </text>
+    <line x1="40" y1="90" x2="740" y2="90" stroke="#ff6b6b" stroke-width="4"/>
+    <text x="390" y="160" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" text-anchor="middle">
+      Multicolored vectors
+    </text>
+    <text x="390" y="220" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" text-anchor="middle">
+      Tube shaped playfield
+    </text>
+    <text x="390" y="280" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" text-anchor="middle">
+      True depth illusion
+    </text>
+    <!-- Mini tempest tube graphic -->
+    <g transform="translate(390, 380)" stroke-width="4" fill="none" filter="url(#glow)">
+      <path stroke="#ff6b6b" d="M-50,30 L-30,-30"/>
+      <path stroke="#ffd93d" d="M-30,-30 L0,-40"/>
+      <path stroke="#4ade80" d="M0,-40 L30,-30"/>
+      <path stroke="#00d4ff" d="M30,-30 L50,30"/>
+      <path stroke="#ff6b6b" d="M-50,30 L50,30"/>
+    </g>
+  </g>
+
+  <!-- Subtext -->
+  <text x="960" y="780" font-family="Arial, sans-serif" font-size="44" fill="#888888" text-anchor="middle">
+    Each generation pushed the hardware further
+  </text>
+
+  <!-- Avatar safe zone kept clear: x=1400-1920, y=800-1080 -->
+</svg>

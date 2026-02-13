@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="1920" height="1080" fill="#0a0a0a"/>
+
+  <!-- #TBT in vector style -->
+  <g fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="square" filter="url(#glow)" transform="translate(960, 400)">
+    <!-- # -->
+    <path d="M-200,-40 L-200,40 M-170,-40 L-170,40 M-220,-15 L-150,-15 M-220,15 L-150,15"/>
+    <!-- T -->
+    <path d="M-120,-40 L-50,-40 M-85,-40 L-85,40"/>
+    <!-- B -->
+    <path d="M-20,-40 L-20,40 M-20,-40 L20,-40 Q45,-40 45,-20 Q45,0 20,0 L-20,0 M-20,0 L25,0 Q55,0 55,20 Q55,40 25,40 L-20,40"/>
+    <!-- T -->
+    <path d="M90,-40 L160,-40 M125,-40 L125,40"/>
+  </g>
+
+  <!-- Vector Graphics Games -->
+  <g fill="none" stroke="#00d4ff" stroke-width="4" stroke-linecap="square" filter="url(#glow)" transform="translate(960, 550)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="48" fill="#00d4ff" text-anchor="middle" stroke="none">
+      Vector Graphics Games
+    </text>
+  </g>
+
+  <!-- Subscribe / Like text -->
+  <text x="960" y="700" font-family="Arial, sans-serif" font-size="36" fill="#888888" text-anchor="middle">
+    Subscribe for more retro tech content
+  </text>
+
+  <!-- Decorative vector elements -->
+  <g stroke="#4ade80" stroke-width="4" fill="none" opacity="0.3" transform="translate(960, 850)">
+    <!-- Small ship -->
+    <path d="M0,-20 L15,20 L0,10 L-15,20 Z"/>
+  </g>
+</svg>

@@ -1,0 +1,1 @@
+This is a vector implementation of the classic Pong arcade game. The original did not use vector graphics, but some clones of it did.

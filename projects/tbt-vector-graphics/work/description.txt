@@ -1,0 +1,28 @@
+#TBT Vector Graphics Games
+
+Before pixels, there were vectors. This Throwback Thursday explores the evolution of vector graphics gaming, from military radar displays to arcade classics, and my attempt to recreate them using modern Rust and WebAssembly.
+
+The history: Vector displays date back to NORAD-era military systems. My first encounter was an IBM 2250 Vector Graphics Display Unit, a quarter-million dollar machine in 1970s money. It connected to an IBM 1130 that acted as a graphics controller for an IBM S/370 mainframe where the game code actually ran.
+
+The games: Pong, Lunar Lander, and Asteroids drew white vectors on black screens. BattleZone introduced green wireframe 3D tanks. Tempest pushed the hardware with multi-colored vectors and pseudo-3D depth. Each generation built on the last.
+
+The project: Vectorcade recreates these mechanics using Rust, WebAssembly, and modern GPU rendering. The architecture spans multiple repositories, separating game logic, fonts, rendering backends, and the web frontend.
+
+---
+
+GitHub (Vectorcade):
+- Games: https://github.com/softwarewrighter/vectorcade-games
+- Shared: https://github.com/softwarewrighter/vectorcade-shared
+- Fonts: https://github.com/softwarewrighter/vectorcade-fonts
+- Renderer: https://github.com/softwarewrighter/vectorcade-render-wgpu
+- Web: https://github.com/softwarewrighter/vectorcade-web-yew
+
+---
+
+Image Credits:
+- IBM 2250 Console (1969): Photo by Gregory Lloyd, CC BY-SA 4.0
+  https://commons.wikimedia.org/wiki/File:HES_IBM_2250_Console_grlloyd_Oct1969.png
+
+---
+
+#TBT #VectorGraphics #RetroGaming #Asteroids #Tempest #BattleZone #Rust #WebAssembly #GameDev #Arcade

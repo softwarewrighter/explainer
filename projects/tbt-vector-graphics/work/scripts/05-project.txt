@@ -1,0 +1,1 @@
+Vectorcade recreates these mechanics in Rust and WebAssembly. The architecture separates game logic, vector fonts, GPU rendering, and the web frontend into distinct modules.

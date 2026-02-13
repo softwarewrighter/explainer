@@ -1,0 +1,1 @@
+Vector displays started in military systems. NORAD used them for radar tracking. The IBM twenty two fifty cost a quarter million dollars and connected to mainframes as a dedicated graphics terminal.

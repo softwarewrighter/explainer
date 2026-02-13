@@ -1,0 +1,1 @@
+Lunar Lander requires careful fuel management and precise control. You must land softly on the flat surfaces while fighting gravity. Too fast and you crash.

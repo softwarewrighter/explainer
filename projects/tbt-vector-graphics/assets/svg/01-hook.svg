@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+
+  <!-- Decorative vector lines suggesting CRT scan -->
+  <g stroke="#00d4ff" stroke-width="4" opacity="0.3">
+    <line x1="0" y1="200" x2="1920" y2="200"/>
+    <line x1="0" y1="400" x2="1920" y2="400"/>
+    <line x1="0" y1="600" x2="1920" y2="600"/>
+    <line x1="0" y1="800" x2="1920" y2="800"/>
+  </g>
+
+  <!-- Main headline -->
+  <text x="960" y="380" font-family="Arial, sans-serif" font-size="120" font-weight="bold"
+        fill="none" stroke="#00d4ff" stroke-width="4" text-anchor="middle" filter="url(#glow)">
+    Before Pixels
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="520" font-family="Arial, sans-serif" font-size="96" font-weight="bold"
+        fill="none" stroke="#4ade80" stroke-width="4" text-anchor="middle" filter="url(#glow)">
+    There Were Vectors
+  </text>
+
+  <!-- Subtext -->
+  <text x="960" y="700" font-family="Arial, sans-serif" font-size="48"
+        fill="#888888" text-anchor="middle">
+    Lines drawn point to point. No grid. No fill.
+  </text>
+
+  <!-- Decorative vector shape - asteroids-style ship -->
+  <g transform="translate(960, 850)" fill="none" stroke="#ffffff" stroke-width="4" filter="url(#glow)">
+    <path d="M0,-40 L25,40 L0,20 L-25,40 Z"/>
+  </g>
+
+  <!-- Avatar safe zone marker (invisible, for reference) -->
+  <!-- Safe zone: x=1400-1920, y=800-1080 kept clear -->
+</svg>

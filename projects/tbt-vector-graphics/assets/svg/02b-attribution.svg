@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <!-- Semi-transparent bar at bottom for attribution -->
+  <rect x="0" y="1000" width="1920" height="80" fill="rgba(0,0,0,0.7)"/>
+
+  <!-- Attribution text -->
+  <text x="960" y="1050" font-family="Arial, sans-serif" font-size="28"
+        fill="#cccccc" text-anchor="middle">
+    Photo: Gregory Lloyd, 1969 • CC BY-SA 4.0 • commons.wikimedia.org
+  </text>
+</svg>

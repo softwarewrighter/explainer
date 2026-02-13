@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="1920" height="1080" fill="#0a0a0a"/>
+
+  <!-- Vector Arcade Platform - top subtitle in vector stroke style -->
+  <g fill="none" stroke="#00d4ff" stroke-width="4" stroke-linecap="square" filter="url(#glow)" transform="translate(960, 200)">
+    <!-- VECTOR -->
+    <path d="M-520,-25 L-495,25 L-470,-25"/>
+    <path d="M-450,-25 L-450,25 M-450,-25 L-410,-25 M-450,0 L-420,0 M-450,25 L-410,25"/>
+    <path d="M-380,-25 L-390,-25 L-390,25 L-380,25"/>
+    <path d="M-360,-25 L-320,-25 M-340,-25 L-340,25"/>
+    <path d="M-300,-25 L-260,-25 L-260,25 L-300,25 Z"/>
+    <path d="M-240,-25 L-240,25 M-240,-25 L-210,-25 Q-190,-25 -190,-12 Q-190,0 -210,0 L-240,0 M-210,0 L-185,25"/>
+
+    <!-- ARCADE -->
+    <path d="M-130,25 L-110,-25 L-90,25 M-122,10 L-98,10"/>
+    <path d="M-70,-25 L-70,25 M-70,-25 L-40,-25 Q-20,-25 -20,-12 Q-20,0 -40,0 L-70,0 M-40,0 L-15,25"/>
+    <path d="M10,-25 L0,-25 L0,25 L10,25"/>
+    <path d="M40,25 L40,-25 L70,-25 Q90,-25 90,-12 Q90,0 70,0 L40,0 M40,0 L40,25 M70,0 Q90,0 90,12 Q90,25 70,25 L40,25"/>
+    <path d="M120,-25 L120,25 M120,-25 L160,-25 M120,0 L150,0 M120,25 L160,25"/>
+
+    <!-- PLATFORM -->
+    <path d="M200,-25 L200,25 M200,-25 L230,-25 Q250,-25 250,-12 Q250,0 230,0 L200,0"/>
+    <path d="M280,-25 L280,25 M280,25 L320,25"/>
+    <path d="M350,25 L370,-25 L390,25 M358,10 L382,10"/>
+    <path d="M420,-25 L420,25 M420,-25 L460,-25 M420,-25 L440,0 L420,25"/>
+    <path d="M490,-25 L490,25 M490,-25 L530,-25 M490,0 L520,0 M490,25 L530,25"/>
+  </g>
+
+  <!-- LUNAR LANDER - Large centered vector text (two lines) -->
+  <!-- LUNAR -->
+  <g fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="square" filter="url(#glow)" transform="translate(960, 480)">
+    <!-- L -->
+    <path d="M-340,-100 L-340,100 M-340,100 L-240,100"/>
+    <!-- U -->
+    <path d="M-180,-100 L-180,100 L-80,100 L-80,-100"/>
+    <!-- N -->
+    <path d="M-20,-100 L-20,100 M-20,-100 L80,100 M80,-100 L80,100"/>
+    <!-- A -->
+    <path d="M140,100 L190,-100 L240,100 M155,40 L225,40"/>
+    <!-- R -->
+    <path d="M300,-100 L300,100 M300,-100 L380,-100 Q420,-100 420,-50 Q420,0 380,0 L300,0 M380,0 L440,100"/>
+  </g>
+
+  <!-- LANDER -->
+  <g fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="square" filter="url(#glow)" transform="translate(960, 700)">
+    <!-- L -->
+    <path d="M-400,-80 L-400,80 M-400,80 L-320,80"/>
+    <!-- A -->
+    <path d="M-260,80 L-220,-80 L-180,80 M-248,30 L-192,30"/>
+    <!-- N -->
+    <path d="M-120,-80 L-120,80 M-120,-80 L-40,80 M-40,-80 L-40,80"/>
+    <!-- D -->
+    <path d="M20,-80 L20,80 M20,-80 L80,-80 Q140,-80 140,0 Q140,80 80,80 L20,80"/>
+    <!-- E -->
+    <path d="M200,-80 L200,80 M200,-80 L280,-80 M200,0 L260,0 M200,80 L280,80"/>
+    <!-- R -->
+    <path d="M340,-80 L340,80 M340,-80 L400,-80 Q440,-80 440,-40 Q440,0 400,0 L340,0 M400,0 L450,80"/>
+  </g>
+
+  <!-- Decorative lunar lander element -->
+  <g transform="translate(960, 920)" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.3">
+    <path d="M0,-20 L20,15 L15,15 L15,25 L-15,25 L-15,15 L-20,15 Z"/>
+    <!-- Landing legs -->
+    <path d="M-15,25 L-25,35 M15,25 L25,35"/>
+  </g>
+
+  <!-- Avatar safe zone kept clear: x=1400-1920, y=800-1080 -->
+</svg>
