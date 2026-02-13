@@ -1,5 +1,3 @@
-#TBT Vector Graphics Games
-
 Before pixels, there were vectors. This Throwback Thursday explores the evolution of vector graphics gaming, from military radar displays to arcade classics, and my attempt to recreate them using modern Rust and WebAssembly.
 
 The history: Vector displays date back to NORAD-era military systems. My first encounter was an IBM 2250 Vector Graphics Display Unit, a quarter-million dollar machine in 1970s money. It connected to an IBM 1130 that acted as a graphics controller for an IBM S/370 mainframe where the game code actually ran.
@@ -8,21 +6,49 @@ The games: Pong, Lunar Lander, and Asteroids drew white vectors on black screens
 
 The project: Vectorcade recreates these mechanics using Rust, WebAssembly, and modern GPU rendering. The architecture spans multiple repositories, separating game logic, fonts, rendering backends, and the web frontend.
 
----
+== Links ==
 
-GitHub (Vectorcade):
+Live Demo: https://softwarewrighter.github.io/vectorcade-web-yew/
+Source Code: https://github.com/softwarewrighter/vectorcade-web-yew
+Discord: https://discord.gg/Ctzk5uHggZ
+Blog Post: (TBD)
+
+== More Vectorcade Repos ==
+
 - Games: https://github.com/softwarewrighter/vectorcade-games
 - Shared: https://github.com/softwarewrighter/vectorcade-shared
 - Fonts: https://github.com/softwarewrighter/vectorcade-fonts
 - Renderer: https://github.com/softwarewrighter/vectorcade-render-wgpu
-- Web: https://github.com/softwarewrighter/vectorcade-web-yew
 
----
+== Image Credits ==
 
-Image Credits:
-- IBM 2250 Console (1969): Photo by Gregory Lloyd, CC BY-SA 4.0
-  https://commons.wikimedia.org/wiki/File:HES_IBM_2250_Console_grlloyd_Oct1969.png
+IBM 2250 Console (1969): Photo by Gregory Lloyd, CC BY-SA 4.0
+https://commons.wikimedia.org/wiki/File:HES_IBM_2250_Console_grlloyd_Oct1969.png
 
----
+== Chapters ==
 
-#TBT #VectorGraphics #RetroGaming #Asteroids #Tempest #BattleZone #Rust #WebAssembly #GameDev #Arcade
+0:00 Title
+0:05 Hook
+0:17 History
+0:29 IBM 2250
+0:44 White Vectors
+0:58 Color Vectors
+1:11 Contents
+1:19 Contents Demo
+1:24 IBM 2250 IMAGE
+1:27 IMAGE Demo
+1:33 PONG
+1:37 Pong Demo
+1:46 ASTEROIDS
+1:49 Asteroids Demo
+2:00 LUNAR LANDER
+2:03 Lunar Lander Demo
+2:14 BATTLEZONE
+2:17 Battlezone Demo
+2:30 TEMPEST
+2:33 Tempest Demo
+2:44 The Project
+2:58 Try It Yourself
+3:12 Outro
+
+#TBT #VectorGraphics #RetroGaming #Asteroids #Tempest #BattleZone #Pong #LunarLander #Rust #WebAssembly #GameDev #Arcade #WGPU #RetroComputing
