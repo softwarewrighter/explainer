@@ -1,0 +1,1 @@
+The list command shows all eight examples. Now we train XOR with five thousand epochs. The progress bar shows loss decreasing. After training, the info command shows model details. We test all four inputs. Zero zero gives zero. Zero one gives one. One zero gives one. One one gives zero. XOR learned.

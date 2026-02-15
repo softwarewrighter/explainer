@@ -1,0 +1,1 @@
+We start with logic gates. AND and OR are linearly separable, meaning a single line can divide the outputs. XOR is different. You cannot draw one line to separate the cases. This proved that multi layer networks can solve non linear problems.

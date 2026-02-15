@@ -1,0 +1,1 @@
+First attempt with defaults. One thousand epochs, point five learning rate. Training completes but the loss curve shows it did not fully converge. Now I increase epochs to two thousand and reduce learning rate to point three. Training again. This time the loss drops smoothly. The truth table confirms correct XOR behavior. The decision boundary shows the diagonal pattern.

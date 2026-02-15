@@ -1,0 +1,37 @@
+Neural networks can feel like magic. You feed in data, adjust some weights, and somehow it learns. This platform lets you watch every step.
+
+In this video, I walk through an interactive neural network training platform built in Rust with WebAssembly. Train networks on eight different examples, from simple logic gates (AND, OR, XOR) to real-world datasets like Iris classification.
+
+Features shown:
+- Command-line interface for quick training runs
+- Browser-based Web UI with live visualization
+- Real-time training progress with loss curves
+- Network architecture display with neuron activations
+- Truth table verification for logic gates
+- Parameter tuning for convergence (learning rate, epochs, hidden layers)
+
+The XOR and PARITY3 examples demonstrate why some problems require hidden layers and careful hyperparameter selection.
+
+Try it yourself:
+- Live Demo: https://sw-ml-study.github.io/neural-net-rs/
+- Source Code: https://github.com/sw-ml-study/neural-net-rs
+
+Built with Rust + WebAssembly. No installation required - runs entirely in your browser.
+
+---
+
+Chapters:
+0:00 Introduction
+0:24 Platform Overview
+2:35 CLI Demo
+3:47 Web UI Demo
+4:04 AND Gate Training
+4:21 OR Gate Training
+4:38 XOR Challenge
+5:09 PARITY3 Training
+5:54 Call to Action
+6:07 Outro
+
+---
+
+Music: "When You're Not Looking" by Nathan Moore

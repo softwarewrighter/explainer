@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+
+  <!-- Headline -->
+  <text x="960" y="120" font-family="Arial, sans-serif" font-size="96" font-weight="bold"
+        fill="#ffffff" text-anchor="middle" filter="url(#glow)">
+    Parity Three
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="200" font-family="Arial, sans-serif" font-size="48" fill="#00d4ff" text-anchor="middle">
+    XOR Extended to Three Inputs
+  </text>
+
+  <!-- What is Parity box -->
+  <g transform="translate(100, 280)">
+    <rect width="800" height="380" rx="16" fill="#2a2a4e" stroke="#ff6b6b" stroke-width="5"/>
+    <text x="400" y="60" font-family="Arial, sans-serif" font-size="48" fill="#ff6b6b" text-anchor="middle" font-weight="bold">
+      What is Parity
+    </text>
+    <text x="400" y="130" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Output is one when an odd number
+    </text>
+    <text x="400" y="190" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      of inputs are one. More complex
+    </text>
+    <text x="400" y="250" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      than XOR, requires a larger hidden
+    </text>
+    <text x="400" y="310" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      layer with six neurons.
+    </text>
+  </g>
+
+  <!-- Training Requirements box -->
+  <g transform="translate(1020, 280)">
+    <rect width="800" height="380" rx="16" fill="#2a2a4e" stroke="#4ade80" stroke-width="5"/>
+    <text x="400" y="60" font-family="Arial, sans-serif" font-size="48" fill="#4ade80" text-anchor="middle" font-weight="bold">
+      Training Requirements
+    </text>
+    <text x="400" y="130" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Default settings will not converge.
+    </text>
+    <text x="400" y="190" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Needs many more epochs to learn.
+    </text>
+    <text x="400" y="250" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Lower learning rate prevents
+    </text>
+    <text x="400" y="310" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      oscillation around the minimum.
+    </text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="960" y="750" font-family="Arial, sans-serif" font-size="44" fill="#888888" text-anchor="middle">
+    Architecture: three inputs, six hidden neurons, one output.
+  </text>
+
+  <!-- Avatar safe zone: bottom-right clear -->
+</svg>

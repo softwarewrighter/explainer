@@ -1,0 +1,1 @@
+PARITY three is the hardest example. It outputs one when an odd number of inputs are one. With default settings, one thousand epochs and point five learning rate, the loss stays flat. The network is not learning.

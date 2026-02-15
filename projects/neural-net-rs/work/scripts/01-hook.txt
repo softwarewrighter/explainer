@@ -1,0 +1,1 @@
+Neural networks can feel like magic. You feed in data, adjust some weights, and somehow it learns. This platform lets you watch every step. Train networks on eight examples, from simple logic gates to real world data.

@@ -1,0 +1,1 @@
+Testing all four XOR inputs. Zero zero outputs near zero. Zero one outputs near one. One zero also near one. One one back to zero. The network learned the pattern. These toy problems build intuition for debugging larger models where you cannot easily verify correctness.

@@ -1,0 +1,1 @@
+Try it yourself. The web demo runs in your browser with no install. Source code is linked in the description. You need the Rust toolchain to build from source. Questions or feedback, join the Discord.

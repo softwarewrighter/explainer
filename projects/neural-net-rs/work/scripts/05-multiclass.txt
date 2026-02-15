@@ -1,0 +1,1 @@
+Quadrant classification introduces multiple outputs. Given a point, the network predicts which of four quadrants it belongs to. This uses one hot encoding, where each output neuron represents one class. The highest value wins.

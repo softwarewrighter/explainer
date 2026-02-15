@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+
+  <!-- Headline -->
+  <text x="960" y="120" font-family="Arial, sans-serif" font-size="96" font-weight="bold"
+        fill="#ffffff" text-anchor="middle" filter="url(#glow)">
+    Scaling Up: Parity
+  </text>
+
+  <!-- Parity3 explanation -->
+  <g transform="translate(160, 200)">
+    <rect width="740" height="380" rx="16" fill="#2a2a4e" stroke="#ffd93d" stroke-width="5"/>
+    <text x="370" y="60" font-family="Arial, sans-serif" font-size="48" fill="#ffd93d" text-anchor="middle" font-weight="bold">
+      Three Bit Parity
+    </text>
+    <text x="370" y="130" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Output one when odd number
+    </text>
+    <text x="370" y="180" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      of inputs are active.
+    </text>
+    <text x="370" y="260" font-family="Arial, sans-serif" font-size="36" fill="#888888" text-anchor="middle">
+      Architecture: three, six, one
+    </text>
+    <text x="370" y="320" font-family="Arial, sans-serif" font-size="36" fill="#888888" text-anchor="middle">
+      Twenty one parameters
+    </text>
+  </g>
+
+  <!-- Parameter growth -->
+  <g transform="translate(1020, 200)">
+    <rect width="740" height="380" rx="16" fill="#2a2a4e" stroke="#ff6b6b" stroke-width="5"/>
+    <text x="370" y="60" font-family="Arial, sans-serif" font-size="48" fill="#ff6b6b" text-anchor="middle" font-weight="bold">
+      Parameter Growth
+    </text>
+    <text x="370" y="140" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      XOR: thirteen parameters
+    </text>
+    <text x="370" y="200" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Parity: twenty one parameters
+    </text>
+    <text x="370" y="280" font-family="Arial, sans-serif" font-size="44" fill="#ff6b6b" text-anchor="middle">
+      Sixty percent increase
+    </text>
+    <text x="370" y="340" font-family="Arial, sans-serif" font-size="36" fill="#888888" text-anchor="middle">
+      from one extra input
+    </text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="960" y="660" font-family="Arial, sans-serif" font-size="44" fill="#888888" text-anchor="middle">
+    Adding dimensions increases complexity exponentially.
+  </text>
+
+  <!-- Avatar safe zone: bottom-right clear -->
+</svg>

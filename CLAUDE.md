@@ -131,17 +131,36 @@ ffmpeg -y -i output.wav -ar 16000 -ac 1 -c:a pcm_s16le /tmp/verify.wav
 whisper-cli -m ~/.whisper-models/ggml-base.en.bin -f /tmp/verify.wav -nt
 ```
 
-**Setup:**
+**Setup (once per project):**
 ```bash
 cd projects/YOUR_PROJECT/tts
 uv venv && source .venv/bin/activate
 uv pip install gradio_client
 ```
 
-**Usage:**
+**Usage - PREFERRED METHOD:**
+
+Each project should have a `work/generate-tts.sh` script that encapsulates the correct reference file and prompt text. To generate TTS:
+
+1. Add your narration text files to `work/scripts/` (e.g., `01-hook.txt`, `02-overview.txt`)
+2. Run the script:
 ```bash
+cd work && ./generate-tts.sh
+```
+
+The script will:
+- Find all `*.txt` files in `work/scripts/`
+- Skip files that already have audio in `work/audio/`
+- Generate TTS with correct reference and prompt text
+- Verify each output with whisper
+
+**Copy `generate-tts.sh` from an existing project** (e.g., `projects/pipeline-rs/work/generate-tts.sh` or `projects/neural-net-rs/work/generate-tts.sh`) to ensure correct settings.
+
+**Direct client.py usage (NOT recommended - error prone):**
+```bash
+# Only use if you understand the reference/prompt requirements
 source tts/.venv/bin/activate
-python tts/client.py "Your narration text here" work/audio/01-hook.wav
+python tts/client.py --reference REF --prompt-text "PROMPT" --text "TEXT" --output out.wav
 ```
 
 ### MuseTalk Lip-Sync Workflow
@@ -443,4 +462,12 @@ ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p
 23. **Parallel remote service calls** - NEVER make parallel API calls to the same service (e.g., VoxCPM). Always wait for each request to complete before starting the next. Parallel calls overload the GPU and produce garbled output.
 24. **Wrong TTS prompt text** - The prompt text MUST match the reference audio exactly. Use whisper to verify. Mismatched prompts produce unintelligible output.
 25. **TTS acronyms** - Spell out acronyms with spaces for proper pronunciation: "M H C" not "mHC", "R L M" not "RLM"
-26. **Wrong TTS reference file** - When TTS produces garbled output, verify the reference WAV and prompt text match. Prefer the 63s reference (`mike-medium-ref-1.wav`) over shorter references. Never mix reference files with mismatched prompt text. Check `projects/pipeline-rs/work/generate-tts.sh` for the correct prompt text
+26. **Wrong TTS reference file** - When TTS produces garbled output, verify the reference WAV and prompt text match. Prefer the 63s reference (`mike-medium-ref-1.wav`) over shorter references. Never mix reference files with mismatched prompt text
+27. **Bypassing generate-tts.sh** - ALWAYS use the project's `work/generate-tts.sh` script for TTS generation. It encapsulates the correct reference file and prompt text. Never manually construct TTS commands with client.py - this is error-prone and leads to garbled output
+28. **Two-step audio combination** - Use `vid-image --audio` to include audio directly. The two-step process (vid-image then ffmpeg add audio) often produces silent tracks. The vid-image tool properly handles audio when using the `--audio` flag
+29. **Wrong image dimensions** - Title backgrounds and all images must be 1920x1080 before creating video. Scale with ffmpeg: `ffmpeg -i input.png -vf "scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2" output.png`
+30. **Forgetting to rebuild silent slides** - If slides have -91 dB audio (essentially silent), the audio was not combined properly. Rebuild using `vid-image --audio` or use explicit `-map 0:v -map 1:a` in ffmpeg
+31. **Truncating OBS/VHS recordings** - NEVER truncate screen recordings to match audio duration. If video is longer than audio, pad the audio with silence: `apad=whole_dur=VIDEO_DURATION`. If video is shorter than audio, slow down video with setpts. Always use full source video duration
+32. **Run-on narration (no pause between clips)** - Add 200ms silence padding at the end of every narrated clip to prevent run-on dialog: `ffmpeg -i clip.mp4 -filter_complex "[0:a]apad=pad_dur=0.2[a]" -map 0:v -map "[a]" -c:v copy -c:a aac output.mp4`
+33. **Using -shortest flag with demos** - The `-shortest` flag cuts video to match audio, truncating important content. Never use `-shortest` with OBS/VHS demos. Instead, extend audio to match video
+34. **TTS run-on sentences** - TTS may run sentences together without natural pauses. Use punctuation (periods, commas) to control pacing. If pauses are still insufficient, the simple fix is adding extra punctuation in the script. Avoid the complex approach of splitting into separate TTS calls and concatenating with silence

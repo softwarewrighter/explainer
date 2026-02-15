@@ -1,0 +1,1 @@
+XOR is the classic challenge. Unlike AND and OR, you cannot separate the outputs with a straight line. It requires a hidden layer to learn the non-linear boundary. Default training settings may not converge. You need more epochs and a lower learning rate.

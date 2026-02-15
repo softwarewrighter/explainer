@@ -1,0 +1,1 @@
+The web interface runs entirely in your browser using WebAssembly. No installation, no server. You get real time loss curves, network diagrams, and decision boundary plots. Truth tables verify the network learned correctly.

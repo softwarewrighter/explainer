@@ -1,0 +1,1 @@
+Here is the AND gate training live. The dropdown shows all eight examples. We select AND with one thousand epochs. Training completes instantly in WebAssembly. The loss curve shows rapid convergence. The truth table confirms only one one produces one. The decision boundary shows the learned region.

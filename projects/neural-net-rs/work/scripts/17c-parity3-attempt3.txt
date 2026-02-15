@@ -1,0 +1,1 @@
+For proper convergence, I set thirty thousand epochs and lower the learning rate to point one. Now the loss drops steadily. The network visualization shows the three to six to one architecture with neurons colored by activation.

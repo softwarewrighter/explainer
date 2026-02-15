@@ -1,0 +1,1 @@
+The Iris dataset is a classic benchmark from nineteen thirty six. The network classifies flower species from petal and sepal measurements. This is real continuous data, not binary. Same architecture as the adder, completely different problem.

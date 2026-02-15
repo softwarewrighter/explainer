@@ -1,0 +1,1 @@
+Now the OR gate. Same architecture as AND, two inputs, two hidden, one output. Training completes instantly. The truth table shows the OR pattern. Any input with a one produces one. Only zero zero produces zero. The decision boundary is mostly red, output active everywhere except the origin.

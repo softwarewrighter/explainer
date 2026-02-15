@@ -1,0 +1,1 @@
+The platform includes eight built in examples with increasing complexity. You can train in your browser using WebAssembly, or use the Rust command line tool with checkpoints. Every network shows real time loss curves and interactive diagrams.

@@ -1,0 +1,1 @@
+Three bit parity shows what happens when we add dimensions. The network must output one when an odd number of inputs are active. Going from two inputs to three increases parameters by sixty percent. Complexity grows fast.

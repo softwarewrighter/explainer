@@ -1,0 +1,1 @@
+First attempt with defaults. One thousand epochs. Loss stays flat at point two. Second attempt, three thousand epochs. Loss drops but plateaus. Third attempt, thirty thousand epochs, point one rate. Now the loss descends properly. The truth table confirms correct parity.

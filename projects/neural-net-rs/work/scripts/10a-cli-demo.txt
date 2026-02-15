@@ -1,0 +1,1 @@
+The list command shows all eight examples. These are classic feedforward networks, simple but educational. Each example demonstrates a different challenge. Logic gates show linear versus nonlinear problems. Parity and patterns test scaling. Iris proves neural nets work on real data.

@@ -1,0 +1,1 @@
+Training XOR with five thousand epochs. This network has just thirteen parameters. Modern transformers have billions. But small networks teach the fundamentals. Watch the progress bar, loss decreasing means learning. The model file saves weights and architecture for later evaluation.

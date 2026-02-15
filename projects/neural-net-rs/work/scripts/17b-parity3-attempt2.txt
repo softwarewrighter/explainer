@@ -1,0 +1,1 @@
+Increasing epochs to three thousand helps. The loss drops from point two to point zero nine. But it plateaus and still has errors in the truth table.

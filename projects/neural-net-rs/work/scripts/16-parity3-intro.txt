@@ -1,0 +1,1 @@
+Parity three extends XOR to three inputs. Output is one when an odd number of inputs are one. This requires a larger hidden layer and more training. Default settings will not converge. We need to increase epochs and tune the learning rate.

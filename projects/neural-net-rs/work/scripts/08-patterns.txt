@@ -1,0 +1,1 @@
+The final example recognizes visual patterns in a three by three grid. X, O, plus, and minus shapes. Nine input pixels, four output classes. The network learns spatial feature detectors, edges, corners, diagonals. This is the foundation of computer vision.

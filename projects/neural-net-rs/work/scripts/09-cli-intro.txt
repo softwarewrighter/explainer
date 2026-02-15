@@ -1,0 +1,1 @@
+The command line interface lets you train networks from the terminal. You can list examples, train with a visual progress bar, save checkpoints, and evaluate trained models. Everything compiles to native Rust.

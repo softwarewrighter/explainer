@@ -1,0 +1,1 @@
+The two bit adder learns binary addition. Four input bits represent two numbers. Three output bits represent their sum. The network discovers carry bit logic on its own, purely from training examples. No rules are hard coded.
