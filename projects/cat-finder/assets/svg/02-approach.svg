@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+
+  <!-- Headline -->
+  <text x="960" y="120" font-family="Arial, sans-serif" font-size="96" font-weight="bold"
+        fill="#ffffff" text-anchor="middle" filter="url(#glow)">
+    The Approach
+  </text>
+
+  <!-- Three boxes -->
+  <!-- YOLO box -->
+  <g transform="translate(80, 200)">
+    <rect width="540" height="320" rx="16" fill="#2a2a4e" stroke="#4ade80" stroke-width="5"/>
+    <text x="270" y="70" font-family="Arial, sans-serif" font-size="48" fill="#4ade80" text-anchor="middle" font-weight="bold">
+      YOLOv8
+    </text>
+    <text x="270" y="140" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Object detection model
+    </text>
+    <text x="270" y="200" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Eighty class recognition
+    </text>
+    <text x="270" y="260" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Fast nano variant
+    </text>
+  </g>
+
+  <!-- ONNX box -->
+  <g transform="translate(690, 200)">
+    <rect width="540" height="320" rx="16" fill="#2a2a4e" stroke="#00d4ff" stroke-width="5"/>
+    <text x="270" y="70" font-family="Arial, sans-serif" font-size="48" fill="#00d4ff" text-anchor="middle" font-weight="bold">
+      ONNX Runtime
+    </text>
+    <text x="270" y="140" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Cross platform inference
+    </text>
+    <text x="270" y="200" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      CPU or GPU
+    </text>
+    <text x="270" y="260" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      No cloud required
+    </text>
+  </g>
+
+  <!-- Rust box -->
+  <g transform="translate(1300, 200)">
+    <rect width="540" height="320" rx="16" fill="#2a2a4e" stroke="#ffd93d" stroke-width="5"/>
+    <text x="270" y="70" font-family="Arial, sans-serif" font-size="48" fill="#ffd93d" text-anchor="middle" font-weight="bold">
+      Rust CLI
+    </text>
+    <text x="270" y="140" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Fast directory scanning
+    </text>
+    <text x="270" y="200" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Recursive traversal
+    </text>
+    <text x="270" y="260" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Configurable threshold
+    </text>
+  </g>
+
+  <!-- Bottom summary -->
+  <text x="960" y="620" font-family="Arial, sans-serif" font-size="44" fill="#888888" text-anchor="middle">
+    All processing happens locally on your machine.
+  </text>
+
+  <!-- Avatar safe zone: bottom-right clear -->
+</svg>

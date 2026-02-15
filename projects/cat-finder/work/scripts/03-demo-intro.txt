@@ -1,0 +1,1 @@
+Two ways to use it. The command line tool scans any directory and reports which images contain cats. The web interface shows a visual grid with detection badges.

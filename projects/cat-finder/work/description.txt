@@ -1,0 +1,30 @@
+Find all the cat photos in your library using local machine learning. No cloud APIs, no data leaving your machine.
+
+Cat Finder uses YOLOv8 (nano variant) for fast object detection, ONNX Runtime for cross-platform inference, and a Rust CLI for efficient directory scanning. The included Flask web demo provides a visual interface with real-time detection badges.
+
+On the test set: 7 of 9 cats found with zero false positives.
+
+LINKS
+-----
+Source code: https://github.com/mikehentges/cat-finder
+YOLO documentation: https://docs.ultralytics.com/
+ONNX Runtime: https://onnxruntime.ai/
+
+TIMESTAMPS
+----------
+0:00 Intro
+0:07 The Problem
+0:18 Technical Approach
+0:35 Demo Overview
+0:46 CLI Demo
+0:56 Web Demo
+1:15 Results
+1:28 Try It Yourself
+1:40 Outro
+
+REQUIREMENTS
+------------
+- Rust toolchain
+- About 80MB disk space (model + dependencies)
+
+Music: "Kitty Down the Stairs" by Joel Cummins

@@ -1,0 +1,1 @@
+You have thousands of photos. Somewhere in there are pictures of your cat. Finding them manually would take hours. Cat Finder solves this with local machine learning.

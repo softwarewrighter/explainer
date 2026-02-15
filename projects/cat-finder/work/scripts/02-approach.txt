@@ -1,0 +1,1 @@
+It uses YOLO version eight, a fast object detection model that recognizes eighty different classes including cats. ONNX Runtime runs the model locally. No cloud APIs, no data leaving your machine. The Rust CLI scans directories recursively.

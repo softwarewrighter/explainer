@@ -1,0 +1,1 @@
+The command line tool scans each image and prints the result. Cat found messages show the file path. The summary shows twenty images scanned, seven with cats.

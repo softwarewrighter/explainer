@@ -85,10 +85,29 @@ All TTS API calls to VoxCPM MUST be made sequentially. Never queue multiple requ
 - `inference_timesteps_input=10` (default)
 - Use "M H C" instead of "mHC" for proper pronunciation of acronyms
 
-**Reference audio:** Use `work/reference/mike-ref-17s.wav` with transcript:
-> "In this session, I'm going to write a small command line tool and explain the decision making process as I go. I'll begin with a basic skeleton, argument parsing, a configuration loader, and a minimal mean function."
+**CRITICAL: Use the 63s reference file with its matching prompt text.**
 
-**CRITICAL: The prompt text MUST match what is actually spoken in the reference audio.** Mismatched prompt text produces garbled output. Use whisper to verify the reference audio content.
+**PREFERRED (63s) - USE THESE:**
+```
+REF="/Users/mike/github/softwarewrighter/video-publishing/reference/voice/mike-medium-ref-1.wav"
+PROMPT="In this session, I'm going to write a small command line tool and explain the decision making process as I go. I'll begin with a basic skeleton, argument parsing, a configuration loader, and a minimal main function. Once everything compiles, I'll run it with a few sample inputs to confirm the behavior. After that, I'll be fine the internal design. I'll reorganize the functions, extract shared logic, and add error messages that actually help the user understand what went wrong. None of this is complicated, but it's the kind of work that separates a rough prototype from a tool someone can rely on. As we move forward, I'll highlight why I chose certain patterns, some decisions, optimize clarity, while others optimize performance or extensibility. The important thing is to understand the trade-offs well enough that the code feels intentional instead of accidental."
+```
+
+**DO NOT USE (17s) - THESE PRODUCE GARBLED OUTPUT:**
+```
+# WRONG - Do not use these:
+# /Users/mike/github/softwarewrighter/explainer/projects/apl/work/reference/mike-ref-17s.wav
+# /Users/mike/github/softwarewrighter/explainer/projects/engram-poc/work/reference/mike-ref-17s.wav
+# /Users/mike/github/softwarewrighter/explainer/projects/mHC-poc/work/reference/mike-ref-17s.wav
+# Any file named mike-ref-17s.wav or mike-ref-17s-clean.wav
+```
+
+**When TTS produces garbled/unintelligible output, the cause is ALWAYS one of:**
+1. Using the wrong reference file (17s instead of 63s)
+2. Using prompt text that doesn't match the reference audio
+3. Mixing a reference file with the wrong prompt text
+
+See `projects/pipeline-rs/work/generate-tts.sh` for the working example to copy from.
 
 **Curl API Pattern:**
 ```bash
@@ -424,3 +443,4 @@ ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p
 23. **Parallel remote service calls** - NEVER make parallel API calls to the same service (e.g., VoxCPM). Always wait for each request to complete before starting the next. Parallel calls overload the GPU and produce garbled output.
 24. **Wrong TTS prompt text** - The prompt text MUST match the reference audio exactly. Use whisper to verify. Mismatched prompts produce unintelligible output.
 25. **TTS acronyms** - Spell out acronyms with spaces for proper pronunciation: "M H C" not "mHC", "R L M" not "RLM"
+26. **Wrong TTS reference file** - When TTS produces garbled output, verify the reference WAV and prompt text match. Prefer the 63s reference (`mike-medium-ref-1.wav`) over shorter references. Never mix reference files with mismatched prompt text. Check `projects/pipeline-rs/work/generate-tts.sh` for the correct prompt text

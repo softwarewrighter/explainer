@@ -1,0 +1,1 @@
+On the test set, it found seven of nine cat images with zero false positives. The model struggles with artistic styles and unusual poses. You can adjust the confidence threshold to tune precision versus recall.

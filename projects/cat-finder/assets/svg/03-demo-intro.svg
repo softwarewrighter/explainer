@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+
+  <!-- Headline -->
+  <text x="960" y="180" font-family="Arial, sans-serif" font-size="96" font-weight="bold"
+        fill="#ffffff" text-anchor="middle" filter="url(#glow)">
+    The Demo
+  </text>
+
+  <!-- Two demo types -->
+  <!-- CLI box -->
+  <g transform="translate(160, 280)">
+    <rect width="740" height="340" rx="16" fill="#2a2a4e" stroke="#4ade80" stroke-width="5"/>
+    <text x="370" y="70" font-family="Arial, sans-serif" font-size="48" fill="#4ade80" text-anchor="middle" font-weight="bold">
+      Command Line
+    </text>
+    <text x="370" y="150" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Scan any directory
+    </text>
+    <text x="370" y="210" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Verbose progress output
+    </text>
+    <text x="370" y="270" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Adjustable confidence
+    </text>
+  </g>
+
+  <!-- Web UI box -->
+  <g transform="translate(1020, 280)">
+    <rect width="740" height="340" rx="16" fill="#2a2a4e" stroke="#00d4ff" stroke-width="5"/>
+    <text x="370" y="70" font-family="Arial, sans-serif" font-size="48" fill="#00d4ff" text-anchor="middle" font-weight="bold">
+      Web Interface
+    </text>
+    <text x="370" y="150" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Visual image grid
+    </text>
+    <text x="370" y="210" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Real time detection badges
+    </text>
+    <text x="370" y="270" font-family="Arial, sans-serif" font-size="36" fill="#cccccc" text-anchor="middle">
+      Flask Python server
+    </text>
+  </g>
+
+  <!-- Avatar safe zone: bottom-right clear -->
+</svg>

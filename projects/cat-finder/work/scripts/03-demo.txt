@@ -1,0 +1,1 @@
+The web demo shows a grid of sample images. Click start detection and the model analyzes each image. Green checkmarks appear on cat images. Red marks on everything else. In about twenty seconds it scans the full set. Seven cats found, thirteen non cats correctly rejected.
