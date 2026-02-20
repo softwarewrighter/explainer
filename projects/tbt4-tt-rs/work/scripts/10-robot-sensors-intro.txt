@@ -1,0 +1,1 @@
+Robots with sensors create reactive programs. Give the robot a sensor widget like time or random. Train actions using the live sensor data. The robot responds to changing values automatically. This makes programs that adapt to their environment.

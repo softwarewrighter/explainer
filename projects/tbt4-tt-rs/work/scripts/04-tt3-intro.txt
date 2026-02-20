@@ -1,0 +1,1 @@
+Level three introduces sensors. The timestamp generator provides the current time. The random number generator gives unpredictable values. These widgets provide live changing data for your programs.

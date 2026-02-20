@@ -1,0 +1,1 @@
+Number sources create values when clicked. Math tools change numbers when dropped on them. Subtraction, multiplication, division, and modulo all work by dropping the tool onto a number.

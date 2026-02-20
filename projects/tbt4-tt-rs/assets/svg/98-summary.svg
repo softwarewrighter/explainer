@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="960" y="150" font-family="Arial Black, sans-serif" font-size="96"
+        fill="#ffd93d" text-anchor="middle">
+    Work In Progress
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="230" font-family="Arial, sans-serif" font-size="48"
+        fill="#ffffff" text-anchor="middle">
+    A Playground for Experimentation
+  </text>
+
+  <!-- Two boxes side by side -->
+  <!-- What Works -->
+  <rect x="150" y="300" width="750" height="380" rx="20" fill="none" stroke="#4ade80" stroke-width="5"/>
+  <text x="525" y="370" font-family="Arial Black, sans-serif" font-size="48"
+        fill="#4ade80" text-anchor="middle">What Works</text>
+  <text x="525" y="440" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Numbers, Boxes, Scales</text>
+  <text x="525" y="495" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Birds and Nests</text>
+  <text x="525" y="550" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Robot Training</text>
+  <text x="525" y="605" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Sensors</text>
+
+  <!-- What's Missing -->
+  <rect x="1020" y="300" width="750" height="380" rx="20" fill="none" stroke="#ff6b6b" stroke-width="5"/>
+  <text x="1395" y="370" font-family="Arial Black, sans-serif" font-size="48"
+        fill="#ff6b6b" text-anchor="middle">Room to Explore</text>
+  <text x="1395" y="440" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Text and String Operations</text>
+  <text x="1395" y="495" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">More Widget Types</text>
+  <text x="1395" y="550" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Persistence and Sharing</text>
+  <text x="1395" y="605" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Your Ideas Here</text>
+
+  <!-- Footer -->
+  <text x="960" y="780" font-family="Arial, sans-serif" font-size="40"
+        fill="#00d4ff" text-anchor="middle">
+    Each missing feature is an opportunity for vibe coding
+  </text>
+</svg>

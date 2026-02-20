@@ -1,0 +1,1 @@
+The Copy tutorial introduces the magic wand. First, the Show Me animation illustrates dragging the wand onto a number to create a duplicate. Watch as the copy is added to the original, doubling the value. Practice by copying numbers yourself and experimenting with different combinations.

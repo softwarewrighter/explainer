@@ -1,0 +1,1 @@
+Level three adds sensors, but first we need to switch to level three to see the sensors. Since there were changes, we must be explicit about discarding them. The time sensor shows the current time in milliseconds. The random sensor generates numbers when clicked. Use modulo to get smaller values from large random numbers.

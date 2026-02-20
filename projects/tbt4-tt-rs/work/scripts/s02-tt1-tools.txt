@@ -1,0 +1,1 @@
+Two tools help you work with widgets. The magic wand creates copies. Drop it on any item to duplicate. The vacuum erases things. Drop it on a widget to remove it from the workspace.

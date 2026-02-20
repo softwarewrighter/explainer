@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="960" y="180" font-family="Arial Black, sans-serif" font-size="96"
+        fill="#00d4ff" text-anchor="middle">
+    Try It Yourself
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="260" font-family="Arial, sans-serif" font-size="48"
+        fill="#ffffff" text-anchor="middle">
+    No Install Required
+  </text>
+
+  <!-- Three boxes -->
+  <!-- Live Demo -->
+  <rect x="140" y="340" width="500" height="300" rx="20" fill="none" stroke="#4ade80" stroke-width="5"/>
+  <text x="390" y="420" font-family="Arial Black, sans-serif" font-size="48"
+        fill="#4ade80" text-anchor="middle">Live Demo</text>
+  <text x="390" y="490" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Runs in your browser</text>
+  <text x="390" y="540" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">WebAssembly powered</text>
+  <text x="390" y="590" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Link in description</text>
+
+  <!-- Source Code -->
+  <rect x="710" y="340" width="500" height="300" rx="20" fill="none" stroke="#ffd93d" stroke-width="5"/>
+  <text x="960" y="420" font-family="Arial Black, sans-serif" font-size="48"
+        fill="#ffd93d" text-anchor="middle">Source Code</text>
+  <text x="960" y="490" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Open source on GitHub</text>
+  <text x="960" y="540" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Built with Rust</text>
+  <text x="960" y="590" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Yew framework</text>
+
+  <!-- ToonTalk History -->
+  <rect x="1280" y="340" width="500" height="300" rx="20" fill="none" stroke="#ff6b6b" stroke-width="5"/>
+  <text x="1530" y="420" font-family="Arial Black, sans-serif" font-size="48"
+        fill="#ff6b6b" text-anchor="middle">ToonTalk</text>
+  <text x="1530" y="490" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Original from the nineties</text>
+  <text x="1530" y="540" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Created by Ken Kahn</text>
+  <text x="1530" y="590" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Now reimagined in Rust</text>
+
+  <!-- Footer -->
+  <text x="960" y="750" font-family="Arial, sans-serif" font-size="36"
+        fill="#888888" text-anchor="middle">
+    Throwback Thursday Project
+  </text>
+</svg>

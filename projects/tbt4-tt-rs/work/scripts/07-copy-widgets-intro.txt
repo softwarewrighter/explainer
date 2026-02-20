@@ -1,0 +1,1 @@
+Two tools help you work with widgets. The magic wand copies anything it touches. The vacuum erases anything it touches. Both tools work on all widget types including boxes.

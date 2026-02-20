@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+  <rect x="50" y="40" width="180" height="50" rx="25" fill="#ff6b6b"/>
+  <text x="140" y="75" font-family="Arial Black, sans-serif" font-size="28" fill="#1a1a2e" text-anchor="middle">Level Two</text>
+
+  <text x="960" y="200" font-family="Arial Black, sans-serif" font-size="96" fill="#ffd93d" text-anchor="middle">Bird and Nest Details</text>
+  <text x="960" y="300" font-family="Arial, sans-serif" font-size="48" fill="#ffffff" text-anchor="middle">Tooltips and Inspection</text>
+
+  <rect x="200" y="400" width="450" height="300" rx="20" fill="none" stroke="#00d4ff" stroke-width="5"/>
+  <text x="425" y="480" font-family="Arial Black, sans-serif" font-size="44" fill="#00d4ff" text-anchor="middle">Bird Tooltip</text>
+  <text x="425" y="550" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Shows delivery status</text>
+  <text x="425" y="600" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Paired with one nest</text>
+
+  <rect x="735" y="400" width="450" height="300" rx="20" fill="none" stroke="#4ade80" stroke-width="5"/>
+  <text x="960" y="480" font-family="Arial Black, sans-serif" font-size="44" fill="#4ade80" text-anchor="middle">Nest Inspection</text>
+  <text x="960" y="550" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Use magnifier to inspect</text>
+  <text x="960" y="600" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">See queued messages</text>
+
+  <rect x="1270" y="400" width="450" height="300" rx="20" fill="none" stroke="#ffd93d" stroke-width="5"/>
+  <text x="1495" y="480" font-family="Arial Black, sans-serif" font-size="44" fill="#ffd93d" text-anchor="middle">Message Queue</text>
+  <text x="1495" y="550" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">First in, first out</text>
+  <text x="1495" y="600" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Oldest delivered next</text>
+</svg>

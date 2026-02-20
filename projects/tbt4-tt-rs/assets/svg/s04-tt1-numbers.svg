@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+  <rect x="50" y="40" width="180" height="50" rx="25" fill="#4ade80"/>
+  <text x="140" y="75" font-family="Arial Black, sans-serif" font-size="28" fill="#1a1a2e" text-anchor="middle">Level One</text>
+
+  <text x="960" y="180" font-family="Arial Black, sans-serif" font-size="96" fill="#ffd93d" text-anchor="middle">Numbers and Math</text>
+  <text x="960" y="270" font-family="Arial, sans-serif" font-size="48" fill="#ffffff" text-anchor="middle">Operations on Number Widgets</text>
+
+  <rect x="100" y="350" width="280" height="200" rx="20" fill="none" stroke="#00d4ff" stroke-width="5"/>
+  <text x="240" y="420" font-family="Arial Black, sans-serif" font-size="48" fill="#00d4ff" text-anchor="middle">+1 +5</text>
+  <text x="240" y="480" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Number sources</text>
+  <text x="240" y="520" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Click to create</text>
+
+  <rect x="430" y="350" width="280" height="200" rx="20" fill="none" stroke="#ff6b6b" stroke-width="5"/>
+  <text x="570" y="420" font-family="Arial Black, sans-serif" font-size="48" fill="#ff6b6b" text-anchor="middle">-1</text>
+  <text x="570" y="480" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Subtraction</text>
+  <text x="570" y="520" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Drop on number</text>
+
+  <rect x="760" y="350" width="280" height="200" rx="20" fill="none" stroke="#4ade80" stroke-width="5"/>
+  <text x="900" y="420" font-family="Arial Black, sans-serif" font-size="48" fill="#4ade80" text-anchor="middle">*2</text>
+  <text x="900" y="480" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Multiplication</text>
+  <text x="900" y="520" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Double values</text>
+
+  <rect x="1090" y="350" width="280" height="200" rx="20" fill="none" stroke="#ffd93d" stroke-width="5"/>
+  <text x="1230" y="420" font-family="Arial Black, sans-serif" font-size="48" fill="#ffd93d" text-anchor="middle">/2</text>
+  <text x="1230" y="480" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Division</text>
+  <text x="1230" y="520" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Halve values</text>
+
+  <rect x="1420" y="350" width="280" height="200" rx="20" fill="none" stroke="#00d4ff" stroke-width="5"/>
+  <text x="1560" y="420" font-family="Arial Black, sans-serif" font-size="48" fill="#00d4ff" text-anchor="middle">%10</text>
+  <text x="1560" y="480" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Modulo</text>
+  <text x="1560" y="520" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Get remainder</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+
+  <!-- Level indicator -->
+  <rect x="60" y="60" width="200" height="80" rx="15" fill="#ffd93d"/>
+  <text x="160" y="115" font-family="Arial Black, sans-serif" font-size="48"
+        fill="#1a1a2e" text-anchor="middle">tt2</text>
+
+  <!-- Title -->
+  <text x="960" y="180" font-family="Arial Black, sans-serif" font-size="96"
+        fill="#ffd93d" text-anchor="middle">
+    Messaging
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="260" font-family="Arial, sans-serif" font-size="48"
+        fill="#ffffff" text-anchor="middle">
+    Birds and Nests
+  </text>
+
+  <!-- Two concept boxes (centered) -->
+  <!-- Bird -->
+  <rect x="400" y="340" width="500" height="300" rx="15" fill="none" stroke="#ffd93d" stroke-width="5"/>
+  <text x="650" y="420" font-family="Arial Black, sans-serif" font-size="56"
+        fill="#ffd93d" text-anchor="middle">Birds</text>
+  <text x="650" y="490" font-family="Arial, sans-serif" font-size="40"
+        fill="#ffffff" text-anchor="middle">Carry messages</text>
+  <text x="650" y="545" font-family="Arial, sans-serif" font-size="40"
+        fill="#ffffff" text-anchor="middle">Fly to their nest</text>
+  <text x="650" y="600" font-family="Arial, sans-serif" font-size="40"
+        fill="#ffffff" text-anchor="middle">Return for more</text>
+
+  <!-- Nest -->
+  <rect x="1020" y="340" width="500" height="300" rx="15" fill="none" stroke="#ffd93d" stroke-width="5"/>
+  <text x="1270" y="420" font-family="Arial Black, sans-serif" font-size="56"
+        fill="#ffd93d" text-anchor="middle">Nests</text>
+  <text x="1270" y="490" font-family="Arial, sans-serif" font-size="40"
+        fill="#ffffff" text-anchor="middle">Receive messages</text>
+  <text x="1270" y="545" font-family="Arial, sans-serif" font-size="40"
+        fill="#ffffff" text-anchor="middle">Queue deliveries</text>
+  <text x="1270" y="600" font-family="Arial, sans-serif" font-size="40"
+        fill="#ffffff" text-anchor="middle">Pick up when ready</text>
+
+  <!-- Footer -->
+  <text x="960" y="740" font-family="Arial, sans-serif" font-size="36"
+        fill="#888888" text-anchor="middle">
+    Communication between parts of your program
+  </text>
+</svg>

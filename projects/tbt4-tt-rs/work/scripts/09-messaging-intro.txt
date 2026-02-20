@@ -1,0 +1,1 @@
+Messaging uses birds and nests. Give a widget to a bird. It flies to its nest and delivers the message. Pick up the widget from the nest when ready. The bird returns for more deliveries. This is how parts of your program communicate.

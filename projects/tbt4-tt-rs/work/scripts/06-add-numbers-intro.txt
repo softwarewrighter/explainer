@@ -1,0 +1,1 @@
+Next, adding numbers. Drag one number onto another. They combine and add together automatically. The result appears as a single number. Stack multiple numbers to build bigger sums. Placing a number on another adds them.

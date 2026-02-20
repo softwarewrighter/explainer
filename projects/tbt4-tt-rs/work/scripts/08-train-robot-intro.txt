@@ -1,0 +1,1 @@
+Finally, training a robot. Give the robot a box to work with. Click train, then perform your actions. The robot watches and remembers everything. Click run to replay your demonstration. This is programming by showing, not by typing.

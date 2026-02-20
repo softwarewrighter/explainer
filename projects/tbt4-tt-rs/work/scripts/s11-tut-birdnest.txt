@@ -1,0 +1,1 @@
+Birds carry messages to their nest. Drop a number on a bird and watch it fly. The nest collects messages in order. Use the magnifier to inspect what has arrived.

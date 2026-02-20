@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+
+  <!-- Level indicator -->
+  <rect x="60" y="60" width="200" height="80" rx="15" fill="#4ade80"/>
+  <text x="160" y="115" font-family="Arial Black, sans-serif" font-size="48"
+        fill="#1a1a2e" text-anchor="middle">tt1</text>
+
+  <!-- Title -->
+  <text x="960" y="180" font-family="Arial Black, sans-serif" font-size="96"
+        fill="#4ade80" text-anchor="middle">
+    The Basics
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="260" font-family="Arial, sans-serif" font-size="48"
+        fill="#ffffff" text-anchor="middle">
+    Numbers, Boxes, Tools, and Scales
+  </text>
+
+  <!-- Four demo boxes -->
+  <!-- Fill The Box -->
+  <rect x="100" y="340" width="400" height="220" rx="15" fill="none" stroke="#00d4ff" stroke-width="5"/>
+  <text x="300" y="410" font-family="Arial Black, sans-serif" font-size="40"
+        fill="#00d4ff" text-anchor="middle">Fill The Box</text>
+  <text x="300" y="460" font-family="Arial, sans-serif" font-size="32"
+        fill="#ffffff" text-anchor="middle">Drop numbers into holes</text>
+  <text x="300" y="505" font-family="Arial, sans-serif" font-size="32"
+        fill="#ffffff" text-anchor="middle">Build a mutable tuple</text>
+
+  <!-- Add Numbers -->
+  <rect x="550" y="340" width="400" height="220" rx="15" fill="none" stroke="#00d4ff" stroke-width="5"/>
+  <text x="750" y="410" font-family="Arial Black, sans-serif" font-size="40"
+        fill="#00d4ff" text-anchor="middle">Add Numbers</text>
+  <text x="750" y="460" font-family="Arial, sans-serif" font-size="32"
+        fill="#ffffff" text-anchor="middle">Stack numbers to add</text>
+  <text x="750" y="505" font-family="Arial, sans-serif" font-size="32"
+        fill="#ffffff" text-anchor="middle">Drop to combine</text>
+
+  <!-- Copy and Delete -->
+  <rect x="1000" y="340" width="400" height="220" rx="15" fill="none" stroke="#00d4ff" stroke-width="5"/>
+  <text x="1200" y="410" font-family="Arial Black, sans-serif" font-size="40"
+        fill="#00d4ff" text-anchor="middle">Copy and Delete</text>
+  <text x="1200" y="460" font-family="Arial, sans-serif" font-size="32"
+        fill="#ffffff" text-anchor="middle">Wand duplicates widgets</text>
+  <text x="1200" y="505" font-family="Arial, sans-serif" font-size="32"
+        fill="#ffffff" text-anchor="middle">Vacuum erases them</text>
+
+  <!-- Scales -->
+  <rect x="1450" y="340" width="400" height="220" rx="15" fill="none" stroke="#00d4ff" stroke-width="5"/>
+  <text x="1650" y="410" font-family="Arial Black, sans-serif" font-size="40"
+        fill="#00d4ff" text-anchor="middle">Scales</text>
+  <text x="1650" y="460" font-family="Arial, sans-serif" font-size="32"
+        fill="#ffffff" text-anchor="middle">Compare values</text>
+  <text x="1650" y="505" font-family="Arial, sans-serif" font-size="32"
+        fill="#ffffff" text-anchor="middle">Tip left or right</text>
+
+  <!-- Footer description -->
+  <text x="960" y="660" font-family="Arial, sans-serif" font-size="36"
+        fill="#888888" text-anchor="middle">
+    Four tutorials introduce the core concepts
+  </text>
+</svg>

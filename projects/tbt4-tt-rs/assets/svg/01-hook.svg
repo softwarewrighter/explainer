@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="cyan-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#00a8cc"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="960" y="150" font-family="Arial Black, sans-serif" font-size="96"
+        fill="url(#cyan-gradient)" text-anchor="middle">
+    tt-rs
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="220" font-family="Arial, sans-serif" font-size="48"
+        fill="#ffffff" text-anchor="middle">
+    Visual Programming in Your Browser
+  </text>
+
+  <!-- Three level boxes (shorter to make room for 4th box) -->
+  <!-- tt1 Box -->
+  <rect x="140" y="290" width="500" height="300" rx="20" fill="none" stroke="#4ade80" stroke-width="5"/>
+  <text x="390" y="350" font-family="Arial Black, sans-serif" font-size="48"
+        fill="#4ade80" text-anchor="middle">tt1: Basics</text>
+  <text x="390" y="410" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Numbers and Boxes</text>
+  <text x="390" y="460" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Wand and Vacuum</text>
+  <text x="390" y="510" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Scales</text>
+
+  <!-- tt2 Box -->
+  <rect x="710" y="290" width="500" height="300" rx="20" fill="none" stroke="#ffd93d" stroke-width="5"/>
+  <text x="960" y="350" font-family="Arial Black, sans-serif" font-size="48"
+        fill="#ffd93d" text-anchor="middle">tt2: Messaging</text>
+  <text x="960" y="410" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Birds Carry Messages</text>
+  <text x="960" y="460" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Nests Receive Them</text>
+
+  <!-- tt3 Box -->
+  <rect x="1280" y="290" width="500" height="300" rx="20" fill="none" stroke="#ff6b6b" stroke-width="5"/>
+  <text x="1530" y="350" font-family="Arial Black, sans-serif" font-size="48"
+        fill="#ff6b6b" text-anchor="middle">tt3: Sensors</text>
+  <text x="1530" y="410" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Random Number Generator</text>
+  <text x="1530" y="460" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffffff" text-anchor="middle">Timestamp Generator</text>
+
+  <!-- 4th wide box for Robots -->
+  <rect x="140" y="620" width="1640" height="120" rx="20" fill="none" stroke="#00d4ff" stroke-width="5"/>
+  <text x="960" y="695" font-family="Arial Black, sans-serif" font-size="44"
+        fill="#00d4ff" text-anchor="middle">
+    Robots and Magnifiers are also available (more on that later)
+  </text>
+
+  <!-- Footer -->
+  <text x="960" y="820" font-family="Arial, sans-serif" font-size="36"
+        fill="#888888" text-anchor="middle">
+    A ToonTalk Reimplementation in Rust and WebAssembly
+  </text>
+</svg>

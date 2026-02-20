@@ -1,0 +1,1 @@
+This tutorial has two parts. First, watch the Show Me demonstration where numbers are dragged into box holes. Then, practice doing the same thing yourself. Boxes have numbered compartments. Each hole holds exactly one item. Drop a number onto a hole to fill it. After the tutorial show me animation completes, I can practice what was shown by doing a similar action.

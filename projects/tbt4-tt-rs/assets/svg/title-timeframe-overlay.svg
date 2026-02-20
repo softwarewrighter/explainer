@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <!-- Semi-transparent box to overlay on robot area -->
+  <rect x="1150" y="180" width="700" height="400" rx="20" ry="20"
+        fill="#1a1a2e" fill-opacity="0.95" stroke="#00d4ff" stroke-width="4"/>
+
+  <!-- Title -->
+  <text x="1500" y="260" font-family="Arial, sans-serif" font-size="48" font-weight="bold"
+        fill="#00d4ff" text-anchor="middle">Throwback Thursday</text>
+
+  <!-- Original ToonTalk -->
+  <text x="1500" y="340" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffd93d" text-anchor="middle">ToonTalk Original</text>
+  <text x="1500" y="385" font-family="Arial, sans-serif" font-size="32"
+        fill="#e0e0e0" text-anchor="middle">Windows 95/XP Era (1996-2006)</text>
+
+  <!-- ToonTalk Reborn -->
+  <text x="1500" y="460" font-family="Arial, sans-serif" font-size="36"
+        fill="#4ade80" text-anchor="middle">ToonTalk Reborn</text>
+  <text x="1500" y="505" font-family="Arial, sans-serif" font-size="32"
+        fill="#e0e0e0" text-anchor="middle">jQuery/Browser Era (2013-2018)</text>
+</svg>

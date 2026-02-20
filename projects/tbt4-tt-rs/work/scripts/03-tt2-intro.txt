@@ -1,0 +1,1 @@
+Level two adds messaging. Birds carry widgets to their nests. Give a widget to a bird and it flies away. Pick up the message from the nest when ready. This enables communication between parts of your program.

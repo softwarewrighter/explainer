@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+  <rect x="50" y="40" width="200" height="50" rx="25" fill="#ff6b6b"/>
+  <text x="150" y="75" font-family="Arial Black, sans-serif" font-size="28" fill="#1a1a2e" text-anchor="middle">Tutorial</text>
+
+  <text x="960" y="250" font-family="Arial Black, sans-serif" font-size="96" fill="#ffd93d" text-anchor="middle">Bird and Nest</text>
+  <text x="960" y="380" font-family="Arial, sans-serif" font-size="48" fill="#ffffff" text-anchor="middle">Send messages between locations</text>
+
+  <rect x="500" y="480" width="920" height="200" rx="20" fill="none" stroke="#00d4ff" stroke-width="5"/>
+  <text x="960" y="560" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" text-anchor="middle">Drop a number on the bird to send it.</text>
+  <text x="960" y="620" font-family="Arial, sans-serif" font-size="40" fill="#ffffff" text-anchor="middle">The bird delivers to its paired nest.</text>
+</svg>

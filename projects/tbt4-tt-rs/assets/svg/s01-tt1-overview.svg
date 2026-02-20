@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+
+  <!-- Badge -->
+  <rect x="50" y="40" width="180" height="50" rx="25" fill="#4ade80"/>
+  <text x="140" y="75" font-family="Arial Black, sans-serif" font-size="28" fill="#1a1a2e" text-anchor="middle">Level One</text>
+
+  <!-- Title -->
+  <text x="960" y="200" font-family="Arial Black, sans-serif" font-size="96" fill="#ffd93d" text-anchor="middle">The Basics</text>
+
+  <!-- Subtitle -->
+  <text x="960" y="300" font-family="Arial, sans-serif" font-size="48" fill="#ffffff" text-anchor="middle">Numbers, Boxes, Tools, and Scales</text>
+
+  <!-- Four boxes -->
+  <rect x="100" y="400" width="380" height="280" rx="20" fill="none" stroke="#00d4ff" stroke-width="5"/>
+  <text x="290" y="470" font-family="Arial Black, sans-serif" font-size="44" fill="#00d4ff" text-anchor="middle">Numbers</text>
+  <text x="290" y="530" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Click to create copies</text>
+  <text x="290" y="580" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Add, subtract, multiply</text>
+  <text x="290" y="630" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">divide, and modulo</text>
+
+  <rect x="530" y="400" width="380" height="280" rx="20" fill="none" stroke="#ff6b6b" stroke-width="5"/>
+  <text x="720" y="470" font-family="Arial Black, sans-serif" font-size="44" fill="#ff6b6b" text-anchor="middle">Boxes</text>
+  <text x="720" y="530" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Containers with holes</text>
+  <text x="720" y="580" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Drag items into slots</text>
+  <text x="720" y="630" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Join or split boxes</text>
+
+  <rect x="960" y="400" width="380" height="280" rx="20" fill="none" stroke="#4ade80" stroke-width="5"/>
+  <text x="1150" y="470" font-family="Arial Black, sans-serif" font-size="44" fill="#4ade80" text-anchor="middle">Tools</text>
+  <text x="1150" y="530" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Wand copies widgets</text>
+  <text x="1150" y="580" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Vacuum erases them</text>
+  <text x="1150" y="630" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Drop on any item</text>
+
+  <rect x="1390" y="400" width="380" height="280" rx="20" fill="none" stroke="#ffd93d" stroke-width="5"/>
+  <text x="1580" y="470" font-family="Arial Black, sans-serif" font-size="44" fill="#ffd93d" text-anchor="middle">Scales</text>
+  <text x="1580" y="530" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Compare two values</text>
+  <text x="1580" y="580" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">See which is larger</text>
+  <text x="1580" y="630" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">Visual feedback</text>
+</svg>

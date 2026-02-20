@@ -1,0 +1,1 @@
+Level one introduces the basics. Numbers can be clicked to create copies. Drop one number on another to add them. Boxes are containers with numbered holes. Tools include the scales for comparing, the wand for copying, and the vacuum for erasing.

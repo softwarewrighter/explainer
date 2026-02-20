@@ -1,0 +1,1 @@
+Scales compare values. Place a number on each side. The scale tips toward the larger value. Equal values balance in the middle. Use scales to make decisions in your programs.

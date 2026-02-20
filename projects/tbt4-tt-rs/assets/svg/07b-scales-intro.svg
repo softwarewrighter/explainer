@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#1a1a2e"/>
+
+  <!-- Level indicator -->
+  <rect x="60" y="60" width="200" height="80" rx="15" fill="#4ade80"/>
+  <text x="160" y="115" font-family="Arial Black, sans-serif" font-size="48"
+        fill="#1a1a2e" text-anchor="middle">tt1</text>
+
+  <!-- Demo number -->
+  <text x="1800" y="115" font-family="Arial, sans-serif" font-size="36"
+        fill="#888888" text-anchor="middle">Demo 4 of 4</text>
+
+  <!-- Title -->
+  <text x="960" y="220" font-family="Arial Black, sans-serif" font-size="96"
+        fill="#00d4ff" text-anchor="middle">
+    Scales
+  </text>
+
+  <!-- Content box -->
+  <rect x="300" y="300" width="1320" height="400" rx="20" fill="none" stroke="#00d4ff" stroke-width="5"/>
+
+  <!-- Steps -->
+  <text x="400" y="380" font-family="Arial Black, sans-serif" font-size="40"
+        fill="#4ade80">1.</text>
+  <text x="480" y="380" font-family="Arial, sans-serif" font-size="40"
+        fill="#ffffff">Place a number on each side</text>
+
+  <text x="400" y="460" font-family="Arial Black, sans-serif" font-size="40"
+        fill="#4ade80">2.</text>
+  <text x="480" y="460" font-family="Arial, sans-serif" font-size="40"
+        fill="#ffffff">The scale tips toward the heavier side</text>
+
+  <text x="400" y="540" font-family="Arial Black, sans-serif" font-size="40"
+        fill="#4ade80">3.</text>
+  <text x="480" y="540" font-family="Arial, sans-serif" font-size="40"
+        fill="#ffffff">Equal values balance in the middle</text>
+
+  <text x="400" y="620" font-family="Arial Black, sans-serif" font-size="40"
+        fill="#4ade80">4.</text>
+  <text x="480" y="620" font-family="Arial, sans-serif" font-size="40"
+        fill="#ffffff">Use scales to guide decisions</text>
+
+  <!-- Footer -->
+  <text x="960" y="800" font-family="Arial, sans-serif" font-size="36"
+        fill="#888888" text-anchor="middle">
+    Compare values visually
+  </text>
+</svg>
