@@ -1,0 +1,52 @@
+ToonTalk in Rust (tt-rs) is a visual programming environment that runs in your browser. Learn by doing, not by typing code. This vibe-coded homage to the original ToonTalk brings programming-by-demonstration to the modern web using Rust and WebAssembly.
+
+In this video, you'll see:
+- Three learning levels: basics, messaging, and sensors
+- Six interactive tutorials with Show Me demonstrations
+- Robots that learn by watching you work
+
+Try it yourself - no install required!
+
+LINKS
+-----
+Live Demo: https://toontalk.github.io/toontalk/
+Source Code: https://github.com/nickmain/tt-rs
+Original ToonTalk: https://www.toontalk.com/
+Blog Post: https://softwarewrighter.com/tt-rs
+Discord: https://discord.gg/softwarewrighter
+
+CHAPTERS
+--------
+0:00 Title
+0:10 Introduction
+0:37 Level 1: Basics
+1:28 Level 2: Messaging
+2:18 Level 3: Sensors
+2:41 Tutorial: Fill Box
+3:14 Tutorial: Add Numbers
+3:37 Tutorial: Copy Widgets
+4:05 Tutorial: Messaging
+4:48 Tutorial: Train Robot
+5:21 Tutorial: Robot Sensors
+6:02 Summary
+6:29 Try It Yourself
+6:44 Outro
+
+ABOUT TOONTALK
+--------------
+ToonTalk was originally created by Ken Kahn in the 1990s as a visual programming environment for children. This Rust/WebAssembly reimplementation brings the core concepts to modern browsers.
+
+#ToonTalk #VisualProgramming #Rust #WebAssembly #LearnToCode #ProgrammingByDemonstration #ThrowbackThursday #VibeCoding #WASM #OpenSource #EdTech #CodingForKids
+
+---
+
+TITLE SUGGESTIONS (pick one):
+
+1. ToonTalk in Rust: Visual Programming Without Typing Code
+2. Learn to Code by Doing: ToonTalk Reimagined in Rust
+3. Programming by Demonstration: ToonTalk Meets WebAssembly
+4. ToonTalk Reborn: 90s Visual Programming in Your Browser
+5. Vibe Coding a 90s Classic: ToonTalk in Rust
+6. No Typing Required: Visual Programming with tt-rs
+7. Throwback Thursday: ToonTalk Lives Again in Rust
+8. Birds, Nests, and Robots: Visual Programming with tt-rs
