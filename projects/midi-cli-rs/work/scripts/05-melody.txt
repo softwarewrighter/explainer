@@ -1,0 +1,1 @@
+Switch to melodies and name it m one. Click a note to enter editing mode. Type letters for notes and r for rests. Brackets change duration, plus and minus shift octave. Select an instrument from the dropdown. Click save, generate, then play to hear the result.

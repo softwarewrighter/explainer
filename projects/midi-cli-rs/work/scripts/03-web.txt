@@ -1,0 +1,1 @@
+The web interface connects to a local server. Type a preset name, select a key, and click the seed button. Save the preset, then click generate. The server runs the command line tool to create audio. Click play to hear the result.

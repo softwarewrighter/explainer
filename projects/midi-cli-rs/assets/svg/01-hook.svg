@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0221"/>
+      <stop offset="100%" style="stop-color:#150734"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background - deep purple/black -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Headline - neon cyan -->
+  <text x="960" y="140" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#01cdfe" text-anchor="middle">
+    MIDI Music for AI Agents
+  </text>
+
+  <!-- Subtitle - neon pink -->
+  <text x="960" y="220" font-family="Arial, sans-serif" font-size="56"
+        fill="#ff71ce" text-anchor="middle">
+    Generate Background Music from the Command Line
+  </text>
+
+  <!-- Box 1: Mood Presets - wider, neon green -->
+  <rect x="100" y="300" width="580" height="420" rx="16"
+        fill="#0a0a1a" stroke="#05ffa1" stroke-width="6"/>
+  <text x="150" y="380" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#05ffa1">
+    Mood Presets
+  </text>
+  <text x="150" y="450" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    upbeat, calm, ambient
+  </text>
+  <text x="150" y="510" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    jazz, suspense, eerie
+  </text>
+  <text x="150" y="590" font-family="Arial, sans-serif" font-size="40" fill="#aaa">
+    One command generates
+  </text>
+  <text x="150" y="645" font-family="Arial, sans-serif" font-size="40" fill="#aaa">
+    multi-track compositions
+  </text>
+
+  <!-- Box 2: Output Formats - wider, neon purple -->
+  <rect x="720" y="300" width="580" height="420" rx="16"
+        fill="#0a0a1a" stroke="#b967ff" stroke-width="6"/>
+  <text x="770" y="380" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#b967ff">
+    Output Formats
+  </text>
+  <text x="770" y="450" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    MIDI files for editing
+  </text>
+  <text x="770" y="510" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    WAV audio for video
+  </text>
+  <text x="770" y="590" font-family="Arial, sans-serif" font-size="40" fill="#aaa">
+    Reproducible output
+  </text>
+  <text x="770" y="645" font-family="Arial, sans-serif" font-size="40" fill="#aaa">
+    with seed control
+  </text>
+
+  <!-- Box 3: Web UI - neon orange -->
+  <rect x="100" y="760" width="1250" height="240" rx="16"
+        fill="#0a0a1a" stroke="#ff9f1c" stroke-width="6"/>
+  <text x="150" y="840" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#ff9f1c">
+    Interactive Web UI
+  </text>
+  <text x="150" y="905" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Visual timeline editor, live preview
+  </text>
+  <text x="150" y="960" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Runs in browser via Web Assembly
+  </text>
+
+  <!-- Avatar safe zone (keep clear: x=1400-1920, y=800-1080) -->
+</svg>

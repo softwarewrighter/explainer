@@ -1,0 +1,1 @@
+Plus and minus keys shift the octave. Watch as A four becomes A five, then B four becomes B three.

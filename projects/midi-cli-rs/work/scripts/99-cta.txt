@@ -1,0 +1,1 @@
+Try it yourself. Clone the source from GitHub and build with cargo. An online page lets you listen to sample output from all six mood presets. Source code and blog post are linked in the description. This is personal software via vibe coding.

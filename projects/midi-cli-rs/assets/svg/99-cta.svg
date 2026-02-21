@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0221"/>
+      <stop offset="100%" style="stop-color:#150734"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background - deep purple/black -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Headline - neon cyan -->
+  <text x="960" y="140" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#01cdfe" text-anchor="middle">
+    Try It Yourself
+  </text>
+
+  <!-- Subtitle - neon pink -->
+  <text x="960" y="220" font-family="Arial, sans-serif" font-size="56"
+        fill="#ff71ce" text-anchor="middle">
+    Generate Your Own Music in Seconds
+  </text>
+
+  <!-- Box 1: Clone & Build - neon green -->
+  <rect x="100" y="300" width="620" height="380" rx="16"
+        fill="#0a0a1a" stroke="#05ffa1" stroke-width="6"/>
+  <text x="150" y="380" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#05ffa1">
+    Clone and Build
+  </text>
+  <text x="150" y="450" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    Get the source from GitHub
+  </text>
+  <text x="150" y="520" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    Build with cargo
+  </text>
+  <text x="150" y="590" font-family="Arial, sans-serif" font-size="40" fill="#aaa">
+    Requires Rust and FluidSynth
+  </text>
+
+  <!-- Box 2: Online Examples - neon purple -->
+  <rect x="760" y="300" width="540" height="380" rx="16"
+        fill="#0a0a1a" stroke="#b967ff" stroke-width="6"/>
+  <text x="810" y="380" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#b967ff">
+    Online Examples
+  </text>
+  <text x="810" y="450" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    Listen to sample output
+  </text>
+  <text x="810" y="520" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    All six mood presets
+  </text>
+  <text x="810" y="590" font-family="Arial, sans-serif" font-size="40" fill="#aaa">
+    Link in description
+  </text>
+
+  <!-- Box 3: Links - neon orange -->
+  <rect x="100" y="720" width="1200" height="280" rx="16"
+        fill="#0a0a1a" stroke="#ff9f1c" stroke-width="6"/>
+  <text x="150" y="800" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#ff9f1c">
+    Links in Description
+  </text>
+  <text x="150" y="870" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    Source code and blog post
+  </text>
+  <text x="150" y="930" font-family="Arial, sans-serif" font-size="40" fill="#aaa">
+    Personal Software via Vibe Coding
+  </text>
+
+  <!-- Avatar safe zone (keep clear: x=1400-1920, y=800-1080) -->
+</svg>

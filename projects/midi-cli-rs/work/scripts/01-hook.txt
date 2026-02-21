@@ -1,0 +1,1 @@
+MIDI CLI is a command line tool for generating music. It is designed for AI agents that need background tracks. Choose a mood like jazz, upbeat, or ambient. Specify duration, tempo, and key. The tool outputs MIDI files or rendered audio. A web interface lets you preview and edit in your browser.

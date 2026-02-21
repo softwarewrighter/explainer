@@ -1,0 +1,1 @@
+The melody editor lets you compose note by note with full control over pitch and duration.

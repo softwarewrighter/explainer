@@ -1,0 +1,30 @@
+A command-line tool for generating procedural music, built with Rust and FluidSynth.
+
+MIDI CLI generates background music from six mood presets: jazz, upbeat, ambient, calm, suspense, and eerie. Specify duration, tempo, key, and intensity. The tool outputs MIDI files or renders audio directly using a SoundFont.
+
+The web interface connects to a local REST server, letting you create and preview presets without touching the command line. The melody editor goes further—compose note by note, shift octaves, change durations, and pick from dozens of instruments.
+
+This is personal software via vibe coding—built for AI agents that need background tracks, but useful for anyone who wants quick procedural music.
+
+🔗 LINKS
+Source Code: https://github.com/softwarewrighter/midi-cli-rs
+Online Examples: https://softwarewrighter.github.io/midi-cli-rs/
+Blog Post: [coming soon]
+
+📋 CHAPTERS
+0:00 Intro
+0:09 What is MIDI CLI?
+0:30 CLI Demo - Mood Presets
+1:11 Web UI - Jazz Preset
+1:38 Web UI - Suspense Preset
+2:25 Melody Editor
+3:32 Try It Yourself
+3:47 Outro
+
+🛠️ TECH STACK
+- Rust (CLI + WASM)
+- FluidSynth (audio rendering)
+- GeneralUser GS SoundFont
+- Yew (web UI)
+
+#rust #midi #proceduralmusic #cli #vibecoding #ai #musicgeneration

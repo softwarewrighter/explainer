@@ -1,0 +1,1 @@
+Bracket keys change duration. Open bracket shortens the note. Close bracket lengthens it.

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0221"/>
+      <stop offset="100%" style="stop-color:#150734"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Headline - neon cyan -->
+  <text x="960" y="200" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#01cdfe" text-anchor="middle">
+    Web Interface
+  </text>
+
+  <!-- Subtitle - neon pink -->
+  <text x="960" y="300" font-family="Arial, sans-serif" font-size="56"
+        fill="#ff71ce" text-anchor="middle">
+    Two Tabs for Creating Music
+  </text>
+
+  <!-- Box 1: Presets - neon green -->
+  <rect x="150" y="400" width="600" height="350" rx="16"
+        fill="#0a0a1a" stroke="#05ffa1" stroke-width="6"/>
+  <text x="230" y="490" font-family="Arial, sans-serif" font-size="56"
+        font-weight="bold" fill="#05ffa1">
+    Presets
+  </text>
+  <text x="230" y="570" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    Select mood, key, tempo
+  </text>
+  <text x="230" y="630" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    Adjust duration and intensity
+  </text>
+  <text x="230" y="690" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    Generate full compositions
+  </text>
+
+  <!-- Box 2: Melodies - neon purple -->
+  <rect x="800" y="400" width="600" height="350" rx="16"
+        fill="#0a0a1a" stroke="#b967ff" stroke-width="6"/>
+  <text x="880" y="490" font-family="Arial, sans-serif" font-size="56"
+        font-weight="bold" fill="#b967ff">
+    Melodies
+  </text>
+  <text x="880" y="570" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    Enter note sequences
+  </text>
+  <text x="880" y="630" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    Choose instruments
+  </text>
+  <text x="880" y="690" font-family="Arial, sans-serif" font-size="40" fill="#eee">
+    Preview custom patterns
+  </text>
+
+  <!-- Avatar safe zone (keep clear: x=1400-1920, y=800-1080) -->
+</svg>

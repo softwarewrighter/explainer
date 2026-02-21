@@ -1,0 +1,1 @@
+The help command shows usage. The moods command lists six presets. Here we generate jazz in B flat. The info command shows the MIDI structure. Now an upbeat preset with a specific seed. The render command converts MIDI to audio. Finally, explicit notes specify pitches, durations, and velocities.

@@ -1,0 +1,1 @@
+The web interface runs entirely in your browser. Name your preset, select a mood like jazz, and choose a key. Adjust duration, intensity, and tempo with the sliders. Click save preset, then generate to create the audio. Click play to hear the result.

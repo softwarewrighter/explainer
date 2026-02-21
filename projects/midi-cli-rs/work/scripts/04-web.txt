@@ -1,0 +1,1 @@
+Now creating a suspense preset named s one. Select suspense mood and increase the duration to thirteen seconds. Adjust intensity and tempo with the sliders. Click save preset, then generate. The server creates the audio file. Click play to hear the result.

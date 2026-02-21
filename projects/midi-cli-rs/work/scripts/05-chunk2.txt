@@ -1,0 +1,1 @@
+Type letters to add notes. A through G set the pitch. Press R to insert a rest between notes.
