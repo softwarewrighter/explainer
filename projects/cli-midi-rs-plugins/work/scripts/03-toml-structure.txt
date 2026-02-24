@@ -1,0 +1,1 @@
+A plug-in mood pack starts with a pack section containing the name and version. Then you define moods as a list. Each mood needs a name, a base mood to delegate to, and optional settings like tempo or key. For example, synthwave delegates to upbeat with a slower tempo and minor key.

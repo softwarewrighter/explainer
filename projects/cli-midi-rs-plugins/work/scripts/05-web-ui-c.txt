@@ -1,0 +1,1 @@
+Back on the presets tab, I can use any plugin mood. Open the dropdown and select synthwave from the electronic pack. Set your duration and intensity, then save the preset. The preset appears on the right with playback controls.

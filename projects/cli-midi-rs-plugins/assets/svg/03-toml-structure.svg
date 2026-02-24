@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0221"/>
+      <stop offset="100%" style="stop-color:#150734"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Headline -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#01cdfe" text-anchor="middle">
+    TOML File Structure
+  </text>
+
+  <!-- Code block background -->
+  <rect x="100" y="160" width="1200" height="720" rx="16"
+        fill="#0a0a1a" stroke="#05ffa1" stroke-width="6"/>
+
+  <!-- Pack section header -->
+  <text x="140" y="230" font-family="monospace" font-size="40" fill="#ff71ce">
+    [pack]
+  </text>
+  <text x="140" y="285" font-family="monospace" font-size="40" fill="#eee">
+    name = "electronic"
+  </text>
+  <text x="140" y="340" font-family="monospace" font-size="40" fill="#eee">
+    version = "1.0"
+  </text>
+
+  <!-- Moods section header -->
+  <text x="140" y="420" font-family="monospace" font-size="40" fill="#ff71ce">
+    [[moods]]
+  </text>
+  <text x="140" y="475" font-family="monospace" font-size="40" fill="#eee">
+    name = "synthwave"
+  </text>
+  <text x="140" y="530" font-family="monospace" font-size="40" fill="#b967ff">
+    base_mood = "upbeat"
+  </text>
+  <text x="140" y="585" font-family="monospace" font-size="40" fill="#eee">
+    default_tempo = 118
+  </text>
+  <text x="140" y="640" font-family="monospace" font-size="40" fill="#eee">
+    default_key = "Am"
+  </text>
+  <text x="140" y="695" font-family="monospace" font-size="40" fill="#eee">
+    default_intensity = 65
+  </text>
+
+  <!-- More moods hint -->
+  <text x="140" y="775" font-family="monospace" font-size="40" fill="#aaa">
+    [[moods]]  # add more moods...
+  </text>
+  <text x="140" y="830" font-family="monospace" font-size="40" fill="#aaa">
+    name = "techno"
+  </text>
+
+  <!-- Avatar safe zone -->
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0221"/>
+      <stop offset="100%" style="stop-color:#150734"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background - deep purple/black -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Headline - neon cyan -->
+  <text x="960" y="140" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#01cdfe" text-anchor="middle">
+    Custom Mood Plugins
+  </text>
+
+  <!-- Subtitle - neon pink -->
+  <text x="960" y="220" font-family="Arial, sans-serif" font-size="56"
+        fill="#ff71ce" text-anchor="middle">
+    Extend MIDI CLI with TOML Configuration
+  </text>
+
+  <!-- Box 1: No Code Required - neon green -->
+  <rect x="100" y="300" width="580" height="380" rx="16"
+        fill="#0a0a1a" stroke="#05ffa1" stroke-width="6"/>
+  <text x="150" y="380" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#05ffa1">
+    No Code Changes
+  </text>
+  <text x="150" y="450" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Drop TOML files in
+  </text>
+  <text x="150" y="510" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    your config folder
+  </text>
+  <text x="150" y="590" font-family="Arial, sans-serif" font-size="40" fill="#aaa">
+    Instant availability
+  </text>
+  <text x="150" y="645" font-family="Arial, sans-serif" font-size="40" fill="#aaa">
+    for all commands
+  </text>
+
+  <!-- Box 2: Custom Moods - neon purple -->
+  <rect x="720" y="300" width="580" height="380" rx="16"
+        fill="#0a0a1a" stroke="#b967ff" stroke-width="6"/>
+  <text x="770" y="380" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#b967ff">
+    Mood Packs
+  </text>
+  <text x="770" y="450" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Bundle related moods
+  </text>
+  <text x="770" y="510" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    into reusable packs
+  </text>
+  <text x="770" y="590" font-family="Arial, sans-serif" font-size="40" fill="#aaa">
+    Electronic, cinematic,
+  </text>
+  <text x="770" y="645" font-family="Arial, sans-serif" font-size="40" fill="#aaa">
+    or your own genres
+  </text>
+
+  <!-- Bottom banner - neon orange -->
+  <rect x="100" y="720" width="1200" height="160" rx="16"
+        fill="#0a0a1a" stroke="#ff9f1c" stroke-width="6"/>
+  <text x="150" y="795" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#ff9f1c">
+    Simple TOML Format
+  </text>
+  <text x="150" y="855" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Define name, base mood, tempo, key, and intensity
+  </text>
+
+  <!-- Avatar safe zone (keep clear: x=1400-1920, y=800-1080) -->
+</svg>

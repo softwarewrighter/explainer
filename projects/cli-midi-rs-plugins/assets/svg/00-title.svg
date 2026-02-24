@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&amp;display=swap');
+      .title-text {
+        font-family: 'Oswald', 'Arial Black', 'Impact', sans-serif;
+        font-weight: 700;
+        fill: #FFD700;
+        stroke: #000000;
+        stroke-width: 6;
+        paint-order: stroke fill;
+        text-anchor: middle;
+      }
+      .subtitle {
+        font-size: 72px;
+      }
+      .main-title {
+        font-size: 144px;
+      }
+    </style>
+  </defs>
+
+  <!-- Transparent background - video shows through -->
+
+  <!-- Top line: midi-cli-rs (medium) -->
+  <text x="960" y="340" class="title-text subtitle">midi-cli-rs</text>
+
+  <!-- Middle line: Pluggable (larger) -->
+  <text x="960" y="520" class="title-text main-title">Pluggable</text>
+
+  <!-- Bottom line: Mood Packs (larger) -->
+  <text x="960" y="700" class="title-text main-title">Mood Packs</text>
+</svg>

@@ -1,0 +1,1 @@
+The web interface makes plugin management even easier. Click the plugins tab to see your installed mood packs. You can view mood details, upload new packs, or remove ones you do not need. The interface validates your configuration and shows helpful error messages if something is wrong.

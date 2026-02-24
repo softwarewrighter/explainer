@@ -1,0 +1,14 @@
+Extend the Rust MIDI command line tool with custom mood packs using simple TOML configuration files. No code changes needed.
+
+In this video:
+- How the plugin system works
+- TOML mood pack structure explained
+- Creating custom moods (synthwave, chillout, techno, 8bit)
+- Live demo: generating music with plugin moods
+- Web interface for managing mood packs
+
+Each mood pack delegates to built-in generators (jazz, upbeat, ambient, etc.) while customizing tempo, key, and intensity. Drop a TOML file in your config folder and your new moods are ready to use.
+
+Project: https://github.com/softwarewrighter/midi-cli-rs
+
+#rust #midi #music #cli #programming #toml #plugins

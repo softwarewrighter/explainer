@@ -1,0 +1,1 @@
+The plugin system uses text based configuration files. Each file defines a mood pack with one or more custom moods. Every mood delegates to a built in generator like jazz, upbeat, or ambient. You control tempo, key, and intensity. The structure is simple, just a pack header and a list of moods.

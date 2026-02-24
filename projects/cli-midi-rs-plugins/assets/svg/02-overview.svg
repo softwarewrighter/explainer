@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0221"/>
+      <stop offset="100%" style="stop-color:#150734"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Headline -->
+  <text x="960" y="120" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#01cdfe" text-anchor="middle">
+    Plugin Architecture
+  </text>
+
+  <!-- Flow diagram: TOML -> Parser -> Base Mood -> Audio -->
+
+  <!-- Box 1: TOML File -->
+  <rect x="80" y="240" width="400" height="200" rx="16"
+        fill="#0a0a1a" stroke="#05ffa1" stroke-width="6"/>
+  <text x="280" y="320" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#05ffa1" text-anchor="middle">
+    TOML File
+  </text>
+  <text x="280" y="380" font-family="Arial, sans-serif" font-size="36"
+        fill="#aaa" text-anchor="middle">
+    mood pack config
+  </text>
+  <text x="280" y="420" font-family="Arial, sans-serif" font-size="36"
+        fill="#aaa" text-anchor="middle">
+    in your folder
+  </text>
+
+  <!-- Arrow 1 -->
+  <polygon points="500,340 540,320 540,360" fill="#ff71ce"/>
+  <line x1="480" y1="340" x2="540" y2="340" stroke="#ff71ce" stroke-width="5"/>
+
+  <!-- Box 2: Mood Lookup -->
+  <rect x="560" y="240" width="400" height="200" rx="16"
+        fill="#0a0a1a" stroke="#b967ff" stroke-width="6"/>
+  <text x="760" y="320" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#b967ff" text-anchor="middle">
+    Lookup
+  </text>
+  <text x="760" y="380" font-family="Arial, sans-serif" font-size="36"
+        fill="#aaa" text-anchor="middle">
+    resolve name to
+  </text>
+  <text x="760" y="420" font-family="Arial, sans-serif" font-size="36"
+        fill="#aaa" text-anchor="middle">
+    base mood
+  </text>
+
+  <!-- Arrow 2 -->
+  <polygon points="980,340 1020,320 1020,360" fill="#ff71ce"/>
+  <line x1="960" y1="340" x2="1020" y2="340" stroke="#ff71ce" stroke-width="5"/>
+
+  <!-- Box 3: Generator -->
+  <rect x="1040" y="240" width="400" height="200" rx="16"
+        fill="#0a0a1a" stroke="#ff9f1c" stroke-width="6"/>
+  <text x="1240" y="320" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#ff9f1c" text-anchor="middle">
+    Generator
+  </text>
+  <text x="1240" y="380" font-family="Arial, sans-serif" font-size="36"
+        fill="#aaa" text-anchor="middle">
+    built in mood
+  </text>
+  <text x="1240" y="420" font-family="Arial, sans-serif" font-size="36"
+        fill="#aaa" text-anchor="middle">
+    with overrides
+  </text>
+
+  <!-- Built-in moods list -->
+  <rect x="80" y="500" width="1460" height="280" rx="16"
+        fill="#0a0a1a" stroke="#01cdfe" stroke-width="6"/>
+  <text x="140" y="570" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#01cdfe">
+    Built-in Base Moods
+  </text>
+  <text x="140" y="640" font-family="Arial, sans-serif" font-size="42" fill="#eee">
+    upbeat, calm, ambient, jazz, suspense, eerie
+  </text>
+  <text x="140" y="700" font-family="Arial, sans-serif" font-size="42" fill="#eee">
+    chiptune, orchestral, show
+  </text>
+  <text x="140" y="760" font-family="Arial, sans-serif" font-size="36" fill="#aaa">
+    Your plugins delegate to these generators with custom parameters
+  </text>
+
+  <!-- Avatar safe zone (bottom right 220x220) -->
+</svg>

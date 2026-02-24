@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0221"/>
+      <stop offset="100%" style="stop-color:#150734"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Headline - neon cyan -->
+  <text x="960" y="150" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#01cdfe" text-anchor="middle">
+    Build Your Own Moods
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="240" font-family="Arial, sans-serif" font-size="56"
+        fill="#ff71ce" text-anchor="middle">
+    Extensible Music Generation
+  </text>
+
+  <!-- Three action boxes -->
+
+  <!-- Box 1: Create -->
+  <rect x="100" y="320" width="380" height="320" rx="16"
+        fill="#0a0a1a" stroke="#05ffa1" stroke-width="6"/>
+  <text x="290" y="400" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#05ffa1" text-anchor="middle">
+    Create
+  </text>
+  <text x="290" y="470" font-family="Arial, sans-serif" font-size="44"
+        fill="#eee" text-anchor="middle">
+    Define custom
+  </text>
+  <text x="290" y="530" font-family="Arial, sans-serif" font-size="44"
+        fill="#eee" text-anchor="middle">
+    mood packs for
+  </text>
+  <text x="290" y="590" font-family="Arial, sans-serif" font-size="44"
+        fill="#eee" text-anchor="middle">
+    your projects
+  </text>
+
+  <!-- Box 2: Share -->
+  <rect x="520" y="320" width="380" height="320" rx="16"
+        fill="#0a0a1a" stroke="#b967ff" stroke-width="6"/>
+  <text x="710" y="400" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#b967ff" text-anchor="middle">
+    Share
+  </text>
+  <text x="710" y="470" font-family="Arial, sans-serif" font-size="44"
+        fill="#eee" text-anchor="middle">
+    Distribute packs
+  </text>
+  <text x="710" y="530" font-family="Arial, sans-serif" font-size="44"
+        fill="#eee" text-anchor="middle">
+    with your team
+  </text>
+  <text x="710" y="590" font-family="Arial, sans-serif" font-size="44"
+        fill="#eee" text-anchor="middle">
+    or community
+  </text>
+
+  <!-- Box 3: Build -->
+  <rect x="940" y="320" width="380" height="320" rx="16"
+        fill="#0a0a1a" stroke="#ff9f1c" stroke-width="6"/>
+  <text x="1130" y="400" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#ff9f1c" text-anchor="middle">
+    Build
+  </text>
+  <text x="1130" y="470" font-family="Arial, sans-serif" font-size="44"
+        fill="#eee" text-anchor="middle">
+    Genre specific
+  </text>
+  <text x="1130" y="530" font-family="Arial, sans-serif" font-size="44"
+        fill="#eee" text-anchor="middle">
+    collections for
+  </text>
+  <text x="1130" y="590" font-family="Arial, sans-serif" font-size="44"
+        fill="#eee" text-anchor="middle">
+    any workflow
+  </text>
+
+  <!-- Bottom CTA -->
+  <rect x="100" y="700" width="1220" height="140" rx="16"
+        fill="#0a0a1a" stroke="#01cdfe" stroke-width="6"/>
+  <text x="710" y="785" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#01cdfe" text-anchor="middle">
+    Examples and docs on the project page
+  </text>
+
+  <!-- Avatar safe zone -->
+</svg>

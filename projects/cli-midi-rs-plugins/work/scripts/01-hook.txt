@@ -1,0 +1,1 @@
+In our last video, we showed how the Rust MIDI command line tool generates music from simple commands. Today we go further. You can now create custom mood packs using simple configuration files. No code changes needed. Just drop a file in your config folder and your new moods are ready to use.
