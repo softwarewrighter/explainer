@@ -1,0 +1,40 @@
+In 1965, IBM released a computer that would teach a generation how to program. The IBM 1130 was small enough for universities, powerful enough for real science. Now you can learn its assembly language right in your browser.
+
+In this video:
+- The IBM 1130 minicomputer and its historical significance
+- Architecture overview: ACC, EXT, IAR, index registers, flags
+- Complete instruction set: LD, STO, A, S, SLA, SRA, BSC, BSI
+- Live demo walking through progressive challenges
+- Memory-mapped registers and indexed addressing
+
+The 1130's clean architecture makes it perfect for understanding how computers really work. These concepts still apply to modern processors.
+
+Try the emulator: https://sw-comp-history.github.io/ibm-1130-rs/
+Source Code: https://github.com/sw-comp-history/ibm-1130-rs
+
+---
+
+Chapters:
+0:00 Introduction
+0:05 Hook: A Computer That Taught Generations
+0:23 Architecture Overview
+0:39 Demo Intro
+0:54 Live Demo
+X:XX Summary
+X:XX Call to Action
+X:XX Outro
+
+---
+
+Discord: https://discord.com/invite/Ctzk5uHggZ
+GitHub: https://github.com/softwarewrighter
+YouTube: https://www.youtube.com/@SoftwareWrighter
+
+---
+
+Title image: IBM 1442 card reader and IBM 1131 CPU
+Credit: BadgersCP, CC0, via Wikimedia Commons
+
+Music: demo-bach.wav from https://github.com/softwarewrighter/music-pipe-rs
+
+#VibeCoding #Assembly #Rust #YewFramework #ComputerHistory #IBM1130 #RetroComputing
