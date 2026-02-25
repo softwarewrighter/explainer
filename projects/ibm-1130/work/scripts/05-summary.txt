@@ -1,0 +1,1 @@
+The IBM eleven thirty taught assembly language to thousands of students. Its clean architecture makes it perfect for learning how computers really work. Memory mapped registers, single address instructions, condition flags. These concepts still apply to modern processors today.

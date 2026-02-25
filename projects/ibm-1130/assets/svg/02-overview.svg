@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a2a4a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="960" y="120" font-family="Arial, sans-serif" font-size="72"
+        font-weight="bold" fill="#60a5fa" text-anchor="middle">
+    Architecture Overview
+  </text>
+
+  <!-- Register box -->
+  <rect x="100" y="180" width="500" height="400" rx="12"
+        fill="#0f172a" stroke="#4ade80" stroke-width="4"/>
+  <text x="350" y="240" font-family="Arial, sans-serif" font-size="42"
+        font-weight="bold" fill="#4ade80" text-anchor="middle">
+    Registers
+  </text>
+
+  <text x="150" y="310" font-family="'Courier New', monospace" font-size="36" fill="#f0f0f0">ACC</text>
+  <text x="300" y="310" font-family="Arial, sans-serif" font-size="32" fill="#94a3b8">Accumulator</text>
+
+  <text x="150" y="370" font-family="'Courier New', monospace" font-size="36" fill="#f0f0f0">EXT</text>
+  <text x="300" y="370" font-family="Arial, sans-serif" font-size="32" fill="#94a3b8">Extension</text>
+
+  <text x="150" y="430" font-family="'Courier New', monospace" font-size="36" fill="#f0f0f0">IAR</text>
+  <text x="300" y="430" font-family="Arial, sans-serif" font-size="32" fill="#94a3b8">Program Counter</text>
+
+  <text x="150" y="490" font-family="'Courier New', monospace" font-size="36" fill="#f0f0f0">XR1-3</text>
+  <text x="300" y="490" font-family="Arial, sans-serif" font-size="32" fill="#94a3b8">Index Registers</text>
+
+  <text x="150" y="550" font-family="'Courier New', monospace" font-size="36" fill="#f0f0f0">FLAGS</text>
+  <text x="300" y="550" font-family="Arial, sans-serif" font-size="32" fill="#94a3b8">C V P Z</text>
+
+  <!-- Instructions box -->
+  <rect x="660" y="180" width="560" height="400" rx="12"
+        fill="#0f172a" stroke="#f59e0b" stroke-width="4"/>
+  <text x="940" y="240" font-family="Arial, sans-serif" font-size="42"
+        font-weight="bold" fill="#f59e0b" text-anchor="middle">
+    Instructions
+  </text>
+
+  <text x="710" y="310" font-family="'Courier New', monospace" font-size="32" fill="#f0f0f0">LD / STO</text>
+  <text x="1000" y="310" font-family="Arial, sans-serif" font-size="28" fill="#94a3b8">Load / Store</text>
+
+  <text x="710" y="370" font-family="'Courier New', monospace" font-size="32" fill="#f0f0f0">A / S</text>
+  <text x="1000" y="370" font-family="Arial, sans-serif" font-size="28" fill="#94a3b8">Add / Subtract</text>
+
+  <text x="710" y="430" font-family="'Courier New', monospace" font-size="32" fill="#f0f0f0">SLA / SRA</text>
+  <text x="1000" y="430" font-family="Arial, sans-serif" font-size="28" fill="#94a3b8">Shift Left / Right</text>
+
+  <text x="710" y="490" font-family="'Courier New', monospace" font-size="32" fill="#f0f0f0">BSC / BSI</text>
+  <text x="1000" y="490" font-family="Arial, sans-serif" font-size="28" fill="#94a3b8">Branch / Subroutine</text>
+
+  <text x="710" y="550" font-family="'Courier New', monospace" font-size="32" fill="#f0f0f0">LDX / STX</text>
+  <text x="1000" y="550" font-family="Arial, sans-serif" font-size="28" fill="#94a3b8">Index Operations</text>
+
+  <!-- Memory box -->
+  <rect x="1280" y="180" width="540" height="400" rx="12"
+        fill="#0f172a" stroke="#ec4899" stroke-width="4"/>
+  <text x="1550" y="240" font-family="Arial, sans-serif" font-size="42"
+        font-weight="bold" fill="#ec4899" text-anchor="middle">
+    Memory
+  </text>
+
+  <text x="1330" y="320" font-family="Arial, sans-serif" font-size="36" fill="#f0f0f0">16-bit words</text>
+  <text x="1330" y="390" font-family="Arial, sans-serif" font-size="36" fill="#f0f0f0">4K word capacity</text>
+  <text x="1330" y="460" font-family="Arial, sans-serif" font-size="36" fill="#f0f0f0">Index regs at 1, 2, 3</text>
+  <text x="1330" y="530" font-family="Arial, sans-serif" font-size="36" fill="#f0f0f0">Word addressed</text>
+
+  <!-- Bottom summary -->
+  <rect x="100" y="640" width="1720" height="180" rx="12"
+        fill="#1e3a5f" stroke="#60a5fa" stroke-width="4"/>
+  <text x="960" y="720" font-family="Arial, sans-serif" font-size="48"
+        fill="#f0f0f0" text-anchor="middle">
+    Simple, elegant architecture for learning assembly
+  </text>
+  <text x="960" y="790" font-family="Arial, sans-serif" font-size="36"
+        fill="#94a3b8" text-anchor="middle">
+    These concepts still apply to modern processors
+  </text>
+</svg>

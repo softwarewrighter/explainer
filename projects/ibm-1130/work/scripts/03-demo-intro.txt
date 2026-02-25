@@ -1,0 +1,1 @@
+Here is the web interface. On the left you see CPU registers and memory. In the center, you write assembly code. On the right, challenges guide you through the instruction set. Watch as I work through a few examples, starting with basic loads and building up to indexed addressing.

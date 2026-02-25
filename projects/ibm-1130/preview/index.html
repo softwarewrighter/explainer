@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IBM 1130 Assembly Emulator - Preview</title>
+  <style>
+    :root {
+      --bg: #0a1628;
+      --card: #1a2a4a;
+      --accent: #60a5fa;
+      --text: #eee;
+      --muted: #94a3b8;
+      --success: #4ade80;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: var(--accent);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .segment {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-left: 4px solid var(--accent);
+    }
+    .segment.ready { border-left-color: var(--success); }
+    .segment.partial { border-left-color: var(--warning); }
+    .segment.pending { border-left-color: var(--danger); }
+    .segment h2 {
+      margin: 0 0 15px 0;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .status {
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: normal;
+    }
+    .status.ready { background: var(--success); color: #000; }
+    .status.partial { background: var(--warning); color: #000; }
+    .status.pending { background: var(--danger); color: #000; }
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .thumbnail {
+      width: 100%;
+      border-radius: 8px;
+      border: 2px solid #333;
+    }
+    .narration {
+      background: #0a0a1a;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+    .narration h3 {
+      margin: 0 0 10px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .narration p {
+      margin: 0;
+      font-size: 14px;
+    }
+    audio, video {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+    .placeholder {
+      background: #1a1a1a;
+      border: 2px dashed #444;
+      border-radius: 8px;
+      padding: 40px;
+      text-align: center;
+      color: var(--muted);
+    }
+    .timestamp {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>IBM 1130 Assembly Emulator - Preview</h1>
+
+  <!-- 00: Title -->
+  <div class="segment pending">
+    <h2>00 - Title <span class="status pending">NEEDS MUSIC</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/00-title.png?ts=1772046029000" alt="Title" class="thumbnail">
+      </div>
+      <div class="right">
+        <p><strong>Duration:</strong> 5 seconds</p>
+        <p><strong>Audio:</strong> Intro music (first 5s, 0.5s fade-out)</p>
+        <div class="placeholder">Awaiting music selection</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01: Hook -->
+  <div class="segment pending">
+    <h2>01 - Hook <span class="status pending">NEEDS TTS</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/01-hook.png?ts=1772046029000" alt="Hook" class="thumbnail">
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (~18s)</h3>
+          <p>In nineteen sixty five, IBM released a computer that would teach a generation how to program. The IBM eleven thirty was small enough for universities, powerful enough for real science. Now you can learn its assembly language right in your browser, the same way students did sixty years ago.</p>
+        </div>
+        <div class="placeholder">Audio: awaiting TTS</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02: Overview -->
+  <div class="segment pending">
+    <h2>02 - Overview <span class="status pending">NEEDS TTS</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/02-overview.png?ts=1772046029000" alt="Overview" class="thumbnail">
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (~16s)</h3>
+          <p>The eleven thirty uses sixteen bit words and a simple register set. The accumulator holds your working value. Index registers let you loop through memory. Load, store, add, shift, branch. These instructions built scientific applications across hundreds of campuses.</p>
+        </div>
+        <div class="placeholder">Audio: awaiting TTS</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03: Demo Intro -->
+  <div class="segment pending">
+    <h2>03 - Demo Intro <span class="status pending">NEEDS TTS</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/03-demo-intro.png?ts=1772046029000" alt="Demo Intro" class="thumbnail">
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (~15s)</h3>
+          <p>Here is the web interface. On the left you see CPU registers and memory. In the center, you write assembly code. On the right, challenges guide you through the instruction set. Watch as I work through a few examples, starting with basic loads and building up to indexed addressing.</p>
+        </div>
+        <div class="placeholder">Audio: awaiting TTS</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04: Demo (OBS) -->
+  <div class="segment pending">
+    <h2>04 - Web UI Demo <span class="status pending">AWAITING OBS</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="images/screenshot.png?ts=1772046029000" alt="Demo Screenshot" class="thumbnail">
+        <p style="font-size: 12px; color: #888; margin-top: 10px;">
+          <strong>Source:</strong> OBS recording of live demo
+        </p>
+      </div>
+      <div class="right">
+        <p><strong>Structure:</strong> Intro slide + OBS recording</p>
+        <p><strong>Content:</strong></p>
+        <ul style="color: #94a3b8; font-size: 14px;">
+          <li>Walk through Challenge 1: Basic Load</li>
+          <li>Show registers updating</li>
+          <li>Challenge 2: Add two numbers</li>
+          <li>Challenge 3: Indexed addressing</li>
+          <li>Show memory-mapped index registers</li>
+        </ul>
+        <div class="placeholder">Video: awaiting OBS recording</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05: Summary -->
+  <div class="segment pending">
+    <h2>05 - Summary <span class="status pending">NEEDS TTS</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/05-summary.png?ts=1772046029000" alt="Summary" class="thumbnail">
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (~16s)</h3>
+          <p>The IBM eleven thirty taught assembly language to thousands of students. Its clean architecture makes it perfect for learning how computers really work. Memory mapped registers, single address instructions, condition flags. These concepts still apply to modern processors today.</p>
+        </div>
+        <div class="placeholder">Audio: awaiting TTS</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 99: CTA -->
+  <div class="segment pending">
+    <h2>99 - Call to Action <span class="status pending">NEEDS TTS</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/99-cta.png?ts=1772046029000" alt="CTA" class="thumbnail">
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (~14s)</h3>
+          <p>Try the emulator yourself, no installation required. The link is in the description. Work through the challenges to master eleven thirty assembly. If you enjoyed this look at computing history, like and subscribe for more explorations of classic systems.</p>
+        </div>
+        <div class="placeholder">Audio: awaiting TTS</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Epilog placeholder -->
+  <div class="segment pending">
+    <h2>99b - Epilog <span class="status pending">NEEDS ASSETS</span></h2>
+    <div class="content">
+      <div class="left">
+        <div class="placeholder">Awaiting epilog frame</div>
+      </div>
+      <div class="right">
+        <p><strong>Duration:</strong> 12 seconds</p>
+        <p><strong>Audio:</strong> Outro music with fade</p>
+        <div class="placeholder">Copy from prior project when ready</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Music Preview Section -->
+  <div class="segment" style="border-left-color: #a855f7;">
+    <h2 style="color: #a855f7;">Music Samples <span class="status" style="background: #a855f7; color: #000;">SELECT ONE</span></h2>
+    <p style="color: var(--muted); margin-bottom: 20px;">Preview music options for title and epilog. Bach-style tracks from music-pipe-rs.</p>
+
+    <div style="display: grid; gap: 20px;">
+      <div class="narration">
+        <h3>demo-bach-esque.wav</h3>
+        <p style="color: #a855f7; margin-bottom: 10px;">Bach-esque style, full arrangement</p>
+        <audio controls src="music-samples/demo-bach-esque.wav"></audio>
+      </div>
+
+      <div class="narration">
+        <h3>demo-bach.wav</h3>
+        <p style="color: #a855f7; margin-bottom: 10px;">Bach style, extended version</p>
+        <audio controls src="music-samples/demo-bach.wav"></audio>
+      </div>
+
+      <div class="narration">
+        <h3>demo-bach-arcade.wav</h3>
+        <p style="color: #a855f7; margin-bottom: 10px;">Bach arcade style, 8-bit inspired</p>
+        <audio controls src="music-samples/demo-bach-arcade.wav"></audio>
+      </div>
+    </div>
+  </div>
+
+  <p class="timestamp">Generated: 2026-02-25 | Cache bust: ?ts=1772046029000</p>
+</body>
+</html>

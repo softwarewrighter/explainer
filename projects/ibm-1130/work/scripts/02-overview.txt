@@ -1,0 +1,1 @@
+The eleven thirty uses sixteen bit words and a simple register set. The accumulator holds your working value. Index registers let you loop through memory. Load, store, add, shift, branch. These instructions built scientific applications across hundreds of campuses.
