@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Many Eyes Learning - Preview</title>
+  <style>
+    :root {
+      --bg: #0d0221;
+      --card: #1a1a2e;
+      --accent: #01cdfe;
+      --text: #eee;
+      --muted: #888;
+      --success: #05ffa1;
+      --warning: #ff9f1c;
+      --danger: #ff6b6b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: var(--accent);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .segment {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-left: 4px solid var(--accent);
+    }
+    .segment.ready { border-left-color: var(--success); }
+    .segment.partial { border-left-color: var(--warning); }
+    .segment.pending { border-left-color: var(--danger); }
+    .segment h2 {
+      margin: 0 0 15px 0;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .status {
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: normal;
+    }
+    .status.ready { background: var(--success); color: #000; }
+    .status.partial { background: var(--warning); color: #000; }
+    .status.pending { background: var(--danger); color: #000; }
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .left, .right { }
+    .thumbnail {
+      width: 100%;
+      border-radius: 8px;
+      border: 2px solid #333;
+    }
+    .narration {
+      background: #0a0a1a;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+    .narration h3 {
+      margin: 0 0 10px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .narration p {
+      margin: 0;
+      font-size: 14px;
+    }
+    .whisper {
+      background: #1a0a1a;
+      border-left: 3px solid var(--warning);
+    }
+    audio, video {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+    .placeholder {
+      background: #1a1a1a;
+      border: 2px dashed #444;
+      border-radius: 8px;
+      padding: 40px;
+      text-align: center;
+      color: var(--muted);
+    }
+    .timestamp {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Many Eyes Learning - Preview</h1>
+
+  <!-- 00: Title -->
+  <div class="segment ready">
+    <h2>00 - Title <span class="status ready">READY</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/00-title.png?ts=1771976703223" alt="Title" class="thumbnail">
+      </div>
+      <div class="right">
+        <p><strong>Duration:</strong> 5 seconds</p>
+        <p><strong>Audio:</strong> Intro music (first 5s, 0.5s fade-out)</p>
+        <video controls src="clips/00-title.mp4?ts=1771976703223"></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01: Hook -->
+  <div class="segment partial">
+    <h2>01 - Hook <span class="status partial">TTS READY</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/01-hook.png?ts=1771976703223" alt="Hook" class="thumbnail">
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (24.2s)</h3>
+          <p>What if your AI could learn from experiences it never had. When rewards are rare, a single explorer often misses them entirely. Many Eyes Learning puts multiple scouts on the same problem. Each explores differently, but they all share what they find. The result, five scouts achieved sixty percent success, while a single scout got zero.</p>
+        </div>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>What if your AI could learn from experiences it never had? When rewards are rare, a single explorer often misses them entirely. Many eyes learning puts multiple scouts on the same problem. Each explores differently, but they all share what they find. The result, five scouts achieved 60% success while a single scout got zero.</p>
+        </div>
+        <audio controls src="audio/01-hook.wav?ts=1771976703223"></audio>
+        <div class="placeholder">Video player: awaiting composited clip</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02: Overview -->
+  <div class="segment partial">
+    <h2>02 - Overview <span class="status partial">TTS READY</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/02-overview.png?ts=1771976703223" alt="Overview" class="thumbnail">
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (24.3s)</h3>
+          <p>The core idea is simple. Instead of one agent exploring alone, we use multiple scouts with different strategies. Random scouts explore everywhere. Epsilon greedy scouts balance exploration and exploitation. Curious scouts seek novel states. Optimistic scouts assume unknown areas have high value. Together, they cover more ground and find rare rewards that a single explorer would miss.</p>
+        </div>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>The core idea is simple. Instead of one agent exploring alone, we use multiple scouts with different strategies. Random scouts explore everywhere, epsilon greedy scouts, balance exploration and exploitation. Curious scouts seek novel states. Optimistic scouts assume unknown areas have high value, together they cover more ground and find rare rewards that a single explorer would miss.</p>
+        </div>
+        <audio controls src="audio/02-overview.wav?ts=1771976703223"></audio>
+        <div class="placeholder">Video player: awaiting composited clip</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03: Architecture -->
+  <div class="segment partial">
+    <h2>03 - Architecture <span class="status partial">TTS READY</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/03-architecture.png?ts=1771976703223" alt="Architecture" class="thumbnail">
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (22.4s)</h3>
+          <p>Here is how the system works. Each scout explores the environment and collects trajectories, states, actions, rewards, and outcomes. These experiences flow into a shared pool. A single learner, a DQN with target network, trains on the aggregated data. The updated policy can then flow back to the scouts, improving their exploration over time.</p>
+        </div>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>Here is how the system works. Each scout explores the environment and collects trajectories, states, actions, rewards, and outcomes. These experiences flow to a shared pool, a single learner, a DQN with target network, trains on the aggregated data. The updated policy can then flow back to the scouts, improving their exploration over time.</p>
+        </div>
+        <audio controls src="audio/03-architecture.wav?ts=1771976703223"></audio>
+        <div class="placeholder">Video player: awaiting composited clip</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04: Demo Part 1 -->
+  <div class="segment partial">
+    <h2>04a - Web UI Demo (Part 1) <span class="status partial">TTS READY</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/04a-intro.png?ts=1771976703223" alt="Demo Intro" class="thumbnail">
+        <p style="font-size: 12px; color: #888; margin-top: 10px;">
+          <strong>Structure:</strong> Intro slide (11.7s) + OBS (16.9s) = 28.6s<br>
+          5 parallel scouts, speed slider demo, 94% success
+        </p>
+        <video controls src="obs/04-demo-raw.mp4?ts=1771976703223"></video>
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (28.6s)</h3>
+          <p>Here is the web interface with five scouts training in parallel. Each grid shows a different scout exploring from start to goal. Watch as I speed up the training. The heatmaps show where each scout visits most. As learning progresses, policy arrows appear pointing toward the goal. The learning curve tracks average steps, dropping as scouts get more efficient. After fifty episodes, we hit ninety four percent success.</p>
+        </div>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>Here is the web interface with five scouts training in parallel. Each grid shows a different scout exploring from start to goal. Watch, as I speed up the training, the heat maps show where each scout visits most, as learning progresses policy arrows appear pointing toward the goal. The learning curve tracks average steps, dropping as scouts get more efficient. After 50 episodes, we hit 94% success.</p>
+        </div>
+        <audio controls src="audio/04-demo.wav?ts=1771976703223"></audio>
+        <div class="placeholder">Video: Intro slide (11.7s) then OBS scaled to 1920x1080</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04b: Demo Part 2 -->
+  <div class="segment partial">
+    <h2>04b - Web UI Demo (Part 2) <span class="status partial">TTS READY</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/04b-intro.png?ts=1771976703223" alt="Demo Part 2 Intro" class="thumbnail">
+        <p style="font-size: 12px; color: #888; margin-top: 10px;">
+          <strong>Structure:</strong> Intro slide (10s) + OBS (34.8s) = 44.8s<br>
+          9 scouts, 6x6 grid, 70 episodes, 93.3% success
+        </p>
+        <video controls src="obs/04b-demo2-raw.mp4?ts=1771976703223"></video>
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (44.8s - extended)</h3>
+          <p>Now let us scale up the experiment. Can we handle a harder problem with more scouts. I will increase the scouts from five to nine, expand the grid from five by five to six by six, and run for seventy episodes instead of fifty. Watch as I adjust these settings in the control panel. When I start training, notice how the nine scout grids fill the display. I will drag the speed slider to accelerate the simulation. As the scouts explore, their heatmaps build up showing different coverage patterns. The learning curve drops as they discover efficient paths. With nine scouts exploring a larger grid, they still reach over ninety three percent success. More eyes means better coverage, even as the problem gets harder.</p>
+        </div>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>Now let us scale up the experiment. Can we handle a harder problem with more scouts? I will increase the scouts from 5 to 9, expand the grid from 5 by 5 to 6 by 6, and run for 70 episodes instead of 50. Watch as I adjust these settings in the control panel. When I start training, notice how the 9 scout grids fill the display. I will drag the speed slider to accelerate the simulation. As the scouts explore, their heat maps build up showing different coverage patterns. The learning curve drops as they discover efficient paths. With 9 scouts exploring a larger grid, they still reach over 93% success. More eyes means better coverage even as the problem gets harder.</p>
+        </div>
+        <audio controls src="audio/04b-demo2.wav?ts=1771976703223"></audio>
+        <div class="placeholder">Video: Intro slide (10s) then OBS scaled to 1920x1080</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05: Summary -->
+  <div class="segment partial">
+    <h2>05 - Summary <span class="status partial">TTS READY</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/05-summary.png?ts=1771976703223" alt="Summary" class="thumbnail">
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (18.6s)</h3>
+          <p>Since this recording, more enhancements have been made to the user interface and how scouts make their decisions. The visualization is cleaner, and you can see more detail about each scout strategy. Check the blog post at software wrighter lab for the latest updates and deeper explanations of the many eyes approach.</p>
+        </div>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>Since this recording, more enhancements have been made to the user interface and how scouts make their decisions. The visualization is cleaner and you can see more detail about each scout strategy. Check the blog post at Software Writer Lab for the latest updates and deeper explanations of the Many Eyes approach.</p>
+        </div>
+        <audio controls src="audio/05-summary.wav?ts=1771976703223"></audio>
+        <div class="placeholder">Video: Summary slide with narration</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 99: CTA -->
+  <div class="segment partial">
+    <h2>99 - Call to Action <span class="status partial">TTS READY</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/99-cta.png?ts=1771976703223" alt="CTA" class="thumbnail">
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (21.6s)</h3>
+          <p>The results speak for themselves. A single scout learning alone achieved zero percent success on this task. But with five scouts sharing their experiences, success jumped to sixty percent. The code is available on GitHub. Try running the experiments yourself. If you found this useful, like and subscribe for more explorations of AI and reinforcement learning.</p>
+        </div>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>The results speak for themselves. A single scout learning alone achieved 0% success on this task, but with five scouts sharing their experiences, success jumped to 60%. The code is available on GitHub. Try running the experiments yourself. If you found this useful, like and subscribe for more explorations of AI and reinforcement learning.</p>
+        </div>
+        <audio controls src="audio/99-cta.wav?ts=1771976703223"></audio>
+        <div class="placeholder">Video player: awaiting composited clip</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 99b: Epilog -->
+  <div class="segment ready">
+    <h2>99b - Epilog <span class="status ready">READY</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/99b-epilog-frame.png?ts=1771976703223" alt="Epilog" class="thumbnail">
+      </div>
+      <div class="right">
+        <p><strong>Source:</strong> Copied from cli-midi-rs-plugins</p>
+        <p><strong>Content:</strong> Pre-built epilog with narration</p>
+        <video controls src="clips/99b-epilog.mp4?ts=1771976703223"></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- 99c: Epilog Extension -->
+  <div class="segment ready">
+    <h2>99c - Epilog Extension <span class="status ready">READY</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/99b-epilog-frame.png?ts=1771976703223" alt="Epilog Extension" class="thumbnail">
+      </div>
+      <div class="right">
+        <p><strong>Duration:</strong> 7 seconds</p>
+        <p><strong>Audio:</strong> Last 7s of intro music (offset 4-11), fade-out last 0.5s</p>
+        <video controls src="clips/99c-epilog-ext.mp4?ts=1771976703223"></video>
+      </div>
+    </div>
+  </div>
+
+  <p class="timestamp">Generated: 2026-02-24 | Cache bust: ?ts=1771976703223</p>
+</body>
+</html>

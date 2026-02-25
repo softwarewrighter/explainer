@@ -1,0 +1,40 @@
+What if your AI could learn from experiences it never had? When rewards are rare, a single explorer often misses them entirely. Many Eyes Learning solves this with multiple scouts sharing their discoveries.
+
+In this video:
+- The sparse reward problem in reinforcement learning
+- How multiple scouts with different strategies cover more ground
+- Architecture: scouts explore, experiences pool, DQN learns
+- Live demo: 5 scouts achieving 94% success
+- Scaling up: 9 scouts on a 6x6 grid with 93% success
+- Why diversity beats repetition in exploration
+
+Scout strategies shown:
+- Random scouts: explore everywhere
+- Epsilon-greedy scouts: balance exploration and exploitation
+- Curious scouts: seek novel states
+- Optimistic scouts: assume unknown areas have high value
+
+The results speak for themselves. A single scout got zero percent success on this task. Five scouts sharing experiences jumped to sixty percent.
+
+Source Code: https://github.com/softwarewrighter/many-eyes-learning
+
+---
+
+Chapters:
+0:00 Introduction
+0:05 The Problem: Sparse Rewards
+0:29 Overview: Multi-Scout Approach
+0:54 System Architecture
+1:16 Demo Part 1: Five Scouts Training
+1:45 Demo Part 2: Scaling to Nine Scouts
+2:30 Recent Enhancements
+2:49 Call to Action
+3:10 Outro
+
+---
+
+Discord: https://discord.com/invite/Ctzk5uHggZ
+GitHub: https://github.com/softwarewrighter
+YouTube: https://www.youtube.com/@SoftwareWrighter
+
+#VibeCoding #MachineLearning #Rust #YewFramework

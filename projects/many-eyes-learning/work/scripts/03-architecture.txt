@@ -1,0 +1,1 @@
+Here is how the system works. Each scout explores the environment and collects trajectories, states, actions, rewards, and outcomes. These experiences flow into a shared pool. A single learner, a DQN with target network, trains on the aggregated data. The updated policy can then flow back to the scouts, improving their exploration over time.

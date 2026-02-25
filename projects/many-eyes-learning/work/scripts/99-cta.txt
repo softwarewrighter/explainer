@@ -1,0 +1,1 @@
+The results speak for themselves. A single scout learning alone achieved zero percent success on this task. But with five scouts sharing their experiences, success jumped to sixty percent. The code is available on GitHub. Try running the experiments yourself. If you found this useful, like and subscribe for more explorations of AI and reinforcement learning.

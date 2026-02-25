@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%">
+      <stop offset="0%" style="stop-color:#0d0221"/>
+      <stop offset="100%" style="stop-color:#150734"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="84"
+        font-weight="bold" fill="#01cdfe" text-anchor="middle">
+    The Many Eyes Approach
+  </text>
+
+  <!-- Single Explorer Box -->
+  <rect x="100" y="180" width="700" height="380" rx="16"
+        fill="#0a0a1a" stroke="#ff6b6b" stroke-width="6"/>
+  <text x="450" y="250" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#ff6b6b" text-anchor="middle">
+    Single Explorer
+  </text>
+  <text x="450" y="320" font-family="Arial, sans-serif" font-size="36"
+        fill="#aaa" text-anchor="middle">
+    One agent exploring alone
+  </text>
+  <text x="450" y="380" font-family="Arial, sans-serif" font-size="36"
+        fill="#aaa" text-anchor="middle">
+    Misses rare rewards
+  </text>
+  <text x="450" y="440" font-family="Arial, sans-serif" font-size="36"
+        fill="#aaa" text-anchor="middle">
+    Gets stuck in local patterns
+  </text>
+  <text x="450" y="520" font-family="Arial, sans-serif" font-size="56"
+        font-weight="bold" fill="#ff6b6b" text-anchor="middle">
+    0% success rate
+  </text>
+
+  <!-- Many Eyes Box -->
+  <rect x="1120" y="180" width="700" height="380" rx="16"
+        fill="#0a0a1a" stroke="#05ffa1" stroke-width="6"/>
+  <text x="1470" y="250" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#05ffa1" text-anchor="middle">
+    Many Eyes
+  </text>
+  <text x="1470" y="320" font-family="Arial, sans-serif" font-size="36"
+        fill="#aaa" text-anchor="middle">
+    Multiple scouts exploring
+  </text>
+  <text x="1470" y="380" font-family="Arial, sans-serif" font-size="36"
+        fill="#aaa" text-anchor="middle">
+    Share discoveries
+  </text>
+  <text x="1470" y="440" font-family="Arial, sans-serif" font-size="36"
+        fill="#aaa" text-anchor="middle">
+    Diverse strategies
+  </text>
+  <text x="1470" y="520" font-family="Arial, sans-serif" font-size="56"
+        font-weight="bold" fill="#05ffa1" text-anchor="middle">
+    60% success rate
+  </text>
+
+  <!-- Arrow between boxes -->
+  <polygon points="850,370 900,340 900,400" fill="#ff71ce"/>
+  <line x1="800" y1="370" x2="900" y2="370" stroke="#ff71ce" stroke-width="6"/>
+  <polygon points="1070,370 1020,340 1020,400" fill="#ff71ce"/>
+  <line x1="1020" y1="370" x2="1120" y2="370" stroke="#ff71ce" stroke-width="6"/>
+
+  <!-- Scout types -->
+  <rect x="100" y="620" width="1620" height="280" rx="16"
+        fill="#0a0a1a" stroke="#b967ff" stroke-width="6"/>
+  <text x="160" y="700" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#b967ff">
+    Scout Strategies
+  </text>
+  <text x="160" y="780" font-family="Arial, sans-serif" font-size="42" fill="#eee">
+    Random, Epsilon Greedy, Curious, Optimistic
+  </text>
+  <text x="160" y="860" font-family="Arial, sans-serif" font-size="36" fill="#aaa">
+    Each explores differently, all share what they find with the learner
+  </text>
+
+  <!-- Avatar safe zone (bottom right 220x220) -->
+</svg>

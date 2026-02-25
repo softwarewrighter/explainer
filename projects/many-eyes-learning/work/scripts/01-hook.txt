@@ -1,0 +1,1 @@
+What if your AI could learn from experiences it never had. When rewards are rare, a single explorer often misses them entirely. Many Eyes Learning puts multiple scouts on the same problem. Each explores differently, but they all share what they find. The result, five scouts achieved sixty percent success, while a single scout got zero.

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0221"/>
+      <stop offset="100%" style="stop-color:#150734"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Results summary -->
+  <text x="960" y="180" font-family="Arial, sans-serif" font-size="72"
+        font-weight="bold" fill="#01cdfe" text-anchor="middle">
+    Results
+  </text>
+
+  <!-- Results table -->
+  <rect x="300" y="240" width="1320" height="380" rx="16"
+        fill="#0a0a1a" stroke="#05ffa1" stroke-width="6"/>
+
+  <text x="500" y="320" font-family="Arial, sans-serif" font-size="42"
+        fill="#aaa" text-anchor="middle">Method</text>
+  <text x="1100" y="320" font-family="Arial, sans-serif" font-size="42"
+        fill="#aaa" text-anchor="middle">Success Rate</text>
+
+  <line x1="320" y1="350" x2="1600" y2="350" stroke="#333" stroke-width="2"/>
+
+  <text x="500" y="410" font-family="Arial, sans-serif" font-size="42"
+        fill="#ff6b6b" text-anchor="middle">Random baseline</text>
+  <text x="1100" y="410" font-family="Arial, sans-serif" font-size="42"
+        fill="#ff6b6b" text-anchor="middle">9%</text>
+
+  <text x="500" y="470" font-family="Arial, sans-serif" font-size="42"
+        fill="#ff6b6b" text-anchor="middle">Single scout</text>
+  <text x="1100" y="470" font-family="Arial, sans-serif" font-size="42"
+        fill="#ff6b6b" text-anchor="middle">0%</text>
+
+  <text x="500" y="530" font-family="Arial, sans-serif" font-size="42"
+        fill="#05ffa1" text-anchor="middle">Many eyes (3)</text>
+  <text x="1100" y="530" font-family="Arial, sans-serif" font-size="42"
+        fill="#05ffa1" text-anchor="middle">40%</text>
+
+  <text x="500" y="590" font-family="Arial, sans-serif" font-size="42"
+        fill="#05ffa1" text-anchor="middle">Many eyes (5)</text>
+  <text x="1100" y="590" font-family="Arial, sans-serif" font-size="42"
+        fill="#05ffa1" text-anchor="middle">60%</text>
+
+  <!-- CTA -->
+  <text x="960" y="720" font-family="Arial, sans-serif" font-size="56"
+        font-weight="bold" fill="#ff71ce" text-anchor="middle">
+    Try it yourself
+  </text>
+
+  <text x="960" y="800" font-family="Arial, sans-serif" font-size="42"
+        fill="#eee" text-anchor="middle">
+    github.com/softwarewrighter/many-eyes-learning
+  </text>
+
+  <text x="960" y="880" font-family="Arial, sans-serif" font-size="36"
+        fill="#aaa" text-anchor="middle">
+    Like and subscribe for more AI exploration
+  </text>
+
+  <!-- Avatar safe zone (bottom right 220x220) -->
+</svg>

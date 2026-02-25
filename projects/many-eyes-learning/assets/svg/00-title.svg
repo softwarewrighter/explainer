@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Transparent background - will be composited over video/image later -->
+  <rect width="1920" height="1080" fill="none"/>
+
+  <!-- Many Eyes Learning - top line -->
+  <text x="960" y="420" font-family="Arial Black, Arial, sans-serif" font-size="120"
+        font-weight="900" fill="#C0C0C0" stroke="#0066CC" stroke-width="6"
+        text-anchor="middle" filter="url(#glow)">
+    Many Eyes Learning
+  </text>
+
+  <!-- Improved - second line -->
+  <text x="960" y="580" font-family="Arial Black, Arial, sans-serif" font-size="120"
+        font-weight="900" fill="#C0C0C0" stroke="#0066CC" stroke-width="6"
+        text-anchor="middle" filter="url(#glow)">
+    Improved
+  </text>
+</svg>

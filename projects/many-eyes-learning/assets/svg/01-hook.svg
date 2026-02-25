@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0221"/>
+      <stop offset="100%" style="stop-color:#150734"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Hook question -->
+  <text x="960" y="200" font-family="Arial, sans-serif" font-size="72"
+        font-weight="bold" fill="#01cdfe" text-anchor="middle">
+    What if your AI could learn
+  </text>
+  <text x="960" y="290" font-family="Arial, sans-serif" font-size="72"
+        font-weight="bold" fill="#01cdfe" text-anchor="middle">
+    from experiences it never had?
+  </text>
+
+  <!-- Grid world illustration (simplified) -->
+  <rect x="700" y="380" width="520" height="320" rx="8"
+        fill="none" stroke="#333" stroke-width="4"/>
+
+  <!-- START label -->
+  <rect x="710" y="390" width="80" height="50" fill="#05ffa1" rx="4"/>
+  <text x="750" y="425" font-family="Arial, sans-serif" font-size="24"
+        font-weight="bold" fill="#000" text-anchor="middle">START</text>
+
+  <!-- GOAL label -->
+  <rect x="1130" y="640" width="80" height="50" fill="#ff71ce" rx="4"/>
+  <text x="1170" y="675" font-family="Arial, sans-serif" font-size="24"
+        font-weight="bold" fill="#000" text-anchor="middle">GOAL</text>
+
+  <!-- Scout dots -->
+  <circle cx="800" cy="450" r="15" fill="#ff9f1c"/>
+  <circle cx="850" cy="500" r="15" fill="#b967ff"/>
+  <circle cx="900" cy="480" r="15" fill="#05ffa1"/>
+  <circle cx="870" cy="550" r="15" fill="#01cdfe"/>
+  <circle cx="920" cy="520" r="15" fill="#ff6b6b"/>
+
+  <!-- Result highlight -->
+  <text x="960" y="800" font-family="Arial, sans-serif" font-size="56"
+        font-weight="bold" fill="#05ffa1" text-anchor="middle">
+    5 scouts → 60% success
+  </text>
+  <text x="960" y="880" font-family="Arial, sans-serif" font-size="48"
+        fill="#ff6b6b" text-anchor="middle">
+    Single scout → 0% success
+  </text>
+
+  <!-- Avatar safe zone (bottom right 220x220) -->
+</svg>

@@ -1,0 +1,1 @@
+Since this recording, more enhancements have been made to the user interface and how scouts make their decisions. The visualization is cleaner, and you can see more detail about each scout strategy. Check the blog post at software wrighter lab for the latest updates and deeper explanations of the many eyes approach.
