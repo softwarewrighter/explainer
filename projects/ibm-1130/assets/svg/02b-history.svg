@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a2a4a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background - will be replaced by Ken Burns montage -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Semi-transparent overlay for text readability -->
+  <rect width="1920" height="1080" fill="#000" opacity="0.5"/>
+
+  <!-- Title banner at top -->
+  <rect x="0" y="60" width="1920" height="100" fill="#1e3a5f" opacity="0.9"/>
+  <text x="960" y="130" font-family="Arial, sans-serif" font-size="64"
+        font-weight="bold" fill="#60a5fa" text-anchor="middle">
+    The IBM 1130 Story
+  </text>
+
+  <!-- Key facts - positioned for Ken Burns overlay -->
+  <text x="100" y="300" font-family="Arial, sans-serif" font-size="72"
+        font-weight="bold" fill="#4ade80">
+    1965
+  </text>
+  <text x="280" y="300" font-family="Arial, sans-serif" font-size="48"
+        fill="#f0f0f0">
+    Breakthrough in affordable computing
+  </text>
+
+  <text x="100" y="450" font-family="Arial, sans-serif" font-size="48"
+        fill="#f0f0f0">
+    16-bit word size
+  </text>
+
+  <text x="100" y="550" font-family="Arial, sans-serif" font-size="48"
+        fill="#f0f0f0">
+    4,096 words of core memory
+  </text>
+
+  <text x="100" y="650" font-family="Arial, sans-serif" font-size="48"
+        fill="#f0f0f0">
+    Simple, powerful instruction set
+  </text>
+
+  <!-- Bottom stat -->
+  <rect x="100" y="800" width="700" height="120" rx="12"
+        fill="#1e3a5f" stroke="#4ade80" stroke-width="4"/>
+  <text x="450" y="875" font-family="Arial, sans-serif" font-size="56"
+        font-weight="bold" fill="#4ade80" text-anchor="middle">
+    10,000+ systems installed
+  </text>
+
+  <!-- Note about Ken Burns -->
+  <text x="960" y="1020" font-family="Arial, sans-serif" font-size="28"
+        fill="#666" text-anchor="middle">
+    [Ken Burns montage of historical photos - images pending]
+  </text>
+</svg>

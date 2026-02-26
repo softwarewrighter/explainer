@@ -18,8 +18,9 @@ Chapters:
 0:00 Introduction
 0:05 Hook: A Computer That Taught Generations
 0:23 Architecture Overview
-0:39 Demo Intro
-0:54 Live Demo
+0:39 The IBM 1130 Story (History)
+0:51 Demo Intro
+1:06 Live Demo
 X:XX Summary
 X:XX Call to Action
 X:XX Outro

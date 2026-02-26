@@ -155,6 +155,24 @@
     </div>
   </div>
 
+  <!-- 02b: History (Ken Burns) -->
+  <div class="segment pending">
+    <h2>02b - History <span class="status pending">NEEDS IMAGES</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/02b-history.png?ts=1772049000000" alt="History" class="thumbnail">
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (~12s)</h3>
+          <p>The IBM eleven thirty arrived in nineteen sixty five as a breakthrough in affordable computing. Universities finally had access to real computing power. Sixteen bit words, four thousand words of memory, and a powerful instruction set. Over ten thousand systems trained the next generation of programmers.</p>
+        </div>
+        <p style="margin-top: 15px;"><strong>Visual:</strong> Ken Burns montage of historical photos</p>
+        <div class="placeholder">Images: awaiting historical photos with attribution</div>
+      </div>
+    </div>
+  </div>
+
   <!-- 03: Demo Intro -->
   <div class="segment pending">
     <h2>03 - Demo Intro <span class="status pending">NEEDS TTS</span></h2>
@@ -173,26 +191,26 @@
   </div>
 
   <!-- 04: Demo (OBS) -->
-  <div class="segment pending">
-    <h2>04 - Web UI Demo <span class="status pending">AWAITING OBS</span></h2>
+  <div class="segment partial">
+    <h2>04 - Web UI Demo <span class="status partial">HAS OBS</span></h2>
     <div class="content">
       <div class="left">
-        <img src="images/screenshot.png?ts=1772046029000" alt="Demo Screenshot" class="thumbnail">
+        <img src="stills/03-demo-intro.png?ts=1772049000000" alt="Demo Intro" class="thumbnail">
         <p style="font-size: 12px; color: #888; margin-top: 10px;">
-          <strong>Source:</strong> OBS recording of live demo
+          <strong>Source:</strong> OBS recording (38.5s)
         </p>
       </div>
       <div class="right">
-        <p><strong>Structure:</strong> Intro slide + OBS recording</p>
-        <p><strong>Content:</strong></p>
-        <ul style="color: #94a3b8; font-size: 14px;">
-          <li>Walk through Challenge 1: Basic Load</li>
-          <li>Show registers updating</li>
-          <li>Challenge 2: Add two numbers</li>
-          <li>Challenge 3: Indexed addressing</li>
-          <li>Show memory-mapped index registers</li>
+        <div class="narration">
+          <h3>Narration Script (~38s)</h3>
+          <p>Watch as I assemble this program that adds two numbers. The machine code appears below, each instruction with its hex encoding. Now I step through. The accumulator loads five from address thirty. Add brings in seven from address thirty one. The result, twelve, now sits in the accumulator and the positive flag lights up. One more step stores our answer to memory. Now a more advanced example. This program demonstrates memory mapped registers. The eleven thirty stores index registers at addresses one, two, and three. Watch the memory grid highlight as values flow into these special locations. Finally, indexed addressing, the instruction loads from address fifty plus the index register, giving us the value at address one fifty.</p>
+        </div>
+        <p style="margin-top: 15px;"><strong>Examples shown:</strong></p>
+        <ul style="color: #94a3b8; font-size: 14px; margin-top: 5px;">
+          <li>Example 1: Add Two Numbers (LD, A, STO, WAIT)</li>
+          <li>Example 2: Memory-Mapped Index Registers (XR1-XR3)</li>
         </ul>
-        <div class="placeholder">Video: awaiting OBS recording</div>
+        <video controls src="obs/04-demo-raw.mp4?ts=1772049000000"></video>
       </div>
     </div>
   </div>
@@ -284,8 +302,9 @@ Chapters:
 0:00 Introduction
 0:05 Hook: A Computer That Taught Generations
 0:23 Architecture Overview
-0:39 Demo Intro
-0:54 Live Demo
+0:39 The IBM 1130 Story (History)
+0:51 Demo Intro
+1:06 Live Demo
 X:XX Summary
 X:XX Call to Action
 X:XX Outro
@@ -332,6 +351,6 @@ Music: demo-bach.wav from <a href="https://github.com/softwarewrighter/music-pip
     </div>
   </div>
 
-  <p class="timestamp">Generated: 2026-02-25 | Cache bust: ?ts=1772048000000</p>
+  <p class="timestamp">Generated: 2026-02-25 | Cache bust: ?ts=1772049600000</p>
 </body>
 </html>
