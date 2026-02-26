@@ -173,6 +173,53 @@
     </div>
   </div>
 
+  <!-- 02c: Punch Cards -->
+  <div class="segment partial">
+    <h2>02c - Punch Cards <span class="status partial">HAS OBS</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/02c-punchcards.png?ts=1772052000000" alt="Punch Cards" class="thumbnail">
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (~14s)</h3>
+          <p>This simulator also visualizes punch cards. The source card shows readable assembly, label, opcode, and operands across eighty columns. The object deck looks different. Dense binary patterns encode machine instructions using the four to three punch format the eleven thirty card reader understood.</p>
+        </div>
+        <p style="margin-top: 15px;"><strong>Cards shown:</strong></p>
+        <ul style="color: #94a3b8; font-size: 14px; margin-top: 5px;">
+          <li>Assembler Source Card: "START DC 0", 22 punches</li>
+          <li>Object Deck Card: Binary 4:3 format, 72 punches</li>
+        </ul>
+        <video controls src="obs/02c-punchcards-raw.mp4?ts=1772052000000"></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02d: Selectric Console -->
+  <div class="segment partial">
+    <h2>02d - Selectric Console <span class="status partial">HAS OBS</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/02d-selectric.png?ts=1772054000000" alt="Selectric Console" class="thumbnail">
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (~15s)</h3>
+          <p>The eleven thirty one console used an IBM Selectric as its printer. Watch this simulation type an assembler listing at fifteen characters per second. Job control cards appear first, then the listing. Each line shows statement number, address, hex object code, and source.</p>
+        </div>
+        <p style="margin-top: 15px;"><strong>Listing columns:</strong></p>
+        <ul style="color: #94a3b8; font-size: 14px; margin-top: 5px;">
+          <li>STMT: Statement number</li>
+          <li>ADDR: Hex memory address</li>
+          <li>OBJECT: Hex machine code</li>
+          <li>SOURCE STATEMENT: Assembly code</li>
+        </ul>
+        <video controls src="obs/02d-selectric-fast.mp4?ts=1772056000000"></video>
+        <p style="font-size: 12px; color: #888; margin-top: 5px;">23s (middle 55s sped up 16x with blinking FF >> X16 overlay)</p>
+      </div>
+    </div>
+  </div>
+
   <!-- 03: Demo Intro -->
   <div class="segment pending">
     <h2>03 - Demo Intro <span class="status pending">NEEDS TTS</span></h2>
@@ -287,6 +334,8 @@
 In this video:
 - The IBM 1130 minicomputer and its historical significance
 - Architecture overview: ACC, EXT, IAR, index registers, flags
+- Punch card simulator: source cards vs object deck cards
+- Selectric console printer: assembler listing at 15.5 CPS
 - Complete instruction set: LD, STO, A, S, SLA, SRA, BSC, BSI
 - Live demo walking through progressive challenges
 - Memory-mapped registers and indexed addressing
@@ -303,8 +352,10 @@ Chapters:
 0:05 Hook: A Computer That Taught Generations
 0:23 Architecture Overview
 0:39 The IBM 1130 Story (History)
-0:51 Demo Intro
-1:06 Live Demo
+0:51 Punch Card Simulator
+1:05 Selectric Console Printer
+1:20 Demo Intro
+1:35 Live Demo
 X:XX Summary
 X:XX Call to Action
 X:XX Outro
@@ -351,6 +402,6 @@ Music: demo-bach.wav from <a href="https://github.com/softwarewrighter/music-pip
     </div>
   </div>
 
-  <p class="timestamp">Generated: 2026-02-25 | Cache bust: ?ts=1772049600000</p>
+  <p class="timestamp">Generated: 2026-02-25 | Cache bust: ?ts=1772054000000</p>
 </body>
 </html>

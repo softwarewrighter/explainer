@@ -1,0 +1,1 @@
+The eleven thirty one console used an IBM Selectric as its printer. Watch this simulation type an assembler listing at fifteen characters per second. Job control cards appear first, then the listing. Each line shows statement number, address, hex object code, and source.

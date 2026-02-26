@@ -3,6 +3,8 @@ In 1965, IBM released a computer that would teach a generation how to program. T
 In this video:
 - The IBM 1130 minicomputer and its historical significance
 - Architecture overview: ACC, EXT, IAR, index registers, flags
+- Punch card simulator: source cards vs object deck cards
+- Selectric console printer: assembler listing at 15.5 CPS
 - Complete instruction set: LD, STO, A, S, SLA, SRA, BSC, BSI
 - Live demo walking through progressive challenges
 - Memory-mapped registers and indexed addressing
@@ -19,8 +21,10 @@ Chapters:
 0:05 Hook: A Computer That Taught Generations
 0:23 Architecture Overview
 0:39 The IBM 1130 Story (History)
-0:51 Demo Intro
-1:06 Live Demo
+0:51 Punch Card Simulator
+1:05 Selectric Console Printer
+1:20 Demo Intro
+1:35 Live Demo
 X:XX Summary
 X:XX Call to Action
 X:XX Outro

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a2a4a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="960" y="120" font-family="Arial, sans-serif" font-size="84"
+        font-weight="bold" fill="#60a5fa" text-anchor="middle">
+    Punch Card Simulator
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="190" font-family="Arial, sans-serif" font-size="42"
+        fill="#94a3b8" text-anchor="middle">
+    Two Card Types: Source and Object Deck
+  </text>
+
+  <!-- Source Card box -->
+  <rect x="100" y="260" width="820" height="360" rx="12"
+        fill="#0f172a" stroke="#4ade80" stroke-width="4"/>
+  <text x="510" y="330" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#4ade80" text-anchor="middle">
+    Assembler Source Card
+  </text>
+
+  <text x="150" y="400" font-family="'Courier New', monospace" font-size="32" fill="#f0f0f0">Human-readable text</text>
+  <text x="150" y="460" font-family="'Courier New', monospace" font-size="32" fill="#f0f0f0">Label, opcode, operands</text>
+  <text x="150" y="520" font-family="'Courier New', monospace" font-size="32" fill="#f0f0f0">80 columns per card</text>
+  <text x="150" y="580" font-family="'Courier New', monospace" font-size="32" fill="#94a3b8">Example: START DC 0</text>
+
+  <!-- Object Card box -->
+  <rect x="1000" y="260" width="820" height="360" rx="12"
+        fill="#0f172a" stroke="#f59e0b" stroke-width="4"/>
+  <text x="1410" y="330" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#f59e0b" text-anchor="middle">
+    Object Deck Card
+  </text>
+
+  <text x="1050" y="400" font-family="'Courier New', monospace" font-size="32" fill="#f0f0f0">Binary machine code</text>
+  <text x="1050" y="460" font-family="'Courier New', monospace" font-size="32" fill="#f0f0f0">Dense punch patterns</text>
+  <text x="1050" y="520" font-family="'Courier New', monospace" font-size="32" fill="#f0f0f0">4:3 punch format</text>
+  <text x="1050" y="580" font-family="'Courier New', monospace" font-size="32" fill="#94a3b8">72 punches per card</text>
+
+  <!-- Bottom info box -->
+  <rect x="100" y="680" width="1720" height="280" rx="12"
+        fill="#1e3a5f" stroke="#60a5fa" stroke-width="4"/>
+
+  <text x="200" y="760" font-family="Arial, sans-serif" font-size="42"
+        font-weight="bold" fill="#60a5fa">
+    How Cards Worked
+  </text>
+
+  <text x="200" y="830" font-family="Arial, sans-serif" font-size="32" fill="#f0f0f0">
+    Programmers wrote assembly source on cards, one instruction per card
+  </text>
+  <text x="200" y="880" font-family="Arial, sans-serif" font-size="32" fill="#f0f0f0">
+    The assembler read source cards and punched object deck cards
+  </text>
+  <text x="200" y="930" font-family="Arial, sans-serif" font-size="32" fill="#f0f0f0">
+    The loader read object cards to load programs into memory
+  </text>
+</svg>

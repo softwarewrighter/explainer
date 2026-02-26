@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a2a4a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="960" y="120" font-family="Arial, sans-serif" font-size="84"
+        font-weight="bold" fill="#60a5fa" text-anchor="middle">
+    IBM 1131 Console Printer
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="190" font-family="Arial, sans-serif" font-size="42"
+        fill="#94a3b8" text-anchor="middle">
+    Selectric Typewriter at 15.5 Characters Per Second
+  </text>
+
+  <!-- Simulated paper output -->
+  <rect x="200" y="250" width="1520" height="500" rx="8"
+        fill="#e8f5e9" stroke="#4ade80" stroke-width="4"/>
+
+  <!-- Green bar paper lines -->
+  <rect x="200" y="290" width="1520" height="30" fill="#c8e6c9"/>
+  <rect x="200" y="350" width="1520" height="30" fill="#c8e6c9"/>
+  <rect x="200" y="410" width="1520" height="30" fill="#c8e6c9"/>
+  <rect x="200" y="470" width="1520" height="30" fill="#c8e6c9"/>
+  <rect x="200" y="530" width="1520" height="30" fill="#c8e6c9"/>
+  <rect x="200" y="590" width="1520" height="30" fill="#c8e6c9"/>
+  <rect x="200" y="650" width="1520" height="30" fill="#c8e6c9"/>
+
+  <!-- Sample listing text -->
+  <text x="250" y="285" font-family="'Courier New', monospace" font-size="28" fill="#1a1a1a">// JOB</text>
+  <text x="250" y="315" font-family="'Courier New', monospace" font-size="28" fill="#1a1a1a">// ASM</text>
+  <text x="250" y="345" font-family="'Courier New', monospace" font-size="28" fill="#1a1a1a">*LIST</text>
+  <text x="250" y="405" font-family="'Courier New', monospace" font-size="28" fill="#1a1a1a">STMT  ADDR  OBJECT   SOURCE STATEMENT</text>
+  <text x="250" y="465" font-family="'Courier New', monospace" font-size="28" fill="#1a1a1a">  5   0100  C108     LD     COUNT</text>
+  <text x="250" y="525" font-family="'Courier New', monospace" font-size="28" fill="#1a1a1a">  6   0101  8109     A      ONE</text>
+  <text x="250" y="585" font-family="'Courier New', monospace" font-size="28" fill="#1a1a1a">  7   0102  D108     STO    COUNT</text>
+  <text x="250" y="645" font-family="'Courier New', monospace" font-size="28" fill="#1a1a1a">  8   0103  C108     LD     COUNT</text>
+  <text x="250" y="705" font-family="'Courier New', monospace" font-size="28" fill="#1a1a1a">  9   0104  110A     S      LIMIT</text>
+
+  <!-- Bottom info box -->
+  <rect x="100" y="800" width="1720" height="200" rx="12"
+        fill="#1e3a5f" stroke="#60a5fa" stroke-width="4"/>
+
+  <text x="200" y="870" font-family="Arial, sans-serif" font-size="36"
+        font-weight="bold" fill="#60a5fa">
+    Assembler Listing Format
+  </text>
+
+  <text x="200" y="930" font-family="Arial, sans-serif" font-size="32" fill="#f0f0f0">
+    STMT: Statement number | ADDR: Hex address | OBJECT: Machine code | SOURCE: Assembly
+  </text>
+</svg>
