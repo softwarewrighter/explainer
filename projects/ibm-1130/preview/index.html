@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>IBM 1130 Assembly Emulator - Preview</title>
   <style>
     :root {
@@ -37,8 +40,6 @@
       border-left: 4px solid var(--accent);
     }
     .segment.ready { border-left-color: var(--success); }
-    .segment.partial { border-left-color: var(--warning); }
-    .segment.pending { border-left-color: var(--danger); }
     .segment h2 {
       margin: 0 0 15px 0;
       color: var(--accent);
@@ -53,8 +54,6 @@
       font-weight: normal;
     }
     .status.ready { background: var(--success); color: #000; }
-    .status.partial { background: var(--warning); color: #000; }
-    .status.pending { background: var(--danger); color: #000; }
     .content {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -80,18 +79,14 @@
       margin: 0;
       font-size: 14px;
     }
+    .whisper {
+      background: #1a0a1a;
+      border-left: 3px solid var(--warning);
+    }
     audio, video {
       width: 100%;
       margin-top: 10px;
       border-radius: 8px;
-    }
-    .placeholder {
-      background: #1a1a1a;
-      border: 2px dashed #444;
-      border-radius: 8px;
-      padding: 40px;
-      text-align: center;
-      color: var(--muted);
     }
     .timestamp {
       text-align: center;
@@ -99,309 +94,338 @@
       font-size: 12px;
       margin-top: 40px;
     }
+    .note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
-  <h1>IBM 1130 Assembly Emulator - Preview</h1>
+  <h1>IBM 1130 Assembly Emulator - Preview (4:45)</h1>
+
+  <!-- Full Preview Video -->
+  <div class="segment ready">
+    <h2>Full Preview <span class="status ready">285s</span></h2>
+    <video controls src="preview.mp4?ts=1772169502000"></video>
+  </div>
 
   <!-- 00: Title -->
   <div class="segment ready">
     <h2>00 - Title <span class="status ready">READY</span></h2>
     <div class="content">
       <div class="left">
-        <img src="stills/00-title.png?ts=1772048000000" alt="Title" class="thumbnail">
+        <img src="stills/00-title.png?ts=1772169502000" alt="Title" class="thumbnail">
       </div>
       <div class="right">
         <p><strong>Duration:</strong> 5 seconds</p>
         <p><strong>Audio:</strong> demo-bach.wav (5s, 0.5s fade-out)</p>
         <p><strong>Background:</strong> IBM 1442/1131 photo</p>
-        <p style="font-size: 12px; color: #888;">Credit: BadgersCP, CC0, via Wikimedia Commons</p>
-        <video controls src="clips/00-title.mp4?ts=1772048000000"></video>
+        <p class="note">Credit: BadgersCP, CC0, via Wikimedia Commons</p>
+        <video controls src="clips/00-title.mp4?ts=1772169502000"></video>
       </div>
     </div>
   </div>
 
   <!-- 01: Hook -->
-  <div class="segment pending">
-    <h2>01 - Hook <span class="status pending">NEEDS TTS</span></h2>
+  <div class="segment ready">
+    <h2>01 - Hook <span class="status ready">15.4s</span></h2>
     <div class="content">
       <div class="left">
-        <img src="stills/01-hook.png?ts=1772046029000" alt="Hook" class="thumbnail">
+        <img src="stills/01-hook.png?ts=1772169502000" alt="Hook" class="thumbnail">
       </div>
       <div class="right">
         <div class="narration">
-          <h3>Narration Script (~18s)</h3>
+          <h3>Narration Script (15.4s)</h3>
           <p>In nineteen sixty five, IBM released a computer that would teach a generation how to program. The IBM eleven thirty was small enough for universities, powerful enough for real science. Now you can learn its assembly language right in your browser, the same way students did sixty years ago.</p>
         </div>
-        <div class="placeholder">Audio: awaiting TTS</div>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>In 1965, IBM released a computer that would teach a generation how to program. The IBM 1130 was small enough for universities, powerful enough for real science. Now you can learn its assembly language right in your browser, the same way students did 60 years ago.</p>
+        </div>
+        <audio controls src="audio/01-hook.wav?ts=1772169502000"></audio>
+        <video controls src="clips/01-hook.mp4?ts=1772169502000"></video>
       </div>
     </div>
   </div>
 
   <!-- 02: Overview -->
-  <div class="segment pending">
-    <h2>02 - Overview <span class="status pending">NEEDS TTS</span></h2>
+  <div class="segment ready">
+    <h2>02 - Overview (General Intro) <span class="status ready">19.2s</span></h2>
     <div class="content">
       <div class="left">
-        <img src="stills/02-overview.png?ts=1772046029000" alt="Overview" class="thumbnail">
+        <img src="stills/02-overview.png?ts=1772169502000" alt="Overview" class="thumbnail">
       </div>
       <div class="right">
         <div class="narration">
-          <h3>Narration Script (~16s)</h3>
+          <h3>Narration Script (19.2s)</h3>
           <p>The eleven thirty uses sixteen bit words and a simple register set. The accumulator holds your working value. Index registers let you loop through memory. Load, store, add, shift, branch. These instructions built scientific applications across hundreds of campuses.</p>
         </div>
-        <div class="placeholder">Audio: awaiting TTS</div>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>The 1130 uses 16-bit words and a simple register set. The accumulator holds your working value. Index registers let you loop through memory. Load, store, add, shift, branch. These instructions built scientific applications across hundreds of campuses.</p>
+        </div>
+        <audio controls src="audio/02-overview.wav?ts=1772169502000"></audio>
+        <video controls src="clips/02-overview.mp4?ts=1772169502000"></video>
       </div>
     </div>
   </div>
 
-  <!-- 02b: History (Ken Burns) -->
-  <div class="segment pending">
-    <h2>02b - History <span class="status pending">NEEDS IMAGES</span></h2>
+  <!-- 02b: History -->
+  <div class="segment ready">
+    <h2>02b - History <span class="status ready">18.5s</span></h2>
     <div class="content">
       <div class="left">
-        <img src="stills/02b-history.png?ts=1772049000000" alt="History" class="thumbnail">
+        <img src="stills/02b-history.png?ts=1772169502000" alt="History" class="thumbnail">
       </div>
       <div class="right">
         <div class="narration">
-          <h3>Narration Script (~12s)</h3>
+          <h3>Narration Script (18.5s)</h3>
           <p>The IBM eleven thirty arrived in nineteen sixty five as a breakthrough in affordable computing. Universities finally had access to real computing power. Sixteen bit words, four thousand words of memory, and a powerful instruction set. Over ten thousand systems trained the next generation of programmers.</p>
         </div>
-        <p style="margin-top: 15px;"><strong>Visual:</strong> Ken Burns montage of historical photos</p>
-        <div class="placeholder">Images: awaiting historical photos with attribution</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 02c: Punch Cards -->
-  <div class="segment partial">
-    <h2>02c - Punch Cards <span class="status partial">HAS OBS</span></h2>
-    <div class="content">
-      <div class="left">
-        <img src="stills/02c-punchcards.png?ts=1772052000000" alt="Punch Cards" class="thumbnail">
-      </div>
-      <div class="right">
-        <div class="narration">
-          <h3>Narration Script (~14s)</h3>
-          <p>This simulator also visualizes punch cards. The source card shows readable assembly, label, opcode, and operands across eighty columns. The object deck looks different. Dense binary patterns encode machine instructions using the four to three punch format the eleven thirty card reader understood.</p>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>The IBM 1130 arrived in 1965 as a breakthrough in affordable computing. Universities finally had access to real computing power, 16-bit words, 4,000 words of memory, and a powerful instruction set over 10,000 systems trained the next generation of programmers.</p>
         </div>
-        <p style="margin-top: 15px;"><strong>Cards shown:</strong></p>
-        <ul style="color: #94a3b8; font-size: 14px; margin-top: 5px;">
-          <li>Assembler Source Card: "START DC 0", 22 punches</li>
-          <li>Object Deck Card: Binary 4:3 format, 72 punches</li>
-        </ul>
-        <video controls src="obs/02c-punchcards-raw.mp4?ts=1772052000000"></video>
+        <audio controls src="audio/02b-history.wav?ts=1772169502000"></audio>
+        <video controls src="clips/02b-history.mp4?ts=1772169502000"></video>
       </div>
     </div>
   </div>
 
-  <!-- 02d: Selectric Console -->
-  <div class="segment partial">
-    <h2>02d - Selectric Console <span class="status partial">HAS OBS</span></h2>
+  <!-- 02c: Keypunch -->
+  <div class="segment ready">
+    <h2>02c - IBM 029 Keypunch <span class="status ready">18.6s</span></h2>
     <div class="content">
       <div class="left">
-        <img src="stills/02d-selectric.png?ts=1772054000000" alt="Selectric Console" class="thumbnail">
+        <img src="stills/02c-punchcards.png?ts=1772169502000" alt="Keypunch" class="thumbnail">
+        <p class="note"><strong>Structure:</strong> OBS demo showing typing "IBM 1130 IN RUST" with punch holes appearing</p>
       </div>
       <div class="right">
         <div class="narration">
-          <h3>Narration Script (~15s)</h3>
+          <h3>Narration Script (18.4s)</h3>
+          <p>The simulator includes an IBM zero twenty nine keypunch. Watch as I type on the virtual keyboard. Each character creates a unique pattern of rectangular holes in the card. The eleven thirty read these patterns to load programs and data. Cards held up to eighty columns of information, one character per column.</p>
+        </div>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>The simulator includes an IBM 029 key punch. Watch as I type on the virtual keyboard, each character creates a unique pattern of rectangular holes in the card. The 1130 read these patterns to load programs and data. Cards held up to 80 columns of information, one character per column.</p>
+        </div>
+        <audio controls src="audio/02c-punchcards.wav?ts=1772169502000"></audio>
+        <video controls src="clips/02c-punchcards.mp4?ts=1772169502000"></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02d: Selectric Printer -->
+  <div class="segment ready">
+    <h2>02d - Selectric Printer (Intro + OBS) <span class="status ready">30.8s</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/02d-selectric.png?ts=1772169502000" alt="Selectric" class="thumbnail">
+        <p class="note"><strong>Structure:</strong> 5s OBS audio + FF X4 middle with narration + 5s OBS audio</p>
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (20.8s)</h3>
           <p>The eleven thirty one console used an IBM Selectric as its printer. Watch this simulation type an assembler listing at fifteen characters per second. Job control cards appear first, then the listing. Each line shows statement number, address, hex object code, and source.</p>
         </div>
-        <p style="margin-top: 15px;"><strong>Listing columns:</strong></p>
-        <ul style="color: #94a3b8; font-size: 14px; margin-top: 5px;">
-          <li>STMT: Statement number</li>
-          <li>ADDR: Hex memory address</li>
-          <li>OBJECT: Hex machine code</li>
-          <li>SOURCE STATEMENT: Assembly code</li>
-        </ul>
-        <video controls src="obs/02d-selectric-fast.mp4?ts=1772056000000"></video>
-        <p style="font-size: 12px; color: #888; margin-top: 5px;">23s (middle 55s sped up 16x with blinking FF >> X16 overlay)</p>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>The 1131 console used an IBM Selectric as its printer. Watch this simulation type and assembler listing at 15 characters per second. Job control cards appear first, then the listing. Each line shows statement number, address, hex, object code, and source.</p>
+        </div>
+        <audio controls src="audio/02d-selectric.wav?ts=1772169502000"></audio>
+        <video controls src="clips/02d-selectric.mp4?ts=1772169502000"></video>
       </div>
     </div>
   </div>
 
   <!-- 03: Demo Intro -->
-  <div class="segment pending">
-    <h2>03 - Demo Intro <span class="status pending">NEEDS TTS</span></h2>
+  <div class="segment ready">
+    <h2>03 - Demo Intro <span class="status ready">19.4s</span></h2>
     <div class="content">
       <div class="left">
-        <img src="stills/03-demo-intro.png?ts=1772046029000" alt="Demo Intro" class="thumbnail">
+        <img src="stills/03-demo-intro.png?ts=1772169502000" alt="Demo Intro" class="thumbnail">
       </div>
       <div class="right">
         <div class="narration">
-          <h3>Narration Script (~15s)</h3>
+          <h3>Narration Script (19.4s)</h3>
           <p>Here is the web interface. On the left you see CPU registers and memory. In the center, you write assembly code. On the right, challenges guide you through the instruction set. Watch as I work through a few examples, starting with basic loads and building up to indexed addressing.</p>
         </div>
-        <div class="placeholder">Audio: awaiting TTS</div>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>Here's the web interface. On the left, you see CPU registers and memory. In center, you write assembly code. On the right, challenges guide you through the instruction set. Watch as I work through a few examples, starting with basic loads and building up to indexed addressing.</p>
+        </div>
+        <audio controls src="audio/03-demo-intro.wav?ts=1772169502000"></audio>
+        <video controls src="clips/03-demo-intro.mp4?ts=1772169502000"></video>
       </div>
     </div>
   </div>
 
-  <!-- 04: Demo (OBS) -->
-  <div class="segment partial">
-    <h2>04 - Web UI Demo <span class="status partial">HAS OBS</span></h2>
+  <!-- 04: Assembler Game Demo -->
+  <div class="segment ready">
+    <h2>04 - Assembler Game Demo <span class="status ready">48.0s</span></h2>
     <div class="content">
       <div class="left">
-        <img src="stills/03-demo-intro.png?ts=1772049000000" alt="Demo Intro" class="thumbnail">
-        <p style="font-size: 12px; color: #888; margin-top: 10px;">
-          <strong>Source:</strong> OBS recording (38.5s)
-        </p>
+        <img src="stills/03-demo-intro.png?ts=1772169502000" alt="Demo" class="thumbnail">
+        <p class="note"><strong>Structure:</strong> Part 1 (8s + 14.5s freeze) + Part 2 (11s + 14.5s freeze)</p>
       </div>
       <div class="right">
         <div class="narration">
-          <h3>Narration Script (~38s)</h3>
+          <h3>Narration Script (48.0s)</h3>
           <p>Watch as I assemble this program that adds two numbers. The machine code appears below, each instruction with its hex encoding. Now I step through. The accumulator loads five from address thirty. Add brings in seven from address thirty one. The result, twelve, now sits in the accumulator and the positive flag lights up. One more step stores our answer to memory. Now a more advanced example. This program demonstrates memory mapped registers. The eleven thirty stores index registers at addresses one, two, and three. Watch the memory grid highlight as values flow into these special locations. Finally, indexed addressing, the instruction loads from address fifty plus the index register, giving us the value at address one fifty.</p>
         </div>
-        <p style="margin-top: 15px;"><strong>Examples shown:</strong></p>
-        <ul style="color: #94a3b8; font-size: 14px; margin-top: 5px;">
-          <li>Example 1: Add Two Numbers (LD, A, STO, WAIT)</li>
-          <li>Example 2: Memory-Mapped Index Registers (XR1-XR3)</li>
-        </ul>
-        <video controls src="obs/04-demo-raw.mp4?ts=1772049000000"></video>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>Watch as I assemble this program that adds two numbers. The machine code appears below, each instruction with its hex encoding. Now I step through. The accumulator loads five from address 30. Add brings in seven from address 31. The result, 12, now sits in the accumulator and the positive flag lights up. One more step stores our answer to memory. Now a more advanced example. This program demonstrates memory mapped registers. 30 stores index registers at addresses 1, 2, and 3. Watch the memory grid highlight as values flow into these special locations. Finally, index addressing the instruction loads from address 50 plus the index register, giving us the value at address 150.</p>
+        </div>
+        <audio controls src="audio/04-demo.wav?ts=1772169502000"></audio>
+        <video controls src="clips/04-demo.mp4?ts=1772169502000"></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04c: Console Mode Knob -->
+  <div class="segment ready">
+    <h2>04c - Console: Mode Knob <span class="status ready">17.2s</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/04c-knob.png?ts=1772169502000" alt="Mode Knob" class="thumbnail">
+        <p class="note"><strong>Structure:</strong> 9.2s intro slide + 8s OBS demo</p>
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (17.0s)</h3>
+          <p>The mode selector knob controls execution speed. Turn it to single instruction, single phase, or single cycle to watch registers change step by step. Engineers used this to trace program flow, verify timing, and diagnose hardware faults.</p>
+        </div>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>The mode selector knob controls execution speed. Turn it to single instruction, single phase, or single cycle to watch registers change step by step. Engineers use this to trace program flow, verify timing, and diagnose hardware faults.</p>
+        </div>
+        <audio controls src="audio/04c-knob.wav?ts=1772169502000"></audio>
+        <video controls src="clips/04c-knob.mp4?ts=1772169502000"></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04b: Console Toggle Switches -->
+  <div class="segment ready">
+    <h2>04b - Console: Toggle Switches <span class="status ready">23.1s</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/04b-toggles.png?ts=1772169502000" alt="Toggle Switches" class="thumbnail">
+        <p class="note"><strong>Structure:</strong> 8s intro slide + 15s OBS demo</p>
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (22.9s)</h3>
+          <p>The console toggle switches let you enter sixteen bit values directly into memory or registers. Flip each switch up for one, down for zero. Engineers used these switches constantly, for bootstrapping the system, loading test patterns, and debugging hardware faults. When disk or tape failed, toggle switches were often the only way to get the machine running again.</p>
+        </div>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>The console toggle switches let you enter 16-bit values directly into memory or registers. Flip each switch up for 1, down for 0. Engineers use these switches constantly for bootstrapping the system, loading test patterns, and debugging hardware faults. When disk or tape failed, toggle switches were often the only way to get the machine running again.</p>
+        </div>
+        <audio controls src="audio/04b-toggles.wav?ts=1772169502000"></audio>
+        <video controls src="clips/04b-toggles.mp4?ts=1772169502000"></video>
       </div>
     </div>
   </div>
 
   <!-- 05: Summary -->
-  <div class="segment pending">
-    <h2>05 - Summary <span class="status pending">NEEDS TTS</span></h2>
+  <div class="segment ready">
+    <h2>05 - Summary <span class="status ready">17.9s</span></h2>
     <div class="content">
       <div class="left">
-        <img src="stills/05-summary.png?ts=1772046029000" alt="Summary" class="thumbnail">
+        <img src="stills/05-summary.png?ts=1772169502000" alt="Summary" class="thumbnail">
       </div>
       <div class="right">
         <div class="narration">
-          <h3>Narration Script (~16s)</h3>
+          <h3>Narration Script (17.9s)</h3>
           <p>The IBM eleven thirty taught assembly language to thousands of students. Its clean architecture makes it perfect for learning how computers really work. Memory mapped registers, single address instructions, condition flags. These concepts still apply to modern processors today.</p>
         </div>
-        <div class="placeholder">Audio: awaiting TTS</div>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>The IBM 1130 taught assembly language to thousands of students. Its clean architecture makes it perfect for learning how computers really work. Memory map registers, single address instructions, condition flags. These concepts still apply to modern processors today.</p>
+        </div>
+        <audio controls src="audio/05-summary.wav?ts=1772169502000"></audio>
+        <video controls src="clips/05-summary.mp4?ts=1772169502000"></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05b: Roadmap -->
+  <div class="segment ready">
+    <h2>05b - Roadmap (Future Plans) <span class="status ready">15.0s</span></h2>
+    <div class="content">
+      <div class="left">
+        <img src="stills/05b-roadmap.png?ts=1772169502000" alt="Roadmap" class="thumbnail">
+      </div>
+      <div class="right">
+        <div class="narration">
+          <h3>Narration Script (15.0s)</h3>
+          <p>This is an early proof of concept. The goal is to connect to real IBM 1130 emulators, add more devices like disk, tape, and plotter, and demo higher level languages like APL and Forth. Stay tuned for more.</p>
+        </div>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>This is an early proof of concept. The goal is to connect to real IBM 1 and 30 emulators, add more devices like disk, tape, and plotter, and demo higher level languages like APL and fourth. Stay tuned for more.</p>
+        </div>
+        <audio controls src="audio/05b-roadmap.wav?ts=1772169502000"></audio>
+        <video controls src="clips/05b-roadmap.mp4?ts=1772169502000"></video>
       </div>
     </div>
   </div>
 
   <!-- 99: CTA -->
-  <div class="segment pending">
-    <h2>99 - Call to Action <span class="status pending">NEEDS TTS</span></h2>
+  <div class="segment ready">
+    <h2>99 - Call to Action <span class="status ready">16.6s</span></h2>
     <div class="content">
       <div class="left">
-        <img src="stills/99-cta.png?ts=1772046029000" alt="CTA" class="thumbnail">
+        <img src="stills/99-cta.png?ts=1772169502000" alt="CTA" class="thumbnail">
       </div>
       <div class="right">
         <div class="narration">
-          <h3>Narration Script (~14s)</h3>
+          <h3>Narration Script (16.6s)</h3>
           <p>Try the emulator yourself, no installation required. The link is in the description. Work through the challenges to master eleven thirty assembly. If you enjoyed this look at computing history, like and subscribe for more explorations of classic systems.</p>
         </div>
-        <div class="placeholder">Audio: awaiting TTS</div>
+        <div class="narration whisper">
+          <h3>Whisper Transcription</h3>
+          <p>Try the emulator yourself. No installation required. The link is in description. Work through the challenges to master 1130 assembly. If you enjoyed this, look at computing history, like and subscribe for more explorations of classic systems.</p>
+        </div>
+        <audio controls src="audio/99-cta.wav?ts=1772169502000"></audio>
+        <video controls src="clips/99-cta.mp4?ts=1772169502000"></video>
       </div>
     </div>
   </div>
 
   <!-- 99b: Epilog -->
   <div class="segment ready">
-    <h2>99b - Epilog <span class="status ready">READY</span></h2>
+    <h2>99b - Epilog <span class="status ready">12.8s</span></h2>
     <div class="content">
       <div class="left">
-        <img src="stills/99b-epilog-frame.png?ts=1772048000000" alt="Epilog" class="thumbnail">
+        <img src="stills/99b-epilog-frame.png?ts=1772169502000" alt="Epilog" class="thumbnail">
       </div>
       <div class="right">
-        <p><strong>Source:</strong> Copied from cli-midi-rs-plugins</p>
+        <p><strong>Source:</strong> Reused from prior project (cli-midi-rs-plugins)</p>
         <p><strong>Content:</strong> Pre-built epilog with narration</p>
-        <video controls src="clips/99b-epilog.mp4?ts=1772048000000"></video>
+        <video controls src="clips/99b-epilog.mp4?ts=1772169502000"></video>
       </div>
     </div>
   </div>
 
   <!-- 99c: Epilog Extension -->
   <div class="segment ready">
-    <h2>99c - Epilog Extension <span class="status ready">READY</span></h2>
+    <h2>99c - Epilog Extension <span class="status ready">7.0s</span></h2>
     <div class="content">
       <div class="left">
-        <img src="stills/99b-epilog-frame.png?ts=1772048000000" alt="Epilog Extension" class="thumbnail">
+        <img src="stills/99b-epilog-frame.png?ts=1772169502000" alt="Epilog Extension" class="thumbnail">
       </div>
       <div class="right">
         <p><strong>Duration:</strong> 7 seconds</p>
-        <p><strong>Audio:</strong> demo-bach.wav (offset 5-12s, fade-out last 0.5s)</p>
-        <video controls src="clips/99c-epilog-ext.mp4?ts=1772048000000"></video>
+        <p><strong>Audio:</strong> demo-bach.wav (offset, fade-out last 0.5s)</p>
+        <video controls src="clips/99c-epilog-ext.mp4?ts=1772169502000"></video>
       </div>
     </div>
   </div>
 
-  <!-- YouTube Description -->
-  <div class="segment" style="border-left-color: #22c55e;">
-    <h2 style="color: #22c55e;">YouTube Description <span class="status ready">READY</span></h2>
-    <pre style="background: #0a0a1a; padding: 15px; border-radius: 8px; font-size: 13px; white-space: pre-wrap; line-height: 1.5; color: #e2e8f0;">In 1965, IBM released a computer that would teach a generation how to program. The IBM 1130 was small enough for universities, powerful enough for real science. Now you can learn its assembly language right in your browser.
-
-In this video:
-- The IBM 1130 minicomputer and its historical significance
-- Architecture overview: ACC, EXT, IAR, index registers, flags
-- Punch card simulator: source cards vs object deck cards
-- Selectric console printer: assembler listing at 15.5 CPS
-- Complete instruction set: LD, STO, A, S, SLA, SRA, BSC, BSI
-- Live demo walking through progressive challenges
-- Memory-mapped registers and indexed addressing
-
-The 1130's clean architecture makes it perfect for understanding how computers really work. These concepts still apply to modern processors.
-
-Try the emulator: <a href="https://sw-comp-history.github.io/ibm-1130-rs/" style="color: #60a5fa;">https://sw-comp-history.github.io/ibm-1130-rs/</a>
-Source Code: <a href="https://github.com/sw-comp-history/ibm-1130-rs" style="color: #60a5fa;">https://github.com/sw-comp-history/ibm-1130-rs</a>
-
----
-
-Chapters:
-0:00 Introduction
-0:05 Hook: A Computer That Taught Generations
-0:23 Architecture Overview
-0:39 The IBM 1130 Story (History)
-0:51 Punch Card Simulator
-1:05 Selectric Console Printer
-1:20 Demo Intro
-1:35 Live Demo
-X:XX Summary
-X:XX Call to Action
-X:XX Outro
-
----
-
-Discord: <a href="https://discord.com/invite/Ctzk5uHggZ" style="color: #60a5fa;">https://discord.com/invite/Ctzk5uHggZ</a>
-GitHub: <a href="https://github.com/softwarewrighter" style="color: #60a5fa;">https://github.com/softwarewrighter</a>
-YouTube: <a href="https://www.youtube.com/@SoftwareWrighter" style="color: #60a5fa;">https://www.youtube.com/@SoftwareWrighter</a>
-
----
-
-Title image: IBM 1442 card reader and IBM 1131 CPU
-Credit: BadgersCP, CC0, via Wikimedia Commons
-
-Music: demo-bach.wav from <a href="https://github.com/softwarewrighter/music-pipe-rs" style="color: #60a5fa;">https://github.com/softwarewrighter/music-pipe-rs</a>
-
-#VibeCoding #Assembly #Rust #YewFramework #ComputerHistory #IBM1130 #RetroComputing</pre>
-  </div>
-
-  <!-- Music Preview Section -->
-  <div class="segment" style="border-left-color: #a855f7;">
-    <h2 style="color: #a855f7;">Music Samples <span class="status" style="background: #a855f7; color: #000;">SELECT ONE</span></h2>
-    <p style="color: var(--muted); margin-bottom: 20px;">Preview music options for title and epilog. Bach-style tracks from music-pipe-rs.</p>
-
-    <div style="display: grid; gap: 20px;">
-      <div class="narration">
-        <h3>demo-bach-esque.wav</h3>
-        <p style="color: #a855f7; margin-bottom: 10px;">Bach-esque style, full arrangement</p>
-        <audio controls src="music-samples/demo-bach-esque.wav"></audio>
-      </div>
-
-      <div class="narration">
-        <h3>demo-bach.wav</h3>
-        <p style="color: #a855f7; margin-bottom: 10px;">Bach style, extended version</p>
-        <audio controls src="music-samples/demo-bach.wav"></audio>
-      </div>
-
-      <div class="narration">
-        <h3>demo-bach-arcade.wav</h3>
-        <p style="color: #a855f7; margin-bottom: 10px;">Bach arcade style, 8-bit inspired</p>
-        <audio controls src="music-samples/demo-bach-arcade.wav"></audio>
-      </div>
-    </div>
-  </div>
-
-  <p class="timestamp">Generated: 2026-02-25 | Cache bust: ?ts=1772054000000</p>
+  <p class="timestamp">Updated: 2026-02-26 17:56 | Total: 4:45 (285s)</p>
 </body>
 </html>

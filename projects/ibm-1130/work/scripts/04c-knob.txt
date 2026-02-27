@@ -1,0 +1,1 @@
+The mode selector knob controls execution speed. Turn it to single instruction, single phase, or single cycle to watch registers change step by step. Engineers used this to trace program flow, verify timing, and diagnose hardware faults. I have used the toggle switches to enter machine code directly.

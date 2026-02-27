@@ -3,11 +3,12 @@ In 1965, IBM released a computer that would teach a generation how to program. T
 In this video:
 - The IBM 1130 minicomputer and its historical significance
 - Architecture overview: ACC, EXT, IAR, index registers, flags
-- Punch card simulator: source cards vs object deck cards
-- Selectric console printer: assembler listing at 15.5 CPS
+- Punch card simulator: IBM 029 keypunch with Hollerith encoding
+- Selectric console printer: assembler listing at 15 CPS
 - Complete instruction set: LD, STO, A, S, SLA, SRA, BSC, BSI
-- Live demo walking through progressive challenges
+- Live demo walking through progressive examples
 - Memory-mapped registers and indexed addressing
+- Console panel: mode selector knob and toggle switches
 
 The 1130's clean architecture makes it perfect for understanding how computers really work. These concepts still apply to modern processors.
 
@@ -19,15 +20,18 @@ Source Code: https://github.com/sw-comp-history/ibm-1130-rs
 Chapters:
 0:00 Introduction
 0:05 Hook: A Computer That Taught Generations
-0:23 Architecture Overview
-0:39 The IBM 1130 Story (History)
-0:51 Punch Card Simulator
-1:05 Selectric Console Printer
-1:20 Demo Intro
-1:35 Live Demo
-X:XX Summary
-X:XX Call to Action
-X:XX Outro
+0:20 Architecture Overview
+0:39 The IBM 1130 Story
+0:58 Keypunch Demo
+1:16 Selectric Console Printer
+2:01 Assembler Game Intro
+2:25 Live Assembly Demo
+3:03 Mode Selector Knob
+3:28 Toggle Switches
+3:51 Summary
+4:09 Roadmap
+4:24 Call to Action
+4:41 Outro
 
 ---
 
@@ -42,4 +46,19 @@ Credit: BadgersCP, CC0, via Wikimedia Commons
 
 Music: demo-bach.wav from https://github.com/softwarewrighter/music-pipe-rs
 
-#VibeCoding #Assembly #Rust #YewFramework #ComputerHistory #IBM1130 #RetroComputing
+---
+
+Suggested Video Titles:
+
+1. "I Built a 1965 Computer in Your Browser"
+2. "The Computer That Taught a Generation to Code"
+3. "IBM 1130: The Forgotten Teaching Machine"
+4. "Toggle Switches and Punch Cards: Computing in 1965"
+5. "Before PCs: The IBM 1130 Experience"
+6. "Write Assembly Code Like It's 1965"
+7. "This 60-Year-Old Computer Runs in Your Browser"
+8. "The First Computer for Thousands of Programmers"
+
+---
+
+#VibeCoding #Assembly #Rust #YewFramework #ComputerHistory #IBM1130 #RetroComputing #Emulator #WebAssembly #STEM #Programming #OpenSource #Education #Mainframe #Minicomputer #PunchCards #VintageComputers

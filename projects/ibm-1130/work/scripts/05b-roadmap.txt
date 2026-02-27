@@ -1,0 +1,1 @@
+This is an early proof of concept. The goal is to connect to real IBM 1130 emulators, add more devices like disk, tape, and plotter, and demo higher level languages like APL and Forth. Stay tuned for more.

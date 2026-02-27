@@ -1,0 +1,1 @@
+The console toggle switches let you enter sixteen bit values directly into memory or registers. Flip each switch up for one, down for zero. Engineers used these switches constantly, for bootstrapping the system, loading test patterns, and debugging hardware faults. When disk or tape failed, toggle switches were often the only way to get the machine running again.

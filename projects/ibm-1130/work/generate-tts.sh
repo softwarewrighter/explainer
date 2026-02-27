@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-PROJECT="/Users/mike/github/softwarewrighter/explainer/projects/many-eyes-learning"
+PROJECT="/Users/mike/github/softwarewrighter/explainer/projects/ibm-1130"
 TTS_DIR="$PROJECT/tts"
 SCRIPTS_DIR="$PROJECT/work/scripts"
 AUDIO_DIR="$PROJECT/work/audio"
