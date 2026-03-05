@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0f0f23"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Demo badge -->
+  <rect x="760" y="180" width="400" height="60" rx="30" fill="#4ade80" opacity="0.2"/>
+  <text x="960" y="222" font-family="Arial, sans-serif" font-size="32"
+        fill="#4ade80" text-anchor="middle" font-weight="bold">
+    LIVE DEMO
+  </text>
+
+  <!-- Main title -->
+  <text x="960" y="400" font-family="Arial, sans-serif" font-size="84"
+        fill="#00d4ff" text-anchor="middle" font-weight="bold" filter="url(#glow)">
+    Basic Workflow
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="500" font-family="Arial, sans-serif" font-size="48"
+        fill="#eee" text-anchor="middle">
+    Adding, Listing, and Switching Projects
+  </text>
+
+  <!-- Command list -->
+  <g font-family="Courier New, monospace" font-size="36" fill="#ffd93d">
+    <text x="600" y="650">adpj</text>
+    <text x="600" y="710" fill="#888">Add a project</text>
+
+    <text x="960" y="650">lspj</text>
+    <text x="960" y="710" fill="#888">List projects</text>
+
+    <text x="1320" y="650">chpj</text>
+    <text x="1320" y="710" fill="#888">Switch project</text>
+  </g>
+
+  <!-- Duration indicator -->
+  <text x="960" y="900" font-family="Arial, sans-serif" font-size="32"
+        fill="#888" text-anchor="middle">
+    Duration: 26 seconds
+  </text>
+</svg>

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="ctaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4ade80"/>
+      <stop offset="100%" style="stop-color:#22c55e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Rocket decoration -->
+  <text x="1700" y="200" font-size="100" opacity="0.15">🚀</text>
+  <text x="150" y="900" font-size="60" opacity="0.1">💻</text>
+
+  <!-- Headline -->
+  <rect x="610" y="60" width="700" height="90" rx="45" fill="url(#ctaGrad)" filter="url(#glow)"/>
+  <text x="960" y="125" font-family="Arial, sans-serif" font-size="56"
+        font-weight="bold" fill="#fff" text-anchor="middle">
+    Get Started Now
+  </text>
+
+  <!-- Quick install panel -->
+  <rect x="100" y="200" width="1720" height="250" rx="24" fill="url(#cardGrad)"/>
+
+  <text x="200" y="280" font-family="Arial" font-size="48" fill="#00d4ff">📦</text>
+  <text x="280" y="285" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#00d4ff">
+    Install from GitHub
+  </text>
+
+  <rect x="200" y="310" width="1520" height="120" rx="12" fill="#0a0a14"/>
+  <text x="240" y="355" font-family="Courier New, monospace" font-size="32" fill="#4ade80">
+    git clone https://github.com/sw-cli-tools/pjmai-rs.git
+  </text>
+  <text x="240" y="405" font-family="Courier New, monospace" font-size="32" fill="#4ade80">
+    cd pjmai-rs &amp;&amp; ./install.sh --local .
+  </text>
+
+  <!-- Step cards -->
+  <rect x="100" y="510" width="520" height="250" rx="24" fill="url(#cardGrad)"/>
+  <circle cx="360" cy="590" r="50" fill="#4ade80" opacity="0.2"/>
+  <text x="360" y="610" font-family="Arial, sans-serif" font-size="56"
+        font-weight="bold" fill="#4ade80" text-anchor="middle">
+    1
+  </text>
+  <text x="360" y="690" font-family="Courier New, monospace" font-size="40"
+        fill="#00d4ff" text-anchor="middle">
+    pjmai setup
+  </text>
+  <text x="360" y="760" font-family="Arial, sans-serif" font-size="38"
+        fill="#aaa" text-anchor="middle">
+    Configure your shell
+  </text>
+
+  <rect x="700" y="510" width="520" height="250" rx="24" fill="url(#cardGrad)"/>
+  <circle cx="960" cy="590" r="50" fill="#ffd93d" opacity="0.2"/>
+  <text x="960" y="610" font-family="Arial, sans-serif" font-size="56"
+        font-weight="bold" fill="#ffd93d" text-anchor="middle">
+    2
+  </text>
+  <text x="960" y="690" font-family="Courier New, monospace" font-size="40"
+        fill="#00d4ff" text-anchor="middle">
+    scpj ~/code
+  </text>
+  <text x="960" y="760" font-family="Arial, sans-serif" font-size="38"
+        fill="#aaa" text-anchor="middle">
+    Discover your projects
+  </text>
+
+  <rect x="1300" y="510" width="520" height="250" rx="24" fill="url(#cardGrad)"/>
+  <circle cx="1560" cy="590" r="50" fill="#ff6b6b" opacity="0.2"/>
+  <text x="1560" y="610" font-family="Arial, sans-serif" font-size="56"
+        font-weight="bold" fill="#ff6b6b" text-anchor="middle">
+    3
+  </text>
+  <text x="1560" y="690" font-family="Courier New, monospace" font-size="40"
+        fill="#00d4ff" text-anchor="middle">
+    chpj myproject
+  </text>
+  <text x="1560" y="760" font-family="Arial, sans-serif" font-size="38"
+        fill="#aaa" text-anchor="middle">
+    Start working!
+  </text>
+
+  <!-- Bottom bar -->
+  <rect x="100" y="820" width="1720" height="160" rx="24" fill="url(#cardGrad)"/>
+
+  <text x="960" y="890" font-family="Arial, sans-serif" font-size="44"
+        fill="#888" text-anchor="middle">
+    📚 Full documentation and source code
+  </text>
+  <text x="960" y="950" font-family="Arial, sans-serif" font-size="48"
+        fill="#00d4ff" text-anchor="middle">
+    Links in description below ↓
+  </text>
+</svg>

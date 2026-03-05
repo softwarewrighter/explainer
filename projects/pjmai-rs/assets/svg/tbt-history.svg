@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d1b0e"/>
+      <stop offset="100%" style="stop-color:#1a1008"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="vintage">
+      <feColorMatrix type="matrix" values="
+        0.9 0.1 0   0 0.05
+        0.1 0.8 0.1 0 0.02
+        0   0.1 0.7 0 0
+        0   0   0   1 0"/>
+    </filter>
+  </defs>
+
+  <!-- Sepia-toned background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Vintage paper texture effect -->
+  <rect width="1920" height="1080" fill="#d4c4a8" opacity="0.08"/>
+
+  <!-- TBT Badge -->
+  <g transform="translate(960, 120)">
+    <rect x="-200" y="-50" width="400" height="80" rx="8"
+          fill="none" stroke="#cc0000" stroke-width="5" opacity="0.9"/>
+    <text x="0" y="18" font-family="Impact, Arial Black, sans-serif" font-size="64"
+          fill="#cc0000" text-anchor="middle" font-weight="bold" letter-spacing="6">
+      #TBT
+    </text>
+  </g>
+
+  <!-- Main title -->
+  <text x="960" y="260" font-family="Georgia, serif" font-size="72"
+        fill="#d4af37" text-anchor="middle" font-weight="bold" filter="url(#glow)">
+    Throwback Thursday
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="330" font-family="Georgia, serif" font-size="42"
+        fill="#c9b896" text-anchor="middle" font-style="italic">
+    The Origins of Project Environment Management
+  </text>
+
+  <!-- Timeline box -->
+  <rect x="150" y="380" width="1620" height="580" rx="12"
+        fill="rgba(0,0,0,0.4)" stroke="#8b7355" stroke-width="2"/>
+
+  <!-- History bullets -->
+  <g font-family="Arial, sans-serif" fill="#eee">
+    <!-- 1980s -->
+    <text x="200" y="450" font-size="36" fill="#d4af37" font-weight="bold">1980s</text>
+    <text x="400" y="450" font-size="32">SPMS emerges in BSD Unix environments</text>
+    <text x="400" y="490" font-size="28" fill="#999">Shell-based project switching for multi-project workflows</text>
+
+    <!-- 2000 -->
+    <text x="200" y="570" font-size="36" fill="#d4af37" font-weight="bold">2000</text>
+    <text x="400" y="570" font-size="32">VSPMS at Forte Software, Oakland CA</text>
+    <text x="400" y="610" font-size="28" fill="#999">Very Simple Project Management System for cross-platform shells</text>
+
+    <!-- 2013 -->
+    <text x="200" y="690" font-size="36" fill="#d4af37" font-weight="bold">2013</text>
+    <text x="400" y="690" font-size="32">VSPMS open sourced by Russ Tremain</text>
+    <text x="400" y="730" font-size="28" fill="#999">github.com/rustt/vspms - tcsh, csh, bash, POSIX, MKS, Cygwin</text>
+
+    <!-- 2024 -->
+    <text x="200" y="810" font-size="36" fill="#d4af37" font-weight="bold">2024</text>
+    <text x="400" y="810" font-size="32">PJMAI-RS reimagines the concept in Rust</text>
+    <text x="400" y="850" font-size="28" fill="#999">Modern CLI with AI agent support, JSON output, fuzzy matching</text>
+  </g>
+
+  <!-- Footer quote -->
+  <text x="960" y="980" font-family="Georgia, serif" font-size="28"
+        fill="#8b7355" text-anchor="middle" font-style="italic">
+    "Same problem, four decades of solutions"
+  </text>
+</svg>

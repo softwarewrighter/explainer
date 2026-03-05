@@ -1,0 +1,1 @@
+We start by adding three projects with short nicknames. Add P J registers a project by name with the folder flag. List P J shows all registered projects. Change P J switches using fuzzy matching, so back matches backend. Show P J displays the current project details. Print P J returns just the name, perfect for shell prompts.

@@ -1,0 +1,1 @@
+Switching is fast and forgiving. Type chpj followed by a project name or partial match. Fuzzy matching handles typos and case differences. Push and pop commands let you temporarily jump to another project then return with a single command.

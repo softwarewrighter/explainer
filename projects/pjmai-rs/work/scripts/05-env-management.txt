@@ -1,0 +1,1 @@
+Each project can have its own environment. Set variables with evpj, or create a dot pjmai dot sh file in your project root. PJMAI uses hash based approval to prevent untrusted code execution. Approve once, and it auto sources on future visits.

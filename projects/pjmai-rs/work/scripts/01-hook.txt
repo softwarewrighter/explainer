@@ -1,0 +1,1 @@
+Switching between projects is tedious. You remember the repo name but not the full path. You type cd, tab complete through directories, and waste time navigating. What if your shell knew all your projects and could switch instantly with one short command.

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <!-- Rich gradient background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <!-- Accent glow -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Card gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.95"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="150" cy="150" r="200" fill="#ff6b6b" opacity="0.08"/>
+  <circle cx="1800" cy="900" r="300" fill="#4ade80" opacity="0.06"/>
+  <circle cx="960" cy="540" r="400" fill="#00d4ff" opacity="0.03"/>
+
+  <!-- Headline with emphasis -->
+  <text x="960" y="130" font-family="Arial, sans-serif" font-size="84"
+        font-weight="bold" fill="#fff" text-anchor="middle">
+    The Project Navigation
+  </text>
+  <text x="960" y="210" font-family="Arial, sans-serif" font-size="84"
+        font-weight="bold" fill="#ff6b6b" text-anchor="middle" filter="url(#glow)">
+    Problem
+  </text>
+
+  <!-- Left panel: Pain -->
+  <rect x="100" y="280" width="800" height="520" rx="24" fill="url(#cardGrad)"/>
+  <rect x="100" y="280" width="800" height="8" rx="4" fill="#ff6b6b"/>
+
+  <!-- Frustrated person icon -->
+  <circle cx="200" cy="380" r="40" fill="#ff6b6b" opacity="0.2"/>
+  <text x="200" y="395" font-family="Arial" font-size="48" fill="#ff6b6b" text-anchor="middle">😤</text>
+
+  <text x="270" y="395" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#ff6b6b">
+    The Daily Friction
+  </text>
+
+  <!-- Pain points with X marks -->
+  <text x="160" y="480" font-family="Arial" font-size="40" fill="#ff6b6b">✗</text>
+  <text x="210" y="480" font-family="Courier New, monospace" font-size="40" fill="#aaa">
+    cd ~/code/work/projects/...
+  </text>
+
+  <text x="160" y="550" font-family="Arial" font-size="40" fill="#ff6b6b">✗</text>
+  <text x="210" y="550" font-family="Arial, sans-serif" font-size="40" fill="#ccc">
+    Tab, tab, tab, tab...
+  </text>
+
+  <text x="160" y="620" font-family="Arial" font-size="40" fill="#ff6b6b">✗</text>
+  <text x="210" y="620" font-family="Arial, sans-serif" font-size="40" fill="#ccc">
+    Which directory was it?
+  </text>
+
+  <text x="160" y="690" font-family="Arial" font-size="40" fill="#ff6b6b">✗</text>
+  <text x="210" y="690" font-family="Arial, sans-serif" font-size="40" fill="#ccc">
+    Minutes wasted daily
+  </text>
+
+  <!-- Arrow transition -->
+  <polygon points="950,540 1020,500 1020,520 1080,520 1080,560 1020,560 1020,580"
+           fill="#ffd93d" filter="url(#glow)"/>
+
+  <!-- Right panel: Solution teaser -->
+  <rect x="1020" y="280" width="800" height="520" rx="24" fill="url(#cardGrad)"/>
+  <rect x="1020" y="280" width="800" height="8" rx="4" fill="#4ade80"/>
+
+  <!-- Happy terminal icon -->
+  <circle cx="1120" cy="380" r="40" fill="#4ade80" opacity="0.2"/>
+  <text x="1120" y="395" font-family="Arial" font-size="48" fill="#4ade80" text-anchor="middle">⚡</text>
+
+  <text x="1190" y="395" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#4ade80">
+    What If Instead...
+  </text>
+
+  <!-- Terminal mockup -->
+  <rect x="1080" y="450" width="680" height="120" rx="12" fill="#0a0a14"/>
+  <circle cx="1110" cy="475" r="8" fill="#ff6b6b"/>
+  <circle cx="1140" cy="475" r="8" fill="#ffd93d"/>
+  <circle cx="1170" cy="475" r="8" fill="#4ade80"/>
+  <text x="1100" y="540" font-family="Courier New, monospace" font-size="44" fill="#4ade80">
+    $ chpj webapp
+  </text>
+
+  <!-- Benefits with checkmarks -->
+  <text x="1080" y="640" font-family="Arial" font-size="40" fill="#4ade80">✓</text>
+  <text x="1130" y="640" font-family="Arial, sans-serif" font-size="40" fill="#ccc">
+    Instant switch
+  </text>
+
+  <text x="1080" y="710" font-family="Arial" font-size="40" fill="#4ade80">✓</text>
+  <text x="1130" y="710" font-family="Arial, sans-serif" font-size="40" fill="#ccc">
+    Environment loaded
+  </text>
+
+  <text x="1080" y="780" font-family="Arial" font-size="40" fill="#4ade80">✓</text>
+  <text x="1130" y="780" font-family="Arial, sans-serif" font-size="44" fill="#4ade80" font-weight="bold">
+    Zero friction
+  </text>
+
+  <!-- Decorative dots pattern -->
+  <g opacity="0.1">
+    <circle cx="50" cy="900" r="4" fill="#fff"/>
+    <circle cx="80" cy="900" r="4" fill="#fff"/>
+    <circle cx="110" cy="900" r="4" fill="#fff"/>
+    <circle cx="50" cy="930" r="4" fill="#fff"/>
+    <circle cx="80" cy="930" r="4" fill="#fff"/>
+    <circle cx="110" cy="930" r="4" fill="#fff"/>
+  </g>
+</svg>

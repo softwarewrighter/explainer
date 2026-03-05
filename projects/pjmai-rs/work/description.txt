@@ -1,0 +1,37 @@
+PJMAI-RS: Project Management for AI Agents
+
+A fast, Rust-based CLI tool for managing multiple projects with fuzzy matching, stack-based navigation, and AI agent integration.
+
+INSTALL:
+git clone https://github.com/sw-cli-tools/pjmai-rs.git
+cd pjmai-rs && ./install.sh --local .
+
+LINKS:
+GitHub: https://github.com/sw-cli-tools/pjmai-rs
+Documentation: https://github.com/sw-cli-tools/pjmai-rs#readme
+
+FEATURES:
+- Shell integration with bash/zsh
+- Fuzzy project switching (chpj)
+- Stack-based navigation (pspj/popj)
+- Environment management (evpj)
+- Auto-discovery of git repos (scpj)
+- AI agent context generation (ctpj)
+
+TIMESTAMPS:
+0:00 Introduction
+0:20 History (SPMS to PJMAI-RS)
+0:44 Overview
+1:04 Shell Integration
+1:23 Quick Switching
+1:41 Environment Management
+2:01 Scanning
+2:18 AI Agents
+2:36 Demo: Basic Workflow
+3:11 Demo: Environment Config
+3:47 Demo: Auto-Discovery
+4:17 Demo: Stack Navigation
+4:48 Conclusion
+5:08 Get Started
+
+#cli #rust #devtools #productivity #terminal #coding

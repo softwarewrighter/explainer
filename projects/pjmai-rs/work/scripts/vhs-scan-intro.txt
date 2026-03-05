@@ -1,0 +1,1 @@
+Auto discovery with scpj. Scan a directory to find git repositories, preview the results, then add them all at once.

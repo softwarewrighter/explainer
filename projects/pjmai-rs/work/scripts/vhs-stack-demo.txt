@@ -1,0 +1,1 @@
+Push P J saves your current project and switches to another. We start in webapp, then push to check the API. Show P J confirms we are now in the api project. We push again to check config. The stack remembers our path. Pop P J returns to the previous project. We pop back to api, then pop again to return to webapp where we started.

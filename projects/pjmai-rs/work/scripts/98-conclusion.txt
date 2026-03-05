@@ -1,0 +1,1 @@
+PJMAI RS transforms how you navigate your codebase. Short aliases, fuzzy matching, stack navigation, and per project environments. Version zero point four completes phase three with full environment configuration. Future phases add sandboxing and AI integration.

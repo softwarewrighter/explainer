@@ -1,0 +1,1 @@
+Environment P J manages project specific variables. We set a database URL for the webapp project. On enter hooks run automatically when switching to a project. Show displays the full configuration. Projects can also include a dot pjmai dot sh file for custom setup. When switching, PJMAI warns about unapproved scripts. Source P J lets you review and approve them.

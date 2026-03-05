@@ -1,0 +1,1 @@
+Next, environment management. Setting variables with evpj, adding entry hooks, and automatic sourcing when you switch projects.

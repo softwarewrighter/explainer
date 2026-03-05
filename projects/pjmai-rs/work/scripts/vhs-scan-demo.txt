@@ -1,0 +1,1 @@
+Scan P J discovers git repositories automatically. The dry run flag shows what would be added without making changes. Add all imports every discovered project at once. List P J shows projects grouped by organization. Now we can switch to any discovered project using its nickname.

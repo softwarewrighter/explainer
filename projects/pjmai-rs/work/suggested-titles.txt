@@ -1,0 +1,9 @@
+PJMAI-RS: Project Switching for Power Users
+Stop cd-ing Around: Instant Project Switching
+PJMAI-RS: Your Projects, One Keystroke Away
+Fuzzy Project Switching in Rust
+The CLI Tool Every Developer Needs
+Project Management for AI Agents (Rust)
+Switch Projects Like a Pro with PJMAI-RS
+Never Lose Your Place: Stack-Based Navigation
+PJMAI-RS: From cd Chaos to Project Zen

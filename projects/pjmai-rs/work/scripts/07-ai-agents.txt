@@ -1,0 +1,1 @@
+PJMAI was designed with AI agents in mind. The json flag provides machine readable output for all commands. The context command gives agents project metadata, build instructions, and important files. Errors include suggestions in structured format.

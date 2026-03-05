@@ -1,0 +1,1 @@
+Project environment management is not a new idea. SPMS appeared in BSD Unix back in the nineteen eighties. In two thousand, I used VSPMS at Forte Software in Oakland. Russ Tremain open sourced it in twenty thirteen. PJMAI RS continues this tradition with modern Rust tooling and AI agent support.

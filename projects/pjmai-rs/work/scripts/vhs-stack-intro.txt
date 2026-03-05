@@ -1,0 +1,1 @@
+Finally, stack navigation. Push to save your current project, switch to another, then pop to return exactly where you were.

@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJMAI-RS Video Production Status</title>
+    <style>
+        :root {
+            --bg-dark: #1a1a2e;
+            --bg-card: #0f0f23;
+            --cyan: #00d4ff;
+            --yellow: #ffd93d;
+            --green: #4ade80;
+            --red: #ff6b6b;
+            --purple: #a855f7;
+            --text: #eee;
+            --muted: #888;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: var(--cyan);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .meta {
+            text-align: center;
+            color: var(--muted);
+            margin-bottom: 30px;
+        }
+        .segment {
+            background: var(--bg-card);
+            border-radius: 12px;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-left: 4px solid transparent;
+        }
+        .segment.complete { border-left-color: var(--green); }
+        .segment.pending { border-left-color: var(--yellow); }
+        .segment.error { border-left-color: var(--red); }
+        .segment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .segment-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--cyan);
+        }
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .status-complete { background: var(--green); color: #000; }
+        .status-pending { background: var(--yellow); color: #000; }
+        .status-error { background: var(--red); color: #fff; }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 20px;
+        }
+        .thumbnail {
+            width: 320px;
+            height: 180px;
+            background: #222;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .details {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .detail-row {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+        .label {
+            color: var(--muted);
+            width: 100px;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+        .value {
+            flex: 1;
+        }
+        .narration {
+            background: #1a1a2e;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            line-height: 1.6;
+            border-left: 3px solid var(--cyan);
+        }
+        .whisper {
+            background: #1a1a2e;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-style: italic;
+            border-left: 3px solid var(--purple);
+        }
+        .match-yes { color: var(--green); font-weight: bold; }
+        .match-no { color: var(--red); font-weight: bold; }
+        .match-pending { color: var(--yellow); }
+        .music-info {
+            font-family: monospace;
+            color: var(--yellow);
+        }
+        audio {
+            width: 100%;
+            max-width: 400px;
+            height: 40px;
+        }
+        video {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+        .media-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .media-box {
+            background: #1a1a2e;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .media-box .label {
+            width: auto;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .not-ready {
+            color: var(--muted);
+            font-style: italic;
+            padding: 10px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+        }
+        .section-divider {
+            border-top: 1px solid #333;
+            margin: 40px 0 20px;
+            padding-top: 20px;
+        }
+        .section-label {
+            color: var(--yellow);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .char-count {
+            color: var(--muted);
+            font-size: 12px;
+        }
+        .tts-server-note {
+            background: rgba(255, 107, 107, 0.1);
+            border: 1px solid var(--red);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .tts-server-note code {
+            background: rgba(0,0,0,0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PJMAI-RS Video Production</h1>
+    <div class="meta">
+        Project Management for AI Agents in Rust<br>
+        <span id="timestamp">Updated: --</span>
+    </div>
+
+    <div class="tts-server-note" style="background: rgba(74, 222, 128, 0.1); border-color: var(--green);">
+        <strong style="color: var(--green);">TTS Complete:</strong> All narration generated via <code>queenbee.local:7860</code>
+    </div>
+
+    <!-- 00-title -->
+    <div class="segment complete" id="seg-00-title">
+        <div class="segment-header">
+            <span class="segment-title">00 - Title Card</span>
+            <span class="status-badge status-complete">Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/00-title-composite.png" alt="Title">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Type:</span>
+                    <span class="value">Music (no narration)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Music:</span>
+                    <span class="value music-info">e1.wav 0-5 seconds (5s)</span>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="clips/00-title.mp4"></audio>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls src="clips/00-title.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 01-hook -->
+    <div class="segment complete" id="seg-01-hook">
+        <div class="segment-header">
+            <span class="segment-title">01 - Hook</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/01-hook.png" alt="Hook">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">Switching between projects is tedious. You remember the repo name but not the full path. You type cd, tab complete through directories, and waste time navigating. What if your shell knew all your projects and could switch instantly with one short command.</div>
+                        <span class="char-count">255 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">Switching between projects is tedious. You remember the repo name, but not the full path. You type cd tabcomplete through directories and waste time navigating. What if your shell knew all your projects and could switch instantly with one short command?</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/01-hook-raw.wav"></audio>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls src="clips/01-hook.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 02-overview -->
+    <div class="segment complete" id="seg-02-overview">
+        <div class="segment-header">
+            <span class="segment-title">02 - Overview</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/02-overview.png" alt="Overview">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">PJMAI RS is a Rust command line tool that manages your project directory registry. Give each project a short nickname, then switch instantly with chpj. It integrates with your shell through exit codes, so the parent process can change directories or source environment files.</div>
+                        <span class="char-count">275 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">PJMAIRS is a Rust command-line tool that manages your project directory registry. Give each project a short nickname, then switch instantly with chpg. It integrates with your shell through exit codes, so the parent process can change directories or source environment files.</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/02-overview-raw.wav"></audio>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls src="clips/02-overview.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TBT History -->
+    <div class="segment complete" id="seg-tbt-history">
+        <div class="segment-header">
+            <span class="segment-title">TBT - History</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/tbt-history.png" alt="TBT History">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">Project environment management is not a new idea. SPMS appeared in BSD Unix back in the nineteen eighties. In two thousand, I used VSPMS at Forte Software in Oakland. Russ Tremain open sourced it in twenty thirteen. PJMAI RS continues this tradition with modern Rust tooling and AI agent support.</div>
+                        <span class="char-count">297 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">Project Environment Management is not a new idea. SPMS appeared in BSD Unix back in the 1980s. In 2000, I used VSPMS at Forte Software in Oakland. Rust Tremaine open sourced it in 2013. PJMAI-RS continues this tradition with modern Rust tooling and AI agent support.</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/tbt-history-raw.wav"></audio>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls src="clips/tbt-history.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 03-shell-integration -->
+    <div class="segment complete" id="seg-03-shell">
+        <div class="segment-header">
+            <span class="segment-title">03 - Shell Integration</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/03-shell-integration.png" alt="Shell Integration">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">Shell integration is the key innovation. Most command line tools cannot change your working directory because they run as sub processes. PJMAI uses exit codes to signal the shell wrapper what action to take. Exit two means change directory, exit three means source a file.</div>
+                        <span class="char-count">272 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">Shell integration is the key innovation. Most command line tools cannot change your working directory because they run as subprocesses. PJM AI uses exit codes to signal the shell wrapper what action to take. Exit 2 means change directory. Exit 3 means source a file.</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/03-shell-integration-raw.wav"></audio>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls src="clips/03-shell-integration.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 04-quick-switching -->
+    <div class="segment complete" id="seg-04-switching">
+        <div class="segment-header">
+            <span class="segment-title">04 - Quick Switching</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/04-quick-switching.png" alt="Quick Switching">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">Switching is fast and forgiving. Type chpj followed by a project name or partial match. Fuzzy matching handles typos and case differences. Push and pop commands let you temporarily jump to another project then return with a single command.</div>
+                        <span class="char-count">239 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">Switching is fast and forgiving. Type chpg followed by a project name or partial match. Fuzzy matching handles, typos and case differences. Push and pop commands let you temporarily jump to another project, then return with a single command.</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/04-quick-switching-raw.wav"></audio>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls src="clips/04-quick-switching.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 05-env-management -->
+    <div class="segment complete" id="seg-05-env">
+        <div class="segment-header">
+            <span class="segment-title">05 - Environment Management</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/05-env-management.png" alt="Environment Management">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">Each project can have its own environment. Set variables with evpj, or create a dot pjmai dot sh file in your project root. PJMAI uses hash based approval to prevent untrusted code execution. Approve once, and it auto sources on future visits.</div>
+                        <span class="char-count">243 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">Each project can have its own environment, set variables with EBPJ, or create a .pjmai.sh file in your project root. PJMAI uses hash-based approval to prevent untrusted code execution, approve once, and it auto-sources on future visits.</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/05-env-management-raw.wav"></audio>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls src="clips/05-env-management.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 06-scanning -->
+    <div class="segment complete" id="seg-06-scan">
+        <div class="segment-header">
+            <span class="segment-title">06 - Auto Discovery</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/06-scanning.png" alt="Scanning">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">The scan command finds all your git repositories automatically. It parses remote origins to group by organization, suggests nicknames, and handles collisions. Run scpj on your code directory and your entire project list populates in seconds.</div>
+                        <span class="char-count">241 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">The scan command finds all your Git repositories automatically. It parses the remote origins to group by organization, suggests nicknames, and handles collisions. Run scpj on your code directory and your entire project list populates in seconds.</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/06-scanning-raw.wav"></audio>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls src="clips/06-scanning.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 07-ai-agents -->
+    <div class="segment complete" id="seg-07-ai">
+        <div class="segment-header">
+            <span class="segment-title">07 - AI Agent Support</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/07-ai-agents.png" alt="AI Agents">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">PJMAI was designed with AI agents in mind. The json flag provides machine readable output for all commands. The context command gives agents project metadata, build instructions, and important files. Errors include suggestions in structured format.</div>
+                        <span class="char-count">248 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">The PJMAI was designed with AI agents in mind. The JSON flag provides machine-readable output for all commands. The context command gives agents project metadata, build instructions, and important files. Errors include suggestions in structured format.</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/07-ai-agents-raw.wav"></audio>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls src="clips/07-ai-agents.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+    <div class="section-label">VHS Terminal Demos (Optional Insert Segments)</div>
+
+    <!-- VHS Basic Demo -->
+    <div class="segment complete" id="seg-vhs-basic">
+        <div class="segment-header">
+            <span class="segment-title">VHS - Basic Workflow</span>
+            <span class="status-badge status-complete">Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <video controls src="clips/vhs-basic-complete.mp4" style="width:320px;height:180px;object-fit:cover;"></video>
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Intro:</span>
+                    <div class="value">
+                        <div class="narration">First, the basic workflow. Adding projects with adpj, listing with lspj, and switching with chpj using fuzzy matching.</div>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">First, the basic workflow. Adding projects with ADPJ, listing with LSPJ, and switching with CHPJ using fuzzy matching.</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Duration:</span>
+                    <span class="value">36.3s (intro 10s + demo 26s)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VHS Env Demo -->
+    <div class="segment complete" id="seg-vhs-env">
+        <div class="segment-header">
+            <span class="segment-title">VHS - Environment Management</span>
+            <span class="status-badge status-complete">Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <video controls src="clips/vhs-env-complete.mp4" style="width:320px;height:180px;object-fit:cover;"></video>
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Intro:</span>
+                    <div class="value">
+                        <div class="narration">Next, environment management. Setting variables with evpj, adding entry hooks, and automatic sourcing when you switch projects.</div>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">Next, environment management, setting variables with EVPJ, adding entry hooks, and automatic sourcing when you switch projects.</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Duration:</span>
+                    <span class="value">43.3s (intro 9s + demo 34s)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VHS Scan Demo -->
+    <div class="segment complete" id="seg-vhs-scan">
+        <div class="segment-header">
+            <span class="segment-title">VHS - Auto Discovery</span>
+            <span class="status-badge status-complete">Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <video controls src="clips/vhs-scan-complete.mp4" style="width:320px;height:180px;object-fit:cover;"></video>
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Intro:</span>
+                    <div class="value">
+                        <div class="narration">Auto discovery with scpj. Scan a directory to find git repositories, preview the results, then add them all at once.</div>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">Auto-discovery with CPJ. Scan a directory to find Git repositories, preview the results, then add them all at once.</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Duration:</span>
+                    <span class="value">33.0s (intro 9s + demo 24s)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VHS Stack Demo -->
+    <div class="segment complete" id="seg-vhs-stack">
+        <div class="segment-header">
+            <span class="segment-title">VHS - Stack Navigation</span>
+            <span class="status-badge status-complete">Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <video controls src="clips/vhs-stack-complete.mp4" style="width:320px;height:180px;object-fit:cover;"></video>
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Intro:</span>
+                    <div class="value">
+                        <div class="narration">Finally, stack navigation. Push to save your current project, switch to another, then pop to return exactly where you were.</div>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">Finally, Stack Navigation, push to save your current project, switch to another, then pop to return exactly where you were.</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Duration:</span>
+                    <span class="value">37.5s (intro 8s + demo 29s)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+    <div class="section-label">Outro Segments</div>
+
+    <!-- 98-conclusion -->
+    <div class="segment complete" id="seg-98-conclusion">
+        <div class="segment-header">
+            <span class="segment-title">98 - Conclusion</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/98-conclusion.png" alt="Conclusion">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">PJMAI RS transforms how you navigate your codebase. Short aliases, fuzzy matching, stack navigation, and per project environments. Version zero point four completes phase three with full environment configuration. Future phases add sandboxing and AI integration.</div>
+                        <span class="char-count">262 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">PJMA IRS transforms how you navigate your code base, short aoses, fuzzy matching, stack navigation, and per project environments. Version 0.4 completes phase three with full environment configuration. Future phases add sandboxing and AI integration.</div>
+                        <span class="match-yes">Match: YES (minor transcription)</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/98-conclusion-raw.wav"></audio>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls src="clips/98-conclusion.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 99-cta -->
+    <div class="segment complete" id="seg-99-cta">
+        <div class="segment-header">
+            <span class="segment-title">99 - Call to Action</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/99-cta.png" alt="CTA">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">Install with a single curl command, or clone and build from source. Run pjmai setup to configure your shell, then adpj to add your first project. Links and documentation are in the description below. Start managing your projects like a pro.</div>
+                        <span class="char-count">240 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">Install with a single cURL command or clone and build from source, run PJMI setup to configure your shell, then ADPJ to add your first project. Links and documentation are in the description below. Start managing your projects like a pro.</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/99-cta-raw.wav"></audio>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls src="clips/99-cta.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 99 - Subscribe Reminder (SHARED) -->
+    <div class="segment complete" id="seg-99-subscribe">
+        <div class="segment-header">
+            <span class="segment-title">99 - Subscribe Reminder (SHARED)</span>
+            <span class="status-badge status-complete">Verified</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <video controls src="clips/99-subscribe-reminder.mp4" style="width:320px;height:180px;object-fit:cover;"></video>
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Source:</span>
+                    <span class="value">Copied from shared/99-subscribe-reminder-narrated.mp4</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Duration:</span>
+                    <span class="value">12.817 seconds</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Audio:</span>
+                    <span class="value" style="color: var(--green);">NARRATION: "If you found this helpful, please like and subscribe..."</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 99x - Outro (UNIQUE) -->
+    <div class="segment complete" id="seg-99x-outro">
+        <div class="segment-header">
+            <span class="segment-title">99x - Outro (UNIQUE)</span>
+            <span class="status-badge status-complete">Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <video controls src="clips/99x-outro.mp4" style="width:320px;height:180px;object-fit:cover;"></video>
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Visual:</span>
+                    <span class="value">Same slide as subscribe reminder</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Audio:</span>
+                    <span class="value music-info">MUSIC: e1.wav 5-12 seconds (with 3s fade)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Duration:</span>
+                    <span class="value">7 seconds</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+    <div class="section-label">Production Commands</div>
+
+    <div class="segment" style="border-left-color: var(--cyan);">
+        <div class="segment-header">
+            <span class="segment-title">Quick Reference</span>
+        </div>
+        <div class="details" style="font-family: monospace; font-size: 14px;">
+            <p><strong>Generate TTS:</strong></p>
+            <code style="display: block; background: #0a0a14; padding: 10px; border-radius: 6px; margin: 5px 0;">
+                cd work && ./generate-tts.sh
+            </code>
+            <p><strong>Record VHS demos:</strong></p>
+            <code style="display: block; background: #0a0a14; padding: 10px; border-radius: 6px; margin: 5px 0;">
+                vhs assets/vhs/basic-demo.tape
+            </code>
+            <p><strong>Render SVG to PNG:</strong></p>
+            <code style="display: block; background: #0a0a14; padding: 10px; border-radius: 6px; margin: 5px 0;">
+                rsvg-convert -w 1920 -h 1080 assets/svg/01-hook.svg -o work/stills/01-hook.png
+            </code>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('timestamp').textContent = 'Updated: ' + new Date().toLocaleString();
+    </script>
+</body>
+</html>

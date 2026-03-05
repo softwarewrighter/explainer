@@ -1,0 +1,1 @@
+Shell integration is the key innovation. Most command line tools cannot change your working directory because they run as sub processes. PJMAI uses exit codes to signal the shell wrapper what action to take. Exit two means change directory, exit three means source a file.

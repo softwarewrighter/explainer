@@ -1,0 +1,1 @@
+PJMAI RS is a Rust command line tool that manages your project directory registry. Give each project a short nickname, then switch instantly with chpj. It integrates with your shell through exit codes, so the parent process can change directories or source environment files.

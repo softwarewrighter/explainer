@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Radar/scan decorations -->
+  <circle cx="1700" cy="200" r="100" fill="none" stroke="#4ade80" stroke-width="2" opacity="0.2"/>
+  <circle cx="1700" cy="200" r="150" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.1"/>
+  <circle cx="1700" cy="200" r="200" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.05"/>
+  <line x1="1700" y1="200" x2="1780" y2="120" stroke="#4ade80" stroke-width="3" opacity="0.4"/>
+
+  <!-- Headline -->
+  <text x="100" y="110" font-family="Arial" font-size="60" fill="#4ade80">🔍</text>
+  <text x="180" y="110" font-family="Arial, sans-serif" font-size="84"
+        font-weight="bold" fill="#fff">
+    Auto Discovery: scpj
+  </text>
+
+  <!-- Main scan command -->
+  <rect x="100" y="180" width="1720" height="160" rx="24" fill="url(#cardGrad)"/>
+
+  <rect x="150" y="220" width="1000" height="80" rx="12" fill="#0a0a14"/>
+  <text x="180" y="275" font-family="Courier New, monospace" font-size="44" fill="#4ade80">
+    $ scpj ~/code --depth 4
+  </text>
+
+  <text x="1200" y="270" font-family="Arial, sans-serif" font-size="40" fill="#888">
+    Finds all git repos automatically
+  </text>
+
+  <!-- Feature cards -->
+  <!-- Parse Remotes -->
+  <rect x="100" y="400" width="520" height="280" rx="20" fill="url(#cardGrad)"/>
+  <circle cx="180" cy="480" r="40" fill="#ffd93d" opacity="0.2"/>
+  <text x="180" y="495" font-family="Arial" font-size="44" fill="#ffd93d" text-anchor="middle">🌐</text>
+  <text x="240" y="495" font-family="Arial, sans-serif" font-size="44"
+        font-weight="bold" fill="#ffd93d">
+    Parse Remotes
+  </text>
+  <text x="150" y="570" font-family="Arial, sans-serif" font-size="36" fill="#ccc">
+    Groups by owner
+  </text>
+  <text x="150" y="625" font-family="Arial, sans-serif" font-size="36" fill="#ccc">
+    and organization
+  </text>
+
+  <!-- Smart Nicknames -->
+  <rect x="700" y="400" width="520" height="280" rx="20" fill="url(#cardGrad)"/>
+  <circle cx="780" cy="480" r="40" fill="#ff6b6b" opacity="0.2"/>
+  <text x="780" y="495" font-family="Arial" font-size="44" fill="#ff6b6b" text-anchor="middle">💡</text>
+  <text x="840" y="495" font-family="Arial, sans-serif" font-size="44"
+        font-weight="bold" fill="#ff6b6b">
+    Smart Names
+  </text>
+  <text x="750" y="570" font-family="Arial, sans-serif" font-size="36" fill="#ccc">
+    Suggests nicknames
+  </text>
+  <text x="750" y="625" font-family="Arial, sans-serif" font-size="36" fill="#ccc">
+    Handles collisions
+  </text>
+
+  <!-- Respects Ignores -->
+  <rect x="1300" y="400" width="520" height="280" rx="20" fill="url(#cardGrad)"/>
+  <circle cx="1380" cy="480" r="40" fill="#00d4ff" opacity="0.2"/>
+  <text x="1380" y="495" font-family="Arial" font-size="44" fill="#00d4ff" text-anchor="middle">📋</text>
+  <text x="1440" y="495" font-family="Arial, sans-serif" font-size="44"
+        font-weight="bold" fill="#00d4ff">
+    Respects Ignores
+  </text>
+  <text x="1350" y="570" font-family="Arial, sans-serif" font-size="36" fill="#ccc">
+    Honors .gitignore
+  </text>
+  <text x="1350" y="625" font-family="Arial, sans-serif" font-size="36" fill="#ccc">
+    Skips existing
+  </text>
+
+  <!-- Options bar -->
+  <rect x="100" y="740" width="1720" height="220" rx="24" fill="url(#cardGrad)"/>
+
+  <text x="200" y="820" font-family="Arial, sans-serif" font-size="44"
+        font-weight="bold" fill="#aaa">
+    Options
+  </text>
+
+  <!-- Option chips -->
+  <rect x="200" y="860" width="260" height="70" rx="12" fill="#0a0a14"/>
+  <text x="330" y="905" font-family="Courier New, monospace" font-size="34" fill="#ffd93d" text-anchor="middle">
+    --dry-run
+  </text>
+
+  <rect x="500" y="860" width="260" height="70" rx="12" fill="#0a0a14"/>
+  <text x="630" y="905" font-family="Courier New, monospace" font-size="34" fill="#4ade80" text-anchor="middle">
+    --add-all
+  </text>
+
+  <rect x="800" y="860" width="400" height="70" rx="12" fill="#0a0a14"/>
+  <text x="1000" y="905" font-family="Courier New, monospace" font-size="34" fill="#00d4ff" text-anchor="middle">
+    --ignore vendor,dist
+  </text>
+
+  <rect x="1240" y="860" width="260" height="70" rx="12" fill="#0a0a14"/>
+  <text x="1370" y="905" font-family="Courier New, monospace" font-size="34" fill="#ff6b6b" text-anchor="middle">
+    --depth N
+  </text>
+</svg>

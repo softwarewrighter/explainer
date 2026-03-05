@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="50%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#ff6b6b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- AI network decoration -->
+  <circle cx="1750" cy="150" r="8" fill="#00d4ff" opacity="0.5"/>
+  <circle cx="1800" cy="200" r="6" fill="#a855f7" opacity="0.4"/>
+  <circle cx="1700" cy="220" r="5" fill="#ff6b6b" opacity="0.3"/>
+  <line x1="1750" y1="150" x2="1800" y2="200" stroke="#00d4ff" stroke-width="1" opacity="0.3"/>
+  <line x1="1750" y1="150" x2="1700" y2="220" stroke="#a855f7" stroke-width="1" opacity="0.3"/>
+  <line x1="1800" y1="200" x2="1700" y2="220" stroke="#ff6b6b" stroke-width="1" opacity="0.3"/>
+
+  <!-- Headline with gradient effect -->
+  <text x="100" y="110" font-family="Arial" font-size="60" fill="#00d4ff">🤖</text>
+  <text x="180" y="110" font-family="Arial, sans-serif" font-size="84"
+        font-weight="bold" fill="url(#aiGrad)">
+    Built for AI Agents
+  </text>
+
+  <!-- JSON Output panel -->
+  <rect x="100" y="180" width="820" height="420" rx="24" fill="url(#cardGrad)"/>
+
+  <text x="180" y="260" font-family="Arial" font-size="48" fill="#4ade80">📊</text>
+  <text x="250" y="265" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#4ade80">
+    JSON Output Mode
+  </text>
+
+  <!-- Terminal with JSON -->
+  <rect x="150" y="310" width="720" height="70" rx="10" fill="#0a0a14"/>
+  <text x="180" y="358" font-family="Courier New, monospace" font-size="36" fill="#4ade80">
+    $ pjmai --json list
+  </text>
+
+  <text x="180" y="440" font-family="Arial, sans-serif" font-size="38" fill="#ccc">
+    ✓ Machine readable output
+  </text>
+  <text x="180" y="500" font-family="Arial, sans-serif" font-size="38" fill="#ccc">
+    ✓ Structured errors with hints
+  </text>
+  <text x="180" y="560" font-family="Arial, sans-serif" font-size="38" fill="#ccc">
+    ✓ Suggestions in JSON format
+  </text>
+
+  <!-- Context Command panel -->
+  <rect x="1000" y="180" width="820" height="420" rx="24" fill="url(#cardGrad)"/>
+
+  <text x="1080" y="260" font-family="Arial" font-size="48" fill="#ffd93d">📋</text>
+  <text x="1150" y="265" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#ffd93d">
+    Context Command
+  </text>
+
+  <!-- Terminal with context -->
+  <rect x="1050" y="310" width="720" height="70" rx="10" fill="#0a0a14"/>
+  <text x="1080" y="358" font-family="Courier New, monospace" font-size="36" fill="#ffd93d">
+    $ ctpj --for-agent
+  </text>
+
+  <text x="1080" y="440" font-family="Arial, sans-serif" font-size="38" fill="#ccc">
+    ✓ Project metadata
+  </text>
+  <text x="1080" y="500" font-family="Arial, sans-serif" font-size="38" fill="#ccc">
+    ✓ Build instructions
+  </text>
+  <text x="1080" y="560" font-family="Arial, sans-serif" font-size="38" fill="#ccc">
+    ✓ Important files list
+  </text>
+
+  <!-- Future: Sandboxing bar -->
+  <rect x="100" y="660" width="1720" height="300" rx="24" fill="url(#cardGrad)"/>
+  <rect x="100" y="660" width="1720" height="8" rx="4" fill="url(#aiGrad)"/>
+
+  <text x="200" y="750" font-family="Arial" font-size="48" fill="#a855f7">🔮</text>
+  <text x="280" y="755" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#a855f7">
+    Coming in Phase 4: AI Sandboxing
+  </text>
+
+  <!-- Feature chips -->
+  <rect x="200" y="810" width="320" height="110" rx="16" fill="#0a0a14"/>
+  <text x="360" y="855" font-family="Arial, sans-serif" font-size="34" fill="#ff6b6b" text-anchor="middle">
+    🔒 Restricted PATH
+  </text>
+  <text x="360" y="900" font-family="Arial, sans-serif" font-size="28" fill="#888" text-anchor="middle">
+    Safe command set
+  </text>
+
+  <rect x="560" y="810" width="320" height="110" rx="16" fill="#0a0a14"/>
+  <text x="720" y="855" font-family="Arial, sans-serif" font-size="34" fill="#ffd93d" text-anchor="middle">
+    🛡️ nono Integration
+  </text>
+  <text x="720" y="900" font-family="Arial, sans-serif" font-size="28" fill="#888" text-anchor="middle">
+    Block sudo
+  </text>
+
+  <rect x="920" y="810" width="320" height="110" rx="16" fill="#0a0a14"/>
+  <text x="1080" y="855" font-family="Arial, sans-serif" font-size="34" fill="#4ade80" text-anchor="middle">
+    📁 Protected Files
+  </text>
+  <text x="1080" y="900" font-family="Arial, sans-serif" font-size="28" fill="#888" text-anchor="middle">
+    Read-only guards
+  </text>
+
+  <rect x="1280" y="810" width="440" height="110" rx="16" fill="#0a0a14"/>
+  <text x="1500" y="855" font-family="Arial, sans-serif" font-size="34" fill="#00d4ff" text-anchor="middle">
+    🐳 Container Support
+  </text>
+  <text x="1500" y="900" font-family="Arial, sans-serif" font-size="28" fill="#888" text-anchor="middle">
+    Docker, Lima, LXC
+  </text>
+</svg>

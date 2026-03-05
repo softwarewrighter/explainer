@@ -1,0 +1,1 @@
+Clone the repo from GitHub and run the install script with the local flag. Then scan your code directory to discover projects. Links and documentation are in the description below. Start managing your projects like a pro.

@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.9"/>
+    </linearGradient>
+    <!-- Cyan gradient for accent -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#0099cc"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative shapes -->
+  <circle cx="1850" cy="100" r="150" fill="#00d4ff" opacity="0.08"/>
+  <circle cx="100" cy="950" r="180" fill="#ffd93d" opacity="0.06"/>
+  <polygon points="1700,800 1850,950 1550,950" fill="#4ade80" opacity="0.05"/>
+
+  <!-- Logo/Brand area -->
+  <rect x="760" y="60" width="400" height="70" rx="35" fill="url(#cyanGrad)" filter="url(#glow)"/>
+  <text x="960" y="110" font-family="Arial, sans-serif" font-size="42"
+        font-weight="bold" fill="#fff" text-anchor="middle">
+    PJMAI-RS
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="190" font-family="Arial, sans-serif" font-size="48"
+        fill="#ffd93d" text-anchor="middle">
+    Project Management for AI Agents in Rust
+  </text>
+
+  <!-- Flow diagram: Registry → Shell Integration -->
+  <!-- Registry box -->
+  <rect x="150" y="280" width="500" height="220" rx="20" fill="url(#cardGrad)"/>
+  <rect x="150" y="280" width="500" height="6" rx="3" fill="#00d4ff"/>
+
+  <!-- Database icon -->
+  <ellipse cx="220" cy="360" rx="30" ry="15" fill="none" stroke="#00d4ff" stroke-width="4"/>
+  <path d="M190,360 L190,400 Q220,420 250,400 L250,360" fill="none" stroke="#00d4ff" stroke-width="4"/>
+  <ellipse cx="220" cy="400" rx="30" ry="15" fill="none" stroke="#00d4ff" stroke-width="4"/>
+
+  <text x="290" y="375" font-family="Arial, sans-serif" font-size="44"
+        font-weight="bold" fill="#00d4ff">
+    Project Registry
+  </text>
+  <text x="200" y="450" font-family="Courier New, monospace" font-size="36" fill="#aaa">
+    nickname → path
+  </text>
+
+  <!-- Animated arrow -->
+  <path d="M680,390 L780,390" stroke="#ffd93d" stroke-width="6" stroke-dasharray="20,10"/>
+  <polygon points="780,390 820,370 820,380 880,380 880,400 820,400 820,410" fill="#ffd93d"/>
+
+  <!-- Shell Integration box -->
+  <rect x="920" y="280" width="500" height="220" rx="20" fill="url(#cardGrad)"/>
+  <rect x="920" y="280" width="500" height="6" rx="3" fill="#4ade80"/>
+
+  <!-- Terminal icon -->
+  <rect x="980" y="340" width="60" height="45" rx="6" fill="none" stroke="#4ade80" stroke-width="4"/>
+  <text x="1010" y="375" font-family="Courier New" font-size="28" fill="#4ade80" text-anchor="middle">_</text>
+
+  <text x="1060" y="375" font-family="Arial, sans-serif" font-size="44"
+        font-weight="bold" fill="#4ade80">
+    Shell Integration
+  </text>
+  <text x="970" y="450" font-family="Courier New, monospace" font-size="36" fill="#aaa">
+    exit codes → actions
+  </text>
+
+  <!-- Down arrows -->
+  <polygon points="400,530 370,560 385,560 385,620 415,620 415,560 430,560" fill="#00d4ff" opacity="0.6"/>
+  <polygon points="1170,530 1140,560 1155,560 1155,620 1185,620 1185,560 1200,560" fill="#4ade80" opacity="0.6"/>
+
+  <!-- Feature cards row -->
+  <!-- Fuzzy Match -->
+  <rect x="100" y="660" width="400" height="280" rx="20" fill="url(#cardGrad)"/>
+  <circle cx="180" cy="740" r="45" fill="#ff6b6b" opacity="0.15"/>
+  <text x="180" y="755" font-family="Arial" font-size="48" fill="#ff6b6b" text-anchor="middle">🔍</text>
+  <text x="240" y="755" font-family="Arial, sans-serif" font-size="44"
+        font-weight="bold" fill="#ff6b6b">
+    Fuzzy Match
+  </text>
+  <text x="150" y="830" font-family="Arial, sans-serif" font-size="38" fill="#ccc">
+    Prefix, substring
+  </text>
+  <text x="150" y="885" font-family="Arial, sans-serif" font-size="38" fill="#ccc">
+    Case insensitive
+  </text>
+
+  <!-- Environment -->
+  <rect x="560" y="660" width="400" height="280" rx="20" fill="url(#cardGrad)"/>
+  <circle cx="640" cy="740" r="45" fill="#ffd93d" opacity="0.15"/>
+  <text x="640" y="755" font-family="Arial" font-size="48" fill="#ffd93d" text-anchor="middle">⚙️</text>
+  <text x="700" y="755" font-family="Arial, sans-serif" font-size="44"
+        font-weight="bold" fill="#ffd93d">
+    Environment
+  </text>
+  <text x="610" y="830" font-family="Arial, sans-serif" font-size="38" fill="#ccc">
+    Per project vars
+  </text>
+  <text x="610" y="885" font-family="Arial, sans-serif" font-size="38" fill="#ccc">
+    Entry hooks
+  </text>
+
+  <!-- AI Ready -->
+  <rect x="1020" y="660" width="400" height="280" rx="20" fill="url(#cardGrad)"/>
+  <circle cx="1100" cy="740" r="45" fill="#00d4ff" opacity="0.15"/>
+  <text x="1100" y="755" font-family="Arial" font-size="48" fill="#00d4ff" text-anchor="middle">🤖</text>
+  <text x="1160" y="755" font-family="Arial, sans-serif" font-size="44"
+        font-weight="bold" fill="#00d4ff">
+    AI Ready
+  </text>
+  <text x="1070" y="830" font-family="Arial, sans-serif" font-size="38" fill="#ccc">
+    JSON output
+  </text>
+  <text x="1070" y="885" font-family="Arial, sans-serif" font-size="38" fill="#ccc">
+    Context command
+  </text>
+</svg>
