@@ -1,0 +1,1 @@
+Let me show you rank wav in action. We will scan a directory of wave files, see the acoustic analysis, and find the top ranked audio automatically.

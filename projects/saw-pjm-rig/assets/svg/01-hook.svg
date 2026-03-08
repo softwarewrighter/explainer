@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="200" cy="150" r="250" fill="#f5a623" opacity="0.06"/>
+  <circle cx="1750" cy="900" r="300" fill="#4ade80" opacity="0.05"/>
+  <circle cx="960" cy="540" r="400" fill="#a855f7" opacity="0.04"/>
+
+  <!-- Headline -->
+  <text x="960" y="140" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#f5a623" text-anchor="middle" filter="url(#glow)">
+    Why Sharpen the Saw?
+  </text>
+
+  <!-- Left card: The Problem -->
+  <rect x="100" y="220" width="820" height="740" rx="24" fill="url(#cardGrad)"/>
+  <rect x="100" y="220" width="820" height="8" rx="4" fill="#ff6b6b"/>
+
+  <text x="180" y="320" font-size="56" opacity="0.8">&#x1F6E0;</text>
+  <text x="250" y="320" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#ff6b6b">The Reality</text>
+
+  <text x="160" y="400" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    &#x2717; Tools collect bugs over time
+  </text>
+  <text x="160" y="470" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    &#x2717; New features sit in the backlog
+  </text>
+  <text x="160" y="540" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    &#x2717; AI frameworks keep evolving
+  </text>
+  <text x="160" y="610" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    &#x2717; Rust ecosystem moves fast
+  </text>
+
+  <!-- Terminal mockup -->
+  <rect x="140" y="680" width="740" height="240" rx="12" fill="#0a0a14"/>
+  <circle cx="175" cy="715" r="8" fill="#ff6b6b"/>
+  <circle cx="205" cy="715" r="8" fill="#ffd93d"/>
+  <circle cx="235" cy="715" r="8" fill="#4ade80"/>
+  <text x="175" y="775" font-family="Courier New, monospace" font-size="36" fill="#4ade80">
+    $ cargo build
+  </text>
+  <text x="175" y="825" font-family="Courier New, monospace" font-size="36" fill="#ff6b6b">
+    error[E0599]: remove() changed
+  </text>
+  <text x="175" y="875" font-family="Courier New, monospace" font-size="36" fill="#888">
+    in Rust 2024 edition...
+  </text>
+
+  <!-- Right card: The Fix -->
+  <rect x="1000" y="220" width="820" height="740" rx="24" fill="url(#cardGrad)"/>
+  <rect x="1000" y="220" width="820" height="8" rx="4" fill="#4ade80"/>
+
+  <text x="1080" y="320" font-size="56" opacity="0.8">&#x2728;</text>
+  <text x="1150" y="320" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#4ade80">The Plan</text>
+
+  <text x="1060" y="400" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    &#x2713; Fix bugs in pjmai-rs
+  </text>
+  <text x="1060" y="470" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    &#x2713; Add stack navigation
+  </text>
+  <text x="1060" y="540" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    &#x2713; Explore rig.rs framework
+  </text>
+  <text x="1060" y="610" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    &#x2713; Try langchain for Rust
+  </text>
+
+  <!-- Arrow between cards -->
+  <polygon points="940,540 970,520 970,560" fill="#ffd93d" opacity="0.8"/>
+</svg>

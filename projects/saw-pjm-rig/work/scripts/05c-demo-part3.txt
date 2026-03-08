@@ -1,0 +1,1 @@
+Finally a custom weather tool. The agent decides to call it, passes Tokyo as input, and returns temperature and conditions. All type safe Rust, no Python needed.

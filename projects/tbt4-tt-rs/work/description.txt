@@ -12,7 +12,7 @@ LINKS
 Live Demo: https://toontalk.github.io/toontalk/
 Source Code: https://github.com/nickmain/tt-rs
 Original ToonTalk: https://www.toontalk.com/
-Blog Post: https://softwarewrighter.com/tt-rs
+Blog Post: https://software-wrighter-lab.github.io/tt-rs
 Discord: https://discord.gg/softwarewrighter
 
 CHAPTERS

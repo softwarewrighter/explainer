@@ -1,0 +1,1 @@
+The tool measures four acoustic features. R M S energy shows signal strength and loudness. Zero crossing rate indicates noisiness and texture. Spectral centroid measures perceived brightness in hertz. Spectral bandwidth captures how spread out the frequencies are.

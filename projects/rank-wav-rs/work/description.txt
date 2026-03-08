@@ -1,0 +1,25 @@
+Your AI coding agent just generated fifty sound variants. How do you find the best ones without listening to each one manually?
+
+rank-wav is a Rust command-line tool that analyzes WAV files and ranks them by acoustic measurements. It extracts four features from each file: RMS level for volume, zero-crossing rate for texture, spectral centroid for brightness, and spectral bandwidth for complexity.
+
+The tool offers two scoring modes. Pleasing mode favors warm, smooth sounds with good presence. Best mode prioritizes clarity and balanced frequency content. Both scores are computed for every file, letting you sort by either preference.
+
+Output options include formatted tables for quick review and JSON for scripting. Pipe results to jq to extract top candidates programmatically.
+
+LINKS:
+GitHub: https://github.com/sw-cli-tools/rank-wav-rs
+Install: git clone https://github.com/sw-cli-tools/rank-wav-rs.git && cd rank-wav-rs && cargo install --path .
+
+CHAPTERS:
+0:00 The Problem
+0:19 What is rank-wav
+0:38 Acoustic Features
+0:58 Scoring Modes
+1:18 CLI Usage
+1:37 JSON Output
+1:58 Live Demo
+2:33 Conclusion
+2:54 Get Started
+
+TAGS:
+rust, cli, audio, wav, sound design, procedural audio, acoustic analysis, spectral analysis, command line tools, developer tools

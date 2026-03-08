@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.9"/>
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" style="stop-color:#f5a623;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#f5a623;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+  <ellipse cx="960" cy="480" rx="700" ry="450" fill="url(#centerGlow)"/>
+
+  <!-- Decorative shapes -->
+  <circle cx="120" cy="150" r="180" fill="#4ade80" opacity="0.05"/>
+  <circle cx="1820" cy="900" r="200" fill="#a855f7" opacity="0.05"/>
+  <polygon points="1750,100 1800,180 1700,180" fill="#ffd93d" opacity="0.08"/>
+  <polygon points="180,950 230,1020 130,1020" fill="#00d4ff" opacity="0.08"/>
+
+  <!-- Headline -->
+  <text x="960" y="120" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#f5a623" text-anchor="middle" filter="url(#glow)">
+    Sharpen The Saw
+  </text>
+  <text x="960" y="185" font-family="Arial, sans-serif" font-size="48"
+        fill="#aaa" text-anchor="middle">
+    Weekly habit, lasting results
+  </text>
+
+  <!-- Three pillar cards -->
+  <!-- Card 1: Sharpen -->
+  <rect x="80" y="240" width="560" height="460" rx="24" fill="url(#cardGrad)"/>
+  <rect x="80" y="240" width="560" height="8" rx="4" fill="#4ade80"/>
+  <text x="360" y="340" font-size="72" text-anchor="middle" opacity="0.9">&#x1F527;</text>
+  <text x="360" y="410" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#4ade80" text-anchor="middle">Sharpen</text>
+  <text x="360" y="475" font-family="Arial, sans-serif" font-size="40"
+        fill="#eee" text-anchor="middle">Fixed bugs in</text>
+  <text x="360" y="530" font-family="Arial, sans-serif" font-size="40"
+        fill="#eee" text-anchor="middle">pjmai-rs CLI</text>
+  <text x="360" y="600" font-family="Arial, sans-serif" font-size="36"
+        fill="#888" text-anchor="middle">Edition upgrade,</text>
+  <text x="360" y="650" font-family="Arial, sans-serif" font-size="36"
+        fill="#888" text-anchor="middle">help flags, validation</text>
+
+  <!-- Card 2: Expand -->
+  <rect x="680" y="240" width="560" height="460" rx="24" fill="url(#cardGrad)"/>
+  <rect x="680" y="240" width="560" height="8" rx="4" fill="#ffd93d"/>
+  <text x="960" y="340" font-size="72" text-anchor="middle" opacity="0.9">&#x1F9F0;</text>
+  <text x="960" y="410" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#ffd93d" text-anchor="middle">Expand</text>
+  <text x="960" y="475" font-family="Arial, sans-serif" font-size="40"
+        fill="#eee" text-anchor="middle">New features for</text>
+  <text x="960" y="530" font-family="Arial, sans-serif" font-size="40"
+        fill="#eee" text-anchor="middle">stack and history</text>
+  <text x="960" y="600" font-family="Arial, sans-serif" font-size="36"
+        fill="#888" text-anchor="middle">Push, pop, jump,</text>
+  <text x="960" y="650" font-family="Arial, sans-serif" font-size="36"
+        fill="#888" text-anchor="middle">env auto-detect</text>
+
+  <!-- Card 3: Explore -->
+  <rect x="1280" y="240" width="560" height="460" rx="24" fill="url(#cardGrad)"/>
+  <rect x="1280" y="240" width="560" height="8" rx="4" fill="#a855f7"/>
+  <text x="1560" y="340" font-size="72" text-anchor="middle" opacity="0.9">&#x1F52D;</text>
+  <text x="1560" y="410" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#a855f7" text-anchor="middle">Explore</text>
+  <text x="1560" y="475" font-family="Arial, sans-serif" font-size="40"
+        fill="#eee" text-anchor="middle">Rust AI crates</text>
+  <text x="1560" y="530" font-family="Arial, sans-serif" font-size="40"
+        fill="#eee" text-anchor="middle">rig and langchain</text>
+  <text x="1560" y="600" font-family="Arial, sans-serif" font-size="36"
+        fill="#888" text-anchor="middle">Type safe agents,</text>
+  <text x="1560" y="650" font-family="Arial, sans-serif" font-size="36"
+        fill="#888" text-anchor="middle">vector stores, chains</text>
+
+  <!-- Bottom takeaway card -->
+  <rect x="200" y="750" width="1520" height="260" rx="24" fill="url(#cardGrad)"/>
+  <rect x="200" y="750" width="1520" height="8" rx="4" fill="#00d4ff"/>
+  <text x="960" y="855" font-family="Arial, sans-serif" font-size="52"
+        font-weight="bold" fill="#00d4ff" text-anchor="middle" filter="url(#glow)">
+    &#x1F4C5;  At least once a week
+  </text>
+  <text x="960" y="930" font-family="Arial, sans-serif" font-size="44"
+        fill="#ccc" text-anchor="middle">
+    Small, consistent improvements compound over time.
+  </text>
+
+  <!-- Sparkle accents -->
+  <text x="60" y="770" font-size="36" opacity="0.5">&#x2728;</text>
+  <text x="1840" y="270" font-size="36" opacity="0.5">&#x2728;</text>
+  <text x="640" y="740" font-size="36" opacity="0.4">&#x2B50;</text>
+  <text x="1260" y="740" font-size="36" opacity="0.4">&#x2B50;</text>
+</svg>

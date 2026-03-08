@@ -1,0 +1,1 @@
+JSON output enables scripting and automation. Pipe results to jq to filter by score threshold or extract just the top files. Build pipelines that automatically copy winners to a folder. Perfect for continuous integration or batch processing workflows.

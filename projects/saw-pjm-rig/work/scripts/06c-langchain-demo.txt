@@ -1,0 +1,1 @@
+The example list covers everything from basic prompts to a full conversational retriever. The doc loader example runs without an A P I key, loading text files and splitting them into chunks. It even parsed Zig as a programming language, so the loader clearly has good taste. Thirteen examples in one crate, not bad for a Python port.

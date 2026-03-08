@@ -1,0 +1,1 @@
+Upgrading Project Management for AI in Rust to the twenty twenty four edition broke the remove function. The indexmap crate renamed it to shift remove, and that blocked the entire build. I also fixed help flags for shell aliases, added after help text to every subcommand, and validated arguments.

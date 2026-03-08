@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative -->
+  <text x="1750" y="150" font-size="70" opacity="0.15">🔗</text>
+  <text x="100" y="950" font-size="60" opacity="0.15">⚙️</text>
+
+  <!-- Headline -->
+  <text x="960" y="100" font-family="Arial Black, sans-serif" font-size="64"
+        fill="#00d4ff" text-anchor="middle" filter="url(#glow)">
+    JSON Output for Automation
+  </text>
+
+  <!-- JSON example -->
+  <rect x="100" y="180" width="900" height="780" rx="20" fill="#0a0a14"/>
+  <circle cx="150" cy="220" r="12" fill="#ff6b6b"/>
+  <circle cx="190" cy="220" r="12" fill="#ffd93d"/>
+  <circle cx="230" cy="220" r="12" fill="#4ade80"/>
+
+  <text x="150" y="290" font-family="Courier New" font-size="28" fill="#888">$ rank-wav ./samples --json</text>
+
+  <text x="150" y="350" font-family="Courier New" font-size="26" fill="#ffd93d">[</text>
+  <text x="170" y="395" font-family="Courier New" font-size="26" fill="#ffd93d">{</text>
+  <text x="200" y="440" font-family="Courier New" font-size="26" fill="#00d4ff">"path"</text>
+  <text x="320" y="440" font-family="Courier New" font-size="26" fill="#888">:</text>
+  <text x="350" y="440" font-family="Courier New" font-size="26" fill="#4ade80">"motif_023.wav"</text>
+  <text x="600" y="440" font-family="Courier New" font-size="26" fill="#888">,</text>
+
+  <text x="200" y="485" font-family="Courier New" font-size="26" fill="#00d4ff">"sample_rate"</text>
+  <text x="420" y="485" font-family="Courier New" font-size="26" fill="#888">:</text>
+  <text x="450" y="485" font-family="Courier New" font-size="26" fill="#ff6b6b">44100</text>
+  <text x="540" y="485" font-family="Courier New" font-size="26" fill="#888">,</text>
+
+  <text x="200" y="530" font-family="Courier New" font-size="26" fill="#00d4ff">"rms"</text>
+  <text x="300" y="530" font-family="Courier New" font-size="26" fill="#888">:</text>
+  <text x="330" y="530" font-family="Courier New" font-size="26" fill="#ff6b6b">0.247</text>
+  <text x="430" y="530" font-family="Courier New" font-size="26" fill="#888">,</text>
+
+  <text x="200" y="575" font-family="Courier New" font-size="26" fill="#00d4ff">"zcr"</text>
+  <text x="300" y="575" font-family="Courier New" font-size="26" fill="#888">:</text>
+  <text x="330" y="575" font-family="Courier New" font-size="26" fill="#ff6b6b">0.089</text>
+  <text x="430" y="575" font-family="Courier New" font-size="26" fill="#888">,</text>
+
+  <text x="200" y="620" font-family="Courier New" font-size="26" fill="#00d4ff">"spectral_centroid"</text>
+  <text x="510" y="620" font-family="Courier New" font-size="26" fill="#888">:</text>
+  <text x="540" y="620" font-family="Courier New" font-size="26" fill="#ff6b6b">2134.5</text>
+  <text x="650" y="620" font-family="Courier New" font-size="26" fill="#888">,</text>
+
+  <text x="200" y="665" font-family="Courier New" font-size="26" fill="#00d4ff">"spectral_bandwidth"</text>
+  <text x="540" y="665" font-family="Courier New" font-size="26" fill="#888">:</text>
+  <text x="570" y="665" font-family="Courier New" font-size="26" fill="#ff6b6b">1876.2</text>
+  <text x="680" y="665" font-family="Courier New" font-size="26" fill="#888">,</text>
+
+  <text x="200" y="710" font-family="Courier New" font-size="26" fill="#00d4ff">"pleasing_score"</text>
+  <text x="470" y="710" font-family="Courier New" font-size="26" fill="#888">:</text>
+  <text x="500" y="710" font-family="Courier New" font-size="26" fill="#4ade80">0.847</text>
+  <text x="600" y="710" font-family="Courier New" font-size="26" fill="#888">,</text>
+
+  <text x="200" y="755" font-family="Courier New" font-size="26" fill="#00d4ff">"best_score"</text>
+  <text x="410" y="755" font-family="Courier New" font-size="26" fill="#888">:</text>
+  <text x="440" y="755" font-family="Courier New" font-size="26" fill="#4ade80">0.921</text>
+
+  <text x="170" y="800" font-family="Courier New" font-size="26" fill="#ffd93d">}</text>
+  <text x="195" y="800" font-family="Courier New" font-size="26" fill="#888">,</text>
+  <text x="170" y="845" font-family="Courier New" font-size="26" fill="#888">...</text>
+  <text x="150" y="890" font-family="Courier New" font-size="26" fill="#ffd93d">]</text>
+
+  <!-- Use cases panel -->
+  <rect x="1050" y="180" width="770" height="780" rx="24" fill="url(#cardGrad)"/>
+  <rect x="1050" y="180" width="770" height="8" rx="4" fill="#4ade80"/>
+
+  <text x="1435" y="270" font-family="Arial Black" font-size="48" fill="#4ade80" text-anchor="middle">
+    Script Integration
+  </text>
+
+  <text x="1120" y="350" font-family="Arial" font-size="36" fill="#fff">✓ Filter by threshold</text>
+  <rect x="1120" y="380" width="630" height="60" rx="8" fill="#0a0a14"/>
+  <text x="1140" y="420" font-family="Courier New" font-size="24" fill="#888">jq '.[] | select(.best_score > 0.8)'</text>
+
+  <text x="1120" y="500" font-family="Arial" font-size="36" fill="#fff">✓ Extract top files</text>
+  <rect x="1120" y="530" width="630" height="60" rx="8" fill="#0a0a14"/>
+  <text x="1140" y="570" font-family="Courier New" font-size="24" fill="#888">jq '.[0:5] | .[].path'</text>
+
+  <text x="1120" y="650" font-family="Arial" font-size="36" fill="#fff">✓ Copy winners</text>
+  <rect x="1120" y="680" width="630" height="100" rx="8" fill="#0a0a14"/>
+  <text x="1140" y="720" font-family="Courier New" font-size="22" fill="#888">rank-wav . --json |</text>
+  <text x="1160" y="755" font-family="Courier New" font-size="22" fill="#888">jq -r '.[0].path' | xargs cp -t best/</text>
+
+  <text x="1120" y="830" font-family="Arial" font-size="36" fill="#fff">✓ Build pipelines</text>
+  <rect x="1120" y="860" width="630" height="60" rx="8" fill="#0a0a14"/>
+  <text x="1140" y="900" font-family="Courier New" font-size="24" fill="#888">Makefile, CI/CD, batch processing</text>
+</svg>

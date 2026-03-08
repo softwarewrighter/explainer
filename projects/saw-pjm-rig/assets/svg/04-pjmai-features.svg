@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative -->
+  <circle cx="960" cy="100" r="300" fill="#f5a623" opacity="0.04"/>
+  <circle cx="200" cy="900" r="200" fill="#00d4ff" opacity="0.05"/>
+
+  <!-- Headline -->
+  <text x="960" y="110" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#f5a623" text-anchor="middle" filter="url(#glow)">
+    Stack + History + Env Config
+  </text>
+
+  <!-- Stack navigation demo -->
+  <rect x="80" y="180" width="880" height="420" rx="24" fill="url(#cardGrad)"/>
+  <rect x="80" y="180" width="880" height="8" rx="4" fill="#4ade80"/>
+  <text x="150" y="260" font-size="48" opacity="0.9">&#x1F4DA;</text>
+  <text x="220" y="260" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#4ade80">Push/Pop Stack</text>
+
+  <!-- Terminal showing stack usage -->
+  <rect x="120" y="290" width="800" height="280" rx="12" fill="#0a0a14"/>
+  <circle cx="155" cy="325" r="8" fill="#ff6b6b"/>
+  <circle cx="185" cy="325" r="8" fill="#ffd93d"/>
+  <circle cx="215" cy="325" r="8" fill="#4ade80"/>
+  <text x="155" y="375" font-family="Courier New, monospace" font-size="36" fill="#4ade80">$ chpj my-api</text>
+  <text x="155" y="420" font-family="Courier New, monospace" font-size="36" fill="#888">switched to my-api</text>
+  <text x="155" y="465" font-family="Courier New, monospace" font-size="36" fill="#4ade80">$ chpj --push hotfix</text>
+  <text x="155" y="510" font-family="Courier New, monospace" font-size="36" fill="#888">pushed my-api, switched to hotfix</text>
+  <text x="155" y="555" font-family="Courier New, monospace" font-size="36" fill="#ffd93d">$ popj</text>
+
+  <!-- History tracking -->
+  <rect x="980" y="180" width="860" height="420" rx="24" fill="url(#cardGrad)"/>
+  <rect x="980" y="180" width="860" height="8" rx="4" fill="#00d4ff"/>
+  <text x="1050" y="260" font-size="48" opacity="0.9">&#x1F4CB;</text>
+  <text x="1120" y="260" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#00d4ff">Navigation History</text>
+
+  <rect x="1020" y="290" width="780" height="280" rx="12" fill="#0a0a14"/>
+  <circle cx="1055" cy="325" r="8" fill="#ff6b6b"/>
+  <circle cx="1085" cy="325" r="8" fill="#ffd93d"/>
+  <circle cx="1115" cy="325" r="8" fill="#4ade80"/>
+  <text x="1055" y="375" font-family="Courier New, monospace" font-size="36" fill="#4ade80">$ hypj</text>
+  <text x="1055" y="420" font-family="Courier New, monospace" font-size="36" fill="#eee"> 1. my-api     (2m ago)</text>
+  <text x="1055" y="465" font-family="Courier New, monospace" font-size="36" fill="#eee"> 2. hotfix     (5m ago)</text>
+  <text x="1055" y="510" font-family="Courier New, monospace" font-size="36" fill="#eee"> 3. docs-site  (1h ago)</text>
+  <text x="1055" y="555" font-family="Courier New, monospace" font-size="36" fill="#ffd93d">$ hypj 3</text>
+
+  <!-- Environment config -->
+  <rect x="80" y="640" width="1760" height="380" rx="24" fill="url(#cardGrad)"/>
+  <rect x="80" y="640" width="1760" height="8" rx="4" fill="#a855f7"/>
+  <text x="150" y="720" font-size="48" opacity="0.9">&#x2699;</text>
+  <text x="220" y="720" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#a855f7">Per-Project Environment Configuration</text>
+
+  <rect x="120" y="750" width="820" height="240" rx="12" fill="#0a0a14"/>
+  <circle cx="155" cy="785" r="8" fill="#ff6b6b"/>
+  <circle cx="185" cy="785" r="8" fill="#ffd93d"/>
+  <circle cx="215" cy="785" r="8" fill="#4ade80"/>
+  <text x="155" y="835" font-family="Courier New, monospace" font-size="36" fill="#a855f7"># .pjmai.sh (auto-detected)</text>
+  <text x="155" y="880" font-family="Courier New, monospace" font-size="36" fill="#eee">export DATABASE_URL=...</text>
+  <text x="155" y="925" font-family="Courier New, monospace" font-size="36" fill="#eee">source .venv/bin/activate</text>
+  <text x="155" y="970" font-family="Courier New, monospace" font-size="36" fill="#4ade80">nvm use 20</text>
+
+  <!-- Right side: auto-detection list -->
+  <text x="1020" y="800" font-family="Arial, sans-serif" font-size="44" fill="#eee">&#x2713; Python venvs detected</text>
+  <text x="1020" y="860" font-family="Arial, sans-serif" font-size="44" fill="#eee">&#x2713; Node.js projects detected</text>
+  <text x="1020" y="920" font-family="Arial, sans-serif" font-size="44" fill="#eee">&#x2713; Rust workspaces detected</text>
+  <text x="1020" y="980" font-family="Arial, sans-serif" font-size="44" fill="#eee">&#x2713; direnv integration</text>
+</svg>

@@ -1,0 +1,28 @@
+Sharpening the saw: fixing bugs in my Rust CLI, then exploring two AI agent frameworks. I fix pjmai-rs (edition 2024 migration, stack navigation, history tracking), demo rig.rs for type-safe AI agents, and try langchain-rust with its thirteen built-in examples.
+
+Links:
+- pjmai-rs: https://github.com/sw-cli-tools/pjmai-rs
+- try-rig: https://github.com/softwarewrighter/try-rig
+- try-langchain-rust: https://github.com/softwarewrighter/try-langchain-rust
+- rig framework: https://rig.rs
+- langchain-rust: https://crates.io/crates/langchain-rust
+- Blog: https://software-wrighter-lab.github.io/
+- Discord: https://discord.com/invite/Ctzk5uHggZ
+
+Chapters:
+0:00 Title
+0:05 Hook
+0:26 Overview
+0:48 pjmai-rs Bug Fixes
+1:09 New Features
+1:30 Rig Framework
+1:52 Rig Demo Intro
+2:07 Rig Demo
+2:52 LangChain Rust
+3:13 LangChain Demo Intro
+3:24 LangChain Demo
+3:44 Conclusions
+3:55 Try It Yourself
+4:15 Subscribe Reminder
+
+#rust #rustlang #ai #aiagents #rig #langchain #cli #developer #programming #opensource

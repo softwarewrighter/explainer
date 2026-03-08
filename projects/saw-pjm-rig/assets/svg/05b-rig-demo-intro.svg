@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.9"/>
+    </linearGradient>
+    <radialGradient id="demoGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4ade80;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#4ade80;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+  <ellipse cx="960" cy="500" rx="700" ry="400" fill="url(#demoGlow)"/>
+
+  <!-- Decorative shapes -->
+  <circle cx="150" cy="180" r="180" fill="#4ade80" opacity="0.05"/>
+  <circle cx="1780" cy="850" r="200" fill="#a855f7" opacity="0.05"/>
+  <polygon points="1700,120 1750,200 1650,200" fill="#ffd93d" opacity="0.08"/>
+
+  <!-- Headline -->
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#4ade80" text-anchor="middle" filter="url(#glow)">
+    &#x1F3AC;  Rig Demo
+  </text>
+  <text x="960" y="235" font-family="Arial, sans-serif" font-size="48"
+        fill="#aaa" text-anchor="middle">
+    AI Agents with Ollama, locally on Mac
+  </text>
+
+  <!-- Terminal mockup preview -->
+  <rect x="260" y="300" width="1400" height="620" rx="20" fill="#0a0a14"/>
+  <circle cx="305" cy="340" r="10" fill="#ff6b6b"/>
+  <circle cx="340" cy="340" r="10" fill="#ffd93d"/>
+  <circle cx="375" cy="340" r="10" fill="#4ade80"/>
+  <text x="960" y="345" font-family="Courier New, monospace" font-size="32"
+        fill="#888" text-anchor="middle">try-rig</text>
+
+  <!-- Demo items listed -->
+  <text x="340" y="440" font-family="Courier New, monospace" font-size="40" fill="#4ade80">
+    $</text>
+  <text x="390" y="440" font-family="Courier New, monospace" font-size="40" fill="#eee">
+    try-rig ask "What is Rust?"</text>
+
+  <text x="340" y="520" font-family="Courier New, monospace" font-size="40" fill="#4ade80">
+    $</text>
+  <text x="390" y="520" font-family="Courier New, monospace" font-size="40" fill="#eee">
+    try-rig tools "What is 42 * 17?"</text>
+
+  <text x="340" y="600" font-family="Courier New, monospace" font-size="40" fill="#4ade80">
+    $</text>
+  <text x="390" y="600" font-family="Courier New, monospace" font-size="40" fill="#eee">
+    try-rig tools "Weather in Tokyo?"</text>
+
+  <!-- Labels on right side -->
+  <text x="1560" y="440" font-family="Arial, sans-serif" font-size="36"
+        fill="#4ade80" text-anchor="end">Simple LLM</text>
+  <text x="1560" y="520" font-family="Arial, sans-serif" font-size="36"
+        fill="#ffd93d" text-anchor="end">Tool Calling</text>
+  <text x="1560" y="600" font-family="Arial, sans-serif" font-size="36"
+        fill="#a855f7" text-anchor="end">Custom Tools</text>
+
+  <!-- Bottom line -->
+  <rect x="340" y="700" width="1240" height="5" rx="2" fill="#333"/>
+  <text x="960" y="780" font-family="Arial, sans-serif" font-size="44"
+        fill="#ccc" text-anchor="middle">
+    Powered by rig-core and Ollama running locally
+  </text>
+  <text x="960" y="850" font-family="Arial, sans-serif" font-size="36"
+        fill="#888" text-anchor="middle">
+    &#x26A1; Type safe Rust with zero Python dependencies
+  </text>
+
+  <!-- Sparkles -->
+  <text x="200" y="920" font-size="36" opacity="0.4">&#x2728;</text>
+  <text x="1720" y="280" font-size="36" opacity="0.4">&#x2728;</text>
+</svg>

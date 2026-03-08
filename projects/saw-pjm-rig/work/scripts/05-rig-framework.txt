@@ -1,0 +1,1 @@
+Rig is a Rust framework for building AI agents with type safety. It gives you a unified A P I across providers like OpenAI and Anthropic. Agents get tools, vector stores, and embeddings. The big win is performance, five times less memory than Python. I am exploring it for future Project Management for AI features.

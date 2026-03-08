@@ -1,0 +1,1 @@
+The big new features are stack navigation and history tracking. Push your current project, switch to a hotfix, then pop back. History shows your last fifty jumps so you can return to any project by index. Plus, per project environment config with auto detection for Python, Node, and Rust.

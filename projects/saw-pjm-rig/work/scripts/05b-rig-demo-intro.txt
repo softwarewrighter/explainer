@@ -1,0 +1,1 @@
+Here is a quick demo of the rig crate in action. It connects to Ollama running locally on my Mac. First a simple ask, then tool calling with a calculator, and finally a custom weather tool.

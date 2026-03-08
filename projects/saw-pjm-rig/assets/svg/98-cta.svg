@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative -->
+  <circle cx="960" cy="540" r="500" fill="#f5a623" opacity="0.04"/>
+  <circle cx="200" cy="200" r="200" fill="#4ade80" opacity="0.06"/>
+  <circle cx="1700" cy="800" r="180" fill="#a855f7" opacity="0.06"/>
+
+  <!-- Headline -->
+  <text x="960" y="120" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#f5a623" text-anchor="middle" filter="url(#glow)">
+    Try It Yourself
+  </text>
+
+  <!-- Card 1: pjmai-rs -->
+  <rect x="120" y="190" width="1680" height="220" rx="24" fill="url(#cardGrad)"/>
+  <rect x="120" y="190" width="1680" height="8" rx="4" fill="#f5a623"/>
+  <text x="200" y="280" font-size="48" opacity="0.9">&#x1F527;</text>
+  <text x="270" y="280" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#f5a623">pjmai-rs</text>
+
+  <rect x="180" y="310" width="1560" height="72" rx="12" fill="#0a0a14"/>
+  <circle cx="215" cy="346" r="8" fill="#ff6b6b"/>
+  <circle cx="245" cy="346" r="8" fill="#ffd93d"/>
+  <circle cx="275" cy="346" r="8" fill="#4ade80"/>
+  <text x="310" y="358" font-family="Courier New, monospace" font-size="36" fill="#4ade80">
+    github.com/sw-cli-tools/pjmai-rs
+  </text>
+
+  <!-- Card 2: Rig -->
+  <rect x="120" y="440" width="1680" height="220" rx="24" fill="url(#cardGrad)"/>
+  <rect x="120" y="440" width="1680" height="8" rx="4" fill="#4ade80"/>
+  <text x="200" y="530" font-size="48" opacity="0.9">&#x1F916;</text>
+  <text x="270" y="530" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#4ade80">Rig Framework</text>
+
+  <rect x="180" y="560" width="1560" height="72" rx="12" fill="#0a0a14"/>
+  <circle cx="215" cy="596" r="8" fill="#ff6b6b"/>
+  <circle cx="245" cy="596" r="8" fill="#ffd93d"/>
+  <circle cx="275" cy="596" r="8" fill="#4ade80"/>
+  <text x="310" y="608" font-family="Courier New, monospace" font-size="36" fill="#4ade80">
+    rig.rs
+  </text>
+
+  <!-- Card 3: langchain-rust -->
+  <rect x="120" y="690" width="1680" height="220" rx="24" fill="url(#cardGrad)"/>
+  <rect x="120" y="690" width="1680" height="8" rx="4" fill="#a855f7"/>
+  <text x="200" y="780" font-size="48" opacity="0.9">&#x1F517;</text>
+  <text x="270" y="780" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#a855f7">langchain-rust</text>
+
+  <rect x="180" y="810" width="1560" height="72" rx="12" fill="#0a0a14"/>
+  <circle cx="215" cy="846" r="8" fill="#ff6b6b"/>
+  <circle cx="245" cy="846" r="8" fill="#ffd93d"/>
+  <circle cx="275" cy="846" r="8" fill="#4ade80"/>
+  <text x="310" y="858" font-family="Courier New, monospace" font-size="36" fill="#a855f7">
+    crates.io/crates/langchain-rust
+  </text>
+
+  <!-- Bottom message -->
+  <text x="960" y="990" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#00d4ff" text-anchor="middle" filter="url(#glow)">
+    Keep your tools sharp. Build with Rust.
+  </text>
+  <text x="960" y="1050" font-family="Arial, sans-serif" font-size="40"
+        fill="#aaa" text-anchor="middle">
+    Drop a comment if you have a favorite Rust AI framework.
+  </text>
+</svg>

@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharpening the Saw - Video Production Status</title>
+    <style>
+        :root {
+            --bg-dark: #1a1a2e;
+            --bg-card: #0f0f23;
+            --cyan: #00d4ff;
+            --yellow: #ffd93d;
+            --green: #4ade80;
+            --red: #ff6b6b;
+            --purple: #a855f7;
+            --orange: #f5a623;
+            --text: #eee;
+            --muted: #888;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: var(--orange);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .meta {
+            text-align: center;
+            color: var(--muted);
+            margin-bottom: 30px;
+        }
+        .segment {
+            background: var(--bg-card);
+            border-radius: 12px;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-left: 4px solid transparent;
+        }
+        .segment.complete { border-left-color: var(--green); }
+        .segment.pending { border-left-color: var(--yellow); }
+        .segment.error { border-left-color: var(--red); }
+        .segment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .segment-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--cyan);
+        }
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .status-complete { background: var(--green); color: #000; }
+        .status-pending { background: var(--yellow); color: #000; }
+        .status-error { background: var(--red); color: #fff; }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 20px;
+        }
+        .thumbnail {
+            width: 320px;
+            height: 180px;
+            background: #222;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .details {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .detail-row {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+        .label {
+            color: var(--muted);
+            width: 100px;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+        .value { flex: 1; }
+        .narration {
+            background: #1a1a2e;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            line-height: 1.6;
+            border-left: 3px solid var(--cyan);
+        }
+        .whisper {
+            background: #1a1a2e;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-style: italic;
+            border-left: 3px solid var(--purple);
+        }
+        .match-yes { color: var(--green); font-weight: bold; }
+        .match-pending { color: var(--yellow); }
+        .music-info {
+            font-family: monospace;
+            color: var(--yellow);
+        }
+        audio {
+            width: 100%;
+            max-width: 400px;
+            height: 40px;
+        }
+        video {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+        .media-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .media-box {
+            background: #1a1a2e;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .media-box .label {
+            width: auto;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .not-ready {
+            color: var(--muted);
+            font-style: italic;
+            padding: 10px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+        }
+        .section-divider {
+            border-top: 1px solid #333;
+            margin: 40px 0 20px;
+            padding-top: 20px;
+        }
+        .section-label {
+            color: var(--yellow);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .char-count {
+            color: var(--muted);
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sharpening the Saw</h1>
+    <div class="meta">
+        pjmai-rs bug fixes + features, Rig framework, langchain-rust<br>
+        <span id="timestamp">Updated: --</span>
+    </div>
+
+    <!-- 00-title -->
+    <div class="segment complete" id="seg-00-title">
+        <div class="segment-header">
+            <span class="segment-title">00 - Title Card</span>
+            <span class="status-badge status-complete">Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/00-title-composite.png" alt="Title">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Type:</span>
+                    <span class="value">Music (no narration), Ken Burns zoom</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Music:</span>
+                    <span class="value music-info">improved-demo wav 0-5s (0.5s fade-out at 4.5s)</span>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls src="clips/00-title.mp4"></video>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Duration:</span>
+                        <span class="value">5.0s</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 01-hook -->
+    <div class="segment complete" id="seg-01-hook">
+        <div class="segment-header">
+            <span class="segment-title">01 - Hook</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/01-hook.png" alt="Hook">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">Every developer has tools that slowly collect dust. Bugs pile up, features sit in the backlog, and the ecosystem keeps moving. Today I am sharpening the saw. Fixing bugs in my project management CLI, and exploring two Rust frameworks for building AI agents.</div>
+                        <span class="char-count">257 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">Every developer has tools that slowly collect dust. Bugs pile up, features sit in the backlog, and the ecosystem keeps moving. Today I am sharpening the saw fixing bugs in my project management CLI and exploring two Rust frameworks for building AI agents.</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/01-hook-raw.wav"></audio>
+                        <span class="char-count">18.2s</span>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls width="320" src="clips/01-hook.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 02-overview -->
+    <div class="segment complete" id="seg-02-overview">
+        <div class="segment-header">
+            <span class="segment-title">02 - Overview</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/02-overview.png" alt="Overview">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">Here is the plan. First, we fix bugs in Project Management for AI in Rust and add features like stack navigation and history tracking. Then we explore rig, a type safe framework for AI agents. Finally, we look at Language Chain in Rust, a port of the popular Python framework.</div>
+                        <span class="char-count">276 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">Here is the plan. First, we fix bugs in project management for AI in Rust, and add features like stack navigation and history tracking. Then we explore Rigty-type safe framework for AI agents. Finally, we look at language chain in Rust, a port of the popular Python framework.</div>
+                        <span class="match-yes">Match: YES (minor transcription)</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/02-overview-raw.wav"></audio>
+                        <span class="char-count">20.0s</span>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls width="320" src="clips/02-overview.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 03-pjmai-bugs -->
+    <div class="segment complete" id="seg-03-bugs">
+        <div class="segment-header">
+            <span class="segment-title">03 - pjmai-rs: Fixing the Foundation</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/03-pjmai-bugs.png" alt="Bug Fixes">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">Upgrading Project Management for AI in Rust to the twenty twenty four edition broke the remove function. The indexmap crate renamed it to shift remove, and that blocked the entire build. I also fixed help flags for shell aliases, added after help text to every subcommand, and validated arguments.</div>
+                        <span class="char-count">297 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">Upgrading project management for AI in Rust to the 2024 edition broke the remove function. The index map create renamed it to shift-remove, and that blocked the entire build. I also fixed help flags for shell IESSes, added after-help text to every subcommand, and validated arguments.</div>
+                        <span class="match-yes">Match: YES (minor transcription)</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/03-pjmai-bugs-raw.wav"></audio>
+                        <span class="char-count">18.7s</span>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls width="320" src="clips/03-pjmai-bugs.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 04-pjmai-features -->
+    <div class="segment complete" id="seg-04-features">
+        <div class="segment-header">
+            <span class="segment-title">04 - Stack + History + Env Config</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/04-pjmai-features.png" alt="Features">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">The big new features are stack navigation and history tracking. Push your current project, switch to a hotfix, then pop back. History shows your last fifty jumps so you can return to any project by index. Plus, per project environment config with auto detection for Python, Node, and Rust.</div>
+                        <span class="char-count">289 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">The big new features are stack navigation and history tracking. Push your current project, switch to a hotfix, then pop back. History shows your last 50 jumps, so you can return to any project by index. Plus, per project environment, config with auto detection for Python, Node, and Rust.</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/04-pjmai-features-raw.wav"></audio>
+                        <span class="char-count">18.6s</span>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls width="320" src="clips/04-pjmai-features.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 05-rig-framework -->
+    <div class="segment complete" id="seg-05-rig">
+        <div class="segment-header">
+            <span class="segment-title">05 - Rig: AI Agents in Rust</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/05-rig-framework.png" alt="Rig Framework">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">Rig is a Rust framework for building AI agents with type safety. It gives you a unified A P I across providers like OpenAI and Anthropic. Agents get tools, vector stores, and embeddings. The big win is performance, five times less memory than Python. I am exploring it for future Project Management for AI features.</div>
+                        <span class="char-count">315 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">RIG is a Rust framework for building AI agents with type safety. It gives you a unified API across providers like OpenAI and Anthropic. Agents get tools, vector stores, and embeddings. The big win is performance. Five times less memory than Python. I'm exploring it for future project management for AI features.</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/05-rig-framework-raw.wav"></audio>
+                        <span class="char-count">20.3s</span>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls width="320" src="clips/05-rig-framework.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 05b-rig-demo-intro -->
+    <div class="segment complete" id="seg-05b-rig-demo-intro">
+        <div class="segment-header">
+            <span class="segment-title">05b - Rig Demo Intro</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/05b-rig-demo-intro.png" alt="Rig Demo Intro">
+            </div>
+            <div class="details">
+                <div class="narration">
+                    <strong>Narration:</strong>
+                    Here is a quick demo of the rig crate in action. It connects to Ollama running locally on my Mac. First a simple ask, then tool calling with a calculator, and finally a custom weather tool.
+                </div>
+                <div class="media-grid">
+                    <div class="media-item">
+                        <span class="media-label">Audio (14.3s)</span>
+                        <audio controls src="audio/05b-rig-demo-intro-raw.wav"></audio>
+                    </div>
+                    <div class="media-item">
+                        <span class="media-label">Clip</span>
+                        <video controls width="320" src="clips/05b-rig-demo-intro.mp4"></video>
+                    </div>
+                </div>
+                <div class="whisper-result">
+                    <strong>Whisper:</strong> Here's a quick demo of the rig crate in action. It connects to Alama running locally on my Mac. First a simple ask, then tool calling with a calculator, and finally a custom weather tool.
+                    <span class="match-good">Close match (Ollama heard as Alama)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 05c-rig-demo -->
+    <div class="segment complete" id="seg-05c-rig-demo">
+        <div class="segment-header">
+            <span class="segment-title">05c - Rig Demo (Terminal Recording + Narration)</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail" style="background:#0a0a14;display:flex;align-items:center;justify-content:center;border-radius:8px;padding:10px;">
+                <video controls width="480" src="clips/05c-rig-demo.mp4"></video>
+            </div>
+            <div class="details">
+                <div class="narration">
+                    <strong>Source:</strong> Converted from try-rig/docs/demo.gif (existing VHS recording), trimmed to 45s.
+                    <br><strong>Narration (3 timed parts):</strong>
+                    <br><em>@2s:</em> We start with a simple ask. The rig crate connects to Ollama running locally and sends the question. The response comes back in seconds, running entirely on my Mac.
+                    <br><em>@16s:</em> Next we try tool calling. The agent has a calculator tool. When asked forty two times seventeen, it calls the tool automatically and returns the correct answer.
+                    <br><em>@30s:</em> Finally a custom weather tool. The agent decides to call it, passes Tokyo as input, and returns temperature and conditions. All type safe Rust, no Python needed.
+                </div>
+                <div class="media-grid">
+                    <div class="media-item">
+                        <span class="media-label">Audio (45.0s, 3 parts mixed)</span>
+                        <audio controls src="audio/05c-rig-demo-narration.wav"></audio>
+                    </div>
+                </div>
+                <div class="whisper-result">
+                    <strong>Whisper:</strong> We start with a simple ask. The rig crate connects to a llama running locally and sends the question. The response comes back in seconds, running entirely on my Mac. Next, we try tool calling. The agent has a calculator tool. When asked 42 times 17, it calls the tool automatically and returns the correct answer. Finally, a custom weather tool, the agent decides to call it passes Tokyo as input and returns temperature and conditions. All types safe rust, no Python needed.
+                    <span class="match-good">Good match</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 06-langchain-rust -->
+    <div class="segment complete" id="seg-06-langchain">
+        <div class="segment-header">
+            <span class="segment-title">06 - langchain-rust</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/06-langchain-rust.png" alt="langchain-rust">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">Language Chain in Rust ports the popular Python framework to Rust. It offers chain abstractions, agent systems, document loaders for PDF and HTML, and vector stores like Postgres and Qdrant. It has broader ecosystem support than rig, but rig has better type safety. Both are worth watching.</div>
+                        <span class="char-count">290 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">Language Chain in Rust ports the popular Python framework to Rust. It offers chain abstractions, agent systems, document loaders for PDF and HTML, and vector stores like Postgres and Cued Rank. It has broader ecosystem support than RIG, but RIG has better type safety. Both are worth watching.</div>
+                        <span class="match-yes">Match: YES (Qdrant transcribed as "Cued Rank")</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/06-langchain-rust-raw.wav"></audio>
+                        <span class="char-count">19.7s</span>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls width="320" src="clips/06-langchain-rust.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 06b-langchain-demo-intro -->
+    <div class="segment complete" id="seg-06b-langchain-demo-intro">
+        <div class="segment-header">
+            <span class="segment-title">06b - LangChain Rust Demo Intro</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/06b-langchain-demo-intro.png" alt="LangChain Demo Intro">
+            </div>
+            <div class="details">
+                <div class="narration">
+                    <strong>Narration:</strong>
+                    Language Chain in Rust has thirteen built in examples. Chains, agents, document loaders, vector stores, and a semantic router. It runs cargo run to show the full list.
+                </div>
+                <div class="media-grid">
+                    <div class="media-item">
+                        <span class="media-label">Audio</span>
+                        <audio controls src="audio/06b-langchain-demo-intro-raw.wav"></audio>
+                    </div>
+                    <div class="media-item">
+                        <span class="media-label">Clip</span>
+                        <video controls width="320" src="clips/06b-langchain-demo-intro.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 06c-langchain-demo -->
+    <div class="segment complete" id="seg-06c-langchain-demo">
+        <div class="segment-header">
+            <span class="segment-title">06c - LangChain Rust Demo (Terminal Recording + Narration)</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail" style="background:#0a0a14;display:flex;align-items:center;justify-content:center;border-radius:8px;padding:10px;">
+                <video controls width="480" src="clips/06c-langchain-demo.mp4"></video>
+            </div>
+            <div class="details">
+                <div class="narration">
+                    <strong>Source:</strong> Converted from try-langchain-rust/docs/demo.gif, 21s full duration.
+                    <br><strong>Narration:</strong>
+                    The example list covers everything from basic prompts to a full conversational retriever. The doc loader example runs without an A P I key, loading text files and splitting them into chunks. It even parsed Zig as a programming language, so the loader clearly has good taste. Thirteen examples in one crate, not bad for a Python port.
+                </div>
+                <div class="media-grid">
+                    <div class="media-item">
+                        <span class="media-label">Audio (padded to 21s)</span>
+                        <audio controls src="audio/06c-langchain-demo-padded.wav"></audio>
+                    </div>
+                    <div class="media-item">
+                        <span class="media-label">Clip</span>
+                        <video controls width="320" src="clips/06c-langchain-demo.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 07-conclusions -->
+    <div class="segment complete" id="seg-07-conclusions">
+        <div class="segment-header">
+            <span class="segment-title">07 - Conclusions</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/07-conclusions.png" alt="Conclusions">
+            </div>
+            <div class="details">
+                <div class="narration">
+                    <strong>Narration:</strong>
+                    I sharpened an existing tool, added more tools to my toolbox, and investigated ways of improving my productivity. I make it a point to do this at least once a week.
+                </div>
+                <div class="media-grid">
+                    <div class="media-item">
+                        <span class="media-label">Audio (10.1s)</span>
+                        <audio controls src="audio/07-conclusions-raw.wav"></audio>
+                    </div>
+                    <div class="media-item">
+                        <span class="media-label">Clip</span>
+                        <video controls width="320" src="clips/07-conclusions.mp4"></video>
+                    </div>
+                </div>
+                <div class="whisper-result">
+                    <strong>Whisper:</strong> I sharpened an existing tool, added more tools to my toolbox, and investigated ways of improving my productivity. I make it a point to do this at least once a week.
+                    <span class="match-good">Exact match</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+    <div class="section-label">Outro Segments</div>
+
+    <!-- 98-cta -->
+    <div class="segment complete" id="seg-98-cta">
+        <div class="segment-header">
+            <span class="segment-title">98 - Call to Action</span>
+            <span class="status-badge status-complete">TTS Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <img src="stills/98-cta.png" alt="CTA">
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Narration:</span>
+                    <div class="value">
+                        <div class="narration">You can find Project Management for AI in the Software Wrighter Command Line Tools repo on GitHub. Check out rig at rig.rs and Language Chain in Rust on crates.io. Keep your tools sharp and build with Rust. Drop a comment below if you have a favorite Rust A I framework.</div>
+                        <span class="char-count">270 characters</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">You can find project management for AI in the Software Writer Command Line Tools repo on GitHub. Check out RIG at rig.rs and languagechain and Rust on crates.io. Keep your tools sharp and build with Rust. Drop a comment below if you have a favorite Rust AI framework.</div>
+                        <span class="match-yes">Match: YES (minor transcription)</span>
+                    </div>
+                </div>
+                <div class="media-grid">
+                    <div class="media-box">
+                        <span class="label">Audio:</span>
+                        <audio controls src="audio/98-cta-raw.wav"></audio>
+                        <span class="char-count">18.4s</span>
+                    </div>
+                    <div class="media-box">
+                        <span class="label">Video:</span>
+                        <video controls width="320" src="clips/98-cta.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 99 - Subscribe Reminder (SHARED) -->
+    <div class="segment complete" id="seg-99-subscribe">
+        <div class="segment-header">
+            <span class="segment-title">99 - Subscribe Reminder (SHARED)</span>
+            <span class="status-badge status-complete">Verified</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <video controls src="clips/99-subscribe-reminder.mp4" style="width:320px;height:180px;object-fit:cover;"></video>
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Source:</span>
+                    <span class="value">Copied from shared/99-subscribe-reminder-narrated.mp4</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Duration:</span>
+                    <span class="value">12.817 seconds</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Audio:</span>
+                    <span class="value" style="color: var(--green);">NARRATION: "If you found this helpful, please like and subscribe..."</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Whisper:</span>
+                    <div class="value">
+                        <div class="whisper">If you found this helpful, please like and subscribe. Hit the bell for notifications and leave a comment if you have questions. See you in the next one. Bye!</div>
+                        <span class="match-yes">Match: YES</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 99x - Outro (UNIQUE) -->
+    <div class="segment complete" id="seg-99x-outro">
+        <div class="segment-header">
+            <span class="segment-title">99x - Outro (UNIQUE)</span>
+            <span class="status-badge status-complete">Complete</span>
+        </div>
+        <div class="content-grid">
+            <div class="thumbnail">
+                <video controls src="clips/99x-outro.mp4" style="width:320px;height:180px;object-fit:cover;"></video>
+            </div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="label">Visual:</span>
+                    <span class="value">Last frame of subscribe reminder</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Audio:</span>
+                    <span class="value music-info">MUSIC: improved-demo wav 2-9s (0.5s fade-in, 0.5s fade-out, vol 0.5)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Duration:</span>
+                    <span class="value">7.0 seconds</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+    <div class="section-label">Production Commands</div>
+
+    <div class="segment" style="border-left-color: var(--cyan);">
+        <div class="segment-header">
+            <span class="segment-title">Quick Reference</span>
+        </div>
+        <div class="details" style="font-family: monospace; font-size: 14px;">
+            <p><strong>Generate TTS:</strong></p>
+            <code style="display: block; background: #0a0a14; padding: 10px; border-radius: 6px; margin: 5px 0;">
+                cd work && ./generate-tts.sh
+            </code>
+            <p><strong>Render SVG to PNG:</strong></p>
+            <code style="display: block; background: #0a0a14; padding: 10px; border-radius: 6px; margin: 5px 0;">
+                rsvg-convert -w 1920 -h 1080 assets/svg/01-hook.svg -o work/stills/01-hook.png
+            </code>
+            <p><strong>Create clip from still + audio:</strong></p>
+            <code style="display: block; background: #0a0a14; padding: 10px; border-radius: 6px; margin: 5px 0;">
+                ffmpeg -y -loop 1 -i work/stills/01-hook.png -i work/audio/01-hook.wav -c:v libx264 -tune stillimage -crf 18 -pix_fmt yuv420p -c:a aac -b:a 192k -shortest work/clips/01-hook.mp4
+            </code>
+            <p><strong>Normalize volume:</strong></p>
+            <code style="display: block; background: #0a0a14; padding: 10px; border-radius: 6px; margin: 5px 0;">
+                ./scripts/normalize-volume.sh work/clips/01-hook.mp4
+            </code>
+            <p><strong>Copy subscribe reminder:</strong></p>
+            <code style="display: block; background: #0a0a14; padding: 10px; border-radius: 6px; margin: 5px 0;">
+                cp /Users/mike/github/softwarewrighter/explainer/shared/99-subscribe-reminder-narrated.mp4 work/clips/99-subscribe-reminder.mp4
+            </code>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('timestamp').textContent = 'Updated: ' + new Date().toLocaleString();
+    </script>
+</body>
+</html>

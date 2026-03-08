@@ -1,0 +1,1 @@
+Clone the repo from GitHub and build with cargo. Point rank wav at your samples directory and start ranking. Links and documentation are in the description below.

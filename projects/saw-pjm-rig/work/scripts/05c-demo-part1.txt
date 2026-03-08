@@ -1,0 +1,1 @@
+We start with a simple ask. The rig crate connects to Ollama running locally and sends the question. The response comes back in seconds, running entirely on my Mac.

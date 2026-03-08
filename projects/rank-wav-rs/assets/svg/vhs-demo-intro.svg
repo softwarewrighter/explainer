@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.95"/>
+    </linearGradient>
+    <linearGradient id="demoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b6b"/>
+      <stop offset="100%" style="stop-color:#ffd93d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative elements -->
+  <circle cx="200" cy="200" r="150" fill="#4ade80" opacity="0.05"/>
+  <circle cx="1720" cy="880" r="200" fill="#00d4ff" opacity="0.05"/>
+  <text x="1650" y="200" font-size="100" opacity="0.15">🎬</text>
+
+  <!-- Main card -->
+  <rect x="310" y="280" width="1300" height="520" rx="32" fill="url(#cardGrad)"/>
+  <rect x="310" y="280" width="1300" height="12" rx="6" fill="url(#demoGrad)"/>
+
+  <!-- Demo badge -->
+  <rect x="760" y="340" width="400" height="80" rx="40" fill="url(#demoGrad)" filter="url(#glow)"/>
+  <text x="960" y="398" font-family="Arial Black, sans-serif" font-size="48"
+        fill="#fff" text-anchor="middle">
+    LIVE DEMO
+  </text>
+
+  <!-- Title -->
+  <text x="960" y="520" font-family="Arial Black, sans-serif" font-size="72"
+        fill="#fff" text-anchor="middle">
+    rank-wav in Action
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="600" font-family="Arial, sans-serif" font-size="42"
+        fill="#888" text-anchor="middle">
+    Scanning, analyzing, and ranking WAV files
+  </text>
+
+  <!-- Feature highlights -->
+  <g transform="translate(400, 680)">
+    <circle cx="0" cy="0" r="12" fill="#4ade80"/>
+    <text x="30" y="8" font-family="Arial" font-size="32" fill="#fff">Directory scan</text>
+  </g>
+  <g transform="translate(720, 680)">
+    <circle cx="0" cy="0" r="12" fill="#ffd93d"/>
+    <text x="30" y="8" font-family="Arial" font-size="32" fill="#fff">Acoustic analysis</text>
+  </g>
+  <g transform="translate(1100, 680)">
+    <circle cx="0" cy="0" r="12" fill="#00d4ff"/>
+    <text x="30" y="8" font-family="Arial" font-size="32" fill="#fff">Ranked results</text>
+  </g>
+
+  <!-- Terminal hint -->
+  <rect x="560" y="740" width="800" height="60" rx="12" fill="#0a0a14"/>
+  <text x="960" y="782" font-family="Courier New, monospace" font-size="32"
+        fill="#4ade80" text-anchor="middle">
+    $ rank-wav ./samples --sort best
+  </text>
+</svg>

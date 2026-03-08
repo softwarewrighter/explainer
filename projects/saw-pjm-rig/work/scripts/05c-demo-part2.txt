@@ -1,0 +1,1 @@
+Next we try tool calling. The agent has a calculator tool. When asked forty two times seventeen, it calls the tool automatically and returns the correct answer.

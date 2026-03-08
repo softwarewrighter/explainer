@@ -1,0 +1,1 @@
+Rank wav is a Rust command line tool that analyzes audio files and ranks them by different acoustic measurements. Point it at a directory of wave files and it extracts four metrics from each one, then scores and sorts them. The best sounding files rise to the top.

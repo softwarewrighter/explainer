@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rank-wav-rs Explainer Video Preview</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #32CD32;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      text-align: center;
+      color: #888;
+      margin-bottom: 30px;
+    }
+    .segment {
+      background: #16213e;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 4px solid #32CD32;
+    }
+    .segment.pending { border-left-color: #666; }
+    .segment.ready { border-left-color: #32CD32; }
+    .segment.audio { border-left-color: #ffd93d; }
+    .segment-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .segment-title {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #32CD32;
+    }
+    .segment.pending .segment-title { color: #888; }
+    .segment.audio .segment-title { color: #ffd93d; }
+    .status {
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      font-weight: bold;
+    }
+    .status.ready { background: #32CD32; color: #000; }
+    .status.pending { background: #444; color: #aaa; }
+    .status.audio { background: #ffd93d; color: #000; }
+    .content-grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 20px;
+    }
+    .thumbnail {
+      width: 200px;
+      height: 112px;
+      background: #0a0a14;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 0.9em;
+      overflow: hidden;
+    }
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .details { flex: 1; }
+    .narration {
+      background: #0a0a14;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-family: monospace;
+      font-size: 0.9em;
+      line-height: 1.5;
+      color: #4ade80;
+    }
+    .whisper {
+      background: #1a1a3e;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-family: monospace;
+      font-size: 0.85em;
+      line-height: 1.5;
+      color: #888;
+    }
+    .whisper-label {
+      color: #666;
+      font-size: 0.8em;
+      margin-bottom: 5px;
+    }
+    .players {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    audio { height: 32px; }
+    video {
+      max-width: 400px;
+      border-radius: 8px;
+    }
+    .placeholder {
+      background: #333;
+      padding: 8px 16px;
+      border-radius: 6px;
+      color: #666;
+      font-style: italic;
+    }
+    .duration {
+      color: #888;
+      font-size: 0.85em;
+    }
+  </style>
+</head>
+<body>
+  <h1>So You Think You Can WAV</h1>
+  <p class="subtitle">rank-wav-rs Explainer Video - Segment Preview</p>
+
+  <!-- 00 - Title -->
+  <div class="segment ready">
+    <div class="segment-header">
+      <span class="segment-title">00 - Title</span>
+      <span class="status ready">READY</span>
+    </div>
+    <div class="content-grid">
+      <div class="thumbnail">
+        <img src="stills/00-title-overlay.png" alt="Title">
+      </div>
+      <div class="details">
+        <div class="narration">[APPLAUSE - No narration]</div>
+        <div class="players">
+          <video controls src="clips/00-title.mp4"></video>
+          <span class="duration">5.0s</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01 - Hook -->
+  <div class="segment audio">
+    <div class="segment-header">
+      <span class="segment-title">01 - Hook</span>
+      <span class="status audio">AUDIO</span>
+    </div>
+    <div class="content-grid">
+      <div class="thumbnail">
+        <img src="stills/01-hook.png" alt="Hook">
+      </div>
+      <div class="details">
+        <div class="narration">Your AI Coding Agent generated fifty sound variants. Now you want to find the best ones. Do you listen to each one manually? That takes forever and your ears get tired. There has to be a better way.</div>
+        <div class="whisper-label">Whisper verification:</div>
+        <div class="whisper">Your AI coding agent generated 50 sound variants. Now you want to find the best ones. Do you listen to each one manually? That takes forever and your ears get tired. There has to be a better way.</div>
+        <div class="players">
+          <audio controls src="audio/01-hook-raw.wav"></audio>
+          <span class="duration">11.8s</span>
+          <span class="placeholder">Video pending</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 - Overview -->
+  <div class="segment audio">
+    <div class="segment-header">
+      <span class="segment-title">02 - Overview</span>
+      <span class="status audio">AUDIO</span>
+    </div>
+    <div class="content-grid">
+      <div class="thumbnail">
+        <img src="stills/02-overview.png" alt="Overview">
+      </div>
+      <div class="details">
+        <div class="narration">Rank wav is a Rust command line tool that analyzes audio files and ranks them by different acoustic measurements. Point it at a directory of wave files and it extracts four metrics from each one, then scores and sorts them. The best sounding files rise to the top.</div>
+        <div class="whisper-label">Whisper verification:</div>
+        <div class="whisper">Rank Wave is a Rust command line tool that analyzes audio files and ranks them by different acoustic measurements. Point it at a directory of WAV files and it extracts four metrics from each one, then scores and sorts them. The best sounding files rise to the top.</div>
+        <div class="players">
+          <audio controls src="audio/02-overview-raw.wav"></audio>
+          <span class="duration">16.0s</span>
+          <span class="placeholder">Video pending</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 - Acoustic Features -->
+  <div class="segment audio">
+    <div class="segment-header">
+      <span class="segment-title">03 - Acoustic Features</span>
+      <span class="status audio">AUDIO</span>
+    </div>
+    <div class="content-grid">
+      <div class="thumbnail">
+        <img src="stills/03-acoustic-features.png" alt="Acoustic Features">
+      </div>
+      <div class="details">
+        <div class="narration">The tool measures four acoustic features. R M S energy shows signal strength and loudness. Zero crossing rate indicates noisiness and texture. Spectral centroid measures perceived brightness in hertz. Spectral bandwidth captures how spread out the frequencies are.</div>
+        <div class="whisper-label">Whisper verification:</div>
+        <div class="whisper">The tool measures four acoustic features. RMS energy shows signal strength and loudness. Zero crossing rate indicates noisiness and texture. Spectral centroid measures perceived brightness in hertz. Spectral bandwidth captures how spread out the frequencies are.</div>
+        <div class="players">
+          <audio controls src="audio/03-acoustic-features-raw.wav"></audio>
+          <span class="duration">17.1s</span>
+          <span class="placeholder">Video pending</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 - Scoring Modes -->
+  <div class="segment audio">
+    <div class="segment-header">
+      <span class="segment-title">04 - Scoring Modes</span>
+      <span class="status audio">AUDIO</span>
+    </div>
+    <div class="content-grid">
+      <div class="thumbnail">
+        <img src="stills/04-scoring-modes.png" alt="Scoring Modes">
+      </div>
+      <div class="details">
+        <div class="narration">Two scoring modes let you choose what sounds best. Pleasing mode favors warm smooth sounds by penalizing brightness and complexity. Best mode favors clear balanced audio with strong presence. Use pleasing for pads and backgrounds, best for leads and effects.</div>
+        <div class="whisper-label">Whisper verification:</div>
+        <div class="whisper">Two scoring modes let you choose what sounds best. Pleasing mode favors warm, smooth sounds by penalizing brightness and complexity. Best mode favors clear, balanced audio with strong presence. Use pleasing for pads and backgrounds, best for leads and effects.</div>
+        <div class="players">
+          <audio controls src="audio/04-scoring-modes-raw.wav"></audio>
+          <span class="duration">16.8s</span>
+          <span class="placeholder">Video pending</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 - CLI Usage -->
+  <div class="segment audio">
+    <div class="segment-header">
+      <span class="segment-title">05 - CLI Usage</span>
+      <span class="status audio">AUDIO</span>
+    </div>
+    <div class="content-grid">
+      <div class="thumbnail">
+        <img src="stills/05-cli-usage.png" alt="CLI Usage">
+      </div>
+      <div class="details">
+        <div class="narration">The command line interface is simple. Pass a directory and get a ranked table. Add dash r to scan subdirectories recursively. Use dash dash sort to pick pleasing or best mode. Add dash dash json for machine readable output.</div>
+        <div class="whisper-label">Whisper verification:</div>
+        <div class="whisper">The command line interface is simple. Pass a directory and get a rank table. Add -r to scan subdirectories recursively. Use --sort to pick pleasing or best mode. Add --json for machine readable output.</div>
+        <div class="players">
+          <audio controls src="audio/05-cli-usage-raw.wav"></audio>
+          <span class="duration">16.0s</span>
+          <span class="placeholder">Video pending</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 - JSON Output -->
+  <div class="segment audio">
+    <div class="segment-header">
+      <span class="segment-title">06 - JSON Output</span>
+      <span class="status audio">AUDIO</span>
+    </div>
+    <div class="content-grid">
+      <div class="thumbnail">
+        <img src="stills/06-json-output.png" alt="JSON Output">
+      </div>
+      <div class="details">
+        <div class="narration">JSON output enables scripting and automation. Pipe results to jq to filter by score threshold or extract just the top files. Build pipelines that automatically copy winners to a folder. Perfect for continuous integration or batch processing workflows.</div>
+        <div class="whisper-label">Whisper verification:</div>
+        <div class="whisper">JSON output enables scripting and automation. Pipe results to JQ to filter by score threshold or extract just the top files. Build pipelines that automatically copy winners to a folder. Perfect for continuous integration or batch processing workflows.</div>
+        <div class="players">
+          <audio controls src="audio/06-json-output-raw.wav"></audio>
+          <span class="duration">18.4s</span>
+          <span class="placeholder">Video pending</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 07 - VHS Demo Intro -->
+  <div class="segment audio">
+    <div class="segment-header">
+      <span class="segment-title">07 - VHS Demo Intro</span>
+      <span class="status audio">AUDIO</span>
+    </div>
+    <div class="content-grid">
+      <div class="thumbnail">
+        <img src="stills/07-vhs-demo-intro.png" alt="VHS Demo Intro">
+      </div>
+      <div class="details">
+        <div class="narration">Let me show you rank wav in action. We will scan a directory of wave files, see the acoustic analysis, and find the top ranked audio automatically.</div>
+        <div class="whisper-label">Whisper verification:</div>
+        <div class="whisper">Let me show you Rank Wave in action. We will scan a directory of WAV files, see the acoustic analysis, and find the top-ranked audio automatically.</div>
+        <div class="players">
+          <audio controls src="audio/vhs-demo-intro-raw.wav"></audio>
+          <span class="duration">10.2s</span>
+          <span class="placeholder">Video pending</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 08 - VHS Demo -->
+  <div class="segment ready">
+    <div class="segment-header">
+      <span class="segment-title">08 - VHS Demo</span>
+      <span class="status ready">READY</span>
+    </div>
+    <div class="content-grid">
+      <div class="thumbnail">
+        <img src="vhs-stills/last-frame.png" alt="VHS Demo">
+      </div>
+      <div class="details">
+        <div class="narration">Here we have seven wave files generated by a music pipeline. Running rank wav shows all four metrics plus both scores. The top file has the highest pleasing score. Switching to best mode reorders the list by clarity and presence. JSON output lets you pipe results to jq for scripting, here extracting the top three with both scores.</div>
+        <div class="whisper-label">Whisper verification:</div>
+        <div class="whisper">Here we have seven WAV files generated by a music pipeline. Running Rank WAV shows all four metrics plus both scores. The top file has the highest pleasing score. Switching to best mode reorders the list by clarity and presence. JSON output lets you pipe results to JQ for scripting. Here, extracting the top three with both scores.</div>
+        <div class="players">
+          <audio controls src="audio/08-vhs-demo-raw.wav"></audio>
+          <video controls src="clips/08-vhs-demo.mp4"></video>
+          <span class="duration">21.8s</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 98 - Conclusion -->
+  <div class="segment audio">
+    <div class="segment-header">
+      <span class="segment-title">98 - Conclusion</span>
+      <span class="status audio">AUDIO</span>
+    </div>
+    <div class="content-grid">
+      <div class="thumbnail">
+        <img src="stills/98-conclusion.png" alt="Conclusion">
+      </div>
+      <div class="details">
+        <div class="narration">Stop listening to every variant manually. The Rank wav command analyzes acoustic features and scores audio files automatically. Two modes for different preferences, JSON output for pipelines, and pure Rust means fast portable binaries with no dependencies.</div>
+        <div class="whisper-label">Whisper verification:</div>
+        <div class="whisper">Stop listening to every variant manually. The RankWave command analyzes acoustic features and scores audio files automatically. Two modes for different preferences, JSON output for pipelines and pure Rust means fast portable binaries with no dependencies.</div>
+        <div class="players">
+          <audio controls src="audio/98-conclusion-raw.wav"></audio>
+          <span class="duration">18.4s</span>
+          <span class="placeholder">Video pending</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 99 - CTA -->
+  <div class="segment audio">
+    <div class="segment-header">
+      <span class="segment-title">99 - CTA</span>
+      <span class="status audio">AUDIO</span>
+    </div>
+    <div class="content-grid">
+      <div class="thumbnail">
+        <img src="stills/99-cta.png" alt="CTA">
+      </div>
+      <div class="details">
+        <div class="narration">Clone the repo from GitHub and build with cargo. Point rank wav at your samples directory and start ranking. Links and documentation are in the description below.</div>
+        <div class="whisper-label">Whisper verification:</div>
+        <div class="whisper">Clone the repo from GitHub and build the cargo PointRankWave at your samples directory and start ranking. Links and documentation are in the description below.</div>
+        <div class="players">
+          <audio controls src="audio/99-cta-raw.wav"></audio>
+          <span class="duration">9.9s</span>
+          <span class="placeholder">Video pending</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 99-subscribe-reminder -->
+  <div class="segment ready">
+    <div class="segment-header">
+      <span class="segment-title">99 - Subscribe Reminder</span>
+      <span class="status ready">READY</span>
+    </div>
+    <div class="content-grid">
+      <div class="thumbnail">[Shared asset]</div>
+      <div class="details">
+        <div class="narration">If you found this helpful, please like and subscribe. It helps more developers discover these tools.</div>
+        <div class="whisper-label">Whisper verification:</div>
+        <div class="whisper">Pre-verified shared asset</div>
+        <div class="players">
+          <video controls src="clips/99-subscribe-reminder.mp4"></video>
+          <span class="duration">12.8s</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 99x - Outro -->
+  <div class="segment ready">
+    <div class="segment-header">
+      <span class="segment-title">99x - Outro</span>
+      <span class="status ready">READY</span>
+    </div>
+    <div class="content-grid">
+      <div class="thumbnail">
+        <img src="stills/99-outro-frame.png" alt="Outro">
+      </div>
+      <div class="details">
+        <div class="narration">[APPLAUSE with fade-out - No narration]</div>
+        <div class="players">
+          <video controls src="clips/99x-outro.mp4"></video>
+          <span class="duration">7.0s</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

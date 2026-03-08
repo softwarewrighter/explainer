@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="pleasingGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    <linearGradient id="bestGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f093fb"/>
+      <stop offset="100%" style="stop-color:#f5576c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative -->
+  <text x="100" y="150" font-size="70" opacity="0.15">⚖️</text>
+  <text x="1750" y="950" font-size="70" opacity="0.15">🎚️</text>
+
+  <!-- Headline -->
+  <text x="960" y="100" font-family="Arial Black, sans-serif" font-size="64"
+        fill="#fff" text-anchor="middle" filter="url(#glow)">
+    Two Scoring Modes
+  </text>
+
+  <!-- Pleasing mode -->
+  <rect x="100" y="180" width="820" height="780" rx="24" fill="url(#cardGrad)"/>
+  <rect x="100" y="180" width="820" height="12" rx="6" fill="url(#pleasingGrad)"/>
+
+  <text x="510" y="280" font-family="Arial Black" font-size="56" fill="#667eea" text-anchor="middle">
+    Pleasing
+  </text>
+  <text x="510" y="340" font-family="Arial" font-size="36" fill="#fff" text-anchor="middle">
+    Warm, smooth, easy to listen
+  </text>
+
+  <rect x="180" y="400" width="660" height="80" rx="12" fill="#0a0a14"/>
+  <text x="510" y="455" font-family="Courier New" font-size="32" fill="#4ade80" text-anchor="middle">
+    rank-wav ./samples --sort pleasing
+  </text>
+
+  <text x="200" y="540" font-family="Arial" font-size="32" fill="#fff">Formula weights:</text>
+
+  <text x="220" y="600" font-family="Courier New" font-size="28" fill="#ff6b6b">-0.40</text>
+  <text x="350" y="600" font-family="Arial" font-size="28" fill="#888">brightness (penalize)</text>
+
+  <text x="220" y="660" font-family="Courier New" font-size="28" fill="#ff6b6b">-0.30</text>
+  <text x="350" y="660" font-family="Arial" font-size="28" fill="#888">complexity (penalize)</text>
+
+  <text x="220" y="720" font-family="Courier New" font-size="28" fill="#ff6b6b">-0.20</text>
+  <text x="350" y="720" font-family="Arial" font-size="28" fill="#888">noisiness (penalize)</text>
+
+  <text x="220" y="780" font-family="Courier New" font-size="28" fill="#4ade80">+0.10</text>
+  <text x="350" y="780" font-family="Arial" font-size="28" fill="#888">signal strength (reward)</text>
+
+  <rect x="180" y="830" width="660" height="100" rx="12" fill="#1a1a3e"/>
+  <text x="510" y="895" font-family="Arial" font-size="32" fill="#667eea" text-anchor="middle">
+    🎵 Best for: ambient, pads, backgrounds
+  </text>
+
+  <!-- Best mode -->
+  <rect x="1000" y="180" width="820" height="780" rx="24" fill="url(#cardGrad)"/>
+  <rect x="1000" y="180" width="820" height="12" rx="6" fill="url(#bestGrad)"/>
+
+  <text x="1410" y="280" font-family="Arial Black" font-size="56" fill="#f5576c" text-anchor="middle">
+    Best
+  </text>
+  <text x="1410" y="340" font-family="Arial" font-size="36" fill="#fff" text-anchor="middle">
+    Clear, balanced, present
+  </text>
+
+  <rect x="1080" y="400" width="660" height="80" rx="12" fill="#0a0a14"/>
+  <text x="1410" y="455" font-family="Courier New" font-size="32" fill="#4ade80" text-anchor="middle">
+    rank-wav ./samples --sort best
+  </text>
+
+  <text x="1100" y="540" font-family="Arial" font-size="32" fill="#fff">Formula weights:</text>
+
+  <text x="1120" y="600" font-family="Courier New" font-size="28" fill="#4ade80">+0.35</text>
+  <text x="1250" y="600" font-family="Arial" font-size="28" fill="#888">signal strength (reward)</text>
+
+  <text x="1120" y="660" font-family="Courier New" font-size="28" fill="#ffd93d">-0.25</text>
+  <text x="1250" y="660" font-family="Arial" font-size="28" fill="#888">brightness deviation</text>
+
+  <text x="1120" y="720" font-family="Courier New" font-size="28" fill="#ffd93d">-0.20</text>
+  <text x="1250" y="720" font-family="Arial" font-size="28" fill="#888">complexity deviation</text>
+
+  <text x="1120" y="780" font-family="Courier New" font-size="28" fill="#ff6b6b">-0.20</text>
+  <text x="1250" y="780" font-family="Arial" font-size="28" fill="#888">noisiness (penalize)</text>
+
+  <rect x="1080" y="830" width="660" height="100" rx="12" fill="#1a1a3e"/>
+  <text x="1410" y="895" font-family="Arial" font-size="32" fill="#f5576c" text-anchor="middle">
+    🎸 Best for: leads, FX, prominent sounds
+  </text>
+</svg>

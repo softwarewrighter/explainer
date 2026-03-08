@@ -1,0 +1,1 @@
+Two scoring modes let you choose what sounds best. Pleasing mode favors warm smooth sounds by penalizing brightness and complexity. Best mode favors clear balanced audio with strong presence. Use pleasing for pads and backgrounds, best for leads and effects.

@@ -110,17 +110,133 @@ Use Dracula-based colors for consistency:
 
 | Name | Hex | Usage |
 |------|-----|-------|
-| Background Dark | #1a1a2e | Primary background |
-| Background Alt | #16213e | Secondary background |
-| Box Fill | #0f0f23 | Content boxes |
+| Background Dark | #0f0c29 | Primary background (gradient start) |
+| Background Mid | #302b63 | Gradient middle |
+| Background End | #24243e | Gradient end |
+| Card Fill | #1a1a3e / #0d0d1a | Card gradient (top/bottom) |
+| Terminal BG | #0a0a14 | Code/terminal mockups |
 | Cyan | #00d4ff | Headlines, primary accent |
 | Red | #ff6b6b | Warnings, emphasis, challenges |
 | Green | #4ade80 | Success, positive, solutions |
 | Yellow | #ffd93d | Highlights, secondary accent |
-| Text Primary | #eee | Body text |
-| Text Secondary | #aaa | Captions, muted labels |
+| Purple | #a855f7 | AI/future features |
+| Text Primary | #fff / #eee | Headlines, body text |
+| Text Secondary | #ccc / #aaa | Descriptions, muted labels |
+| Text Muted | #888 | Captions, annotations |
 
-### SVG Template
+---
+
+## 2.5 Modern Visual Design (PaperBanana Style)
+
+**CRITICAL: Slides must be visually engaging, not boring boxes.**
+
+Avoid repetitive box-and-border layouts. Use modern design principles inspired by PaperBanana academic illustrations.
+
+### Required Visual Elements
+
+Every slide MUST include at least 3 of these:
+
+1. **Rich gradient backgrounds** - Not flat colors
+2. **Decorative shapes** - Circles, polygons with low opacity
+3. **Emoji/icon embellishments** - Relevant icons (🚀 ⚡ 🔍 💡 🎯 ✨)
+4. **Terminal mockups** - With colored window dots (red/yellow/green)
+5. **Glow filters** - For emphasis on key elements
+6. **Colored accent bars** - Top borders on cards
+7. **Visual comparison** - Before/after, problem/solution layouts
+8. **Checkmarks and X marks** - For lists (✓ ✗)
+9. **Arrow transitions** - Animated-looking flow arrows
+10. **Pill/chip elements** - For tags, aliases, options
+
+### Background Template
+
+Always use rich gradients, not flat colors:
+
+```svg
+<defs>
+  <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:#0f0c29"/>
+    <stop offset="50%" style="stop-color:#302b63"/>
+    <stop offset="100%" style="stop-color:#24243e"/>
+  </linearGradient>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="6" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.9"/>
+    <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.9"/>
+  </linearGradient>
+</defs>
+```
+
+### Decorative Elements
+
+Add subtle visual interest:
+
+```svg
+<!-- Decorative circles -->
+<circle cx="150" cy="150" r="200" fill="#ff6b6b" opacity="0.08"/>
+<circle cx="1800" cy="900" r="300" fill="#4ade80" opacity="0.06"/>
+
+<!-- Emoji embellishments -->
+<text x="100" y="150" font-size="60" opacity="0.3">✨</text>
+```
+
+### Card Design
+
+Use gradient fills with colored top borders:
+
+```svg
+<rect x="100" y="200" width="800" height="400" rx="24" fill="url(#cardGrad)"/>
+<rect x="100" y="200" width="800" height="8" rx="4" fill="#4ade80"/>
+```
+
+### Terminal Mockups
+
+Include window chrome for authenticity:
+
+```svg
+<rect x="150" y="300" width="720" height="80" rx="12" fill="#0a0a14"/>
+<circle cx="180" cy="340" r="8" fill="#ff6b6b"/>
+<circle cx="210" cy="340" r="8" fill="#ffd93d"/>
+<circle cx="240" cy="340" r="8" fill="#4ade80"/>
+<text x="280" y="350" font-family="Courier New" font-size="36" fill="#4ade80">
+  $ command here
+</text>
+```
+
+### Visual Comparison Layout
+
+Problem vs Solution pattern:
+
+```svg
+<!-- Left: Problem (red accent) -->
+<rect ... fill="url(#cardGrad)"/>
+<rect ... fill="#ff6b6b"/>  <!-- top bar -->
+<text>🚫</text>
+<text fill="#ff6b6b">The Challenge</text>
+
+<!-- Arrow transition -->
+<polygon points="..." fill="#ffd93d"/>
+
+<!-- Right: Solution (green accent) -->
+<rect ... fill="url(#cardGrad)"/>
+<rect ... fill="#4ade80"/>  <!-- top bar -->
+<text>💡</text>
+<text fill="#4ade80">The Solution</text>
+```
+
+### What NOT to Do
+
+❌ Flat single-color backgrounds
+❌ Plain rectangular boxes with just colored borders
+❌ No visual embellishments or icons
+❌ Same layout for every slide
+❌ No terminal mockups for CLI tools
+❌ Missing comparison/contrast visuals
+❌ Boring repetitive color schemes
+
+### SVG Template (Modern)
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
@@ -269,15 +385,20 @@ Before finalizing any asset, verify:
 
 ### SVG Checklist
 - [ ] No text smaller than 36px (prefer 40px+)
-- [ ] Headlines exactly 96px bold
-- [ ] Subtitles at least 56px (prefer 64px)
-- [ ] Box content at least 40px (prefer 44px)
+- [ ] Headlines 84-96px bold
+- [ ] Subtitles at least 48px (prefer 52px)
+- [ ] Box content at least 38px (prefer 40px)
 - [ ] All stroke widths at least 5px (prefer 6px)
 - [ ] Same font size for all text in same section
 - [ ] Bold used for emphasis, not smaller sizes
 - [ ] Text fits within boxes with generous padding
 - [ ] Avatar zone (bottom-right) kept clear
 - [ ] Designed for phone screen readability
+- [ ] **Uses rich gradient background (not flat)**
+- [ ] **Has at least 3 visual embellishments (icons, shapes, emojis)**
+- [ ] **Includes terminal mockups for CLI content**
+- [ ] **Has decorative elements (circles, glows, patterns)**
+- [ ] **Uses colored top bars on cards, not just borders**
 
 ### VHS Checklist
 - [ ] FontSize set to 32
@@ -308,6 +429,10 @@ Before finalizing any asset, verify:
 | Sub-40px text in SVG | Fitting too much content | Reduce content, use 40px+ |
 | Varying sizes in boxes | Creating "hierarchy" | Same size, bold for titles |
 | 2-4px strokes | Looks fine on monitor | Use 5-6px for video |
+| **Flat backgrounds** | Quick prototyping | **Use rich gradients** |
+| **Plain boxes** | Default thinking | **Add embellishments, icons** |
+| **No visual interest** | Functional focus | **Include emojis, shapes, glows** |
+| **Same layout every slide** | Template reuse | **Vary layouts, use comparisons** |
 | Digits in TTS | Copy-paste from visuals | Spell out as words |
 | Split VHS commands | Multi-line formatting | Single Type + Enter |
 | Skip normalization | Clip sounds fine | Always normalize |
@@ -316,4 +441,5 @@ Before finalizing any asset, verify:
 
 ## Version History
 
+- 2026-03-04: Added PaperBanana-style modern visual design requirements
 - 2026-01-20: Initial version based on rlm-llm-big project learnings

@@ -1,0 +1,13 @@
+/Users/mike/github/softwarewrighter/explainer/projects/rank-wav-rs/work/clips/00-title.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/rank-wav-rs/work/clips/01-hook.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/rank-wav-rs/work/clips/02-overview.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/rank-wav-rs/work/clips/03-acoustic-features.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/rank-wav-rs/work/clips/04-scoring-modes.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/rank-wav-rs/work/clips/05-cli-usage.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/rank-wav-rs/work/clips/06-json-output.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/rank-wav-rs/work/clips/07-vhs-demo-intro.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/rank-wav-rs/work/clips/08-vhs-demo.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/rank-wav-rs/work/clips/98-conclusion.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/rank-wav-rs/work/clips/99-cta.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/rank-wav-rs/work/clips/99-subscribe-reminder.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/rank-wav-rs/work/clips/99x-outro.mp4

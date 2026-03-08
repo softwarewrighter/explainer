@@ -1,0 +1,1 @@
+Here is the plan. First, we fix bugs in Project Management for AI in Rust and add features like stack navigation and history tracking. Then we explore rig, a type safe framework for AI agents. Finally, we look at Language Chain in Rust, a port of the popular Python framework.

@@ -47,6 +47,54 @@ When creating or editing SVG slides for video, **never use fonts smaller than 28
 
 See `/docs/style-guide.md` for complete guidelines.
 
+### SVG Visual Design - CRITICAL
+
+**NEVER create boring, repetitive box-and-border layouts.**
+
+All SVG slides MUST use modern, visually engaging design (PaperBanana style):
+
+**Required elements (include at least 3 per slide):**
+- Rich gradient backgrounds (not flat colors)
+- Decorative shapes (circles, polygons at low opacity)
+- Emoji/icon embellishments (🚀 ⚡ 🔍 💡 🎯 ✨ 📊 🔐)
+- Terminal mockups with colored window dots
+- Glow filters for emphasis
+- Colored top bars on cards (not just borders)
+- Checkmarks/X marks for lists (✓ ✗)
+- Arrow transitions for flow diagrams
+
+**Background template:**
+```svg
+<linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+  <stop offset="0%" style="stop-color:#0f0c29"/>
+  <stop offset="50%" style="stop-color:#302b63"/>
+  <stop offset="100%" style="stop-color:#24243e"/>
+</linearGradient>
+```
+
+**Card template (with colored top bar):**
+```svg
+<rect x="100" y="200" width="800" height="400" rx="24" fill="url(#cardGrad)"/>
+<rect x="100" y="200" width="800" height="8" rx="4" fill="#4ade80"/>
+```
+
+**Terminal mockup:**
+```svg
+<rect x="150" y="300" width="720" height="80" rx="12" fill="#0a0a14"/>
+<circle cx="180" cy="340" r="8" fill="#ff6b6b"/>
+<circle cx="210" cy="340" r="8" fill="#ffd93d"/>
+<circle cx="240" cy="340" r="8" fill="#4ade80"/>
+```
+
+**What NOT to do:**
+- ❌ Flat single-color backgrounds
+- ❌ Plain rectangular boxes with just colored borders
+- ❌ No visual embellishments or icons
+- ❌ Same repetitive layout for every slide
+- ❌ Missing terminal mockups for CLI content
+
+See `/docs/style-guide.md` Section 2.5 for complete visual design requirements.
+
 ### TTS Narration Rules
 
 - Maximum 320 characters per script
@@ -74,7 +122,7 @@ Tools are in `../video-publishing/tools/target/release/`:
 
 For voice-cloned narration, use VoxCPM via Gradio API instead of vid-tts.
 
-**Server:** `http://curiosity:7860`
+**Server:** `http://queenbee.local:7860` (curiosity is down for repairs)
 
 **CRITICAL: Sequential Calls Only**
 All TTS API calls to VoxCPM MUST be made sequentially. Never queue multiple requests in parallel - this overloads the GPU and produces garbled output. Wait for each request to complete before starting the next.
@@ -82,48 +130,37 @@ All TTS API calls to VoxCPM MUST be made sequentially. Never queue multiple requ
 **Working Settings:**
 - `do_normalize=False` (True drops words)
 - `cfg_value_input=2.0` (default)
-- `inference_timesteps_input=10` (default)
+- `inference_timesteps_input=15` (not 10)
 - Use "M H C" instead of "mHC" for proper pronunciation of acronyms
 
-**CRITICAL: Use the 63s reference file with its matching prompt text.**
+### Voice Reference - USE THESE TWO FILES TOGETHER
 
-**PREFERRED (63s) - USE THESE:**
 ```
-REF="/Users/mike/github/softwarewrighter/video-publishing/reference/voice/mike-medium-ref-1.wav"
-PROMPT="In this session, I'm going to write a small command line tool and explain the decision making process as I go. I'll begin with a basic skeleton, argument parsing, a configuration loader, and a minimal main function. Once everything compiles, I'll run it with a few sample inputs to confirm the behavior. After that, I'll be fine the internal design. I'll reorganize the functions, extract shared logic, and add error messages that actually help the user understand what went wrong. None of this is complicated, but it's the kind of work that separates a rough prototype from a tool someone can rely on. As we move forward, I'll highlight why I chose certain patterns, some decisions, optimize clarity, while others optimize performance or extensibility. The important thing is to understand the trade-offs well enough that the code feels intentional instead of accidental."
-```
-
-**DO NOT USE (17s) - THESE PRODUCE GARBLED OUTPUT:**
-```
-# WRONG - Do not use these:
-# /Users/mike/github/softwarewrighter/explainer/projects/apl/work/reference/mike-ref-17s.wav
-# /Users/mike/github/softwarewrighter/explainer/projects/engram-poc/work/reference/mike-ref-17s.wav
-# /Users/mike/github/softwarewrighter/explainer/projects/mHC-poc/work/reference/mike-ref-17s.wav
-# Any file named mike-ref-17s.wav or mike-ref-17s-clean.wav
+WAV: /Users/mike/github/softwarewrighter/video-publishing/reference/voice/mike-medium-ref-1.wav
+TXT: /Users/mike/github/softwarewrighter/video-publishing/reference/voice/mike-medium-ref-1.txt
 ```
 
-**When TTS produces garbled/unintelligible output, the cause is ALWAYS one of:**
-1. Using the wrong reference file (17s instead of 63s)
-2. Using prompt text that doesn't match the reference audio
-3. Mixing a reference file with the wrong prompt text
-
-See `projects/pipeline-rs/work/generate-tts.sh` for the working example to copy from.
-
-**Curl API Pattern:**
+**Usage:**
 ```bash
-REF_PATH="/tmp/gradio/.../mike-ref-17s.wav"  # Upload first
-PROMPT="In this session, I'm going to write a small command line tool..."
-
-cat > /tmp/tts.json << JSONEOF
-{"data": ["Your text here", {"path": "$REF_PATH", "url": "http://curiosity:7860/gradio_api/file=$REF_PATH", "orig_name": "mike-ref-17s.wav", "mime_type": "audio/wav", "is_stream": false, "meta": {"_type": "gradio.FileData"}}, "$PROMPT", 2.0, 10, false]}
-JSONEOF
-
-ID=$(curl -s -X POST "http://curiosity:7860/gradio_api/call/generate" -H "Content-Type: application/json" -d @/tmp/tts.json | jq -r '.event_id')
-sleep 20  # Wait for generation
-RESULT=$(curl -s "http://curiosity:7860/gradio_api/call/generate/$ID")
-URL=$(echo "$RESULT" | grep -o '"url": "[^"]*"' | head -1 | cut -d'"' -f4)
-curl -s "$URL" -o output.wav
+REF="/Users/mike/github/softwarewrighter/video-publishing/reference/voice/mike-medium-ref-1.wav"
+REF_TXT="/Users/mike/github/softwarewrighter/video-publishing/reference/voice/mike-medium-ref-1.txt"
+PROMPT_TEXT="$(cat "$REF_TXT")"
 ```
+
+### DO NOT USE (deprecated)
+
+17s reference files have been moved to `deprecated-17s/` directory. Never use them.
+
+### Garbled Output = Wrong WAV/TXT Combination
+
+**If TTS produces garbled/unintelligible output, you are using the wrong combination.**
+
+There is exactly ONE correct combination:
+- `mike-medium-ref-1.wav` + `mike-medium-ref-1.txt`
+
+Any other combination will produce garbled output.
+
+See `/docs/tts.md` for complete documentation.
 
 **Always verify with whisper after generation:**
 ```bash
@@ -217,41 +254,95 @@ Each video project lives in `projects/<name>/` with:
 
 ### Avatar Workflow
 
-Use `scripts/build-avatar-clip.sh` for lip-synced avatar clips:
+**STATUS: Lip-synced avatars are currently SKIPPED.** The MuseTalk server (hive:3015/3016) is offline and lip-sync is not planned for the foreseeable future. Create clips directly from stills with audio instead.
+
+**Current workflow (no avatar):**
 1. SVG → PNG (rsvg-convert)
-2. PNG → base clip (vid-image with ken-burns)
-3. Stretch avatar (vid-avatar --avatar /path/to/avatar.mp4 --duration X --output Y)
-4. Lip-sync (vid-lipsync --avatar /path/to/stretched.mp4 --audio /path/to/audio.wav --output Y)
-5. Composite (vid-composite --content base.mp4 --avatar lipsync.mp4 --output composited.mp4 --size 200)
-6. Normalize volume (normalize-volume.sh)
+2. PNG + audio → clip (ffmpeg)
+3. Normalize volume (normalize-volume.sh)
 
-**Avatar Selection:**
-- **curmudgeon** - Current series (rlm-llm, rlm-llm-big, etc.)
-- **polo** - Older videos only
-- Source: `../video-publishing/reference/curmudgeon.mp4`
-
-**Fixing Avatar Without Re-lipsync:**
-If you only need to fix the background slide (not the audio), just re-composite:
 ```bash
-# Render new slide, create new base video, composite existing lipsync avatar
-$VID_IMAGE --image work/stills/99-cta.png --duration 15.73 --output work/clips/99-cta-base-new.mp4
-$VID_COMPOSITE --content work/clips/99-cta-base-new.mp4 --avatar work/avatar/99-cta-lipsync.mp4 --output work/clips/99-cta-composited.mp4 --size 200
+# Create clip from still + audio
+ffmpeg -y -loop 1 -i work/stills/01-hook.png \
+  -i work/audio/01-hook.wav \
+  -c:v libx264 -tune stillimage -crf 18 -pix_fmt yuv420p \
+  -c:a aac -b:a 192k \
+  -shortest \
+  work/clips/01-hook.mp4
+
+# Normalize
+./scripts/normalize-volume.sh work/clips/01-hook.mp4
 ```
 
-### Outro Requirements
+**Legacy Avatar Workflow (NOT IN USE):**
+For reference only - lip-synced avatar clips used:
+1. Stretch avatar (vid-avatar)
+2. Lip-sync (vid-lipsync --server hive:3015)
+3. Composite (vid-composite)
 
-- **Duration**: 12 seconds (not 5)
-- **Music**: Same as title card (e.g., "Two Gong Fire")
-- **Fade out**: Music fades out over last 3 seconds
+### Video Segment Naming - SEE FULL GUIDE
+
+**Read `/docs/video-segment-naming.md` for complete naming conventions.**
+
+### Final 3 Segments - CRITICAL STRUCTURE
+
+**Every explainer video MUST end with exactly these 3 segments:**
+
+| # | Segment | File | Audio | Reuse |
+|---|---------|------|-------|-------|
+| 98 | CTA | `98-cta.mp4` | NARRATION (project-specific) | UNIQUE |
+| 99 | Subscribe Reminder | `99-subscribe-reminder.mp4` | PRE-RECORDED NARRATION | **SHARED** |
+| 99x | Outro | `99x-outro.mp4` | MUSIC with fade-out | UNIQUE |
+
+### Subscribe Reminder (99-subscribe-reminder.mp4) - ALWAYS COPY
+
+**Canonical file location:**
+```
+/Users/mike/github/softwarewrighter/explainer/shared/99-subscribe-reminder-narrated.mp4
+```
+
+**Copy to every project:**
+```bash
+cp /Users/mike/github/softwarewrighter/explainer/shared/99-subscribe-reminder-narrated.mp4 \
+   projects/YOUR_PROJECT/work/clips/99-subscribe-reminder.mp4
+```
+
+**Properties:**
+- Duration: 12.817 seconds
+- Audio: NARRATION saying "If you found this helpful, please like and subscribe..."
+- Audio is NOT music
+
+**NEVER:**
+- Create a new subscribe reminder (always copy the shared one)
+- Use one that has music instead of narration
+- Copy from random projects (some have bad versions from past mistakes)
+
+**Verify with whisper:**
+```bash
+ffmpeg -y -i work/clips/99-subscribe-reminder.mp4 -ar 16000 -ac 1 -c:a pcm_s16le /tmp/verify.wav
+whisper-cli -m ~/.whisper-models/ggml-base.en.bin -f /tmp/verify.wav -nt
+# MUST show: "like and subscribe" (NOT "[MUSIC]")
+```
+
+### Outro (99x-outro.mp4) - UNIQUE PER VIDEO
+
+- **Visual**: Same slide as subscribe reminder (extract last frame)
+- **Audio**: Same MUSIC as title card, with 3s fade-out
+- **Duration**: 7-12 seconds
+- **NEVER reuse** - each video gets unique outro with its own music
 
 ```bash
-ffmpeg -y -loop 1 -i epilog-frame.png \
-  -i "/path/to/music.mp3" \
-  -filter_complex "[1:a]atrim=0:12,afade=t=out:st=9:d=3,volume=0.5[a]" \
+# Extract last frame from subscribe reminder
+ffmpeg -y -sseof -0.1 -i work/clips/99-subscribe-reminder.mp4 -vframes 1 work/stills/99-outro-frame.png
+
+# Create outro with this video's music
+ffmpeg -y -loop 1 -i work/stills/99-outro-frame.png \
+  -i assets/music.wav \
+  -filter_complex "[1:a]atrim=START:END,asetpts=PTS-STARTPTS,afade=t=out:st=FADE_START:d=3,volume=0.5[a]" \
   -map 0:v -map "[a]" \
-  -c:v libx264 -crf 18 -t 12 -r 30 \
-  -c:a aac -b:a 192k -pix_fmt yuv420p \
-  work/clips/99c-epilog-ext.mp4
+  -c:v libx264 -tune stillimage -crf 18 -pix_fmt yuv420p \
+  -c:a aac -b:a 192k -t DURATION -r 30 \
+  work/clips/99x-outro.mp4
 ```
 
 ### Realigning Video to Audio (Without Re-recording)
@@ -471,3 +562,8 @@ ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p
 32. **Run-on narration (no pause between clips)** - Add 200ms silence padding at the end of every narrated clip to prevent run-on dialog: `ffmpeg -i clip.mp4 -filter_complex "[0:a]apad=pad_dur=0.2[a]" -map 0:v -map "[a]" -c:v copy -c:a aac output.mp4`
 33. **Using -shortest flag with demos** - The `-shortest` flag cuts video to match audio, truncating important content. Never use `-shortest` with OBS/VHS demos. Instead, extend audio to match video
 34. **TTS run-on sentences** - TTS may run sentences together without natural pauses. Use punctuation (periods, commas) to control pacing. If pauses are still insufficient, the simple fix is adding extra punctuation in the script. Avoid the complex approach of splitting into separate TTS calls and concatenating with silence
+35. **Wrong subscribe reminder source** - ALWAYS copy from `/explainer/shared/99-subscribe-reminder-narrated.mp4`. NEVER copy from random project directories. Verify with whisper - must say "like and subscribe", not "[MUSIC]"
+36. **Creating new subscribe reminder** - NEVER create a new 99-subscribe-reminder. The shared one is pre-rendered with correct narration. Just copy it
+37. **Reusing outro across videos** - NEVER reuse 99x-outro.mp4 across videos. Each video must have its own unique outro with that video's music
+38. **Subscribe reminder with music** - If 99-subscribe-reminder has music instead of narration, it's WRONG. Must have narration: "If you found this helpful, please like and subscribe..."
+39. **Confusing segment names** - Use new naming: `99-subscribe-reminder.mp4` (shared, narration) and `99x-outro.mp4` (unique, music). See `/docs/video-segment-naming.md`

@@ -1,0 +1,1 @@
+Every developer has tools that slowly collect dust. Bugs pile up, features sit in the backlog, and the ecosystem keeps moving. Today I am sharpening the saw. Fixing bugs in my project management CLI, and exploring two Rust frameworks for building AI agents.

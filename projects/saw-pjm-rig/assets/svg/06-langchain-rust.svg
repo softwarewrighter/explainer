@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative -->
+  <circle cx="200" cy="200" r="250" fill="#a855f7" opacity="0.06"/>
+  <circle cx="1700" cy="850" r="200" fill="#00d4ff" opacity="0.05"/>
+
+  <!-- Headline -->
+  <text x="960" y="110" font-family="Arial, sans-serif" font-size="96"
+        font-weight="bold" fill="#a855f7" text-anchor="middle" filter="url(#glow)">
+    langchain-rust
+  </text>
+  <text x="960" y="175" font-family="Arial, sans-serif" font-size="48"
+        fill="#aaa" text-anchor="middle">
+    LLM Chains and Agents, Ported to Rust
+  </text>
+
+  <!-- Left: Chain types -->
+  <rect x="80" y="220" width="880" height="780" rx="24" fill="url(#cardGrad)"/>
+  <rect x="80" y="220" width="880" height="8" rx="4" fill="#a855f7"/>
+  <text x="150" y="310" font-size="48" opacity="0.9">&#x1F517;</text>
+  <text x="220" y="310" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#a855f7">Chain Types</text>
+
+  <!-- Chain flow diagram -->
+  <rect x="140" y="350" width="280" height="80" rx="16" fill="#1a2a3a" stroke="#00d4ff" stroke-width="5"/>
+  <text x="280" y="402" font-family="Arial, sans-serif" font-size="40"
+        fill="#00d4ff" text-anchor="middle">LLM Chain</text>
+
+  <polygon points="440,390 470,375 470,405" fill="#ffd93d"/>
+
+  <rect x="490" y="350" width="280" height="80" rx="16" fill="#1a2a3a" stroke="#4ade80" stroke-width="5"/>
+  <text x="630" y="402" font-family="Arial, sans-serif" font-size="40"
+        fill="#4ade80" text-anchor="middle">Q and A</text>
+
+  <polygon points="790,390 820,375 820,405" fill="#ffd93d"/>
+
+  <rect x="140" y="470" width="280" height="80" rx="16" fill="#1a2a3a" stroke="#f5a623" stroke-width="5"/>
+  <text x="280" y="522" font-family="Arial, sans-serif" font-size="40"
+        fill="#f5a623" text-anchor="middle">SQL Chain</text>
+
+  <polygon points="440,510 470,495 470,525" fill="#ffd93d"/>
+
+  <rect x="490" y="470" width="280" height="80" rx="16" fill="#1a2a3a" stroke="#ff6b6b" stroke-width="5"/>
+  <text x="630" y="522" font-family="Arial, sans-serif" font-size="40"
+        fill="#ff6b6b" text-anchor="middle">Sequential</text>
+
+  <!-- Supported providers -->
+  <text x="150" y="620" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    &#x2713; OpenAI and Azure OpenAI
+  </text>
+  <text x="150" y="685" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    &#x2713; Anthropic Claude
+  </text>
+  <text x="150" y="750" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    &#x2713; Ollama for local models
+  </text>
+
+  <!-- Vector stores -->
+  <text x="150" y="840" font-family="Arial, sans-serif" font-size="44"
+        font-weight="bold" fill="#ffd93d">Vector Stores</text>
+  <text x="150" y="900" font-family="Arial, sans-serif" font-size="40" fill="#ccc">
+    Postgres, Qdrant, SQLite, SurrealDB
+  </text>
+  <text x="150" y="955" font-family="Arial, sans-serif" font-size="40" fill="#ccc">
+    OpenSearch, plus FastEmbed
+  </text>
+
+  <!-- Right: Agent + Tools -->
+  <rect x="1000" y="220" width="840" height="460" rx="24" fill="url(#cardGrad)"/>
+  <rect x="1000" y="220" width="840" height="8" rx="4" fill="#4ade80"/>
+  <text x="1070" y="310" font-size="48" opacity="0.9">&#x1F9E0;</text>
+  <text x="1140" y="310" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#4ade80">Agent Systems</text>
+
+  <text x="1060" y="390" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    &#x2713; Chat agents with tools
+  </text>
+  <text x="1060" y="450" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    &#x2713; Tool calling interface
+  </text>
+  <text x="1060" y="510" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    &#x2713; Semantic routing
+  </text>
+  <text x="1060" y="570" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    &#x2713; Document loaders
+  </text>
+  <text x="1060" y="630" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    &#x2713; PDF, HTML, CSV, Git
+  </text>
+
+  <!-- Right bottom: Comparison -->
+  <rect x="1000" y="720" width="840" height="280" rx="24" fill="url(#cardGrad)"/>
+  <rect x="1000" y="720" width="840" height="8" rx="4" fill="#ffd93d"/>
+  <text x="1070" y="810" font-size="48" opacity="0.9">&#x2696;</text>
+  <text x="1140" y="810" font-family="Arial, sans-serif" font-size="48"
+        font-weight="bold" fill="#ffd93d">vs Rig</text>
+
+  <text x="1060" y="885" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    More mature ecosystem
+  </text>
+  <text x="1060" y="945" font-family="Arial, sans-serif" font-size="44" fill="#eee">
+    Broader tool and loader support
+  </text>
+</svg>

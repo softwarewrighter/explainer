@@ -1,0 +1,1 @@
+You can find Project Management for AI in the Software Wrighter Command Line Tools repo on GitHub. Check out rig at rig.rs and Language Chain in Rust on crates.io. Keep your tools sharp and build with Rust. Drop a comment below if you have a favorite Rust A I framework.

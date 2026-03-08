@@ -1,0 +1,1 @@
+Language Chain in Rust ports the popular Python framework to Rust. It offers chain abstractions, agent systems, document loaders for PDF and HTML, and vector stores like Postgres and Qdrant. It has broader ecosystem support than rig, but rig has better type safety. Both are worth watching.

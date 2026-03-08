@@ -1,0 +1,1 @@
+Stop listening to every variant manually. The Rank wav command analyzes acoustic features and scores audio files automatically. Two modes for different preferences, JSON output for pipelines, and pure Rust means fast portable binaries with no dependencies.

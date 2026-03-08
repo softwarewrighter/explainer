@@ -1,0 +1,1 @@
+The command line interface is simple. Pass a directory and get a ranked table. Add dash r to scan subdirectories recursively. Use dash dash sort to pick pleasing or best mode. Add dash dash json for machine readable output.

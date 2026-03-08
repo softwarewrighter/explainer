@@ -1,0 +1,15 @@
+/Users/mike/github/softwarewrighter/explainer/projects/saw-pjm-rig/work/clips/00-title.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/saw-pjm-rig/work/clips/01-hook.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/saw-pjm-rig/work/clips/02-overview.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/saw-pjm-rig/work/clips/03-pjmai-bugs.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/saw-pjm-rig/work/clips/04-pjmai-features.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/saw-pjm-rig/work/clips/05-rig-framework.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/saw-pjm-rig/work/clips/05b-rig-demo-intro.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/saw-pjm-rig/work/clips/05c-rig-demo.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/saw-pjm-rig/work/clips/06-langchain-rust.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/saw-pjm-rig/work/clips/06b-langchain-demo-intro.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/saw-pjm-rig/work/clips/06c-langchain-demo.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/saw-pjm-rig/work/clips/07-conclusions.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/saw-pjm-rig/work/clips/98-cta.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/saw-pjm-rig/work/clips/99-subscribe-reminder.mp4
+/Users/mike/github/softwarewrighter/explainer/projects/saw-pjm-rig/work/clips/99x-outro.mp4

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative -->
+  <text x="1750" y="150" font-size="70" opacity="0.15">📊</text>
+  <circle cx="100" cy="100" r="60" fill="#4ade80" opacity="0.1"/>
+
+  <!-- Headline -->
+  <text x="960" y="100" font-family="Arial Black, sans-serif" font-size="64"
+        fill="#00d4ff" text-anchor="middle" filter="url(#glow)">
+    Four Acoustic Metrics
+  </text>
+
+  <!-- Feature cards - 2x2 grid -->
+  <!-- RMS -->
+  <rect x="100" y="180" width="820" height="360" rx="24" fill="url(#cardGrad)"/>
+  <rect x="100" y="180" width="820" height="8" rx="4" fill="#4ade80"/>
+  <text x="180" y="270" font-family="Arial Black" font-size="48" fill="#4ade80">RMS Energy</text>
+  <text x="180" y="330" font-family="Arial" font-size="36" fill="#fff">Signal strength and loudness</text>
+  <text x="180" y="400" font-family="Arial" font-size="32" fill="#888">Higher = stronger presence</text>
+  <!-- Mini waveform -->
+  <g transform="translate(650, 380)">
+    <rect x="0" y="-30" width="12" height="60" rx="3" fill="#4ade80" opacity="0.6"/>
+    <rect x="20" y="-50" width="12" height="100" rx="3" fill="#4ade80" opacity="0.8"/>
+    <rect x="40" y="-40" width="12" height="80" rx="3" fill="#4ade80"/>
+    <rect x="60" y="-60" width="12" height="120" rx="3" fill="#4ade80"/>
+    <rect x="80" y="-35" width="12" height="70" rx="3" fill="#4ade80" opacity="0.7"/>
+  </g>
+  <text x="180" y="490" font-family="Courier New" font-size="28" fill="#888">√(Σx²/N)</text>
+
+  <!-- ZCR -->
+  <rect x="1000" y="180" width="820" height="360" rx="24" fill="url(#cardGrad)"/>
+  <rect x="1000" y="180" width="820" height="8" rx="4" fill="#ff6b6b"/>
+  <text x="1080" y="270" font-family="Arial Black" font-size="48" fill="#ff6b6b">Zero-Crossing Rate</text>
+  <text x="1080" y="330" font-family="Arial" font-size="36" fill="#fff">Noisiness and texture</text>
+  <text x="1080" y="400" font-family="Arial" font-size="32" fill="#888">Lower = smoother sound</text>
+  <!-- ZCR visualization -->
+  <g transform="translate(1550, 380)">
+    <line x1="0" y1="0" x2="200" y2="0" stroke="#888" stroke-width="2"/>
+    <path d="M0,30 Q25,-30 50,0 Q75,40 100,-20 Q125,35 150,-15 Q175,25 200,0"
+          stroke="#ff6b6b" stroke-width="4" fill="none"/>
+  </g>
+  <text x="1080" y="490" font-family="Courier New" font-size="28" fill="#888">crossings / samples</text>
+
+  <!-- Spectral Centroid -->
+  <rect x="100" y="580" width="820" height="360" rx="24" fill="url(#cardGrad)"/>
+  <rect x="100" y="580" width="820" height="8" rx="4" fill="#ffd93d"/>
+  <text x="180" y="670" font-family="Arial Black" font-size="48" fill="#ffd93d">Spectral Centroid</text>
+  <text x="180" y="730" font-family="Arial" font-size="36" fill="#fff">Perceived brightness in Hz</text>
+  <text x="180" y="800" font-family="Arial" font-size="32" fill="#888">Higher = brighter tone</text>
+  <!-- Spectrum visualization -->
+  <g transform="translate(600, 780)">
+    <rect x="0" y="-80" width="25" height="80" rx="4" fill="#ffd93d"/>
+    <rect x="35" y="-120" width="25" height="120" rx="4" fill="#ffd93d"/>
+    <rect x="70" y="-90" width="25" height="90" rx="4" fill="#ffd93d" opacity="0.8"/>
+    <rect x="105" y="-50" width="25" height="50" rx="4" fill="#ffd93d" opacity="0.6"/>
+    <rect x="140" y="-30" width="25" height="30" rx="4" fill="#ffd93d" opacity="0.4"/>
+    <rect x="175" y="-15" width="25" height="15" rx="4" fill="#ffd93d" opacity="0.3"/>
+    <line x1="70" y1="-130" x2="70" y2="-140" stroke="#fff" stroke-width="3"/>
+    <polygon points="70,-145 60,-135 80,-135" fill="#fff"/>
+  </g>
+  <text x="180" y="890" font-family="Courier New" font-size="28" fill="#888">weighted avg frequency</text>
+
+  <!-- Spectral Bandwidth -->
+  <rect x="1000" y="580" width="820" height="360" rx="24" fill="url(#cardGrad)"/>
+  <rect x="1000" y="580" width="820" height="8" rx="4" fill="#00d4ff"/>
+  <text x="1080" y="670" font-family="Arial Black" font-size="48" fill="#00d4ff">Spectral Bandwidth</text>
+  <text x="1080" y="730" font-family="Arial" font-size="36" fill="#fff">Spectral spread and complexity</text>
+  <text x="1080" y="800" font-family="Arial" font-size="32" fill="#888">Wider = more complex</text>
+  <!-- Bandwidth visualization -->
+  <g transform="translate(1500, 780)">
+    <rect x="0" y="-40" width="20" height="40" rx="3" fill="#00d4ff" opacity="0.4"/>
+    <rect x="30" y="-70" width="20" height="70" rx="3" fill="#00d4ff" opacity="0.6"/>
+    <rect x="60" y="-100" width="20" height="100" rx="3" fill="#00d4ff"/>
+    <rect x="90" y="-80" width="20" height="80" rx="3" fill="#00d4ff" opacity="0.7"/>
+    <rect x="120" y="-50" width="20" height="50" rx="3" fill="#00d4ff" opacity="0.5"/>
+    <rect x="150" y="-30" width="20" height="30" rx="3" fill="#00d4ff" opacity="0.3"/>
+    <line x1="0" y1="20" x2="170" y2="20" stroke="#fff" stroke-width="3"/>
+    <text x="85" y="50" font-family="Arial" font-size="24" fill="#fff" text-anchor="middle">width</text>
+  </g>
+  <text x="1080" y="890" font-family="Courier New" font-size="28" fill="#888">std dev from centroid</text>
+</svg>
