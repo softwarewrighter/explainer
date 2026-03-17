@@ -1,0 +1,1 @@
+Create a file with version one point zero, then register it as a test. The r g t spec stores the command and expected exit code in Tom L. The dot out file stores the captured baseline. Run the test, one passed.

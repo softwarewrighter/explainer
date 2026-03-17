@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.95"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+  <circle cx="150" cy="900" r="100" fill="#ff6b6b" opacity="0.05"/>
+  <circle cx="1800" cy="150" r="120" fill="#4ade80" opacity="0.04"/>
+
+  <!-- Title -->
+  <text x="960" y="100" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="96" font-weight="bold" fill="#ffffff" filter="url(#glow)">reg-rs: Binary → Text</text>
+
+  <!-- Before card -->
+  <rect x="60" y="180" width="820" height="800" rx="24" fill="url(#cardGrad)"/>
+  <rect x="60" y="180" width="820" height="8" rx="4" fill="#ff6b6b"/>
+
+  <text x="470" y="270" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="56" font-weight="bold" fill="#ff6b6b">Before</text>
+
+  <!-- Terminal: binary blob -->
+  <rect x="110" y="310" width="720" height="200" rx="12" fill="#0a0a14"/>
+  <circle cx="140" cy="340" r="8" fill="#ff6b6b"/>
+  <circle cx="170" cy="340" r="8" fill="#ffd93d"/>
+  <circle cx="200" cy="340" r="8" fill="#4ade80"/>
+  <text x="130" y="390" font-family="monospace" font-size="32" fill="#ff6b6b">$ git diff test.tdb</text>
+  <text x="130" y="435" font-family="monospace" font-size="28" fill="#666680">Binary files differ</text>
+  <text x="130" y="475" font-family="monospace" font-size="28" fill="#666680">No useful output</text>
+
+  <text x="130" y="580" font-family="Helvetica,Arial,sans-serif" font-size="40" fill="#ff6b6b">✗</text>
+  <text x="180" y="580" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">Can't code review tests</text>
+
+  <text x="130" y="650" font-family="Helvetica,Arial,sans-serif" font-size="40" fill="#ff6b6b">✗</text>
+  <text x="180" y="650" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">Merge conflicts in binary</text>
+
+  <text x="130" y="720" font-family="Helvetica,Arial,sans-serif" font-size="40" fill="#ff6b6b">✗</text>
+  <text x="180" y="720" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">No history of changes</text>
+
+  <text x="470" y="920" text-anchor="middle" font-family="monospace" font-size="36" fill="#ff6b6b" opacity="0.6">test.tdb (SQLite)</text>
+
+  <!-- Arrow -->
+  <polygon points="900,540 900,500 960,540 900,580" fill="#ffd93d" opacity="0.8"/>
+
+  <!-- After card -->
+  <rect x="1000" y="180" width="860" height="800" rx="24" fill="url(#cardGrad)"/>
+  <rect x="1000" y="180" width="860" height="8" rx="4" fill="#4ade80"/>
+
+  <text x="1430" y="270" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="56" font-weight="bold" fill="#4ade80">After</text>
+
+  <!-- Terminal: text diffs -->
+  <rect x="1050" y="310" width="760" height="200" rx="12" fill="#0a0a14"/>
+  <circle cx="1080" cy="340" r="8" fill="#ff6b6b"/>
+  <circle cx="1110" cy="340" r="8" fill="#ffd93d"/>
+  <circle cx="1140" cy="340" r="8" fill="#4ade80"/>
+  <text x="1070" y="390" font-family="monospace" font-size="32" fill="#4ade80">$ git diff test.out</text>
+  <text x="1070" y="435" font-family="monospace" font-size="28" fill="#ff6b6b">- version 1.0.0</text>
+  <text x="1070" y="475" font-family="monospace" font-size="28" fill="#4ade80">+ version 2.0.0</text>
+
+  <!-- File tree -->
+  <text x="1070" y="575" font-family="monospace" font-size="32" fill="#ffd93d">📄 test.rgt</text>
+  <text x="1120" y="620" font-family="monospace" font-size="28" fill="#8080b0">TOML spec (command, timeout)</text>
+
+  <text x="1070" y="680" font-family="monospace" font-size="32" fill="#ffd93d">📄 test.out</text>
+  <text x="1120" y="725" font-family="monospace" font-size="28" fill="#8080b0">Expected stdout baseline</text>
+
+  <text x="1070" y="785" font-family="monospace" font-size="32" fill="#ffd93d">📄 test.err</text>
+  <text x="1120" y="830" font-family="monospace" font-size="28" fill="#8080b0">Expected stderr (when needed)</text>
+
+  <text x="1430" y="920" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#4ade80">✓ Git-friendly ✓ Reviewable ✓ Human readable</text>
+</svg>

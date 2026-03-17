@@ -1,0 +1,1 @@
+The session loop is simple. Run next to read the current step. Do the work. Commit your changes. Run complete to record what happened and define the next step. The next session starts fresh with concise context for its specific task.

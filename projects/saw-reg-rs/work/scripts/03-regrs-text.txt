@@ -1,0 +1,1 @@
+The regression test tool, regress, stored tests in SQLite databases. Binary files that git could not diff. Pull requests showed nothing useful. The fix, split each test into three text files. An r g t spec in Tom L, with a dot out for the reference baseline, and a dot err file when needed. Now, git tracks every change.

@@ -1,0 +1,1 @@
+agentrail is a many crate Rust workspace. Core defines the data models, sagas, steps, and trajectories. Store handles persistence in Tom L and JSON. The executor and validator crates are stubs at the time of the making of this video, ready for deterministic task runners and output checkers.

@@ -1,0 +1,48 @@
+
+[music-pipe-rs] ~/github/softwarewrighter/music-pipe-rs % ./examples/demo-random-motif.sh
+=== Random Motif Generator ===
+Seed: 1773608650079
+
+Configuration:
+  BPM: 159
+  Root: E, Mode: minor
+  Base Note: 58
+  Complexity: 7
+  Notes: 20
+  Velocity: 77
+  Duration: 0.25
+  Rest Prob: 0.1
+  Swing: 0.33
+
+Ensemble: Brass Quintet (5 instruments)
+  Ch 0: Trumpet (patch 56)
+  Ch 1: Trumpet (patch 56)
+  Ch 2: French Horn (patch 60)
+  Ch 3: Trombone (patch 57)
+  Ch 4: Tuba (patch 58)
+
+  Density: 2 (0=sparse, 3=dense)
+  Style: HARMONY (transposed parts, tight entries)
+
+Generating shared motif (seed: 1773608650079)...
+Deriving: Trumpet (transpose: 0, delay: 0 ticks)...
+Deriving: Trumpet (transpose: -12, delay: 240 ticks)...
+Deriving: French Horn (transpose: -5, delay: 480 ticks)...
+Deriving: Trombone (transpose: -7, delay: 120 ticks)...
+Deriving: Tuba (transpose: -24, delay: 360 ticks)...
+Combining tracks...
+E4 ▅▅▂▅▅█▄▄█▂▆▃▃▄█▃▄▅▃▄▅▆▄▅▃▁▂▅▅█▆▂▅█▆▅█▄▂▃▅█▃▄▆▃▅▃▁▂▅▃▅█▅▅█▆▂▆ D7
+Converting to MIDI...
+Wrote MIDI file: "/tmp/random-motif.mid"
+Rendering to WAV...
+FluidSynth runtime version 2.5.2
+Copyright (C) 2000-2025 Peter Hanappe and others.
+Distributed under the LGPL license.
+SoundFont(R) is a registered trademark of Creative Technology Ltd.
+
+Rendering audio to file '/tmp/random-motif-raw.wav'..
+
+Created: examples/gend-motif.wav (20 seconds)
+Ensemble: Brass Quintet
+Run again for a completely different piece!
+

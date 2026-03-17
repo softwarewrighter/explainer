@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.95"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+  <circle cx="300" cy="800" r="160" fill="#4ade80" opacity="0.04"/>
+  <circle cx="1600" cy="200" r="120" fill="#f5a623" opacity="0.04"/>
+  <circle cx="960" cy="950" r="100" fill="#a855f7" opacity="0.05"/>
+
+  <!-- Title -->
+  <text x="960" y="110" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="96" font-weight="bold" fill="#ffffff" filter="url(#glow)">Try It Yourself</text>
+  <text x="960" y="170" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="40" fill="#ffd93d">Open Source | MIT License</text>
+
+  <!-- Card 1: reg-rs -->
+  <rect x="60" y="230" width="580" height="440" rx="24" fill="url(#cardGrad)"/>
+  <rect x="60" y="230" width="580" height="8" rx="4" fill="#4ade80"/>
+
+  <text x="350" y="320" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="56" font-weight="bold" fill="#4ade80">🧪 reg-rs</text>
+  <text x="350" y="380" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">Regression Testing</text>
+
+  <rect x="110" y="420" width="480" height="70" rx="10" fill="#0a0a14"/>
+  <text x="350" y="466" text-anchor="middle" font-family="monospace" font-size="28" fill="#4ade80">github.com/sw-cli-tools/reg-rs</text>
+
+  <text x="350" y="560" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#8080b0">Binary → Text</text>
+  <text x="350" y="605" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#8080b0">Git-friendly .rgt files</text>
+  <text x="350" y="645" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#8080b0">Shell alias workflow</text>
+
+  <!-- Card 2: avoid-compaction -->
+  <rect x="670" y="230" width="580" height="440" rx="24" fill="url(#cardGrad)"/>
+  <rect x="670" y="230" width="580" height="8" rx="4" fill="#f5a623"/>
+
+  <text x="960" y="320" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="44" font-weight="bold" fill="#f5a623">🔄 avoid-compaction</text>
+  <text x="960" y="380" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">Context Preservation</text>
+
+  <rect x="710" y="420" width="500" height="70" rx="10" fill="#0a0a14"/>
+  <text x="960" y="466" text-anchor="middle" font-family="monospace" font-size="28" fill="#f5a623">github.com/softwarewrighter/</text>
+
+  <rect x="710" y="495" width="500" height="50" rx="10" fill="#0a0a14"/>
+  <text x="960" y="530" text-anchor="middle" font-family="monospace" font-size="28" fill="#f5a623">avoid-compaction</text>
+
+  <text x="960" y="605" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#8080b0">Saga/Step handoffs</text>
+  <text x="960" y="645" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#8080b0">Multi-session agents</text>
+
+  <!-- Card 3: agentrail-rs -->
+  <rect x="1280" y="230" width="580" height="440" rx="24" fill="url(#cardGrad)"/>
+  <rect x="1280" y="230" width="580" height="8" rx="4" fill="#a855f7"/>
+
+  <text x="1570" y="320" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="56" font-weight="bold" fill="#a855f7">🎯 agentrail-rs</text>
+  <text x="1570" y="380" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">Agent Learning</text>
+
+  <rect x="1320" y="420" width="500" height="70" rx="10" fill="#0a0a14"/>
+  <text x="1570" y="466" text-anchor="middle" font-family="monospace" font-size="28" fill="#a855f7">github.com/sw-vibe-coding/</text>
+
+  <rect x="1320" y="495" width="500" height="50" rx="10" fill="#0a0a14"/>
+  <text x="1570" y="530" text-anchor="middle" font-family="monospace" font-size="28" fill="#a855f7">agentrail-rs</text>
+
+  <text x="1570" y="605" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#8080b0">ICRL trajectories</text>
+  <text x="1570" y="645" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#8080b0">Five-crate workspace</text>
+
+  <!-- Bottom: blog + papers note -->
+  <rect x="260" y="740" width="1400" height="280" rx="24" fill="url(#cardGrad)"/>
+  <rect x="260" y="740" width="1400" height="8" rx="4" fill="#ffd93d"/>
+
+  <text x="960" y="830" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="44" font-weight="bold" fill="#ffd93d">📝 Blog Post + ICRL Papers</text>
+  <text x="960" y="895" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">Full write-up and referenced papers in the description</text>
+  <text x="960" y="950" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#8080b0">Decision Transformer, OmniRL, Reflexion, Voyager</text>
+  <text x="960" y="995" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#8080b0">Transformers Learn TD Methods</text>
+</svg>

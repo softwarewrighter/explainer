@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.95"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+  <circle cx="300" cy="800" r="150" fill="#4ade80" opacity="0.04"/>
+  <circle cx="1600" cy="200" r="100" fill="#f5a623" opacity="0.05"/>
+
+  <!-- Title -->
+  <text x="960" y="100" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="96" font-weight="bold" fill="#ffffff" filter="url(#glow)">Three Upgrades</text>
+  <text x="960" y="160" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="40" fill="#a0a0d0">Three Rust tools, one theme: reduce friction</text>
+
+  <!-- Card 1: reg-rs -->
+  <rect x="60" y="220" width="580" height="760" rx="24" fill="url(#cardGrad)"/>
+  <rect x="60" y="220" width="580" height="8" rx="4" fill="#4ade80"/>
+
+  <text x="350" y="310" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="56" font-weight="bold" fill="#4ade80">🧪 reg-rs</text>
+  <text x="350" y="380" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="44" fill="#ffd93d">Binary → Text</text>
+
+  <!-- Terminal mockup -->
+  <rect x="110" y="420" width="480" height="180" rx="12" fill="#0a0a14"/>
+  <circle cx="140" cy="448" r="8" fill="#ff6b6b"/>
+  <circle cx="170" cy="448" r="8" fill="#ffd93d"/>
+  <circle cx="200" cy="448" r="8" fill="#4ade80"/>
+  <text x="130" y="500" font-family="monospace" font-size="28" fill="#4ade80">- test.tdb</text>
+  <text x="130" y="535" font-family="monospace" font-size="28" fill="#4ade80">+ test.rgt + .out + .err</text>
+
+  <text x="350" y="660" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">Git tracks every change</text>
+  <text x="350" y="710" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">PRs show real diffs</text>
+  <text x="350" y="760" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">Human readable specs</text>
+
+  <text x="350" y="920" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#8080b0">Shell aliases: adrg rnrg shrg uprg</text>
+
+  <!-- Card 2: avoid-compaction -->
+  <rect x="670" y="220" width="580" height="760" rx="24" fill="url(#cardGrad)"/>
+  <rect x="670" y="220" width="580" height="8" rx="4" fill="#f5a623"/>
+
+  <text x="960" y="310" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="48" font-weight="bold" fill="#f5a623">🔄 avoid-compaction</text>
+
+  <text x="960" y="380" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="44" fill="#ffd93d">Context Death → Handoffs</text>
+
+  <!-- Flow boxes -->
+  <rect x="720" y="420" width="480" height="180" rx="12" fill="#0a0a14"/>
+  <circle cx="750" cy="448" r="8" fill="#ff6b6b"/>
+  <circle cx="780" cy="448" r="8" fill="#ffd93d"/>
+  <circle cx="810" cy="448" r="8" fill="#4ade80"/>
+  <text x="740" y="500" font-family="monospace" font-size="28" fill="#f5a623">$ avoid-compaction next</text>
+  <text x="740" y="535" font-family="monospace" font-size="28" fill="#f5a623">$ avoid-compaction complete</text>
+
+  <text x="960" y="660" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">Saga → Step → Handoff</text>
+  <text x="960" y="710" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">Embrace restarts</text>
+  <text x="960" y="760" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">Full context each session</text>
+
+  <text x="960" y="920" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#8080b0">Append-only history</text>
+
+  <!-- Card 3: agentrail-rs -->
+  <rect x="1280" y="220" width="580" height="760" rx="24" fill="url(#cardGrad)"/>
+  <rect x="1280" y="220" width="580" height="8" rx="4" fill="#a855f7"/>
+
+  <text x="1570" y="310" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="56" font-weight="bold" fill="#a855f7">🎯 agentrail-rs</text>
+  <text x="1570" y="380" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="40" fill="#ffd93d">Just In Time Learning</text>
+
+  <!-- ICRL box -->
+  <rect x="1330" y="420" width="480" height="180" rx="12" fill="#0a0a14"/>
+  <circle cx="1360" cy="448" r="8" fill="#ff6b6b"/>
+  <circle cx="1390" cy="448" r="8" fill="#ffd93d"/>
+  <circle cx="1420" cy="448" r="8" fill="#4ade80"/>
+  <text x="1350" y="500" font-family="monospace" font-size="28" fill="#a855f7">state → action → result</text>
+  <text x="1350" y="535" font-family="monospace" font-size="28" fill="#a855f7">        → reward</text>
+
+  <text x="1570" y="660" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">Record trajectories</text>
+  <text x="1570" y="710" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">Inject on re-entry</text>
+  <text x="1570" y="760" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">First-attempt success</text>
+
+  <text x="1570" y="920" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#8080b0">Five-crate Rust workspace</text>
+</svg>

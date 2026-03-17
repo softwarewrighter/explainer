@@ -1,0 +1,1 @@
+All three tools are open source under the MIT license. Links are in the description, along with the I C R L papers that inspired agentrail. If you are building developer tools in Rust, give them a look.

@@ -1,0 +1,38 @@
+Saw (2/?): reg-rs, avoid-compaction, and agentrail-rs
+
+Sharpen the Saw Sunday, Part 2. Three Rust CLI tools getting foundational upgrades to reduce developer workflow friction.
+
+reg-rs switches from binary SQLite databases to git-friendly text files. avoid-compaction structures multi-session AI agent workflows with explicit handoffs. agentrail-rs records successful agent trajectories and injects them as context, so agents learn from examples instead of repeating mistakes.
+
+Blog post: https://software-wrighter-lab.github.io/2026/03/15/saw-reg-rs-avoid-compaction-agentrail/
+
+Chapters:
+0:00 Title
+0:05 Hook
+0:25 Overview
+0:46 reg-rs: Binary to Text
+1:11 reg-rs Demo
+1:51 avoid-compaction: Context Loss
+2:12 avoid-compaction Flow
+2:29 agentrail-rs: Just In Time Learning
+2:51 agentrail-rs Architecture
+3:16 Conclusions
+3:37 CTA
+3:50 Subscribe Reminder
+4:02 Outro
+
+Links:
+- reg-rs: https://github.com/sw-cli-tools/reg-rs
+- avoid-compaction: https://github.com/softwarewrighter/avoid-compaction
+- agentrail-rs: https://github.com/sw-vibe-coding/agentrail-rs
+- Blog: https://software-wrighter-lab.github.io/2026/03/15/saw-reg-rs-avoid-compaction-agentrail/
+
+ICRL Papers Referenced:
+- Decision Transformer (Chen et al., 2021): https://arxiv.org/abs/2106.01345
+- Transformers Learn TD Methods (Wang et al., ICLR 2025): https://arxiv.org/abs/2405.13861
+- OmniRL (2025): https://arxiv.org/abs/2502.02869
+- Reflexion (Shinn et al., NeurIPS 2023): https://arxiv.org/abs/2303.11366
+- Voyager (Wang et al., 2023): https://arxiv.org/abs/2305.16291
+
+Hashtags:
+#rust #rustlang #cli #regressiontesting #aiagents #developer #programming #opensource #tdd #devtools

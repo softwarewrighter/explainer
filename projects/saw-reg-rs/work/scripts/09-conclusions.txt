@@ -1,0 +1,1 @@
+Three vibe-coding projects to help with productivity. The regression tool makes test related files visible in git. avoid compaction keeps agents sharp across sessions. agentrail teaches agents from their own history. Each one reduces friction in a different part of my workflow.

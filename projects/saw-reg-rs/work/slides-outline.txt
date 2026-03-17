@@ -1,0 +1,119 @@
+Slides Outline - Saw (2/?): reg-rs, avoid-compaction, agentrail-rs
+
+== 00-title ==
+Type: Ken Burns video (slow zoom on image + text overlay + music)
+Background: assets/images/wide-saws.jpg (2048x1024, vintage saw blueprints)
+Text overlay: Large sans-serif block orange font with black outline/shadow
+  Left side (stacked): "Sharpen" / "The" / "Saw"
+  Right side (stacked): "Testing" / "Context" / "Guidance"
+Audio: assets/music.wav (0..5s, 0.5s fade-out)
+Duration: 5s
+
+== 01-hook ==
+Type: Slide + narration
+Visual: Two-column card layout (PaperBanana style)
+Left card: "The Problem" - red top bar
+  🔴 Binary files git can't diff
+  🔴 Context lost mid-session
+  🔴 Agents repeat same mistakes
+Right card: "The Fix" - green top bar
+  ✅ Git-friendly text files
+  ✅ Structured handoffs
+  ✅ Learn from success
+Background: Dark gradient (#0f0c29 → #302b63 → #24243e)
+
+== 02-overview ==
+Type: Slide + narration
+Visual: Three-column card layout (one per tool)
+Card 1: reg-rs 🧪 - "Binary → Text" / ".tdb → .rgt + .out + .err" / green top bar
+Card 2: avoid-compaction 🔄 - "Context Death → Handoffs" / "saga → step → complete" / orange top bar
+Card 3: agentrail-rs 🎯 - "75% → Learning" / "trajectories + rewards" / purple top bar
+Subtitle: "Three Rust tools, one theme: reduce friction"
+
+== 03-regrs-text ==
+Type: Slide + narration
+Visual: Before/After comparison
+Left side: "Before" card with red top bar
+  Terminal mockup showing: test.tdb (binary blob, no diff)
+  ✗ Can't code review  ✗ Merge conflicts  ✗ No history
+Right side: "After" card with green top bar
+  File tree: test.rgt (TOML), test.out (text), test.err (text)
+  ✓ Git tracks changes  ✓ PR diffs work  ✓ Human readable
+Arrow from left to right
+
+== 04-regrs-demo ==
+Type: VHS terminal recording + narration
+VHS tape: Reuse/adapt cli-02-regression.tape from projects/reg-rs/assets/vhs/
+Content: Full alias workflow
+  adrg version_test 'cat version.txt'  →  rnrg version_test (pass)
+  Change file  →  rnrg version_test (fail)  →  shrg version_test -vv (diff)  →  uprg version_test (accept)
+
+== 05-avoid-compaction ==
+Type: Slide + narration
+Visual: Flow diagram with session boxes and arrows
+Title: "avoid-compaction: Structured Handoffs"
+Flow: Session 1 → [next] → Work → [complete] → Session 2 → [next] → Work → [complete]
+Bottom row of 3 cards:
+  "Saga" 📋 - the project goal
+  "Step" 🎯 - focused work unit (prompt + context + summary)
+  "Handoff" 🤝 - explicit transfer, not silent compaction
+
+== 06-avoid-compaction-flow ==
+Type: Slide + narration (replaces VHS demo)
+Visual: Detailed command flow / session loop diagram
+Title: "The Session Loop"
+Terminal mockup showing:
+  $ avoid-compaction next     # read current step
+  $ ... do the work ...       # implement, test
+  $ git commit                # save progress
+  $ avoid-compaction complete # hand off to next session
+Right side: file tree showing .avoid-compaction/ directory structure
+  saga.toml, plan.md, steps/001-*.toml, steps/001-summary.md
+
+== 07-agentrail ==
+Type: Slide + narration
+Visual: Problem/Solution split
+Title: "agentrail-rs: In-Context Reinforcement Learning"
+Left: "The 75% Problem"
+  Agent tries task → fails (wrong flags) → retries → succeeds
+  "Same mistake, every session"
+Right: "Trajectory Learning"
+  Record: state → action → result → reward
+  Inject: top trajectories on re-entry
+  "First-attempt success"
+
+== 08-agentrail-arch ==
+Type: Slide + narration
+Visual: Five-crate workspace diagram
+Title: "Five-Crate Workspace"
+Layout:
+  [agentrail-cli] (top)
+  [agentrail-core] (center, green border - DONE)
+  [agentrail-store] (left, green border - DONE)
+  [agentrail-exec] (right, yellow border - STUB)
+  [agentrail-validate] (bottom, yellow border - STUB)
+Labels: "Core: models + types" / "Store: TOML + JSON" / "Exec: task runners" / "Validate: output checks"
+
+== 09-conclusions ==
+Type: Slide + narration
+Visual: Three-row checklist
+Title: "One Theme: Reduce Friction"
+Row 1: 🧪 reg-rs → "Tests visible in git" ✓
+Row 2: 🔄 avoid-compaction → "Agents sharp across sessions" ✓
+Row 3: 🎯 agentrail-rs → "Agents learn from history" ✓
+Bottom: "Sharpen the Saw 🔧"
+
+== 98-cta ==
+Type: Slide + narration
+Visual: Three repo cards with GitHub icon, dark background
+Title: "Try It Yourself"
+Card 1: "reg-rs" / github.com/sw-cli-tools/reg-rs
+Card 2: "avoid-compaction" / github.com/softwarewrighter/avoid-compaction
+Card 3: "agentrail-rs" / github.com/sw-vibe-coding/agentrail-rs
+Bottom: "Blog post and ICRL papers in description" / "MIT License"
+
+== 99-subscribe-reminder ==
+Type: Shared bookend (COPY from /explainer/shared/99-subscribe-reminder-narrated.mp4)
+
+== 99x-outro ==
+Type: Unique bookend (last frame of 99 + this video's music with fade-out, 12s)

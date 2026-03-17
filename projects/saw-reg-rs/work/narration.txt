@@ -1,0 +1,29 @@
+01-hook (max 320 chars):
+Tools rot when you stop maintaining them. Binary formats block code review, AI agents forget what they learned, and workflows break silently. Today I am sharpening the saw on three Rust tools, upgrading how they store data, preserve context, and learn from mistakes.
+
+02-overview (max 320 chars):
+Three upgrades. First, reg-rs switches from binary databases to git friendly text files. Second, avoid compaction gives AI agents structured handoffs between sessions. Third, agentrail records what works so agents stop repeating failures.
+
+03-regrs-text (max 320 chars):
+reg-rs stored tests in SQLite databases. Binary files that git could not diff. Pull requests showed nothing useful. The fix, split each test into three text files. An r g t spec in TOML, a dot out baseline, and a dot err file when needed. Now git tracks every change.
+
+04-regrs-demo (VHS recording narration, max 320 chars):
+Here is the alias workflow. Add a test that captures version one point zero. Run it, it passes. Now change the file to version two point zero. Run again, regress catches the difference. Show the diff, then rebase to accept the new output.
+
+05-avoid-compaction (max 320 chars):
+AI agents lose context when conversations get too long. The system auto compacts older messages and decisions disappear. avoid compaction fixes this by embracing restarts. Each session gets a focused step with a prompt, context files, and a summary of what came before.
+
+06-avoid-compaction-flow (max 320 chars):
+The session loop is simple. Run next to read the current step. Do the work. Commit your changes. Run complete to record what happened and define the next step. The next session starts fresh with full context for its specific task.
+
+07-agentrail (max 320 chars):
+Agents succeed about seventy five percent of the time on routine tasks. They forget API flags, skip validation, miss steps. agentrail records successful trajectories and injects them as context. Four step types, meta for planning, production for execution, deterministic for machines, validation for checks.
+
+08-agentrail-arch (max 320 chars):
+agentrail is a five crate Rust workspace. Core defines the data models, sagas, steps, and trajectories. Store handles persistence in TOML and JSON. The executor and validator crates are stubs today, ready for deterministic task runners and output checkers.
+
+09-conclusions (max 320 chars):
+Three tools, one theme. reg-rs makes tests visible in git. avoid compaction keeps agents sharp across sessions. agentrail teaches agents from their own history. Each one reduces friction in a different part of the workflow.
+
+98-cta (max 320 chars):
+All three tools are open source under the MIT license. Links are in the description, along with the I C R L papers that inspired agentrail. If you are building developer tools in Rust, give them a look.

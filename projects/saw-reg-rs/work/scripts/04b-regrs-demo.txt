@@ -1,0 +1,1 @@
+Now change the file to version two point zero and run again with verbose output. Regress catches the mismatch immediately, showing what was removed and what was added. Rebase accepts the new output. The baseline updates, and the test passes cleanly.

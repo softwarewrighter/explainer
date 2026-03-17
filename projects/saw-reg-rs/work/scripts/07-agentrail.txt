@@ -1,0 +1,1 @@
+Agents succeed most of the time on routine tasks. But they often forget API flags, skip validation. my new CLI tool, agent rail, finds successful trajectories and injects them as context. Four step types, meta for planning, production for execution, deterministic for machines, validation for checks.

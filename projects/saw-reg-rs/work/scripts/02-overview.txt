@@ -1,0 +1,1 @@
+Three upgrades. First, the regression test tool, regress, switches from binary databases to git friendly text files. Second, avoid compaction gives AI agents structured handoffs between sessions. Third, agentrail describes what works so agents stop repeating failures.

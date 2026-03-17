@@ -1,0 +1,1 @@
+Tools rot when you stop maintaining them. Binary formats block code review, AI agents forget what they learned, and workflows break silently. Today I am sharpening the saw on three Rust tools, upgrading how they store data, preserve context, and learn from mistakes.

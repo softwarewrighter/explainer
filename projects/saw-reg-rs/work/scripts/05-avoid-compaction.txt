@@ -1,0 +1,1 @@
+Coding agents lose context when conversations get too long. The system auto compacts older messages and decisions sometimes disappear. avoid compaction fixes this by embracing restarts. Each session gets a focused step with a prompt, context files, and a summary of what came before.

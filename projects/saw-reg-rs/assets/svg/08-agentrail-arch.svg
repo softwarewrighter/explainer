@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.95"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+  <circle cx="1800" cy="800" r="120" fill="#a855f7" opacity="0.05"/>
+  <circle cx="100" cy="300" r="90" fill="#00d4ff" opacity="0.04"/>
+
+  <!-- Title -->
+  <text x="960" y="100" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="96" font-weight="bold" fill="#ffffff" filter="url(#glow)">Five-Crate Workspace</text>
+  <text x="960" y="160" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="40" fill="#a855f7">agentrail-rs Architecture</text>
+
+  <!-- CLI crate (top center) -->
+  <rect x="710" y="210" width="500" height="140" rx="20" fill="url(#cardGrad)" stroke="#8080b0" stroke-width="4" stroke-dasharray="12,6"/>
+  <text x="960" y="275" text-anchor="middle" font-family="monospace" font-size="40" font-weight="bold" fill="#8080b0">agentrail-cli</text>
+  <text x="960" y="325" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="28" fill="#666680">CLI entry point (planned)</text>
+
+  <!-- Arrow down from CLI -->
+  <line x1="960" y1="350" x2="960" y2="400" stroke="#8080b0" stroke-width="4" stroke-dasharray="8,4"/>
+  <polygon points="945,400 975,400 960,420" fill="#8080b0"/>
+
+  <!-- Core crate (center) -->
+  <rect x="610" y="430" width="700" height="180" rx="20" fill="url(#cardGrad)" stroke="#4ade80" stroke-width="5"/>
+  <rect x="610" y="430" width="700" height="8" rx="4" fill="#4ade80"/>
+  <text x="960" y="510" text-anchor="middle" font-family="monospace" font-size="44" font-weight="bold" fill="#4ade80">agentrail-core</text>
+  <text x="960" y="565" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#e0e0ff">Sagas, Steps, Trajectories, Handoffs</text>
+  <text x="1260" y="470" font-family="Helvetica,Arial,sans-serif" font-size="32" font-weight="bold" fill="#4ade80">✓</text>
+
+  <!-- Arrow left from Core to Store -->
+  <line x1="610" y1="520" x2="530" y2="520" stroke="#4ade80" stroke-width="4"/>
+  <polygon points="530,505 530,535 500,520" fill="#4ade80"/>
+
+  <!-- Arrow right from Core to Exec -->
+  <line x1="1310" y1="520" x2="1390" y2="520" stroke="#ffd93d" stroke-width="4" stroke-dasharray="8,4"/>
+  <polygon points="1390,505 1390,535 1420,520" fill="#ffd93d"/>
+
+  <!-- Store crate (left) -->
+  <rect x="60" y="430" width="430" height="180" rx="20" fill="url(#cardGrad)" stroke="#4ade80" stroke-width="5"/>
+  <rect x="60" y="430" width="430" height="8" rx="4" fill="#4ade80"/>
+  <text x="275" y="510" text-anchor="middle" font-family="monospace" font-size="40" font-weight="bold" fill="#4ade80">agentrail-store</text>
+  <text x="275" y="560" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#e0e0ff">TOML + JSON persistence</text>
+  <text x="430" y="470" font-family="Helvetica,Arial,sans-serif" font-size="32" font-weight="bold" fill="#4ade80">✓</text>
+
+  <!-- Exec crate (right) -->
+  <rect x="1430" y="430" width="430" height="180" rx="20" fill="url(#cardGrad)" stroke="#ffd93d" stroke-width="5" stroke-dasharray="12,6"/>
+  <rect x="1430" y="430" width="430" height="8" rx="4" fill="#ffd93d"/>
+  <text x="1645" y="510" text-anchor="middle" font-family="monospace" font-size="40" font-weight="bold" fill="#ffd93d">agentrail-exec</text>
+  <text x="1645" y="560" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#e0e0ff">Deterministic runners</text>
+  <text x="1800" y="470" font-family="Helvetica,Arial,sans-serif" font-size="32" font-weight="bold" fill="#ffd93d">⏳</text>
+
+  <!-- Arrow down from Core to Validate -->
+  <line x1="960" y1="610" x2="960" y2="670" stroke="#ffd93d" stroke-width="4" stroke-dasharray="8,4"/>
+  <polygon points="945,670 975,670 960,690" fill="#ffd93d"/>
+
+  <!-- Validate crate (bottom center) -->
+  <rect x="610" y="700" width="700" height="140" rx="20" fill="url(#cardGrad)" stroke="#ffd93d" stroke-width="5" stroke-dasharray="12,6"/>
+  <rect x="610" y="700" width="700" height="8" rx="4" fill="#ffd93d"/>
+  <text x="960" y="770" text-anchor="middle" font-family="monospace" font-size="40" font-weight="bold" fill="#ffd93d">agentrail-validate</text>
+  <text x="960" y="815" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#e0e0ff">Output checkers: file-exists, duration-check</text>
+  <text x="1260" y="740" font-family="Helvetica,Arial,sans-serif" font-size="32" font-weight="bold" fill="#ffd93d">⏳</text>
+
+  <!-- Legend -->
+  <rect x="60" y="900" width="860" height="130" rx="16" fill="url(#cardGrad)"/>
+  <rect x="110" y="945" width="40" height="4" stroke="#4ade80" stroke-width="4" fill="none"/>
+  <text x="170" y="955" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#4ade80">Implemented</text>
+
+  <rect x="420" y="943" width="40" height="4" stroke="#ffd93d" stroke-width="4" stroke-dasharray="8,4" fill="none"/>
+  <text x="480" y="955" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#ffd93d">Stub (in progress)</text>
+
+  <!-- Tech stack note -->
+  <rect x="1000" y="900" width="860" height="130" rx="16" fill="url(#cardGrad)"/>
+  <text x="1430" y="955" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#e0e0ff">Rust workspace + clap + serde + tempfile</text>
+  <text x="1430" y="1000" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#8080b0">35+ integration tests</text>
+</svg>

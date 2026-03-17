@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:0.95"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+  <circle cx="1750" cy="900" r="140" fill="#f5a623" opacity="0.04"/>
+  <circle cx="100" cy="100" r="80" fill="#4ade80" opacity="0.05"/>
+
+  <!-- Title -->
+  <text x="960" y="100" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="96" font-weight="bold" fill="#ffffff" filter="url(#glow)">The Session Loop</text>
+
+  <!-- Big terminal mockup on left -->
+  <rect x="60" y="170" width="1060" height="520" rx="16" fill="#0a0a14"/>
+  <circle cx="100" cy="204" r="10" fill="#ff6b6b"/>
+  <circle cx="134" cy="204" r="10" fill="#ffd93d"/>
+  <circle cx="168" cy="204" r="10" fill="#4ade80"/>
+
+  <!-- Step 1: next -->
+  <text x="100" y="270" font-family="monospace" font-size="36" fill="#4ade80">$</text>
+  <text x="140" y="270" font-family="monospace" font-size="36" fill="#f5a623">avoid-compaction next</text>
+  <text x="140" y="315" font-family="monospace" font-size="28" fill="#666680"># Read current step prompt + context</text>
+
+  <!-- Step 2: work -->
+  <text x="100" y="385" font-family="monospace" font-size="36" fill="#4ade80">$</text>
+  <text x="140" y="385" font-family="monospace" font-size="36" fill="#e0e0ff">... do the work ...</text>
+  <text x="140" y="430" font-family="monospace" font-size="28" fill="#666680"># Implement, test, fix</text>
+
+  <!-- Step 3: commit -->
+  <text x="100" y="500" font-family="monospace" font-size="36" fill="#4ade80">$</text>
+  <text x="140" y="500" font-family="monospace" font-size="36" fill="#e0e0ff">git commit</text>
+  <text x="140" y="545" font-family="monospace" font-size="28" fill="#666680"># Save progress</text>
+
+  <!-- Step 4: complete -->
+  <text x="100" y="615" font-family="monospace" font-size="36" fill="#4ade80">$</text>
+  <text x="140" y="615" font-family="monospace" font-size="36" fill="#f5a623">avoid-compaction complete</text>
+  <text x="140" y="660" font-family="monospace" font-size="28" fill="#666680"># Record summary, define next step</text>
+
+  <!-- Right side: directory structure -->
+  <rect x="1180" y="170" width="680" height="520" rx="16" fill="url(#cardGrad)"/>
+  <rect x="1180" y="170" width="680" height="8" rx="4" fill="#f5a623"/>
+
+  <text x="1520" y="250" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="44" font-weight="bold" fill="#f5a623">📁 .avoid-compaction/</text>
+
+  <text x="1230" y="320" font-family="monospace" font-size="32" fill="#ffd93d">saga.toml</text>
+  <text x="1580" y="320" font-family="Helvetica,Arial,sans-serif" font-size="28" fill="#8080b0">name, status</text>
+
+  <text x="1230" y="375" font-family="monospace" font-size="32" fill="#ffd93d">plan.md</text>
+  <text x="1580" y="375" font-family="Helvetica,Arial,sans-serif" font-size="28" fill="#8080b0">evolving plan</text>
+
+  <text x="1230" y="430" font-family="monospace" font-size="32" fill="#ffd93d">steps/</text>
+
+  <text x="1280" y="480" font-family="monospace" font-size="28" fill="#4ade80">001-add-routes/</text>
+  <text x="1330" y="520" font-family="monospace" font-size="28" fill="#8080b0">step.toml</text>
+  <text x="1330" y="555" font-family="monospace" font-size="28" fill="#8080b0">prompt.md</text>
+  <text x="1330" y="590" font-family="monospace" font-size="28" fill="#8080b0">summary.md</text>
+
+  <text x="1280" y="645" font-family="monospace" font-size="28" fill="#f5a623">002-add-tests/</text>
+  <text x="1330" y="675" font-family="monospace" font-size="28" fill="#8080b0">...</text>
+
+  <!-- Bottom: key insight -->
+  <rect x="60" y="760" width="1800" height="260" rx="20" fill="url(#cardGrad)"/>
+  <rect x="60" y="760" width="1800" height="8" rx="4" fill="#4ade80"/>
+
+  <text x="960" y="850" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="48" font-weight="bold" fill="#4ade80">💡 Key Insight</text>
+  <text x="960" y="920" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="40" fill="#e0e0ff">Each new session starts fresh using less of the context window.</text>
+  <text x="960" y="975" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="40" fill="#e0e0ff">No degradation from long conversations. No silent context loss.</text>
+</svg>
