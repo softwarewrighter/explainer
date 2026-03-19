@@ -1,0 +1,1 @@
+This test tool, regress, captures standard output, standard error output, and exit code in text files. One file per test, git friendly. It diffs new output when run again against the baseline and flags any changes. Shell aliases let you add, run, show, and rebase tests quickly.

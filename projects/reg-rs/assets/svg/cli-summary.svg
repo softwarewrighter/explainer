@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e"/>
+      <stop offset="100%" style="stop-color:#0d0d1a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative shapes -->
+  <circle cx="1800" cy="100" r="180" fill="#a855f7" opacity="0.05"/>
+  <circle cx="100" cy="800" r="140" fill="#00d4ff" opacity="0.06"/>
+  <circle cx="1700" cy="900" r="100" fill="#4ade80" opacity="0.05"/>
+  <polygon points="150,100 190,40 230,100" fill="#ffd93d" opacity="0.08"/>
+  <polygon points="1600,200 1640,140 1680,200" fill="#ff6b6b" opacity="0.06"/>
+  <circle cx="960" cy="1050" r="80" fill="#ffd93d" opacity="0.04"/>
+
+  <!-- Title -->
+  <text x="960" y="100" text-anchor="middle" font-family="sans-serif" font-size="96" font-weight="bold" fill="#00d4ff" filter="url(#glow)">Complete Workflow</text>
+  <text x="960" y="155" text-anchor="middle" font-family="sans-serif" font-size="44" fill="#aaa">Four commands to protect your CLI output</text>
+
+  <!-- Left panel: Checklist -->
+  <rect x="80" y="210" width="720" height="700" rx="24" fill="url(#cardGrad)" opacity="0.9"/>
+  <rect x="80" y="210" width="720" height="8" rx="4" fill="#00d4ff"/>
+
+  <!-- Item 1: Add (adrg) -->
+  <text x="140" y="310" font-family="sans-serif" font-size="52" fill="#4ade80">✓</text>
+  <text x="200" y="310" font-family="sans-serif" font-size="48" font-weight="bold" fill="#fff">Add (adrg)</text>
+  <text x="200" y="365" font-family="sans-serif" font-size="38" fill="#ccc">Captures baseline snapshot of</text>
+  <text x="200" y="405" font-family="sans-serif" font-size="38" fill="#ccc">stdout, stderr, and exit code</text>
+
+  <!-- Divider -->
+  <line x1="140" y1="430" x2="740" y2="430" stroke="#333" stroke-width="2"/>
+
+  <!-- Item 2: Run (rnrg) -->
+  <text x="140" y="490" font-family="sans-serif" font-size="52" fill="#4ade80">✓</text>
+  <text x="200" y="490" font-family="sans-serif" font-size="48" font-weight="bold" fill="#fff">Run (rnrg)</text>
+  <text x="200" y="540" font-family="sans-serif" font-size="38" fill="#ccc">Detects any output changes</text>
+  <text x="200" y="580" font-family="sans-serif" font-size="38" fill="#ccc">since the last baseline</text>
+
+  <!-- Divider -->
+  <line x1="140" y1="605" x2="740" y2="605" stroke="#333" stroke-width="2"/>
+
+  <!-- Item 3: Show (shrg) -->
+  <text x="140" y="665" font-family="sans-serif" font-size="52" fill="#4ade80">✓</text>
+  <text x="200" y="665" font-family="sans-serif" font-size="48" font-weight="bold" fill="#fff">Show (shrg)</text>
+  <text x="200" y="715" font-family="sans-serif" font-size="38" fill="#ccc">Shows line-by-line diff of</text>
+  <text x="200" y="755" font-family="sans-serif" font-size="38" fill="#ccc">what changed and where</text>
+
+  <!-- Divider -->
+  <line x1="140" y1="780" x2="740" y2="780" stroke="#333" stroke-width="2"/>
+
+  <!-- Item 4: Rebase (uprg) -->
+  <text x="140" y="840" font-family="sans-serif" font-size="52" fill="#4ade80">✓</text>
+  <text x="200" y="840" font-family="sans-serif" font-size="48" font-weight="bold" fill="#fff">Rebase (uprg)</text>
+  <text x="200" y="890" font-family="sans-serif" font-size="38" fill="#ccc">Accept new output as baseline</text>
+
+  <!-- Right panel: Terminal mockup -->
+  <rect x="860" y="210" width="920" height="500" rx="16" fill="#0a0a14" stroke="#333" stroke-width="2"/>
+  <!-- Window dots -->
+  <circle cx="920" cy="248" r="9" fill="#ff6b6b"/>
+  <circle cx="952" cy="248" r="9" fill="#ffd93d"/>
+  <circle cx="984" cy="248" r="9" fill="#4ade80"/>
+  <text x="1040" y="253" font-family="monospace" font-size="36" fill="#aaa">reg-rs</text>
+
+  <!-- Terminal content -->
+  <text x="920" y="330" font-family="monospace" font-size="38" fill="#4ade80">$</text>
+  <text x="960" y="330" font-family="monospace" font-size="38" fill="#eee"> rnrg api-</text>
+
+  <text x="920" y="390" font-family="monospace" font-size="36" fill="#aaa">Running 12 tests...</text>
+
+  <text x="920" y="450" font-family="monospace" font-size="36" fill="#4ade80">  PASS</text>
+  <text x="1060" y="450" font-family="monospace" font-size="36" fill="#ccc"> api-users</text>
+
+  <text x="920" y="500" font-family="monospace" font-size="36" fill="#4ade80">  PASS</text>
+  <text x="1060" y="500" font-family="monospace" font-size="36" fill="#ccc"> api-auth</text>
+
+  <text x="920" y="550" font-family="monospace" font-size="36" fill="#ff6b6b">  FAIL</text>
+  <text x="1060" y="550" font-family="monospace" font-size="36" fill="#ccc"> api-billing</text>
+
+  <text x="920" y="620" font-family="monospace" font-size="36" fill="#ffd93d">  11 passed, 1 failed</text>
+
+  <!-- Bottom stats card -->
+  <rect x="880" y="760" width="320" height="150" rx="16" fill="url(#cardGrad)" opacity="0.9"/>
+  <rect x="880" y="760" width="320" height="6" rx="3" fill="#4ade80"/>
+  <text x="1040" y="825" text-anchor="middle" font-family="sans-serif" font-size="44" font-weight="bold" fill="#4ade80">Git-Friendly</text>
+  <text x="1040" y="880" text-anchor="middle" font-family="sans-serif" font-size="38" fill="#ccc">.rgt text files</text>
+
+  <!-- Emoji decorations -->
+  <text x="850" y="1000" font-family="sans-serif" font-size="44" opacity="0.4">🎯</text>
+  <text x="80" y="170" font-family="sans-serif" font-size="40" opacity="0.3">📋</text>
+  <text x="1500" y="170" font-family="sans-serif" font-size="44" opacity="0.3">⚡</text>
+</svg>

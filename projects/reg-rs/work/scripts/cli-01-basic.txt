@@ -1,0 +1,1 @@
+We start with the basic workflow. Add a test called hello that runs echo hello world. The baseline is stored in a text file. Now run it. The output matches, so it passes. List confirms, one test, one pass. Show displays the details.

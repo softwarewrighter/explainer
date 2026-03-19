@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e"/>
+      <stop offset="100%" style="stop-color:#0d0d1a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="browserBar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2a4e"/>
+      <stop offset="100%" style="stop-color:#1a1a3e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative shapes -->
+  <circle cx="1850" cy="150" r="180" fill="#a855f7" opacity="0.05"/>
+  <circle cx="100" cy="900" r="160" fill="#00d4ff" opacity="0.06"/>
+  <circle cx="300" cy="100" r="100" fill="#4ade80" opacity="0.05"/>
+  <polygon points="1700,950 1740,890 1780,950" fill="#ffd93d" opacity="0.07"/>
+  <polygon points="80,400 120,340 160,400" fill="#ff6b6b" opacity="0.06"/>
+
+  <!-- Title -->
+  <text x="960" y="90" text-anchor="middle" font-family="sans-serif" font-size="96" font-weight="bold" fill="#00d4ff" filter="url(#glow)">Web Dashboard</text>
+  <text x="960" y="145" text-anchor="middle" font-family="sans-serif" font-size="44" fill="#aaa">Visual test results at a glance</text>
+
+  <!-- Browser window mockup -->
+  <rect x="120" y="200" width="1240" height="720" rx="16" fill="#0a0a14" stroke="#333" stroke-width="3"/>
+
+  <!-- Browser title bar -->
+  <rect x="120" y="200" width="1240" height="56" rx="16" fill="url(#browserBar)"/>
+  <rect x="120" y="240" width="1240" height="16" fill="url(#browserBar)"/>
+  <!-- Window dots -->
+  <circle cx="160" cy="228" r="9" fill="#ff6b6b"/>
+  <circle cx="192" cy="228" r="9" fill="#ffd93d"/>
+  <circle cx="224" cy="228" r="9" fill="#4ade80"/>
+  <!-- URL bar -->
+  <rect x="280" y="212" width="600" height="32" rx="8" fill="#0d0d1a"/>
+  <text x="310" y="236" font-family="monospace" font-size="36" fill="#aaa">localhost:4740</text>
+
+  <!-- Dashboard header inside browser -->
+  <text x="180" y="320" font-family="sans-serif" font-size="44" font-weight="bold" fill="#fff">regress dashboard</text>
+  <text x="1060" y="320" font-family="sans-serif" font-size="36" fill="#4ade80">Port 4740</text>
+
+  <!-- Table header -->
+  <rect x="160" y="350" width="1160" height="50" rx="8" fill="#1a1a3e"/>
+  <text x="200" y="385" font-family="monospace" font-size="36" font-weight="bold" fill="#aaa">Test Name</text>
+  <text x="700" y="385" font-family="monospace" font-size="36" font-weight="bold" fill="#aaa">Status</text>
+  <text x="950" y="385" font-family="monospace" font-size="36" font-weight="bold" fill="#aaa">Duration</text>
+
+  <!-- Table rows -->
+  <!-- Row 1 -->
+  <rect x="160" y="410" width="1160" height="55" rx="0" fill="#0d0d1a" opacity="0.5"/>
+  <text x="200" y="448" font-family="monospace" font-size="38" fill="#eee">api-users-list</text>
+  <text x="700" y="448" font-family="monospace" font-size="38" fill="#4ade80">PASS</text>
+  <text x="950" y="448" font-family="monospace" font-size="38" fill="#aaa">0.42s</text>
+
+  <!-- Row 2 -->
+  <rect x="160" y="470" width="1160" height="55" rx="0" fill="#1a1a3e" opacity="0.3"/>
+  <text x="200" y="508" font-family="monospace" font-size="38" fill="#eee">api-auth-login</text>
+  <text x="700" y="508" font-family="monospace" font-size="38" fill="#4ade80">PASS</text>
+  <text x="950" y="508" font-family="monospace" font-size="38" fill="#aaa">1.03s</text>
+
+  <!-- Row 3 -->
+  <rect x="160" y="530" width="1160" height="55" rx="0" fill="#0d0d1a" opacity="0.5"/>
+  <text x="200" y="568" font-family="monospace" font-size="38" fill="#eee">api-billing-calc</text>
+  <text x="700" y="568" font-family="monospace" font-size="38" fill="#ff6b6b">FAIL</text>
+  <text x="950" y="568" font-family="monospace" font-size="38" fill="#aaa">0.87s</text>
+
+  <!-- Row 4 -->
+  <rect x="160" y="590" width="1160" height="55" rx="0" fill="#1a1a3e" opacity="0.3"/>
+  <text x="200" y="628" font-family="monospace" font-size="38" fill="#eee">cli-help-output</text>
+  <text x="700" y="628" font-family="monospace" font-size="38" fill="#4ade80">PASS</text>
+  <text x="950" y="628" font-family="monospace" font-size="38" fill="#aaa">0.15s</text>
+
+  <!-- Row 5 -->
+  <rect x="160" y="650" width="1160" height="55" rx="0" fill="#0d0d1a" opacity="0.5"/>
+  <text x="200" y="688" font-family="monospace" font-size="38" fill="#eee">cli-version-flag</text>
+  <text x="700" y="688" font-family="monospace" font-size="38" fill="#4ade80">PASS</text>
+  <text x="950" y="688" font-family="monospace" font-size="38" fill="#aaa">0.08s</text>
+
+  <!-- Summary bar -->
+  <rect x="160" y="730" width="1160" height="55" rx="8" fill="#1a1a3e"/>
+  <text x="200" y="768" font-family="monospace" font-size="38" fill="#4ade80">4 passed</text>
+  <text x="500" y="768" font-family="monospace" font-size="38" fill="#ff6b6b">1 failed</text>
+  <text x="800" y="768" font-family="monospace" font-size="38" fill="#aaa">5 total</text>
+
+  <!-- Feature callouts -->
+  <rect x="120" y="960" width="360" height="80" rx="16" fill="url(#cardGrad)" opacity="0.9"/>
+  <rect x="120" y="960" width="360" height="6" rx="3" fill="#00d4ff"/>
+  <text x="300" y="1012" text-anchor="middle" font-family="sans-serif" font-size="40" fill="#00d4ff">🌐 Built-in Server</text>
+
+  <rect x="540" y="960" width="360" height="80" rx="16" fill="url(#cardGrad)" opacity="0.9"/>
+  <rect x="540" y="960" width="360" height="6" rx="3" fill="#ffd93d"/>
+  <text x="720" y="1012" text-anchor="middle" font-family="sans-serif" font-size="40" fill="#ffd93d">⚡ Real-time Updates</text>
+
+  <rect x="960" y="960" width="360" height="80" rx="16" fill="url(#cardGrad)" opacity="0.9"/>
+  <rect x="960" y="960" width="360" height="6" rx="3" fill="#4ade80"/>
+  <text x="1140" y="1012" text-anchor="middle" font-family="sans-serif" font-size="40" fill="#4ade80">🔍 Diff Viewer</text>
+
+  <!-- Sparkles -->
+  <text x="1400" y="250" font-family="sans-serif" font-size="48" opacity="0.4">✨</text>
+  <text x="1420" y="500" font-family="sans-serif" font-size="44" opacity="0.3">💡</text>
+</svg>

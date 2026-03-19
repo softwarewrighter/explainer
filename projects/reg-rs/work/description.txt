@@ -1,0 +1,36 @@
+reg-rs: Snapshot Regression Testing for CLI Tools
+
+A Rust CLI tool that captures command output as baselines and detects regressions when that output changes. Shell aliases make the workflow fast and interactive. A built-in web dashboard with SSE shows test results updating in real time.
+
+Chapters:
+0:00 Title
+0:05 Hook
+0:28 Overview
+0:51 CLI Intro
+1:06 Basic Workflow Demo
+1:21 Regression Detection Demo
+1:49 Dogfooding Demo
+2:14 CLI Summary
+2:25 History
+2:53 Web Dashboard Intro
+3:08 Landing Page (Live SSE)
+3:34 Status Dashboard (Detail)
+4:05 Failure Diff View
+4:24 Call to Action
+4:45 Subscribe Reminder
+4:58 Outro
+
+Links:
+- reg-rs: https://github.com/softwarewrighter/sw-cli-tools/tree/main/reg-rs
+- Blog: https://software-wrighter-lab.github.io
+
+Shell Aliases:
+- adrg: Add a test (captures baseline)
+- rnrg: Run tests (detects changes)
+- lsrg: List tests with status
+- shrg: Show test details and diffs
+- uprg: Rebase (accept new output)
+- rmrg: Remove a test
+
+Hashtags:
+#rust #rustlang #cli #regressiontesting #developer #programming #opensource #tdd #devtools #testing

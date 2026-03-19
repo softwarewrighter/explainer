@@ -1,0 +1,1 @@
+Shell aliases cover the full workflow. Add captures your baseline. Run detects changes. Show displays the diff. And rebase accepts new output when the change is intentional.

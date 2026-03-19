@@ -1,0 +1,1 @@
+You ship a fix and tests pass. Three weeks later a customer reports that a flag you did not touch now produces different output. Unit tests check behavior, not output. What you needed was a regression test. A snapshot of what the command actually produced, compared against what it produces now.

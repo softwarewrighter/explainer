@@ -1,0 +1,1 @@
+As each batch completes, the pass list grows from the top. The counters update live through server sent events. Sixty one tests across multiple tools, zero failures, all green. For large test suites this dashboard replaces watching terminal scrollback.

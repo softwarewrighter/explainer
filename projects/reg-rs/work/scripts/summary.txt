@@ -1,0 +1,1 @@
+The regression test tool in C plus plus, regress, started as an internal tool at Forte Software before two thousand. I rewrote it in Java at Sun Microsystems, and now it is open sourced in Rust. Twenty five plus years, same concept. Capture output, compare on re run, catch regressions before your users do.

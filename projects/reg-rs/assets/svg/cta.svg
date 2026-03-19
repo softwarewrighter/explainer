@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e"/>
+      <stop offset="100%" style="stop-color:#0d0d1a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative shapes -->
+  <circle cx="1800" cy="120" r="200" fill="#a855f7" opacity="0.05"/>
+  <circle cx="120" cy="950" r="160" fill="#00d4ff" opacity="0.06"/>
+  <circle cx="960" cy="50" r="100" fill="#4ade80" opacity="0.05"/>
+  <circle cx="200" cy="200" r="120" fill="#ffd93d" opacity="0.04"/>
+  <circle cx="1700" cy="800" r="140" fill="#ff6b6b" opacity="0.04"/>
+
+  <!-- Title -->
+  <text x="960" y="120" text-anchor="middle" font-family="sans-serif" font-size="96" font-weight="bold" fill="#00d4ff" filter="url(#glow)">Get Started</text>
+  <text x="960" y="180" text-anchor="middle" font-family="sans-serif" font-size="48" fill="#aaa">Open source regression testing for your CLI</text>
+
+  <!-- Box 1: Open Source -->
+  <rect x="80" y="260" width="540" height="420" rx="24" fill="url(#cardGrad)" opacity="0.9"/>
+  <rect x="80" y="260" width="540" height="8" rx="4" fill="#4ade80"/>
+  <text x="350" y="340" text-anchor="middle" font-family="sans-serif" font-size="64" opacity="0.7">📦</text>
+  <text x="350" y="410" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="bold" fill="#fff">Open Source</text>
+  <text x="350" y="470" text-anchor="middle" font-family="sans-serif" font-size="40" fill="#ccc">MIT License</text>
+  <text x="350" y="530" text-anchor="middle" font-family="sans-serif" font-size="40" fill="#ccc">Free forever</text>
+  <text x="350" y="610" text-anchor="middle" font-family="monospace" font-size="32" fill="#4ade80">sw-cli-tools/reg-rs</text>
+
+  <!-- Box 2: Get Started -->
+  <rect x="690" y="260" width="540" height="420" rx="24" fill="url(#cardGrad)" opacity="0.9"/>
+  <rect x="690" y="260" width="540" height="8" rx="4" fill="#00d4ff"/>
+  <text x="960" y="340" text-anchor="middle" font-family="sans-serif" font-size="64" opacity="0.7">🚀</text>
+  <text x="960" y="410" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="bold" fill="#fff">Get Started</text>
+  <text x="960" y="470" text-anchor="middle" font-family="sans-serif" font-size="40" fill="#ccc">Clone, build, test</text>
+  <text x="960" y="530" text-anchor="middle" font-family="sans-serif" font-size="40" fill="#ccc">in under a minute</text>
+  <text x="960" y="610" text-anchor="middle" font-family="monospace" font-size="32" fill="#00d4ff">source bin/source-rg.sh</text>
+
+  <!-- Box 3: Subscribe -->
+  <rect x="1300" y="260" width="540" height="420" rx="24" fill="url(#cardGrad)" opacity="0.9"/>
+  <rect x="1300" y="260" width="540" height="8" rx="4" fill="#ffd93d"/>
+  <text x="1570" y="340" text-anchor="middle" font-family="sans-serif" font-size="64" opacity="0.7">🔔</text>
+  <text x="1570" y="410" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="bold" fill="#fff">Subscribe</text>
+  <text x="1570" y="470" text-anchor="middle" font-family="sans-serif" font-size="40" fill="#ccc">More throwback tools</text>
+  <text x="1570" y="530" text-anchor="middle" font-family="sans-serif" font-size="40" fill="#ccc">rebuilt in Rust</text>
+  <text x="1570" y="610" text-anchor="middle" font-family="sans-serif" font-size="40" fill="#ffd93d">Like and Subscribe</text>
+
+  <!-- Bottom tagline -->
+  <text x="960" y="820" text-anchor="middle" font-family="sans-serif" font-size="48" fill="#aaa">Twenty five years. Same concept. Now in Rust.</text>
+
+  <!-- Terminal mockup -->
+  <rect x="480" y="870" width="960" height="100" rx="16" fill="#0a0a14" stroke="#333" stroke-width="2"/>
+  <circle cx="520" cy="920" r="9" fill="#ff6b6b"/>
+  <circle cx="552" cy="920" r="9" fill="#ffd93d"/>
+  <circle cx="584" cy="920" r="9" fill="#4ade80"/>
+  <text x="630" y="930" font-family="monospace" font-size="38" fill="#4ade80">$ </text>
+  <text x="670" y="930" font-family="monospace" font-size="38" fill="#eee">adrg my-test './my-app --help'</text>
+
+  <!-- Sparkles -->
+  <text x="80" y="200" font-family="sans-serif" font-size="44" opacity="0.4">✨</text>
+  <text x="1800" y="750" font-family="sans-serif" font-size="40" opacity="0.3">💡</text>
+  <text x="1500" y="180" font-family="sans-serif" font-size="48" opacity="0.3">⚡</text>
+</svg>

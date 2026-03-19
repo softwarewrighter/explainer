@@ -1,0 +1,10 @@
+Catch Regressions in Rust
+reg-rs: CLI Regression Testing
+Never Ship a Broken Flag Again
+Snapshot Testing for CLIs
+Output Changed? reg-rs Knows
+Regression Tests in 4 Commands
+reg-rs: Diff Your CLI Output
+25 Years of Regression Testing
+CLI Output Snapshots in Rust
+Did Your Help Text Change?

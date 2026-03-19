@@ -1,0 +1,1 @@
+Now lets catch a real regression. We add a baseline with version one point zero. Run it, it passes. Then we change the file to version two point zero, simulating a release. Run again, and regress flags the difference. Show with dash v v displays exactly what changed. Then rebase accepts the new output.

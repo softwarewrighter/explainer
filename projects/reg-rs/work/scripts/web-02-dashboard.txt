@@ -1,0 +1,1 @@
+The status page shows the full dashboard with collapsible sections. Failures, passes, and pending tests are listed separately. The most recently run test always appears at the top, so you see progress as it happens.

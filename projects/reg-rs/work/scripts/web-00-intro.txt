@@ -1,0 +1,1 @@
+For long running test suites, regress includes a web dashboard. It launches on port four seven four zero and updates in real time as tests complete. Lets take a look.

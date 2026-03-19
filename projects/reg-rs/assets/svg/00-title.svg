@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="overlay" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0.65"/>
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.45"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="4" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Background image -->
+  <image href="../images/test-results.jpg" x="0" y="0" width="1920" height="1080" preserveAspectRatio="xMidYMid slice"/>
+
+  <!-- Darken overlay for text readability -->
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#overlay)"/>
+
+  <!-- #TBT line -->
+  <text x="960" y="300" font-family="Arial Black, sans-serif" font-size="160"
+        font-weight="900" fill="#d4af37" text-anchor="middle"
+        stroke="#000000" stroke-width="5" paint-order="stroke" filter="url(#shadow)">
+    #TBT
+  </text>
+
+  <!-- CLI Regression Test Tool -->
+  <text x="960" y="480" font-family="Arial Black, sans-serif" font-size="120"
+        font-weight="900" fill="#ffd700" text-anchor="middle"
+        stroke="#000000" stroke-width="4" paint-order="stroke" filter="url(#shadow)">
+    CLI Regression Test Tool
+  </text>
+
+  <!-- reg-rs -->
+  <text x="960" y="660" font-family="Arial Black, sans-serif" font-size="160"
+        font-weight="900" fill="#d4af37" text-anchor="middle"
+        stroke="#000000" stroke-width="5" paint-order="stroke" filter="url(#shadow)">
+    reg-rs
+  </text>
+</svg>

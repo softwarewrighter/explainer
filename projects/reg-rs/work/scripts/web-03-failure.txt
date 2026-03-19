@@ -1,0 +1,1 @@
+When a test fails, the dashboard shows the diff inline. The expected baseline is highlighted in green, the actual output in yellow. Here a help flag changed. You can see exactly which lines differ, decide if the change is intentional, and rebase if it is.

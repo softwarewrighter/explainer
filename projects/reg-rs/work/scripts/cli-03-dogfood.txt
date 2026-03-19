@@ -1,0 +1,1 @@
+regress tests itself. We add baselines for its own help output, one test per subcommand. Run them all with a pattern match. Every test passes. If we change a flag name or add a new option, the regression test catches it. This is dogfooding, the tool testing its own command line.

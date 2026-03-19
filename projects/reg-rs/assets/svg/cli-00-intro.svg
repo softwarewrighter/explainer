@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e"/>
+      <stop offset="100%" style="stop-color:#0d0d1a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4ade80"/>
+      <stop offset="33%" style="stop-color:#00d4ff"/>
+      <stop offset="66%" style="stop-color:#ffd93d"/>
+      <stop offset="100%" style="stop-color:#ff6b6b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Decorative shapes -->
+  <circle cx="1850" cy="150" r="200" fill="#a855f7" opacity="0.05"/>
+  <circle cx="100" cy="900" r="160" fill="#00d4ff" opacity="0.06"/>
+  <circle cx="960" cy="50" r="100" fill="#4ade80" opacity="0.05"/>
+  <polygon points="200,150 240,80 280,150" fill="#ffd93d" opacity="0.08"/>
+  <polygon points="1650,950 1690,890 1730,950" fill="#ff6b6b" opacity="0.07"/>
+
+  <!-- Title -->
+  <text x="960" y="100" text-anchor="middle" font-family="sans-serif" font-size="96" font-weight="bold" fill="#00d4ff" filter="url(#glow)">Four Commands</text>
+  <text x="960" y="160" text-anchor="middle" font-family="sans-serif" font-size="44" fill="#aaa">Shell aliases for fast regression testing</text>
+
+  <!-- Flow line connecting all 4 -->
+  <line x1="120" y1="520" x2="1350" y2="520" stroke="url(#flowGrad)" stroke-width="4" opacity="0.3"/>
+
+  <!-- Step 1: Add -->
+  <rect x="60" y="240" width="310" height="480" rx="20" fill="url(#cardGrad)" opacity="0.9"/>
+  <rect x="60" y="240" width="310" height="8" rx="4" fill="#4ade80"/>
+  <!-- Number badge -->
+  <circle cx="215" cy="310" r="40" fill="#4ade80" opacity="0.15"/>
+  <text x="215" y="325" text-anchor="middle" font-family="sans-serif" font-size="48" font-weight="bold" fill="#4ade80">1</text>
+  <text x="215" y="400" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="bold" fill="#fff">Add</text>
+  <text x="215" y="460" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#ccc">Capture the</text>
+  <text x="215" y="505" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#ccc">baseline output</text>
+  <text x="215" y="570" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#4ade80">adrg</text>
+  <!-- Icon -->
+  <text x="215" y="670" text-anchor="middle" font-family="sans-serif" font-size="64" opacity="0.7">📸</text>
+
+  <!-- Arrow 1→2 (tip points RIGHT: base on left, tip on right) -->
+  <polygon points="400,500 400,540 440,520" fill="#00d4ff" opacity="0.6"/>
+
+  <!-- Step 2: Run -->
+  <rect x="460" y="240" width="310" height="480" rx="20" fill="url(#cardGrad)" opacity="0.9"/>
+  <rect x="460" y="240" width="310" height="8" rx="4" fill="#00d4ff"/>
+  <circle cx="615" cy="310" r="40" fill="#00d4ff" opacity="0.15"/>
+  <text x="615" y="325" text-anchor="middle" font-family="sans-serif" font-size="48" font-weight="bold" fill="#00d4ff">2</text>
+  <text x="615" y="400" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="bold" fill="#fff">Run</text>
+  <text x="615" y="460" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#ccc">Re-execute and</text>
+  <text x="615" y="505" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#ccc">detect changes</text>
+  <text x="615" y="570" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#00d4ff">rnrg</text>
+  <text x="615" y="670" text-anchor="middle" font-family="sans-serif" font-size="64" opacity="0.7">🔄</text>
+
+  <!-- Arrow 2→3 (tip points RIGHT: base on left, tip on right) -->
+  <polygon points="800,500 800,540 840,520" fill="#ffd93d" opacity="0.6"/>
+
+  <!-- Step 3: Show -->
+  <rect x="860" y="240" width="310" height="480" rx="20" fill="url(#cardGrad)" opacity="0.9"/>
+  <rect x="860" y="240" width="310" height="8" rx="4" fill="#ffd93d"/>
+  <circle cx="1015" cy="310" r="40" fill="#ffd93d" opacity="0.15"/>
+  <text x="1015" y="325" text-anchor="middle" font-family="sans-serif" font-size="48" font-weight="bold" fill="#ffd93d">3</text>
+  <text x="1015" y="400" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="bold" fill="#fff">Show</text>
+  <text x="1015" y="460" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#ccc">View detailed</text>
+  <text x="1015" y="505" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#ccc">output diffs</text>
+  <text x="1015" y="570" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#ffd93d">shrg</text>
+  <text x="1015" y="670" text-anchor="middle" font-family="sans-serif" font-size="64" opacity="0.7">📊</text>
+
+  <!-- Arrow 3→4 (tip points RIGHT: base on left, tip on right) -->
+  <polygon points="1200,500 1200,540 1240,520" fill="#a855f7" opacity="0.6"/>
+
+  <!-- Step 4: Rebase -->
+  <rect x="1260" y="240" width="310" height="480" rx="20" fill="url(#cardGrad)" opacity="0.9"/>
+  <rect x="1260" y="240" width="310" height="8" rx="4" fill="#a855f7"/>
+  <circle cx="1415" cy="310" r="40" fill="#a855f7" opacity="0.15"/>
+  <text x="1415" y="325" text-anchor="middle" font-family="sans-serif" font-size="48" font-weight="bold" fill="#a855f7">4</text>
+  <text x="1415" y="400" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="bold" fill="#fff">Rebase</text>
+  <text x="1415" y="460" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#ccc">Accept new</text>
+  <text x="1415" y="505" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#ccc">output as baseline</text>
+  <text x="1415" y="570" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#a855f7">uprg</text>
+  <text x="1415" y="670" text-anchor="middle" font-family="sans-serif" font-size="64" opacity="0.7">✅</text>
+
+  <!-- Bottom tagline -->
+  <text x="700" y="830" text-anchor="middle" font-family="sans-serif" font-size="40" fill="#aaa">Simple. Deterministic. Fast.</text>
+
+  <!-- Decorative sparkles -->
+  <text x="80" y="200" font-family="sans-serif" font-size="44" opacity="0.4">✨</text>
+  <text x="1500" y="180" font-family="sans-serif" font-size="40" opacity="0.3">💡</text>
+  <text x="700" y="950" font-family="sans-serif" font-size="48" opacity="0.3">⚡</text>
+</svg>

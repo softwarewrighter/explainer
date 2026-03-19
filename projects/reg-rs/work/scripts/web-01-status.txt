@@ -1,0 +1,1 @@
+The landing page starts with sixty one tests pending. The test name updates as each one runs. The pass count climbs while the pending count drops. No page refresh needed, server sent events push every change.
